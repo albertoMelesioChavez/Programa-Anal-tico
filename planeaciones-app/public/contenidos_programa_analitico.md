@@ -64,38 +64,35 @@ Culiacán, Sinaloa, México
 <small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	3</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
 Índice
-Introducción ................................................................................................................... 5
-Los campos formativos................................................................................................. 7
-Descripción general del campo formativo Lenguajes ............................................ 8
-Finalidades del campo de lenguajes ........................................................................ 9
-Las artes en la Nueva Escuela Mexicana .................................................................... 9
-Formas de trabajo en artes ......................................................................................... 11
-Aprendizaje basado en proyectos.............................................................................. 12
-Los lenguajes artísticos en la educación básica ...................................................... 13
-Música ....................................................................................................................... 13
-Danza ......................................................................................................................... 13
-Artes visuales ........................................................................................................... 14
-Teatro......................................................................................................................... 15
-Los ejes articuladores ................................................................................................. 15
-Arte y experiencias estéticas .................................................................................. 17
-El programa analítico: contextualización y codiseño .............................................. 19
-Análisis del contexto socioeducativo de la escuela ............................................. 19
-Contenidos nacionales y procesos del desarrollo de aprendizaje (PDA) .............. 20
-Tercera fase .................................................................................................................. 21
-Contenidos nacionales de la tercera fase .............................................................. 22
-Contenidos y procesos de desarrollo de aprendizaje estatales de la tercera fase
-.................................................................................................................................... 23
-Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la tercera fase ...... 25
-Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la tercera fase........ 28
-Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la tercera fase
-............................................................................................................................................................ 31
-Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la tercera fase ........ 34
-Cuarta fase ................................................................................................................... 37
-Contenidos nacionales de la cuarta fase ............................................................... 38
-Contenidos y procesos de desarrollo de aprendizaje estatales de la cuarta fase
-.................................................................................................................................... 39
-Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la cuarta fase ....... 41
 
+<div class="indice-item indice-main"><span class="indice-title">Introducción</span><span class="indice-dots"></span><span class="indice-page">5</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Los campos formativos</span><span class="indice-dots"></span><span class="indice-page">7</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Descripción general del campo formativo Lenguajes</span><span class="indice-dots"></span><span class="indice-page">8</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Finalidades del campo de lenguajes</span><span class="indice-dots"></span><span class="indice-page">9</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Las artes en la Nueva Escuela Mexicana</span><span class="indice-dots"></span><span class="indice-page">9</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Formas de trabajo en artes</span><span class="indice-dots"></span><span class="indice-page">11</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Aprendizaje basado en proyectos</span><span class="indice-dots"></span><span class="indice-page">12</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Los lenguajes artísticos en la educación básica</span><span class="indice-dots"></span><span class="indice-page">13</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Música</span><span class="indice-dots"></span><span class="indice-page">13</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Danza</span><span class="indice-dots"></span><span class="indice-page">13</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Artes visuales</span><span class="indice-dots"></span><span class="indice-page">14</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Teatro</span><span class="indice-dots"></span><span class="indice-page">15</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Los ejes articuladores</span><span class="indice-dots"></span><span class="indice-page">15</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Arte y experiencias estéticas</span><span class="indice-dots"></span><span class="indice-page">17</span></div>
+<div class="indice-item indice-main"><span class="indice-title">El programa analítico: contextualización y codiseño</span><span class="indice-dots"></span><span class="indice-page">19</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Análisis del contexto socioeducativo de la escuela</span><span class="indice-dots"></span><span class="indice-page">19</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Contenidos nacionales y procesos del desarrollo de aprendizaje (PDA)</span><span class="indice-dots"></span><span class="indice-page">20</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Tercera fase</span><span class="indice-dots"></span><span class="indice-page">21</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Contenidos nacionales de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">22</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">23</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">25</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">28</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">31</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">34</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Cuarta fase</span><span class="indice-dots"></span><span class="indice-page">37</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Contenidos nacionales de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">38</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">39</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">41</span></div>
 
 <!-- PAGE_END -->
 <!-- PAGE_START 4 -->
@@ -103,41 +100,38 @@ Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la
 
 <small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	4</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la cuarta fase ......... 44
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la cuarta fase
-............................................................................................................................................................ 48
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la cuarta fase ......... 54
-Quinta fase ................................................................................................................... 62
-### Contenidos nacionales de la quinta fase ............................................................... 63
-### Contenidos y procesos de desarrollo de aprendizaje estatales de la quinta fase
-fase ............................................................................................................................ 64
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la quinta fase ....... 67
-Contenidos y procesos de desarrollo de aprendizaje de danza de la quinta fase ............................. 71
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la quinta fase
-............................................................................................................................................................ 75
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la quinta fase.......... 78
-Orientaciones didácticas por lenguaje artístico ....................................................... 82
-Orientaciones didácticas de la tercera fase........................................................... 83
-### Orientación didáctica de de música de la tercera fase ....................................................................... 83
-### Orientación didáctica de de danza de la tercera fase ........................................................................ 85
-### Orientación didáctica de Artes visuales de la tercera fase ................................................................. 87
-### Orientación didáctica de teatro de la tercera fase .............................................................................. 88
-Orientaciones didácticas de la cuarta fase ............................................................ 90
-### Orientación didáctica de de música de la cuarta fase ........................................................................ 90
-### Orientación didáctica de danza de la cuarta fase ............................................................................... 93
-### Orientación didáctica de artes visuales de la cuarta fase .................................................................. 96
-### Orientación didáctica de teatro de la cuarta fase ............................................................................... 98
-Orientaciones didácticas de la quinta fase .......................................................... 100
-### Orientación didáctica de de música de la quinta fase ...................................................................... 100
-### Orientación didáctica de de danza de la quinta fase ........................................................................ 102
-### Orientación didáctica de de Artes visuales de la quinta fase ........................................................... 105
-### Orientación didáctica de de Teatro de la quinta fase ....................................................................... 108
-### Relación de actividades y proyectos de los libros de la Nueva Escuela Mexicana
-..................................................................................................................................... 111
-Libros múltiples lenguajes .................................................................................... 111
-Del Libro Proyectos Escolares.............................................................................. 119
-Material de consulta .................................................................................................. 124
-Referencias ................................................................................................................ 125
+
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">44</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">48</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">54</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Quinta fase</span><span class="indice-dots"></span><span class="indice-page">62</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Contenidos nacionales de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">63</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">64</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">67</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje de danza de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">71</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">75</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">78</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Orientaciones didácticas por lenguaje artístico</span><span class="indice-dots"></span><span class="indice-page">82</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Orientaciones didácticas de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">83</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de música de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">83</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de danza de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">85</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de Artes visuales de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">87</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de teatro de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">88</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Orientaciones didácticas de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">90</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de música de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">90</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de danza de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">93</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de artes visuales de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">96</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de teatro de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">98</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Orientaciones didácticas de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">100</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de música de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">100</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de danza de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">102</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de Artes visuales de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">105</span></div>
+<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de Teatro de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">108</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Relación de actividades y proyectos de los libros de la Nueva Escuela Mexicana</span><span class="indice-dots"></span><span class="indice-page">111</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Libros múltiples lenguajes</span><span class="indice-dots"></span><span class="indice-page">111</span></div>
+<div class="indice-item indice-sub"><span class="indice-title">Del Libro Proyectos Escolares</span><span class="indice-dots"></span><span class="indice-page">119</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Material de consulta</span><span class="indice-dots"></span><span class="indice-page">124</span></div>
+<div class="indice-item indice-main"><span class="indice-title">Referencias</span><span class="indice-dots"></span><span class="indice-page">125</span></div>
 
 
 <!-- PAGE_END -->

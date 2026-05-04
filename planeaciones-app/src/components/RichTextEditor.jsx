@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import { BubbleMenu } from '@tiptap/react/menus';
 import StarterKit from '@tiptap/starter-kit';
@@ -13,10 +14,93 @@ import { TableRow } from '@tiptap/extension-table-row';
 import { TableHeader } from '@tiptap/extension-table-header';
 import { TableCell } from '@tiptap/extension-table-cell';
 
-export default function RichTextEditor({ initialContent, onSave, isSaving, editable }) {
+const Toolbar = ({ editor }) => {
+  if (!editor) return null;
+
+  const btnStyle = (active) => ({
+    padding: '8px 12px',
+    borderRadius: '8px',
+    border: 'none',
+    cursor: 'pointer',
+    fontSize: '13px',
+    fontWeight: 'bold',
+    transition: 'all 0.2s',
+    background: active ? '#2563eb' : 'rgba(255, 255, 255, 0.05)',
+    color: active ? 'white' : '#9ca3af',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: '36px'
+  });
+
+  return (
+    <div style={{ 
+      display: 'flex', 
+      flexWrap: 'wrap',
+      gap: '4px', 
+      padding: '8px', 
+      background: '#111318', 
+      borderBottom: '1px solid rgba(255,255,255,0.05)',
+      position: 'sticky',
+      top: 0,
+      zIndex: 10,
+      backdropFilter: 'blur(10px)'
+    }}>
+      <div style={{ display: 'flex', gap: '4px' }}>
+        <button onClick={() => editor.chain().focus().undo().run()} style={btnStyle(false)} title="Deshacer">↶</button>
+        <button onClick={() => editor.chain().focus().redo().run()} style={btnStyle(false)} title="Rehacer">↷</button>
+      </div>
+      
+      <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.1)', margin: '0 8px' }} />
+
+      <div style={{ display: 'flex', gap: '4px' }}>
+        <button onClick={() => editor.chain().focus().toggleBold().run()} style={btnStyle(editor.isActive('bold'))} title="Negrita">B</button>
+        <button onClick={() => editor.chain().focus().toggleItalic().run()} style={btnStyle(editor.isActive('italic'))} title="Cursiva">I</button>
+        <button onClick={() => editor.chain().focus().toggleUnderline().run()} style={btnStyle(editor.isActive('underline'))} title="Subrayado">U</button>
+        <button onClick={() => editor.chain().focus().toggleStrike().run()} style={btnStyle(editor.isActive('strike'))} title="Tachado">S</button>
+      </div>
+
+      <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.1)', margin: '0 8px' }} />
+
+      <div style={{ display: 'flex', gap: '4px' }}>
+        <button onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()} style={btnStyle(editor.isActive('heading', { level: 1 }))} title="Título 1">H1</button>
+        <button onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()} style={btnStyle(editor.isActive('heading', { level: 2 }))} title="Título 2">H2</button>
+        <button onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} style={btnStyle(editor.isActive('heading', { level: 3 }))} title="Título 3">H3</button>
+      </div>
+
+      <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.1)', margin: '0 8px' }} />
+
+      <div style={{ display: 'flex', gap: '4px' }}>
+        <button onClick={() => editor.chain().focus().toggleBulletList().run()} style={btnStyle(editor.isActive('bulletList'))} title="Lista de puntos">•</button>
+        <button onClick={() => editor.chain().focus().toggleOrderedList().run()} style={btnStyle(editor.isActive('orderedList'))} title="Lista numerada">1.</button>
+        <button onClick={() => editor.chain().focus().toggleBlockquote().run()} style={btnStyle(editor.isActive('blockquote'))} title="Cita">"</button>
+      </div>
+
+      <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.1)', margin: '0 8px' }} />
+
+      <div style={{ display: 'flex', gap: '4px' }}>
+        <button 
+          onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()} 
+          style={btnStyle(false)}
+          title="Insertar Tabla"
+        >
+          田
+        </button>
+        <button onClick={() => editor.chain().focus().unsetAllMarks().clearNodes().run()} style={btnStyle(false)} title="Limpiar Formato">∅</button>
+      </div>
+    </div>
+  );
+};
+
+export default function RichTextEditor({ initialContent, onSave, isSaving, editable, onFocus }) {
+  const [isFocused, setIsFocused] = useState(false);
   const editor = useEditor({
     extensions: [
-      StarterKit,
+      StarterKit.configure({
+        heading: {
+          levels: [1, 2, 3],
+        },
+      }),
       Highlight,
       Underline,
       BubbleMenuExtension,
@@ -32,9 +116,17 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
     content: initialContent,
     editable: editable,
     immediatelyRender: false,
+    onFocus: () => {
+        setIsFocused(true);
+        if (onFocus) onFocus();
+    },
+    onBlur: () => {
+        // We delay blur slightly to allow clicking toolbar buttons
+        setTimeout(() => setIsFocused(false), 200);
+    },
     editorProps: {
       attributes: {
-        style: 'outline: none; min-height: 500px; padding-bottom: 200px;',
+        style: 'outline: none; min-height: 200px; padding: 40px;',
         class: 'prose prose-invert prose-lg max-w-3xl mx-auto custom-editor'
       },
     },
@@ -42,7 +134,7 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
 
   if (!editor) return null;
 
-  const btnStyle = (active) => ({
+  const bubbleBtnStyle = (active) => ({
     padding: '8px 12px',
     borderRadius: '8px',
     border: 'none',
@@ -55,7 +147,15 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
   });
 
   return (
-    <div style={{ position: 'relative', width: '100%' }}>
+    <div style={{ 
+      position: 'relative', 
+      width: '100%', 
+      background: 'transparent', 
+      borderRadius: '16px', 
+      border: isFocused ? '1px solid rgba(37,99,235,0.3)' : '1px solid rgba(255,255,255,0.05)',
+      transition: 'all 0.3s ease',
+      background: isFocused ? 'rgba(255,255,255,0.02)' : 'transparent'
+    }}>
       <style jsx global>{`
         .custom-editor table {
           border-collapse: collapse;
@@ -82,6 +182,22 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
           background-color: rgba(255, 255, 255, 0.05);
           color: #fff;
         }
+        .custom-editor .ProseMirror ul, 
+        .custom-editor .ProseMirror ol {
+          padding-left: 1.5rem;
+          margin-bottom: 1.5rem;
+          color: #9ca3af;
+        }
+        .custom-editor .ProseMirror li p {
+          margin-bottom: 0.25rem;
+        }
+        .custom-editor .ProseMirror blockquote {
+          border-left: 4px solid #2563eb;
+          padding-left: 1.5rem;
+          font-style: italic;
+          color: #d1d5db;
+          margin: 2rem 0;
+        }
         .custom-editor table .selectedCell:after {
           z-index: 2;
           position: absolute;
@@ -99,7 +215,69 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
           background-color: #2563eb;
           pointer-events: none;
         }
+        /* INDICE STYLES */
+        .indice-item {
+          display: flex;
+          align-items: baseline;
+          gap: 8px;
+          margin-bottom: 6px;
+          width: 100%;
+          color: #d1d5db;
+        }
+        .indice-title {
+          flex-shrink: 0;
+          max-width: 85%;
+        }
+        .indice-dots {
+          flex-grow: 1;
+          border-bottom: 2px dotted rgba(255, 255, 255, 0.15);
+          margin-bottom: 5px;
+          min-width: 20px;
+        }
+        .indice-page {
+          flex-shrink: 0;
+          font-family: 'JetBrains Mono', monospace;
+          font-weight: 800;
+          color: #fff;
+          min-width: 25px;
+          text-align: right;
+        }
+        .indice-main {
+          font-weight: bold;
+          font-style: italic;
+          color: #fff;
+          font-size: 1.1em;
+          margin-top: 12px;
+        }
+        .indice-sub {
+          padding-left: 24px;
+          font-size: 0.95em;
+        }
+        .indice-sub-sub {
+          padding-left: 48px;
+          font-size: 0.9em;
+          opacity: 0.8;
+        }
       `}</style>
+
+      {editable && isFocused && (
+        <div style={{
+            position: 'fixed',
+            top: '64px',
+            left: '280px',
+            right: '60px',
+            zIndex: 1000,
+            animation: 'slideDown 0.3s ease-out'
+        }}>
+            <Toolbar editor={editor} />
+            <style>{`
+                @keyframes slideDown {
+                    from { transform: translateY(-20px); opacity: 0; }
+                    to { transform: translateY(0); opacity: 1; }
+                }
+            `}</style>
+        </div>
+      )}
 
       {editor && editable && (
         <BubbleMenu editor={editor} tippyOptions={{ duration: 100 }}>
@@ -113,20 +291,9 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
             boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5)',
             backdropFilter: 'blur(10px)'
           }}>
-            <button onClick={() => editor.chain().focus().toggleBold().run()} style={btnStyle(editor.isActive('bold'))}>B</button>
-            <button onClick={() => editor.chain().focus().toggleItalic().run()} style={btnStyle(editor.isActive('italic'))}>I</button>
-            <button onClick={() => editor.chain().focus().toggleUnderline().run()} style={btnStyle(editor.isActive('underline'))}>U</button>
-            <div style={{ width: '1px', height: '16px', background: 'rgba(255,255,255,0.1)', alignSelf: 'center', margin: '0 4px' }} />
-            <button onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()} style={btnStyle(editor.isActive('heading', { level: 1 }))}>H1</button>
-            <button onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()} style={btnStyle(editor.isActive('heading', { level: 2 }))}>H2</button>
-            <div style={{ width: '1px', height: '16px', background: 'rgba(255,255,255,0.1)', alignSelf: 'center', margin: '0 4px' }} />
-            <button 
-              onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()} 
-              style={btnStyle(false)}
-              title="Insertar Tabla"
-            >
-              田
-            </button>
+            <button onClick={() => editor.chain().focus().toggleBold().run()} style={bubbleBtnStyle(editor.isActive('bold'))}>B</button>
+            <button onClick={() => editor.chain().focus().toggleItalic().run()} style={bubbleBtnStyle(editor.isActive('italic'))}>I</button>
+            <button onClick={() => editor.chain().focus().toggleUnderline().run()} style={bubbleBtnStyle(editor.isActive('underline'))}>U</button>
           </div>
         </BubbleMenu>
       )}
@@ -135,7 +302,7 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
         <EditorContent editor={editor} />
       </div>
 
-      {editable && (
+      {editable && isFocused && (
         <div style={{ 
           position: 'fixed', 
           bottom: '40px', 
@@ -153,7 +320,7 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
           backdropFilter: 'blur(20px)'
         }}>
           <span style={{ fontSize: '10px', fontWeight: '900', color: '#4b5563', textTransform: 'uppercase', letterSpacing: '1px' }}>
-              {isSaving ? 'Sincronizando...' : 'MODO EDICIÓN'}
+              {isSaving ? 'Sincronizando...' : 'EDITANDO PÁGINA'}
           </span>
           <button
             onClick={() => onSave(editor.getHTML())}
@@ -173,7 +340,7 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
               opacity: isSaving ? 0.5 : 1
             }}
           >
-            {isSaving ? 'GUARDANDO...' : 'GUARDAR CAMBIOS'}
+            {isSaving ? 'GUARDANDO...' : 'GUARDAR PÁGINA'}
           </button>
         </div>
       )}
