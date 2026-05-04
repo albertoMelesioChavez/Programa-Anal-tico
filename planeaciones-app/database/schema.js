@@ -37,6 +37,29 @@ db.exec(`
 
   CREATE TABLE IF NOT EXISTS contenidos_estatales (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    contenido_nacional_id INTEGER NOT NULL,
+    fase_id INTEGER NOT NULL,
+    lenguaje_id INTEGER NOT NULL,
+    descripcion TEXT NOT NULL,
+    FOREIGN KEY (contenido_nacional_id) REFERENCES contenidos_nacionales(id),
+    FOREIGN KEY (fase_id) REFERENCES fases(id),
+    FOREIGN KEY (lenguaje_id) REFERENCES lenguajes_artisticos(id)
+  );
+
+  CREATE TABLE IF NOT EXISTS pdas (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    contenido_estatal_id INTEGER NOT NULL,
+    grado_id INTEGER NOT NULL,
+    lenguaje_id INTEGER NOT NULL,
+    grado_numero INTEGER NOT NULL,
+    descripcion TEXT NOT NULL,
+    FOREIGN KEY (contenido_estatal_id) REFERENCES contenidos_estatales(id),
+    FOREIGN KEY (grado_id) REFERENCES grados(id),
+    FOREIGN KEY (lenguaje_id) REFERENCES lenguajes_artisticos(id)
+  );
+
+  CREATE TABLE IF NOT EXISTS orientaciones_didacticas (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     fase_id INTEGER NOT NULL,
     lenguaje_id INTEGER NOT NULL,
     descripcion TEXT NOT NULL,
@@ -44,13 +67,14 @@ db.exec(`
     FOREIGN KEY (lenguaje_id) REFERENCES lenguajes_artisticos(id)
   );
 
-    CREATE TABLE IF NOT EXISTS pdas (
+  CREATE TABLE IF NOT EXISTS actividades_libro (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    grado_id INTEGER NOT NULL,
-    lenguaje_id INTEGER NOT NULL,
-    descripcion TEXT NOT NULL,
-    FOREIGN KEY (grado_id) REFERENCES grados(id),
-    FOREIGN KEY (lenguaje_id) REFERENCES lenguajes_artisticos(id)
+    libro TEXT NOT NULL,
+    grado INTEGER,
+    titulo_proyecto TEXT,
+    descripcion TEXT,
+    fase_id INTEGER,
+    FOREIGN KEY (fase_id) REFERENCES fases(id)
   );
 
   CREATE TABLE IF NOT EXISTS planeaciones (
