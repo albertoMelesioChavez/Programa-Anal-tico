@@ -3,63 +3,62 @@
 export default function PlaneacionList({ planeaciones, onDelete }) {
     if (!planeaciones || planeaciones.length === 0) {
         return (
-            <div className="glass-panel p-12 w-full text-center animate-fade-in border-dashed border-2 border-[var(--surface-border)]">
-                <h3 className="text-xl text-[var(--text-muted)] mb-2">No hay planeaciones aún.</h3>
-                <p className="text-sm opacity-60">Crea tu primera planeación utilizando el botón superior.</p>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '60px 20px', textAlign: 'center' }}>
+                <div style={{ fontSize: '48px', marginBottom: '16px', opacity: 0.3 }}>📝</div>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#64748b', marginBottom: '8px' }}>Sin planeaciones aún</h3>
+                <p style={{ fontSize: '14px', color: '#475569' }}>Crea tu primera planeación con el botón de arriba.</p>
             </div>
         );
     }
 
     return (
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
-            {planeaciones.map((p) => (
-                <div key={p.id} className="glass-panel p-5 hover:border-[var(--primary)] group relative">
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button
-                            onClick={() => onDelete(p.id)}
-                            className="text-[var(--danger)] bg-red-950/30 hover:bg-red-900/50 p-2 rounded-full backdrop-blur-md transition-colors"
-                            title="Eliminar Planeación"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>
-                        </button>
-                    </div>
-
-                    <div className="mb-4 pr-10">
-                        <h3 className="text-lg font-bold text-white mb-1 leading-tight">{p.titulo}</h3>
-                        <span className="text-xs text-[var(--text-muted)]">
-                            {new Date(p.fecha_creacion).toLocaleDateString('es-MX', {
-                                year: 'numeric', month: 'short', day: 'numeric',
-                                hour: '2-digit', minute: '2-digit'
-                            })}
-                        </span>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                        <span className="text-xs font-semibold px-2 py-1 rounded bg-blue-900/30 text-blue-300 border border-blue-800/50">
-                            {p.fase}
-                        </span>
-                        <span className="text-xs font-semibold px-2 py-1 rounded bg-purple-900/30 text-purple-300 border border-purple-800/50">
-                            {p.grado}
-                        </span>
-                        <span className="text-xs font-semibold px-2 py-1 rounded bg-green-900/30 text-green-300 border border-green-800/50">
-                            {p.lenguaje}
-                        </span>
-                    </div>
-
-                    <div className="space-y-3">
-                        {p.actividades && (
-                            <div>
-                                <span className="text-xs uppercase text-[var(--text-muted)] font-bold tracking-wider">Actividades</span>
-                                <p className="text-sm line-clamp-2 mt-1 opacity-90">{p.actividades}</p>
+        <div style={{ display: 'grid', gap: '12px' }}>
+            {planeaciones.map(p => (
+                <div key={p.id} style={{
+                    padding: '20px', borderRadius: '16px',
+                    background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)',
+                    transition: 'all 0.2s'
+                }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+                        <div>
+                            <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#f1f5f9', marginBottom: '6px' }}>{p.titulo}</h4>
+                            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                                <span style={{ fontSize: '11px', padding: '3px 10px', borderRadius: '20px', background: 'rgba(59,130,246,0.1)', color: '#60a5fa', fontWeight: '500' }}>{p.fase}</span>
+                                <span style={{ fontSize: '11px', padding: '3px 10px', borderRadius: '20px', background: 'rgba(139,92,246,0.1)', color: '#a78bfa', fontWeight: '500' }}>{p.grado}</span>
+                                <span style={{ fontSize: '11px', padding: '3px 10px', borderRadius: '20px', background: 'rgba(16,185,129,0.1)', color: '#34d399', fontWeight: '500' }}>{p.lenguaje}</span>
                             </div>
-                        )}
-                        {p.evaluacion && (
-                            <div>
-                                <span className="text-xs uppercase text-[var(--text-muted)] font-bold tracking-wider">Evaluación</span>
-                                <p className="text-sm line-clamp-2 mt-1 opacity-90">{p.evaluacion}</p>
-                            </div>
-                        )}
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                            <span style={{ fontSize: '11px', color: '#475569' }}>
+                                {new Date(p.fecha_creacion).toLocaleDateString('es-MX', { day: '2-digit', month: 'short', year: 'numeric' })}
+                            </span>
+                            {onDelete && (
+                                <button onClick={() => onDelete(p.id)}
+                                    style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', color: '#f87171', borderRadius: '8px', padding: '4px 10px', cursor: 'pointer', fontSize: '11px', fontWeight: '600' }}>
+                                    Eliminar
+                                </button>
+                            )}
+                        </div>
                     </div>
+
+                    {/* Contenido curricular */}
+                    {p.contenido_nacional_desc && (
+                        <div style={{ marginTop: '8px', padding: '10px 14px', borderRadius: '10px', background: 'rgba(59,130,246,0.04)', borderLeft: '3px solid rgba(59,130,246,0.3)', fontSize: '12px', color: '#94a3b8' }}>
+                            <span style={{ color: '#60a5fa', fontWeight: '600' }}>CN:</span> {p.contenido_nacional_desc.substring(0, 120)}...
+                        </div>
+                    )}
+                    {p.pda_desc && (
+                        <div style={{ marginTop: '6px', padding: '10px 14px', borderRadius: '10px', background: 'rgba(192,132,252,0.04)', borderLeft: '3px solid rgba(192,132,252,0.3)', fontSize: '12px', color: '#94a3b8' }}>
+                            <span style={{ color: '#c084fc', fontWeight: '600' }}>PDA:</span> {p.pda_desc.substring(0, 120)}...
+                        </div>
+                    )}
+                    {p.ejes_articuladores && (
+                        <div style={{ marginTop: '8px', display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+                            {p.ejes_articuladores.split(', ').map((eje, i) => (
+                                <span key={i} style={{ fontSize: '10px', padding: '2px 8px', borderRadius: '12px', background: 'rgba(255,255,255,0.04)', color: '#64748b' }}>{eje}</span>
+                            ))}
+                        </div>
+                    )}
                 </div>
             ))}
         </div>
