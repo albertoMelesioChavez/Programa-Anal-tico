@@ -23,10 +23,13 @@ JSON_PATH = os.path.join(os.path.dirname(__file__), '..', 'public', 'programa_an
 
 # Page ranges for each fase's content/PDA tables
 FASE_PAGES = {
-    3: {'start': 25, 'end': 36, 'grados': [1, 2], 'lenguajes_order': ['Música', 'Danza', 'Artes Visuales', 'Teatro']},
-    4: {'start': 41, 'end': 61, 'grados': [3, 4], 'lenguajes_order': ['Música', 'Danza', 'Artes Visuales', 'Teatro']},
-    5: {'start': 67, 'end': 81, 'grados': [5, 6], 'lenguajes_order': ['Música', 'Danza', 'Artes Visuales', 'Teatro']},
+    3: {'start': 24, 'end': 37, 'grados': [1, 2], 'lenguajes_order': ['Música', 'Danza', 'Artes Visuales', 'Teatro']},
+    4: {'start': 40, 'end': 62, 'grados': [3, 4], 'lenguajes_order': ['Música', 'Danza', 'Artes Visuales', 'Teatro']},
+    5: {'start': 65, 'end': 82, 'grados': [5, 6], 'lenguajes_order': ['Música', 'Danza', 'Artes Visuales', 'Teatro']},
 }
+
+# Orientaciones didácticas section (separate extraction)
+ORIENTACIONES_PAGES = {'start': 83, 'end': 110}
 
 # ─── Helper Functions ────────────────────────────────────────────────────────
 
@@ -207,6 +210,7 @@ def main():
     cur.execute("DELETE FROM pdas")
     cur.execute("DELETE FROM contenidos_estatales")
     cur.execute("DELETE FROM contenidos_nacionales")
+    cur.execute("DELETE FROM orientaciones_didacticas")
     conn.commit()
     
     # Verify catalog data exists
@@ -351,6 +355,56 @@ def main():
                 
                 print(f"    ✅ Pág {page_num} | {lenguaje} | CN: {parsed['contenido_nacional'][:50]}...")
     
+    # ─── Extract Orientaciones Didácticas ─────────────────────────────────
+    print(f"\n[3.5/5] Extrayendo orientaciones didácticas (páginas {ORIENTACIONES_PAGES['start']}-{ORIENTACIONES_PAGES['end']})...")
+    
+    current_fase = None
+    current_lenguaje_od = None
+    stats['orientaciones'] = 0
+    
+    for page_num in range(ORIENTACIONES_PAGES['start'], ORIENTACIONES_PAGES['end'] + 1):
+        if page_num > len(pdf.pages):
+            break
+        
+        page = pdf.pages[page_num - 1]
+        page_text = page.extract_text() or ''
+        
+        # Detect fase from page text
+        if 'tercera fase' in page_text.lower():
+            current_fase = fases.get('Fase 3')
+        elif 'cuarta fase' in page_text.lower():
+            current_fase = fases.get('Fase 4')
+        elif 'quinta fase' in page_text.lower():
+            current_fase = fases.get('Fase 5')
+        
+        # Detect lenguaje from page text
+        page_lower = page_text.lower()
+        if 'orientación didáctica de música' in page_lower or 'orientación didáctica de de música' in page_lower:
+            current_lenguaje_od = lenguajes_db.get('Música')
+        elif 'orientación didáctica de danza' in page_lower or 'orientación didáctica de de danza' in page_lower:
+            current_lenguaje_od = lenguajes_db.get('Danza')
+        elif 'orientación didáctica de artes visuales' in page_lower or 'orientación didáctica de de artes visuales' in page_lower:
+            current_lenguaje_od = lenguajes_db.get('Artes Visuales')
+        elif 'orientación didáctica de teatro' in page_lower or 'orientación didáctica de de teatro' in page_lower:
+            current_lenguaje_od = lenguajes_db.get('Teatro')
+        
+        if current_fase and current_lenguaje_od and page_text.strip():
+            # Store the full page text as an orientación
+            # Only store if not a near-duplicate of the previous entry
+            cleaned_text = page_text.strip()
+            # Remove header/footer lines
+            lines = cleaned_text.split('\n')
+            content_lines = [l for l in lines if 'Programa Analítico de Artes' not in l and 'Programa analítico primaria' not in l]
+            cleaned_text = '\n'.join(content_lines).strip()
+            
+            if cleaned_text:
+                cur.execute(
+                    "INSERT INTO orientaciones_didacticas (fase_id, lenguaje_id, descripcion) VALUES (?, ?, ?)",
+                    (current_fase, current_lenguaje_od, cleaned_text)
+                )
+                stats['orientaciones'] += 1
+                print(f"    ✅ Pág {page_num} | Orientación didáctica")
+    
     conn.commit()
     pdf.close()
     
@@ -361,20 +415,26 @@ def main():
     print(f"  Contenidos nacionales: {stats['contenidos_nacionales']}")
     print(f"  Contenidos estatales:  {stats['contenidos_estatales']}")
     print(f"  PDAs:                  {stats['pdas']}")
+    print(f"  Orientaciones:         {stats.get('orientaciones', 0)}")
     
     # ─── Export JSON ──────────────────────────────────────────────────────
     print(f"\n[5/5] Exportando JSON a {JSON_PATH}...")
     
     export_data = {
         'fases': [],
+        'grados': [],
         'lenguajes': [],
         'contenidos_nacionales': [],
         'contenidos_estatales': [],
-        'pdas': []
+        'pdas': [],
+        'orientaciones_didacticas': []
     }
     
     for row in cur.execute("SELECT id, nombre FROM fases ORDER BY id"):
         export_data['fases'].append({'id': row[0], 'nombre': row[1]})
+    
+    for row in cur.execute("SELECT id, fase_id, nombre FROM grados ORDER BY id"):
+        export_data['grados'].append({'id': row[0], 'fase_id': row[1], 'nombre': row[2]})
     
     for row in cur.execute("SELECT id, nombre FROM lenguajes_artisticos ORDER BY id"):
         export_data['lenguajes'].append({'id': row[0], 'nombre': row[1]})
@@ -392,6 +452,11 @@ def main():
         export_data['pdas'].append({
             'id': row[0], 'contenido_estatal_id': row[1], 'grado_id': row[2],
             'lenguaje_id': row[3], 'grado_numero': row[4], 'descripcion': row[5]
+        })
+    
+    for row in cur.execute("SELECT id, fase_id, lenguaje_id, descripcion FROM orientaciones_didacticas ORDER BY id"):
+        export_data['orientaciones_didacticas'].append({
+            'id': row[0], 'fase_id': row[1], 'lenguaje_id': row[2], 'descripcion': row[3]
         })
     
     with open(JSON_PATH, 'w', encoding='utf-8') as f:

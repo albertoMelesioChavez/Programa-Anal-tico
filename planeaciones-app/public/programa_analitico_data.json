@@ -13,6 +13,38 @@
       "nombre": "Fase 5"
     }
   ],
+  "grados": [
+    {
+      "id": 1,
+      "fase_id": 1,
+      "nombre": "1º Grado"
+    },
+    {
+      "id": 2,
+      "fase_id": 1,
+      "nombre": "2º Grado"
+    },
+    {
+      "id": 3,
+      "fase_id": 2,
+      "nombre": "3º Grado"
+    },
+    {
+      "id": 4,
+      "fase_id": 2,
+      "nombre": "4º Grado"
+    },
+    {
+      "id": 5,
+      "fase_id": 3,
+      "nombre": "5º Grado"
+    },
+    {
+      "id": 6,
+      "fase_id": 3,
+      "nombre": "6º Grado"
+    }
+  ],
   "lenguajes": [
     {
       "id": 1,
@@ -134,58 +166,58 @@
     },
     {
       "id": 21,
-      "fase_id": 2,
-      "descripcion": "Lectura y creación de poemas, canciones y juegos de palabras para su disfrute"
+      "fase_id": 1,
+      "descripcion": "Recreación de historias mediante el uso artístico de las palabras, del cuerpo, del"
     },
     {
       "id": 22,
-      "fase_id": 2,
-      "descripcion": "Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo"
+      "fase_id": 1,
+      "descripcion": "Representación de distintas formas de ser y estar en el mundo a partir de la ficción"
     },
     {
       "id": 23,
       "fase_id": 2,
-      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
+      "descripcion": "Lectura y creación de poemas, canciones y juegos de palabras para su disfrute"
     },
     {
       "id": 24,
       "fase_id": 2,
-      "descripcion": "Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana"
+      "descripcion": "Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo"
     },
     {
       "id": 25,
       "fase_id": 2,
-      "descripcion": "Experimentación con elementos visuales y sonoros en producciones colectivas artísticas"
+      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
     },
     {
       "id": 26,
       "fase_id": 2,
-      "descripcion": "Lectura y creación de poemas, canciones y juegos de palabras para su disfrute"
+      "descripcion": "Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana"
     },
     {
       "id": 27,
       "fase_id": 2,
-      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
+      "descripcion": "Experimentación con elementos visuales y sonoros en producciones colectivas artísticas"
     },
     {
       "id": 28,
       "fase_id": 2,
-      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
+      "descripcion": "Lectura y creación de poemas, canciones y juegos de palabras para su disfrute"
     },
     {
       "id": 29,
       "fase_id": 2,
-      "descripcion": "Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo"
+      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
     },
     {
       "id": 30,
       "fase_id": 2,
-      "descripcion": "Representación de hechos y experiencias significativas mediante el empleo de recursos textuales, visuales, corporales y sonoros"
+      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
     },
     {
       "id": 31,
       "fase_id": 2,
-      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
+      "descripcion": "Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo"
     },
     {
       "id": 32,
@@ -195,17 +227,17 @@
     {
       "id": 33,
       "fase_id": 2,
-      "descripcion": "Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas"
+      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
     },
     {
       "id": 34,
       "fase_id": 2,
-      "descripcion": "Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo"
+      "descripcion": "Representación de hechos y experiencias significativas mediante el empleo de recursos textuales, visuales, corporales y sonoros"
     },
     {
       "id": 35,
       "fase_id": 2,
-      "descripcion": "Representación de hechos y experiencias significativas mediante el empleo de recursos textuales, visuales, corporales y sonoros"
+      "descripcion": "Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas"
     },
     {
       "id": 36,
@@ -215,62 +247,62 @@
     {
       "id": 37,
       "fase_id": 2,
-      "descripcion": "Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo"
+      "descripcion": "Representación de hechos y experiencias significativas mediante el empleo de recursos textuales, visuales, corporales y sonoros"
     },
     {
       "id": 38,
       "fase_id": 2,
-      "descripcion": "Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana"
+      "descripcion": "Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo"
     },
     {
       "id": 39,
       "fase_id": 2,
-      "descripcion": "Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas"
+      "descripcion": "Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo"
     },
     {
       "id": 40,
       "fase_id": 2,
-      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
+      "descripcion": "Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana"
     },
     {
       "id": 41,
       "fase_id": 2,
-      "descripcion": "Experimentación con elementos visuales y sonoros en producciones colectivas artísticas"
+      "descripcion": "Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas"
     },
     {
       "id": 42,
       "fase_id": 2,
-      "descripcion": "Experimentación con elementos visuales y sonoros en producciones colectivas artísticas"
+      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
     },
     {
       "id": 43,
       "fase_id": 2,
-      "descripcion": "Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana"
+      "descripcion": "Experimentación con elementos visuales y sonoros en producciones colectivas artísticas"
     },
     {
       "id": 44,
       "fase_id": 2,
-      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
+      "descripcion": "Experimentación con elementos visuales y sonoros en producciones colectivas artísticas"
     },
     {
       "id": 45,
       "fase_id": 2,
-      "descripcion": "Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo"
+      "descripcion": "Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana"
     },
     {
       "id": 46,
       "fase_id": 2,
-      "descripcion": "Lectura y creación de poemas, canciones y juegos de palabras para su disfrute"
+      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
     },
     {
       "id": 47,
       "fase_id": 2,
-      "descripcion": "Lectura y creación de poemas, canciones y juegos de palabras para su disfrute"
+      "descripcion": "Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo"
     },
     {
       "id": 48,
       "fase_id": 2,
-      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
+      "descripcion": "Lectura y creación de poemas, canciones y juegos de palabras para su disfrute"
     },
     {
       "id": 49,
@@ -280,17 +312,17 @@
     {
       "id": 50,
       "fase_id": 2,
-      "descripcion": "Lectura y creación de poemas, canciones y juegos de palabras para su disfrute"
+      "descripcion": "Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad"
     },
     {
       "id": 51,
       "fase_id": 2,
-      "descripcion": "Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana"
+      "descripcion": "Lectura y creación de poemas, canciones y juegos de palabras para su disfrute"
     },
     {
       "id": 52,
       "fase_id": 2,
-      "descripcion": "Experimentación con elementos sonoros en composiciones literarias"
+      "descripcion": "Lectura y creación de poemas, canciones y juegos de palabras para su disfrute"
     },
     {
       "id": 53,
@@ -300,162 +332,187 @@
     {
       "id": 54,
       "fase_id": 2,
-      "descripcion": "Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas"
+      "descripcion": "Experimentación con elementos sonoros en composiciones literarias"
     },
     {
       "id": 55,
       "fase_id": 2,
-      "descripcion": "Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas"
+      "descripcion": "Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana"
     },
     {
       "id": 56,
       "fase_id": 2,
-      "descripcion": "Comprensión y producción de cuentos para su disfrute"
+      "descripcion": "Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas"
     },
     {
       "id": 57,
       "fase_id": 2,
-      "descripcion": "Lectura dramatizada y representación teatral"
+      "descripcion": "Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas"
     },
     {
       "id": 58,
       "fase_id": 2,
-      "descripcion": "Lectura dramatizada y representación teatral"
+      "descripcion": "Comprensión y producción de cuentos para su disfrute"
     },
     {
       "id": 59,
-      "fase_id": 3,
-      "descripcion": "Reconocimiento de la diversidad lingüística de México"
+      "fase_id": 2,
+      "descripcion": "Lectura dramatizada y representación teatral"
     },
     {
       "id": 60,
-      "fase_id": 3,
-      "descripcion": "Interpretación y valoración de manifestaciones culturales y artísticas de México y del mundo"
+      "fase_id": 2,
+      "descripcion": "Lectura dramatizada y representación teatral"
     },
     {
       "id": 61,
-      "fase_id": 3,
-      "descripcion": "Apropiación e intervención artística en el espacio comunitario"
+      "fase_id": 2,
+      "descripcion": "Lectura dramatizada y representación teatral"
     },
     {
       "id": 62,
       "fase_id": 3,
-      "descripcion": "Combinación de elementos visuales, sonoros y corporales, en composiciones artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva"
+      "descripcion": "Reconocimiento de la diversidad lingüística de México"
     },
     {
       "id": 63,
       "fase_id": 3,
-      "descripcion": "Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que tienen lugar en la naturaleza"
+      "descripcion": "Interpretación y valoración de manifestaciones culturales y artísticas de México y del mundo"
     },
     {
       "id": 64,
       "fase_id": 3,
-      "descripcion": "Creación y representación de narrativas a partir de acontecimientos relevantes de la comunidad, empleando recursos literarios, visuales, corporales y sonoros"
+      "descripcion": "Apropiación e intervención artística en el espacio comunitario"
     },
     {
       "id": 65,
       "fase_id": 3,
-      "descripcion": "Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia"
+      "descripcion": "Combinación de elementos visuales, sonoros y corporales, en composiciones artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva"
     },
     {
       "id": 66,
       "fase_id": 3,
-      "descripcion": "Interpretación y valoración de manifestaciones culturales y artísticas de México y del"
+      "descripcion": "Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que tienen lugar en la naturaleza"
     },
     {
       "id": 67,
       "fase_id": 3,
-      "descripcion": "Apropiación e intervención artística en el espacio comunitario"
+      "descripcion": "Creación y representación de narrativas a partir de acontecimientos relevantes de la comunidad, empleando recursos literarios, visuales, corporales y sonoros"
     },
     {
       "id": 68,
       "fase_id": 3,
-      "descripcion": "Combinación de elementos visuales, sonoros y corporales, en composiciones"
+      "descripcion": "Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia"
     },
     {
       "id": 69,
       "fase_id": 3,
-      "descripcion": "Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que"
+      "descripcion": "Interpretación y valoración de manifestaciones culturales y artísticas de México y del"
     },
     {
       "id": 70,
       "fase_id": 3,
-      "descripcion": "Creación y representación de narrativas a partir de acontecimientos relevantes de la"
+      "descripcion": "Apropiación e intervención artística en el espacio comunitario"
     },
     {
       "id": 71,
       "fase_id": 3,
-      "descripcion": "Creación y representación de narrativas a partir de acontecimientos relevantes de la"
+      "descripcion": "Combinación de elementos visuales, sonoros y corporales, en composiciones"
     },
     {
       "id": 72,
       "fase_id": 3,
-      "descripcion": "Lectura y análisis de mitos y leyendas para su disfrute y valoración"
+      "descripcion": "Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que"
     },
     {
       "id": 73,
       "fase_id": 3,
-      "descripcion": "Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia"
+      "descripcion": "Creación y representación de narrativas a partir de acontecimientos relevantes de la"
     },
     {
       "id": 74,
       "fase_id": 3,
-      "descripcion": "Reconocimiento de la diversidad lingüística de México"
+      "descripcion": "Creación y representación de narrativas a partir de acontecimientos relevantes de la"
     },
     {
       "id": 75,
       "fase_id": 3,
-      "descripcion": "Apropiación e intervención artística en el espacio comunitario"
+      "descripcion": "Lectura y análisis de mitos y leyendas para su disfrute y valoración"
     },
     {
       "id": 76,
       "fase_id": 3,
-      "descripcion": "Combinación de elementos visuales, sonoros y corporales, en composiciones artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva"
+      "descripcion": "Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia"
     },
     {
       "id": 77,
       "fase_id": 3,
-      "descripcion": "Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas"
+      "descripcion": "Reconocimiento de la diversidad lingüística de México"
     },
     {
       "id": 78,
       "fase_id": 3,
-      "descripcion": "Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas"
+      "descripcion": "Apropiación e intervención artística en el espacio comunitario"
     },
     {
       "id": 79,
       "fase_id": 3,
-      "descripcion": "Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia."
+      "descripcion": "Combinación de elementos visuales, sonoros y corporales, en composiciones artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva"
     },
     {
       "id": 80,
       "fase_id": 3,
-      "descripcion": "Interpretación y valoración de manifestaciones culturales y artísticas de México y del"
+      "descripcion": "Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas"
     },
     {
       "id": 81,
       "fase_id": 3,
-      "descripcion": "Apropiación e intervención artística en el espacio comunitario."
+      "descripcion": "Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas"
     },
     {
       "id": 82,
       "fase_id": 3,
-      "descripcion": "Combinación de elementos visuales, sonoros y corporales, en composiciones artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva."
+      "descripcion": "Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia."
     },
     {
       "id": 83,
       "fase_id": 3,
-      "descripcion": "Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que"
+      "descripcion": "Interpretación y valoración de manifestaciones culturales y artísticas de México y del"
     },
     {
       "id": 84,
       "fase_id": 3,
-      "descripcion": "Creación y representación de narrativas a partir de acontecimientos relevantes de la"
+      "descripcion": "Apropiación e intervención artística en el espacio comunitario."
     },
     {
       "id": 85,
       "fase_id": 3,
+      "descripcion": "Combinación de elementos visuales, sonoros y corporales, en composiciones artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva."
+    },
+    {
+      "id": 86,
+      "fase_id": 3,
+      "descripcion": "Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que"
+    },
+    {
+      "id": 87,
+      "fase_id": 3,
+      "descripcion": "Creación y representación de narrativas a partir de acontecimientos relevantes de la"
+    },
+    {
+      "id": 88,
+      "fase_id": 3,
       "descripcion": "Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia"
+    },
+    {
+      "id": 89,
+      "fase_id": 3,
+      "descripcion": "Análisis y representación de guiones teatrales"
+    },
+    {
+      "id": 90,
+      "fase_id": 3,
+      "descripcion": "Lectura y análisis de mitos y leyendas, para su disfrute y valoración"
     }
   ],
   "contenidos_estatales": [
@@ -861,849 +918,961 @@
     {
       "id": 58,
       "contenido_nacional_id": 21,
-      "fase_id": 2,
-      "lenguaje_id": 1,
-      "descripcion": "• Conocimiento de los elementos de la música y los identifica en las canciones que canta o escucha."
+      "fase_id": 1,
+      "lenguaje_id": 4,
+      "descripcion": "• Exploración del movimiento y el uso consciente de las partes del cuerpo para la"
     },
     {
       "id": 59,
-      "contenido_nacional_id": 22,
-      "fase_id": 2,
-      "lenguaje_id": 1,
-      "descripcion": "• Conocimiento de los elementos de la música y los identifica en las canciones que canta y escucha."
+      "contenido_nacional_id": 21,
+      "fase_id": 1,
+      "lenguaje_id": 4,
+      "descripcion": "expresión de ideas, emociones y la creación de la relación escénica con otras"
     },
     {
       "id": 60,
-      "contenido_nacional_id": 23,
-      "fase_id": 2,
-      "lenguaje_id": 1,
-      "descripcion": "• Formación de un ensamble musical para presentarlo frente a público."
+      "contenido_nacional_id": 21,
+      "fase_id": 1,
+      "lenguaje_id": 4,
+      "descripcion": "personas."
     },
     {
       "id": 61,
-      "contenido_nacional_id": 24,
-      "fase_id": 2,
-      "lenguaje_id": 1,
-      "descripcion": "• Formación de un ensamble musical para representarlo frente al público."
+      "contenido_nacional_id": 22,
+      "fase_id": 1,
+      "lenguaje_id": 4,
+      "descripcion": "• Distinción y utilización de rasgos principales de un personaje (movimientos,"
     },
     {
       "id": 62,
-      "contenido_nacional_id": 25,
-      "fase_id": 2,
-      "lenguaje_id": 1,
-      "descripcion": "• Conocimiento de los elementos de la música y los identifica en las canciones que canta o escucha."
+      "contenido_nacional_id": 22,
+      "fase_id": 1,
+      "lenguaje_id": 4,
+      "descripcion": "gestos y voz) a partir de ideas, frases, imágenes, canciones o cuentos."
     },
     {
       "id": 63,
-      "contenido_nacional_id": 26,
+      "contenido_nacional_id": 23,
       "fase_id": 2,
       "lenguaje_id": 1,
       "descripcion": "• Conocimiento de los elementos de la música y los identifica en las canciones que canta o escucha."
     },
     {
       "id": 64,
+      "contenido_nacional_id": 24,
+      "fase_id": 2,
+      "lenguaje_id": 1,
+      "descripcion": "• Conocimiento de los elementos de la música y los identifica en las canciones que canta y escucha."
+    },
+    {
+      "id": 65,
+      "contenido_nacional_id": 25,
+      "fase_id": 2,
+      "lenguaje_id": 1,
+      "descripcion": "• Formación de un ensamble musical para presentarlo frente a público."
+    },
+    {
+      "id": 66,
+      "contenido_nacional_id": 26,
+      "fase_id": 2,
+      "lenguaje_id": 1,
+      "descripcion": "• Formación de un ensamble musical para representarlo frente al público."
+    },
+    {
+      "id": 67,
       "contenido_nacional_id": 27,
+      "fase_id": 2,
+      "lenguaje_id": 1,
+      "descripcion": "• Conocimiento de los elementos de la música y los identifica en las canciones que canta o escucha."
+    },
+    {
+      "id": 68,
+      "contenido_nacional_id": 28,
+      "fase_id": 2,
+      "lenguaje_id": 1,
+      "descripcion": "• Conocimiento de los elementos de la música y los identifica en las canciones que canta o escucha."
+    },
+    {
+      "id": 69,
+      "contenido_nacional_id": 29,
       "fase_id": 2,
       "lenguaje_id": 2,
       "descripcion": "• Creación de montaje dancístico en colectivo, a partir de un tema sugerido: diseño y elaboración de vestuario y maquillaje, entre otros."
     },
     {
-      "id": 65,
-      "contenido_nacional_id": 28,
+      "id": 70,
+      "contenido_nacional_id": 30,
       "fase_id": 2,
       "lenguaje_id": 2,
       "descripcion": "• Aplicación de conocimientos adquiridos para crear una danza o un baile de tu región."
     },
     {
-      "id": 66,
-      "contenido_nacional_id": 29,
+      "id": 71,
+      "contenido_nacional_id": 31,
       "fase_id": 2,
       "lenguaje_id": 2,
       "descripcion": "• Indagación de historias y leyendas de su entorno o de otras regiones acerca de la danza."
     },
     {
-      "id": 67,
-      "contenido_nacional_id": 30,
+      "id": 72,
+      "contenido_nacional_id": 32,
       "fase_id": 2,
       "lenguaje_id": 2,
       "descripcion": "• Creación de secuencias de movimientos y figuras espaciales en grupos (dúos, tríos, cuartetos, etc.) • Realización de trazos coreográficos (desplazamientos y trayectorias de forma grupal o individual en el espacio general)."
     },
     {
-      "id": 68,
-      "contenido_nacional_id": 31,
+      "id": 73,
+      "contenido_nacional_id": 33,
       "fase_id": 2,
       "lenguaje_id": 2,
       "descripcion": "• Creación de montaje dancístico en colectivo, a partir de un tema sugerido: diseño y elaboración de vestuario y maquillaje, entre otros."
     },
     {
-      "id": 69,
-      "contenido_nacional_id": 32,
+      "id": 74,
+      "contenido_nacional_id": 34,
       "fase_id": 2,
       "lenguaje_id": 2,
       "descripcion": "• Exploración de movimientos relacionándose con objetos y compañeros en el espacio personal y general."
     },
     {
-      "id": 70,
-      "contenido_nacional_id": 33,
+      "id": 75,
+      "contenido_nacional_id": 35,
       "fase_id": 2,
       "lenguaje_id": 2,
       "descripcion": "• Indagación de historias y leyendas de su entorno o de otras regiones acerca de la danza. • Montaje de un baile o danza de tu entidad."
     },
     {
-      "id": 71,
-      "contenido_nacional_id": 34,
+      "id": 76,
+      "contenido_nacional_id": 36,
       "fase_id": 2,
       "lenguaje_id": 3,
       "descripcion": "• Realización de producciones visuales que permitan observar y comparar el uso del color según su clasificación básica."
     },
     {
-      "id": 72,
-      "contenido_nacional_id": 35,
+      "id": 77,
+      "contenido_nacional_id": 37,
       "fase_id": 2,
       "lenguaje_id": 3,
       "descripcion": "• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana. • Elaboración de bocetos y dibujos para crear producciones visuales."
     },
     {
-      "id": 73,
-      "contenido_nacional_id": 36,
+      "id": 78,
+      "contenido_nacional_id": 38,
       "fase_id": 2,
       "lenguaje_id": 3,
       "descripcion": "• Realización de producciones visuales que permitan observar y comparar el uso del color según su clasificación básica. • Elaboración de dibujos utilizando planos y perspectiva."
     },
     {
-      "id": 74,
-      "contenido_nacional_id": 37,
-      "fase_id": 2,
-      "lenguaje_id": 3,
-      "descripcion": "• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana."
-    },
-    {
-      "id": 75,
-      "contenido_nacional_id": 38,
-      "fase_id": 2,
-      "lenguaje_id": 3,
-      "descripcion": "• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana."
-    },
-    {
-      "id": 76,
+      "id": 79,
       "contenido_nacional_id": 39,
+      "fase_id": 2,
+      "lenguaje_id": 3,
+      "descripcion": "• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana."
+    },
+    {
+      "id": 80,
+      "contenido_nacional_id": 40,
+      "fase_id": 2,
+      "lenguaje_id": 3,
+      "descripcion": "• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana."
+    },
+    {
+      "id": 81,
+      "contenido_nacional_id": 41,
       "fase_id": 2,
       "lenguaje_id": 3,
       "descripcion": "• Reconocimiento del impacto visual que produce el contraste de los colores complementarios en producciones artísticas. • Realización de una composición empleando una técnica pictórica."
     },
     {
-      "id": 77,
-      "contenido_nacional_id": 40,
+      "id": 82,
+      "contenido_nacional_id": 42,
       "fase_id": 2,
       "lenguaje_id": 3,
       "descripcion": "• Realización de una composición empleando una técnica pictórica. • Utiliza el color como elemento expresivo para comunicar ideas."
     },
     {
-      "id": 78,
-      "contenido_nacional_id": 41,
+      "id": 83,
+      "contenido_nacional_id": 43,
       "fase_id": 2,
       "lenguaje_id": 3,
       "descripcion": "• Identificación de representaciones bidimensionales y tridimensionales donde estés presentes diferentes formatos, soportes y materiales. • Realización de producciones visuales que permitan observar y comparar el uso del color según su clasificación básica."
     },
     {
-      "id": 79,
-      "contenido_nacional_id": 42,
-      "fase_id": 2,
-      "lenguaje_id": 3,
-      "descripcion": "• Identificación de representaciones bidimensionales y tridimensionales donde estén presentes diferentes formatos, soportes y materiales."
-    },
-    {
-      "id": 80,
-      "contenido_nacional_id": 43,
-      "fase_id": 2,
-      "lenguaje_id": 3,
-      "descripcion": "• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana. • Identificación de representaciones bidimensionales y tridimensionales donde estén presentes diferentes formatos, soportes y materiales."
-    },
-    {
-      "id": 81,
+      "id": 84,
       "contenido_nacional_id": 44,
       "fase_id": 2,
       "lenguaje_id": 3,
       "descripcion": "• Identificación de representaciones bidimensionales y tridimensionales donde estén presentes diferentes formatos, soportes y materiales."
     },
     {
-      "id": 82,
+      "id": 85,
       "contenido_nacional_id": 45,
+      "fase_id": 2,
+      "lenguaje_id": 3,
+      "descripcion": "• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana. • Identificación de representaciones bidimensionales y tridimensionales donde estén presentes diferentes formatos, soportes y materiales."
+    },
+    {
+      "id": 86,
+      "contenido_nacional_id": 46,
+      "fase_id": 2,
+      "lenguaje_id": 3,
+      "descripcion": "• Identificación de representaciones bidimensionales y tridimensionales donde estén presentes diferentes formatos, soportes y materiales."
+    },
+    {
+      "id": 87,
+      "contenido_nacional_id": 47,
       "fase_id": 2,
       "lenguaje_id": 3,
       "descripcion": "• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana."
     },
     {
-      "id": 83,
-      "contenido_nacional_id": 46,
+      "id": 88,
+      "contenido_nacional_id": 48,
       "fase_id": 2,
       "lenguaje_id": 4,
       "descripcion": "• Investigación sobre las narraciones de su comunidad o de otras regiones para crear diálogos sencillos, de historias ficticias y/o de realidad."
     },
     {
-      "id": 84,
-      "contenido_nacional_id": 47,
-      "fase_id": 2,
-      "lenguaje_id": 4,
-      "descripcion": "• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su voz."
-    },
-    {
-      "id": 85,
-      "contenido_nacional_id": 48,
-      "fase_id": 2,
-      "lenguaje_id": 4,
-      "descripcion": "• Creación de una historia de su comunidad con pequeños diálogos."
-    },
-    {
-      "id": 86,
-      "contenido_nacional_id": 49,
-      "fase_id": 2,
-      "lenguaje_id": 4,
-      "descripcion": "• Creación de una historia de su comunidad con pequeños diálogos."
-    },
-    {
-      "id": 87,
-      "contenido_nacional_id": 50,
-      "fase_id": 2,
-      "lenguaje_id": 4,
-      "descripcion": "• Creación de una historia de su comunidad con pequeños diálogos."
-    },
-    {
-      "id": 88,
-      "contenido_nacional_id": 51,
-      "fase_id": 2,
-      "lenguaje_id": 4,
-      "descripcion": "• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su cuerpo y voz."
-    },
-    {
       "id": 89,
-      "contenido_nacional_id": 52,
+      "contenido_nacional_id": 49,
       "fase_id": 2,
       "lenguaje_id": 4,
       "descripcion": "• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su voz."
     },
     {
       "id": 90,
-      "contenido_nacional_id": 53,
-      "fase_id": 2,
-      "lenguaje_id": 4,
-      "descripcion": "• Identificación de las zonas del escenario para conocer las posibilidades de interacción que tiene con cada una: el público, otros actores, la escenografía y el mismo."
-    },
-    {
-      "id": 91,
-      "contenido_nacional_id": 54,
-      "fase_id": 2,
-      "lenguaje_id": 4,
-      "descripcion": "• Investigación sobre tradiciones culturales (rituales religioso y festivo) de México donde se fabrican y utilizan máscaras."
-    },
-    {
-      "id": 92,
-      "contenido_nacional_id": 55,
-      "fase_id": 2,
-      "lenguaje_id": 4,
-      "descripcion": "• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su cuerpo."
-    },
-    {
-      "id": 93,
-      "contenido_nacional_id": 56,
+      "contenido_nacional_id": 50,
       "fase_id": 2,
       "lenguaje_id": 4,
       "descripcion": "• Creación de una historia de su comunidad con pequeños diálogos."
     },
     {
+      "id": 91,
+      "contenido_nacional_id": 51,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "• Creación de una historia de su comunidad con pequeños diálogos."
+    },
+    {
+      "id": 92,
+      "contenido_nacional_id": 52,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "• Creación de una historia de su comunidad con pequeños diálogos."
+    },
+    {
+      "id": 93,
+      "contenido_nacional_id": 53,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su cuerpo y voz."
+    },
+    {
       "id": 94,
-      "contenido_nacional_id": 57,
+      "contenido_nacional_id": 54,
       "fase_id": 2,
       "lenguaje_id": 4,
       "descripcion": "• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su voz."
     },
     {
       "id": 95,
+      "contenido_nacional_id": 55,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "• Identificación de las zonas del escenario para conocer las posibilidades de interacción que tiene con cada una: el público, otros actores, la escenografía y el mismo."
+    },
+    {
+      "id": 96,
+      "contenido_nacional_id": 56,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "• Investigación sobre tradiciones culturales (rituales religioso y festivo) de México donde se fabrican y utilizan máscaras."
+    },
+    {
+      "id": 97,
+      "contenido_nacional_id": 57,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su cuerpo."
+    },
+    {
+      "id": 98,
       "contenido_nacional_id": 58,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "• Creación de una historia de su comunidad con pequeños diálogos."
+    },
+    {
+      "id": 99,
+      "contenido_nacional_id": 59,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su voz."
+    },
+    {
+      "id": 100,
+      "contenido_nacional_id": 60,
       "fase_id": 2,
       "lenguaje_id": 4,
       "descripcion": "Lectura dramatizada y representación teatral"
     },
     {
-      "id": 96,
-      "contenido_nacional_id": 59,
+      "id": 101,
+      "contenido_nacional_id": 61,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su cuerpo y voz."
+    },
+    {
+      "id": 102,
+      "contenido_nacional_id": 62,
       "fase_id": 3,
       "lenguaje_id": 1,
       "descripcion": "• Aplicación de técnicas de respiración en la emisión vocal en la práctica del canto."
     },
     {
-      "id": 97,
-      "contenido_nacional_id": 60,
-      "fase_id": 3,
-      "lenguaje_id": 1,
-      "descripcion": "• Conocimiento e identificación auditiva de las características de los diferentes géneros musicales."
-    },
-    {
-      "id": 98,
-      "contenido_nacional_id": 61,
-      "fase_id": 3,
-      "lenguaje_id": 1,
-      "descripcion": "• Conformación de una orquesta de percusiones para presentarla frente al público."
-    },
-    {
-      "id": 99,
-      "contenido_nacional_id": 61,
-      "fase_id": 3,
-      "lenguaje_id": 1,
-      "descripcion": "individual, a partir de la observación de"
-    },
-    {
-      "id": 100,
-      "contenido_nacional_id": 61,
-      "fase_id": 3,
-      "lenguaje_id": 1,
-      "descripcion": "manifestaciones culturales (música de las"
-    },
-    {
-      "id": 101,
-      "contenido_nacional_id": 61,
-      "fase_id": 3,
-      "lenguaje_id": 1,
-      "descripcion": "fiestas tradicionales de su comunidad)"
-    },
-    {
-      "id": 102,
-      "contenido_nacional_id": 61,
-      "fase_id": 3,
-      "lenguaje_id": 1,
-      "descripcion": "para la creación de cotidiáfonos."
-    },
-    {
       "id": 103,
-      "contenido_nacional_id": 62,
+      "contenido_nacional_id": 63,
       "fase_id": 3,
       "lenguaje_id": 1,
       "descripcion": "• Conocimiento e identificación auditiva de las características de los diferentes géneros musicales."
     },
     {
       "id": 104,
-      "contenido_nacional_id": 62,
+      "contenido_nacional_id": 64,
       "fase_id": 3,
       "lenguaje_id": 1,
-      "descripcion": "grupales a partir de sonidos, ritmos y"
+      "descripcion": "• Conformación de una orquesta de percusiones para presentarla frente al público."
     },
     {
       "id": 105,
-      "contenido_nacional_id": 62,
+      "contenido_nacional_id": 64,
       "fase_id": 3,
       "lenguaje_id": 1,
-      "descripcion": "movimientos que representan la"
+      "descripcion": "individual, a partir de la observación de"
     },
     {
       "id": 106,
-      "contenido_nacional_id": 62,
+      "contenido_nacional_id": 64,
       "fase_id": 3,
       "lenguaje_id": 1,
-      "descripcion": "identidad."
+      "descripcion": "manifestaciones culturales (música de las"
     },
     {
       "id": 107,
-      "contenido_nacional_id": 63,
+      "contenido_nacional_id": 64,
       "fase_id": 3,
       "lenguaje_id": 1,
-      "descripcion": "• Conformación de una orquesta de percusiones para presentarla frente al público"
+      "descripcion": "fiestas tradicionales de su comunidad)"
     },
     {
       "id": 108,
       "contenido_nacional_id": 64,
       "fase_id": 3,
       "lenguaje_id": 1,
-      "descripcion": "• Creación de polirritmias para el acompañamiento musical."
+      "descripcion": "para la creación de cotidiáfonos."
     },
     {
       "id": 109,
       "contenido_nacional_id": 65,
       "fase_id": 3,
       "lenguaje_id": 1,
-      "descripcion": "1. Conocimiento e identificación del compás musical en las canciones que escucha."
+      "descripcion": "• Conocimiento e identificación auditiva de las características de los diferentes géneros musicales."
     },
     {
       "id": 110,
-      "contenido_nacional_id": 66,
+      "contenido_nacional_id": 65,
       "fase_id": 3,
-      "lenguaje_id": 2,
-      "descripcion": "• Interpretación de un baile regional mexicano o del mundo."
+      "lenguaje_id": 1,
+      "descripcion": "grupales a partir de sonidos, ritmos y"
     },
     {
       "id": 111,
-      "contenido_nacional_id": 66,
+      "contenido_nacional_id": 65,
       "fase_id": 3,
-      "lenguaje_id": 2,
-      "descripcion": "manifestaciones culturales y artísticas, México y del mundo como forma de"
+      "lenguaje_id": 1,
+      "descripcion": "movimientos que representan la"
     },
     {
       "id": 112,
-      "contenido_nacional_id": 66,
+      "contenido_nacional_id": 65,
       "fase_id": 3,
-      "lenguaje_id": 2,
-      "descripcion": "para comprensión de su significado. expresión cultural que refleje identidad y"
+      "lenguaje_id": 1,
+      "descripcion": "identidad."
     },
     {
       "id": 113,
       "contenido_nacional_id": 66,
       "fase_id": 3,
-      "lenguaje_id": 2,
-      "descripcion": "tradición."
+      "lenguaje_id": 1,
+      "descripcion": "• Conformación de una orquesta de percusiones para presentarla frente al público"
     },
     {
       "id": 114,
       "contenido_nacional_id": 67,
       "fase_id": 3,
+      "lenguaje_id": 1,
+      "descripcion": "• Creación de polirritmias para el acompañamiento musical."
+    },
+    {
+      "id": 115,
+      "contenido_nacional_id": 68,
+      "fase_id": 3,
+      "lenguaje_id": 1,
+      "descripcion": "1. Conocimiento e identificación del compás musical en las canciones que escucha."
+    },
+    {
+      "id": 116,
+      "contenido_nacional_id": 69,
+      "fase_id": 3,
+      "lenguaje_id": 2,
+      "descripcion": "• Interpretación de un baile regional mexicano o del mundo."
+    },
+    {
+      "id": 117,
+      "contenido_nacional_id": 69,
+      "fase_id": 3,
+      "lenguaje_id": 2,
+      "descripcion": "manifestaciones culturales y artísticas, México y del mundo como forma de"
+    },
+    {
+      "id": 118,
+      "contenido_nacional_id": 69,
+      "fase_id": 3,
+      "lenguaje_id": 2,
+      "descripcion": "para comprensión de su significado. expresión cultural que refleje identidad y"
+    },
+    {
+      "id": 119,
+      "contenido_nacional_id": 69,
+      "fase_id": 3,
+      "lenguaje_id": 2,
+      "descripcion": "tradición."
+    },
+    {
+      "id": 120,
+      "contenido_nacional_id": 70,
+      "fase_id": 3,
       "lenguaje_id": 2,
       "descripcion": "• Construcción colectiva de una representación dancística integrando elementos"
     },
     {
-      "id": 115,
-      "contenido_nacional_id": 67,
+      "id": 121,
+      "contenido_nacional_id": 70,
       "fase_id": 3,
       "lenguaje_id": 2,
       "descripcion": "de la cultura local regional o nacional."
     },
     {
-      "id": 116,
-      "contenido_nacional_id": 67,
+      "id": 122,
+      "contenido_nacional_id": 70,
       "fase_id": 3,
       "lenguaje_id": 2,
       "descripcion": "bailes o danzas para la atención y/o mediante el lenguaje dancístico para la"
     },
     {
-      "id": 117,
-      "contenido_nacional_id": 67,
+      "id": 123,
+      "contenido_nacional_id": 70,
       "fase_id": 3,
       "lenguaje_id": 2,
       "descripcion": "solución de necesidades del espacio transformación de un espacio público"
-    },
-    {
-      "id": 118,
-      "contenido_nacional_id": 67,
-      "fase_id": 3,
-      "lenguaje_id": 2,
-      "descripcion": "comunitario mediante su identificación y comunitario a favor del bienestar social."
-    },
-    {
-      "id": 119,
-      "contenido_nacional_id": 67,
-      "fase_id": 3,
-      "lenguaje_id": 2,
-      "descripcion": "socialización"
-    },
-    {
-      "id": 120,
-      "contenido_nacional_id": 68,
-      "fase_id": 3,
-      "lenguaje_id": 2,
-      "descripcion": "• Identificación de diferentes movimientos que pueden manejarse mediante el uso"
-    },
-    {
-      "id": 121,
-      "contenido_nacional_id": 68,
-      "fase_id": 3,
-      "lenguaje_id": 2,
-      "descripcion": "de distintos tipos de música."
-    },
-    {
-      "id": 122,
-      "contenido_nacional_id": 69,
-      "fase_id": 3,
-      "lenguaje_id": 2,
-      "descripcion": "• Presentación y reflexión de los bailes folclóricos como parte del patrimonio"
-    },
-    {
-      "id": 123,
-      "contenido_nacional_id": 69,
-      "fase_id": 3,
-      "lenguaje_id": 2,
-      "descripcion": "cultural"
     },
     {
       "id": 124,
       "contenido_nacional_id": 70,
       "fase_id": 3,
       "lenguaje_id": 2,
-      "descripcion": "• Interpretación de un género dancístico utilizando elementos coreográficos."
+      "descripcion": "comunitario mediante su identificación y comunitario a favor del bienestar social."
     },
     {
       "id": 125,
-      "contenido_nacional_id": 71,
+      "contenido_nacional_id": 70,
       "fase_id": 3,
       "lenguaje_id": 2,
-      "descripcion": "Interpretación de un género dancístico utilizando elementos coreográficos."
+      "descripcion": "socialización"
     },
     {
       "id": 126,
-      "contenido_nacional_id": 72,
+      "contenido_nacional_id": 71,
       "fase_id": 3,
       "lenguaje_id": 2,
-      "descripcion": "Construcción colectiva de una representación dancística integrando elementos de la"
+      "descripcion": "• Identificación de diferentes movimientos que pueden manejarse mediante el uso"
     },
     {
       "id": 127,
-      "contenido_nacional_id": 72,
+      "contenido_nacional_id": 71,
       "fase_id": 3,
       "lenguaje_id": 2,
-      "descripcion": "cultura local, regional o nacional."
+      "descripcion": "de distintos tipos de música."
     },
     {
       "id": 128,
-      "contenido_nacional_id": 73,
+      "contenido_nacional_id": 72,
       "fase_id": 3,
       "lenguaje_id": 2,
-      "descripcion": "Presentación y reflexión de los bailes folclóricos como parte del patrimonio cultural"
+      "descripcion": "• Presentación y reflexión de los bailes folclóricos como parte del patrimonio"
     },
     {
       "id": 129,
-      "contenido_nacional_id": 73,
+      "contenido_nacional_id": 72,
       "fase_id": 3,
       "lenguaje_id": 2,
-      "descripcion": "características de bailes folclóricos en una"
+      "descripcion": "cultural"
     },
     {
       "id": 130,
       "contenido_nacional_id": 73,
       "fase_id": 3,
       "lenguaje_id": 2,
-      "descripcion": "manifestación cultural para reflexión sobre"
+      "descripcion": "• Interpretación de un género dancístico utilizando elementos coreográficos."
     },
     {
       "id": 131,
-      "contenido_nacional_id": 73,
+      "contenido_nacional_id": 74,
       "fase_id": 3,
       "lenguaje_id": 2,
-      "descripcion": "su simbolismo."
+      "descripcion": "Interpretación de un género dancístico utilizando elementos coreográficos."
     },
     {
       "id": 132,
-      "contenido_nacional_id": 74,
+      "contenido_nacional_id": 75,
       "fase_id": 3,
-      "lenguaje_id": 3,
-      "descripcion": "• Valora la importancia de conservar y difundir el patrimonio artístico mexicano. • Interpreta hechos artísticos y culturales a través de la observación de imágenes y objetos pertenecientes al patrimonio histórico tangible."
+      "lenguaje_id": 2,
+      "descripcion": "Construcción colectiva de una representación dancística integrando elementos de la"
     },
     {
       "id": 133,
-      "contenido_nacional_id": 74,
+      "contenido_nacional_id": 75,
       "fase_id": 3,
-      "lenguaje_id": 3,
-      "descripcion": "lingüística en México (patrimonio cultural,"
+      "lenguaje_id": 2,
+      "descripcion": "cultura local, regional o nacional."
     },
     {
       "id": 134,
-      "contenido_nacional_id": 74,
+      "contenido_nacional_id": 76,
       "fase_id": 3,
-      "lenguaje_id": 3,
-      "descripcion": "sitios arqueológicos, obras de arte) con"
+      "lenguaje_id": 2,
+      "descripcion": "Presentación y reflexión de los bailes folclóricos como parte del patrimonio cultural"
     },
     {
       "id": 135,
-      "contenido_nacional_id": 74,
+      "contenido_nacional_id": 76,
       "fase_id": 3,
-      "lenguaje_id": 3,
-      "descripcion": "reflexión sobre su riqueza."
+      "lenguaje_id": 2,
+      "descripcion": "características de bailes folclóricos en una"
     },
     {
       "id": 136,
-      "contenido_nacional_id": 75,
+      "contenido_nacional_id": 76,
       "fase_id": 3,
-      "lenguaje_id": 3,
-      "descripcion": "• Recopilación de imágenes de obras de arte, objetos o artefactos, películas o fotografías de diferentes épocas para comprender y discutir la memoria de la importancia del patrimonio tangible como parte del pueblo."
+      "lenguaje_id": 2,
+      "descripcion": "manifestación cultural para reflexión sobre"
     },
     {
       "id": 137,
       "contenido_nacional_id": 76,
       "fase_id": 3,
-      "lenguaje_id": 3,
-      "descripcion": "• Creación de obras tridimensionales con movimiento, utilizando diferentes"
+      "lenguaje_id": 2,
+      "descripcion": "su simbolismo."
     },
     {
       "id": 138,
-      "contenido_nacional_id": 76,
+      "contenido_nacional_id": 77,
       "fase_id": 3,
       "lenguaje_id": 3,
-      "descripcion": "soportes procesos y materiales con los que se puedan experimentar las"
+      "descripcion": "• Valora la importancia de conservar y difundir el patrimonio artístico mexicano. • Interpreta hechos artísticos y culturales a través de la observación de imágenes y objetos pertenecientes al patrimonio histórico tangible."
     },
     {
       "id": 139,
-      "contenido_nacional_id": 76,
+      "contenido_nacional_id": 77,
       "fase_id": 3,
       "lenguaje_id": 3,
-      "descripcion": "diferentes formas."
+      "descripcion": "lingüística en México (patrimonio cultural,"
     },
     {
       "id": 140,
       "contenido_nacional_id": 77,
       "fase_id": 3,
       "lenguaje_id": 3,
-      "descripcion": "• Comprensión de la tridimensionalidad por medio de objetos que se encuentren"
+      "descripcion": "sitios arqueológicos, obras de arte) con"
     },
     {
       "id": 141,
       "contenido_nacional_id": 77,
       "fase_id": 3,
       "lenguaje_id": 3,
-      "descripcion": "en el entorno."
+      "descripcion": "reflexión sobre su riqueza."
     },
     {
       "id": 142,
-      "contenido_nacional_id": 77,
+      "contenido_nacional_id": 78,
+      "fase_id": 3,
+      "lenguaje_id": 3,
+      "descripcion": "• Recopilación de imágenes de obras de arte, objetos o artefactos, películas o fotografías de diferentes épocas para comprender y discutir la memoria de la importancia del patrimonio tangible como parte del pueblo."
+    },
+    {
+      "id": 143,
+      "contenido_nacional_id": 79,
+      "fase_id": 3,
+      "lenguaje_id": 3,
+      "descripcion": "• Creación de obras tridimensionales con movimiento, utilizando diferentes"
+    },
+    {
+      "id": 144,
+      "contenido_nacional_id": 79,
+      "fase_id": 3,
+      "lenguaje_id": 3,
+      "descripcion": "soportes procesos y materiales con los que se puedan experimentar las"
+    },
+    {
+      "id": 145,
+      "contenido_nacional_id": 79,
+      "fase_id": 3,
+      "lenguaje_id": 3,
+      "descripcion": "diferentes formas."
+    },
+    {
+      "id": 146,
+      "contenido_nacional_id": 80,
+      "fase_id": 3,
+      "lenguaje_id": 3,
+      "descripcion": "• Comprensión de la tridimensionalidad por medio de objetos que se encuentren"
+    },
+    {
+      "id": 147,
+      "contenido_nacional_id": 80,
+      "fase_id": 3,
+      "lenguaje_id": 3,
+      "descripcion": "en el entorno."
+    },
+    {
+      "id": 148,
+      "contenido_nacional_id": 80,
       "fase_id": 3,
       "lenguaje_id": 3,
       "descripcion": "• Utiliza el lenguaje tridimensional para expresar en forma libre ideas,"
     },
     {
-      "id": 143,
-      "contenido_nacional_id": 77,
+      "id": 149,
+      "contenido_nacional_id": 80,
       "fase_id": 3,
       "lenguaje_id": 3,
       "descripcion": "emociones y experiencias."
     },
     {
-      "id": 144,
-      "contenido_nacional_id": 77,
+      "id": 150,
+      "contenido_nacional_id": 80,
       "fase_id": 3,
       "lenguaje_id": 3,
       "descripcion": "colores, texturas, sonidos y movimientos de"
     },
     {
-      "id": 145,
-      "contenido_nacional_id": 77,
+      "id": 151,
+      "contenido_nacional_id": 80,
       "fase_id": 3,
       "lenguaje_id": 3,
       "descripcion": "la naturaleza mediante producciones"
     },
     {
-      "id": 146,
-      "contenido_nacional_id": 77,
+      "id": 152,
+      "contenido_nacional_id": 80,
       "fase_id": 3,
       "lenguaje_id": 3,
       "descripcion": "tridimensionales."
     },
     {
-      "id": 147,
-      "contenido_nacional_id": 78,
+      "id": 153,
+      "contenido_nacional_id": 81,
       "fase_id": 3,
       "lenguaje_id": 3,
       "descripcion": "• Comprensión de la tridimensionalidad por medio de objetos que se"
     },
     {
-      "id": 148,
-      "contenido_nacional_id": 78,
+      "id": 154,
+      "contenido_nacional_id": 81,
       "fase_id": 3,
       "lenguaje_id": 3,
       "descripcion": "encuentren en el entorno."
     },
     {
-      "id": 149,
-      "contenido_nacional_id": 79,
+      "id": 155,
+      "contenido_nacional_id": 82,
       "fase_id": 3,
       "lenguaje_id": 3,
       "descripcion": "• Creación de una obra bidimensional o tridimensional a partir de elementos de su entorno que hagan referencia a sucesos relevantes de su comunidad."
     },
     {
-      "id": 150,
-      "contenido_nacional_id": 80,
+      "id": 156,
+      "contenido_nacional_id": 83,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "• Selección de un tema de su comunidad para escribir una obra de teatro que"
     },
     {
-      "id": 151,
-      "contenido_nacional_id": 80,
+      "id": 157,
+      "contenido_nacional_id": 83,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "contenga todos los elementos de un género"
     },
     {
-      "id": 152,
-      "contenido_nacional_id": 80,
+      "id": 158,
+      "contenido_nacional_id": 83,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "género teatral (texto, personajes, conflicto,"
     },
     {
-      "id": 153,
-      "contenido_nacional_id": 80,
+      "id": 159,
+      "contenido_nacional_id": 83,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "espacio, argumento, tema, estructura) para"
     },
     {
-      "id": 154,
-      "contenido_nacional_id": 80,
+      "id": 160,
+      "contenido_nacional_id": 83,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "identificación en manifestaciones culturales"
     },
     {
-      "id": 155,
-      "contenido_nacional_id": 80,
+      "id": 161,
+      "contenido_nacional_id": 83,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "teatrales de México (teatro callejero y"
     },
     {
-      "id": 156,
-      "contenido_nacional_id": 80,
+      "id": 162,
+      "contenido_nacional_id": 83,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "actual)."
     },
     {
-      "id": 157,
-      "contenido_nacional_id": 81,
+      "id": 163,
+      "contenido_nacional_id": 84,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "• Elaboración del escenario adecuado para ambientar una puesta en escena con materiales diversos"
     },
     {
-      "id": 158,
-      "contenido_nacional_id": 81,
+      "id": 164,
+      "contenido_nacional_id": 84,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "comunitarias mediante obras teatrales y"
     },
     {
-      "id": 159,
-      "contenido_nacional_id": 81,
+      "id": 165,
+      "contenido_nacional_id": 84,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "ambientación de un espacio público para la"
     },
     {
-      "id": 160,
-      "contenido_nacional_id": 81,
+      "id": 166,
+      "contenido_nacional_id": 84,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "generación de reflexión y el favorecimiento"
     },
     {
-      "id": 161,
-      "contenido_nacional_id": 81,
+      "id": 167,
+      "contenido_nacional_id": 84,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "del bienestar social."
     },
     {
-      "id": 162,
-      "contenido_nacional_id": 81,
+      "id": 168,
+      "contenido_nacional_id": 84,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "78"
     },
     {
-      "id": 163,
-      "contenido_nacional_id": 82,
+      "id": 169,
+      "contenido_nacional_id": 85,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "• Identificación de las características tonales (voz, carácter) de los personajes que"
     },
     {
-      "id": 164,
-      "contenido_nacional_id": 82,
+      "id": 170,
+      "contenido_nacional_id": 85,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "aparecen en una historia."
     },
     {
-      "id": 165,
-      "contenido_nacional_id": 82,
+      "id": 171,
+      "contenido_nacional_id": 85,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "identificación de tonalidades,"
     },
     {
-      "id": 166,
-      "contenido_nacional_id": 82,
+      "id": 172,
+      "contenido_nacional_id": 85,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "intencionalidades y emociones de la voz"
     },
     {
-      "id": 167,
-      "contenido_nacional_id": 82,
+      "id": 173,
+      "contenido_nacional_id": 85,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "actoral para la creación de un material"
     },
     {
-      "id": 168,
-      "contenido_nacional_id": 82,
+      "id": 174,
+      "contenido_nacional_id": 85,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "audiovisual."
     },
     {
-      "id": 169,
-      "contenido_nacional_id": 83,
+      "id": 175,
+      "contenido_nacional_id": 86,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "• Realización del montaje de una puesta en escena con títeres, o bien, en teatro"
     },
     {
-      "id": 170,
-      "contenido_nacional_id": 83,
+      "id": 176,
+      "contenido_nacional_id": 86,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "corporal ante un público."
     },
     {
-      "id": 171,
-      "contenido_nacional_id": 83,
+      "id": 177,
+      "contenido_nacional_id": 86,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "79"
     },
     {
-      "id": 172,
-      "contenido_nacional_id": 84,
+      "id": 178,
+      "contenido_nacional_id": 87,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "• Selección de un tema de su comunidad para escribir una obra de teatro que"
     },
     {
-      "id": 173,
-      "contenido_nacional_id": 84,
+      "id": 179,
+      "contenido_nacional_id": 87,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "contenga todos los elementos de un género"
     },
     {
-      "id": 174,
-      "contenido_nacional_id": 84,
+      "id": 180,
+      "contenido_nacional_id": 87,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "significado del nombre y la historia familiar"
     },
     {
-      "id": 175,
-      "contenido_nacional_id": 84,
+      "id": 181,
+      "contenido_nacional_id": 87,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "asociada a su elección para la creación de"
     },
     {
-      "id": 176,
-      "contenido_nacional_id": 84,
+      "id": 182,
+      "contenido_nacional_id": 87,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "una obra de teatro."
     },
     {
-      "id": 177,
-      "contenido_nacional_id": 85,
+      "id": 183,
+      "contenido_nacional_id": 88,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "• Creación de títeres para representar personajes de obras, considerando sus"
     },
     {
-      "id": 178,
-      "contenido_nacional_id": 85,
+      "id": 184,
+      "contenido_nacional_id": 88,
       "fase_id": 3,
       "lenguaje_id": 4,
       "descripcion": "características físicas, personalidad, forma de ser y de comportarse."
+    },
+    {
+      "id": 185,
+      "contenido_nacional_id": 89,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "• Id p entificación de las características tonales (tono, matices y niveles de voz) de los"
+    },
+    {
+      "id": 186,
+      "contenido_nacional_id": 89,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "ersonajes que aparecen en una historia."
+    },
+    {
+      "id": 187,
+      "contenido_nacional_id": 90,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "• Elaboración y acondicionamiento del escenario para ambientar una puesta en"
+    },
+    {
+      "id": 188,
+      "contenido_nacional_id": 90,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "escena."
+    },
+    {
+      "id": 189,
+      "contenido_nacional_id": 90,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "de México y del mundo, con"
+    },
+    {
+      "id": 190,
+      "contenido_nacional_id": 90,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "reconocimiento de características,"
+    },
+    {
+      "id": 191,
+      "contenido_nacional_id": 90,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "funciones, similitudes y diferencias, para"
+    },
+    {
+      "id": 192,
+      "contenido_nacional_id": 90,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "representación de uno mediante obra"
+    },
+    {
+      "id": 193,
+      "contenido_nacional_id": 90,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "teatral en escenario elaborado"
+    },
+    {
+      "id": 194,
+      "contenido_nacional_id": 90,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "colectivamente."
     }
   ],
   "pdas": [
@@ -2006,706 +2175,706 @@
     {
       "id": 38,
       "contenido_estatal_id": 58,
+      "grado_id": 1,
+      "lenguaje_id": 4,
+      "grado_numero": 1,
+      "descripcion": "Representación mediante el juego teatral de historias propias o ficticias para su puesta en escena en el espacio escénico."
+    },
+    {
+      "id": 39,
+      "contenido_estatal_id": 58,
+      "grado_id": 2,
+      "lenguaje_id": 4,
+      "grado_numero": 2,
+      "descripcion": "Representación de una historia creada colectivamente mediante la utilización de objetos del entorno para la caracterización de personajes."
+    },
+    {
+      "id": 40,
+      "contenido_estatal_id": 61,
+      "grado_id": 1,
+      "lenguaje_id": 4,
+      "grado_numero": 1,
+      "descripcion": "Interpretación de personajes ficticios inspirados en el entorno o en manifestaciones artísticas (cuentos, literatura, historietas) mediante el uso de recursos propios del personaje, vestuario y maquillaje para el enriquecimiento de la representación."
+    },
+    {
+      "id": 41,
+      "contenido_estatal_id": 61,
+      "grado_id": 2,
+      "lenguaje_id": 4,
+      "grado_numero": 2,
+      "descripcion": "Investigación y construcción de personajes ficticios inspirados en manifestaciones culturales, con incorporación de rasgos propios mediante movimientos, gestos, voz y recursos como vestuario, maquillaje o máscaras."
+    },
+    {
+      "id": 42,
+      "contenido_estatal_id": 63,
       "grado_id": 3,
       "lenguaje_id": 1,
       "grado_numero": 3,
       "descripcion": "Exploración y combinación de sonidos y palabras para el juego con su acomodo y entonación, así como modificación de palabras o letras de una canción siguiendo el ritmo original."
     },
     {
-      "id": 39,
-      "contenido_estatal_id": 58,
+      "id": 43,
+      "contenido_estatal_id": 63,
       "grado_id": 4,
       "lenguaje_id": 1,
       "grado_numero": 4,
       "descripcion": "Composición de letras de canciones considerando los elementos rítmicos y melódicos de los textos poéticos: ritmos y duraciones, repetición de frases, palabras y sílabas."
     },
     {
-      "id": 40,
-      "contenido_estatal_id": 59,
+      "id": 44,
+      "contenido_estatal_id": 64,
       "grado_id": 3,
       "lenguaje_id": 1,
       "grado_numero": 3,
       "descripcion": "Identificación de las cualidades del sonido (duración, intensidad, altura y timbre) en manifestaciones culturales y artísticas de la comunidad."
     },
     {
-      "id": 41,
-      "contenido_estatal_id": 59,
+      "id": 45,
+      "contenido_estatal_id": 64,
       "grado_id": 4,
       "lenguaje_id": 1,
       "grado_numero": 4,
       "descripcion": "Reconocimiento de los elementos de la música (ritmo, armonía y melodía) en manifestaciones culturales y artísticas de la comunidad y de otros lugares del mundo, para la reflexión sobre su sentido y significado."
     },
     {
-      "id": 42,
-      "contenido_estatal_id": 60,
+      "id": 46,
+      "contenido_estatal_id": 65,
       "grado_id": 3,
       "lenguaje_id": 1,
       "grado_numero": 3,
       "descripcion": "Exploración y experimentación de sonidos musicales para la representación de situaciones del espacio escolar o de la localidad."
     },
     {
-      "id": 43,
-      "contenido_estatal_id": 60,
+      "id": 47,
+      "contenido_estatal_id": 65,
       "grado_id": 4,
       "lenguaje_id": 1,
       "grado_numero": 4,
       "descripcion": "Expresión de variedades de sonidos musicales para la creación de una propuesta artística colectiva orientada a la mejora del espacio escolar o de la localidad de pertenencia."
     },
     {
-      "id": 44,
-      "contenido_estatal_id": 61,
+      "id": 48,
+      "contenido_estatal_id": 66,
       "grado_id": 3,
       "lenguaje_id": 1,
       "grado_numero": 3,
       "descripcion": "Identificación y recreación, mediante el uso de los elementos de la música, de sensaciones, emociones, sentimientos e ideas provenientes de distintas experiencias significativas de la vida cotidiana."
     },
     {
-      "id": 45,
-      "contenido_estatal_id": 61,
+      "id": 49,
+      "contenido_estatal_id": 66,
       "grado_id": 4,
       "lenguaje_id": 1,
       "grado_numero": 4,
       "descripcion": "Reconocimiento de los elementos del entorno natural y social, y recreación de los mismos mediante producciones musicales individuales y colectivas para la reflexión sobre la presencia de los lenguajes artísticos en la vida cotidiana."
     },
     {
-      "id": 46,
-      "contenido_estatal_id": 62,
+      "id": 50,
+      "contenido_estatal_id": 67,
       "grado_id": 3,
       "lenguaje_id": 1,
       "grado_numero": 3,
       "descripcion": "Combinación de los elementos de la música (ritmo, melodía y armonía) producidos con objetos del entorno para la transmisión de una idea colectiva"
     },
     {
-      "id": 47,
-      "contenido_estatal_id": 62,
+      "id": 51,
+      "contenido_estatal_id": 67,
       "grado_id": 4,
       "lenguaje_id": 1,
       "grado_numero": 4,
       "descripcion": "Exploración de la creación de paisajes sonoros y composiciones musicales colaborativas mediante la utilización de objetos del entorno y/o sonidos producidos por el cuerpo humano."
     },
     {
-      "id": 48,
-      "contenido_estatal_id": 63,
+      "id": 52,
+      "contenido_estatal_id": 68,
       "grado_id": 3,
       "lenguaje_id": 1,
       "grado_numero": 3,
       "descripcion": "Reconocimiento de la rima y la aliteración como elementos rítmicos y sonoros para la comprensión de su utilidad en el ámbito musical."
     },
     {
-      "id": 49,
-      "contenido_estatal_id": 63,
+      "id": 53,
+      "contenido_estatal_id": 68,
       "grado_id": 4,
       "lenguaje_id": 1,
       "grado_numero": 4,
       "descripcion": "Experimentación de la rima y la aliteración en fragmentos de canciones a partir del establecimiento de un tema significativo."
     },
     {
-      "id": 50,
-      "contenido_estatal_id": 64,
+      "id": 54,
+      "contenido_estatal_id": 69,
       "grado_id": 3,
       "lenguaje_id": 2,
       "grado_numero": 3,
       "descripcion": "Diálogo sobre las transformaciones de espacios escolares y comunitarios a partir de cambios impulsados mediante la danza (recitales o bailes al aire libre)."
     },
     {
-      "id": 51,
-      "contenido_estatal_id": 64,
+      "id": 55,
+      "contenido_estatal_id": 69,
       "grado_id": 4,
       "lenguaje_id": 2,
       "grado_numero": 4,
       "descripcion": "Creación de producciones dancísticas con diseño de vestuario, maquillaje y utilería que representen vínculos respetuosos con la diversidad para la participación en la mejora comunitaria."
     },
     {
-      "id": 52,
-      "contenido_estatal_id": 65,
+      "id": 56,
+      "contenido_estatal_id": 70,
       "grado_id": 3,
       "lenguaje_id": 2,
       "grado_numero": 3,
       "descripcion": "Construcción de propuestas dancísticas colectivas que generen una mejora para el bien común."
     },
     {
-      "id": 53,
-      "contenido_estatal_id": 65,
+      "id": 57,
+      "contenido_estatal_id": 70,
       "grado_id": 4,
       "lenguaje_id": 2,
       "grado_numero": 4,
       "descripcion": "Experimentación con una variedad de movimientos corporales y objetos, para la creación de una propuesta artística colectiva que mejore el espacio habitado."
     },
     {
-      "id": 54,
-      "contenido_estatal_id": 66,
+      "id": 58,
+      "contenido_estatal_id": 71,
       "grado_id": 3,
       "lenguaje_id": 2,
       "grado_numero": 3,
       "descripcion": "Indagación y comparación de elementos de la danza presentes en manifestaciones culturales y artísticas de su comunidad."
     },
     {
-      "id": 55,
-      "contenido_estatal_id": 66,
+      "id": 59,
+      "contenido_estatal_id": 71,
       "grado_id": 4,
       "lenguaje_id": 2,
       "grado_numero": 4,
       "descripcion": "Distinción y creación de movimientos, vestuarios y utilería a partir de manifestaciones culturales y artísticas de otros lugares de México y del mundo, para reflexionar sobre su sentido y significado."
     },
     {
-      "id": 56,
-      "contenido_estatal_id": 67,
+      "id": 60,
+      "contenido_estatal_id": 72,
       "grado_id": 3,
       "lenguaje_id": 2,
       "grado_numero": 3,
       "descripcion": "Descripción de un hecho significativo mediante la estructura narrativa de su elección, estableciendo para cada parte una secuencia de movimientos."
     },
     {
-      "id": 57,
-      "contenido_estatal_id": 67,
+      "id": 61,
+      "contenido_estatal_id": 72,
       "grado_id": 4,
       "lenguaje_id": 2,
       "grado_numero": 4,
       "descripcion": "Descripción de un hecho significativo mediante la estructura narrativa de su elección, estableciendo para cada parte una secuencia de movimientos con acompañamiento musical, complementada con desplazamientos, pausas, acentos y velocidades corporales."
     },
     {
-      "id": 58,
-      "contenido_estatal_id": 68,
+      "id": 62,
+      "contenido_estatal_id": 73,
       "grado_id": 3,
       "lenguaje_id": 2,
       "grado_numero": 3,
       "descripcion": "Exploración y empleo de movimientos corporales y objetos, para representar situaciones del espacio escolar o de la localidad."
     },
     {
-      "id": 59,
-      "contenido_estatal_id": 68,
+      "id": 63,
+      "contenido_estatal_id": 73,
       "grado_id": 4,
       "lenguaje_id": 2,
       "grado_numero": 4,
       "descripcion": "Elaboración de una propuesta con intención dancística, en colectivo, mediante movimientos y objetos, para ofrecer soluciones a situaciones o problemas identificados en la escuela o en la comunidad."
     },
     {
-      "id": 60,
-      "contenido_estatal_id": 69,
+      "id": 64,
+      "contenido_estatal_id": 74,
       "grado_id": 3,
       "lenguaje_id": 2,
       "grado_numero": 3,
       "descripcion": "Reelaboración de acciones cotidianas al jugar con movimientos rápidos o lentos, fuertes o débiles, con pausas o acentos."
     },
     {
-      "id": 61,
-      "contenido_estatal_id": 69,
+      "id": 65,
+      "contenido_estatal_id": 74,
       "grado_id": 4,
       "lenguaje_id": 2,
       "grado_numero": 4,
       "descripcion": "Reelaboración de acciones cotidianas al jugar con movimientos rápidos o lentos, fuertes o débiles, con pausas o acentos, imaginando distintos espacios donde se llevan a cabo para descubrir nuevas maneras de realizarlas y creación de un montaje coreográfico."
     },
     {
-      "id": 62,
-      "contenido_estatal_id": 70,
+      "id": 66,
+      "contenido_estatal_id": 75,
       "grado_id": 3,
       "lenguaje_id": 2,
       "grado_numero": 3,
       "descripcion": "Apreciación y reflexión del uso intencional de movimientos corporales y objetos que expresan la realidad y la fantasía en manifestaciones culturales y artísticas"
     },
     {
-      "id": 63,
-      "contenido_estatal_id": 70,
+      "id": 67,
+      "contenido_estatal_id": 75,
       "grado_id": 4,
       "lenguaje_id": 2,
       "grado_numero": 4,
       "descripcion": "Creación de un montaje coreográfico a partir de la identificación del uso intencional de movimientos corporales en las manifestaciones culturales y artísticas de su interés."
     },
     {
-      "id": 64,
-      "contenido_estatal_id": 71,
+      "id": 68,
+      "contenido_estatal_id": 76,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Recreaciones orales o escritas, acompañadas de representaciones gráficas como dibujos, cómics, historietas o secuencias de dibujos en movimiento (“folioscopio” o flip books), a partir de la observación de videos o de la asistencia a espacios donde se realicen manifestaciones culturales y artísticas."
     },
     {
-      "id": 65,
-      "contenido_estatal_id": 71,
+      "id": 69,
+      "contenido_estatal_id": 76,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Interacción con manifestaciones culturales y artísticas de la comunidad y comparación con las de otros lugares, con comunicación de conclusiones mediante fotografías o dibujos comentados."
     },
     {
-      "id": 66,
-      "contenido_estatal_id": 72,
+      "id": 70,
+      "contenido_estatal_id": 77,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Representación lúdica de una experiencia significativa mediante el uso de formas, colores y texturas para la construcción de nuevos significados."
     },
     {
-      "id": 67,
-      "contenido_estatal_id": 72,
+      "id": 71,
+      "contenido_estatal_id": 77,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Realización de un folioscopio (flip book) con imágenes del entorno para la narración de un acontecimiento significativo de la comunidad."
     },
     {
-      "id": 68,
-      "contenido_estatal_id": 73,
+      "id": 72,
+      "contenido_estatal_id": 78,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Expresión de gustos e intereses hacia las manifestaciones culturales y artísticas, con realización de descripciones orales o escritas y representación mediante dibujos."
     },
     {
-      "id": 69,
-      "contenido_estatal_id": 73,
+      "id": 73,
+      "contenido_estatal_id": 78,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Expresión de gustos e intereses hacia las manifestaciones culturales y artísticas, con realización de descripciones orales o escritas para su agrupación de acuerdo con similitudes en un collage de dibujos, fotografías y recortes."
     },
     {
-      "id": 70,
-      "contenido_estatal_id": 74,
+      "id": 74,
+      "contenido_estatal_id": 79,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Comparación de formas, colores primarios y secundarios, así como de objetos de manifestaciones culturales y artísticas (pintura, escultura, grabado, dibujo) de la comunidad con los de otros lugares."
     },
     {
-      "id": 71,
-      "contenido_estatal_id": 74,
+      "id": 75,
+      "contenido_estatal_id": 79,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Distinción de formas, colores y objetos en manifestaciones culturales y artísticas (pintura, escultura, grabado, dibujo) de la comunidad y de otros lugares del mundo, para la reflexión sobre su sentido y significado."
     },
     {
-      "id": 72,
-      "contenido_estatal_id": 75,
+      "id": 76,
+      "contenido_estatal_id": 80,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Identificación y plasmado de experiencias significativas de la vida cotidiana mediante el uso de colores primarios y secundarios."
     },
     {
-      "id": 73,
-      "contenido_estatal_id": 75,
+      "id": 77,
+      "contenido_estatal_id": 80,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Creación de producciones visuales individuales y colectivas mediante el uso del círculo cromático, a partir de la observación de diversas imágenes artísticas y del entorno."
     },
     {
-      "id": 74,
-      "contenido_estatal_id": 76,
+      "id": 78,
+      "contenido_estatal_id": 81,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Apreciación del uso intencional de formas y colores que expresan la realidad y la fantasía en manifestaciones culturales y artísticas."
     },
     {
-      "id": 75,
-      "contenido_estatal_id": 76,
+      "id": 79,
+      "contenido_estatal_id": 81,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Creación de una composición pictórica a partir de la identificación del uso intencional de formas y colores en manifestaciones culturales y artísticas de interés."
     },
     {
-      "id": 76,
-      "contenido_estatal_id": 77,
+      "id": 80,
+      "contenido_estatal_id": 82,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Experimentación de propuestas visuales colectivas mediante el uso de formas, colores y texturas, para la generación de mejoras orientadas al bien común."
     },
     {
-      "id": 77,
-      "contenido_estatal_id": 77,
+      "id": 81,
+      "contenido_estatal_id": 82,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Construcción con variedad de formas, colores y texturas para la creación de una composición visual colectiva que mejore el espacio habitado."
     },
     {
-      "id": 78,
-      "contenido_estatal_id": 78,
+      "id": 82,
+      "contenido_estatal_id": 83,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Elaboración de un libro de artista a partir de la selección de textos, con experimentación en el uso de materiales diversos y de distintos elementos del lenguaje visual (puntos, líneas, texturas, formas, colores e imágenes), para su socialización con los pares."
     },
     {
-      "id": 79,
-      "contenido_estatal_id": 78,
+      "id": 83,
+      "contenido_estatal_id": 83,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Recreación colectiva de una obra de arte de un artista visual reconocido mediante el uso de colores, telas, materiales reciclados y elementos de la naturaleza, entre otros. ."
     },
     {
-      "id": 80,
-      "contenido_estatal_id": 79,
+      "id": 84,
+      "contenido_estatal_id": 84,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Realización de una composición visual colectiva con objetos disponibles para la representación de distintas ideas y formas mediante esculturas efímeras o instalaciones."
     },
     {
-      "id": 81,
-      "contenido_estatal_id": 79,
+      "id": 85,
+      "contenido_estatal_id": 84,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Uso de medios digitales para la creación de un cortometraje colectivo mediante animaciones con secuencias fotográficas de objetos cotidianos, con sonorización para el intercambio de ideas y experiencias."
     },
     {
-      "id": 82,
-      "contenido_estatal_id": 80,
+      "id": 86,
+      "contenido_estatal_id": 85,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Uso de elementos visuales para la representación de experiencias significativas de la vida cotidiana, como la puesta de sol, la flora y la fauna, en producciones bidimensionales."
     },
     {
-      "id": 83,
-      "contenido_estatal_id": 80,
+      "id": 87,
+      "contenido_estatal_id": 85,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Uso de formas, colores y texturas para la recreación de obras de arte de interés e impacto mediante producciones bidimensionales o tridimensionales."
     },
     {
-      "id": 84,
-      "contenido_estatal_id": 81,
+      "id": 88,
+      "contenido_estatal_id": 86,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Identificación de aspectos por mejorar en la escuela o en la comunidad a partir de gustos e intereses propios, para la generación de ideas sobre distintas posibilidades de transformación y su representación mediante descripciones, dibujos, bocetos o maquetas."
     },
     {
-      "id": 85,
-      "contenido_estatal_id": 81,
+      "id": 89,
+      "contenido_estatal_id": 86,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Creación de producciones visuales que representen vínculos respetuosos con la diversidad para la participación en la mejora comunitaria."
     },
     {
-      "id": 86,
-      "contenido_estatal_id": 82,
+      "id": 90,
+      "contenido_estatal_id": 87,
       "grado_id": 3,
       "lenguaje_id": 3,
       "grado_numero": 3,
       "descripcion": "Compara formas, colores primarios y secundarios y objetos de manifestaciones culturales y artísticas (pintura, escultura, grabado, dibujo) de su comunidad con los de otros lugares."
     },
     {
-      "id": 87,
-      "contenido_estatal_id": 82,
+      "id": 91,
+      "contenido_estatal_id": 87,
       "grado_id": 4,
       "lenguaje_id": 3,
       "grado_numero": 4,
       "descripcion": "Distingue formas, colores y objetos en las manifestaciones culturales y artísticas (pintura, escultura, grabado, dibujo) de su comunidad y otros lugares del mundo, para reflexionar sobre su sentido y significado."
     },
     {
-      "id": 88,
-      "contenido_estatal_id": 83,
+      "id": 92,
+      "contenido_estatal_id": 88,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Investigación y reconocimiento del contenido de distintos escritos con diversas estructuras gramaticales (poemas, cuentos, canciones, adivinanzas y trabalenguas), en relación con experiencias personales y comunitarias."
     },
     {
-      "id": 89,
-      "contenido_estatal_id": 83,
+      "id": 93,
+      "contenido_estatal_id": 88,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Reconocimiento de características del contexto en la creación de un texto teatral, para la elaboración de la estructura de una historia corta en función de las características físicas y emocionales de los personajes."
     },
     {
-      "id": 90,
-      "contenido_estatal_id": 84,
+      "id": 94,
+      "contenido_estatal_id": 89,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Realización de inferencias de sentido y significado a partir de la lectura y socialización de trabalenguas, chistes, adivinanzas, refranes, acertijos, cuentos y textos teatrales."
     },
     {
-      "id": 91,
-      "contenido_estatal_id": 84,
+      "id": 95,
+      "contenido_estatal_id": 89,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Revisión lúdica de las variaciones en la lectura en voz alta en cuanto a tonos, pausas, acentos y cambios de intencionalidad, así como de los gestos y movimientos corporales."
     },
     {
-      "id": 92,
-      "contenido_estatal_id": 85,
+      "id": 96,
+      "contenido_estatal_id": 90,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Diálogo sobre las transformaciones que han tenido distintos espacios escolares y comunitarios a partir de cambios impulsados mediante el lenguaje teatral, y creación de un guion con la técnica de teatro callejero."
     },
     {
-      "id": 93,
-      "contenido_estatal_id": 85,
+      "id": 97,
+      "contenido_estatal_id": 90,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Elaboración de un montaje teatral colectivo, para ofrecer propuestas de solución a situaciones o problemas identificados en la escuela o en la comunidad."
     },
     {
-      "id": 94,
-      "contenido_estatal_id": 86,
+      "id": 98,
+      "contenido_estatal_id": 91,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Reconocimiento de la rima y la aliteración como elementos rítmicos de poemas y juegos de palabras para la construcción de creaciones propias."
     },
     {
-      "id": 95,
-      "contenido_estatal_id": 86,
+      "id": 99,
+      "contenido_estatal_id": 91,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Establecimiento de relaciones entre el texto y las experiencias de vida de la comunidad mediante la creación de pequeños diálogos en forma de rimas o poemas."
     },
     {
-      "id": 96,
-      "contenido_estatal_id": 87,
+      "id": 100,
+      "contenido_estatal_id": 92,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Investigación y reconocimiento de la estructura gramatical de un cuento o fábula, y selección de una historia para su lectura con atención a las cualidades de la voz: matiz, grave, agudo y cambios de intencionalidad."
     },
     {
-      "id": 97,
-      "contenido_estatal_id": 87,
+      "id": 101,
+      "contenido_estatal_id": 92,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Experimentación y creación de una fábula a partir del establecimiento de un tema significativo de la comunidad escolar."
     },
     {
-      "id": 98,
-      "contenido_estatal_id": 88,
+      "id": 102,
+      "contenido_estatal_id": 93,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Uso de elementos del lenguaje teatral para la representación de experiencias significativas de la vida cotidiana (paseo familiar, puesta de sol, comida deliciosa); identificación de emociones provocadas y expresiones gestuales y corporales."
     },
     {
-      "id": 99,
-      "contenido_estatal_id": 88,
+      "id": 103,
+      "contenido_estatal_id": 93,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Uso de formas, colores, texturas, sonidos y movimientos para la recreación de atmósferas en diferentes producciones teatrales (guiones, cuentos o fábulas) de interés e impacto"
     },
     {
-      "id": 100,
-      "contenido_estatal_id": 89,
+      "id": 104,
+      "contenido_estatal_id": 94,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Audición y lectura de poemas, trabalenguas y adivinanzas para el disfrute y el conocimiento de recursos lingüísticos como la rima, la onomatopeya y el calambur."
     },
     {
-      "id": 101,
-      "contenido_estatal_id": 89,
+      "id": 105,
+      "contenido_estatal_id": 94,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Participación lúdica en el disfrute y la creación de juegos de palabras con cualidades sonoras, mediante el empleo de recursos lingüísticos como la rima, la onomatopeya y el calambur."
     },
     {
-      "id": 102,
-      "contenido_estatal_id": 90,
+      "id": 106,
+      "contenido_estatal_id": 95,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Identificación y recreación de sensaciones, emociones, sentimientos e ideas de experiencias significativas de la vida cotidiana mediante formas, colores, texturas y sonidos; experimentación de movimientos, posiciones corporales y sonidos onomatopéyicos en el escenario."
     },
     {
-      "id": 103,
-      "contenido_estatal_id": 90,
+      "id": 107,
+      "contenido_estatal_id": 95,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Reconocimiento de formas, líneas, colores y texturas del entorno natural y social; recreación de los mismos en producciones artísticas individuales y/o colectivas; exploración de zonas del escenario para la realización de una escena de cuento o fábula."
     },
     {
-      "id": 104,
-      "contenido_estatal_id": 91,
+      "id": 108,
+      "contenido_estatal_id": 96,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Apreciación del uso intencional de formas, colores, sonidos, texturas, movimientos corporales, gestuales y objetos para la expresión de la realidad y la fantasía en manifestaciones culturales y artísticas."
     },
     {
-      "id": 105,
-      "contenido_estatal_id": 91,
+      "id": 109,
+      "contenido_estatal_id": 96,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Creación de un personaje empleando elementos de los lenguajes artísticos, que retome aspectos reales y fantásticos de una manifestación cultural o artística, para la expresión de gustos e intereses mediante una máscara."
     },
     {
-      "id": 106,
-      "contenido_estatal_id": 92,
+      "id": 110,
+      "contenido_estatal_id": 97,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Comentario de impresiones y sensaciones a partir de la identificación del uso intencional de formas, colores, sonidos, texturas, movimientos o gestos en diferentes estructuras gramaticales."
     },
     {
-      "id": 107,
-      "contenido_estatal_id": 92,
+      "id": 111,
+      "contenido_estatal_id": 97,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Investigación, reconocimiento y creación de la corporalidad en distintos movimientos actorales y gestuales, así como de las emociones provocadas por cada movimiento corporal"
     },
     {
-      "id": 108,
-      "contenido_estatal_id": 93,
+      "id": 112,
+      "contenido_estatal_id": 98,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Reconocimiento de semejanzas y diferencias entre los cuentos y los eventos o sucesos de la vida cotidiana, para otorgarles un sentido y significado propios."
     },
     {
-      "id": 109,
-      "contenido_estatal_id": 93,
+      "id": 113,
+      "contenido_estatal_id": 98,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Escritura colectiva de un cuento, elaboración de personajes con objetos cotidianos de su entorno y presentación frente a un público."
     },
     {
-      "id": 110,
-      "contenido_estatal_id": 94,
+      "id": 114,
+      "contenido_estatal_id": 99,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Transformación creativa de objetos y recursos a su alcance para su utilización en la representación de personajes durante una lectura dramatizada."
     },
     {
-      "id": 111,
-      "contenido_estatal_id": 94,
+      "id": 115,
+      "contenido_estatal_id": 99,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Realización colectiva de una lectura dramatizada o teatro de atril de un texto dramático, mediante el juego con combinaciones de secuencias de sonidos rápidos, lentos, agudos, graves, fuertes, débiles, con pausas y acentos variados en la técnica de radioteatro."
     },
     {
-      "id": 112,
-      "contenido_estatal_id": 95,
+      "id": 116,
+      "contenido_estatal_id": 100,
       "grado_id": 3,
       "lenguaje_id": 4,
       "grado_numero": 3,
       "descripcion": "Análisis de guion teatral e identificación de características del texto dramático: diálogos, ambientaciones, acotaciones, listado de personajes, temporalidad, ritmo, inicio, desarrollo, conflicto y cierre (trabajo de mesa)."
     },
     {
-      "id": 113,
-      "contenido_estatal_id": 95,
+      "id": 117,
+      "contenido_estatal_id": 100,
       "grado_id": 4,
       "lenguaje_id": 4,
       "grado_numero": 4,
       "descripcion": "Exploración colectiva de la imaginación, el movimiento, el gesto, la forma, el color y el sonido, para la recreación de fragmentos de un guion teatral de interés mediante teatro de títeres, sombras o papel."
     },
     {
-      "id": 114,
-      "contenido_estatal_id": 96,
+      "id": 118,
+      "contenido_estatal_id": 101,
+      "grado_id": 3,
+      "lenguaje_id": 4,
+      "grado_numero": 3,
+      "descripcion": "Improvisación con el uso del cuerpo y la voz de situaciones significativas identificadas en narraciones, y representación de personajes mediante el juego de roles."
+    },
+    {
+      "id": 119,
+      "contenido_estatal_id": 101,
+      "grado_id": 4,
+      "lenguaje_id": 4,
+      "grado_numero": 4,
+      "descripcion": "Identificación y selección de la estructura de un texto dramático, conformado por diálogos, escenas, listado de personajes y acotaciones, para su representación en un espacio escénico."
+    },
+    {
+      "id": 120,
+      "contenido_estatal_id": 102,
       "grado_id": 5,
       "lenguaje_id": 1,
       "grado_numero": 5,
       "descripcion": "Interpretación grupal de cantos cívicos y canciones en lenguas originarias, para la reflexión sobre la diversidad lingüística de México."
     },
     {
-      "id": 115,
-      "contenido_estatal_id": 96,
+      "id": 121,
+      "contenido_estatal_id": 102,
       "grado_id": 6,
       "lenguaje_id": 1,
       "grado_numero": 6,
       "descripcion": "Elección y análisis de una canción en lengua originaria o de un canto cívico, considerando su letra y estructura para una presentación, en la que se explique la importancia de preservar esa lengua y los desafíos que enfrenta."
     },
     {
-      "id": 116,
-      "contenido_estatal_id": 97,
+      "id": 122,
+      "contenido_estatal_id": 103,
       "grado_id": 5,
       "lenguaje_id": 1,
       "grado_numero": 5,
       "descripcion": "Exploración de manifestaciones musicales (indígena, banda sinaloense, mariachi, entre otros), de diversas partes de México, e identificación de los géneros musicales para su recreación."
     },
     {
-      "id": 117,
-      "contenido_estatal_id": 97,
+      "id": 123,
+      "contenido_estatal_id": 103,
       "grado_id": 6,
       "lenguaje_id": 1,
       "grado_numero": 6,
       "descripcion": "Reconocimiento y valoración de la diversidad cultural del mundo mediante el análisis de obras musicales representativas de diferentes contextos, identificando sus elementos (melodía, armonía y ritmo) y significados para desarrollar un ensamble."
     },
     {
-      "id": 118,
-      "contenido_estatal_id": 98,
+      "id": 124,
+      "contenido_estatal_id": 104,
       "grado_id": 5,
       "lenguaje_id": 1,
       "grado_numero": 5,
       "descripcion": "Construcción de significados en lo"
     },
     {
-      "id": 119,
-      "contenido_estatal_id": 98,
+      "id": 125,
+      "contenido_estatal_id": 104,
       "grado_id": 6,
       "lenguaje_id": 1,
       "grado_numero": 6,
       "descripcion": "Construcción y ejecución, a partir de la observación de manifestaciones culturales (fiestas tradicionales de México y del mundo), de una orquesta de percusiones."
-    },
-    {
-      "id": 120,
-      "contenido_estatal_id": 103,
-      "grado_id": 5,
-      "lenguaje_id": 1,
-      "grado_numero": 5,
-      "descripcion": "Identificación del ritmo de diferentes géneros musicales y ejecución de combinaciones con sonidos corporales a partir de piezas de la comunidad"
-    },
-    {
-      "id": 121,
-      "contenido_estatal_id": 103,
-      "grado_id": 6,
-      "lenguaje_id": 1,
-      "grado_numero": 6,
-      "descripcion": "Construcción de propuestas artísticas"
-    },
-    {
-      "id": 122,
-      "contenido_estatal_id": 107,
-      "grado_id": 5,
-      "lenguaje_id": 1,
-      "grado_numero": 5,
-      "descripcion": "Reconocimiento y recreación de sonidos y movimientos de la naturaleza por medio de la música."
-    },
-    {
-      "id": 123,
-      "contenido_estatal_id": 107,
-      "grado_id": 6,
-      "lenguaje_id": 1,
-      "grado_numero": 6,
-      "descripcion": "Apreciación de sonidos y movimientos del entorno natural y conformación de una orquesta de percusiones con elementos orgánicos."
-    },
-    {
-      "id": 124,
-      "contenido_estatal_id": 108,
-      "grado_id": 5,
-      "lenguaje_id": 1,
-      "grado_numero": 5,
-      "descripcion": "Combinación de secuencias sonoras a partir de narrativas de historias y leyendas leídas o escuchadas."
-    },
-    {
-      "id": 125,
-      "contenido_estatal_id": 108,
-      "grado_id": 6,
-      "lenguaje_id": 1,
-      "grado_numero": 6,
-      "descripcion": "Exploración colectiva de sonidos y silencios, acuerdo de estructura creativa (ensamble de percusiones) y creación de acontecimiento improvisado (flashmob) en la escuela o comunidad."
     },
     {
       "id": 126,
@@ -2713,7 +2882,7 @@
       "grado_id": 5,
       "lenguaje_id": 1,
       "grado_numero": 5,
-      "descripcion": "Apreciación del compás en canciones de música sinaloense tradicional y relación con su significado representativo."
+      "descripcion": "Identificación del ritmo de diferentes géneros musicales y ejecución de combinaciones con sonidos corporales a partir de piezas de la comunidad"
     },
     {
       "id": 127,
@@ -2721,295 +2890,539 @@
       "grado_id": 6,
       "lenguaje_id": 1,
       "grado_numero": 6,
-      "descripcion": "Reinterpretación de canción tradicional sinaloense con uso de diferentes compases musicales para creación de nuevas formas de simbolización."
+      "descripcion": "Construcción de propuestas artísticas"
     },
     {
       "id": 128,
-      "contenido_estatal_id": 110,
+      "contenido_estatal_id": 113,
+      "grado_id": 5,
+      "lenguaje_id": 1,
+      "grado_numero": 5,
+      "descripcion": "Reconocimiento y recreación de sonidos y movimientos de la naturaleza por medio de la música."
+    },
+    {
+      "id": 129,
+      "contenido_estatal_id": 113,
+      "grado_id": 6,
+      "lenguaje_id": 1,
+      "grado_numero": 6,
+      "descripcion": "Apreciación de sonidos y movimientos del entorno natural y conformación de una orquesta de percusiones con elementos orgánicos."
+    },
+    {
+      "id": 130,
+      "contenido_estatal_id": 114,
+      "grado_id": 5,
+      "lenguaje_id": 1,
+      "grado_numero": 5,
+      "descripcion": "Combinación de secuencias sonoras a partir de narrativas de historias y leyendas leídas o escuchadas."
+    },
+    {
+      "id": 131,
+      "contenido_estatal_id": 114,
+      "grado_id": 6,
+      "lenguaje_id": 1,
+      "grado_numero": 6,
+      "descripcion": "Exploración colectiva de sonidos y silencios, acuerdo de estructura creativa (ensamble de percusiones) y creación de acontecimiento improvisado (flashmob) en la escuela o comunidad."
+    },
+    {
+      "id": 132,
+      "contenido_estatal_id": 115,
+      "grado_id": 5,
+      "lenguaje_id": 1,
+      "grado_numero": 5,
+      "descripcion": "Apreciación del compás en canciones de música sinaloense tradicional y relación con su significado representativo."
+    },
+    {
+      "id": 133,
+      "contenido_estatal_id": 115,
+      "grado_id": 6,
+      "lenguaje_id": 1,
+      "grado_numero": 6,
+      "descripcion": "Reinterpretación de canción tradicional sinaloense con uso de diferentes compases musicales para creación de nuevas formas de simbolización."
+    },
+    {
+      "id": 134,
+      "contenido_estatal_id": 116,
       "grado_id": 5,
       "lenguaje_id": 2,
       "grado_numero": 5,
       "descripcion": "Observación de elementos de la danza en manifestaciones culturales y artísticas, para comprensión de su significado."
     },
     {
-      "id": 129,
-      "contenido_estatal_id": 110,
+      "id": 135,
+      "contenido_estatal_id": 116,
       "grado_id": 5,
       "lenguaje_id": 2,
       "grado_numero": 5,
       "descripcion": "Interpretación de bailes regionales de"
     },
     {
-      "id": 130,
-      "contenido_estatal_id": 114,
+      "id": 136,
+      "contenido_estatal_id": 120,
       "grado_id": 6,
       "lenguaje_id": 2,
       "grado_numero": 6,
       "descripcion": "Creación de producciones artísticas"
     },
     {
-      "id": 131,
-      "contenido_estatal_id": 120,
+      "id": 137,
+      "contenido_estatal_id": 126,
       "grado_id": 5,
       "lenguaje_id": 2,
       "grado_numero": 5,
       "descripcion": "Relación de movimientos corporales con sonidos del entorno, el cuerpo y/o la voz en secuencias colectivas para la narración de una historia significativa. Recreación de movimientos para la representación de rasgos de identidad personal y colectiva, con presentación a la comunidad escolar."
     },
     {
-      "id": 132,
-      "contenido_estatal_id": 122,
+      "id": 138,
+      "contenido_estatal_id": 128,
       "grado_id": 5,
       "lenguaje_id": 2,
       "grado_numero": 5,
       "descripcion": "Interpretación de danzas y bailes folclóricos a partir de la observación de formas, sonidos y movimientos de la naturaleza."
     },
     {
-      "id": 133,
-      "contenido_estatal_id": 122,
+      "id": 139,
+      "contenido_estatal_id": 128,
       "grado_id": 6,
       "lenguaje_id": 2,
       "grado_numero": 6,
       "descripcion": "Uso de movimientos para la expresión de emociones surgidas de una experiencia significativa en el entorno natural y su representación colectiva mediante un performance."
     },
     {
-      "id": 134,
-      "contenido_estatal_id": 124,
+      "id": 140,
+      "contenido_estatal_id": 130,
       "grado_id": 5,
       "lenguaje_id": 2,
       "grado_numero": 5,
       "descripcion": "Narración y representación dancística de historias o situaciones cotidianas de la comunidad con matices trágicos, cómicos, románticos, etc."
     },
     {
-      "id": 135,
-      "contenido_estatal_id": 124,
+      "id": 141,
+      "contenido_estatal_id": 130,
       "grado_id": 5,
       "lenguaje_id": 2,
       "grado_numero": 5,
       "descripcion": "Representación dancística de un acontecimiento comunitario mediante experimentación de movimientos suaves, fuertes, rápidos, lentos, fluidos o pausados, en diversas trayectorias, desplazamientos y con acompañamiento musical."
     },
     {
-      "id": 136,
-      "contenido_estatal_id": 125,
+      "id": 142,
+      "contenido_estatal_id": 131,
       "grado_id": 5,
       "lenguaje_id": 2,
       "grado_numero": 5,
       "descripcion": "Combinación de secuencias de movimientos a partir de investigación de historias y leyendas comunitarias."
     },
     {
-      "id": 137,
-      "contenido_estatal_id": 125,
+      "id": 143,
+      "contenido_estatal_id": 131,
       "grado_id": 6,
       "lenguaje_id": 2,
       "grado_numero": 6,
       "descripcion": "Exploración colectiva de movimientos y acuerdo de estructura creativa para creación de acontecimiento improvisado (flashmob) en escuela o comunidad."
     },
     {
-      "id": 138,
-      "contenido_estatal_id": 126,
+      "id": 144,
+      "contenido_estatal_id": 132,
       "grado_id": 5,
       "lenguaje_id": 2,
       "grado_numero": 5,
       "descripcion": "Indagación con personas adultas mayores sobre mitos y leyendas de la región e interpretación mediante lenguaje dancístico"
     },
     {
-      "id": 139,
-      "contenido_estatal_id": 126,
+      "id": 145,
+      "contenido_estatal_id": 132,
       "grado_id": 6,
       "lenguaje_id": 2,
       "grado_numero": 6,
       "descripcion": "Representación de un mito o leyenda de interés mediante performance."
     },
     {
-      "id": 140,
-      "contenido_estatal_id": 128,
+      "id": 146,
+      "contenido_estatal_id": 134,
       "grado_id": 6,
       "lenguaje_id": 2,
       "grado_numero": 6,
       "descripcion": "Apreciación y recreación colectiva de una danza y/o baile para invitar a la comunidad escolar a la reflexión sobre identidad y sentido de pertenencia."
     },
     {
-      "id": 141,
-      "contenido_estatal_id": 132,
+      "id": 147,
+      "contenido_estatal_id": 138,
       "grado_id": 5,
       "lenguaje_id": 3,
       "grado_numero": 5,
       "descripcion": "Investigación y análisis de la diversidad lingüística en México (patrimonio cultural, sitios arqueológicos, obras de arte) con reflexión sobre su riqueza. Investigación y análisis de la diversidad"
     },
     {
-      "id": 142,
-      "contenido_estatal_id": 132,
+      "id": 148,
+      "contenido_estatal_id": 138,
       "grado_id": 6,
       "lenguaje_id": 3,
       "grado_numero": 6,
       "descripcion": "Investigación y clasificación de características, estilos y funciones de bienes inmuebles de México como patrimonio arquitectónico."
     },
     {
-      "id": 143,
-      "contenido_estatal_id": 136,
+      "id": 149,
+      "contenido_estatal_id": 142,
       "grado_id": 5,
       "lenguaje_id": 3,
       "grado_numero": 5,
       "descripcion": "Identificación y socialización de necesidades, intereses y problemas comunitarios mediante imágenes y fotografías de diferentes épocas, para la creación de propuestas de atención y/o solución en un espacio escolar."
     },
     {
-      "id": 144,
-      "contenido_estatal_id": 136,
+      "id": 150,
+      "contenido_estatal_id": 142,
       "grado_id": 6,
       "lenguaje_id": 3,
       "grado_numero": 6,
       "descripcion": "Creación de producciones visuales para la transformación permanente de un espacio público comunitario en favor del bienestar social."
     },
     {
-      "id": 145,
-      "contenido_estatal_id": 137,
+      "id": 151,
+      "contenido_estatal_id": 143,
       "grado_id": 5,
       "lenguaje_id": 3,
       "grado_numero": 5,
       "descripcion": "Construcción de propuestas visuales individuales a partir de formas, colores y texturas que representen la identidad colectiva."
     },
     {
-      "id": 146,
-      "contenido_estatal_id": 137,
+      "id": 152,
+      "contenido_estatal_id": 143,
       "grado_id": 6,
       "lenguaje_id": 3,
       "grado_numero": 6,
       "descripcion": "Construcción de propuestas visuales grupales a partir de formas, colores y texturas que representen la identidad colectiva."
     },
     {
-      "id": 147,
-      "contenido_estatal_id": 140,
+      "id": 153,
+      "contenido_estatal_id": 146,
       "grado_id": 6,
       "lenguaje_id": 3,
       "grado_numero": 6,
       "descripcion": "Apreciación y representación de formas y objetos tridimensionales del entorno natural mediante escultura"
     },
     {
-      "id": 148,
-      "contenido_estatal_id": 147,
+      "id": 154,
+      "contenido_estatal_id": 153,
       "grado_id": 5,
       "lenguaje_id": 3,
       "grado_numero": 5,
       "descripcion": "Reconocimiento y recreación de formas, colores, texturas, sonidos y movimientos de la naturaleza mediante lenguaje visual."
     },
     {
-      "id": 149,
-      "contenido_estatal_id": 147,
+      "id": 155,
+      "contenido_estatal_id": 153,
       "grado_id": 6,
       "lenguaje_id": 3,
       "grado_numero": 6,
       "descripcion": "Apreciación y representación de experiencias significativas de la naturaleza mediante formas, colores y texturas del entorno."
     },
     {
-      "id": 150,
-      "contenido_estatal_id": 149,
+      "id": 156,
+      "contenido_estatal_id": 155,
       "grado_id": 5,
       "lenguaje_id": 3,
       "grado_numero": 5,
       "descripcion": "Combinación intencional de formas, colores y texturas para recreación bidimensional de elementos simbólicos de identidad y pertenencia."
     },
     {
-      "id": 151,
-      "contenido_estatal_id": 149,
+      "id": 157,
+      "contenido_estatal_id": 155,
       "grado_id": 6,
       "lenguaje_id": 3,
       "grado_numero": 6,
       "descripcion": "Combinación intencional de formas, colores y texturas para recreación tridimensional de fragmentos del patrimonio artístico y cultural de México"
     },
     {
-      "id": 152,
-      "contenido_estatal_id": 150,
+      "id": 158,
+      "contenido_estatal_id": 156,
       "grado_id": 5,
       "lenguaje_id": 4,
       "grado_numero": 5,
       "descripcion": "Exploración y análisis de elementos del"
     },
     {
-      "id": 153,
-      "contenido_estatal_id": 150,
+      "id": 159,
+      "contenido_estatal_id": 156,
       "grado_id": 6,
       "lenguaje_id": 4,
       "grado_numero": 6,
       "descripcion": "Redacción de un guion con los elementos de un género teatral para la representación de manifestaciones culturales de danzas teatrales y rituales del mundo"
     },
     {
-      "id": 154,
-      "contenido_estatal_id": 157,
+      "id": 160,
+      "contenido_estatal_id": 163,
       "grado_id": 5,
       "lenguaje_id": 4,
       "grado_numero": 5,
       "descripcion": "Investigación de problemas comunitarios y ambientación del espacio escénico para la representación individual de improvisaciones teatrales."
     },
     {
-      "id": 155,
-      "contenido_estatal_id": 157,
+      "id": 161,
+      "contenido_estatal_id": 163,
       "grado_id": 6,
       "lenguaje_id": 4,
       "grado_numero": 6,
       "descripcion": "Representación colectiva de problemáticas"
     },
     {
-      "id": 156,
-      "contenido_estatal_id": 163,
+      "id": 162,
+      "contenido_estatal_id": 169,
       "grado_id": 5,
       "lenguaje_id": 4,
       "grado_numero": 5,
       "descripcion": "Construcción de propuestas teatrales colectivas que representen identidad y entorno mediante secuencias escénicas."
     },
     {
-      "id": 157,
-      "contenido_estatal_id": 163,
+      "id": 163,
+      "contenido_estatal_id": 169,
       "grado_id": 6,
       "lenguaje_id": 4,
       "grado_numero": 6,
       "descripcion": "Desarrollo colectivo de un guion con"
     },
     {
-      "id": 158,
-      "contenido_estatal_id": 169,
+      "id": 164,
+      "contenido_estatal_id": 175,
       "grado_id": 5,
       "lenguaje_id": 4,
       "grado_numero": 5,
       "descripcion": "Expresión de sensaciones, emociones, sentimientos e ideas generadas por la observación de la naturaleza y su entorno mediante el teatro de títeres."
     },
     {
-      "id": 159,
-      "contenido_estatal_id": 169,
+      "id": 165,
+      "contenido_estatal_id": 175,
       "grado_id": 6,
       "lenguaje_id": 4,
       "grado_numero": 6,
       "descripcion": "Expresión colectiva de emociones surgidas de una experiencia significativa en el entorno natural mediante una puesta en escena con títeres o teatro corporal"
     },
     {
-      "id": 160,
-      "contenido_estatal_id": 172,
+      "id": 166,
+      "contenido_estatal_id": 178,
       "grado_id": 5,
       "lenguaje_id": 4,
       "grado_numero": 5,
       "descripcion": "Escritura de relatos narrativos a partir del"
     },
     {
-      "id": 161,
-      "contenido_estatal_id": 172,
+      "id": 167,
+      "contenido_estatal_id": 178,
       "grado_id": 6,
       "lenguaje_id": 4,
       "grado_numero": 6,
       "descripcion": "Representación teatral de historias o situaciones cotidianas de la comunidad a través de diferentes géneros teatrales."
     },
     {
-      "id": 162,
-      "contenido_estatal_id": 177,
+      "id": 168,
+      "contenido_estatal_id": 183,
       "grado_id": 5,
       "lenguaje_id": 4,
       "grado_numero": 5,
       "descripcion": "Combinación intencional de secuencias de sonidos onomatopéyicos, movimientos y gestos para recreación de una leyenda y creación de títeres como medio de expresión artística."
     },
     {
-      "id": 163,
-      "contenido_estatal_id": 177,
+      "id": 169,
+      "contenido_estatal_id": 183,
       "grado_id": 6,
       "lenguaje_id": 4,
       "grado_numero": 6,
       "descripcion": "Reinterpretación de una leyenda a través del teatro de títeres, con combinación de realidad y ficción mediante elementos simbólicos para expresión de identidad y sentido de pertenencia comunitaria."
+    },
+    {
+      "id": 170,
+      "contenido_estatal_id": 185,
+      "grado_id": 5,
+      "lenguaje_id": 4,
+      "grado_numero": 5,
+      "descripcion": "Lectura y análisis de cuentos, guiones cortos o poemas mexicanos a partir de intereses, con distinción de características e interpretación oral para creación y presentación colectiva de nuevas versiones o producciones en recital literario dirigido a la comunidad escolar."
+    },
+    {
+      "id": 171,
+      "contenido_estatal_id": 185,
+      "grado_id": 6,
+      "lenguaje_id": 4,
+      "grado_numero": 6,
+      "descripcion": "Selección y lectura de cuentos, guiones cortos o poemas del mundo a partir de intereses y gustos, con intercambio y discusión colectiva de significados, reconocimiento de características tonales, matices y niveles de voz de los personajes, para presentación expresiva ante la comunidad escolar."
+    },
+    {
+      "id": 172,
+      "contenido_estatal_id": 187,
+      "grado_id": 5,
+      "lenguaje_id": 4,
+      "grado_numero": 5,
+      "descripcion": "Investigación de mitos y leyendas de la comunidad y de México para identificación de características y escenificación de uno de interés frente a un público."
+    },
+    {
+      "id": 173,
+      "contenido_estatal_id": 187,
+      "grado_id": 6,
+      "lenguaje_id": 4,
+      "grado_numero": 6,
+      "descripcion": "Análisis y comparación de mitos y leyendas"
+    }
+  ],
+  "orientaciones_didacticas": [
+    {
+      "id": 1,
+      "fase_id": 1,
+      "lenguaje_id": 1,
+      "descripcion": "Orientaciones didácticas de la tercera fase\nOrientación didáctica de de música de la tercera fase\nContenido nacional\nUso de elementos de los lenguajes artísticos en la vida cotidiana\nContenido estatal de música\n• Diferencia las cualidades del sonido (duración e intensidad, altura y timbre).\n• Recrea paisajes sonoros mediante la exploración de las cualidades del\nsonido.\nPDA 1°\nReconoce que el sonido con sus cualidades (duración, intensidad, altura y timbre),\nconstituye el lenguaje que permite la comunicación de sensaciones, emociones,\nsentimientos e ideas.\nOrientación didáctica\nExploración de sonidos del entorno.\n- Dirige a tus alumnos a una caminata breve por el aula o al patio de la escuela, para\nque identifiquen los sonidos: pasos, pájaros, viento, voces, etc. Realiza las\nsiguientes preguntas:\n¿Diario pones atención a este tipo de sonidos?\n¿Son sonidos fuertes o suaves?\n¿Quién lo hace? ¿Es un instrumento, un animal o una cosa?\n- En el aula o salón de clases repárteles tarjetas donde venga la imagen de\nintensidad (fuerte o suave) reproduce sonidos grabados que tiene que ver con la\nvida cotidiana (risas, llanto, lluvia, sirena) y vayan levantando la tarjeta a la cual\npertenece el sonido.\n- Para continuar que elijan un objeto o instrumento de su entorno que puedan\nproducir diferentes sonidos y organiza una “mesa sonora” con instrumentos. Por\nturnos, los niños exploran libremente los objetos. Pide que describan:\n¿Cómo suena? ¿Es fuerte o suave?\n¿Qué lo hace diferente a otro sonido? (timbre)\n- Invítalos a mostrar su objeto a la clase y compartir su descubrimiento.\nEjemplo: “Mi botella con arroz suena suave como la lluvia. Tiene un timbre seco y\nbajito\nReflexión\nCuestionamiento:"
+    },
+    {
+      "id": 2,
+      "fase_id": 1,
+      "lenguaje_id": 1,
+      "descripcion": "¿Qué objeto te gustó más para hacer sonido?\n¿Cuál sonaba más fuerte? ¿Cuál más suave?\n¿En qué lugar escuchamos sonidos así?\nSugerencia de evaluacion formativa\nCriterio Indicador observable Técnica / Instrumento\nReconoce la intensidad del Identifica si un sonido es Observación directa / lista de\nsonido fuerte o suave mediante cotejo\ngestos, tarjetas o\npalabras\nIdentifica el timbre Relaciona un sonido con Preguntas orales / diálogo.\nsu fuente (instrumento,\nobjeto, animal)\nAplica lo aprendido en Recrea sonidos Registro anecdótico del\ncontexto lúdico cotidianos con docente\ncreatividad"
+    },
+    {
+      "id": 3,
+      "fase_id": 1,
+      "lenguaje_id": 2,
+      "descripcion": "Orientación didáctica de de danza de la tercera fase\nContenido nacional\nUso de elementos de los lenguajes artísticos en la vida cotidiana\nContenido estatal de artes de danza\n• Explora el movimiento corporal en niveles (alto, medio y bajo) y alcances (cerca-\nlejos, extensión y contracción).\n• Realiza movimientos con los diferentes segmentos corporales con elementos\nde la naturaleza y el entorno\nPDA 1°:\nReconoce que los movimientos corporales constituyen lenguajes que permiten la\ncomunicación de sensaciones, emociones, sentimientos e ideas.\nSecuencia de actividades\n- Comienza tu clase con una activación corporal, “Hola con movimiento” de tal\nmanera que tus alumnos se saluden creativamente con el cuerpo.\nEjemplo:\n“Saluda con tus rodillas”\n“Saluda como si fueras un árbol”\n“Saluda desde arriba como una nube”\n- Luego en una Mini exploración guíalos por niveles:\n• Nivel bajo: nos arrastramos como gusanos.\n• Nivel medio: caminamos como gatos.\n• Nivel alto: nos estiramos como jirafas.\n- Ahora muéstrales imágenes de elementos naturales o del entorno de tal manera\nque los imiten con movimiento y que los relaciones con niveles (alto, medio,\nbajo), Alcance (lejos o cerca; extendido o contraído)\nEjemplo:\n¿Cómo se movería el viento? (rápido y extendido)\n¿Y un caracol?” (lento, contraído y cerca del suelo)\n¿Y una mariposa?” (ligero, saltando en nivel alto).\n- Para continuar coloca en el suelo líneas o figuras hechas con cinta adhesiva\n(rectas, curvas, zigzag), divide al grupo en equipos y que caminen sobre las\nlíneas con distintas consignas e integra música suave o natural para ambientar.\n“Muévete como si fueras agua por un río”\n“Camina como una flor abriéndose al sol”\n“Deslízate como si fueras viento que acaricia las hojas\nExpresión libre y reflexión.\n- Cada alumno elige su movimiento favorito del día y lo representa. Luego\nreflexionan sobre el uso de su cuerpo y lo que más disfrutaron."
+    },
+    {
+      "id": 4,
+      "fase_id": 1,
+      "lenguaje_id": 2,
+      "descripcion": "Sugerencia de evaluación formativa\nCriterio Nivel logrado\nIdentifica y aplica los niveles del ☐ Sí / ☐ En proceso / ☐ No\nmovimiento (alto, medio, bajo)\nRealiza movimientos con alcances ☐ Sí / ☐ En proceso / ☐ No\nvariados (cerca-lejos, extensión-\ncontracción)\nParticipa activamente y representa ☐ Sí / ☐ En proceso / ☐ No\nelementos del entorno natural con\nmovimientos corporales"
+    },
+    {
+      "id": 5,
+      "fase_id": 1,
+      "lenguaje_id": 3,
+      "descripcion": "Orientación didáctica de Artes visuales de la tercera fase\nContenido nacional\nUso de elementos de los lenguajes artísticos en la vida cotidiana\nContenido estatal de artes visuales\n• Utiliza el color como un elemento plástico en la creación de imágenes.\n• Compara las sensaciones de texturas de diferentes objetos que percibe con el tacto\ny la vista\nPDA1°\nReconoce que las imágenes constituyen un lenguaje que permite la comunicación, y\nexperimenta con formas, colores y texturas para expresar sensaciones, emociones,\nsentimientos e ideas que surgen de su entorno.\nSecuencia de actividades\n- Comienza con una charla lúdica: ¿Qué colores ven en la escuela? ¿Y en su casa?\n¿Cómo sensación les provoca cada color?\n- Muéstrales imágenes de objetos cotidianos con colores intensos (por ejemplo:\nfrutas, ropa, juguetes) para hacer una lluvia de ideas sobre qué emociones o cosas\nles recuerdan ciertos colores (ej. rojo = amor o fuego).\n- Invita a los niños a hacer una \"Caza del color\" en el salón o casa (si es híbrido o\ntarea): buscar y recortar de revistas pedacitos de colores (rojo, azul, verde, etc.).\nLuego, que peguen los recortes que llevaron en una hoja para formar un collage\nlibre que represente cómo se sienten hoy usando colores.\n- Para finalizar la actividad que cada niño muestre su collage y comparta brevemente\nqué colores usó y por qué, también puedes preguntarle ¿Qué sientes cuando ves\ntu imagen (collage libre)?\nSugerencia de evaluación formativa\nCriterio Observación del ¿Cómo se evidencia?\ndocente\nUsa colores para expresar Participa en la caza del Usa variedad de colores y\nemociones color explica su elección\nCrea composiciones Elabora collage y obra Participa con entusiasmo y\nvisuales propias con texturas creatividad\nExplica sus elecciones Comparte sus ideas y Usa frases como “esto me\nartísticas emociones al final recuerda a…”"
+    },
+    {
+      "id": 6,
+      "fase_id": 1,
+      "lenguaje_id": 4,
+      "descripcion": "Orientación didáctica de teatro de la tercera fase\nContenido nacional\nUso de elementos de los lenguajes artísticos en la vida cotidiana\nAprendizajes esperados de teatro\n• Emplea expresiones corporales para comunicar eventos de su vida cotidiana.\n• Representa situaciones de la vida cotidiana con movimientos corporales.\nEmplea l expresión corporal y verbal para representar ideas y eventos de su\nvida cotidiana en diferentes situaciones.\nPDA 1°\nImita sonidos, gestos e imágenes de su entorno para representar de manera expresiva\nsituaciones de la vida cotidiana, usando su cuerpo y su voz con intención teatral.\nSecuencia de actividades\n- Inicia tu clase de teatro con la actividad “Enciendo mi cuerpo” lo cual consiste en\nque todos se coloquen de pie y en círculo, realiza un breve calentamiento corporal,\ncomo si “encendieran” partes del cuerpo:\nVamos a encender nuestras manos (las movemos rápido), ahora nuestros pies y\ndespués el cuerpo completo, como si fuéramos robots que se están encendiendo.\n- En el mismo círculo mencionar una situación cotidiana (Ej.: despertar tarde, perder\nel lápiz, recibir un helado de regalo, caerse al jugar. Y que los niños, al escuchar la\nsituación, deben representar con su cuerpo una “estatua” que exprese esa emoción\no momento. (esta actividad se puede realizar individual o grupal). Luego que\nadivinen: “¿Qué emoción o momento crees que representó tu compañero?”\n- Pide a tus alumnos que elijan de su alrededor objetos que hagan sonidos, incluso\npueden utilizar su cuerpo (aplausos, pasos, soplar, golpear suave una mesa, etc.).\nDespués cuenta una historia inventada (por ejemplo: Una caminata por el bosque),\ny que los niños aporten sonidos con su cuerpo y objetos:\n• Pájaros (con la voz)\n• Viento (soplando)\n• Ramas (golpecitos con crayones)\nPara finalizar crea una historia y divide por equipos, que cada uno de estos cumpla\ncon el roll para llevarla a cabo. (Ej. Equipo 1 narra la historia, equipo 2 actuación y\nequipo 3 sonidos).\nSugerencia de evaluación formativa\nCriterio ¿Cómo se observa? Instrumento"
+    },
+    {
+      "id": 7,
+      "fase_id": 1,
+      "lenguaje_id": 4,
+      "descripcion": "Usa el cuerpo para expresar Participa activamente en Lista de cotejo\nuna emoción o situación las estatuas (Sí / No / En proceso)\nemocionales y mini\nescenas\nImita sonidos con el cuerpo Durante la historia Observación directa\nu objetos sonora aporta sonidos\nColabora en grupo Trabaja con su equipo Rúbrica sencilla con\nsin conflictos y aporta caritas 🙂😐☹\nideas"
+    },
+    {
+      "id": 8,
+      "fase_id": 2,
+      "lenguaje_id": 1,
+      "descripcion": "Orientaciones didácticas de la cuarta fase\nOrientación didáctica de de música de la cuarta fase\nContenido nacional\nCreación de propuestas con intención artística para mejorar la escuela y el resto de\nla comunidad\nContenido estatal de música\n• Formación de un ensamble musical para presentarlo frente a público.\nPDA 4°\nExpresa variedades de sonidos musicales para crear una propuesta artística colectiva\nque mejore el espacio escolar o de la localidad en la que pertenece.\nOrientación didáctica de música\nPropósito:\nQue los estudiantes diseñen y ensayen una breve propuesta musical en formato de\nensamble con un mensaje positivo, con la intención de compartirla frente a la\ncomunidad escolar.\nSecuencia de actividades\nMomento Actividad Materiales Estrategia de\nevaluación\nformativa\nInicio -Escuchar un fragmento Bocinas, Observación directa:\nde una canción que reproductor de Identifica un\ntransmita un mensaje audio, pizarra, problema y propone\nsocial positivo (ej. plumones. un tema.\ncuidado ambiental,\nrespeto, inclusión).\n- En dialogo, cuestionar"
+    },
+    {
+      "id": 9,
+      "fase_id": 2,
+      "lenguaje_id": 1,
+      "descripcion": "sobre problemáticas que\npodrían mejorar en la\nescuela o comunidad.\n- Elegir en grupo un tema\nque será el eje del\nensamble.\nDesarrollo - Formar pequeños Instrumentos Lista de cotejo:\nensambles (equipos) escolares o - Participa en el\ninstrumentales, vocales o reciclados, hojas trabajo grupal.\nmixtos. y lápices, atriles\n(opcional). - Asume y respeta su\n- Asignar roles (voz, rol.\npercusión,\nacompañamiento, - Aplica elementos\ndirección). musicales básicos\n(ritmo, melodía,\n- Crear o adaptar un dinámica).\nfragmento musical con\nletra alusiva al tema\nelegido.\n- Ensayar la pieza\ncuidando coordinación,\nr itmo y mensaje.\nCierre - Presentar cada Espacio para Rúbrica rápida:\nensamble frente al grupo presentación, - Claridad del\ncomo simulacro de equipo de sonido mensaje.\npresentación pública. (opcional).\n- Coordinación y\n- Retroalimentación participación del\ngrupal sobre el mensaje y grupo.\nla interpretación de los\nensambles. - Expresividad y\nseguridad en la\n- Reflexión final sobre interpretación.\ncómo la música puede\nimpactar en la mejora de\nla comunidad escolar."
+    },
+    {
+      "id": 10,
+      "fase_id": 2,
+      "lenguaje_id": 1,
+      "descripcion": "Rúbrica de evaluación formativa\nAspectos a evaluar Con Satisfactorio Excelente\ndebilidad\nParticipa activamente en la elección del\ntema y propuesta.\nColabora y respeta su rol dentro del\nensamble.\nMantiene ritmo y coordinación durante el\nensayo y presentación.\nEl mensaje artístico es claro y se relaciona\ncon la mejora de la escuela o comunidad."
+    },
+    {
+      "id": 11,
+      "fase_id": 2,
+      "lenguaje_id": 2,
+      "descripcion": "Orientación didáctica de danza de la cuarta fase\nContenido nacional\nCreación de propuestas con intención artística para mejorar la escuela y el resto de\nla comunidad\nContenido estatal de danza\n• Creación de montaje dancístico en colectivo, a partir de un tema sugerido:\ndiseño y elaboración de vestuario y maquillaje, entre otros.\nPDA 4°\nElabora una propuesta con intención dancística, en colectivo, mediante movimientos,\ny objetos para ofrecer propuestas de solución a situaciones o problemas identificados,\nya sea en la escuela o en el resto de la comunidad.\nOrientación didáctica de danza\nPropósito:\nQue los estudiantes, en trabajo colectivo, desarrollen una propuesta dancística breve\ninspirada en un tema que promueva la mejora de la escuela o comunidad,\nincorporando ideas para vestuario y maquillaje que refuercen el mensaje artístico.\nSecuencia de actividades\nMomento Actividad Materiales Estrategia de\nevaluación formativa\nInicio -Presentar videos o Proyector o Observación directa:\nimágenes de pantalla, Reconoce cómo el\nmontajes dancísticos bocinas, pizarra, vestuario y maquillaje\ndonde el vestuario y plumones. refuerzan el mensaje en\nmaquillaje apoyen el la danza.\nmensaje (ej.\nfestivales escolares,\ndanza\ncontemporánea con\ntemática social).\n- Conversar sobre un\ntema sugerido (ej.\nrespeto, inclusión,"
+    },
+    {
+      "id": 12,
+      "fase_id": 2,
+      "lenguaje_id": 2,
+      "descripcion": "cuidado ambiental)\nque será el eje de la\npropuesta.\nDesarrollo - Formar equipos de Hojas, lápices, Lista de cotejo:\ntrabajo para la colores, tela o\ncreación del montaje. recortes de - Movimientos\nrevistas, equipo coherentes con el\n- Diseñar una breve de sonido, mensaje.\nsecuencia espacio libre\ncoreográfica de 16 para ensayar. - Coordinación en\ntiempos, que equipo.\nrepresente el tema\nelegido. - Ideas claras para\nvestuario/maquillaje.\n- Definir ideas de\nvestuario y maquillaje\nque refuercen la\npropuesta (pueden\ndibujar bocetos o\nseleccionar\nmateriales).\n- Ensayar la\nsecuencia cuidando\ncoordinación, ritmo y\nexpresividad.\nCierre - Presentar cada Espacio para Rúbrica rápida:\nmontaje breve al presentación. - Claridad del mensaje\ngrupo. artístico.\n- Explicar cómo los - Creatividad en la\nmovimientos, propuesta.\nvestuario y maquillaje\ncontribuyen al - Expresividad y\nmensaje artístico. coordinación grupal.\n-Retroalimentación\ngrupal para resaltar\nfortalezas y posibles\nmejoras."
+    },
+    {
+      "id": 13,
+      "fase_id": 2,
+      "lenguaje_id": 2,
+      "descripcion": "Rúbrica de evaluación formativa\nAspectos a evaluar Con Satisfactorio Excelente\ndebilidad\nParticipa activamente en la creación\ncolectiva de la coreografía.\nMovimientos y secuencia dancística\ncoherentes con el tema y mensaje.\nAporta ideas creativas para vestuario y\nmaquillaje que refuercen el mensaje.\nSe coordina con el grupo y respeta tiempos\ndurante el ensayo/presentación."
+    },
+    {
+      "id": 14,
+      "fase_id": 2,
+      "lenguaje_id": 3,
+      "descripcion": "Orientación didáctica de artes visuales de la cuarta fase\nContenido nacional\nCreación de propuestas con intención artística para mejorar la escuela y el resto de\nla comunidad\nContenido estatal de artes visuales\n• Identificación de representaciones bidimensionales y tridimensionales donde\nestén presentes diferentes formatos, soportes y materiales.\nPDA 4°\nCrea producciones visuales, que representen vínculos respetuosos con la diversidad\npara su participación en la mejora comunitaria.\nOrientación didáctica de artes visuales\nPropósito:\nQue los estudiantes identifiquen y utilicen formatos, soportes y materiales\nbidimensionales y tridimensionales para diseñar una propuesta artística que\ncomunique un mensaje positivo para la mejora de la escuela o la comunidad.\nSecuencia de actividades\nMomento Actividad Materiales Estrategia de\nevaluación\nformativa\nInicio - Presentar ejemplos Proyector o Observación\nvisuales de obras impresiones de directa: Reconoce\nbidimensionales obras, pizarra, las diferencias\n(murales, carteles, plumones. entre 2D y 3D y\nilustraciones) y participa en el\ntridimensionales diálogo.\n(esculturas, maquetas,\ninstalaciones).\n- Dialogar sobre cómo el\narte visual puede\ntransmitir mensajes"
+    },
+    {
+      "id": 15,
+      "fase_id": 2,
+      "lenguaje_id": 3,
+      "descripcion": "positivos y proponer\nmejoras.\nDesarrollo - En equipos, elegir un Cartulinas, Lista de cotejo: -\ntema relacionado con la papel, lápices, Selecciona un\nmejora de la escuela o colores, formato y soporte\ncomunidad (ej. limpieza, plastilina, adecuado.\ninclusión, cuidado materiales\nambiental). reciclados, cinta - Integra elementos\n- Decidir si su propuesta adhesiva, tijeras. coherentes con el\nserá bidimensional o mensaje.\ntridimensional.\n- Participa\n- Elaborar un boceto o activamente en la\nmaqueta inicial, eligiendo creación.\nformato, soporte y\nmateriales.\nCierre - Presentar brevemente el Espacio para Rúbrica rápida: -\nboceto o maqueta al exposición, Mensaje claro y\ngrupo, explicando el mesa de trabajo. positivo.\nmensaje, el formato y los\nmateriales elegidos. - Elección\nadecuada del\n- Retroalimentación formato (2D o 3D).\ngrupal sobre claridad y\npertinencia del mensaje. - Creatividad y uso\nfuncional de\nmateriales.\nRúbrica de evaluación formativa\nAspectos a evaluar Con Satisfactorio Excelente\ndebilidad\nReconoce y diferencia representaciones\nbidimensionales y tridimensionales.\nParticipa activamente en la planificación y\ncreación de la propuesta artística.\nSelecciona y utiliza adecuadamente\nformatos, soportes y materiales.\nComunica un mensaje artístico claro para\nla mejora de la escuela o comunidad."
+    },
+    {
+      "id": 16,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "Orientación didáctica de teatro de la cuarta fase\nContenido nacional\nCreación de propuestas con intención artística para mejorar la escuela y el resto de\nla comunidad\nContenido estatal de teatro\n• Creación de una historia de su comunidad con pequeños diálogos.\nPDA 4°\nElabora un montaje teatral en colectivo, para ofrecer propuestas de solución a\nsituaciones o problemas identificados, ya sea en la escuela o en el resto de la\ncomunidad.\nOrientación didáctica de teatro\nPropósito:\nQue los estudiantes, en forma colaborativa, elaboren y representen una breve escena\nteatral inspirada en una historia de su comunidad, incorporando un mensaje artístico\nque contribuya a la mejora de la escuela o el entorno social.\nMomento Actividad Materiales Estrategia de\nevaluación\nformativa\nInicio - Conversar sobre historias Pizarra, Observación\nreales o ficticias de la plumones. directa: Participa\ncomunidad que reflejen en la elección del\nvalores, retos o tradiciones. tema y aporta\nideas para la\n- Elegir de manera historia.\ncolectiva un tema que\npueda generar un mensaje\npositivo para la escuela o\ncomunidad (ej. respeto,\ncuidado del medio\nambiente, unión).\nDesarrollo - Formar equipos Hojas, lápices, Lista de cotejo:\npequeños. vestuario o\naccesorios"
+    },
+    {
+      "id": 17,
+      "fase_id": 2,
+      "lenguaje_id": 4,
+      "descripcion": "- Crear una historia breve sencillos - Historia con\n(3–5 min) con una (opcional). mensaje positivo.\nestructura sencilla: inicio, - Diálogos claros y\ndesarrollo y final. relacionados con\nel tema.\n- Incluir al menos 3–4 - Uso de expresión\ndiálogos cortos entre corporal y vocal.\npersonajes.\n- Asignar roles y ensayar\ncuidando voz, gestos y\ndesplazamientos.\nCierre - Presentar cada escena Espacio para Rúbrica rápida:\nfrente al grupo. presentación.\n- Mensaje artístico\n- Después de cada claro.\npresentación, comentar\nbrevemente el mensaje de - Coherencia entre\nla historia y cómo se historia y diálogos.\nconecta con la mejora de la\nescuela o comunidad. - Expresividad y\ncoordinación\n- Retroalimentación grupal grupal.\ndestacando logros y áreas\nde mejora.\nRúbrica de evaluación formativa\nAspectos a evaluar Con Satisfactorio Excelente\ndebilidad\nParticipa activamente en la creación de la\nhistoria.\nConstruye diálogos coherentes y\nrelacionados con el tema.\nInterpreta con expresión corporal y vocal\nadecuadas.\nLa escena transmite un mensaje positivo\npara la escuela o comunidad."
+    },
+    {
+      "id": 18,
+      "fase_id": 3,
+      "lenguaje_id": 1,
+      "descripcion": "Orientaciones didácticas de la quinta fase\nOrientación didáctica de de música de la quinta fase\nContenido nacional\nCreación de narrativas a partir de acontecimientos relevantes de la comunidad,\nempleando recursos literarios, visuales, corporales y sonoros.\nContenido estatal de música\nCrea polirritmias para el acompañamiento musical\nPDA 5\nCombinación de secuencias sonoras a partir de narrativas de historias y leyendas\nleídas o escuchadas\nOrientación didáctica\nMomento Actividad Materiales Estrategias de\nevaluación\nInicio Observar diversos Bocinas, Observación directa\nvideos donde se realiza reproductor Lista de cotejo\nflasmoob y comentar de sonido,\nen que consiste. videos\nDialogar sobre su relacionados\nimplementación en la y proyector.\ncomunidad escolar Pizarra,\ndurante algún festejo, plumones\nrecreo o actividad\ncívica.\nAbordar también la\nejecución de batucadas\ndonde los participantes\ndesarrollan distintos\nritmos\nDesarrollo Formar pequeños Garrafones Lista de cotejo:\ngrupos; crear o adaptar de agua\ndiversos ritmos para Baquetas,\ncada grupo. cinta\nUtilizar y adaptar\ngarrafones de agua\nvacíos para producir\nsonido\nCrear una secuencia\nde movimientos y"
+    },
+    {
+      "id": 19,
+      "fase_id": 3,
+      "lenguaje_id": 1,
+      "descripcion": "desplazamiento por el\nárea a presenta\nEnsayar la pieza\ncuidando coordinación,\nritmo y mensaje\nCierre Presentar cada Espacio para Rúbrica\nensamble frente al la\ngrupo como ensayo de presentación. Retroalimentación\npresentación pública. Equipo de breve de manera\n. sonido grupal sobre la\nReflexión final sobre interpretación\ncomo la música puede\nimpactar en la mejora\nde la comunidad\nescolar\nsugerencia de evaluación formativa\nAspectos para evaluar Con debilidad Satisfactorio Excelente\nParticipación en clase\nTrabajo en equipo\nIntegración en la actividad\nComprensión de las\nsecuencias sonoras"
+    },
+    {
+      "id": 20,
+      "fase_id": 3,
+      "lenguaje_id": 2,
+      "descripcion": "Orientación didáctica de de danza de la quinta fase\nContenido nacional\nApropiación e intervención artística en el espacio comunitario\nContenido estatal de danza\nConstrucción colectiva de una representación dancística integrando elementos de la\ncultura local, regional o nacional.\nPDA 5\nPlanteamiento de propuestas creativas de bailes o danzas para la atención y/o solución\nde necesidades del espacio comunitario mediante su identificación y socialización.\nOrientación didáctica de danza\nSecuencia de actividades\nMomento Actividad Materiales Estrategia de\nevaluación formativa\nInicio Inicia con una Reproductor Observación directa\nbreve charla sobre audiovisual\nla importancia del Videos\nBocinas\narte en la\ncomunidad y como\npuede transformar\nespacios y vidas.\nMuestra imágenes\no videos de\nintervenciones\nartísticas en\nespacios públicos\nque hayan tenido\nun impacto\npositivo."
+    },
+    {
+      "id": 21,
+      "fase_id": 3,
+      "lenguaje_id": 2,
+      "descripcion": "Desarrollo Integra equipos Espacio para Rúbrica.\npara que los ensayo y\nalumnos exposición,\nidentifiquen Preguntas abiertas.\nReproductor de\nnecesidades e\nmúsica\nintereses de su\ncomunidad Distintos tipos de Observación de\nrelacionados con música participaciones en\nel arte y el espacio equipos\npúblico.\nCada equipo\nselecciona una\nproblemática o\ninterés social, por\nejem: falta de\nespacios de\nrecreación,\nnecesidades de\nexpresar\nsentimientos,\npromover la\ncultura local.\nPosteriormente,\ndiseñan una\npropuesta creativa\nde intervención\nartística como un\nbaile o danza, que\npueda ayudar a\nsocializar o\nsolucionar esa\nnecesidad.\nCierre Cada equipo Retroalimentación breve\npresenta su de manera grupal sobre\npropuesta de la interpretación\nintervención\nartística,"
+    },
+    {
+      "id": 22,
+      "fase_id": 3,
+      "lenguaje_id": 2,
+      "descripcion": "explicando cómo\nsu baile o danza\npuede contribuir a\nmejorar o\nsocializar la\nproblemática\nidentificada.\nReflexión grupal\nsobre la\nimportancia de la\ncreatividad y el\narte en la\ntransformación\nsocial y\ncomunitaria.\nSugerencia de evalución formativa\nAspectos para Con debilidad Satisfactorio Excelente\nevaluar\nEvalúa la\nparticipación y\ncolaborativa de los\nestudiantes durante\nlas actividades.\nConsidera la\ncreatividad y\npertinencia de las\npropuestas de\nintervención\nartística.\nValora la capacidad\nde los alumnos\npara identificar\nnecesidades\nsociales y proponer\nsoluciones\nmediante el arte."
+    },
+    {
+      "id": 23,
+      "fase_id": 3,
+      "lenguaje_id": 3,
+      "descripcion": "Orientación didáctica de de Artes visuales de la quinta fase\nContenido nacional\nCombinación de la realidad y la ficción en elementos simbólicos de las\nmanifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia\nContenido estatal de artes visuales\nCreación de una obra bidimensional o tridimensional a partir de elementos de su\nentorno que hagan referencia a sucesos relevantes de su comunidad.\nPDA 5 °\nCombinación intencional de formas, colores y texturas para recreación bidimensional\nde elementos simbólicos de identidad y pertenencia.\nOrientación didáctica\nSecuencia de actividades\nMomento Actividad Materiales Estrategia de\nevaluación formativa\nInicio Inicia con una Reproductor Observación directa\nbreve charla sobre audiovisual\ncomo en las Videos\nBocinas\nmanifestaciones\nculturales\nmexicanas, se\nmezclan la\nrealidad y la\nficción para contar\nhistorias, expresar\ntradiciones y\nfortalecer la\nidentidad.\nMuestra imágenes\no videos para que\nobserven algunos\nejemplos.\nPregunta\ngeneradora:"
+    },
+    {
+      "id": 24,
+      "fase_id": 3,
+      "lenguaje_id": 3,
+      "descripcion": "De qué manera\nlas tradiciones\ncombinan hechos\nreales con\nelementos de\nfantasía.\nDinámica Rápida:\nPide a a los\nalumnos que\ncompartan alguna\ntradición o\nelementos cultural\nde su comunidad\nque tenga\nsímbolos o\nelementos que\nparezcan\nfantásticos o\nexagerados y que\nexpliquen que\nrepresentan.\nDesarrollo En equipos los Cartulina Lista de cotejo\nalumnos Plumones\ndiseñarán una Colores\nobra\nbidimensional con\nimágenes de ele\nelementos que\nexpresen su\ncultura\nCierre Cada grupo Espacio para la Rubrica\npresenta su exposición\nproducción visual Preguntas abiertas.\ny comparte con\nsus compañeros Observación de\ncomo vivió el participaciones de\nproceso equipos"
+    },
+    {
+      "id": 25,
+      "fase_id": 3,
+      "lenguaje_id": 3,
+      "descripcion": "Sugerencia de evalución formativa\nAspectos para Con debilidad Muy bien Excelente\nevaluar\nParticipación y\ncolaborativa en el\ntrabajo en equipo.\nValoración del\npatrimonio\nmexicano y su\npapel en la\nidentidad y sentido\nde pertenencia.\nCreatividad y\noriginalidad en la\nobra artística.\nPresentación\ndonde expliquen su\nobra"
+    },
+    {
+      "id": 26,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "Orientación didáctica de de Teatro de la quinta fase\nContenido nacional\nLectura y análisis de mitos y leyendas, para su disfrute y valoración\nContenido estatal de teatro\nElaboración y acondicionamiento del escenario para ambientar una puesta en\nescena.\nPDA 5\n• Investigación de mitos y leyendas de la comunidad y de México para\nidentificación de características y escenificación de uno de interés frente a un\npúblico.\nOrientación didáctica de teatro\nSecuencia de actividades\nMomento Actividad Materiales Estrategia de\nevaluación formativa\nSaludo inicial Proyector, Observación directa\nimpresiones de\nEn lluvia de ideas\nmitos y leyendas\ncuestionar a los\nde México,\nalumnos sobre su\npizarra, plumones.\nconocimiento de\nlos mitos, Bocina,\nleyendas y sus reproductor de\ncaracterísticas. sonido\nComentar que en\nla presente clase\ninvestigarán los\nmitos y leyendas\nde México e\niniciarán el\nmontaje del que\ndecidan\nescenificar.\nDesarrollo En equipos, leer y Textos de mitos y Lista de cotejo\nanalizar diversos leyendas\nmitos y leyendas,\nidentificando sus\ncaracterísticas,"
+    },
+    {
+      "id": 27,
+      "fase_id": 3,
+      "lenguaje_id": 4,
+      "descripcion": "funciones, y\nelementos de\nrealidad y fantasía\nElaborar un guion\nbreve con\npersonajes,\nacciones y\ndesplazamiento Cuaderno, hojas\nen el escenario, blancas, lápices,\nbolígrafos.\nRealizar lista de\nutilería\nescenográfica,\nvestuario y\nmúsica.\nCierre En equipo, Espacio para Rúbrica.\npresentar el ensayo y\navance del exposición,\nmontaje de los Preguntas abiertas.\nReproductor de\nmitos y/o leyendas\nmúsica\nfrente al grupo.\nDistintos tipos de Observación de\nmúsica participaciones en\nPosterior a las equipos\nparticipaciones,\nsolicitar que\nreflexionen sobre\nlo aprendido y qué\nles gustó de la\nescenificación"
     }
   ]
 }
