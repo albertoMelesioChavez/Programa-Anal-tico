@@ -152,6 +152,24 @@ export default function ContenidosArtesPage() {
         }
     };
 
+    const handleExport = () => {
+        let fullContent = '';
+        pages.forEach((p, pIdx) => {
+            const fullHtml = `<p><strong>${p.title}</strong></p>\n${p.cleanHtml}`;
+            fullContent += `<!-- PAGE_START ${pIdx + 1} -->\n${fullHtml}\n<!-- PAGE_END -->\n`;
+        });
+
+        const blob = new Blob([fullContent], { type: 'text/markdown' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Plan_Analitico_Artes_2025_Editado.md`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    };
+
     const scrollToPage = (idx) => {
         if (pageRefs.current[idx]?.current) {
             pageRefs.current[idx].current.scrollIntoView({ behavior: 'smooth' });
@@ -258,9 +276,64 @@ export default function ContenidosArtesPage() {
                             <span style={{ fontSize: '10px', color: '#4b5563', fontWeight: 'bold' }}>PÁGINA {currentPageIdx + 1} DE {pages.length}</span>
                         </div>
                         
-                        <div style={{ display: 'flex', background: '#1a1d23', padding: '3px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                            <button onClick={() => setViewMode('digital')} style={{ padding: '6px 12px', borderRadius: '7px', fontSize: '10px', fontWeight: 'bold', border: 'none', cursor: 'pointer', transition: 'all 0.2s', background: viewMode === 'digital' ? '#2563eb' : 'transparent', color: viewMode === 'digital' ? 'white' : '#6b7280' }}>DIGITAL</button>
-                            <button onClick={() => setViewMode('pdf')} style={{ padding: '6px 12px', borderRadius: '7px', fontSize: '10px', fontWeight: 'bold', border: 'none', cursor: 'pointer', transition: 'all 0.2s', background: viewMode === 'pdf' ? '#2563eb' : 'transparent', color: viewMode === 'pdf' ? 'white' : '#6b7280' }}>ORIGINAL</button>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                            <button 
+                                onClick={handleExport}
+                                style={{
+                                    background: '#2563eb',
+                                    color: 'white',
+                                    padding: '10px 20px',
+                                    borderRadius: '12px',
+                                    border: 'none',
+                                    fontSize: '12px',
+                                    fontWeight: 'bold',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                    boxShadow: '0 4px 12px rgba(37, 99, 235, 0.3)',
+                                    transition: 'all 0.2s'
+                                }}
+                                onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+                                onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                            >
+                                <span>📥</span> EXPORTAR PLAN
+                            </button>
+
+                            <div style={{ display: 'flex', background: 'rgba(255,255,255,0.05)', padding: '4px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                                <button 
+                                    onClick={() => setViewMode('digital')}
+                                    style={{ 
+                                        padding: '8px 16px', 
+                                        borderRadius: '8px', 
+                                        border: 'none', 
+                                        cursor: 'pointer', 
+                                        fontSize: '12px', 
+                                        fontWeight: 'bold',
+                                        background: viewMode === 'digital' ? '#fff' : 'transparent',
+                                        color: viewMode === 'digital' ? '#000' : '#9ca3af',
+                                        transition: 'all 0.2s'
+                                    }}
+                                >
+                                    Digital
+                                </button>
+                                <button 
+                                    onClick={() => setViewMode('pdf')}
+                                    style={{ 
+                                        padding: '8px 16px', 
+                                        borderRadius: '8px', 
+                                        border: 'none', 
+                                        cursor: 'pointer', 
+                                        fontSize: '12px', 
+                                        fontWeight: 'bold',
+                                        background: viewMode === 'pdf' ? '#fff' : 'transparent',
+                                        color: viewMode === 'pdf' ? '#000' : '#9ca3af',
+                                        transition: 'all 0.2s'
+                                    }}
+                                >
+                                    Original (PDF)
+                                </button>
+                            </div>
                         </div>
                     </div>
 
