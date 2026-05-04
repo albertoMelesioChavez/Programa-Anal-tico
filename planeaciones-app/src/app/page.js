@@ -55,26 +55,26 @@ export default function Home() {
             <div style={{ position: 'fixed', top: '-10%', left: '-10%', width: '40%', height: '40%', background: 'radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }}></div>
             <div style={{ position: 'fixed', bottom: '-10%', right: '-10%', width: '50%', height: '50%', background: 'radial-gradient(circle, rgba(147, 51, 234, 0.08) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }}></div>
 
-            <div style={{ position: 'relative', zIndex: 1, maxWidth: '1100px', margin: '0 auto', padding: '60px 24px' }}>
+            <div style={{ position: 'relative', zIndex: 1, maxWidth: '1100px', margin: '0 auto', padding: '40px 24px' }}>
                 
                 {/* Hero Header */}
-                <header style={{ textAlign: 'center', marginBottom: '80px' }}>
+                <header style={{ textAlign: 'center', marginBottom: '40px' }}>
                     <div style={{ display: 'inline-block', padding: '6px 16px', borderRadius: '100px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', fontSize: '12px', fontWeight: 'bold', color: '#60a5fa', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '24px' }}>
                         NEM 2025 • Sinaloa
                     </div>
                     <h1 style={{ 
-                        fontSize: 'clamp(40px, 8vw, 72px)', 
+                        fontSize: 'clamp(32px, 6vw, 56px)', 
                         fontWeight: '900', 
                         lineHeight: '1.1', 
-                        marginBottom: '20px', 
+                        marginBottom: '16px', 
                         background: 'linear-gradient(135deg, #fff 0%, #94a3b8 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
-                        letterSpacing: '-2px'
+                        letterSpacing: '-1.5px'
                     }}>
                         Programa Analítico <br/> de Artes
                     </h1>
-                    <p style={{ fontSize: '20px', color: '#94a3b8', maxWidth: '600px', margin: '0 auto', lineHeight: '1.6' }}>
+                    <p style={{ fontSize: '18px', color: '#94a3b8', maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
                         Plataforma inteligente para la gestión, edición y creación de planeaciones analíticas de primaria.
                     </p>
                 </header>
@@ -83,15 +83,15 @@ export default function Home() {
                 <section style={{ 
                     display: 'grid', 
                     gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
-                    gap: '32px', 
-                    marginBottom: '100px' 
+                    gap: '24px', 
+                    marginBottom: '40px' 
                 }}>
                     {/* Card 1: Editor Original */}
                     <Link href="/contenidos/artes" style={{ textDecoration: 'none' }}>
                         <div className="main-card" style={{ 
                             background: 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
                             borderRadius: '32px',
-                            padding: '40px',
+                            padding: '24px 32px',
                             border: '1px solid rgba(255,255,255,0.1)',
                             height: '100%',
                             display: 'flex',
@@ -117,7 +117,7 @@ export default function Home() {
                         <div className="main-card-purple" style={{ 
                             background: 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
                             borderRadius: '32px',
-                            padding: '40px',
+                            padding: '24px 32px',
                             border: '1px solid rgba(255,255,255,0.1)',
                             height: '100%',
                             display: 'flex',
@@ -141,12 +141,11 @@ export default function Home() {
 
 
 
-                {/* Secondary Section: Planeaciones */}
-                <section>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px' }}>
+                <section id="planeaciones-section">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
                         <div>
-                            <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: '#fff', marginBottom: '8px' }}>Mis Planeaciones</h3>
-                            <p style={{ color: '#64748b', fontSize: '14px' }}>Historial de proyectos y borradores personales.</p>
+                            <h3 style={{ fontSize: '28px', fontWeight: '900', color: '#fff', marginBottom: '4px', letterSpacing: '-1px' }}>Mis Planeaciones</h3>
+                            <p style={{ color: '#64748b', fontSize: '15px' }}>Historial de proyectos y borradores personales.</p>
                         </div>
                         {!showForm && (
                             <button 
