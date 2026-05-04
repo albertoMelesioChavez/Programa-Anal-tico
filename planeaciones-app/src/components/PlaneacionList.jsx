@@ -29,17 +29,18 @@ export default function PlaneacionList({ planeaciones, onDelete }) {
                             </div>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                             <span style={{ fontSize: '11px', color: '#475569' }}>
                                 {new Date(p.fecha_creacion).toLocaleDateString('es-MX', { day: '2-digit', month: 'short', year: 'numeric' })}
                             </span>
-                            <div style={{ display: 'flex', gap: '8px' }}>
+                            <div style={{ display: 'flex', gap: '8px', width: '100%', justifyContent: 'flex-end' }} className="list-actions">
                                 <a href={`/api/planeaciones/${p.id}/export`} download
-                                    style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(37,99,235,0.2)', color: '#60a5fa', borderRadius: '8px', padding: '4px 12px', cursor: 'pointer', fontSize: '11px', fontWeight: '600', textDecoration: 'none' }}>
+                                    style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(37,99,235,0.2)', color: '#60a5fa', borderRadius: '8px', padding: '6px 12px', cursor: 'pointer', fontSize: '11px', fontWeight: '600', textDecoration: 'none' }}>
                                     📥 Exportar
                                 </a>
                                 {onDelete && (
                                     <button onClick={() => onDelete(p.id)}
-                                        style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', color: '#f87171', borderRadius: '8px', padding: '4px 10px', cursor: 'pointer', fontSize: '11px', fontWeight: '600' }}>
+                                        style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', color: '#f87171', borderRadius: '8px', padding: '6px 10px', cursor: 'pointer', fontSize: '11px', fontWeight: '600' }}>
                                         Eliminar
                                     </button>
                                 )}

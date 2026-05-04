@@ -63,7 +63,7 @@ export default function Home() {
                         NEM 2025 • Sinaloa
                     </div>
                     <h1 style={{ 
-                        fontSize: 'clamp(32px, 6vw, 56px)', 
+                        fontSize: 'clamp(28px, 8vw, 56px)', 
                         fontWeight: '900', 
                         lineHeight: '1.1', 
                         marginBottom: '16px', 
@@ -74,7 +74,7 @@ export default function Home() {
                     }}>
                         Programa Analítico <br/> de Artes
                     </h1>
-                    <p style={{ fontSize: '18px', color: '#94a3b8', maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
+                    <p style={{ fontSize: 'clamp(14px, 4vw, 18px)', color: '#94a3b8', maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
                         Plataforma inteligente para la gestión, edición y creación de planeaciones analíticas de primaria.
                     </p>
                 </header>
@@ -139,13 +139,12 @@ export default function Home() {
                     </Link>
                 </section>
 
-
-
-                <section id="planeaciones-section">
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+                {/* Secondary Section: Planeaciones */}
+                <section id="planeaciones-section" style={{ paddingBottom: '100px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '24px' }} className="mobile-header">
                         <div>
-                            <h3 style={{ fontSize: '28px', fontWeight: '900', color: '#fff', marginBottom: '4px', letterSpacing: '-1px' }}>Mis Planeaciones</h3>
-                            <p style={{ color: '#64748b', fontSize: '15px' }}>Historial de proyectos y borradores personales.</p>
+                            <h3 style={{ fontSize: 'clamp(22px, 5vw, 28px)', fontWeight: '900', color: '#fff', marginBottom: '4px', letterSpacing: '-1px' }}>Mis Planeaciones</h3>
+                            <p style={{ color: '#64748b', fontSize: '14px' }}>Historial de proyectos y borradores personales.</p>
                         </div>
                         {!showForm && (
                             <button 
@@ -204,6 +203,13 @@ export default function Home() {
             </div>
 
             <style jsx global>{`
+                @media (min-width: 640px) {
+                    .mobile-header {
+                        flex-direction: row !important;
+                        justify-content: space-between !important;
+                        align-items: center !important;
+                    }
+                }
                 .main-card:hover {
                     transform: translateY(-8px);
                     border-color: rgba(37, 99, 235, 0.4) !important;

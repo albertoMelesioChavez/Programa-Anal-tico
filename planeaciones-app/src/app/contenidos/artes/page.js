@@ -232,9 +232,9 @@ function ContenidosArtesContent() {
     );
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', height: '100vh', width: '100vw', background: '#0a0a0a', color: '#9ca3af', overflow: 'hidden', fontFamily: 'system-ui, sans-serif' }}>
-            {/* LEFT SIDEBAR (INDICE) */}
-            <aside style={{ width: '320px', minWidth: '320px', height: '100%', borderRight: '1px solid rgba(255,255,255,0.05)', display: 'flex', flexDirection: 'column', background: '#0f0f0f' }}>
+        <div style={{ display: 'flex', height: '100vh', background: '#000', color: '#fff', overflow: 'hidden' }} className="editor-container">
+            {/* LEFT NAVIGATION - Hidden on mobile */}
+            <aside style={{ width: '280px', height: '100%', background: '#0a0a0a', borderRight: '1px solid rgba(255,255,255,0.03)', display: 'flex', flexDirection: 'column' }} className="desktop-sidebar">
                 <div style={{ padding: '32px' }}>
                     <Link href="/" style={{ fontSize: '10px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '2px', color: '#4b5563', textDecoration: 'none' }}>← Dashboard</Link>
                     <div style={{ marginTop: '32px' }}>
@@ -281,9 +281,10 @@ function ContenidosArtesContent() {
             </aside>
 
             {/* MAIN CONTENT AREA */}
-            <main ref={mainRef} onScroll={handleScroll} style={{ flexGrow: 1, height: '100%', overflowY: 'auto', position: 'relative', scrollBehavior: 'smooth' }} className="custom-scrollbar">
-                <header style={{ position: 'sticky', top: 0, zIndex: 100, height: '64px', background: 'rgba(10,10,10,0.8)', backdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <main ref={mainRef} onScroll={handleScroll} style={{ flex: 1, height: '100%', overflowY: 'auto', position: 'relative' }} className="custom-scrollbar main-content">
+                {/* HEADER */}
+                <header style={{ position: 'sticky', top: 0, zIndex: 10, background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(10px)', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '12px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }} className="editor-header">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }} className="header-controls">
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                             <span style={{ padding: '4px 8px', background: isEditMode ? 'rgba(37,99,235,0.1)' : 'rgba(255,255,255,0.05)', color: isEditMode ? '#3b82f6' : '#6b7280', fontSize: '10px', fontWeight: 'bold', borderRadius: '4px', textTransform: 'uppercase' }}>{isEditMode ? 'MODO EDICIÓN' : 'MODO LECTURA'}</span>
                             <span style={{ fontSize: '10px', color: '#4b5563', fontWeight: 'bold' }}>PÁGINA {currentPageIdx + 1} DE {pages.length}</span>
@@ -354,12 +355,12 @@ function ContenidosArtesContent() {
                 </header>
 
                 <div style={{ display: viewMode === 'digital' ? 'block' : 'none' }}>
-                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 40px 200px 40px' }}>
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 20px 200px 20px' }} className="digital-content">
                         {pages.map((p, idx) => (
-                            <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '80px 0', borderBottom: '1px solid rgba(255,255,255,0.03)', opacity: currentPageIdx === idx ? 1 : 0.3, transition: 'opacity 0.5s' }}>
-                                <div style={{ marginBottom: '40px' }}>
-                                    <h2 style={{ fontSize: '12px', fontWeight: 'bold', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>Página {idx + 1}</h2>
-                                    <h1 style={{ fontSize: '32px', fontWeight: '900', color: 'white', letterSpacing: '-1px', margin: 0 }}>{p.title}</h1>
+                            <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '40px 0', borderBottom: '1px solid rgba(255,255,255,0.03)', opacity: currentPageIdx === idx ? 1 : 0.3, transition: 'opacity 0.5s' }} className="page-section">
+                                <div style={{ marginBottom: '24px' }}>
+                                    <h2 style={{ fontSize: '11px', fontWeight: 'bold', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>Página {idx + 1}</h2>
+                                    <h1 style={{ fontSize: '24px', fontWeight: '900', color: 'white', letterSpacing: '-1px', margin: 0 }} className="page-title">{p.title}</h1>
                                 </div>
                                 <RichTextEditor key={`${idx}-${isEditMode}`} initialContent={p.cleanHtml} onSave={(newHtml) => handleSave(idx, newHtml)} isSaving={isSaving} editable={isEditMode} />
                             </div>
@@ -372,8 +373,8 @@ function ContenidosArtesContent() {
                 </div>
             </main>
 
-            {/* RIGHT MINIMAP + SCRUBBER */}
-            <aside style={{ width: '60px', height: '100%', background: '#0a0a0a', borderLeft: '1px solid rgba(255,255,255,0.03)', position: 'relative', display: 'flex', justifyContent: 'center' }}>
+            {/* RIGHT MINIMAP + SCRUBBER - Hidden on mobile */}
+            <aside style={{ width: '60px', height: '100%', background: '#0a0a0a', borderLeft: '1px solid rgba(255,255,255,0.03)', position: 'relative', display: 'flex', justifyContent: 'center' }} className="desktop-minimap">
                 <div ref={minimapRef} style={{ position: 'absolute', top: '40px', bottom: '40px', width: '12px', display: 'flex', flexDirection: 'column', gap: '1px' }}>
                     {pages.map((_, idx) => (
                         <div key={idx} onClick={() => scrollToPage(idx)} style={{ flex: 1, width: '100%', background: currentPageIdx === idx ? 'rgba(37,99,235,0.4)' : 'rgba(255,255,255,0.05)', borderRadius: '1px', transition: 'all 0.2s', cursor: 'pointer' }} />
@@ -386,6 +387,13 @@ function ContenidosArtesContent() {
                 </div>
             </aside>
             <style jsx global>{`
+                @media (max-width: 1024px) {
+                    .desktop-sidebar, .desktop-minimap { display: none !important; }
+                    .editor-header { flex-direction: column; align-items: stretch !important; height: auto !important; padding: 16px !important; }
+                    .header-controls { flex-direction: column; align-items: stretch !important; gap: 12px !important; }
+                    .digital-content { padding: 0 20px 100px 20px !important; }
+                    .page-title { fontSize: 24px !important; }
+                }
                 .custom-scrollbar::-webkit-scrollbar { width: 4px; }
                 .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
                 .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.05); border-radius: 10px; }
