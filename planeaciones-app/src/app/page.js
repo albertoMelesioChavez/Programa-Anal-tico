@@ -139,10 +139,7 @@ export default function Home() {
                     </Link>
                 </section>
 
-                <style jsx global>{`
-                    .main-card:hover { transform: translateY(-8px); border-color: #2563eb !important; background: rgba(37,99,235,0.05) !important; }
-                    .main-card-purple:hover { transform: translateY(-8px); border-color: #7c3aed !important; background: rgba(124,58,237,0.05) !important; }
-                `}</style>
+
 
                 {/* Secondary Section: Planeaciones */}
                 <section>
@@ -212,6 +209,12 @@ export default function Home() {
                     transform: translateY(-8px);
                     border-color: rgba(37, 99, 235, 0.4) !important;
                     background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%) !important;
+                    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+                }
+                .main-card-purple:hover {
+                    transform: translateY(-8px);
+                    border-color: #7c3aed !important;
+                    background: rgba(124,58,237,0.05) !important;
                     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
                 }
                 .loader {
