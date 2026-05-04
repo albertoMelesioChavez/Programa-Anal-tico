@@ -1,17 +1,23 @@
 'use client';
 
-import { useState, useEffect, useRef, createRef } from 'react';
+import { useState, useEffect, useRef, createRef, Suspense } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import RichTextEditor from '@/components/RichTextEditor';
 import { marked } from 'marked';
 
-export default function ContenidosArtesPage() {
+function ContenidosArtesContent() {
+    const searchParams = useSearchParams();
+    const router = useRouter();
+    
     const [pages, setPages] = useState([]);
     const [currentPageIdx, setCurrentPageIdx] = useState(0);
     const [loading, setLoading] = useState(true);
     const [isSaving, setIsSaving] = useState(false);
     const [isEditMode, setIsEditMode] = useState(false);
-    const [viewMode, setViewMode] = useState('digital');
+    
+    // Initialize viewMode from URL or default to 'digital'
+    const [viewMode, setViewMode] = useState(searchParams.get('view') || 'digital');
     const [scrollPercentage, setScrollPercentage] = useState(0);
     
     const mainRef = useRef(null);
@@ -123,6 +129,13 @@ export default function ContenidosArtesPage() {
             });
         };
     }, [loading, pages, viewMode]);
+
+    // Update URL when viewMode changes
+    useEffect(() => {
+        const params = new URLSearchParams(searchParams);
+        params.set('view', viewMode);
+        router.push(`?${params.toString()}`, { scroll: false });
+    }, [viewMode, router, searchParams]);
 
     const handleSave = async (idx, newHtml) => {
         setIsSaving(true);
@@ -380,5 +393,13 @@ export default function ContenidosArtesPage() {
                 .ProseMirror h1 { font-size: 3rem; font-weight: 900; color: white; margin-top: 3rem; margin-bottom: 1.5rem; letter-spacing: -0.05em; }
             `}</style>
         </div>
+    );
+}
+
+export default function ContenidosArtesPage() {
+    return (
+        <Suspense fallback={<div>Cargando editor...</div>}>
+            <ContenidosArtesContent />
+        </Suspense>
     );
 }
