@@ -353,7 +353,7 @@ function ContenidosArtesContent() {
                     <button onClick={() => { if (viewMode === 'pdf') setViewMode('digital'); setIsEditMode(!isEditMode); }} style={{ background: isEditMode ? '#2563eb' : 'rgba(255,255,255,0.05)', color: 'white', border: 'none', padding: '8px 20px', borderRadius: '10px', fontSize: '11px', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s', boxShadow: isEditMode ? '0 4px 12px rgba(37,99,235,0.3)' : 'none' }}>{isEditMode ? 'Finalizar Edición' : 'Activar Edición'}</button>
                 </header>
 
-                {viewMode === 'digital' ? (
+                <div style={{ display: viewMode === 'digital' ? 'block' : 'none' }}>
                     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 40px 200px 40px' }}>
                         {pages.map((p, idx) => (
                             <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '80px 0', borderBottom: '1px solid rgba(255,255,255,0.03)', opacity: currentPageIdx === idx ? 1 : 0.3, transition: 'opacity 0.5s' }}>
@@ -365,11 +365,11 @@ function ContenidosArtesContent() {
                             </div>
                         ))}
                     </div>
-                ) : (
-                    <div style={{ height: 'calc(100vh - 64px)', width: '100%' }}>
-                        <iframe src="/plananalitico/artes" style={{ width: '100%', height: '100%', border: 'none' }} title="Plan Analítico Original" />
-                    </div>
-                )}
+                </div>
+
+                <div style={{ display: viewMode === 'pdf' ? 'block' : 'none', height: 'calc(100vh - 64px)', width: '100%' }}>
+                    <iframe src="/plananalitico/artes" style={{ width: '100%', height: '100%', border: 'none' }} title="Plan Analítico Original" />
+                </div>
             </main>
 
             {/* RIGHT MINIMAP + SCRUBBER */}
