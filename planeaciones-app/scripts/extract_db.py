@@ -211,6 +211,8 @@ def main():
     cur.execute("DELETE FROM contenidos_estatales")
     cur.execute("DELETE FROM contenidos_nacionales")
     cur.execute("DELETE FROM orientaciones_didacticas")
+    cur.execute("DELETE FROM actividades_libro")
+    cur.execute("DELETE FROM material_consulta")
     conn.commit()
     
     # Verify catalog data exists
@@ -405,6 +407,162 @@ def main():
                 stats['orientaciones'] += 1
                 print(f"    ✅ Pág {page_num} | Orientación didáctica")
     
+    # ─── Extract Actividades de Libros NEM ────────────────────────────────
+    print(f"\n[3.7/5] Extrayendo actividades de libros NEM (páginas 112-124)...")
+    stats['actividades'] = 0
+    
+    current_libro = None
+    current_grado = None
+    
+    # Map grado to fase_id
+    grado_to_fase = {1: 1, 2: 1, 3: 2, 4: 2, 5: 3, 6: 3}
+    
+    for page_num in range(112, 125):
+        if page_num > len(pdf.pages):
+            break
+        
+        page = pdf.pages[page_num - 1]
+        tables = page.extract_tables()
+        
+        for table in tables:
+            if not table or len(table) < 2:
+                continue
+            if len(table[0]) <= 3 and len(table) <= 3:
+                continue
+            
+            for row in table:
+                row_text = ' '.join([clean_text(c) for c in row if c])
+                
+                # Detect libro/grado header
+                if 'Múltiples lenguajes' in row_text:
+                    current_libro = 'Múltiples Lenguajes'
+                    grade_match = re.search(r'(\d+)[°º]\s*[Gg]rado', row_text)
+                    if grade_match:
+                        current_grado = int(grade_match.group(1))
+                    continue
+                
+                if 'Proyectos escolares' in row_text or 'Proyectos Escolares' in row_text:
+                    current_libro = 'Proyectos Escolares'
+                    continue
+                
+                if re.match(r'^\d+[°º]\s*[Gg]rado', row_text.strip()):
+                    grade_match = re.search(r'(\d+)[°º]', row_text)
+                    if grade_match:
+                        current_grado = int(grade_match.group(1))
+                    continue
+                
+                # Skip header rows
+                if 'Página' in row_text and 'Nombre' in row_text:
+                    continue
+                if 'Nombre de' in row_text and 'Lenguaje' in row_text:
+                    continue
+                
+                # Extract activity data from 5-6 column tables
+                cells = [clean_text(c) if c else '' for c in row]
+                
+                if len(cells) >= 5 and cells[1] and not cells[1].startswith('Nombre'):
+                    # Try to parse page number from first cell
+                    pagina = None
+                    try:
+                        pagina = int(re.sub(r'[^\d]', '', cells[0])) if cells[0] and re.search(r'\d+', cells[0]) else None
+                    except:
+                        pass
+                    
+                    titulo = cells[1]
+                    lenguaje_art = cells[2] if len(cells) > 2 else ''
+                    campo_form = cells[3] if len(cells) > 3 else ''
+                    ejes = cells[4] if len(cells) > 4 else ''
+                    producto = cells[5] if len(cells) > 5 else ''
+                    
+                    # Skip if title looks like a header or is empty
+                    if not titulo or titulo in ('NULL', '') or 'Nombre' in titulo:
+                        continue
+                    # Skip header rows that slipped through
+                    skip_terms = ['Actividad', 'Proyecto', 'Artístico', 'Campo Formativo', 'Formativos']
+                    if any(titulo.strip() == st for st in skip_terms):
+                        continue
+                    
+                    fase_id = grado_to_fase.get(current_grado) if current_grado else None
+                    
+                    cur.execute(
+                        """INSERT INTO actividades_libro 
+                        (libro, grado, pagina, titulo_proyecto, lenguaje_artistico, campo_formativo, ejes_articuladores, producto, fase_id)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                        (current_libro, current_grado, pagina, titulo, lenguaje_art, campo_form, ejes, producto, fase_id)
+                    )
+                    stats['actividades'] += 1
+        
+        if stats['actividades'] > 0 and page_num % 3 == 0:
+            print(f"    ✅ Pág {page_num} | {stats['actividades']} actividades acumuladas")
+    
+    print(f"    ✅ Total actividades de libros: {stats['actividades']}")
+    
+    # ─── Extract Material de Consulta ─────────────────────────────────────
+    print(f"\n[3.8/5] Extrayendo material de consulta (pág 125)...")
+    stats['material'] = 0
+    
+    if 125 <= len(pdf.pages):
+        page = pdf.pages[124]
+        text = page.extract_text() or ''
+        lines = [l.strip() for l in text.split('\n') if l.strip()]
+        
+        current_lenguaje_mat = None
+        building_url = None
+        
+        known_lenguajes = ['Música', 'Danza', 'Artes visuales', 'Teatro', 'Material audiovisual']
+        
+        for line in lines:
+            if 'Programa' in line or 'Material de consulta' == line.strip():
+                continue
+            
+            # Check if line starts with a lenguaje name
+            detected_lang = None
+            rest_of_line = line
+            for lang in known_lenguajes:
+                if line.startswith(lang):
+                    detected_lang = lang
+                    rest_of_line = line[len(lang):].strip()
+                    break
+            
+            if detected_lang:
+                # Save any URL we were building
+                if building_url and current_lenguaje_mat:
+                    cur.execute(
+                        "INSERT INTO material_consulta (lenguaje, recurso, url) VALUES (?, ?, ?)",
+                        (current_lenguaje_mat, current_lenguaje_mat, building_url)
+                    )
+                    stats['material'] += 1
+                    building_url = None
+                
+                current_lenguaje_mat = detected_lang
+                if rest_of_line.startswith('http'):
+                    building_url = rest_of_line
+                continue
+            
+            # If line starts with http, it's a new URL or continuation
+            if line.startswith('http'):
+                # Save previous URL if exists
+                if building_url and current_lenguaje_mat:
+                    cur.execute(
+                        "INSERT INTO material_consulta (lenguaje, recurso, url) VALUES (?, ?, ?)",
+                        (current_lenguaje_mat, current_lenguaje_mat, building_url)
+                    )
+                    stats['material'] += 1
+                building_url = line
+            elif building_url:
+                # Continuation of a fragmented URL
+                building_url += line
+    
+        # Flush last URL
+        if building_url and current_lenguaje_mat:
+            cur.execute(
+                "INSERT INTO material_consulta (lenguaje, recurso, url) VALUES (?, ?, ?)",
+                (current_lenguaje_mat, current_lenguaje_mat, building_url)
+            )
+            stats['material'] += 1
+    
+    print(f"    ✅ Material de consulta: {stats['material']}")
+    
     conn.commit()
     pdf.close()
     
@@ -416,19 +574,31 @@ def main():
     print(f"  Contenidos estatales:  {stats['contenidos_estatales']}")
     print(f"  PDAs:                  {stats['pdas']}")
     print(f"  Orientaciones:         {stats.get('orientaciones', 0)}")
+    print(f"  Actividades libros:    {stats.get('actividades', 0)}")
+    print(f"  Material consulta:     {stats.get('material', 0)}")
     
     # ─── Export JSON ──────────────────────────────────────────────────────
     print(f"\n[5/5] Exportando JSON a {JSON_PATH}...")
     
     export_data = {
+        'campos_formativos': [],
+        'ejes_articuladores': [],
         'fases': [],
         'grados': [],
         'lenguajes': [],
         'contenidos_nacionales': [],
         'contenidos_estatales': [],
         'pdas': [],
-        'orientaciones_didacticas': []
+        'orientaciones_didacticas': [],
+        'actividades_libro': [],
+        'material_consulta': []
     }
+    
+    for row in cur.execute("SELECT id, nombre FROM campos_formativos ORDER BY id"):
+        export_data['campos_formativos'].append({'id': row[0], 'nombre': row[1]})
+    
+    for row in cur.execute("SELECT id, nombre, descripcion FROM ejes_articuladores ORDER BY id"):
+        export_data['ejes_articuladores'].append({'id': row[0], 'nombre': row[1], 'descripcion': row[2]})
     
     for row in cur.execute("SELECT id, nombre FROM fases ORDER BY id"):
         export_data['fases'].append({'id': row[0], 'nombre': row[1]})
@@ -457,6 +627,19 @@ def main():
     for row in cur.execute("SELECT id, fase_id, lenguaje_id, descripcion FROM orientaciones_didacticas ORDER BY id"):
         export_data['orientaciones_didacticas'].append({
             'id': row[0], 'fase_id': row[1], 'lenguaje_id': row[2], 'descripcion': row[3]
+        })
+    
+    for row in cur.execute("SELECT id, libro, grado, pagina, titulo_proyecto, lenguaje_artistico, campo_formativo, ejes_articuladores, producto, fase_id FROM actividades_libro ORDER BY id"):
+        export_data['actividades_libro'].append({
+            'id': row[0], 'libro': row[1], 'grado': row[2], 'pagina': row[3],
+            'titulo_proyecto': row[4], 'lenguaje_artistico': row[5],
+            'campo_formativo': row[6], 'ejes_articuladores': row[7],
+            'producto': row[8], 'fase_id': row[9]
+        })
+    
+    for row in cur.execute("SELECT id, lenguaje, recurso, url FROM material_consulta ORDER BY id"):
+        export_data['material_consulta'].append({
+            'id': row[0], 'lenguaje': row[1], 'recurso': row[2], 'url': row[3]
         })
     
     with open(JSON_PATH, 'w', encoding='utf-8') as f:

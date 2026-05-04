@@ -11,6 +11,17 @@ db.pragma('foreign_keys = ON');
 console.log('Initializing database schema...');
 
 db.exec(`
+  CREATE TABLE IF NOT EXISTS campos_formativos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT UNIQUE NOT NULL
+  );
+
+  CREATE TABLE IF NOT EXISTS ejes_articuladores (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT UNIQUE NOT NULL,
+    descripcion TEXT
+  );
+
   CREATE TABLE IF NOT EXISTS fases (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre TEXT UNIQUE NOT NULL
@@ -71,10 +82,21 @@ db.exec(`
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     libro TEXT NOT NULL,
     grado INTEGER,
+    pagina INTEGER,
     titulo_proyecto TEXT,
-    descripcion TEXT,
+    lenguaje_artistico TEXT,
+    campo_formativo TEXT,
+    ejes_articuladores TEXT,
+    producto TEXT,
     fase_id INTEGER,
     FOREIGN KEY (fase_id) REFERENCES fases(id)
+  );
+
+  CREATE TABLE IF NOT EXISTS material_consulta (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    lenguaje TEXT,
+    recurso TEXT NOT NULL,
+    url TEXT
   );
 
   CREATE TABLE IF NOT EXISTS planeaciones (
@@ -102,7 +124,24 @@ db.exec(`
 
 console.log('Inserting seed data...');
 
-// Initialize Catalog Data
+// Initialize Campos Formativos
+const insertCF = db.prepare('INSERT OR IGNORE INTO campos_formativos (nombre) VALUES (?)');
+insertCF.run('Lenguajes');
+insertCF.run('Saberes y Pensamiento Científico');
+insertCF.run('Ética, Naturaleza y Sociedades');
+insertCF.run('De lo Humano y lo Comunitario');
+
+// Initialize Ejes Articuladores
+const insertEje = db.prepare('INSERT OR IGNORE INTO ejes_articuladores (nombre, descripcion) VALUES (?, ?)');
+insertEje.run('Inclusión', 'Reconocimiento de la diversidad y la equidad en el acceso a oportunidades educativas.');
+insertEje.run('Pensamiento Crítico', 'Desarrollo de la capacidad de análisis, reflexión y argumentación.');
+insertEje.run('Interculturalidad Crítica', 'Valoración de la diversidad cultural y el diálogo entre culturas.');
+insertEje.run('Igualdad de Género', 'Promoción de relaciones equitativas entre géneros.');
+insertEje.run('Vida Saludable', 'Fomento de hábitos y prácticas para el bienestar integral.');
+insertEje.run('Apropiación de las Culturas a través de la Lectura y la Escritura', 'Desarrollo de competencias lectoras y escritoras como herramientas culturales.');
+insertEje.run('Artes y Experiencias Estéticas', 'Desarrollo de la sensibilidad, percepción, imaginación y creatividad a través de las artes.');
+
+// Initialize Fases
 const insertFase = db.prepare('INSERT OR IGNORE INTO fases (nombre) VALUES (?)');
 insertFase.run('Fase 3');
 insertFase.run('Fase 4');
