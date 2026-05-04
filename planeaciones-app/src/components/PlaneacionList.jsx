@@ -32,12 +32,18 @@ export default function PlaneacionList({ planeaciones, onDelete }) {
                             <span style={{ fontSize: '11px', color: '#475569' }}>
                                 {new Date(p.fecha_creacion).toLocaleDateString('es-MX', { day: '2-digit', month: 'short', year: 'numeric' })}
                             </span>
-                            {onDelete && (
-                                <button onClick={() => onDelete(p.id)}
-                                    style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', color: '#f87171', borderRadius: '8px', padding: '4px 10px', cursor: 'pointer', fontSize: '11px', fontWeight: '600' }}>
-                                    Eliminar
-                                </button>
-                            )}
+                            <div style={{ display: 'flex', gap: '8px' }}>
+                                <a href={`/api/planeaciones/${p.id}/export`} download
+                                    style={{ background: 'rgba(37,99,235,0.1)', border: '1px solid rgba(37,99,235,0.2)', color: '#60a5fa', borderRadius: '8px', padding: '4px 12px', cursor: 'pointer', fontSize: '11px', fontWeight: '600', textDecoration: 'none' }}>
+                                    📥 Exportar
+                                </a>
+                                {onDelete && (
+                                    <button onClick={() => onDelete(p.id)}
+                                        style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', color: '#f87171', borderRadius: '8px', padding: '4px 10px', cursor: 'pointer', fontSize: '11px', fontWeight: '600' }}>
+                                        Eliminar
+                                    </button>
+                                )}
+                            </div>
                         </div>
                     </div>
 
