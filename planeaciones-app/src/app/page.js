@@ -79,44 +79,70 @@ export default function Home() {
                     </p>
                 </header>
 
-                {/* Primary Action Card */}
-                <section style={{ marginBottom: '100px' }}>
+                {/* Action Cards Grid */}
+                <section style={{ 
+                    display: 'grid', 
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
+                    gap: '32px', 
+                    marginBottom: '100px' 
+                }}>
+                    {/* Card 1: Editor Original */}
                     <Link href="/contenidos/artes" style={{ textDecoration: 'none' }}>
                         <div className="main-card" style={{ 
                             background: 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
                             borderRadius: '32px',
-                            padding: '48px',
+                            padding: '40px',
                             border: '1px solid rgba(255,255,255,0.1)',
+                            height: '100%',
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
                             textAlign: 'center',
                             transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                            cursor: 'pointer',
-                            position: 'relative',
-                            overflow: 'hidden'
+                            cursor: 'pointer'
                         }}>
-                            <div style={{ fontSize: '48px', marginBottom: '24px' }}>📖</div>
-                            <h2 style={{ fontSize: '32px', fontWeight: 'bold', color: '#fff', marginBottom: '12px' }}>Editor del Programa Analítico</h2>
-                            <p style={{ fontSize: '18px', color: '#94a3b8', maxWidth: '500px', marginBottom: '32px' }}>
-                                Consulta el documento íntegro, realiza ediciones en tiempo real y exporta el plan oficial de Artes.
+                            <div style={{ fontSize: '40px', marginBottom: '20px' }}>📖</div>
+                            <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#fff', marginBottom: '12px' }}>Programa Analítico</h2>
+                            <p style={{ fontSize: '15px', color: '#94a3b8', marginBottom: '32px', flexGrow: 1 }}>
+                                Editor íntegro del documento oficial de Artes (Fases 3, 4 y 5).
                             </p>
-                            <div style={{ 
-                                background: '#2563eb', 
-                                color: 'white', 
-                                padding: '16px 40px', 
-                                borderRadius: '16px', 
-                                fontWeight: '900', 
-                                fontSize: '14px', 
-                                letterSpacing: '1px',
-                                boxShadow: '0 20px 40px rgba(37, 99, 235, 0.3)',
-                                transition: 'all 0.3s'
-                            }}>
-                                COMENZAR EDICIÓN →
+                            <div style={{ background: '#2563eb', color: 'white', padding: '12px 32px', borderRadius: '12px', fontWeight: 'bold', fontSize: '13px' }}>
+                                ABRIR EDITOR →
+                            </div>
+                        </div>
+                    </Link>
+
+                    {/* Card 2: Tablas de Contenidos */}
+                    <Link href="/contenidos/tablas" style={{ textDecoration: 'none' }}>
+                        <div className="main-card-purple" style={{ 
+                            background: 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+                            borderRadius: '32px',
+                            padding: '40px',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            height: '100%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                            cursor: 'pointer'
+                        }}>
+                            <div style={{ fontSize: '40px', marginBottom: '20px' }}>📊</div>
+                            <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#fff', marginBottom: '12px' }}>Tablas de Contenidos</h2>
+                            <p style={{ fontSize: '15px', color: '#94a3b8', marginBottom: '32px', flexGrow: 1 }}>
+                                Gestión exclusiva de tablas y dosificación del programa analítico.
+                            </p>
+                            <div style={{ background: '#7c3aed', color: 'white', padding: '12px 32px', borderRadius: '12px', fontWeight: 'bold', fontSize: '13px' }}>
+                                ABRIR TABLAS →
                             </div>
                         </div>
                     </Link>
                 </section>
+
+                <style jsx global>{`
+                    .main-card:hover { transform: translateY(-8px); border-color: #2563eb !important; background: rgba(37,99,235,0.05) !important; }
+                    .main-card-purple:hover { transform: translateY(-8px); border-color: #7c3aed !important; background: rgba(124,58,237,0.05) !important; }
+                `}</style>
 
                 {/* Secondary Section: Planeaciones */}
                 <section>
