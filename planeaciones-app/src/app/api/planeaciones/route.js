@@ -68,7 +68,11 @@ export async function POST(request) {
 
         return NextResponse.json({ id: result.lastInsertRowid, success: true }, { status: 201 });
     } catch (error) {
-        console.error('Database error creating planeacion:', error);
-        return NextResponse.json({ error: 'Failed to create planeacion' }, { status: 500 });
+        console.error('DETAILED DATABASE ERROR:', error);
+        return NextResponse.json({ 
+            error: 'Failed to create planeacion', 
+            details: error.message,
+            stack: error.stack
+        }, { status: 500 });
     }
 }
