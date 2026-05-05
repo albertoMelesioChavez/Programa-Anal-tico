@@ -295,9 +295,11 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                     to { transform: translate(-50%, 0); opacity: 1; }
                 }
                 @media (max-width: 640px) {
-                    .document-paper { padding: 40px 20px !important; }
+                    .document-container { margin: 0 !important; border-radius: 0 !important; max-width: 100% !important; border: none !important; }
+                    .document-paper { padding: 20px 15px !important; }
                     table tr { display: flex; flex-direction: column; }
-                    table td { width: 100% !important; border: none !important; }
+                    table td { width: 100% !important; border: none !important; padding: 10px 0 !important; }
+                    .sticky-action-bar { bottom: 10px !important; padding: 10px 20px !important; gap: 10px !important; width: 90% !important; }
                 }
             `}</style>
         </div>

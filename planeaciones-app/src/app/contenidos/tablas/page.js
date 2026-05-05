@@ -204,7 +204,7 @@ export default function ContenidosTablasPage() {
                     <button onClick={() => setIsEditMode(!isEditMode)} style={{ background: isEditMode ? '#0f172a' : '#f1f5f9', color: isEditMode ? 'white' : '#1e293b', border: 'none', padding: '10px 24px', borderRadius: '12px', fontSize: '11px', fontWeight: '900', cursor: 'pointer', transition: 'all 0.2s' }}>{isEditMode ? 'GUARDAR Y CERRAR' : 'EDITAR CONTENIDO'}</button>
                 </header>
 
-                <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px 100px 40px', position: 'relative' }}>
+                <div className="content-wrapper" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px 100px 40px', position: 'relative' }}>
                     {pages.map((p, idx) => (
                         <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '20px 0', borderBottom: '1px solid #e2e8f0', opacity: currentPageIdx === idx ? 1 : 0.6, transition: 'opacity 0.3s' }}>
                             <h2 style={{ fontSize: '10px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '4px' }}>Página {idx + 1}</h2>
@@ -275,6 +275,14 @@ export default function ContenidosTablasPage() {
                 .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
                 .ProseMirror p { font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem; color: #475569; }
                 .ProseMirror h1 { font-size: 3rem; font-weight: 900; color: #0f172a; margin-top: 3rem; margin-bottom: 1.5rem; }
+            `}</style>
+            <style jsx global>{`
+                @media (max-width: 640px) {
+                    .main-content { padding: 0 !important; }
+                    .content-wrapper { padding: 20px 10px 100px 10px !important; maxWidth: 100% !important; }
+                    .editor-header { padding: 12px 10px !important; }
+                    .minimap-container { display: none !important; }
+                }
             `}</style>
         </div>
     );

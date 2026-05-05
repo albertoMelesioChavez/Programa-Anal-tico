@@ -236,7 +236,7 @@ function ContenidosArtesContent() {
                     </div>
                 </header>
 
-                <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px 100px 40px', position: 'relative' }}>
+                <div className="content-wrapper" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px 100px 40px', position: 'relative' }}>
                     {pages.map((p, idx) => (
                         <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '20px 0', borderBottom: `1px solid ${theme.border}`, opacity: currentPageIdx === idx ? 1 : 0.6, transition: 'opacity 0.3s' }}>
                             <h2 style={{ fontSize: '10px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '4px' }}>Página {idx + 1}</h2>
@@ -305,6 +305,14 @@ function ContenidosArtesContent() {
                 .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
                 .custom-scrollbar::-webkit-scrollbar-thumb { background: ${theme.border}; border-radius: 10px; }
                 .ProseMirror p { font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem; color: ${darkMode ? '#9ca3af' : '#4b5563'}; }
+            `}</style>
+            <style jsx global>{`
+                @media (max-width: 640px) {
+                    .main-content { padding: 0 !important; }
+                    .content-wrapper { padding: 20px 10px 100px 10px !important; maxWidth: 100% !important; }
+                    .editor-header { padding: 12px 10px !important; }
+                    .desktop-minimap { display: none !important; }
+                }
             `}</style>
         </div>
     );
