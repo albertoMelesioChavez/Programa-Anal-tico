@@ -45,138 +45,101 @@ export default function Home() {
     return (
         <main style={{ 
             minHeight: '100vh', 
-            background: '#050505', 
-            color: '#fff', 
-            fontFamily: '"Inter", system-ui, sans-serif',
+            background: 'var(--bg-color)', 
+            color: 'var(--text-main)', 
+            fontFamily: '"Outfit", sans-serif',
             overflowX: 'hidden',
             position: 'relative'
         }}>
-            {/* Background Glows */}
-            <div style={{ position: 'fixed', top: '-10%', left: '-10%', width: '40%', height: '40%', background: 'radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }}></div>
-            <div style={{ position: 'fixed', bottom: '-10%', right: '-10%', width: '50%', height: '50%', background: 'radial-gradient(circle, rgba(147, 51, 234, 0.08) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }}></div>
+            {/* Background Decor */}
+            <div style={{ position: 'fixed', top: '-5%', left: '-5%', width: '30%', height: '30%', background: 'radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }}></div>
+            <div style={{ position: 'fixed', bottom: '-5%', right: '-5%', width: '40%', height: '40%', background: 'radial-gradient(circle, rgba(124, 58, 237, 0.05) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }}></div>
 
-            <div style={{ position: 'relative', zIndex: 1, maxWidth: '1100px', margin: '0 auto', padding: '40px 24px' }}>
+            <div style={{ position: 'relative', zIndex: 1, maxWidth: '1100px', margin: '0 auto', padding: '60px 24px' }}>
                 
                 {/* Hero Header */}
-                <header style={{ textAlign: 'center', marginBottom: '40px' }}>
-                    <div style={{ display: 'inline-block', padding: '6px 16px', borderRadius: '100px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', fontSize: '12px', fontWeight: 'bold', color: '#60a5fa', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '24px' }}>
+                <header style={{ textAlign: 'center', marginBottom: '60px' }}>
+                    <div style={{ display: 'inline-block', padding: '8px 20px', borderRadius: '100px', background: '#eff6ff', border: '1px solid #dbeafe', fontSize: '11px', fontWeight: '800', color: '#2563eb', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '24px' }}>
                         NEM 2025 • Sinaloa
                     </div>
                     <h1 style={{ 
-                        fontSize: 'clamp(28px, 8vw, 56px)', 
+                        fontSize: 'clamp(32px, 8vw, 64px)', 
                         fontWeight: '900', 
-                        lineHeight: '1.1', 
-                        marginBottom: '16px', 
-                        background: 'linear-gradient(135deg, #fff 0%, #94a3b8 100%)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        letterSpacing: '-1.5px'
+                        lineHeight: '1', 
+                        marginBottom: '20px', 
+                        color: '#0f172a',
+                        letterSpacing: '-2px'
                     }}>
-                        Programa Analítico <br/> de Artes
+                        Programa Analítico <br/> <span style={{ color: '#2563eb' }}>de Artes</span>
                     </h1>
-                    <p style={{ fontSize: 'clamp(14px, 4vw, 18px)', color: '#94a3b8', maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
-                        Plataforma inteligente para la gestión, edición y creación de planeaciones analíticas de primaria.
+                    <p style={{ fontSize: 'clamp(15px, 4vw, 19px)', color: '#64748b', maxWidth: '650px', margin: '0 auto', lineHeight: '1.6', fontWeight: '500' }}>
+                        Plataforma inteligente para la gestión y creación de planeaciones analíticas bajo el nuevo modelo educativo.
                     </p>
                 </header>
 
-                {/* Action Cards Grid */}
+                {/* Main Actions Grid */}
                 <section style={{ 
                     display: 'grid', 
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
                     gap: '24px', 
-                    marginBottom: '40px' 
+                    marginBottom: '60px' 
                 }}>
-                    {/* Card 1: Editor Original */}
+                    {/* Card 1 */}
                     <Link href="/contenidos/artes" style={{ textDecoration: 'none' }}>
-                        <div className="main-card" style={{ 
-                            background: 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
-                            borderRadius: '32px',
-                            padding: '24px 32px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            height: '100%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            textAlign: 'center',
-                            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                            cursor: 'pointer'
-                        }}>
-                            <div style={{ fontSize: '40px', marginBottom: '20px' }}>📖</div>
-                            <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#fff', marginBottom: '12px' }}>Programa Analítico</h2>
-                            <p style={{ fontSize: '15px', color: '#94a3b8', marginBottom: '32px', flexGrow: 1 }}>
-                                Editor íntegro del documento oficial de Artes (Fases 3, 4 y 5).
+                        <div className="main-card-light">
+                            <div style={{ fontSize: '48px', marginBottom: '24px' }}>📘</div>
+                            <h2 style={{ fontSize: '24px', fontWeight: '900', color: '#0f172a', marginBottom: '12px' }}>Programa Analítico</h2>
+                            <p style={{ fontSize: '15px', color: '#64748b', marginBottom: '32px', lineHeight: '1.6' }}>
+                                Editor completo del documento oficial de Artes para Fases 3, 4 y 5.
                             </p>
-                            <div style={{ background: '#2563eb', color: 'white', padding: '12px 32px', borderRadius: '12px', fontWeight: 'bold', fontSize: '13px' }}>
+                            <div className="btn-primary">
                                 ABRIR EDITOR →
                             </div>
                         </div>
                     </Link>
 
-                    {/* Card 2: Tablas de Contenidos */}
+                    {/* Card 2 */}
                     <Link href="/contenidos/tablas" style={{ textDecoration: 'none' }}>
-                        <div className="main-card-purple" style={{ 
-                            background: 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
-                            borderRadius: '32px',
-                            padding: '24px 32px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            height: '100%',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            textAlign: 'center',
-                            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                            cursor: 'pointer'
-                        }}>
-                            <div style={{ fontSize: '40px', marginBottom: '20px' }}>📊</div>
-                            <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#fff', marginBottom: '12px' }}>Tablas de Contenidos</h2>
-                            <p style={{ fontSize: '15px', color: '#94a3b8', marginBottom: '32px', flexGrow: 1 }}>
-                                Gestión exclusiva de tablas y dosificación del programa analítico.
+                        <div className="main-card-light card-purple">
+                            <div style={{ fontSize: '48px', marginBottom: '24px' }}>📊</div>
+                            <h2 style={{ fontSize: '24px', fontWeight: '900', color: '#0f172a', marginBottom: '12px' }}>Tablas de Contenidos</h2>
+                            <p style={{ fontSize: '15px', color: '#64748b', marginBottom: '32px', lineHeight: '1.6' }}>
+                                Dosificación y gestión exclusiva de tablas del programa analítico.
                             </p>
-                            <div style={{ background: '#7c3aed', color: 'white', padding: '12px 32px', borderRadius: '12px', fontWeight: 'bold', fontSize: '13px' }}>
-                                ABRIR TABLAS →
+                            <div className="btn-purple">
+                                VER TABLAS →
                             </div>
                         </div>
                     </Link>
                 </section>
 
-                {/* Secondary Section: Planeaciones */}
-                <section id="planeaciones-section" style={{ paddingBottom: '100px' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '24px' }} className="mobile-header">
+                {/* My Planning Section */}
+                <section id="planeaciones-section" style={{ paddingBottom: '120px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '32px' }}>
                         <div>
-                            <h3 style={{ fontSize: 'clamp(22px, 5vw, 28px)', fontWeight: '900', color: '#fff', marginBottom: '4px', letterSpacing: '-1px' }}>Mis Planeaciones</h3>
-                            <p style={{ color: '#64748b', fontSize: '14px' }}>Historial de proyectos y borradores personales.</p>
+                            <h3 style={{ fontSize: '32px', fontWeight: '900', color: '#0f172a', marginBottom: '4px', letterSpacing: '-1px' }}>Mis Planeaciones</h3>
+                            <p style={{ color: '#64748b', fontSize: '15px', fontWeight: '500' }}>Historial y borradores personalizados.</p>
                         </div>
                         {!showForm && (
-                            <button 
-                                onClick={() => setShowForm(true)}
-                                style={{ 
-                                    background: 'rgba(255,255,255,0.05)', 
-                                    color: '#fff', 
-                                    border: '1px solid rgba(255,255,255,0.1)', 
-                                    padding: '12px 24px', 
-                                    borderRadius: '12px', 
-                                    fontWeight: 'bold', 
-                                    cursor: 'pointer',
-                                    transition: 'all 0.2s'
-                                }}
-                            >
-                                + Nueva
+                            <button onClick={() => setShowForm(true)} className="btn-add">
+                                + Crear Nueva
                             </button>
                         )}
                     </div>
 
                     <div style={{ 
-                        background: 'rgba(255,255,255,0.02)', 
-                        borderRadius: '24px', 
-                        padding: '32px', 
-                        border: '1px solid rgba(255,255,255,0.05)',
-                        minHeight: '300px',
+                        background: '#fff', 
+                        borderRadius: '32px', 
+                        padding: '40px', 
+                        border: '1px solid #e2e8f0',
+                        boxShadow: '0 20px 50px rgba(0,0,0,0.03)',
+                        minHeight: '400px',
                         position: 'relative'
                     }}>
                         {showForm ? (
                             <div>
-                                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '20px' }}>
-                                    <button onClick={() => setShowForm(false)} style={{ background: 'transparent', border: 'none', color: '#94a3b8', cursor: 'pointer', fontWeight: 'bold' }}>Cancelar</button>
+                                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '24px' }}>
+                                    <button onClick={() => setShowForm(false)} style={{ background: 'transparent', border: 'none', color: '#ef4444', cursor: 'pointer', fontWeight: '800', fontSize: '14px' }}>CERRAR FORMULARIO</button>
                                 </div>
                                 <PlaneacionForm onSaved={handleSaved} onCancel={() => setShowForm(false)} />
                             </div>
@@ -184,7 +147,7 @@ export default function Home() {
                             <>
                                 {loading ? (
                                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
-                                        <div className="loader"></div>
+                                        <div className="loader-blue"></div>
                                     </div>
                                 ) : (
                                     <PlaneacionList planeaciones={planeaciones} onDelete={handleDelete} />
@@ -194,45 +157,75 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* Footer Info */}
-                <footer style={{ marginTop: '100px', textAlign: 'center', paddingBottom: '40px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '40px' }}>
-                    <div style={{ fontSize: '14px', color: '#475569', fontWeight: '500' }}>
-                        Diseñado por <span style={{ color: '#94a3b8' }}>José Alberto Melesio Chávez</span>
-                    </div>
+                {/* Footer */}
+                <footer style={{ textAlign: 'center', padding: '60px 0', borderTop: '1px solid #e2e8f0' }}>
+                    <p style={{ fontSize: '14px', color: '#94a3b8', fontWeight: '600', letterSpacing: '0.5px' }}>
+                        PLATAFORMA DISEÑADA POR <span style={{ color: '#475569' }}>JOSÉ ALBERTO MELESIO CHÁVEZ</span>
+                    </p>
                 </footer>
             </div>
 
             <style jsx global>{`
-                @media (min-width: 640px) {
-                    .mobile-header {
-                        flex-direction: row !important;
-                        justify-content: space-between !important;
-                        align-items: center !important;
-                    }
+                .main-card-light {
+                    background: #fff;
+                    border-radius: 40px;
+                    padding: 48px 40px;
+                    border: 1px solid #e2e8f0;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
                 }
-                .main-card:hover {
-                    transform: translateY(-8px);
-                    border-color: rgba(37, 99, 235, 0.4) !important;
-                    background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%) !important;
-                    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+                .main-card-light:hover {
+                    transform: translateY(-12px);
+                    border-color: #2563eb;
+                    box-shadow: 0 40px 80px rgba(37, 99, 235, 0.1);
                 }
-                .main-card-purple:hover {
-                    transform: translateY(-8px);
-                    border-color: #7c3aed !important;
-                    background: rgba(124,58,237,0.05) !important;
-                    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+                .card-purple:hover {
+                    border-color: #7c3aed;
+                    box-shadow: 0 40px 80px rgba(124, 58, 237, 0.1);
                 }
-                .loader {
-                    width: 32px;
-                    height: 32px;
-                    border: 3px solid rgba(37, 99, 235, 0.2);
+                .btn-primary {
+                    background: #2563eb;
+                    color: #fff;
+                    padding: 14px 40px;
+                    border-radius: 16px;
+                    font-weight: 800;
+                    font-size: 13px;
+                    letter-spacing: 0.5px;
+                }
+                .btn-purple {
+                    background: #7c3aed;
+                    color: #fff;
+                    padding: 14px 40px;
+                    border-radius: 16px;
+                    font-weight: 800;
+                    font-size: 13px;
+                    letter-spacing: 0.5px;
+                }
+                .btn-add {
+                    background: #0f172a;
+                    color: #fff;
+                    padding: 14px 32px;
+                    border-radius: 16px;
+                    font-weight: 800;
+                    font-size: 14px;
+                    border: none;
+                    cursor: pointer;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                }
+                .loader-blue {
+                    width: 40px;
+                    height: 40px;
+                    border: 4px solid #f1f5f9;
                     border-top-color: #2563eb;
                     border-radius: 50%;
                     animation: spin 1s linear infinite;
                 }
-                @keyframes spin {
-                    to { transform: rotate(360deg); }
-                }
+                @keyframes spin { to { transform: rotate(360deg); } }
             `}</style>
         </main>
     );
