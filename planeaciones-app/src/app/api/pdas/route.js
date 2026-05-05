@@ -1,7 +1,6 @@
 import { getDb } from '@/lib/db';
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import data from '../../../../../../database/pdas.json';
 
 export async function GET(request) {
     const { searchParams } = new URL(request.url);
@@ -12,11 +11,6 @@ export async function GET(request) {
         const pdas = db.prepare('SELECT * FROM pdas WHERE contenido_id = ?').all(contenido_id);
         return NextResponse.json(pdas);
     } catch (error) {
-        try {
-            const data = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'database/pdas.json'), 'utf8'));
-            return NextResponse.json(data.filter(p => String(p.contenido_id) === String(contenido_id)));
-        } catch (e) {
-            return NextResponse.json([]);
-        }
+        return NextResponse.json(data.filter(p => String(p.contenido_id) === String(contenido_id)));
     }
 }
