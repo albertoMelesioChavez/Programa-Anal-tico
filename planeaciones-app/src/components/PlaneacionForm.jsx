@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 export default function PlaneacionForm({ onSave, onCancel }) {
     const [loading, setLoading] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode] = useState(false); // Forced Light Mode
     const [catalogs, setCatalogs] = useState({ fases: [], grados: [], lenguajes: [], ejes_articuladores: [] });
     const [contenidos, setContenidos] = useState({ nacionales: [], estatales: [] });
     const [pdas, setPdas] = useState([]);
@@ -99,13 +99,9 @@ export default function PlaneacionForm({ onSave, onCancel }) {
             <div style={{ maxWidth: '900px', margin: '0 auto', background: theme.docBg, color: theme.text, borderRadius: '4px', boxShadow: '0 20px 50px rgba(0,0,0,0.1)', overflow: 'hidden' }} className="document-container">
                 
                 {/* Toolbar */}
-                <div style={{ padding: '16px 40px', background: darkMode ? '#0f172a' : '#f8fafc', borderBottom: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{ padding: '16px 40px', background: '#f8fafc', borderBottom: `1px solid #e2e8f0`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                        {/* Dark Mode Toggle */}
-                        <button onClick={() => setDarkMode(!darkMode)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', fontSize: '20px', display: 'flex', alignItems: 'center' }}>
-                            {darkMode ? '☀️' : '🌙'}
-                        </button>
-                        <span style={{ fontWeight: '800', fontSize: '11px', color: theme.subtext, textTransform: 'uppercase', letterSpacing: '1px' }}>Editor de Planeación</span>
+                        <span style={{ fontWeight: '900', fontSize: '11px', color: '#64748b', textTransform: 'uppercase', letterSpacing: '1px' }}>Editor de Planeación</span>
                     </div>
                     <div style={{ display: 'flex', gap: '12px' }}>
                         <button onClick={onCancel} style={{ padding: '8px 20px', borderRadius: '6px', background: 'transparent', border: `1px solid ${theme.border}`, color: theme.subtext, fontSize: '13px', fontWeight: '600', cursor: 'pointer' }}>Cerrar</button>

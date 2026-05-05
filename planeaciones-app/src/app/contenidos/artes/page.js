@@ -15,7 +15,7 @@ function ContenidosArtesContent() {
     const [loading, setLoading] = useState(true);
     const [isSaving, setIsSaving] = useState(false);
     const [isEditMode, setIsEditMode] = useState(false);
-    const [darkMode, setDarkMode] = useState(false); // New Dark Mode state
+    const [darkMode] = useState(false); // Forced Light Mode
     
     const [viewMode, setViewMode] = useState(searchParams.get('view') || 'digital');
     const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -210,9 +210,9 @@ function ContenidosArtesContent() {
                         const isMainTitle = idx % 3 === 0;
                         return (
                             <button key={idx} onClick={() => scrollToPage(idx)} 
-                                style={{ width: '100%', textAlign: 'left', padding: '8px 0', background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'baseline', gap: '4px', color: currentPageIdx === idx ? theme.text : theme.subtext, transition: 'color 0.2s', fontSize: isMainTitle ? '13px' : '12px', fontWeight: isMainTitle ? 'bold' : 'normal', opacity: currentPageIdx === idx ? 1 : 0.7 }}>
+                                style={{ width: '100%', textAlign: 'left', padding: '8px 0', background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'baseline', gap: '4px', color: currentPageIdx === idx ? '#2563eb' : '#64748b', transition: 'color 0.2s', fontSize: isMainTitle ? '13px' : '12px', fontWeight: isMainTitle ? 'bold' : 'normal', opacity: currentPageIdx === idx ? 1 : 0.7 }}>
                                 <span style={{ flexShrink: 0, maxWidth: '85%' }}>{displayTitle}</span>
-                                <div style={{ flexGrow: 1, borderBottom: `1px dotted ${theme.border}`, marginBottom: '4px', margin: '0 4px' }} />
+                                <div style={{ flexGrow: 1, borderBottom: `1px dotted #e2e8f0`, marginBottom: '4px', margin: '0 4px' }} />
                                 <span style={{ flexShrink: 0, fontFamily: 'monospace', fontWeight: 'bold' }}>{idx + 1}</span>
                             </button>
                         );
@@ -223,13 +223,10 @@ function ContenidosArtesContent() {
             {/* MAIN CONTENT AREA */}
             <main ref={mainRef} onScroll={handleScroll} style={{ flex: 1, height: '100%', overflowY: 'auto', position: 'relative' }} className="custom-scrollbar main-content">
                 {/* HEADER */}
-                <header style={{ position: 'sticky', top: 0, zIndex: 10, background: theme.header, backdropFilter: 'blur(10px)', borderBottom: `1px solid ${theme.border}`, padding: '12px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }} className="editor-header">
+                <header style={{ position: 'sticky', top: 0, zIndex: 10, background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)', borderBottom: `1px solid #e2e8f0`, padding: '12px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }} className="editor-header">
                     <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                        <button onClick={() => setDarkMode(!darkMode)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', fontSize: '20px', display: 'flex', alignItems: 'center' }}>
-                            {darkMode ? '☀️' : '🌙'}
-                        </button>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                            <span style={{ padding: '4px 8px', background: isEditMode ? 'rgba(37,99,235,0.1)' : 'rgba(128,128,128,0.1)', color: isEditMode ? '#3b82f6' : theme.subtext, fontSize: '10px', fontWeight: 'bold', borderRadius: '4px' }}>{isEditMode ? 'EDICIÓN' : 'LECTURA'}</span>
+                            <span style={{ padding: '4px 8px', background: 'rgba(37,99,235,0.1)', color: '#2563eb', fontSize: '10px', fontWeight: '900', borderRadius: '4px', textTransform: 'uppercase' }}>{isEditMode ? 'MODO EDICIÓN' : 'MODO LECTURA'}</span>
                         </div>
                     </div>
 
