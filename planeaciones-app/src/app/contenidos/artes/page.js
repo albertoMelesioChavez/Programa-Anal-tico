@@ -59,7 +59,18 @@ function ContenidosArtesContent() {
         const fetchContent = async () => {
             try {
                 const res = await fetch('/api/documentos/artes');
+                if (!res.ok) {
+                    const errData = await res.json();
+                    throw new Error(errData.details || errData.error || 'Fallo en la respuesta del servidor');
+                }
                 const text = await res.text();
+                
+                // Si el texto parece JSON de error (a veces pasa con 200 pero cuerpo de error)
+                if (text.trim().startsWith('{')) {
+                    const possibleError = JSON.parse(text);
+                    if (possibleError.error) throw new Error(possibleError.error);
+                }
+
                 const splitPages = text.split(/<!-- PAGE_START \d+ -->/).filter(p => p.trim());
                 const htmlPages = await Promise.all(splitPages.map(async (p) => {
                     const rawContent = p.split('<!-- PAGE_END -->')[0];
@@ -71,6 +82,7 @@ function ContenidosArtesContent() {
                 pageRefs.current = htmlPages.map(() => createRef());
             } catch (error) {
                 console.error('Error loading content:', error);
+                alert('Atención: No se pudo cargar el contenido. ' + error.message);
             } finally {
                 setLoading(false);
             }
