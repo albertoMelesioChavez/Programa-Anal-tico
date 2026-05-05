@@ -226,12 +226,11 @@ export default function PlaneacionForm({ onSave, onCancel }) {
 
             </div>
 
-            {/* Floating Action Bar */}
+            {/* Sticky Action Bar (Inside the planning area) */}
             <div style={{
-                position: 'fixed',
+                position: 'sticky',
                 bottom: '40px',
-                left: '50%',
-                transform: 'translateX(-50%)',
+                marginTop: '40px',
                 background: '#fff',
                 padding: '12px 32px',
                 borderRadius: '100px',
@@ -239,9 +238,11 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                 border: '1px solid #e2e8f0',
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: '24px',
                 zIndex: 1000,
-                animation: 'floatUp 0.5s cubic-bezier(0.23, 1, 0.32, 1)'
+                width: 'fit-content',
+                margin: '40px auto'
             }}>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <span style={{ fontSize: '9px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>Documento</span>

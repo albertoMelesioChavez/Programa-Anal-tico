@@ -204,62 +204,60 @@ export default function ContenidosTablasPage() {
                     <button onClick={() => setIsEditMode(!isEditMode)} style={{ background: isEditMode ? '#0f172a' : '#f1f5f9', color: isEditMode ? 'white' : '#1e293b', border: 'none', padding: '10px 24px', borderRadius: '12px', fontSize: '11px', fontWeight: '900', cursor: 'pointer', transition: 'all 0.2s' }}>{isEditMode ? 'GUARDAR Y CERRAR' : 'EDITAR CONTENIDO'}</button>
                 </header>
 
-                <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 40px 200px 40px' }}>
+                <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px 100px 40px', position: 'relative' }}>
                     {pages.map((p, idx) => (
-                        <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '100px 0', borderBottom: '1px solid #f1f5f9', opacity: currentPageIdx === idx ? 1 : 0.3, transition: 'opacity 0.5s' }}>
-                            <div style={{ marginBottom: '48px' }}>
-                                <h2 style={{ fontSize: '11px', fontWeight: '900', color: '#2563eb', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '12px' }}>SECCIÓN {idx + 1}</h2>
-                                <h1 style={{ fontSize: '36px', fontWeight: '900', color: '#0f172a', letterSpacing: '-1.5px', margin: 0, lineHeight: '1.1' }}>{p.title}</h1>
-                            </div>
+                        <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '20px 0', borderBottom: '1px solid #e2e8f0', opacity: currentPageIdx === idx ? 1 : 0.6, transition: 'opacity 0.3s' }}>
+                            <h2 style={{ fontSize: '10px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '4px' }}>Página {idx + 1}</h2>
+                            <h1 style={{ fontSize: '28px', fontWeight: '900', color: '#0f172a', letterSpacing: '-1px', margin: '0 0 16px 0' }}>{p.title}</h1>
                             <RichTextEditor key={`${idx}-${isEditMode}`} initialContent={p.cleanHtml} onSave={(newHtml) => handleSave(idx, newHtml)} isSaving={isSaving} editable={isEditMode} darkMode={false} />
                         </div>
                     ))}
-                </div>
-            </main>
 
-            {/* Global Floating Save Button (Only in Edit Mode) */}
-            {isEditMode && (
-                <div style={{
-                    position: 'fixed',
-                    bottom: '40px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    background: '#fff',
-                    padding: '12px 24px',
-                    borderRadius: '100px',
-                    boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
-                    border: '1px solid #e2e8f0',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '20px',
-                    zIndex: 1000,
-                    animation: 'floatUp 0.3s cubic-bezier(0.23, 1, 0.32, 1)'
-                }}>
-                    <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <span style={{ fontSize: '9px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>PÁGINA ACTUAL</span>
-                        <span style={{ fontSize: '12px', fontWeight: '800', color: '#0f172a' }}>Sección {currentPageIdx + 1}</span>
-                    </div>
-                    <div style={{ width: '1px', height: '24px', background: '#e2e8f0' }} />
-                    <button 
-                        onClick={handleExport}
-                        style={{ 
-                            background: '#2563eb', 
-                            color: '#fff', 
-                            padding: '10px 24px', 
-                            borderRadius: '100px', 
-                            border: 'none', 
-                            fontSize: '12px', 
-                            fontWeight: '900', 
-                            cursor: 'pointer',
+                    {/* Global Sticky Save Button (Only in Edit Mode) */}
+                    {isEditMode && (
+                        <div style={{
+                            position: 'sticky',
+                            bottom: '40px',
+                            marginTop: '60px',
+                            background: '#fff',
+                            padding: '12px 24px',
+                            borderRadius: '100px',
+                            boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                            border: '1px solid #e2e8f0',
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '8px'
-                        }}
-                    >
-                        💾 GUARDAR TABLAS
-                    </button>
+                            gap: '20px',
+                            zIndex: 1000,
+                            width: 'fit-content',
+                            margin: '60px auto'
+                        }}>
+                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <span style={{ fontSize: '9px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>PÁGINA ACTUAL</span>
+                                <span style={{ fontSize: '12px', fontWeight: '800', color: '#0f172a' }}>Sección {currentPageIdx + 1}</span>
+                            </div>
+                            <div style={{ width: '1px', height: '24px', background: '#e2e8f0' }} />
+                            <button 
+                                onClick={handleExport}
+                                style={{ 
+                                    background: '#2563eb', 
+                                    color: '#fff', 
+                                    padding: '10px 24px', 
+                                    borderRadius: '100px', 
+                                    border: 'none', 
+                                    fontSize: '12px', 
+                                    fontWeight: '900', 
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px'
+                                }}
+                            >
+                                💾 GUARDAR TABLAS
+                            </button>
+                        </div>
+                    )}
                 </div>
-            )}
+            </main>
 
             {/* MINIMAP */}
             <aside style={{ width: '64px', height: '100%', background: '#f8fafc', borderLeft: '1px solid #e2e8f0', position: 'relative', display: 'flex', justifyContent: 'center' }}>

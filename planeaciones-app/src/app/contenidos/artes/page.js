@@ -236,7 +236,7 @@ function ContenidosArtesContent() {
                     </div>
                 </header>
 
-                <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px 200px 40px' }}>
+                <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px 100px 40px', position: 'relative' }}>
                     {pages.map((p, idx) => (
                         <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '20px 0', borderBottom: `1px solid ${theme.border}`, opacity: currentPageIdx === idx ? 1 : 0.6, transition: 'opacity 0.3s' }}>
                             <h2 style={{ fontSize: '10px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '4px' }}>Página {idx + 1}</h2>
@@ -244,57 +244,51 @@ function ContenidosArtesContent() {
                             <RichTextEditor key={`${idx}-${isEditMode}-${darkMode}`} initialContent={p.cleanHtml} onSave={(newHtml) => handleSave(idx, newHtml)} isSaving={isSaving} editable={isEditMode} darkMode={darkMode} />
                         </div>
                     ))}
-                </div>
-            </main>
 
-            {/* Global Floating Save Button (Only in Edit Mode) */}
-            {isEditMode && (
-                <div style={{
-                    position: 'fixed',
-                    bottom: '40px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    background: '#fff',
-                    padding: '12px 24px',
-                    borderRadius: '100px',
-                    boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
-                    border: '1px solid #e2e8f0',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '20px',
-                    zIndex: 1000,
-                    animation: 'floatUp 0.3s cubic-bezier(0.23, 1, 0.32, 1)'
-                }}>
-                    <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <span style={{ fontSize: '9px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>PÁGINA ACTUAL</span>
-                        <span style={{ fontSize: '12px', fontWeight: '800', color: '#0f172a' }}>Sección {currentPageIdx + 1}</span>
-                    </div>
-                    <div style={{ width: '1px', height: '24px', background: '#e2e8f0' }} />
-                    <button 
-                        onClick={() => {
-                            // Find the current editor content and save it
-                            // Note: In a real app we'd trigger a ref or use a global state
-                            // For now, we rely on the individual save buttons or a global save all
-                            handleExport(); // As a shortcut or we could implement saveAll
-                        }}
-                        style={{ 
-                            background: '#2563eb', 
-                            color: '#fff', 
-                            padding: '10px 24px', 
-                            borderRadius: '100px', 
-                            border: 'none', 
-                            fontSize: '12px', 
-                            fontWeight: '900', 
-                            cursor: 'pointer',
+                    {/* Global Sticky Save Button (Only in Edit Mode) */}
+                    {isEditMode && (
+                        <div style={{
+                            position: 'sticky',
+                            bottom: '40px',
+                            marginTop: '60px',
+                            background: '#fff',
+                            padding: '12px 24px',
+                            borderRadius: '100px',
+                            boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                            border: '1px solid #e2e8f0',
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '8px'
-                        }}
-                    >
-                        💾 GUARDAR TODO
-                    </button>
+                            gap: '20px',
+                            zIndex: 1000,
+                            width: 'fit-content',
+                            margin: '60px auto'
+                        }}>
+                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <span style={{ fontSize: '9px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>PÁGINA ACTUAL</span>
+                                <span style={{ fontSize: '12px', fontWeight: '800', color: '#0f172a' }}>Sección {currentPageIdx + 1}</span>
+                            </div>
+                            <div style={{ width: '1px', height: '24px', background: '#e2e8f0' }} />
+                            <button 
+                                onClick={handleExport}
+                                style={{ 
+                                    background: '#2563eb', 
+                                    color: '#fff', 
+                                    padding: '10px 24px', 
+                                    borderRadius: '100px', 
+                                    border: 'none', 
+                                    fontSize: '12px', 
+                                    fontWeight: '900', 
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px'
+                                }}
+                            >
+                                💾 GUARDAR TODO
+                            </button>
+                        </div>
+                    )}
                 </div>
-            )}
 
             {/* RIGHT MINIMAP */}
             <aside style={{ width: '60px', height: '100%', background: theme.sidebar, borderLeft: `1px solid ${theme.border}`, position: 'relative', display: 'flex', justifyContent: 'center' }} className="desktop-minimap">
