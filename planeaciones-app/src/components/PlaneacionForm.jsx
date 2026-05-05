@@ -4,13 +4,12 @@ import { useState, useEffect } from 'react';
 
 export default function PlaneacionForm({ onSave, onCancel }) {
     const [loading, setLoading] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
     const [catalogs, setCatalogs] = useState({ fases: [], grados: [], lenguajes: [], ejes_articuladores: [] });
     const [contenidos, setContenidos] = useState({ nacionales: [], estatales: [] });
     const [pdas, setPdas] = useState([]);
     const [orientaciones, setOrientaciones] = useState([]);
-    const [actividadesLibro, setActividadesLibro] = useState([]);
-    const [materiales, setMateriales] = useState([]);
-
+    
     const [formData, setFormData] = useState({
         titulo: '',
         fase_id: '',
@@ -47,11 +46,6 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                 .then(res => res.ok ? res.json() : [])
                 .then(data => setOrientaciones(data))
                 .catch(() => setOrientaciones([]));
-            
-            fetch(`/api/material-consulta?lenguaje_id=${formData.lenguaje_id}`)
-                .then(res => res.ok ? res.json() : [])
-                .then(data => setMateriales(data))
-                .catch(() => setMateriales([]));
         }
     }, [formData.fase_id, formData.lenguaje_id]);
 
@@ -87,208 +81,175 @@ export default function PlaneacionForm({ onSave, onCancel }) {
 
     const filteredGrados = (catalogs?.grados || []).filter(g => g.fase_id == formData.fase_id);
 
-    // Document Style Components
-    const SectionTitle = ({ children, icon }) => (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px', borderBottom: '2px solid rgba(59,130,246,0.2)', pb: '8px' }}>
-            <span style={{ fontSize: '20px' }}>{icon}</span>
-            <h3 style={{ fontSize: '14px', fontWeight: '900', color: '#60a5fa', textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>{children}</h3>
-        </div>
-    );
-
-    const InlineSelect = ({ value, onChange, options, placeholder, label }) => (
-        <div style={{ flex: 1 }}>
-            <label style={{ display: 'block', fontSize: '10px', color: '#94a3b8', fontWeight: 'bold', marginBottom: '4px', textTransform: 'uppercase' }}>{label}</label>
-            <select value={value} onChange={onChange} style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '14px', padding: '8px 0', outline: 'none', cursor: 'pointer' }}>
-                <option value="" style={{ background: '#0f172a' }}>{placeholder || '---'}</option>
-                {options.map(opt => <option key={opt.id} value={opt.id} style={{ background: '#0f172a' }}>{opt.nombre || opt.descripcion}</option>)}
-            </select>
-        </div>
-    );
-
-    const BlockTextarea = ({ label, value, onChange, placeholder, color = '#3b82f6' }) => (
-        <div style={{ marginBottom: '24px' }}>
-            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: color, textTransform: 'uppercase', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: color }} />
-                {label}
-            </label>
-            <textarea value={value} onChange={onChange} placeholder={placeholder} style={{ width: '100%', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '12px', padding: '16px', color: '#fff', fontSize: '14px', lineHeight: '1.6', minHeight: '100px', outline: 'none', transition: 'all 0.3s' }} />
-        </div>
-    );
+    // Theme Variables
+    const theme = {
+        bg: darkMode ? '#0f172a' : '#f1f5f9',
+        docBg: darkMode ? '#1e293b' : '#ffffff',
+        text: darkMode ? '#f1f5f9' : '#0f172a',
+        subtext: darkMode ? '#94a3b8' : '#64748b',
+        border: darkMode ? 'rgba(255,255,255,0.1)' : '#e2e8f0',
+        inputBg: darkMode ? 'rgba(255,255,255,0.02)' : 'transparent',
+        sectionBg: darkMode ? 'rgba(59,130,246,0.05)' : '#f8fafc',
+        accent: '#2563eb',
+        success: '#10b981'
+    };
 
     return (
-        <div style={{ maxWidth: '900px', margin: '0 auto', background: '#fff', color: '#1e293b', borderRadius: '2px', boxShadow: '0 20px 50px rgba(0,0,0,0.1)', overflow: 'hidden' }} className="document-container">
-            {/* Toolbar / Header */}
-            <div style={{ padding: '20px 40px', background: '#f8fafc', borderBottom: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ef4444' }} />
-                    <span style={{ fontWeight: '800', fontSize: '12px', color: '#64748b', textTransform: 'uppercase', letterSpacing: '1px' }}>Nuevo Programa Analítico 2025</span>
-                </div>
-                <div style={{ display: 'flex', gap: '12px' }}>
-                    <button onClick={onCancel} style={{ padding: '8px 20px', borderRadius: '6px', background: '#fff', border: '1px solid #e2e8f0', color: '#64748b', fontSize: '13px', fontWeight: '600', cursor: 'pointer' }}>Cerrar</button>
-                    <button onClick={handleSave} style={{ padding: '8px 20px', borderRadius: '6px', background: '#2563eb', border: 'none', color: '#fff', fontSize: '13px', fontWeight: '600', cursor: 'pointer', boxShadow: '0 4px 12px rgba(37,99,235,0.2)' }}>{loading ? 'Guardando...' : 'Guardar Cambios'}</button>
-                </div>
-            </div>
-
-            {/* Document Content */}
-            <div style={{ padding: '60px 80px', background: '#fff' }} className="document-paper">
+        <div style={{ minHeight: '100vh', background: theme.bg, transition: 'all 0.3s ease', padding: '40px 20px' }}>
+            <div style={{ maxWidth: '900px', margin: '0 auto', background: theme.docBg, color: theme.text, borderRadius: '4px', boxShadow: '0 20px 50px rgba(0,0,0,0.1)', overflow: 'hidden' }} className="document-container">
                 
-                {/* Header Section */}
-                <div style={{ marginBottom: '40px', textAlign: 'center' }}>
-                    <input type="text" value={formData.titulo} onChange={(e) => setFormData({...formData, titulo: e.target.value})} placeholder="ESCRIBA EL TÍTULO DE LA PLANEACIÓN AQUÍ" style={{ width: '100%', border: 'none', borderBottom: '2px solid #f1f5f9', textAlign: 'center', fontSize: '24px', fontWeight: '800', color: '#0f172a', outline: 'none', padding: '10px', textTransform: 'uppercase' }} />
-                    <p style={{ color: '#94a3b8', fontSize: '12px', marginTop: '10px', fontWeight: '600' }}>FORMATO DE PLANEACIÓN ARTES PRIMARIA - NEM</p>
-                </div>
-
-                {/* Info Grid */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginBottom: '40px', padding: '20px', background: '#f8fafc', borderRadius: '8px' }}>
-                    <div style={{ flex: 1 }}>
-                        <label style={{ display: 'block', fontSize: '10px', color: '#64748b', fontWeight: '900', textTransform: 'uppercase', marginBottom: '4px' }}>Fase</label>
-                        <select value={formData.fase_id} onChange={(e) => setFormData({...formData, fase_id: e.target.value})} style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: '1px solid #cbd5e1', color: '#1e293b', fontSize: '14px', fontWeight: '600', outline: 'none' }}>
-                            <option value="">Seleccione...</option>
-                            {(catalogs?.fases || []).map(f => <option key={f.id} value={f.id}>{f.nombre}</option>)}
-                        </select>
+                {/* Toolbar */}
+                <div style={{ padding: '16px 40px', background: darkMode ? '#0f172a' : '#f8fafc', borderBottom: `1px solid ${theme.border}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                        {/* Dark Mode Toggle */}
+                        <button onClick={() => setDarkMode(!darkMode)} style={{ background: 'transparent', border: 'none', cursor: 'pointer', fontSize: '20px', display: 'flex', alignItems: 'center' }}>
+                            {darkMode ? '☀️' : '🌙'}
+                        </button>
+                        <span style={{ fontWeight: '800', fontSize: '11px', color: theme.subtext, textTransform: 'uppercase', letterSpacing: '1px' }}>Editor de Planeación</span>
                     </div>
-                    <div style={{ flex: 1 }}>
-                        <label style={{ display: 'block', fontSize: '10px', color: '#64748b', fontWeight: '900', textTransform: 'uppercase', marginBottom: '4px' }}>Grado</label>
-                        <select value={formData.grado_id} onChange={(e) => setFormData({...formData, grado_id: e.target.value})} style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: '1px solid #cbd5e1', color: '#1e293b', fontSize: '14px', fontWeight: '600', outline: 'none' }}>
-                            <option value="">Seleccione...</option>
-                            {filteredGrados.map(g => <option key={g.id} value={g.id}>{g.nombre}</option>)}
-                        </select>
-                    </div>
-                    <div style={{ flex: 1 }}>
-                        <label style={{ display: 'block', fontSize: '10px', color: '#64748b', fontWeight: '900', textTransform: 'uppercase', marginBottom: '4px' }}>Lenguaje</label>
-                        <select value={formData.lenguaje_id} onChange={(e) => setFormData({...formData, lenguaje_id: e.target.value})} style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: '1px solid #cbd5e1', color: '#1e293b', fontSize: '14px', fontWeight: '600', outline: 'none' }}>
-                            <option value="">Seleccione...</option>
-                            {(catalogs?.lenguajes || []).map(l => <option key={l.id} value={l.id}>{l.nombre}</option>)}
-                        </select>
+                    <div style={{ display: 'flex', gap: '12px' }}>
+                        <button onClick={onCancel} style={{ padding: '8px 20px', borderRadius: '6px', background: 'transparent', border: `1px solid ${theme.border}`, color: theme.subtext, fontSize: '13px', fontWeight: '600', cursor: 'pointer' }}>Cerrar</button>
+                        <button onClick={handleSave} style={{ padding: '8px 20px', borderRadius: '6px', background: theme.accent, border: 'none', color: '#fff', fontSize: '13px', fontWeight: '600', cursor: 'pointer', boxShadow: '0 4px 12px rgba(37,99,235,0.2)' }}>{loading ? 'Guardando...' : 'Guardar'}</button>
                     </div>
                 </div>
 
-                {/* Ejes Articuladores */}
-                <div style={{ marginBottom: '40px' }}>
-                    <label style={{ display: 'block', fontSize: '10px', color: '#64748b', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px' }}>Ejes Articuladores Seleccionados</label>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                        {(catalogs?.ejes_articuladores || []).map(eje => {
-                            const selected = formData.ejes_articuladores.includes(eje.nombre);
-                            return (
-                                <button key={eje.id} type="button" onClick={() => toggleEje(eje.nombre)}
-                                    style={{ padding: '6px 12px', borderRadius: '4px', fontSize: '11px', fontWeight: '700', border: '1px solid', borderColor: selected ? '#3b82f6' : '#e2e8f0', background: selected ? '#eff6ff' : '#fff', color: selected ? '#2563eb' : '#94a3b8', cursor: 'pointer', transition: 'all 0.2s' }}>
-                                    {eje.nombre}
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
-
-                {/* Section 1: Contenidos */}
-                <div style={{ marginBottom: '40px' }}>
-                    <h4 style={{ fontSize: '12px', fontWeight: '900', color: '#0f172a', textTransform: 'uppercase', borderLeft: '4px solid #2563eb', paddingLeft: '12px', marginBottom: '20px' }}>I. Contenidos y Procesos de Aprendizaje</h4>
+                {/* Paper Content */}
+                <div style={{ padding: '60px 80px' }} className="document-paper">
                     
-                    <div style={{ marginBottom: '20px' }}>
-                        <label style={{ display: 'block', fontSize: '10px', color: '#64748b', fontWeight: '900', textTransform: 'uppercase', marginBottom: '4px' }}>Contenido Programático</label>
-                        <select value={formData.contenido_nacional_id || formData.contenido_estatal_id} 
-                            onChange={(e) => {
-                                const val = e.target.value;
-                                setFormData({...formData, contenido_nacional_id: val, contenido_estatal_id: ''});
-                            }} 
-                            style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: '1px solid #cbd5e1', color: '#1e293b', fontSize: '14px', fontWeight: '500', outline: 'none', padding: '8px 0' }}>
-                            <option value="">Seleccione el contenido de la fase...</option>
-                            <optgroup label="Contenidos Nacionales">
-                                {(contenidos?.nacionales || []).map(c => <option key={c.id} value={c.id}>{c.descripcion}</option>)}
-                            </optgroup>
-                            <optgroup label="Contenidos Estatales">
-                                {(contenidos?.estatales || []).map(c => <option key={c.id} value={c.id}>{c.descripcion}</option>)}
-                            </optgroup>
-                        </select>
+                    {/* Header Section */}
+                    <div style={{ marginBottom: '40px', textAlign: 'center' }}>
+                        <input type="text" value={formData.titulo} onChange={(e) => setFormData({...formData, titulo: e.target.value})} placeholder="ESCRIBA EL TÍTULO AQUÍ" style={{ width: '100%', border: 'none', borderBottom: `2px solid ${theme.border}`, textAlign: 'center', fontSize: '24px', fontWeight: '800', color: theme.text, background: 'transparent', outline: 'none', padding: '10px', textTransform: 'uppercase' }} />
+                        <p style={{ color: theme.subtext, fontSize: '11px', marginTop: '10px', fontWeight: '700', letterSpacing: '2px' }}>PROGRAMA ANALÍTICO ARTES 2025</p>
                     </div>
 
-                    <div style={{ marginBottom: '20px' }}>
-                        <label style={{ display: 'block', fontSize: '10px', color: '#64748b', fontWeight: '900', textTransform: 'uppercase', marginBottom: '4px' }}>Proceso de Desarrollo de Aprendizaje (PDA)</label>
-                        <select value={formData.pda_id} onChange={(e) => setFormData({...formData, pda_id: e.target.value})} style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: '1px solid #cbd5e1', color: '#1e293b', fontSize: '14px', fontWeight: '500', outline: 'none', padding: '8px 0' }}>
-                            <option value="">Seleccione el PDA correspondiente...</option>
-                            {(pdas || []).map(p => <option key={p.id} value={p.id}>{p.descripcion}</option>)}
-                        </select>
-                    </div>
-
-                    {orientaciones.length > 0 && (
-                        <div style={{ marginTop: '20px', padding: '20px', background: '#f0fdf4', borderRadius: '4px', border: '1px dashed #10b981' }}>
-                            <p style={{ fontSize: '10px', fontWeight: '900', color: '#10b981', textTransform: 'uppercase', marginBottom: '10px' }}>Orientaciones Didácticas Sugeridas</p>
-                            <div style={{ fontSize: '13px', color: '#065f46', lineHeight: '1.6' }}>
-                                {orientaciones.map((o, i) => <div key={i} style={{ marginBottom: '6px' }}>• {o.descripcion}</div>)}
+                    {/* Meta Grid */}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginBottom: '40px', padding: '24px', background: theme.sectionBg, borderRadius: '12px', border: `1px solid ${theme.border}` }}>
+                        {['Fase', 'Grado', 'Lenguaje'].map((label, idx) => (
+                            <div key={label}>
+                                <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px' }}>{label}</label>
+                                <select 
+                                    value={idx === 0 ? formData.fase_id : idx === 1 ? formData.grado_id : formData.lenguaje_id} 
+                                    onChange={(e) => {
+                                        const val = e.target.value;
+                                        if (idx === 0) setFormData({...formData, fase_id: val});
+                                        else if (idx === 1) setFormData({...formData, grado_id: val});
+                                        else setFormData({...formData, lenguaje_id: val});
+                                    }} 
+                                    style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: `1px solid ${theme.border}`, color: theme.text, fontSize: '14px', fontWeight: '600', outline: 'none' }}>
+                                    <option value="" style={{ background: theme.docBg }}>---</option>
+                                    {(idx === 0 ? catalogs?.fases : idx === 1 ? filteredGrados : catalogs?.lenguajes || []).map(opt => <option key={opt.id} value={opt.id} style={{ background: theme.docBg }}>{opt.nombre}</option>)}
+                                </select>
                             </div>
-                        </div>
-                    )}
-                </div>
-
-                {/* Section 2: Didáctica */}
-                <div style={{ marginBottom: '40px' }}>
-                    <h4 style={{ fontSize: '12px', fontWeight: '900', color: '#0f172a', textTransform: 'uppercase', borderLeft: '4px solid #10b981', paddingLeft: '12px', marginBottom: '20px' }}>II. Secuencia Didáctica y Metodología</h4>
-                    
-                    <div style={{ marginBottom: '20px' }}>
-                        <label style={{ display: 'block', fontSize: '10px', color: '#64748b', fontWeight: '900', textTransform: 'uppercase', marginBottom: '4px' }}>Metodología / Proyecto</label>
-                        <input type="text" value={formData.metodologia} onChange={(e) => setFormData({...formData, metodologia: e.target.value})} placeholder="Escriba la metodología a utilizar..." style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: '1px solid #cbd5e1', color: '#1e293b', fontSize: '14px', fontWeight: '600', outline: 'none', padding: '8px 0' }} />
+                        ))}
                     </div>
 
-                    <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
-                        <thead>
-                            <tr style={{ background: '#f8fafc' }}>
-                                <th style={{ padding: '12px', border: '1px solid #e2e8f0', textAlign: 'left', fontSize: '11px', color: '#64748b', width: '150px' }}>MOMENTO</th>
-                                <th style={{ padding: '12px', border: '1px solid #e2e8f0', textAlign: 'left', fontSize: '11px', color: '#64748b' }}>ACTIVIDADES Y DESARROLLO</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style={{ padding: '12px', border: '1px solid #e2e8f0', verticalAlign: 'top', fontWeight: 'bold', fontSize: '12px', color: '#059669' }}>INICIO</td>
-                                <td style={{ padding: '0', border: '1px solid #e2e8f0' }}>
-                                    <textarea value={formData.secuencia_inicio} onChange={(e) => setFormData({...formData, secuencia_inicio: e.target.value})} style={{ width: '100%', border: 'none', padding: '12px', minHeight: '80px', fontSize: '13px', outline: 'none', resize: 'none' }} placeholder="Actividades de encuadre..." />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style={{ padding: '12px', border: '1px solid #e2e8f0', verticalAlign: 'top', fontWeight: 'bold', fontSize: '12px', color: '#2563eb' }}>DESARROLLO</td>
-                                <td style={{ padding: '0', border: '1px solid #e2e8f0' }}>
-                                    <textarea value={formData.secuencia_desarrollo} onChange={(e) => setFormData({...formData, secuencia_desarrollo: e.target.value})} style={{ width: '100%', border: 'none', padding: '12px', minHeight: '150px', fontSize: '13px', outline: 'none', resize: 'none' }} placeholder="Actividades centrales..." />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style={{ padding: '12px', border: '1px solid #e2e8f0', verticalAlign: 'top', fontWeight: 'bold', fontSize: '12px', color: '#db2777' }}>CIERRE</td>
-                                <td style={{ padding: '0', border: '1px solid #e2e8f0' }}>
-                                    <textarea value={formData.secuencia_cierre} onChange={(e) => setFormData({...formData, secuencia_cierre: e.target.value})} style={{ width: '100%', border: 'none', padding: '12px', minHeight: '80px', fontSize: '13px', outline: 'none', resize: 'none' }} placeholder="Conclusiones y evaluación..." />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                {/* Section 3: Recursos y Evaluación */}
-                <div>
-                    <h4 style={{ fontSize: '12px', fontWeight: '900', color: '#0f172a', textTransform: 'uppercase', borderLeft: '4px solid #f59e0b', paddingLeft: '12px', marginBottom: '20px' }}>III. Evaluación y Recursos</h4>
-                    
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
-                        <div>
-                            <label style={{ display: 'block', fontSize: '10px', color: '#64748b', fontWeight: '900', textTransform: 'uppercase', marginBottom: '8px' }}>Evaluación Formativa</label>
-                            <textarea value={formData.evaluacion} onChange={(e) => setFormData({...formData, evaluacion: e.target.value})} placeholder="Instrumentos y criterios..." style={{ width: '100%', height: '120px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '4px', padding: '12px', fontSize: '13px', outline: 'none' }} />
+                    {/* Ejes Articuladores */}
+                    <div style={{ marginBottom: '40px' }}>
+                        <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '16px' }}>Ejes Articuladores</label>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                            {(catalogs?.ejes_articuladores || []).map(eje => {
+                                const selected = formData.ejes_articuladores.includes(eje.nombre);
+                                return (
+                                    <button key={eje.id} type="button" onClick={() => toggleEje(eje.nombre)}
+                                        style={{ padding: '8px 14px', borderRadius: '6px', fontSize: '11px', fontWeight: '700', border: '1px solid', borderColor: selected ? theme.accent : theme.border, background: selected ? (darkMode ? 'rgba(37,99,235,0.2)' : '#eff6ff') : 'transparent', color: selected ? (darkMode ? '#60a5fa' : '#2563eb') : theme.subtext, cursor: 'pointer', transition: 'all 0.2s' }}>
+                                        {eje.nombre}
+                                    </button>
+                                );
+                            })}
                         </div>
-                        <div>
-                            <label style={{ display: 'block', fontSize: '10px', color: '#64748b', fontWeight: '900', textTransform: 'uppercase', marginBottom: '8px' }}>Recursos Didácticos</label>
-                            <textarea value={formData.recursos} onChange={(e) => setFormData({...formData, recursos: e.target.value})} placeholder="Materiales necesarios..." style={{ width: '100%', height: '120px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '4px', padding: '12px', fontSize: '13px', outline: 'none' }} />
+                    </div>
+
+                    {/* Currículo Section */}
+                    <div style={{ marginBottom: '50px' }}>
+                        <h4 style={{ fontSize: '12px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', borderLeft: `4px solid ${theme.accent}`, paddingLeft: '12px', marginBottom: '24px' }}>I. Contenidos y PDA</h4>
+                        
+                        <div style={{ marginBottom: '24px' }}>
+                            <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '8px' }}>Contenido Seleccionado</label>
+                            <select value={formData.contenido_nacional_id || formData.contenido_estatal_id} 
+                                onChange={(e) => setFormData({...formData, contenido_nacional_id: e.target.value, contenido_estatal_id: ''})} 
+                                style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: `1px solid ${theme.border}`, color: theme.text, fontSize: '14px', fontWeight: '500', outline: 'none', padding: '8px 0' }}>
+                                <option value="" style={{ background: theme.docBg }}>Seleccione Contenido...</option>
+                                <optgroup label="Nacionales" style={{ background: theme.docBg }}>
+                                    {(contenidos?.nacionales || []).map(c => <option key={c.id} value={c.id} style={{ background: theme.docBg }}>{c.descripcion}</option>)}
+                                </optgroup>
+                                <optgroup label="Estatales" style={{ background: theme.docBg }}>
+                                    {(contenidos?.estatales || []).map(c => <option key={c.id} value={c.id} style={{ background: theme.docBg }}>{c.descripcion}</option>)}
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div style={{ marginBottom: '24px' }}>
+                            <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '8px' }}>Proceso de Desarrollo (PDA)</label>
+                            <select value={formData.pda_id} onChange={(e) => setFormData({...formData, pda_id: e.target.value})} style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: `1px solid ${theme.border}`, color: theme.text, fontSize: '14px', fontWeight: '500', outline: 'none', padding: '8px 0' }}>
+                                <option value="" style={{ background: theme.docBg }}>Seleccione PDA...</option>
+                                {(pdas || []).map(p => <option key={p.id} value={p.id} style={{ background: theme.docBg }}>{p.descripcion}</option>)}
+                            </select>
+                        </div>
+
+                        {orientaciones.length > 0 && (
+                            <div style={{ marginTop: '20px', padding: '24px', background: darkMode ? 'rgba(16,185,129,0.05)' : '#f0fdf4', borderRadius: '8px', border: `1px dashed ${theme.success}` }}>
+                                <p style={{ fontSize: '10px', fontWeight: '900', color: theme.success, textTransform: 'uppercase', marginBottom: '12px' }}>💡 Orientaciones Didácticas Sugeridas</p>
+                                <div style={{ fontSize: '13px', color: darkMode ? '#a7f3d0' : '#065f46', lineHeight: '1.6' }}>
+                                    {orientaciones.map((o, i) => <div key={i} style={{ marginBottom: '8px' }}>• {o.descripcion}</div>)}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Didáctica Section */}
+                    <div style={{ marginBottom: '50px' }}>
+                        <h4 style={{ fontSize: '12px', fontWeight: '900', color: theme.success, textTransform: 'uppercase', borderLeft: `4px solid ${theme.success}`, paddingLeft: '12px', marginBottom: '24px' }}>II. Secuencia Didáctica</h4>
+                        
+                        <div style={{ marginBottom: '24px' }}>
+                            <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '8px' }}>Metodología de Trabajo</label>
+                            <input type="text" value={formData.metodologia} onChange={(e) => setFormData({...formData, metodologia: e.target.value})} placeholder="Ej. Aprendizaje Basado en Proyectos" style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: `1px solid ${theme.border}`, color: theme.text, fontSize: '14px', fontWeight: '600', outline: 'none', padding: '8px 0' }} />
+                        </div>
+
+                        <table style={{ width: '100%', borderCollapse: 'collapse', border: `1px solid ${theme.border}` }}>
+                            <tbody>
+                                {[
+                                    { label: 'INICIO', key: 'secuencia_inicio', color: theme.success },
+                                    { label: 'DESARROLLO', key: 'secuencia_desarrollo', color: theme.accent },
+                                    { label: 'CIERRE', key: 'secuencia_cierre', color: '#db2777' }
+                                ].map(moment => (
+                                    <tr key={moment.key}>
+                                        <td style={{ padding: '16px', border: `1px solid ${theme.border}`, verticalAlign: 'top', background: theme.sectionBg, width: '140px' }}>
+                                            <span style={{ fontWeight: '900', fontSize: '11px', color: moment.color }}>{moment.label}</span>
+                                        </td>
+                                        <td style={{ padding: '0', border: `1px solid ${theme.border}` }}>
+                                            <textarea value={formData[moment.key]} onChange={(e) => setFormData({...formData, [moment.key]: e.target.value})} style={{ width: '100%', border: 'none', padding: '16px', minHeight: moment.key === 'secuencia_desarrollo' ? '180px' : '100px', fontSize: '14px', background: 'transparent', color: theme.text, outline: 'none', resize: 'none' }} placeholder={`Describa las actividades de ${moment.label.toLowerCase()}...`} />
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {/* Evaluación Section */}
+                    <div>
+                        <h4 style={{ fontSize: '12px', fontWeight: '900', color: '#f59e0b', textTransform: 'uppercase', borderLeft: '4px solid #f59e0b', paddingLeft: '12px', marginBottom: '24px' }}>III. Evaluación y Recursos</h4>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
+                            {['evaluacion', 'recursos'].map(key => (
+                                <div key={key}>
+                                    <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '10px' }}>{key === 'evaluacion' ? 'Instrumentos de Evaluación' : 'Recursos Didácticos'}</label>
+                                    <textarea value={formData[key]} onChange={(e) => setFormData({...formData, [key]: e.target.value})} style={{ width: '100%', height: '140px', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '8px', padding: '16px', fontSize: '14px', color: theme.text, outline: 'none' }} />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
 
-            </div>
-
-            {/* Footer Style */}
-            <div style={{ padding: '40px', textAlign: 'center', color: '#94a3b8', fontSize: '11px', background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
-                <p>© 2025 Sistema de Planeación de Artes - Nueva Escuela Mexicana</p>
-                <p>Documento generado digitalmente - Confidencialidad Docente</p>
+                {/* Footer */}
+                <div style={{ padding: '40px', textAlign: 'center', color: theme.subtext, fontSize: '11px', background: theme.sectionBg, borderTop: `1px solid ${theme.border}` }}>
+                    <p>© 2025 Artes Primaria - Sistema de Planeación Analítica</p>
+                </div>
             </div>
 
             <style jsx>{`
-                @media print {
-                    .document-paper { box-shadow: none !important; padding: 0 !important; }
-                    .document-container { box-shadow: none !important; }
-                }
-                select:hover, input:hover, textarea:hover {
-                    background: rgba(0,0,0,0.02) !important;
+                @media (max-width: 640px) {
+                    .document-paper { padding: 40px 20px !important; }
+                    table tr { display: flex; flex-direction: column; }
+                    table td { width: 100% !important; border: none !important; }
                 }
             `}</style>
         </div>
