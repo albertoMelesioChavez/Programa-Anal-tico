@@ -58,7 +58,7 @@ function ContenidosArtesContent() {
     useEffect(() => {
         const fetchContent = async () => {
             try {
-                const res = await fetch('/contenidos_programa_analitico.md');
+                const res = await fetch('/api/documentos/artes');
                 const text = await res.text();
                 const splitPages = text.split(/<!-- PAGE_START \d+ -->/).filter(p => p.trim());
                 const htmlPages = await Promise.all(splitPages.map(async (p) => {
@@ -119,10 +119,10 @@ function ContenidosArtesContent() {
                 const fullHtml = `<p><strong>${p.title}</strong></p>\n${p.cleanHtml}`;
                 fullContent += `<!-- PAGE_START ${pIdx + 1} -->\n${fullHtml}\n<!-- PAGE_END -->\n`;
             });
-            await fetch('/api/save-content', {
+            await fetch('/api/documentos/artes', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ content: fullContent, fileName: 'contenidos_programa_analitico.md' }),
+                body: JSON.stringify({ content: fullContent }),
             });
         } catch (error) { console.error('Save failed', error); }
         finally { setIsSaving(false); }
@@ -138,182 +138,239 @@ function ContenidosArtesContent() {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `Plan_Analitico_Artes_2025_Editado.md`;
-        document.body.appendChild(a);
+        a.download = 'Programa_Analitico_Artes_2025.md';
         a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
     };
 
-    const scrollToPage = (idx) => {
-        if (pageRefs.current[idx]?.current) {
-            pageRefs.current[idx].current.scrollIntoView({ behavior: 'smooth' });
-        }
+    const handleScroll = (e) => {
+        const { scrollTop, scrollHeight, clientHeight } = e.target;
+        const total = scrollHeight - clientHeight;
+        if (total <= 0) return;
+        setScrollPercentage((scrollTop / total) * 100);
     };
 
-    const handleScroll = () => {
-        if (!mainRef.current) return;
-        const { scrollTop, scrollHeight, clientHeight } = mainRef.current;
-        const totalScrollable = scrollHeight - clientHeight;
-        if (totalScrollable <= 0) return;
-        const percentage = (scrollTop / totalScrollable) * 100;
-        setScrollPercentage(percentage);
-    };
-
-    const handleMouseDown = (e) => {
-        isDragging.current = true;
-        handleMouseMove(e);
-        document.addEventListener('mousemove', handleMouseMove);
-        document.addEventListener('mouseup', handleMouseUp);
-        document.body.style.userSelect = 'none';
-        document.body.style.cursor = 'grabbing';
-    };
-
-    const handleMouseMove = (e) => {
-        if (!isDragging.current || !minimapRef.current || !mainRef.current) return;
+    const handleMinimapClick = (e) => {
         const rect = minimapRef.current.getBoundingClientRect();
-        const y = Math.max(0, Math.min(e.clientY - rect.top, rect.height));
+        const y = e.clientY - rect.top;
         const percentage = y / rect.height;
-        const scrollTarget = percentage * (mainRef.current.scrollHeight - mainRef.current.clientHeight);
-        mainRef.current.scrollTop = scrollTarget;
+        const targetScroll = percentage * (mainRef.current.scrollHeight - mainRef.current.clientHeight);
+        mainRef.current.scrollTo({ top: targetScroll, behavior: 'smooth' });
     };
 
-    const handleMouseUp = () => {
+    const handleDragStart = (e) => {
+        isDragging.current = true;
+        handleMinimapClick(e);
+    };
+
+    const handleDragMove = (e) => {
+        if (isDragging.current) handleMinimapClick(e);
+    };
+
+    const handleDragEnd = () => {
         isDragging.current = false;
-        document.removeEventListener('mousemove', handleMouseMove);
-        document.removeEventListener('mouseup', handleMouseUp);
-        document.body.style.userSelect = 'auto';
-        document.body.style.cursor = 'auto';
     };
 
-    if (loading) return (
-        <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center', background: theme.bg }}>
-            <div style={{ height: '24px', width: '24px', borderRadius: '50%', border: '2px solid #2563eb', borderTopColor: 'transparent', animation: 'spin 1s linear infinite' }} />
-            <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-        </div>
-    );
+    if (loading) {
+        return (
+            <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center', background: theme.bg }}>
+                <div className="loader-blue"></div>
+            </div>
+        );
+    }
 
     return (
-        <div style={{ display: 'flex', height: '100vh', background: theme.bg, color: theme.text, overflow: 'hidden', transition: 'all 0.3s ease' }} className="editor-container">
-            {/* LEFT NAVIGATION */}
-            <aside style={{ width: '280px', height: '100%', background: theme.sidebar, borderRight: `1px solid ${theme.border}`, display: 'flex', flexDirection: 'column' }} className="desktop-sidebar">
+        <div style={{ display: 'flex', height: '100vh', background: theme.bg, color: theme.text, overflow: 'hidden' }}>
+            {/* Sidebar / Navigation */}
+            <aside style={{ 
+                width: '320px', 
+                background: theme.sidebar, 
+                borderRight: `1px solid ${theme.border}`,
+                display: 'flex',
+                flexDirection: 'column',
+                zIndex: 10
+            }}>
                 <div style={{ padding: '32px' }}>
-                    <Link href="/" style={{ fontSize: '10px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '2px', color: theme.subtext, textDecoration: 'none' }}>← Inicio</Link>
-                    <div style={{ marginTop: '32px' }}>
-                        <h1 style={{ color: theme.text, fontSize: '24px', fontWeight: 'bold', margin: 0, letterSpacing: '-1px' }}>Índice</h1>
-                        <p style={{ fontSize: '10px', color: theme.subtext, marginTop: '4px', textTransform: 'uppercase', fontWeight: '900' }}>Artes Primaria 2025</p>
-                    </div>
+                    <Link href="/" style={{ textDecoration: 'none', color: '#2563eb', fontWeight: '900', fontSize: '11px', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
+                        ← VOLVER AL DASHBOARD
+                    </Link>
+                    <h2 style={{ fontSize: '24px', fontWeight: '900', letterSpacing: '-1px', marginBottom: '8px' }}>Programa Analítico</h2>
+                    <p style={{ fontSize: '13px', color: theme.subtext, fontWeight: '500' }}>Artes • Versión 2025</p>
                 </div>
-                <nav style={{ flexGrow: 1, overflowY: 'auto', padding: '0 24px 40px 24px' }} className="custom-scrollbar">
-                    {pages.map((p, idx) => {
-                        const displayTitle = p.title.replace("Programa analítico primaria", "").replace("Versión 2025", "").trim() || `Sección ${idx + 1}`;
-                        const isMainTitle = idx % 3 === 0;
-                        return (
-                            <button key={idx} onClick={() => scrollToPage(idx)} 
-                                style={{ width: '100%', textAlign: 'left', padding: '8px 0', background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'baseline', gap: '4px', color: currentPageIdx === idx ? '#2563eb' : '#64748b', transition: 'color 0.2s', fontSize: isMainTitle ? '13px' : '12px', fontWeight: isMainTitle ? 'bold' : 'normal', opacity: currentPageIdx === idx ? 1 : 0.7 }}>
-                                <span style={{ flexShrink: 0, maxWidth: '85%' }}>{displayTitle}</span>
-                                <div style={{ flexGrow: 1, borderBottom: `1px dotted #e2e8f0`, marginBottom: '4px', margin: '0 4px' }} />
-                                <span style={{ flexShrink: 0, fontFamily: 'monospace', fontWeight: 'bold' }}>{idx + 1}</span>
-                            </button>
-                        );
-                    })}
-                </nav>
+
+                <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 32px' }}>
+                    {pages.map((p, idx) => (
+                        <button 
+                            key={idx}
+                            onClick={() => {
+                                pageRefs.current[idx].current?.scrollIntoView({ behavior: 'smooth' });
+                                setCurrentPageIdx(idx);
+                            }}
+                            style={{
+                                width: '100%',
+                                textAlign: 'left',
+                                padding: '16px',
+                                borderRadius: '12px',
+                                border: 'none',
+                                background: currentPageIdx === idx ? '#2563eb' : 'transparent',
+                                color: currentPageIdx === idx ? '#fff' : theme.text,
+                                cursor: 'pointer',
+                                transition: 'all 0.2s',
+                                marginBottom: '4px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '12px'
+                            }}
+                        >
+                            <span style={{ fontSize: '11px', fontWeight: '900', opacity: 0.5 }}>{String(idx + 1).padStart(2, '0')}</span>
+                            <span style={{ fontSize: '13px', fontWeight: '700', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.title}</span>
+                        </button>
+                    ))}
+                </div>
             </aside>
 
-            {/* MAIN CONTENT AREA */}
-            <main ref={mainRef} onScroll={handleScroll} style={{ flex: 1, height: '100%', overflowY: 'auto', position: 'relative' }} className="custom-scrollbar main-content">
-                {/* HEADER */}
-                <header style={{ position: 'sticky', top: 0, zIndex: 10, background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)', borderBottom: `1px solid #e2e8f0`, padding: '12px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }} className="editor-header">
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                            <span style={{ padding: '4px 8px', background: 'rgba(37,99,235,0.1)', color: '#2563eb', fontSize: '10px', fontWeight: '900', borderRadius: '4px', textTransform: 'uppercase' }}>{isEditMode ? 'MODO EDICIÓN' : 'MODO LECTURA'}</span>
-                        </div>
+            {/* Main Editor / Viewer */}
+            <main style={{ flex: 1, position: 'relative', display: 'flex', flexDirection: 'column' }}>
+                {/* Fixed Top Bar */}
+                <header style={{ 
+                    height: '80px', 
+                    padding: '0 40px', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'space-between',
+                    borderBottom: `1px solid ${theme.border}`,
+                    background: theme.header,
+                    backdropFilter: 'blur(10px)',
+                    zIndex: 100
+                }}>
+                    <div style={{ display: 'flex', gap: '8px' }}>
+                        <button 
+                            onClick={() => setViewMode('digital')}
+                            style={{ padding: '8px 20px', borderRadius: '100px', fontSize: '12px', fontWeight: '800', background: viewMode === 'digital' ? theme.text : 'transparent', color: viewMode === 'digital' ? theme.bg : theme.text, border: `1px solid ${theme.border}`, cursor: 'pointer' }}
+                        >
+                            VISTA DIGITAL
+                        </button>
+                        <button 
+                            onClick={() => setViewMode('pdf')}
+                            style={{ padding: '8px 20px', borderRadius: '100px', fontSize: '12px', fontWeight: '800', background: viewMode === 'pdf' ? theme.text : 'transparent', color: viewMode === 'pdf' ? theme.bg : theme.text, border: `1px solid ${theme.border}`, cursor: 'pointer' }}
+                        >
+                            MODO DOCUMENTO
+                        </button>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '12px' }}>
-                        <button onClick={handleExport} style={{ background: '#2563eb', color: 'white', padding: '10px 20px', borderRadius: '12px', border: 'none', fontSize: '12px', fontWeight: 'bold', cursor: 'pointer' }}>EXPORTAR</button>
-                        <button onClick={() => setIsEditMode(!isEditMode)} style={{ background: isEditMode ? '#2563eb' : theme.border, color: isEditMode ? 'white' : theme.text, border: 'none', padding: '10px 20px', borderRadius: '12px', fontSize: '12px', fontWeight: 'bold', cursor: 'pointer' }}>{isEditMode ? 'Listo' : 'Editar'}</button>
+                    <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                        <button 
+                            onClick={() => setIsEditMode(!isEditMode)}
+                            style={{ padding: '10px 24px', borderRadius: '100px', fontSize: '12px', fontWeight: '900', background: isEditMode ? '#ef4444' : '#0f172a', color: '#fff', border: 'none', cursor: 'pointer' }}
+                        >
+                            {isEditMode ? 'SALIR DE EDICIÓN' : 'EDITAR CONTENIDO'}
+                        </button>
+                        <button 
+                            onClick={handleExport}
+                            style={{ padding: '10px 24px', borderRadius: '100px', fontSize: '12px', fontWeight: '900', background: '#2563eb', color: '#fff', border: 'none', cursor: 'pointer' }}
+                        >
+                            EXPORTAR .MD
+                        </button>
                     </div>
                 </header>
 
-                <div className="content-wrapper" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px 100px 40px', position: 'relative' }}>
-                    {pages.map((p, idx) => (
-                        <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '20px 0', borderBottom: `1px solid ${theme.border}`, opacity: currentPageIdx === idx ? 1 : 0.6, transition: 'opacity 0.3s' }}>
-                            <h2 style={{ fontSize: '10px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '4px' }}>Página {idx + 1}</h2>
-                            <h1 style={{ fontSize: '28px', fontWeight: '900', color: theme.text, letterSpacing: '-1px', margin: '0 0 16px 0' }}>{p.title}</h1>
-                            <RichTextEditor key={`${idx}-${isEditMode}-${darkMode}`} initialContent={p.cleanHtml} onSave={(newHtml) => handleSave(idx, newHtml)} isSaving={isSaving} editable={isEditMode} darkMode={darkMode} />
-                        </div>
-                    ))}
-
-                    {/* Global Sticky Save Button (Only in Edit Mode) */}
-                    {isEditMode && (
-                        <div style={{
-                            position: 'sticky',
-                            bottom: '40px',
-                            marginTop: '60px',
-                            background: '#fff',
-                            padding: '12px 24px',
-                            borderRadius: '100px',
-                            boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
-                            border: '1px solid #e2e8f0',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '20px',
-                            zIndex: 1000,
-                            width: 'fit-content',
-                            margin: '60px auto'
-                        }}>
-                            <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                <span style={{ fontSize: '9px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>PÁGINA ACTUAL</span>
-                                <span style={{ fontSize: '12px', fontWeight: '800', color: '#0f172a' }}>Sección {currentPageIdx + 1}</span>
-                            </div>
-                            <div style={{ width: '1px', height: '24px', background: '#e2e8f0' }} />
-                            <button 
-                                onClick={handleExport}
+                {/* Content Area */}
+                <div 
+                    ref={mainRef}
+                    onScroll={handleScroll}
+                    style={{ 
+                        flex: 1, 
+                        overflowY: 'auto', 
+                        padding: viewMode === 'pdf' ? '60px 0' : '0',
+                        scrollBehavior: 'smooth'
+                    }}
+                >
+                    <div style={{ 
+                        maxWidth: viewMode === 'pdf' ? '850px' : '100%', 
+                        margin: '0 auto',
+                        padding: viewMode === 'pdf' ? '0' : '60px 80px',
+                        background: viewMode === 'pdf' ? '#fff' : 'transparent',
+                        boxShadow: viewMode === 'pdf' ? '0 30px 60px rgba(0,0,0,0.05)' : 'none',
+                        minHeight: '100%'
+                    }}>
+                        {pages.map((p, idx) => (
+                            <div 
+                                key={idx} 
+                                ref={pageRefs.current[idx]}
+                                data-page-index={idx}
                                 style={{ 
-                                    background: '#2563eb', 
-                                    color: '#fff', 
-                                    padding: '10px 24px', 
-                                    borderRadius: '100px', 
-                                    border: 'none', 
-                                    fontSize: '12px', 
-                                    fontWeight: '900', 
-                                    cursor: 'pointer',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '8px'
+                                    marginBottom: viewMode === 'pdf' ? '0' : '80px',
+                                    padding: viewMode === 'pdf' ? '80px 100px' : '0',
+                                    borderBottom: viewMode === 'pdf' && idx !== pages.length - 1 ? `1px solid #f1f5f9` : 'none'
                                 }}
                             >
-                                💾 GUARDAR TODO
-                            </button>
-                        </div>
-                    )}
+                                <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
+                                {isEditMode ? (
+                                    <RichTextEditor 
+                                        initialValue={p.cleanHtml} 
+                                        onSave={(newHtml) => handleSave(idx, newHtml)} 
+                                        isSaving={isSaving}
+                                    />
+                                ) : (
+                                    <div 
+                                        className="prose-custom"
+                                        dangerouslySetInnerHTML={{ __html: p.cleanHtml }}
+                                        style={{ lineHeight: '1.8', fontSize: '17px', color: theme.text }}
+                                    />
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
+
+                {/* Minimap Overlay (Digital mode only) */}
+                {viewMode === 'digital' && (
+                    <div 
+                        ref={minimapRef}
+                        onMouseDown={handleDragStart}
+                        onMouseMove={handleDragMove}
+                        onMouseUp={handleDragEnd}
+                        onMouseLeave={handleDragEnd}
+                        style={{ 
+                            position: 'absolute', 
+                            right: '20px', 
+                            top: '100px', 
+                            bottom: '20px', 
+                            width: '4px', 
+                            background: theme.border, 
+                            borderRadius: '10px',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        <div style={{ 
+                            position: 'absolute', 
+                            top: `${scrollPercentage}%`, 
+                            left: '-4px', 
+                            width: '12px', 
+                            height: '40px', 
+                            background: '#2563eb', 
+                            borderRadius: '10px',
+                            transition: 'top 0.1s linear'
+                        }}></div>
+                    </div>
+                )}
             </main>
 
-            {/* RIGHT MINIMAP */}
-            <aside style={{ width: '60px', height: '100%', background: theme.sidebar, borderLeft: `1px solid ${theme.border}`, position: 'relative', display: 'flex', justifyContent: 'center' }} className="desktop-minimap">
-                <div ref={minimapRef} style={{ position: 'absolute', top: '40px', bottom: '40px', width: '12px', display: 'flex', flexDirection: 'column', gap: '1px' }}>
-                    {pages.map((_, idx) => (
-                        <div key={idx} onClick={() => scrollToPage(idx)} style={{ flex: 1, width: '100%', background: currentPageIdx === idx ? 'rgba(37,99,235,0.4)' : 'rgba(128,128,128,0.1)', borderRadius: '1px', cursor: 'pointer' }} />
-                    ))}
-                    <div onMouseDown={handleMouseDown} style={{ position: 'absolute', left: '50%', top: `${scrollPercentage}%`, transform: 'translate(-50%, -50%)', width: '32px', height: '32px', background: '#2563eb', borderRadius: '50%', cursor: 'grab', zIndex: 50 }} />
-                </div>
-            </aside>
-
             <style jsx global>{`
-                .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-                .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-                .custom-scrollbar::-webkit-scrollbar-thumb { background: ${theme.border}; border-radius: 10px; }
-                .ProseMirror p { font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem; color: ${darkMode ? '#9ca3af' : '#4b5563'}; }
-            `}</style>
-            <style jsx global>{`
-                @media (max-width: 640px) {
-                    .main-content { padding: 0 !important; }
-                    .content-wrapper { padding: 20px 10px 100px 10px !important; maxWidth: 100% !important; }
-                    .editor-header { padding: 12px 10px !important; }
-                    .desktop-minimap { display: none !important; }
+                .prose-custom p { margin-bottom: 24px; }
+                .prose-custom h4 { margin: 40px 0 16px; font-size: 20px; font-weight: 800; }
+                .prose-custom ul, .prose-custom ol { margin-bottom: 24px; padding-left: 20px; }
+                .prose-custom li { margin-bottom: 8px; }
+                .loader-blue {
+                    width: 48px;
+                    height: 48px;
+                    border: 5px solid #2563eb;
+                    border-bottom-color: transparent;
+                    border-radius: 50%;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    animation: rotation 1s linear infinite;
                 }
+                @keyframes rotation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
             `}</style>
         </div>
     );
@@ -321,7 +378,7 @@ function ContenidosArtesContent() {
 
 export default function ContenidosArtesPage() {
     return (
-        <Suspense fallback={<div>Cargando...</div>}>
+        <Suspense fallback={<div className="loader-blue"></div>}>
             <ContenidosArtesContent />
         </Suspense>
     );
