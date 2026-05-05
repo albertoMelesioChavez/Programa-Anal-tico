@@ -1,21 +1,22 @@
-import { getDb } from '@/lib/db';
+import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
 
 export async function DELETE(request, { params }) {
     try {
-        const id = params.id;
-        const db = getDb();
+        const { id } = params;
 
-        const del = db.prepare('DELETE FROM planeaciones WHERE id = ?');
-        const result = del.run(id);
+        const result = await db.execute({
+            sql: 'DELETE FROM planeaciones WHERE id = ?',
+            args: [id]
+        });
 
-        if (result.changes === 0) {
-            return NextResponse.json({ error: 'Planeacion not found' }, { status: 404 });
+        if (result.rowsAffected === 0) {
+            return NextResponse.json({ error: 'Planeacion no encontrada' }, { status: 404 });
         }
 
         return NextResponse.json({ success: true });
     } catch (error) {
-        console.error('Database error deleting planeacion:', error);
-        return NextResponse.json({ error: 'Failed to delete planeacion' }, { status: 500 });
+        console.error('Error al eliminar planeación en Turso:', error);
+        return NextResponse.json({ error: 'Error al eliminar la planeación' }, { status: 500 });
     }
 }

@@ -1,31 +1,34 @@
-import { getDb } from '@/lib/db';
+import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
 
 export async function GET(request, { params }) {
     const { id } = params;
 
     try {
-        const db = getDb();
-        const p = db.prepare(`
-            SELECT 
-                p.*, 
-                f.nombre as fase_nombre, 
-                g.nombre as grado_nombre, 
-                l.nombre as lenguaje_nombre,
-                cn.descripcion as cn_desc,
-                ce.descripcion as ce_desc,
-                pda.descripcion as pda_desc
-            FROM planeaciones p
-            LEFT JOIN fases f ON p.fase_id = f.id
-            LEFT JOIN grados g ON p.grado_id = g.id
-            LEFT JOIN lenguajes_artisticos l ON p.lenguaje_id = l.id
-            LEFT JOIN contenidos_nacionales cn ON p.contenido_nacional_id = cn.id
-            LEFT JOIN contenidos_estatales ce ON p.contenido_estatal_id = ce.id
-            LEFT JOIN pdas pda ON p.pda_id = pda.id
-            WHERE p.id = ?
-        `).get(id);
+        const result = await db.execute({
+            sql: `
+                SELECT 
+                    p.*, 
+                    f.nombre as fase_nombre, 
+                    g.nombre as grado_nombre, 
+                    l.nombre as lenguaje_nombre,
+                    cn.descripcion as cn_desc,
+                    ce.descripcion as ce_desc,
+                    pda.descripcion as pda_desc
+                FROM planeaciones p
+                LEFT JOIN fases f ON p.fase_id = f.id
+                LEFT JOIN grados g ON p.grado_id = g.id
+                LEFT JOIN lenguajes_artisticos l ON p.lenguaje_id = l.id
+                LEFT JOIN contenidos_nacionales cn ON p.contenido_nacional_id = cn.id
+                LEFT JOIN contenidos_estatales ce ON p.contenido_estatal_id = ce.id
+                LEFT JOIN pdas pda ON p.pda_id = pda.id
+                WHERE p.id = ?
+            `,
+            args: [id]
+        });
 
-        if (!p) return NextResponse.json({ error: 'Planeacion not found' }, { status: 404 });
+        const p = result.rows[0];
+        if (!p) return NextResponse.json({ error: 'Planeación no encontrada' }, { status: 404 });
 
         const content = `
 # PLANEACIÓN ANALÍTICA: ${p.titulo}
@@ -73,7 +76,7 @@ Generado por Plataforma Programa Analítico 2025
         });
 
     } catch (error) {
-        console.error('Export error:', error);
-        return NextResponse.json({ error: 'Export failed' }, { status: 500 });
+        console.error('Export error in Turso:', error);
+        return NextResponse.json({ error: 'Fallo al exportar' }, { status: 500 });
     }
 }
