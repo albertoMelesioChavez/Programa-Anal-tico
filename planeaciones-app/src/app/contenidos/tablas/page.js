@@ -11,7 +11,6 @@ export default function ContenidosTablasPage() {
     const [loading, setLoading] = useState(true);
     const [isSaving, setIsSaving] = useState(false);
     const [isEditMode, setIsEditMode] = useState(false);
-    const [viewMode, setViewMode] = useState('digital');
     const [scrollPercentage, setScrollPercentage] = useState(0);
     
     const mainRef = useRef(null);
@@ -19,13 +18,10 @@ export default function ContenidosTablasPage() {
     const minimapRef = useRef(null);
     const pageRefs = useRef([]);
 
-    // Pure string-based title extraction (SSR safe)
     const extractTitleAndClean = (html) => {
         if (!html) return { title: 'Información General', cleanHtml: '' };
-        
         const targetStart = "Programa analítico primaria";
         const targetEnd = "Versión 2025";
-        
         const plainText = html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
         const startIndex = plainText.indexOf(targetStart);
         const endIndex = plainText.indexOf(targetEnd);
@@ -36,18 +32,11 @@ export default function ContenidosTablasPage() {
         if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
             title = plainText.substring(startIndex, endIndex + targetEnd.length).trim();
             const words = title.split(/\s+/).filter(w => w.length > 0);
-            const pattern = words
-                .map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-                .join('(?:\\s+|<[^>]*>)*\\s*');
-            
+            const pattern = words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('(?:\\s+|<[^>]*>)*\\s*');
             const atomicRegex = new RegExp(pattern, 'i');
             cleanHtml = html.replace(atomicRegex, '').trim();
-            
-            cleanHtml = cleanHtml.replace(/^<p>\s*<\/p>/, '')
-                                .replace(/^<p>&nbsp;<\/p>/, '')
-                                .replace(/^<p>\s*<br\s*\/?>\s*/, '<p>');
+            cleanHtml = cleanHtml.replace(/^<p>\s*<\/p>/, '').replace(/^<p>&nbsp;<\/p>/, '').replace(/^<p>\s*<br\s*\/?>\s*/, '<p>');
         }
-        
         return { title, cleanHtml };
     };
 
@@ -57,30 +46,23 @@ export default function ContenidosTablasPage() {
                 const res = await fetch('/tablasdecontenidos_programa_analitico.md');
                 const text = await res.text();
                 const splitPages = text.split(/<!-- PAGE_START \d+ -->/).filter(p => p.trim());
-                
                 const htmlPages = await Promise.all(splitPages.map(async (p) => {
                     const rawContent = p.split('<!-- PAGE_END -->')[0];
                     const html = await marked.parse(rawContent);
                     const { title, cleanHtml } = extractTitleAndClean(html);
                     return { title, cleanHtml };
                 }));
-                
                 setPages(htmlPages);
                 pageRefs.current = htmlPages.map(() => createRef());
-            } catch (error) {
-                console.error('Error loading content:', error);
-            } finally {
-                setLoading(false);
-            }
+            } catch (error) { console.error('Error loading content:', error); }
+            finally { setLoading(false); }
         };
         fetchContent();
     }, []);
 
     useEffect(() => {
-        if (loading || pages.length === 0 || viewMode === 'pdf') return;
-
-        const observer = new IntersectionObserver(
-            (entries) => {
+        if (loading || pages.length === 0) return;
+        const observer = new IntersectionObserver((entries) => {
                 let bestEntry = null;
                 let maxRatio = 0;
                 entries.forEach((entry) => {
@@ -93,25 +75,12 @@ export default function ContenidosTablasPage() {
                     const idx = parseInt(bestEntry.target.getAttribute('data-page-index'));
                     setCurrentPageIdx(idx);
                 }
-            },
-            { 
-                threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0], 
-                root: mainRef.current,
-                rootMargin: '-10% 0px -10% 0px'
-            }
+            }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0], root: mainRef.current, rootMargin: '-10% 0px -10% 0px' }
         );
-
         const currentRefs = pageRefs.current;
-        currentRefs.forEach((ref) => {
-            if (ref.current) observer.observe(ref.current);
-        });
-
-        return () => {
-            currentRefs.forEach((ref) => {
-                if (ref.current) observer.unobserve(ref.current);
-            });
-        };
-    }, [loading, pages, viewMode]);
+        currentRefs.forEach((ref) => { if (ref.current) observer.observe(ref.current); });
+        return () => { currentRefs.forEach((ref) => { if (ref.current) observer.unobserve(ref.current); }); };
+    }, [loading, pages]);
 
     const handleSave = async (idx, newHtml) => {
         setIsSaving(true);
@@ -119,23 +88,18 @@ export default function ContenidosTablasPage() {
             const updatedPages = [...pages];
             updatedPages[idx] = { ...updatedPages[idx], cleanHtml: newHtml };
             setPages(updatedPages);
-
             let fullContent = '';
             updatedPages.forEach((p, pIdx) => {
                 const fullHtml = `<p><strong>${p.title}</strong></p>\n${p.cleanHtml}`;
                 fullContent += `<!-- PAGE_START ${pIdx + 1} -->\n${fullHtml}\n<!-- PAGE_END -->\n`;
             });
-
             await fetch('/api/save-content', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ content: fullContent, fileName: 'tablasdecontenidos_programa_analitico.md' }),
             });
-        } catch (error) {
-            console.error('Save failed', error);
-        } finally {
-            setIsSaving(false);
-        }
+        } catch (error) { console.error('Save failed', error); }
+        finally { setIsSaving(false); }
     };
 
     const handleExport = () => {
@@ -144,7 +108,6 @@ export default function ContenidosTablasPage() {
             const fullHtml = `<p><strong>${p.title}</strong></p>\n${p.cleanHtml}`;
             fullContent += `<!-- PAGE_START ${pIdx + 1} -->\n${fullHtml}\n<!-- PAGE_END -->\n`;
         });
-
         const blob = new Blob([fullContent], { type: 'text/markdown' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -198,19 +161,20 @@ export default function ContenidosTablasPage() {
     };
 
     if (loading) return (
-        <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center', background: '#0a0a0a' }}>
+        <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center', background: '#f8fafc' }}>
             <div style={{ height: '24px', width: '24px', borderRadius: '50%', border: '2px solid #2563eb', borderTopColor: 'transparent', animation: 'spin 1s linear infinite' }} />
         </div>
     );
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', height: '100vh', width: '100vw', background: '#0a0a0a', color: '#9ca3af', overflow: 'hidden', fontFamily: 'system-ui, sans-serif' }}>
-            <aside style={{ width: '320px', minWidth: '320px', height: '100%', borderRight: '1px solid rgba(255,255,255,0.05)', display: 'flex', flexDirection: 'column', background: '#0f0f0f' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', height: '100vh', width: '100vw', background: '#ffffff', color: '#1e293b', overflow: 'hidden', fontFamily: '"Outfit", sans-serif' }}>
+            {/* SIDEBAR */}
+            <aside style={{ width: '320px', minWidth: '320px', height: '100%', borderRight: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column', background: '#f8fafc' }}>
                 <div style={{ padding: '32px' }}>
-                    <Link href="/" style={{ fontSize: '10px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '2px', color: '#4b5563', textDecoration: 'none' }}>← Dashboard</Link>
+                    <Link href="/" style={{ fontSize: '10px', fontWeight: '900', textTransform: 'uppercase', letterSpacing: '2px', color: '#64748b', textDecoration: 'none' }}>← Volver</Link>
                     <div style={{ marginTop: '32px' }}>
-                        <h1 style={{ color: 'white', fontSize: '24px', fontWeight: 'bold', margin: 0, letterSpacing: '-1px' }}>Tablas</h1>
-                        <p style={{ fontSize: '10px', color: '#4b5563', marginTop: '4px', textTransform: 'uppercase', fontWeight: '900' }}>Tablas de Contenidos 2025</p>
+                        <h1 style={{ color: '#0f172a', fontSize: '28px', fontWeight: '900', margin: 0, letterSpacing: '-1.5px' }}>Tablas</h1>
+                        <p style={{ fontSize: '10px', color: '#2563eb', marginTop: '4px', textTransform: 'uppercase', fontWeight: '900', letterSpacing: '1px' }}>Contenidos 2025</p>
                     </div>
                 </div>
                 <nav style={{ flexGrow: 1, overflowY: 'auto', padding: '0 24px 40px 24px' }} className="custom-scrollbar">
@@ -218,9 +182,9 @@ export default function ContenidosTablasPage() {
                         const displayTitle = p.title.replace("Programa analítico primaria", "").replace("Versión 2025", "").trim() || `Sección ${idx + 1}`;
                         const isMainTitle = idx % 3 === 0;
                         return (
-                            <button key={idx} onClick={() => scrollToPage(idx)} style={{ width: '100%', textAlign: 'left', padding: '8px 0', background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'baseline', gap: '4px', color: currentPageIdx === idx ? 'white' : '#9ca3af', transition: 'color 0.2s', fontSize: isMainTitle ? '13px' : '12px', fontWeight: isMainTitle ? 'bold' : 'normal', fontStyle: isMainTitle ? 'italic' : 'normal', opacity: currentPageIdx === idx ? 1 : 0.7 }}>
+                            <button key={idx} onClick={() => scrollToPage(idx)} style={{ width: '100%', textAlign: 'left', padding: '10px 0', background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'baseline', gap: '4px', color: currentPageIdx === idx ? '#2563eb' : '#64748b', transition: 'color 0.2s', fontSize: isMainTitle ? '13px' : '12px', fontWeight: isMainTitle ? 'bold' : 'normal', opacity: currentPageIdx === idx ? 1 : 0.7 }}>
                                 <span style={{ flexShrink: 0, maxWidth: '85%' }}>{displayTitle}</span>
-                                <div style={{ flexGrow: 1, borderBottom: '1px dotted rgba(255,255,255,0.2)', marginBottom: '4px', margin: '0 4px' }} />
+                                <div style={{ flexGrow: 1, borderBottom: '1px dotted #cbd5e1', marginBottom: '4px', margin: '0 4px' }} />
                                 <span style={{ flexShrink: 0, fontFamily: 'monospace', fontWeight: 'bold' }}>{idx + 1}</span>
                             </button>
                         );
@@ -228,50 +192,47 @@ export default function ContenidosTablasPage() {
                 </nav>
             </aside>
 
-            <main ref={mainRef} onScroll={handleScroll} style={{ flexGrow: 1, height: '100%', overflowY: 'auto', position: 'relative', scrollBehavior: 'smooth' }} className="custom-scrollbar">
-                <header style={{ position: 'sticky', top: 0, zIndex: 100, height: '64px', background: 'rgba(10,10,10,0.8)', backdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px' }}>
+            {/* MAIN */}
+            <main ref={mainRef} onScroll={handleScroll} style={{ flexGrow: 1, height: '100%', overflowY: 'auto', position: 'relative', scrollBehavior: 'smooth', background: '#fff' }} className="custom-scrollbar">
+                <header style={{ position: 'sticky', top: 0, zIndex: 100, height: '64px', background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(20px)', borderBottom: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 40px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                            <span style={{ padding: '4px 8px', background: isEditMode ? 'rgba(37,99,235,0.1)' : 'rgba(255,255,255,0.05)', color: isEditMode ? '#3b82f6' : '#6b7280', fontSize: '10px', fontWeight: 'bold', borderRadius: '4px', textTransform: 'uppercase' }}>{isEditMode ? 'MODO EDICIÓN' : 'MODO LECTURA'}</span>
-                        </div>
-                        
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                            <button onClick={handleExport} style={{ background: '#2563eb', color: 'white', padding: '10px 20px', borderRadius: '12px', border: 'none', fontSize: '12px', fontWeight: 'bold', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 12px rgba(37, 99, 235, 0.3)', transition: 'all 0.2s' }}>
-                                <span>📥</span> EXPORTAR TABLAS
-                            </button>
-                        </div>
+                        <span style={{ padding: '4px 8px', background: 'rgba(37,99,235,0.1)', color: '#2563eb', fontSize: '10px', fontWeight: '900', borderRadius: '4px', textTransform: 'uppercase' }}>{isEditMode ? 'MODO EDICIÓN' : 'MODO LECTURA'}</span>
+                        <button onClick={handleExport} style={{ background: '#2563eb', color: 'white', padding: '10px 20px', borderRadius: '12px', border: 'none', fontSize: '11px', fontWeight: '900', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 12px rgba(37, 99, 235, 0.2)' }}>
+                            📥 EXPORTAR MD
+                        </button>
                     </div>
-                    <button onClick={() => setIsEditMode(!isEditMode)} style={{ background: isEditMode ? '#2563eb' : 'rgba(255,255,255,0.05)', color: 'white', border: 'none', padding: '8px 20px', borderRadius: '10px', fontSize: '11px', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s' }}>{isEditMode ? 'Finalizar Edición' : 'Activar Edición'}</button>
+                    <button onClick={() => setIsEditMode(!isEditMode)} style={{ background: isEditMode ? '#0f172a' : '#f1f5f9', color: isEditMode ? 'white' : '#1e293b', border: 'none', padding: '10px 24px', borderRadius: '12px', fontSize: '11px', fontWeight: '900', cursor: 'pointer', transition: 'all 0.2s' }}>{isEditMode ? 'GUARDAR Y CERRAR' : 'EDITAR CONTENIDO'}</button>
                 </header>
 
                 <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 40px 200px 40px' }}>
                     {pages.map((p, idx) => (
-                        <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '80px 0', borderBottom: '1px solid rgba(255,255,255,0.03)', opacity: currentPageIdx === idx ? 1 : 0.3, transition: 'opacity 0.5s' }}>
-                            <div style={{ marginBottom: '40px' }}>
-                                <h2 style={{ fontSize: '12px', fontWeight: 'bold', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>Sección de Tablas {idx + 1}</h2>
-                                <h1 style={{ fontSize: '32px', fontWeight: '900', color: 'white', letterSpacing: '-1px', margin: 0 }}>{p.title}</h1>
+                        <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '100px 0', borderBottom: '1px solid #f1f5f9', opacity: currentPageIdx === idx ? 1 : 0.3, transition: 'opacity 0.5s' }}>
+                            <div style={{ marginBottom: '48px' }}>
+                                <h2 style={{ fontSize: '11px', fontWeight: '900', color: '#2563eb', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '12px' }}>SECCIÓN {idx + 1}</h2>
+                                <h1 style={{ fontSize: '36px', fontWeight: '900', color: '#0f172a', letterSpacing: '-1.5px', margin: 0, lineHeight: '1.1' }}>{p.title}</h1>
                             </div>
-                            <RichTextEditor key={`${idx}-${isEditMode}`} initialContent={p.cleanHtml} onSave={(newHtml) => handleSave(idx, newHtml)} isSaving={isSaving} editable={isEditMode} />
+                            <RichTextEditor key={`${idx}-${isEditMode}`} initialContent={p.cleanHtml} onSave={(newHtml) => handleSave(idx, newHtml)} isSaving={isSaving} editable={isEditMode} darkMode={false} />
                         </div>
                     ))}
                 </div>
             </main>
 
-            <aside style={{ width: '60px', height: '100%', background: '#0a0a0a', borderLeft: '1px solid rgba(255,255,255,0.03)', position: 'relative', display: 'flex', justifyContent: 'center' }}>
-                <div ref={minimapRef} style={{ position: 'absolute', top: '40px', bottom: '40px', width: '12px', display: 'flex', flexDirection: 'column', gap: '1px' }}>
+            {/* MINIMAP */}
+            <aside style={{ width: '64px', height: '100%', background: '#f8fafc', borderLeft: '1px solid #e2e8f0', position: 'relative', display: 'flex', justifyContent: 'center' }}>
+                <div ref={minimapRef} style={{ position: 'absolute', top: '40px', bottom: '40px', width: '14px', display: 'flex', flexDirection: 'column', gap: '2px' }}>
                     {pages.map((_, idx) => (
-                        <div key={idx} onClick={() => scrollToPage(idx)} style={{ flex: 1, width: '100%', background: currentPageIdx === idx ? 'rgba(37,99,235,0.4)' : 'rgba(255,255,255,0.05)', borderRadius: '1px', transition: 'all 0.2s', cursor: 'pointer' }} />
+                        <div key={idx} onClick={() => scrollToPage(idx)} style={{ flex: 1, width: '100%', background: currentPageIdx === idx ? '#2563eb' : '#e2e8f0', borderRadius: '2px', transition: 'all 0.2s', cursor: 'pointer' }} />
                     ))}
-                    <div onMouseDown={handleMouseDown} style={{ position: 'absolute', left: '50%', top: `${scrollPercentage}%`, transform: 'translate(-50%, -50%)', width: '40px', height: '40px', background: '#2563eb', borderRadius: '50%', cursor: 'grab', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 25px rgba(37,99,235,0.6)', zIndex: 50 }}>
+                    <div onMouseDown={handleMouseDown} style={{ position: 'absolute', left: '50%', top: `${scrollPercentage}%`, transform: 'translate(-50%, -50%)', width: '44px', height: '44px', background: '#2563eb', borderRadius: '50%', cursor: 'grab', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 20px rgba(37,99,235,0.4)', zIndex: 50 }}>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m7 15 5 5 5-5" /><path d="m7 9 5-5 5 5" /></svg>
                     </div>
                 </div>
             </aside>
             <style jsx global>{`
-                .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-                .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.05); border-radius: 10px; }
-                .ProseMirror p { font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem; color: #9ca3af; }
-                .ProseMirror h1 { font-size: 3rem; font-weight: 900; color: white; margin-top: 3rem; margin-bottom: 1.5rem; }
+                .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+                .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+                .ProseMirror p { font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem; color: #475569; }
+                .ProseMirror h1 { font-size: 3rem; font-weight: 900; color: #0f172a; margin-top: 3rem; margin-bottom: 1.5rem; }
             `}</style>
         </div>
     );
