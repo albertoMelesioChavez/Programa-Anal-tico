@@ -1,4 +1,3 @@
-import Database from 'better-sqlite3';
 import path from 'path';
 import fs from 'fs';
 
@@ -6,25 +5,20 @@ let db = null;
 
 export function getDb() {
     if (!db) {
-        // En Vercel, la ruta puede variar. Intentamos resolverla desde la raíz del proyecto.
-        const dbPath = path.join(process.cwd(), 'database', 'app.db');
-        
-        if (!fs.existsSync(dbPath)) {
-            console.error(`Database not found at: ${dbPath}`);
-            // Intentar una ruta alternativa común en Vercel
-            const altPath = path.join(process.cwd(), '..', 'database', 'app.db');
-            if (fs.existsSync(altPath)) {
-                db = new Database(altPath, { readonly: true });
+        try {
+            const Database = require('better-sqlite3');
+            const dbPath = path.join(process.cwd(), 'database', 'app.db');
+            
+            if (fs.existsSync(dbPath)) {
+                db = new Database(dbPath, { readonly: true });
             } else {
-                throw new Error(`Database file not found at ${dbPath} or ${altPath}`);
+                console.warn("DB file not found, using null db");
+                return null;
             }
-        } else {
-            // Usamos readonly: true para evitar problemas de permisos en Vercel
-            db = new Database(dbPath, { readonly: true });
+        } catch (e) {
+            console.warn("better-sqlite3 could not be loaded, using fallback");
+            return null;
         }
-        
-        db.pragma('foreign_keys = ON');
-        db.pragma('journal_mode = WAL');
     }
     return db;
 }
