@@ -12,22 +12,16 @@ export async function GET() {
         cn.descripcion as contenido_nacional_desc,
         ce.descripcion as contenido_estatal_desc,
         pda.descripcion as pda_desc,
-        p.metodologia, p.actividades, p.recursos, p.evaluacion,
-        p.ejes_articuladores, p.secuencia_inicio, p.secuencia_desarrollo, p.secuencia_cierre
-      FROM planeaciones p
-      LEFT JOIN fases f ON p.fase_id = f.id
-      LEFT JOIN grados g ON p.grado_id = g.id
-      LEFT JOIN lenguajes_artisticos l ON p.lenguaje_id = l.id
-      LEFT JOIN contenidos_nacionales cn ON p.contenido_nacional_id = cn.id
-      LEFT JOIN contenidos_estatales ce ON p.contenido_estatal_id = ce.id
-      LEFT JOIN pdas pda ON p.pda_id = pda.id
-      ORDER BY p.fecha_creacion DESC
-    `).all();
-
-        return NextResponse.json({ planeaciones });
+        const planeaciones = db.prepare('SELECT * FROM planeaciones ORDER BY fecha_creacion DESC').all();
+        return NextResponse.json(planeaciones);
     } catch (error) {
-        console.error('Database error fetching planeaciones:', error);
-        return NextResponse.json({ error: 'Failed to fetch planeaciones' }, { status: 500 });
+        console.error('Planeaciones fallback:', error);
+        try {
+            const data = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'database/planeaciones.json'), 'utf8'));
+            return NextResponse.json(data);
+        } catch (e) {
+            return NextResponse.json([]);
+        }
     }
 }
 

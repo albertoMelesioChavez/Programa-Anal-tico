@@ -1,29 +1,22 @@
 import { getDb } from '@/lib/db';
 import { NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
 
 export async function GET(request) {
+    const { searchParams } = new URL(request.url);
+    const contenido_id = searchParams.get('contenido_id');
+
     try {
-        const { searchParams } = new URL(request.url);
-        const grado_id = searchParams.get('grado_id');
-        const lenguaje_id = searchParams.get('lenguaje_id');
-
-        if (!grado_id || !lenguaje_id) {
-            return NextResponse.json({ error: 'grado_id and lenguaje_id are required' }, { status: 400 });
-        }
-
         const db = getDb();
-
-        // Fetch PDAs for this Grado and Lenguaje
-        const pdas = db.prepare(
-            'SELECT * FROM pdas WHERE grado_id = ? AND lenguaje_id = ? ORDER BY id ASC'
-        ).all(grado_id, lenguaje_id);
-
-        return NextResponse.json({
-            pdas
-        });
-
+        const pdas = db.prepare('SELECT * FROM pdas WHERE contenido_id = ?').all(contenido_id);
+        return NextResponse.json(pdas);
     } catch (error) {
-        console.error('Database error fetching PDAs:', error);
-        return NextResponse.json({ error: 'Failed to fetch PDAs' }, { status: 500 });
+        try {
+            const data = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'database/pdas.json'), 'utf8'));
+            return NextResponse.json(data.filter(p => p.contenido_id == contenido_id));
+        } catch (e) {
+            return NextResponse.json([]);
+        }
     }
 }
