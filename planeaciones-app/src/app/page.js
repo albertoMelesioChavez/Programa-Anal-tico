@@ -138,9 +138,6 @@ export default function Home() {
                     }}>
                         {showForm ? (
                             <div>
-                                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '24px' }}>
-                                    <button onClick={() => setShowForm(false)} style={{ background: 'transparent', border: 'none', color: '#ef4444', cursor: 'pointer', fontWeight: '800', fontSize: '14px' }}>CERRAR FORMULARIO</button>
-                                </div>
                                 <PlaneacionForm onSaved={handleSaved} onCancel={() => setShowForm(false)} />
                             </div>
                         ) : (

@@ -98,14 +98,6 @@ export default function PlaneacionForm({ onSave, onCancel }) {
         <div style={{ minHeight: '100vh', background: theme.bg, transition: 'all 0.3s ease', padding: '40px 20px' }}>
             <div style={{ maxWidth: '900px', margin: '0 auto', background: theme.docBg, color: theme.text, borderRadius: '4px', boxShadow: '0 20px 50px rgba(0,0,0,0.1)', overflow: 'hidden' }} className="document-container">
                 
-                {/* Toolbar (Header) */}
-                <div style={{ padding: '16px 40px', background: '#f8fafc', borderBottom: `1px solid #e2e8f0`, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                        <span style={{ fontWeight: '900', fontSize: '11px', color: '#64748b', textTransform: 'uppercase', letterSpacing: '1px' }}>Editor de Planeación</span>
-                    </div>
-                    <button onClick={onCancel} style={{ padding: '8px 20px', borderRadius: '6px', background: 'transparent', border: `1px solid #e2e8f0`, color: '#64748b', fontSize: '12px', fontWeight: '700', cursor: 'pointer' }}>Cerrar</button>
-                </div>
-
                 {/* Paper Content */}
                 <div style={{ padding: '60px 80px' }} className="document-paper">
                     
@@ -256,29 +248,44 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                     <span style={{ fontSize: '12px', fontWeight: '800', color: '#0f172a' }}>{formData.titulo || 'Sin Título'}</span>
                 </div>
                 <div style={{ width: '1px', height: '30px', background: '#e2e8f0' }} />
-                <button 
-                    onClick={handleSave} 
-                    disabled={loading}
-                    style={{ 
-                        background: '#2563eb', 
-                        color: '#fff', 
-                        padding: '12px 40px', 
-                        borderRadius: '100px', 
-                        border: 'none', 
-                        fontSize: '13px', 
-                        fontWeight: '900', 
-                        cursor: 'pointer',
-                        boxShadow: '0 10px 20px rgba(37, 99, 235, 0.25)',
-                        transition: 'all 0.2s',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px'
-                    }}
-                    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                >
-                    {loading ? 'GUARDANDO...' : '💾 GUARDAR PLANEACIÓN'}
-                </button>
+                <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                    <button 
+                        onClick={onCancel}
+                        style={{ 
+                            background: 'transparent', 
+                            color: '#64748b', 
+                            padding: '10px 20px', 
+                            borderRadius: '100px', 
+                            border: '1px solid #e2e8f0', 
+                            fontSize: '12px', 
+                            fontWeight: '700', 
+                            cursor: 'pointer'
+                        }}
+                    >
+                        Cerrar
+                    </button>
+                    <button 
+                        onClick={handleSave} 
+                        disabled={loading}
+                        style={{ 
+                            background: '#2563eb', 
+                            color: '#fff', 
+                            padding: '12px 40px', 
+                            borderRadius: '100px', 
+                            border: 'none', 
+                            fontSize: '13px', 
+                            fontWeight: '900', 
+                            cursor: 'pointer',
+                            boxShadow: '0 10px 20px rgba(37, 99, 235, 0.25)',
+                            transition: 'all 0.2s',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px'
+                        }}
+                    >
+                        {loading ? 'GUARDANDO...' : '💾 GUARDAR'}
+                    </button>
+                </div>
             </div>
 
             <style jsx>{`
