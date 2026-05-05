@@ -10,7 +10,7 @@ export function getDb() {
             const dbPath = path.join(process.cwd(), 'database', 'app.db');
             
             if (fs.existsSync(dbPath)) {
-                db = new Database(dbPath, { readonly: true });
+                db = new Database(dbPath);
             } else {
                 console.warn("DB file not found, using null db");
                 return null;
