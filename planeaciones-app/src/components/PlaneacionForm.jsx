@@ -95,7 +95,7 @@ export default function PlaneacionForm({ onSave, onCancel }) {
     };
 
     return (
-        <div style={{ minHeight: '100vh', background: theme.bg, transition: 'all 0.3s ease', padding: '20px 10px' }}>
+        <div className="form-page-container" style={{ minHeight: '100vh', background: theme.bg, transition: 'all 0.3s ease', padding: '20px 10px' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto', background: theme.docBg, color: theme.text, borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', overflow: 'hidden' }} className="document-container">
                 
                 {/* Paper Content */}
@@ -295,11 +295,12 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                     to { transform: translate(-50%, 0); opacity: 1; }
                 }
                 @media (max-width: 640px) {
-                    .document-container { margin: 0 !important; border-radius: 0 !important; max-width: 100% !important; border: none !important; }
-                    .document-paper { padding: 20px 15px !important; }
+                    .form-page-container { padding: 0 !important; }
+                    .document-container { margin: 0 !important; border-radius: 0 !important; max-width: 100% !important; border: none !important; box-shadow: none !important; }
+                    .document-paper { padding: 30px 15px !important; }
                     table tr { display: flex; flex-direction: column; }
                     table td { width: 100% !important; border: none !important; padding: 10px 0 !important; }
-                    .sticky-action-bar { bottom: 10px !important; padding: 10px 20px !important; gap: 10px !important; width: 90% !important; }
+                    .sticky-action-bar { bottom: 0 !important; border-radius: 0 !important; width: 100% !important; padding: 15px !important; border-left: none !important; border-right: none !important; border-bottom: none !important; }
                 }
             `}</style>
         </div>
