@@ -1,5 +1,7 @@
 import { getDb } from '@/lib/db';
 import { NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
 
 export async function GET() {
     try {
@@ -19,7 +21,18 @@ export async function GET() {
             ejes_articuladores
         });
     } catch (error) {
-        console.error('Database error:', error);
+        console.error('Database error in catalogos, attempting JSON fallback:', error);
+        
+        try {
+            const jsonPath = path.join(process.cwd(), 'database', 'catalogs.json');
+            if (fs.existsSync(jsonPath)) {
+                const rawData = fs.readFileSync(jsonPath, 'utf8');
+                return NextResponse.json(JSON.parse(rawData));
+            }
+        } catch (jsonError) {
+            console.error('JSON Fallback also failed:', jsonError);
+        }
+
         return NextResponse.json({ error: 'Failed to fetch catalogs' }, { status: 500 });
     }
 }
