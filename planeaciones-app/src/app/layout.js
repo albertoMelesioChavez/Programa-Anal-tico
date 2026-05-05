@@ -1,6 +1,7 @@
 import './globals.css';
 
 export const metadata = {
+    metadataBase: new URL('https://programa-anal-tico.vercel.app'),
     title: 'Programa Analítico de Artes 2025',
     description: 'Plataforma inteligente para la gestión, edición y creación de planeaciones analíticas de primaria (NEM).',
     openGraph: {
