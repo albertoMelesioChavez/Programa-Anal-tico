@@ -1,26 +1,24 @@
 import { NextResponse } from 'next/server';
-import data from '@/lib/data/catalogs.json';
-
-const isProd = process.env.NODE_ENV === 'production';
+import { db } from '@/lib/db';
+import dataFallback from '@/lib/data/catalogs.json';
 
 export async function GET() {
-    if (!isProd) {
-        try {
-            const { getDb } = require('@/lib/db');
-            const db = getDb();
-            if (db) {
-                const fases = db.prepare('SELECT * FROM fases ORDER BY id ASC').all();
-                const grados = db.prepare('SELECT * FROM grados ORDER BY id ASC').all();
-                const lenguajes = db.prepare('SELECT * FROM lenguajes_artisticos ORDER BY id ASC').all();
-                const campos_formativos = db.prepare('SELECT * FROM campos_formativos ORDER BY id ASC').all();
-                const ejes_articuladores = db.prepare('SELECT * FROM ejes_articuladores ORDER BY id ASC').all();
+    try {
+        // En LibSQL/Turso, podemos ejecutar múltiples queries o secuenciales
+        const fases = await db.execute('SELECT * FROM fases ORDER BY id ASC');
+        const grados = await db.execute('SELECT * FROM grados ORDER BY id ASC');
+        const lenguajes = await db.execute('SELECT * FROM lenguajes_artisticos ORDER BY id ASC');
+        const ejes_articuladores = await db.execute('SELECT * FROM ejes_articuladores ORDER BY id ASC');
 
-                return NextResponse.json({ fases, grados, lenguajes, campos_formativos, ejes_articuladores });
-            }
-        } catch (e) {
-            console.error("DB Error in catalogs");
-        }
+        return NextResponse.json({ 
+            fases: fases.rows, 
+            grados: grados.rows, 
+            lenguajes: lenguajes.rows, 
+            ejes_articuladores: ejes_articuladores.rows 
+        });
+    } catch (error) {
+        console.error("Turso Catalogs Error:", error);
+        // Fallback a los datos estáticos si falla la conexión
+        return NextResponse.json(dataFallback);
     }
-
-    return NextResponse.json(data);
 }

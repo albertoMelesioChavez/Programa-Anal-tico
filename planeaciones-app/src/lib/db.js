@@ -1,24 +1,23 @@
-import path from 'path';
-import fs from 'fs';
+import { createClient } from '@libsql/client';
 
-let db = null;
+// Turso Cloud Config
+const url = process.env.TURSO_DATABASE_URL?.trim();
+const authToken = process.env.TURSO_AUTH_TOKEN?.trim();
 
-export function getDb() {
-    if (!db) {
-        try {
-            const Database = require('better-sqlite3');
-            const dbPath = path.join(process.cwd(), 'database', 'app.db');
-            
-            if (fs.existsSync(dbPath)) {
-                db = new Database(dbPath);
-            } else {
-                console.warn("DB file not found, using null db");
-                return null;
-            }
-        } catch (e) {
-            console.warn("better-sqlite3 could not be loaded, using fallback");
-            return null;
-        }
-    }
-    return db;
+// Si no hay URL de Turso, usamos el archivo local
+const dbUrl = url || "file:database/app.db";
+
+export const db = createClient({
+  url: dbUrl,
+  authToken: authToken,
+});
+
+// Helper para manejar queries de forma consistente
+export async function query(sql, params = []) {
+  try {
+    return await db.execute({ sql, args: params });
+  } catch (error) {
+    console.error("Database Query Error:", error);
+    throw error;
+  }
 }
