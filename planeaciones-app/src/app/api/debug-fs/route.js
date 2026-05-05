@@ -1,4 +1,3 @@
-import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
@@ -7,28 +6,19 @@ export async function GET() {
     const dbPath = path.join(rootDir, 'database', 'app.db');
     
     let files = [];
-    try {
-        files = fs.readdirSync(rootDir);
-    } catch (e) {
-        files = ['Error reading root: ' + e.message];
-    }
+    try { files = fs.readdirSync(rootDir); } catch (e) { files = [e.message]; }
 
     let dbExists = fs.existsSync(dbPath);
     let databaseFolder = [];
-    try {
-        databaseFolder = fs.readdirSync(path.join(rootDir, 'database'));
-    } catch (e) {
-        databaseFolder = ['Error reading database folder: ' + e.message];
-    }
+    try { databaseFolder = fs.readdirSync(path.join(rootDir, 'database')); } catch (e) { databaseFolder = [e.message]; }
 
-    return NextResponse.json({
-        rootDir,
-        dbPath,
-        dbExists,
-        files,
-        databaseFolder,
-        env: process.env.NODE_ENV,
-        arch: process.arch,
-        platform: process.platform
-    });
+    const report = `
+        ROOT: ${rootDir}
+        DB PATH: ${dbPath}
+        DB EXISTS: ${dbExists}
+        ROOT FILES: ${files.join(', ')}
+        DB FOLDER: ${databaseFolder.join(', ')}
+    `;
+
+    return new Response(report, { headers: { 'Content-Type': 'text/plain' } });
 }
