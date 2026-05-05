@@ -21,8 +21,8 @@ export async function GET(request) {
             const estData = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'database/contenidos_estatales.json'), 'utf8'));
             
             return NextResponse.json({
-                nacionales: nacData.filter(c => c.fase_id == fase_id),
-                estatales: estData.filter(c => c.fase_id == fase_id && c.lenguaje_id == lenguaje_id)
+                nacionales: nacData.filter(c => String(c.fase_id) === String(fase_id)),
+                estatales: estData.filter(c => String(c.fase_id) === String(fase_id) && String(c.lenguaje_id) === String(lenguaje_id))
             });
         } catch (e) {
             return NextResponse.json({ error: 'Failed' }, { status: 500 });

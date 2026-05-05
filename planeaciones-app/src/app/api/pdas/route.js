@@ -14,7 +14,7 @@ export async function GET(request) {
     } catch (error) {
         try {
             const data = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'database/pdas.json'), 'utf8'));
-            return NextResponse.json(data.filter(p => p.contenido_id == contenido_id));
+            return NextResponse.json(data.filter(p => String(p.contenido_id) === String(contenido_id)));
         } catch (e) {
             return NextResponse.json([]);
         }
