@@ -13,6 +13,7 @@ export default function PlaneacionForm({ onSave, onCancel }) {
     const [orientaciones, setOrientaciones] = useState([]);
     const [actividadesLibro, setActividadesLibro] = useState([]);
     const [materiales, setMateriales] = useState([]);
+    const [showOrientaciones, setShowOrientaciones] = useState(false);
 
     const [formData, setFormData] = useState({
         titulo: '',
@@ -34,49 +35,67 @@ export default function PlaneacionForm({ onSave, onCancel }) {
 
     useEffect(() => {
         fetch('/api/catalogos')
-            .then(res => res.json())
-            .then(data => setCatalogs(data));
+            .then(res => res.ok ? res.json() : null)
+            .then(data => data && setCatalogs(data))
+            .catch(err => console.error("Error loading catalogs:", err));
     }, []);
 
     useEffect(() => {
         if (formData.fase_id && formData.lenguaje_id) {
             fetch(`/api/contenidos?fase_id=${formData.fase_id}&lenguaje_id=${formData.lenguaje_id}`)
-                .then(res => res.json())
-                .then(data => setContenidos(data));
+                .then(res => res.ok ? res.json() : { nacionales: [], estatales: [] })
+                .then(data => setContenidos(data))
+                .catch(() => setContenidos({ nacionales: [], estatales: [] }));
             
             fetch(`/api/orientaciones?fase_id=${formData.fase_id}&lenguaje_id=${formData.lenguaje_id}`)
-                .then(res => res.json())
-                .then(data => setOrientaciones(data));
+                .then(res => res.ok ? res.json() : [])
+                .then(data => setOrientaciones(data))
+                .catch(() => setOrientaciones([]));
             
             fetch(`/api/material-consulta?lenguaje_id=${formData.lenguaje_id}`)
-                .then(res => res.json())
-                .then(data => setMateriales(data));
+                .then(res => res.ok ? res.json() : [])
+                .then(data => setMateriales(data))
+                .catch(() => setMateriales([]));
         }
     }, [formData.fase_id, formData.lenguaje_id]);
 
     useEffect(() => {
         if (formData.contenido_nacional_id) {
             fetch(`/api/pdas?contenido_id=${formData.contenido_nacional_id}`)
-                .then(res => res.json())
-                .then(data => setPdas(data));
+                .then(res => res.ok ? res.json() : [])
+                .then(data => setPdas(data))
+                .catch(() => setPdas([]));
         }
     }, [formData.contenido_nacional_id]);
 
     useEffect(() => {
         if (formData.grado_id && formData.lenguaje_id) {
             fetch(`/api/actividades-libro?grado_id=${formData.grado_id}&lenguaje_id=${formData.lenguaje_id}`)
-                .then(res => res.json())
-                .then(data => setActividadesLibro(data));
+                .then(res => res.ok ? res.json() : [])
+                .then(data => setActividadesLibro(data))
+                .catch(() => setActividadesLibro([]));
         }
     }, [formData.grado_id, formData.lenguaje_id]);
 
     const handleSave = async () => {
         setLoading(true);
-        await onSave(formData);
+        try {
+            await onSave(formData);
+        } catch (e) {
+            console.error(e);
+        }
         setLoading(false);
     };
 
-    const filteredGrados = catalogs.grados.filter(g => g.fase_id == formData.fase_id);
+    const toggleEje = (nombre) => {
+        const current = formData.ejes_articuladores ? formData.ejes_articuladores.split(', ') : [];
+        const next = current.includes(nombre) 
+            ? current.filter(e => e !== nombre) 
+            : [...current, nombre];
+        setFormData({ ...formData, ejes_articuladores: next.join(', ') });
+    };
+
+    const filteredGrados = (catalogs?.grados || []).filter(g => g.fase_id == formData.fase_id);
 
     return (
         <div style={{ maxWidth: '1000px', margin: '0 auto', background: 'rgba(255,255,255,0.02)', borderRadius: '32px', border: '1px solid rgba(255,255,255,0.05)', overflow: 'hidden', boxShadow: '0 40px 100px rgba(0,0,0,0.5)' }} className="wizard-container">
@@ -97,15 +116,15 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                 {step === 1 && (
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px' }}>
                         <div>
-                            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Título</label>
-                            <input type="text" value={formData.titulo} onChange={(e) => setFormData({...formData, titulo: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff' }} />
+                            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Título de la Planeación</label>
+                            <input type="text" value={formData.titulo} onChange={(e) => setFormData({...formData, titulo: e.target.value})} placeholder="Ej. El ritmo en la danza" style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff' }} />
                         </div>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px' }}>
                             <div>
                                 <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Fase</label>
                                 <select value={formData.fase_id} onChange={(e) => setFormData({...formData, fase_id: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff' }}>
                                     <option value="">Seleccione...</option>
-                                    {catalogs.fases.map(f => <option key={f.id} value={f.id}>{f.nombre}</option>)}
+                                    {(catalogs?.fases || []).map(f => <option key={f.id} value={f.id}>{f.nombre}</option>)}
                                 </select>
                             </div>
                             <div>
@@ -119,8 +138,27 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                                 <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Lenguaje</label>
                                 <select value={formData.lenguaje_id} onChange={(e) => setFormData({...formData, lenguaje_id: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff' }}>
                                     <option value="">Seleccione...</option>
-                                    {catalogs.lenguajes.map(l => <option key={l.id} value={l.id}>{l.nombre}</option>)}
+                                    {(catalogs?.lenguajes || []).map(l => <option key={l.id} value={l.id}>{l.nombre}</option>)}
                                 </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Ejes Articuladores</label>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                {(catalogs?.ejes_articuladores || []).map(eje => {
+                                    const selected = formData.ejes_articuladores.includes(eje.nombre);
+                                    return (
+                                        <button key={eje.id} type="button" onClick={() => toggleEje(eje.nombre)}
+                                            style={{
+                                                padding: '8px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: '500',
+                                                border: selected ? '1px solid #3b82f6' : '1px solid rgba(255,255,255,0.1)',
+                                                background: selected ? 'rgba(59,130,246,0.15)' : 'rgba(255,255,255,0.03)',
+                                                color: selected ? '#60a5fa' : '#94a3b8', cursor: 'pointer', transition: 'all 0.2s'
+                                            }}>
+                                            {selected ? '✓ ' : ''}{eje.nombre}
+                                        </button>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -131,30 +169,52 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                         <div>
                             <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Contenido Nacional</label>
                             <select value={formData.contenido_nacional_id} onChange={(e) => setFormData({...formData, contenido_nacional_id: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff' }}>
-                                <option value="">Seleccione...</option>
-                                {contenidos.nacionales.map(c => <option key={c.id} value={c.id}>{c.descripcion}</option>)}
+                                <option value="">Seleccione Contenido...</option>
+                                {(contenidos?.nacionales || []).map(c => <option key={c.id} value={c.id}>{c.descripcion}</option>)}
                             </select>
                         </div>
                         <div>
-                            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>PDA</label>
+                            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>PDA (Proceso de Desarrollo)</label>
                             <select value={formData.pda_id} onChange={(e) => setFormData({...formData, pda_id: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff' }}>
-                                <option value="">Seleccione...</option>
-                                {pdas.map(p => <option key={p.id} value={p.id}>{p.descripcion}</option>)}
+                                <option value="">Seleccione PDA...</option>
+                                {(pdas || []).map(p => <option key={p.id} value={p.id}>{p.descripcion}</option>)}
                             </select>
                         </div>
+                        {orientaciones.length > 0 && (
+                            <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '16px' }}>
+                                <button type="button" onClick={() => setShowOrientaciones(!showOrientaciones)}
+                                    style={{ background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)', color: '#34d399', padding: '10px 20px', borderRadius: '12px', cursor: 'pointer', fontSize: '13px', fontWeight: '600', width: '100%', textAlign: 'left' }}>
+                                    📖 {showOrientaciones ? 'Ocultar' : 'Ver'} Orientaciones Didácticas ({orientaciones.length})
+                                </button>
+                                {showOrientaciones && (
+                                    <div style={{ marginTop: '12px', maxHeight: '200px', overflowY: 'auto', borderRadius: '12px', background: 'rgba(16,185,129,0.05)', border: '1px solid rgba(16,185,129,0.1)', padding: '16px', fontSize: '13px', color: '#d1d5db', lineHeight: '1.6' }}>
+                                        {orientaciones.map((o, i) => <div key={i} style={{ marginBottom: '10px' }}>• {o.descripcion}</div>)}
+                                    </div>
+                                )}
+                            </div>
+                        )}
                     </div>
                 )}
 
                 {step === 3 && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         <div>
-                            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Metodología</label>
-                            <input type="text" value={formData.metodologia} onChange={(e) => setFormData({...formData, metodologia: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff' }} />
+                            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Metodología / Proyecto</label>
+                            <input type="text" value={formData.metodologia} onChange={(e) => setFormData({...formData, metodologia: e.target.value})} placeholder="Ej. Aprendizaje Basado en Proyectos" style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff' }} />
                         </div>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
-                            <textarea placeholder="Inicio" value={formData.secuencia_inicio} onChange={(e) => setFormData({...formData, secuencia_inicio: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff', minHeight: '100px' }} />
-                            <textarea placeholder="Desarrollo" value={formData.secuencia_desarrollo} onChange={(e) => setFormData({...formData, secuencia_desarrollo: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff', minHeight: '150px' }} />
-                            <textarea placeholder="Cierre" value={formData.secuencia_cierre} onChange={(e) => setFormData({...formData, secuencia_cierre: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff', minHeight: '100px' }} />
+                            <div>
+                                <label style={{ fontSize: '11px', fontWeight: 'bold', color: '#34d399', marginBottom: '8px', display: 'block' }}>Inicio</label>
+                                <textarea value={formData.secuencia_inicio} onChange={(e) => setFormData({...formData, secuencia_inicio: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff', minHeight: '80px' }} />
+                            </div>
+                            <div>
+                                <label style={{ fontSize: '11px', fontWeight: 'bold', color: '#60a5fa', marginBottom: '8px', display: 'block' }}>Desarrollo</label>
+                                <textarea value={formData.secuencia_desarrollo} onChange={(e) => setFormData({...formData, secuencia_desarrollo: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff', minHeight: '120px' }} />
+                            </div>
+                            <div>
+                                <label style={{ fontSize: '11px', fontWeight: 'bold', color: '#f472b6', marginBottom: '8px', display: 'block' }}>Cierre</label>
+                                <textarea value={formData.secuencia_cierre} onChange={(e) => setFormData({...formData, secuencia_cierre: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff', minHeight: '80px' }} />
+                            </div>
                         </div>
                     </div>
                 )}
@@ -163,11 +223,11 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         <div>
                             <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Evaluación Formativa</label>
-                            <textarea value={formData.evaluacion} onChange={(e) => setFormData({...formData, evaluacion: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff', minHeight: '120px' }} />
+                            <textarea value={formData.evaluacion} onChange={(e) => setFormData({...formData, evaluacion: e.target.value})} placeholder="Instrumentos de evaluación..." style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff', minHeight: '120px' }} />
                         </div>
                         <div>
                             <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>Recursos</label>
-                            <textarea value={formData.recursos} onChange={(e) => setFormData({...formData, recursos: e.target.value})} style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff', minHeight: '100px' }} />
+                            <textarea value={formData.recursos} onChange={(e) => setFormData({...formData, recursos: e.target.value})} placeholder="Materiales necesarios..." style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '16px', color: '#fff', minHeight: '100px' }} />
                         </div>
                     </div>
                 )}

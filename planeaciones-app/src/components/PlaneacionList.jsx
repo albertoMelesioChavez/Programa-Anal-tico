@@ -47,6 +47,7 @@ export default function PlaneacionList({ planeaciones, onDelete }) {
                             </div>
                         </div>
                     </div>
+                </div>
 
                     {/* Contenido curricular */}
                     {p.contenido_nacional_desc && (
