@@ -236,11 +236,11 @@ function ContenidosArtesContent() {
                     </div>
                 </header>
 
-                <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 20px 200px 20px' }}>
+                <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px 200px 40px' }}>
                     {pages.map((p, idx) => (
-                        <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '40px 0', borderBottom: `1px solid ${theme.border}`, opacity: currentPageIdx === idx ? 1 : 0.4, transition: 'opacity 0.5s' }}>
-                            <h2 style={{ fontSize: '11px', fontWeight: 'bold', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>Página {idx + 1}</h2>
-                            <h1 style={{ fontSize: '32px', fontWeight: '900', color: theme.text, letterSpacing: '-1px', margin: '0 0 24px 0' }}>{p.title}</h1>
+                        <div key={idx} ref={pageRefs.current[idx]} data-page-index={idx} style={{ padding: '20px 0', borderBottom: `1px solid ${theme.border}`, opacity: currentPageIdx === idx ? 1 : 0.6, transition: 'opacity 0.3s' }}>
+                            <h2 style={{ fontSize: '10px', fontWeight: '900', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '4px' }}>Página {idx + 1}</h2>
+                            <h1 style={{ fontSize: '28px', fontWeight: '900', color: theme.text, letterSpacing: '-1px', margin: '0 0 16px 0' }}>{p.title}</h1>
                             <RichTextEditor key={`${idx}-${isEditMode}-${darkMode}`} initialContent={p.cleanHtml} onSave={(newHtml) => handleSave(idx, newHtml)} isSaving={isSaving} editable={isEditMode} darkMode={darkMode} />
                         </div>
                     ))}

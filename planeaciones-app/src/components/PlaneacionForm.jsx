@@ -95,11 +95,11 @@ export default function PlaneacionForm({ onSave, onCancel }) {
     };
 
     return (
-        <div style={{ minHeight: '100vh', background: theme.bg, transition: 'all 0.3s ease', padding: '40px 20px' }}>
-            <div style={{ maxWidth: '900px', margin: '0 auto', background: theme.docBg, color: theme.text, borderRadius: '4px', boxShadow: '0 20px 50px rgba(0,0,0,0.1)', overflow: 'hidden' }} className="document-container">
+        <div style={{ minHeight: '100vh', background: theme.bg, transition: 'all 0.3s ease', padding: '20px 10px' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto', background: theme.docBg, color: theme.text, borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', overflow: 'hidden' }} className="document-container">
                 
                 {/* Paper Content */}
-                <div style={{ padding: '60px 80px' }} className="document-paper">
+                <div style={{ padding: '40px 60px' }} className="document-paper">
                     
                     {/* Header Section */}
                     <div style={{ marginBottom: '40px', textAlign: 'center' }}>
