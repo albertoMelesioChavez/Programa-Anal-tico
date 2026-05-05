@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export default function PlaneacionForm({ onSave, onCancel }) {
+export default function PlaneacionForm({ onSaved, onCancel }) {
     const [loading, setLoading] = useState(false);
     const [darkMode] = useState(false); // Forced Light Mode
     const [catalogs, setCatalogs] = useState({ fases: [], grados: [], lenguajes: [], ejes_articuladores: [] });
@@ -61,10 +61,17 @@ export default function PlaneacionForm({ onSave, onCancel }) {
         }
     }, [formData.contenido_nacional_id, formData.contenido_estatal_id]);
 
-    const handleSave = async () => {
+    const handleSubmit = async () => {
         setLoading(true);
         try {
-            await onSave(formData);
+            const res = await fetch('/api/planeaciones', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+            if (res.ok) {
+                onSaved();
+            }
         } catch (e) {
             console.error(e);
         }
@@ -95,7 +102,7 @@ export default function PlaneacionForm({ onSave, onCancel }) {
     };
 
     return (
-        <div className="form-page-container" style={{ minHeight: '100vh', background: theme.docBg, transition: 'all 0.3s ease', padding: '0' }}>
+        <div className="form-page-container" style={{ minHeight: '100vh', background: theme.docBg, transition: 'all 0.3s ease', padding: '0', position: 'relative' }}>
             <div style={{ width: '100%', background: theme.docBg, color: theme.text }} className="document-container">
                 
                 {/* Content Area */}
@@ -129,7 +136,7 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                     </div>
 
                     {/* Ejes Articuladores */}
-                    <div style={{ marginBottom: '40px' }}>
+                    <div style={{ marginBottom: '40px', padding: '0 24px' }}>
                         <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '16px' }}>Ejes Articuladores</label>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                             {(catalogs?.ejes_articuladores || []).map(eje => {
@@ -145,7 +152,7 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                     </div>
 
                     {/* Currículo Section */}
-                    <div style={{ marginBottom: '50px' }}>
+                    <div style={{ marginBottom: '50px', padding: '0 24px' }}>
                         <h4 style={{ fontSize: '12px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', borderLeft: `4px solid ${theme.accent}`, paddingLeft: '12px', marginBottom: '24px' }}>I. Contenidos y PDA</h4>
                         
                         <div style={{ marginBottom: '24px' }}>
@@ -182,7 +189,7 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                     </div>
 
                     {/* Didáctica Section */}
-                    <div style={{ marginBottom: '50px' }}>
+                    <div style={{ marginBottom: '50px', padding: '0 24px' }}>
                         <h4 style={{ fontSize: '12px', fontWeight: '900', color: theme.success, textTransform: 'uppercase', borderLeft: `4px solid ${theme.success}`, paddingLeft: '12px', marginBottom: '24px' }}>II. Secuencia Didáctica</h4>
                         
                         <div style={{ marginBottom: '24px' }}>
@@ -211,7 +218,7 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                     </div>
 
                     {/* Evaluación Section */}
-                    <div>
+                    <div style={{ padding: '0 24px' }}>
                         <h4 style={{ fontSize: '12px', fontWeight: '900', color: '#f59e0b', textTransform: 'uppercase', borderLeft: '4px solid #f59e0b', paddingLeft: '12px', marginBottom: '24px' }}>III. Evaluación y Recursos</h4>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
                             {['evaluacion', 'recursos'].map(key => (
@@ -224,74 +231,79 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                     </div>
                 </div>
 
-            </div>
-
-            {/* Sticky Action Bar (Subre y baja con el scroll, contenida) */}
-            <div className="sticky-action-bar" style={{
-                position: 'sticky',
-                bottom: '30px',
-                zIndex: 1000,
-                background: '#fff',
-                padding: '12px 32px',
-                borderRadius: '100px',
-                boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
-                border: '1px solid #e2e8f0',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '24px',
-                width: 'fit-content',
-                margin: '20px auto 40px auto'
-            }}>
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <span style={{ fontSize: '9px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>Documento</span>
-                    <span style={{ fontSize: '12px', fontWeight: '800', color: '#0f172a' }}>{formData.titulo || 'Sin Título'}</span>
-                </div>
-                <div style={{ width: '1px', height: '30px', background: '#e2e8f0' }} />
-                <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                    <button 
-                        onClick={onCancel}
-                        style={{ 
-                            background: 'transparent', 
-                            color: '#64748b', 
-                            padding: '10px 20px', 
-                            borderRadius: '100px', 
-                            border: '1px solid #e2e8f0', 
-                            fontSize: '12px', 
-                            fontWeight: '700', 
-                            cursor: 'pointer'
-                        }}
-                    >
-                        Cerrar
-                    </button>
-                    <button 
-                        onClick={handleSave} 
-                        disabled={loading}
-                        style={{ 
-                            background: '#2563eb', 
-                            color: '#fff', 
-                            padding: '12px 40px', 
-                            borderRadius: '100px', 
-                            border: 'none', 
-                            fontSize: '13px', 
-                            fontWeight: '900', 
-                            cursor: 'pointer',
-                            boxShadow: '0 10px 20px rgba(37, 99, 235, 0.25)',
-                            transition: 'all 0.2s',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '8px'
-                        }}
-                    >
-                        {loading ? 'GUARDANDO...' : '💾 GUARDAR'}
-                    </button>
+                {/* Sticky Action Bar Area */}
+                <div style={{
+                    position: 'sticky',
+                    bottom: '24px',
+                    left: 0,
+                    right: 0,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    zIndex: 1000,
+                    padding: '20px 0',
+                    pointerEvents: 'none',
+                    marginTop: '40px'
+                }}>
+                    <div className="sticky-action-bar" style={{
+                        pointerEvents: 'auto',
+                        background: '#fff',
+                        padding: '12px 32px',
+                        borderRadius: '100px',
+                        boxShadow: '0 20px 50px rgba(0,0,0,0.15)',
+                        border: '1px solid #e2e8f0',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '24px',
+                    }}>
+                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span style={{ fontSize: '9px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>Documento</span>
+                            <span style={{ fontSize: '12px', fontWeight: '800', color: '#0f172a' }}>Nueva Planeación</span>
+                        </div>
+                        
+                        <div style={{ width: '1px', height: '24px', background: '#e2e8f0' }} />
+                        
+                        <div style={{ display: 'flex', gap: '12px' }}>
+                            <button 
+                                onClick={onCancel}
+                                style={{ 
+                                    background: '#f1f5f9', 
+                                    color: '#475569', 
+                                    padding: '10px 24px', 
+                                    borderRadius: '100px', 
+                                    border: 'none', 
+                                    fontSize: '12px', 
+                                    fontWeight: '900', 
+                                    cursor: 'pointer' 
+                                }}
+                            >
+                                Cerrar
+                            </button>
+                            <button 
+                                onClick={handleSubmit}
+                                disabled={loading}
+                                style={{ 
+                                    background: '#2563eb', 
+                                    color: '#fff', 
+                                    padding: '10px 24px', 
+                                    borderRadius: '100px', 
+                                    border: 'none', 
+                                    fontSize: '12px', 
+                                    fontWeight: '900', 
+                                    cursor: 'pointer',
+                                    opacity: loading ? 0.7 : 1
+                                }}
+                            >
+                                {loading ? 'Guardando...' : 'Guardar Planeación'}
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <style jsx>{`
                 @keyframes floatUp {
-                    from { transform: translate(-50%, 40px); opacity: 0; }
-                    to { transform: translate(-50%, 0); opacity: 1; }
+                    from { transform: translateY(40px); opacity: 0; }
+                    to { transform: translateY(0); opacity: 1; }
                 }
                 @media (max-width: 640px) {
                     .form-page-container { padding: 0 !important; }
@@ -299,7 +311,7 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                     .document-paper { padding: 20px 0 !important; }
                     table tr { display: flex; flex-direction: column; }
                     table td { width: 100% !important; border: none !important; padding: 10px 0 !important; }
-                    .sticky-action-bar { bottom: 0 !important; border-radius: 0 !important; width: 100% !important; padding: 15px !important; border-left: none !important; border-right: none !important; border-bottom: none !important; margin: 0 !important; position: sticky !important; }
+                    .sticky-action-bar { bottom: 10px !important; border-radius: 12px !important; width: 90% !important; padding: 15px !important; margin: 0 auto !important; }
                 }
             `}</style>
         </div>
