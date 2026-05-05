@@ -1,6 +1,6 @@
 import { getDb } from '@/lib/db';
 import { NextResponse } from 'next/server';
-import data from '../../../../../../database/pdas.json';
+import data from '../../../../database/pdas.json';
 
 export async function GET(request) {
     const { searchParams } = new URL(request.url);

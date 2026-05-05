@@ -1,7 +1,7 @@
 import { getDb } from '@/lib/db';
 import { NextResponse } from 'next/server';
-import nacData from '../../../../../../database/contenidos_nacionales.json';
-import estData from '../../../../../../database/contenidos_estatales.json';
+import nacData from '../../../../database/contenidos_nacionales.json';
+import estData from '../../../../database/contenidos_estatales.json';
 
 export async function GET(request) {
     const { searchParams } = new URL(request.url);

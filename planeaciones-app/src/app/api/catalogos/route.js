@@ -1,6 +1,6 @@
 import { getDb } from '@/lib/db';
 import { NextResponse } from 'next/server';
-import data from '../../../../../../database/catalogs.json';
+import data from '../../../../database/catalogs.json';
 
 export async function GET() {
     try {
