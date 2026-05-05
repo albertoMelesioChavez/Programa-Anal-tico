@@ -4,6 +4,29 @@ import dataFallback from '@/lib/data/planeaciones.json';
 
 export async function GET() {
     try {
+        // Asegurar que la tabla existe (especialmente para Turso Cloud nuevo)
+        await db.execute(`
+            CREATE TABLE IF NOT EXISTS planeaciones (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                titulo TEXT,
+                fase_id TEXT,
+                grado_id TEXT,
+                lenguaje_id TEXT,
+                contenido_nacional_id TEXT,
+                contenido_estatal_id TEXT,
+                pda_id TEXT,
+                ejes_articuladores TEXT,
+                metodologia TEXT,
+                actividades TEXT,
+                recursos TEXT,
+                evaluacion TEXT,
+                secuencia_inicio TEXT,
+                secuencia_desarrollo TEXT,
+                secuencia_cierre TEXT,
+                fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP
+            )
+        `);
+
         const result = await db.execute('SELECT * FROM planeaciones ORDER BY fecha_creacion DESC');
         return NextResponse.json(result.rows);
     } catch (error) {
