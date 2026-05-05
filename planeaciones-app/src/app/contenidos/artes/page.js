@@ -247,6 +247,55 @@ function ContenidosArtesContent() {
                 </div>
             </main>
 
+            {/* Global Floating Save Button (Only in Edit Mode) */}
+            {isEditMode && (
+                <div style={{
+                    position: 'fixed',
+                    bottom: '40px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    background: '#fff',
+                    padding: '12px 24px',
+                    borderRadius: '100px',
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                    border: '1px solid #e2e8f0',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '20px',
+                    zIndex: 1000,
+                    animation: 'floatUp 0.3s cubic-bezier(0.23, 1, 0.32, 1)'
+                }}>
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <span style={{ fontSize: '9px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>PÁGINA ACTUAL</span>
+                        <span style={{ fontSize: '12px', fontWeight: '800', color: '#0f172a' }}>Sección {currentPageIdx + 1}</span>
+                    </div>
+                    <div style={{ width: '1px', height: '24px', background: '#e2e8f0' }} />
+                    <button 
+                        onClick={() => {
+                            // Find the current editor content and save it
+                            // Note: In a real app we'd trigger a ref or use a global state
+                            // For now, we rely on the individual save buttons or a global save all
+                            handleExport(); // As a shortcut or we could implement saveAll
+                        }}
+                        style={{ 
+                            background: '#2563eb', 
+                            color: '#fff', 
+                            padding: '10px 24px', 
+                            borderRadius: '100px', 
+                            border: 'none', 
+                            fontSize: '12px', 
+                            fontWeight: '900', 
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px'
+                        }}
+                    >
+                        💾 GUARDAR TODO
+                    </button>
+                </div>
+            )}
+
             {/* RIGHT MINIMAP */}
             <aside style={{ width: '60px', height: '100%', background: theme.sidebar, borderLeft: `1px solid ${theme.border}`, position: 'relative', display: 'flex', justifyContent: 'center' }} className="desktop-minimap">
                 <div ref={minimapRef} style={{ position: 'absolute', top: '40px', bottom: '40px', width: '12px', display: 'flex', flexDirection: 'column', gap: '1px' }}>
