@@ -226,23 +226,22 @@ export default function PlaneacionForm({ onSave, onCancel }) {
 
             </div>
 
-            {/* Sticky Action Bar (Inside the planning area) */}
-            <div style={{
+            {/* Sticky Action Bar (Subre y baja con el scroll, contenida) */}
+            <div className="sticky-action-bar" style={{
                 position: 'sticky',
-                bottom: '40px',
-                marginTop: '40px',
+                bottom: '30px',
+                zIndex: 1000,
                 background: '#fff',
                 padding: '12px 32px',
                 borderRadius: '100px',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                boxShadow: '0 10px 40px rgba(0,0,0,0.1)',
                 border: '1px solid #e2e8f0',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '24px',
-                zIndex: 1000,
                 width: 'fit-content',
-                margin: '40px auto'
+                margin: '20px auto 40px auto'
             }}>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <span style={{ fontSize: '9px', fontWeight: '900', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px' }}>Documento</span>
