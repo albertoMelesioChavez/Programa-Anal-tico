@@ -249,7 +249,7 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
         <EditorContent editor={editor} />
       </div>
 
-      {editable && isFocused && (
+      {editable && (
         <div style={{ 
           position: 'fixed', 
           bottom: '40px', 
@@ -264,10 +264,11 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
           border: `1px solid ${bubbleTheme.border}`, 
           borderRadius: '20px', 
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.2)',
-          backdropFilter: 'blur(20px)'
+          backdropFilter: 'blur(20px)',
+          animation: 'floatUp 0.3s ease-out'
         }}>
-          <span style={{ fontSize: '10px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase', letterSpacing: '1px' }}>
-              {isSaving ? 'Sincronizando...' : 'EDITANDO'}
+          <span style={{ fontSize: '10px', fontWeight: '900', color: '#64748b', textTransform: 'uppercase', letterSpacing: '1px' }}>
+              {isSaving ? 'Sincronizando...' : 'MODO EDICIÓN'}
           </span>
           <button
             onClick={() => onSave(editor.getHTML())}
@@ -285,7 +286,7 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
               opacity: isSaving ? 0.5 : 1
             }}
           >
-            {isSaving ? 'GUARDANDO...' : 'GUARDAR'}
+            {isSaving ? 'GUARDANDO...' : 'GUARDAR CAMBIOS'}
           </button>
         </div>
       )}
