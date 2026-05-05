@@ -289,6 +289,7 @@ function ContenidosArtesContent() {
                         </div>
                     )}
                 </div>
+            </main>
 
             {/* RIGHT MINIMAP */}
             <aside style={{ width: '60px', height: '100%', background: theme.sidebar, borderLeft: `1px solid ${theme.border}`, position: 'relative', display: 'flex', justifyContent: 'center' }} className="desktop-minimap">
