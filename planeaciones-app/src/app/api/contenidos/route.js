@@ -1,8 +1,7 @@
 import { NextResponse } from 'next/server';
-import nacData from '../../../../database/contenidos_nacionales.json';
-import estData from '../../../../database/contenidos_estatales.json';
+import nacData from '@/lib/data/contenidos_nacionales.json';
+import estData from '@/lib/data/contenidos_estatales.json';
 
-// Forzamos el uso de JSON en producción para evitar errores de módulos nativos (SQLite)
 const isProd = process.env.NODE_ENV === 'production';
 
 export async function GET(request) {
@@ -20,11 +19,10 @@ export async function GET(request) {
                 return NextResponse.json({ nacionales, estatales });
             }
         } catch (e) {
-            console.error("DB Error, falling back to JSON");
+            console.error("DB Error");
         }
     }
 
-    // Fallback/Default for Production
     return NextResponse.json({
         nacionales: nacData.filter(c => String(c.fase_id) === String(fase_id)),
         estatales: estData.filter(c => String(c.fase_id) === String(fase_id) && String(c.lenguaje_id) === String(lenguaje_id))

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import data from '../../../../database/pdas.json';
+import data from '@/lib/data/pdas.json';
 
 const isProd = process.env.NODE_ENV === 'production';
 

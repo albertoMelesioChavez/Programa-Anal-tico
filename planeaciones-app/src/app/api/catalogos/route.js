@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import data from '../../../../database/catalogs.json';
+import data from '@/lib/data/catalogs.json';
 
 const isProd = process.env.NODE_ENV === 'production';
 

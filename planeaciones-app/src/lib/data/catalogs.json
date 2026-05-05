@@ -1,0 +1,103 @@
+{
+  "fases": [
+    {
+      "id": 1,
+      "nombre": "Fase 3"
+    },
+    {
+      "id": 2,
+      "nombre": "Fase 4"
+    },
+    {
+      "id": 3,
+      "nombre": "Fase 5"
+    }
+  ],
+  "grados": [
+    {
+      "id": 1,
+      "fase_id": 1,
+      "nombre": "1º Grado"
+    },
+    {
+      "id": 2,
+      "fase_id": 1,
+      "nombre": "2º Grado"
+    },
+    {
+      "id": 3,
+      "fase_id": 2,
+      "nombre": "3º Grado"
+    },
+    {
+      "id": 4,
+      "fase_id": 2,
+      "nombre": "4º Grado"
+    },
+    {
+      "id": 5,
+      "fase_id": 3,
+      "nombre": "5º Grado"
+    },
+    {
+      "id": 6,
+      "fase_id": 3,
+      "nombre": "6º Grado"
+    }
+  ],
+  "lenguajes": [
+    {
+      "id": 1,
+      "nombre": "Música"
+    },
+    {
+      "id": 2,
+      "nombre": "Danza"
+    },
+    {
+      "id": 3,
+      "nombre": "Artes Visuales"
+    },
+    {
+      "id": 4,
+      "nombre": "Teatro"
+    }
+  ],
+  "ejes_articuladores": [
+    {
+      "id": 1,
+      "nombre": "Inclusión",
+      "descripcion": "Reconocimiento de la diversidad y la equidad en el acceso a oportunidades educativas."
+    },
+    {
+      "id": 2,
+      "nombre": "Pensamiento Crítico",
+      "descripcion": "Desarrollo de la capacidad de análisis, reflexión y argumentación."
+    },
+    {
+      "id": 3,
+      "nombre": "Interculturalidad Crítica",
+      "descripcion": "Valoración de la diversidad cultural y el diálogo entre culturas."
+    },
+    {
+      "id": 4,
+      "nombre": "Igualdad de Género",
+      "descripcion": "Promoción de relaciones equitativas entre géneros."
+    },
+    {
+      "id": 5,
+      "nombre": "Vida Saludable",
+      "descripcion": "Fomento de hábitos y prácticas para el bienestar integral."
+    },
+    {
+      "id": 6,
+      "nombre": "Apropiación de las Culturas a través de la Lectura y la Escritura",
+      "descripcion": "Desarrollo de competencias lectoras y escritoras como herramientas culturales."
+    },
+    {
+      "id": 7,
+      "nombre": "Artes y Experiencias Estéticas",
+      "descripcion": "Desarrollo de la sensibilidad, percepción, imaginación y creatividad a través de las artes."
+    }
+  ]
+}
