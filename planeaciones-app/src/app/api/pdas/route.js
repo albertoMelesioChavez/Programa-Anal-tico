@@ -12,7 +12,9 @@ export async function GET(request) {
             const { getDb } = require('@/lib/db');
             const db = getDb();
             if (db) {
-                const pdas = db.prepare('SELECT * FROM pdas WHERE contenido_id = ?').all(contenido_id);
+                // En la DB real, el campo puede ser contenido_id o contenido_estatal_id
+                // Intentamos primero con contenido_estatal_id que es lo que vi en el JSON
+                const pdas = db.prepare('SELECT * FROM pdas WHERE contenido_estatal_id = ?').all(contenido_id);
                 return NextResponse.json(pdas);
             }
         } catch (e) {
@@ -20,5 +22,9 @@ export async function GET(request) {
         }
     }
 
-    return NextResponse.json(data.filter(p => String(p.contenido_id) === String(contenido_id)));
+    // En el JSON de respaldo, la clave es contenido_estatal_id
+    return NextResponse.json(data.filter(p => 
+        String(p.contenido_estatal_id) === String(contenido_id) || 
+        String(p.contenido_id) === String(contenido_id)
+    ));
 }
