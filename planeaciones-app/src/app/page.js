@@ -56,7 +56,7 @@ export default function Home() {
             <div style={{ position: 'fixed', bottom: '-5%', right: '-5%', width: '40%', height: '40%', background: 'radial-gradient(circle, rgba(124, 58, 237, 0.05) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }}></div>
 
             {/* Main Content */}
-            <div style={{ flex: 1, padding: showForm ? '0' : '40px 60px' }} className="main-content-scroll">
+            <div style={{ flex: 1, padding: showForm ? '0' : '0 60px' }} className="main-content-scroll">
                 
                 {!showForm && (
                     <>

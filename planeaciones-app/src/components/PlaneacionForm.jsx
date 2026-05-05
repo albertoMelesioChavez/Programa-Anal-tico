@@ -99,7 +99,7 @@ export default function PlaneacionForm({ onSave, onCancel }) {
             <div style={{ width: '100%', background: theme.docBg, color: theme.text }} className="document-container">
                 
                 {/* Content Area */}
-                <div style={{ padding: '40px 5%' }} className="document-paper">
+                <div style={{ padding: '40px 0' }} className="document-paper">
                     
                     {/* Header Section */}
                     <div style={{ marginBottom: '40px', textAlign: 'center' }}>
@@ -296,10 +296,10 @@ export default function PlaneacionForm({ onSave, onCancel }) {
                 @media (max-width: 640px) {
                     .form-page-container { padding: 0 !important; }
                     .document-container { margin: 0 !important; border-radius: 0 !important; max-width: 100% !important; border: none !important; box-shadow: none !important; }
-                    .document-paper { padding: 30px 15px !important; }
+                    .document-paper { padding: 20px 0 !important; }
                     table tr { display: flex; flex-direction: column; }
                     table td { width: 100% !important; border: none !important; padding: 10px 0 !important; }
-                    .sticky-action-bar { bottom: 0 !important; border-radius: 0 !important; width: 100% !important; padding: 15px !important; border-left: none !important; border-right: none !important; border-bottom: none !important; }
+                    .sticky-action-bar { bottom: 0 !important; border-radius: 0 !important; width: 100% !important; padding: 15px !important; border-left: none !important; border-right: none !important; border-bottom: none !important; margin: 0 !important; position: sticky !important; }
                 }
             `}</style>
         </div>
