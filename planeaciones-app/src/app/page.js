@@ -15,7 +15,7 @@ export default function Home() {
         try {
             const res = await fetch('/api/planeaciones');
             const data = await res.json();
-            setPlaneaciones(data.planeaciones || []);
+            setPlaneaciones(Array.isArray(data) ? data : (data.planeaciones || []));
         } catch (error) {
             console.error('Failed to fetch planeaciones:', error);
         } finally {
@@ -92,9 +92,37 @@ export default function Home() {
                             display: 'grid', 
                             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
                             gap: '24px', 
-                            marginBottom: '60px' 
+                            marginBottom: '60px',
+                            position: 'relative',
+                            zIndex: 1
                         }}>
-                            {/* Cards (Omitted for brevity, keeping original logic) */}
+                            {/* Card 1 */}
+                            <Link href="/contenidos/artes" style={{ textDecoration: 'none' }}>
+                                <div className="main-card-light">
+                                    <div style={{ fontSize: '48px', marginBottom: '24px' }}>📘</div>
+                                    <h2 style={{ fontSize: '24px', fontWeight: '900', color: '#0f172a', marginBottom: '12px' }}>Programa Analítico</h2>
+                                    <p style={{ fontSize: '15px', color: '#64748b', marginBottom: '32px', lineHeight: '1.6' }}>
+                                        Editor completo del documento oficial de Artes para Fases 3, 4 y 5.
+                                    </p>
+                                    <div className="btn-primary">
+                                        ABRIR EDITOR →
+                                    </div>
+                                </div>
+                            </Link>
+
+                            {/* Card 2 */}
+                            <Link href="/contenidos/tablas" style={{ textDecoration: 'none' }}>
+                                <div className="main-card-light card-purple">
+                                    <div style={{ fontSize: '48px', marginBottom: '24px' }}>📊</div>
+                                    <h2 style={{ fontSize: '24px', fontWeight: '900', color: '#0f172a', marginBottom: '12px' }}>Tablas de Contenidos</h2>
+                                    <p style={{ fontSize: '15px', color: '#64748b', marginBottom: '32px', lineHeight: '1.6' }}>
+                                        Dosificación y gestión exclusiva de tablas del programa analítico.
+                                    </p>
+                                    <div className="btn-purple">
+                                        VER TABLAS →
+                                    </div>
+                                </div>
+                            </Link>
                         </section>
                     </>
                 )}
