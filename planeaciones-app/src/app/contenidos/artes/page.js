@@ -480,7 +480,7 @@ function ContenidosArtesContent() {
                                         className="virtual-page"
                                     >
                                         <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
-                                        {isEditMode ? (
+                                        {isEditMode && currentPageIdx === idx ? (
                                             <RichTextEditor 
                                                 initialContent={p.cleanHtml} 
                                                 editable={true}
@@ -496,7 +496,7 @@ function ContenidosArtesContent() {
                                         )}
                                         {/* Page Number Indicator */}
                                         <div style={{ position: 'absolute', bottom: '30px', right: '40px', fontSize: '11px', fontWeight: '800', color: '#cbd5e1' }}>
-                                            PÁGINA {idx + 1}
+                                            PÁGINA {idx + 1} {isEditMode && currentPageIdx === idx && <span style={{ color: '#2563eb', marginLeft: '10px' }}>(MODO EDICIÓN ACTIVO)</span>}
                                         </div>
                                     </div>
                                 ))}
