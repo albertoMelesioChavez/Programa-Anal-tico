@@ -317,19 +317,21 @@ function ContenidosArtesContent() {
                             style={{ 
                                 height: '100%',
                                 overflowY: 'auto',
-                                padding: '0',
-                                scrollBehavior: 'smooth'
+                                padding: '60px 0',
+                                scrollBehavior: 'smooth',
+                                background: '#f1f5f9' // Grey background for the virtual desk
                             }}
                         >
                             <div style={{ 
-                                maxWidth: '100%', 
+                                maxWidth: '850px', // Document width
                                 margin: '0 auto',
-                                padding: '60px 80px',
-                                background: 'transparent',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '2px', // Space between "pages"
                                 minHeight: '100%'
                             }}>
                                 {pages.length === 0 ? (
-                                    <div style={{ padding: '100px', textAlign: 'center', color: theme.subtext }}>
+                                    <div style={{ padding: '100px', textAlign: 'center', color: theme.subtext, background: '#fff', borderRadius: '12px' }}>
                                         <div style={{ fontSize: '48px', marginBottom: '20px' }}>🔍</div>
                                         <p style={{ fontWeight: '700' }}>No se encontraron secciones en el documento.</p>
                                         <p style={{ fontSize: '13px' }}>Verifica la conexión o intenta recargar la página.</p>
@@ -340,9 +342,13 @@ function ContenidosArtesContent() {
                                         ref={pageRefs.current[idx]}
                                         data-page-index={idx}
                                         style={{ 
-                                            marginBottom: '80px',
-                                            padding: '0'
+                                            background: '#fff',
+                                            padding: '80px 100px',
+                                            boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                                            borderBottom: idx !== pages.length - 1 ? '1px solid #f1f5f9' : 'none',
+                                            position: 'relative'
                                         }}
+                                        className="virtual-page"
                                     >
                                         <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
                                         {isEditMode ? (
@@ -358,6 +364,10 @@ function ContenidosArtesContent() {
                                                 style={{ lineHeight: '1.8', fontSize: '17px', color: theme.text }}
                                             />
                                         )}
+                                        {/* Page Number Indicator */}
+                                        <div style={{ position: 'absolute', bottom: '30px', right: '40px', fontSize: '11px', fontWeight: '800', color: '#cbd5e1' }}>
+                                            PÁGINA {idx + 1}
+                                        </div>
                                     </div>
                                 ))}
                             </div>
