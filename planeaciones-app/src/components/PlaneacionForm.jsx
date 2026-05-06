@@ -2,13 +2,11 @@
 
 import { useState, useEffect } from 'react';
 
-export default function PlaneacionForm({ onSaved, onCancel }) {
+export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
     const [loading, setLoading] = useState(false);
-    const [darkMode] = useState(false); // Forced Light Mode
     const [catalogs, setCatalogs] = useState({ fases: [], grados: [], lenguajes: [], ejes_articuladores: [] });
     const [contenidos, setContenidos] = useState({ nacionales: [], estatales: [] });
     const [pdas, setPdas] = useState([]);
-    const [orientaciones, setOrientaciones] = useState([]);
     
     const [formData, setFormData] = useState({
         titulo: '',
@@ -28,6 +26,22 @@ export default function PlaneacionForm({ onSaved, onCancel }) {
         actividades: ''
     });
 
+    // Cargar datos iniciales si estamos en modo edición
+    useEffect(() => {
+        if (initialData) {
+            setFormData({
+                ...initialData,
+                // Asegurar que los IDs sean strings para los selects
+                fase_id: initialData.fase_id?.toString() || '',
+                grado_id: initialData.grado_id?.toString() || '',
+                lenguaje_id: initialData.lenguaje_id?.toString() || '',
+                contenido_nacional_id: initialData.contenido_nacional_id?.toString() || '',
+                contenido_estatal_id: initialData.contenido_estatal_id?.toString() || '',
+                pda_id: initialData.pda_id?.toString() || '',
+            });
+        }
+    }, [initialData]);
+
     useEffect(() => {
         fetch('/api/catalogos')
             .then(res => res.ok ? res.json() : null)
@@ -41,11 +55,6 @@ export default function PlaneacionForm({ onSaved, onCancel }) {
                 .then(res => res.ok ? res.json() : { nacionales: [], estatales: [] })
                 .then(data => setContenidos(data))
                 .catch(() => setContenidos({ nacionales: [], estatales: [] }));
-            
-            fetch(`/api/orientaciones?fase_id=${formData.fase_id}&lenguaje_id=${formData.lenguaje_id}`)
-                .then(res => res.ok ? res.json() : [])
-                .then(data => setOrientaciones(data))
-                .catch(() => setOrientaciones([]));
         }
     }, [formData.fase_id, formData.lenguaje_id]);
 
@@ -64,16 +73,24 @@ export default function PlaneacionForm({ onSaved, onCancel }) {
     const handleSubmit = async () => {
         setLoading(true);
         try {
-            const res = await fetch('/api/planeaciones', {
-                method: 'POST',
+            const isEdit = !!formData.id;
+            const url = isEdit ? `/api/planeaciones/${formData.id}` : '/api/planeaciones';
+            const method = isEdit ? 'PUT' : 'POST';
+
+            const res = await fetch(url, {
+                method: method,
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             });
             if (res.ok) {
                 onSaved();
+            } else {
+                const err = await res.json();
+                alert('Error al guardar: ' + (err.error || 'Desconocido'));
             }
         } catch (e) {
             console.error(e);
+            alert('Error crítico de red');
         }
         setLoading(false);
     };
@@ -90,7 +107,6 @@ export default function PlaneacionForm({ onSaved, onCancel }) {
 
     // Theme Variables
     const theme = {
-        bg: '#f8fafc',
         docBg: '#ffffff',
         text: '#0f172a',
         subtext: '#64748b',
@@ -114,25 +130,26 @@ export default function PlaneacionForm({ onSaved, onCancel }) {
                     {/* Header Section */}
                     <div style={{ marginBottom: '60px', textAlign: 'center' }}>
                         <input type="text" value={formData.titulo} onChange={(e) => setFormData({...formData, titulo: e.target.value})} placeholder="ESCRIBA EL TÍTULO AQUÍ" style={{ width: '100%', border: 'none', borderBottom: `2px solid ${theme.border}`, textAlign: 'center', fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: '900', color: theme.text, background: 'transparent', outline: 'none', padding: '10px', textTransform: 'uppercase', letterSpacing: '-1px' }} />
-                        <p style={{ color: theme.subtext, fontSize: '11px', marginTop: '16px', fontWeight: '800', letterSpacing: '3px' }}>SISTEMA DE PLANEACIÓN ANALÍTICA 2025</p>
+                        <p style={{ color: theme.subtext, fontSize: '11px', marginTop: '16px', fontWeight: '800', letterSpacing: '3px' }}>
+                            {formData.id ? `EDITANDO PLANEACIÓN #${formData.id}` : 'SISTEMA DE PLANEACIÓN ANALÍTICA 2025'}
+                        </p>
                     </div>
 
                     {/* Meta Grid */}
                     <div className="responsive-meta-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginBottom: '60px', padding: '30px', background: theme.sectionBg, borderRadius: '16px', border: `1px solid ${theme.border}` }}>
-                        {['Fase', 'Grado', 'Lenguaje'].map((label, idx) => (
-                            <div key={label}>
-                                <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '10px', letterSpacing: '1px' }}>{label}</label>
+                        {[
+                            { label: 'Fase', key: 'fase_id', options: catalogs?.fases },
+                            { label: 'Grado', key: 'grado_id', options: filteredGrados },
+                            { label: 'Lenguaje', key: 'lenguaje_id', options: catalogs?.lenguajes }
+                        ].map((field) => (
+                            <div key={field.label}>
+                                <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '10px', letterSpacing: '1px' }}>{field.label}</label>
                                 <select 
-                                    value={idx === 0 ? formData.fase_id : idx === 1 ? formData.grado_id : formData.lenguaje_id} 
-                                    onChange={(e) => {
-                                        const val = e.target.value;
-                                        if (idx === 0) setFormData({...formData, fase_id: val});
-                                        else if (idx === 1) setFormData({...formData, grado_id: val});
-                                        else setFormData({...formData, lenguaje_id: val});
-                                    }} 
+                                    value={formData[field.key]} 
+                                    onChange={(e) => setFormData({...formData, [field.key]: e.target.value})} 
                                     style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: `1px solid ${theme.border}`, color: theme.text, fontSize: '15px', fontWeight: '700', outline: 'none', padding: '8px 0' }}>
                                     <option value="">---</option>
-                                    {(idx === 0 ? catalogs?.fases : idx === 1 ? filteredGrados : catalogs?.lenguajes || []).map(opt => <option key={opt.id} value={opt.id}>{opt.nombre}</option>)}
+                                    {(field.options || []).map(opt => <option key={opt.id} value={opt.id}>{opt.nombre}</option>)}
                                 </select>
                             </div>
                         ))}
@@ -208,7 +225,7 @@ export default function PlaneacionForm({ onSaved, onCancel }) {
                                         <div className="moment-label" style={{ width: '140px', padding: '20px', background: '#f8fafc', borderRight: `1px solid ${theme.border}`, display: 'flex', alignItems: 'flex-start' }}>
                                             <span style={{ fontWeight: '900', fontSize: '11px', color: moment.color, textTransform: 'uppercase' }}>{moment.label}</span>
                                         </div>
-                                        <textarea value={formData[moment.key]} onChange={(e) => setFormData({...formData, [moment.key]: e.target.value})} style={{ flex: 1, border: 'none', padding: '20px', minHeight: '140px', fontSize: '14px', color: theme.text, outline: 'none', lineHeight: '1.6', resize: 'none' }} placeholder={`Actividades de ${moment.label.toLowerCase()}...`} />
+                                        <textarea value={formData[moment.key] || ''} onChange={(e) => setFormData({...formData, [moment.key]: e.target.value})} style={{ flex: 1, border: 'none', padding: '20px', minHeight: '140px', fontSize: '14px', color: theme.text, outline: 'none', lineHeight: '1.6', resize: 'none' }} placeholder={`Actividades de ${moment.label.toLowerCase()}...`} />
                                     </div>
                                 ))}
                             </div>
@@ -220,10 +237,13 @@ export default function PlaneacionForm({ onSaved, onCancel }) {
                                 III. Evaluación y Recursos
                             </h4>
                             <div className="responsive-split-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
-                                {['evaluacion', 'recursos'].map(key => (
-                                    <div key={key}>
-                                        <label style={{ display: 'block', fontSize: '11px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px' }}>{key === 'evaluacion' ? 'Evaluación' : 'Recursos'}</label>
-                                        <textarea value={formData[key]} onChange={(e) => setFormData({...formData, [key]: e.target.value})} style={{ width: '100%', height: '160px', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '16px', padding: '18px', fontSize: '14px', color: theme.text, outline: 'none', lineHeight: '1.6' }} />
+                                {[
+                                    { key: 'evaluacion', label: 'Evaluación' },
+                                    { key: 'recursos', label: 'Recursos' }
+                                ].map(field => (
+                                    <div key={field.key}>
+                                        <label style={{ display: 'block', fontSize: '11px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px' }}>{field.label}</label>
+                                        <textarea value={formData[field.key] || ''} onChange={(e) => setFormData({...formData, [field.key]: e.target.value})} style={{ width: '100%', height: '160px', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '16px', padding: '18px', fontSize: '14px', color: theme.text, outline: 'none', lineHeight: '1.6' }} />
                                     </div>
                                 ))}
                             </div>
@@ -250,7 +270,9 @@ export default function PlaneacionForm({ onSaved, onCancel }) {
             }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '40px', maxWidth: '1000px', width: '100%', justifyContent: 'space-between' }}>
                     <div className="footer-title-group" style={{ display: 'flex', flexDirection: 'column' }}>
-                        <span style={{ fontSize: '10px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase', letterSpacing: '1px' }}>Nueva Planeación</span>
+                        <span style={{ fontSize: '10px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase', letterSpacing: '1px' }}>
+                            {formData.id ? 'Modificando Planeación' : 'Nueva Planeación'}
+                        </span>
                         <span style={{ fontSize: '13px', fontWeight: '800', color: theme.text, maxWidth: '300px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{formData.titulo || 'Sin Título'}</span>
                     </div>
                     
@@ -286,7 +308,7 @@ export default function PlaneacionForm({ onSaved, onCancel }) {
                                 opacity: loading ? 0.7 : 1
                             }}
                         >
-                            {loading ? 'GUARDANDO...' : 'GUARDAR CAMBIOS'}
+                            {loading ? 'GUARDANDO...' : formData.id ? 'ACTUALIZAR PLANEACIÓN' : 'GUARDAR CAMBIOS'}
                         </button>
                     </div>
                 </div>
@@ -295,19 +317,15 @@ export default function PlaneacionForm({ onSaved, onCancel }) {
             <style jsx>{`
                 @media (max-width: 1024px) {
                     .document-paper { padding: 40px 30px !important; }
-                    .content-padding-container { padding: 0 !important; }
                 }
                 @media (max-width: 768px) {
                     .responsive-meta-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
-                    .responsive-split-grid { grid-template-columns: 1fr !important; }
                     .moment-row { flex-direction: column; }
                     .moment-label { width: 100% !important; border-right: none !important; border-bottom: 1px solid ${theme.border} !important; padding: 12px 20px !important; }
                 }
                 @media (max-width: 640px) {
-                    .document-paper { padding: 30px 15px !important; border-radius: 0 !important; }
-                    .sticky-footer-bar { padding: 15px 20px !important; }
                     .footer-title-group { display: none !important; }
-                    .footer-btn-group { width: 100%; justify-content: center; }
+                    .footer-btn-group { width: 100%; }
                     .footer-btn-group button { flex: 1; }
                 }
             `}</style>

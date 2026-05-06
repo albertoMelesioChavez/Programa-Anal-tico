@@ -8,6 +8,7 @@ import PlaneacionList from '@/components/PlaneacionList';
 export default function Home() {
     const [planeaciones, setPlaneaciones] = useState([]);
     const [showForm, setShowForm] = useState(false);
+    const [editingPlaneacion, setEditingPlaneacion] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const fetchPlaneaciones = async () => {
@@ -28,7 +29,6 @@ export default function Home() {
     }, []);
 
     const handleDelete = async (id) => {
-        if (!window.confirm('¿Desea eliminar esta planeación?')) return;
         try {
             const res = await fetch(`/api/planeaciones/${id}`, { method: 'DELETE' });
             if (res.ok) fetchPlaneaciones();
@@ -37,9 +37,21 @@ export default function Home() {
         }
     };
 
+    const handleEdit = (p) => {
+        setEditingPlaneacion(p);
+        setShowForm(true);
+        // Scroll a la sección si es necesario, aunque el formulario ocupa toda la pantalla
+    };
+
     const handleSaved = () => {
         setShowForm(false);
+        setEditingPlaneacion(null);
         fetchPlaneaciones();
+    };
+
+    const handleCancel = () => {
+        setShowForm(false);
+        setEditingPlaneacion(null);
     };
 
     return (
@@ -132,7 +144,7 @@ export default function Home() {
                     flex: 1, 
                     display: 'flex', 
                     flexDirection: 'column',
-                    overflow: 'hidden' // Section itself shouldn't scroll, its children should
+                    overflow: 'hidden'
                 }}>
                     {!showForm && (
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '32px' }}>
@@ -140,7 +152,7 @@ export default function Home() {
                                 <h3 style={{ fontSize: '32px', fontWeight: '900', color: '#0f172a', marginBottom: '4px', letterSpacing: '-1px' }}>Mis Planeaciones</h3>
                                 <p style={{ color: '#64748b', fontSize: '15px', fontWeight: '500' }}>Historial y borradores personalizados.</p>
                             </div>
-                            <button onClick={() => setShowForm(true)} className="btn-add">
+                            <button onClick={() => { setEditingPlaneacion(null); setShowForm(true); }} className="btn-add">
                                 + Crear Nueva
                             </button>
                         </div>
@@ -148,7 +160,7 @@ export default function Home() {
 
                     <main style={{ 
                         flex: 1, 
-                        overflowY: 'auto', // HERE IS THE INTERNAL SCROLL
+                        overflowY: 'auto',
                         padding: '0',
                         background: '#fff', 
                         borderRadius: showForm ? '0' : '32px', 
@@ -158,7 +170,11 @@ export default function Home() {
                         height: showForm ? '100%' : 'auto'
                     }}>
                         {showForm ? (
-                            <PlaneacionForm onSaved={handleSaved} onCancel={() => setShowForm(false)} />
+                            <PlaneacionForm 
+                                initialData={editingPlaneacion} 
+                                onSaved={handleSaved} 
+                                onCancel={handleCancel} 
+                            />
                         ) : (
                             <>
                                 {loading ? (
@@ -166,7 +182,11 @@ export default function Home() {
                                         <div className="loader-blue"></div>
                                     </div>
                                 ) : (
-                                    <PlaneacionList planeaciones={planeaciones} onDelete={handleDelete} />
+                                    <PlaneacionList 
+                                        planeaciones={planeaciones} 
+                                        onDelete={handleDelete} 
+                                        onEdit={handleEdit}
+                                    />
                                 )}
                             </>
                         )}
@@ -243,6 +263,9 @@ export default function Home() {
                     animation: spin 1s linear infinite;
                 }
                 @keyframes spin { to { transform: rotate(360deg); } }
+                @media (max-width: 640px) {
+                    .main-content-scroll { padding: 0 20px !important; }
+                }
             `}</style>
         </main>
     );

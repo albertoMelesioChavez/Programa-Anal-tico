@@ -4,7 +4,7 @@ import fs from 'fs/promises';
 import path from 'path';
 
 export async function GET(request, { params }) {
-    const { slug } = params; 
+    const { slug } = await params; 
     
     if (slug !== 'artes' && slug !== 'tablas') {
         return NextResponse.json({ error: 'Documento no encontrado' }, { status: 404 });
@@ -76,7 +76,7 @@ export async function GET(request, { params }) {
 }
 
 export async function POST(request, { params }) {
-    const { slug } = params;
+    const { slug } = await params;
     try {
         const { content } = await request.json();
         if (!content) return NextResponse.json({ error: 'Contenido vacío' }, { status: 400 });

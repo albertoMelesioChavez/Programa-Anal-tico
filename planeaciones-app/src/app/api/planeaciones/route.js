@@ -27,7 +27,22 @@ export async function GET() {
             )
         `);
 
-        const result = await db.execute('SELECT * FROM planeaciones ORDER BY fecha_creacion DESC');
+        const result = await db.execute(`
+            SELECT 
+                p.*, 
+                f.nombre as fase_nombre, 
+                g.nombre as grado_nombre, 
+                l.nombre as lenguaje_nombre,
+                cn.descripcion as contenido_nacional_desc,
+                pda.descripcion as pda_desc
+            FROM planeaciones p
+            LEFT JOIN fases f ON p.fase_id = f.id
+            LEFT JOIN grados g ON p.grado_id = g.id
+            LEFT JOIN lenguajes_artisticos l ON p.lenguaje_id = l.id
+            LEFT JOIN contenidos_nacionales cn ON p.contenido_nacional_id = cn.id
+            LEFT JOIN pdas pda ON p.pda_id = pda.id
+            ORDER BY p.fecha_creacion DESC
+        `);
         return NextResponse.json(result.rows);
     } catch (error) {
         console.error('Turso GET Error:', error);
