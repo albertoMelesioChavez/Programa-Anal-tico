@@ -70,17 +70,44 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
         }
     }, [formData.contenido_nacional_id, formData.contenido_estatal_id]);
 
+    const [errors, setErrors] = useState({});
+
+    const validate = () => {
+        const newErrors = {};
+        if (!formData.titulo?.trim()) newErrors.titulo = true;
+        if (!formData.fase_id) newErrors.fase_id = true;
+        if (!formData.grado_id) newErrors.grado_id = true;
+        if (!formData.lenguaje_id) newErrors.lenguaje_id = true;
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
     const handleSubmit = async () => {
+        if (!validate()) {
+            alert('Por favor complete los campos obligatorios: Título, Fase, Grado y Lenguaje.');
+            return;
+        }
+
         setLoading(true);
         try {
             const isEdit = !!formData.id;
             const url = isEdit ? `/api/planeaciones/${formData.id}` : '/api/planeaciones';
             const method = isEdit ? 'PUT' : 'POST';
 
+            // Normalizar IDs a strings para la DB
+            const submissionData = {
+                ...formData,
+                fase_id: formData.fase_id?.toString(),
+                grado_id: formData.grado_id?.toString(),
+                lenguaje_id: formData.lenguaje_id?.toString(),
+                contenido_nacional_id: formData.contenido_nacional_id?.toString() || null,
+                pda_id: formData.pda_id?.toString() || null
+            };
+
             const res = await fetch(url, {
                 method: method,
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(submissionData)
             });
             if (res.ok) {
                 onSaved();
@@ -129,7 +156,29 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                 }}>
                     {/* Header Section */}
                     <div style={{ marginBottom: '60px', textAlign: 'center' }}>
-                        <input type="text" value={formData.titulo} onChange={(e) => setFormData({...formData, titulo: e.target.value})} placeholder="ESCRIBA EL TÍTULO AQUÍ" style={{ width: '100%', border: 'none', borderBottom: `2px solid ${theme.border}`, textAlign: 'center', fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: '900', color: theme.text, background: 'transparent', outline: 'none', padding: '10px', textTransform: 'uppercase', letterSpacing: '-1px' }} />
+                        <input 
+                            type="text" 
+                            value={formData.titulo} 
+                            onChange={(e) => {
+                                setFormData({...formData, titulo: e.target.value});
+                                if (errors.titulo) setErrors({...errors, titulo: false});
+                            }} 
+                            placeholder="ESCRIBA EL TÍTULO AQUÍ" 
+                            style={{ 
+                                width: '100%', 
+                                border: 'none', 
+                                borderBottom: errors.titulo ? '2px solid #ef4444' : `2px solid ${theme.border}`, 
+                                textAlign: 'center', 
+                                fontSize: 'clamp(24px, 5vw, 32px)', 
+                                fontWeight: '900', 
+                                color: theme.text, 
+                                background: 'transparent', 
+                                outline: 'none', 
+                                padding: '10px', 
+                                textTransform: 'uppercase', 
+                                letterSpacing: '-1px' 
+                            }} 
+                        />
                         <p style={{ color: theme.subtext, fontSize: '11px', marginTop: '16px', fontWeight: '800', letterSpacing: '3px' }}>
                             {formData.id ? `EDITANDO PLANEACIÓN #${formData.id}` : 'SISTEMA DE PLANEACIÓN ANALÍTICA 2025'}
                         </p>
@@ -146,8 +195,26 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                                 <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '10px', letterSpacing: '1px' }}>{field.label}</label>
                                 <select 
                                     value={formData[field.key]} 
-                                    onChange={(e) => setFormData({...formData, [field.key]: e.target.value})} 
-                                    style={{ width: '100%', background: 'transparent', border: 'none', borderBottom: `1px solid ${theme.border}`, color: theme.text, fontSize: '15px', fontWeight: '700', outline: 'none', padding: '8px 0' }}>
+                                    onChange={(e) => {
+                                        const val = e.target.value;
+                                        if (field.key === 'fase_id') {
+                                            setFormData({...formData, fase_id: val, grado_id: ''});
+                                        } else {
+                                            setFormData({...formData, [field.key]: val});
+                                        }
+                                        if (errors[field.key]) setErrors({...errors, [field.key]: false});
+                                    }} 
+                                    style={{ 
+                                        width: '100%', 
+                                        background: 'transparent', 
+                                        border: 'none', 
+                                        borderBottom: errors[field.key] ? '2px solid #ef4444' : `1px solid ${theme.border}`, 
+                                        color: theme.text, 
+                                        fontSize: '15px', 
+                                        fontWeight: '700', 
+                                        outline: 'none', 
+                                        padding: '8px 0' 
+                                    }}>
                                     <option value="">---</option>
                                     {(field.options || []).map(opt => <option key={opt.id} value={opt.id}>{opt.nombre}</option>)}
                                 </select>
