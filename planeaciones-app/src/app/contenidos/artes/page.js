@@ -428,9 +428,10 @@ function ContenidosArtesContent() {
                     style={{ 
                         flex: 1, 
                         overflowY: viewMode === 'pdf' ? 'hidden' : 'auto',
-                        background: viewMode === 'pdf' ? '#525659' : theme.bg,
+                        background: viewMode === 'pdf' ? '#525659' : '#f1f5f9',
                         position: 'relative',
-                        scrollBehavior: 'smooth'
+                        scrollBehavior: 'smooth',
+                        padding: viewMode === 'pdf' ? '0' : '60px 0'
                     }}
                 >
                     {viewMode === 'pdf' ? (
@@ -444,41 +445,34 @@ function ContenidosArtesContent() {
                             title="Programa Analítico Artes PDF"
                         />
                     ) : (
-                        <div 
-                            style={{ 
-                                padding: '60px 0',
-                                background: '#f1f5f9', // Grey background for the virtual desk
-                                minHeight: '100%'
-                            }}
-                        >
-                            <div style={{ 
-                                maxWidth: '850px', // Document width
-                                margin: '0 auto',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                gap: '2px', // Space between "pages"
-                                minHeight: '100%'
-                            }}>
-                                {pages.length === 0 ? (
-                                    <div style={{ padding: '100px', textAlign: 'center', color: theme.subtext, background: '#fff', borderRadius: '12px' }}>
-                                        <div style={{ fontSize: '48px', marginBottom: '20px' }}>🔍</div>
-                                        <p style={{ fontWeight: '700' }}>No se encontraron secciones en el documento.</p>
-                                        <p style={{ fontSize: '13px' }}>Verifica la conexión o intenta recargar la página.</p>
-                                    </div>
-                                ) : pages.map((p, idx) => (
-                                    <div 
-                                        key={idx} 
-                                        ref={pageRefs.current[idx]}
-                                        data-page-index={idx}
-                                        style={{ 
-                                            background: '#fff',
-                                            padding: '80px 100px',
-                                            boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
-                                            borderBottom: idx !== pages.length - 1 ? '1px solid #f1f5f9' : 'none',
-                                            position: 'relative'
-                                        }}
-                                        className="virtual-page"
-                                    >
+                        <div style={{ 
+                            maxWidth: '850px', // Document width
+                            margin: '0 auto',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '2px', // Space between "pages"
+                            minHeight: '100%'
+                        }}>
+                            {pages.length === 0 ? (
+                                <div style={{ padding: '100px', textAlign: 'center', color: theme.subtext, background: '#fff', borderRadius: '12px' }}>
+                                    <div style={{ fontSize: '48px', marginBottom: '20px' }}>🔍</div>
+                                    <p style={{ fontWeight: '700' }}>No se encontraron secciones en el documento.</p>
+                                    <p style={{ fontSize: '13px' }}>Verifica la conexión o intenta recargar la página.</p>
+                                </div>
+                            ) : pages.map((p, idx) => (
+                                <div 
+                                    key={idx} 
+                                    ref={pageRefs.current[idx]}
+                                    data-page-index={idx}
+                                    style={{ 
+                                        background: '#fff',
+                                        padding: '80px 100px',
+                                        boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                                        borderBottom: idx !== pages.length - 1 ? '1px solid #f1f5f9' : 'none',
+                                        position: 'relative'
+                                    }}
+                                    className="virtual-page"
+                                >
                                         <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
                                         {isEditMode && currentPageIdx === idx ? (
                                             <RichTextEditor 
