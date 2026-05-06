@@ -37,21 +37,24 @@ function ContenidosArtesContent() {
 
     const extractTitleAndClean = (html) => {
         if (!html) return { title: 'Información General', cleanHtml: '' };
+        
+        // Búsqueda simplificada para evitar errores de parseo que oculten el contenido
         const targetStart = "Programa analítico primaria";
         const targetEnd = "Versión 2025";
+        
         const plainText = html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
         const startIndex = plainText.indexOf(targetStart);
         const endIndex = plainText.indexOf(targetEnd);
-        let title = 'Información General del Programa';
+        
+        let title = 'Documento de Artes';
         let cleanHtml = html;
+
         if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
             title = plainText.substring(startIndex, endIndex + targetEnd.length).trim();
-            const words = title.split(/\s+/).filter(w => w.length > 0);
-            const pattern = words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('(?:\\s+|<[^>]*>)*\\s*');
-            const atomicRegex = new RegExp(pattern, 'i');
-            cleanHtml = html.replace(atomicRegex, '').trim();
-            cleanHtml = cleanHtml.replace(/^<p>\s*<\/p>/, '').replace(/^<p>&nbsp;<\/p>/, '').replace(/^<p>\s*<br\s*\/?>\s*/, '<p>');
+            // No eliminamos el título del HTML para asegurar que siempre haya algo visible
+            // solo lo extraemos para el índice lateral
         }
+        
         return { title, cleanHtml };
     };
 
@@ -304,7 +307,13 @@ function ContenidosArtesContent() {
                         boxShadow: viewMode === 'pdf' ? '0 30px 60px rgba(0,0,0,0.05)' : 'none',
                         minHeight: '100%'
                     }}>
-                        {pages.map((p, idx) => (
+                        {pages.length === 0 ? (
+                            <div style={{ padding: '100px', textAlign: 'center', color: theme.subtext }}>
+                                <div style={{ fontSize: '48px', marginBottom: '20px' }}>🔍</div>
+                                <p style={{ fontWeight: '700' }}>No se encontraron secciones en el documento.</p>
+                                <p style={{ fontSize: '13px' }}>Verifica la conexión o intenta recargar la página.</p>
+                            </div>
+                        ) : pages.map((p, idx) => (
                             <div 
                                 key={idx} 
                                 ref={pageRefs.current[idx]}
