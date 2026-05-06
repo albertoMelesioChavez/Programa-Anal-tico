@@ -84,14 +84,54 @@ export async function ensureTablesExist() {
             )
         `);
 
-        // 7. Documentos Base
-        await db.execute(`
-            CREATE TABLE IF NOT EXISTS documentos_base (
-                nombre TEXT PRIMARY KEY,
-                contenido TEXT,
-                fecha_actualizacion DATETIME DEFAULT CURRENT_TIMESTAMP
-            )
-        `);
+        // 8. Inyectar Planeaciones Iniciales si la tabla está vacía
+        const planCheck = await db.execute("SELECT count(*) as count FROM planeaciones");
+        if (planCheck.rows[0].count === 0) {
+            console.log("Migrando planeaciones iniciales desde JSON...");
+            const initialPlans = [
+                {
+                    titulo: "Exploración de Colores y Texturas",
+                    fase_id: "3",
+                    grado_id: "1",
+                    lenguaje_id: "1",
+                    contenido_nacional_id: "1",
+                    pda_id: "1",
+                    metodologia: "Aprendizaje basado en proyectos",
+                    actividades: "1. Observar colores en el entorno.\n2. Crear un mural colectivo.",
+                    secuencia_inicio: "Presentación del tema con un video.",
+                    secuencia_desarrollo: "Pintura con dedos usando colores primarios.",
+                    secuencia_cierre: "Exposición de trabajos."
+                },
+                {
+                    titulo: "Ritmos y Sonidos de mi Comunidad",
+                    fase_id: "3",
+                    grado_id: "2",
+                    lenguaje_id: "1",
+                    contenido_nacional_id: "2",
+                    pda_id: "3",
+                    metodologia: "Secuencia didáctica",
+                    actividades: "1. Identificar sonidos cotidianos.\n2. Construir instrumentos con material reciclado.",
+                    secuencia_inicio: "Juego de adivinar sonidos.",
+                    secuencia_desarrollo: "Construcción de maracas.",
+                    secuencia_cierre: "Concierto grupal."
+                }
+            ];
+
+            for (const p of initialPlans) {
+                await db.execute({
+                    sql: `INSERT INTO planeaciones (
+                        titulo, fase_id, grado_id, lenguaje_id, 
+                        contenido_nacional_id, pda_id, metodologia, 
+                        actividades, secuencia_inicio, secuencia_desarrollo, secuencia_cierre
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                    args: [
+                        p.titulo, p.fase_id, p.grado_id, p.lenguaje_id, 
+                        p.contenido_nacional_id, p.pda_id, p.metodologia, 
+                        p.actividades, p.secuencia_inicio, p.secuencia_desarrollo, p.secuencia_cierre
+                    ]
+                });
+            }
+        }
 
         console.log("DB sincronizada correctamente.");
     } catch (error) {
