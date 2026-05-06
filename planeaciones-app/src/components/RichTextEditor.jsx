@@ -128,6 +128,10 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
     },
     onBlur: () => {
         setTimeout(() => setIsFocused(false), 200);
+        // Save on blur if content changed
+        if (editor && onSave) {
+            onSave(editor.getHTML());
+        }
     },
     editorProps: {
       attributes: {
@@ -136,6 +140,13 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
       },
     },
   });
+
+  // Keep content in sync
+  useEffect(() => {
+    if (editor && initialContent !== editor.getHTML()) {
+        editor.commands.setContent(initialContent);
+    }
+  }, [initialContent, editor]);
 
   if (!editor) return null;
 

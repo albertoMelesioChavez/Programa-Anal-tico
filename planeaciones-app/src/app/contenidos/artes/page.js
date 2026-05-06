@@ -470,7 +470,8 @@ function ContenidosArtesContent() {
                                         <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
                                         {isEditMode ? (
                                             <RichTextEditor 
-                                                initialValue={p.cleanHtml} 
+                                                initialContent={p.cleanHtml} 
+                                                editable={true}
                                                 onSave={(newHtml) => handleSave(idx, newHtml)} 
                                                 isSaving={isSaving}
                                             />
