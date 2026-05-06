@@ -495,8 +495,8 @@ function ContenidosArtesContent() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
-                    )}
+                        )
+                    }
                 </div>
 
                 {/* Minimap Overlay (Digital mode only) */}
