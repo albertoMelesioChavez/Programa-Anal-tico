@@ -196,52 +196,54 @@ function ContenidosArtesContent() {
     return (
         <div style={{ display: 'flex', height: '100vh', background: theme.bg, color: theme.text, overflow: 'hidden' }}>
             {/* Sidebar / Navigation */}
-            <aside style={{ 
-                width: '320px', 
-                background: theme.sidebar, 
-                borderRight: `1px solid ${theme.border}`,
-                display: 'flex',
-                flexDirection: 'column',
-                zIndex: 10
-            }}>
-                <div style={{ padding: '32px' }}>
-                    <Link href="/" style={{ textDecoration: 'none', color: '#2563eb', fontWeight: '900', fontSize: '11px', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
-                        ← VOLVER AL DASHBOARD
-                    </Link>
-                    <h2 style={{ fontSize: '24px', fontWeight: '900', letterSpacing: '-1px', marginBottom: '8px' }}>Programa Analítico</h2>
-                    <p style={{ fontSize: '13px', color: theme.subtext, fontWeight: '500' }}>Artes • Versión 2025</p>
-                </div>
+            {viewMode !== 'pdf' && (
+                <aside style={{ 
+                    width: '320px', 
+                    background: theme.sidebar, 
+                    borderRight: `1px solid ${theme.border}`,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    zIndex: 10
+                }}>
+                    <div style={{ padding: '32px' }}>
+                        <Link href="/" style={{ textDecoration: 'none', color: '#2563eb', fontWeight: '900', fontSize: '11px', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
+                            ← VOLVER AL DASHBOARD
+                        </Link>
+                        <h2 style={{ fontSize: '24px', fontWeight: '900', letterSpacing: '-1px', marginBottom: '8px' }}>Programa Analítico</h2>
+                        <p style={{ fontSize: '13px', color: theme.subtext, fontWeight: '500' }}>Artes • Versión 2025</p>
+                    </div>
 
-                <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 32px' }}>
-                    {pages.map((p, idx) => (
-                        <button 
-                            key={idx}
-                            onClick={() => {
-                                pageRefs.current[idx].current?.scrollIntoView({ behavior: 'smooth' });
-                                setCurrentPageIdx(idx);
-                            }}
-                            style={{
-                                width: '100%',
-                                textAlign: 'left',
-                                padding: '16px',
-                                borderRadius: '12px',
-                                border: 'none',
-                                background: currentPageIdx === idx ? '#2563eb' : 'transparent',
-                                color: currentPageIdx === idx ? '#fff' : theme.text,
-                                cursor: 'pointer',
-                                transition: 'all 0.2s',
-                                marginBottom: '4px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '12px'
-                            }}
-                        >
-                            <span style={{ fontSize: '11px', fontWeight: '900', opacity: 0.5 }}>{String(idx + 1).padStart(2, '0')}</span>
-                            <span style={{ fontSize: '13px', fontWeight: '700', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.title}</span>
-                        </button>
-                    ))}
-                </div>
-            </aside>
+                    <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 32px' }}>
+                        {pages.map((p, idx) => (
+                            <button 
+                                key={idx}
+                                onClick={() => {
+                                    pageRefs.current[idx].current?.scrollIntoView({ behavior: 'smooth' });
+                                    setCurrentPageIdx(idx);
+                                }}
+                                style={{
+                                    width: '100%',
+                                    textAlign: 'left',
+                                    padding: '16px',
+                                    borderRadius: '12px',
+                                    border: 'none',
+                                    background: currentPageIdx === idx ? '#2563eb' : 'transparent',
+                                    color: currentPageIdx === idx ? '#fff' : theme.text,
+                                    cursor: 'pointer',
+                                    transition: 'all 0.2s',
+                                    marginBottom: '4px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '12px'
+                                }}
+                            >
+                                <span style={{ fontSize: '11px', fontWeight: '900', opacity: 0.5 }}>{String(idx + 1).padStart(2, '0')}</span>
+                                <span style={{ fontSize: '13px', fontWeight: '700', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.title}</span>
+                            </button>
+                        ))}
+                    </div>
+                </aside>
+            )}
 
             {/* Main Editor / Viewer */}
             <main style={{ flex: 1, position: 'relative', display: 'flex', flexDirection: 'column' }}>
@@ -301,7 +303,7 @@ function ContenidosArtesContent() {
                 >
                     {viewMode === 'pdf' ? (
                         <iframe 
-                            src="/artes_primaria_analitico_2025.pdf#toolbar=0" 
+                            src="/artes_primaria_analitico_2025.pdf#pagemode=thumbs&navpanes=1" 
                             style={{ 
                                 width: '100%', 
                                 height: '100%', 
