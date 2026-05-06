@@ -189,7 +189,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                     background: '#fff'
                 }}>
                     {/* Header Section */}
-                    <div style={{ marginBottom: '60px', textAlign: 'center' }}>
+                    <div style={{ marginBottom: '40px', textAlign: 'center' }}>
                         <input 
                             type="text" 
                             value={formData.titulo} 
@@ -203,30 +203,30 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                                 border: 'none', 
                                 borderBottom: errors.titulo ? '2px solid #ef4444' : `2px solid ${theme.border}`, 
                                 textAlign: 'center', 
-                                fontSize: 'clamp(24px, 5vw, 32px)', 
+                                fontSize: 'clamp(20px, 4vw, 28px)', 
                                 fontWeight: '900', 
                                 color: theme.text, 
                                 background: 'transparent', 
                                 outline: 'none', 
-                                padding: '10px', 
+                                padding: '8px', 
                                 textTransform: 'uppercase', 
-                                letterSpacing: '-1px' 
+                                letterSpacing: '-0.5px' 
                             }} 
                         />
-                        <p style={{ color: theme.subtext, fontSize: '11px', marginTop: '16px', fontWeight: '800', letterSpacing: '3px' }}>
+                        <p style={{ color: theme.subtext, fontSize: '10px', marginTop: '12px', fontWeight: '800', letterSpacing: '2px' }}>
                             {formData.id ? `EDITANDO PLANEACIÓN #${formData.id}` : 'SISTEMA DE PLANEACIÓN ANALÍTICA 2025'}
                         </p>
                     </div>
 
                     {/* Meta Grid */}
-                    <div className="responsive-meta-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginBottom: '60px', padding: '30px', background: theme.sectionBg, borderRadius: '16px', border: `1px solid ${theme.border}` }}>
+                    <div className="responsive-meta-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginBottom: '40px', padding: '20px 24px', background: theme.sectionBg, borderRadius: '12px', border: `1px solid ${theme.border}` }}>
                         {[
                             { label: 'Fase', key: 'fase_id', options: catalogs?.fases },
                             { label: 'Grado', key: 'grado_id', options: filteredGrados },
                             { label: 'Lenguaje', key: 'lenguaje_id', options: catalogs?.lenguajes }
                         ].map((field) => (
                             <div key={field.label}>
-                                <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '10px', letterSpacing: '1px' }}>{field.label}</label>
+                                <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px', letterSpacing: '1px' }}>{field.label}</label>
                                 <select 
                                     value={formData[field.key]} 
                                     onChange={(e) => {
@@ -244,10 +244,10 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                                         border: 'none', 
                                         borderBottom: errors[field.key] ? '2px solid #ef4444' : `1px solid ${theme.border}`, 
                                         color: theme.text, 
-                                        fontSize: '15px', 
+                                        fontSize: '14px', 
                                         fontWeight: '700', 
                                         outline: 'none', 
-                                        padding: '8px 0' 
+                                        padding: '4px 0' 
                                     }}>
                                     <option value="">---</option>
                                     {(field.options || []).map(opt => <option key={opt.id} value={opt.id}>{opt.nombre}</option>)}
@@ -258,14 +258,14 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
 
                     <div className="content-padding-container">
                         {/* Ejes Articuladores */}
-                        <div style={{ marginBottom: '60px' }}>
-                            <label style={{ display: 'block', fontSize: '11px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '20px', letterSpacing: '1px' }}>Ejes Articuladores</label>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                        <div style={{ marginBottom: '40px' }}>
+                            <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '15px', letterSpacing: '1px' }}>Ejes Articuladores</label>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                                 {(catalogs?.ejes_articuladores || []).map(eje => {
                                     const selected = formData.ejes_articuladores.includes(eje.nombre);
                                     return (
                                         <button key={eje.id} type="button" onClick={() => toggleEje(eje.nombre)}
-                                            style={{ padding: '8px 18px', borderRadius: '100px', fontSize: '11px', fontWeight: '800', border: '1px solid', borderColor: selected ? theme.accent : theme.border, background: selected ? '#eff6ff' : 'transparent', color: selected ? theme.accent : theme.subtext, cursor: 'pointer', transition: 'all 0.2s' }}>
+                                            style={{ padding: '6px 14px', borderRadius: '100px', fontSize: '10px', fontWeight: '800', border: '1px solid', borderColor: selected ? theme.accent : theme.border, background: selected ? '#eff6ff' : 'transparent', color: selected ? theme.accent : theme.subtext, cursor: 'pointer', transition: 'all 0.2s' }}>
                                             {eje.nombre}
                                         </button>
                                     );
