@@ -294,53 +294,73 @@ function ContenidosArtesContent() {
                     onScroll={handleScroll}
                     style={{ 
                         flex: 1, 
-                        overflowY: 'auto', 
-                        padding: viewMode === 'pdf' ? '60px 0' : '0',
-                        scrollBehavior: 'smooth'
+                        overflow: 'hidden', // Let the iframe handle its own scroll if in PDF mode
+                        background: viewMode === 'pdf' ? '#525659' : theme.bg,
+                        position: 'relative'
                     }}
                 >
-                    <div style={{ 
-                        maxWidth: viewMode === 'pdf' ? '850px' : '100%', 
-                        margin: '0 auto',
-                        padding: viewMode === 'pdf' ? '0' : '60px 80px',
-                        background: viewMode === 'pdf' ? '#fff' : 'transparent',
-                        boxShadow: viewMode === 'pdf' ? '0 30px 60px rgba(0,0,0,0.05)' : 'none',
-                        minHeight: '100%'
-                    }}>
-                        {pages.length === 0 ? (
-                            <div style={{ padding: '100px', textAlign: 'center', color: theme.subtext }}>
-                                <div style={{ fontSize: '48px', marginBottom: '20px' }}>🔍</div>
-                                <p style={{ fontWeight: '700' }}>No se encontraron secciones en el documento.</p>
-                                <p style={{ fontSize: '13px' }}>Verifica la conexión o intenta recargar la página.</p>
-                            </div>
-                        ) : pages.map((p, idx) => (
-                            <div 
-                                key={idx} 
-                                ref={pageRefs.current[idx]}
-                                data-page-index={idx}
-                                style={{ 
-                                    marginBottom: viewMode === 'pdf' ? '0' : '80px',
-                                    padding: viewMode === 'pdf' ? '80px 100px' : '0',
-                                    borderBottom: viewMode === 'pdf' && idx !== pages.length - 1 ? `1px solid #f1f5f9` : 'none'
-                                }}
-                            >
-                                <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
-                                {isEditMode ? (
-                                    <RichTextEditor 
-                                        initialValue={p.cleanHtml} 
-                                        onSave={(newHtml) => handleSave(idx, newHtml)} 
-                                        isSaving={isSaving}
-                                    />
-                                ) : (
+                    {viewMode === 'pdf' ? (
+                        <iframe 
+                            src="/artes_primaria_analitico_2025.pdf#toolbar=0" 
+                            style={{ 
+                                width: '100%', 
+                                height: '100%', 
+                                border: 'none' 
+                            }} 
+                            title="Programa Analítico Artes PDF"
+                        />
+                    ) : (
+                        <div 
+                            onScroll={handleScroll}
+                            style={{ 
+                                height: '100%',
+                                overflowY: 'auto',
+                                padding: '0',
+                                scrollBehavior: 'smooth'
+                            }}
+                        >
+                            <div style={{ 
+                                maxWidth: '100%', 
+                                margin: '0 auto',
+                                padding: '60px 80px',
+                                background: 'transparent',
+                                minHeight: '100%'
+                            }}>
+                                {pages.length === 0 ? (
+                                    <div style={{ padding: '100px', textAlign: 'center', color: theme.subtext }}>
+                                        <div style={{ fontSize: '48px', marginBottom: '20px' }}>🔍</div>
+                                        <p style={{ fontWeight: '700' }}>No se encontraron secciones en el documento.</p>
+                                        <p style={{ fontSize: '13px' }}>Verifica la conexión o intenta recargar la página.</p>
+                                    </div>
+                                ) : pages.map((p, idx) => (
                                     <div 
-                                        className="prose-custom"
-                                        dangerouslySetInnerHTML={{ __html: p.cleanHtml }}
-                                        style={{ lineHeight: '1.8', fontSize: '17px', color: theme.text }}
-                                    />
-                                )}
+                                        key={idx} 
+                                        ref={pageRefs.current[idx]}
+                                        data-page-index={idx}
+                                        style={{ 
+                                            marginBottom: '80px',
+                                            padding: '0'
+                                        }}
+                                    >
+                                        <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
+                                        {isEditMode ? (
+                                            <RichTextEditor 
+                                                initialValue={p.cleanHtml} 
+                                                onSave={(newHtml) => handleSave(idx, newHtml)} 
+                                                isSaving={isSaving}
+                                            />
+                                        ) : (
+                                            <div 
+                                                className="prose-custom"
+                                                dangerouslySetInnerHTML={{ __html: p.cleanHtml }}
+                                                style={{ lineHeight: '1.8', fontSize: '17px', color: theme.text }}
+                                            />
+                                        )}
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* Minimap Overlay (Digital mode only) */}
