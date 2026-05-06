@@ -1,6 +1,7 @@
 import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
-import initialDocs from '@/lib/data/initialDocs.json';
+import fs from 'fs/promises';
+import path from 'path';
 
 export async function GET(request, { params }) {
     const { slug } = params; 
@@ -9,13 +10,18 @@ export async function GET(request, { params }) {
         return NextResponse.json({ error: 'Documento no encontrado' }, { status: 404 });
     }
 
-    // El contenido que tenemos en el código fuente (siempre disponible)
-    const backupContent = initialDocs[slug];
+    let backupContent = null;
+    try {
+        // Leemos el JSON bajo demanda para no saturar el arranque de la función
+        const jsonPath = path.join(process.cwd(), 'src/lib/data/initialDocs.json');
+        const jsonData = JSON.parse(await fs.readFile(jsonPath, 'utf8'));
+        backupContent = jsonData[slug];
+    } catch (e) {
+        console.warn("No se pudo leer initialDocs.json:", e.message);
+    }
 
     try {
-        // 1. Intentar asegurar tabla en la DB
-        // Nota: Esto puede fallar en Vercel si no hay Turso configurado, 
-        // pero lo atrapamos en el catch.
+        // 1. Intentar asegurar tabla
         await db.execute(`
             CREATE TABLE IF NOT EXISTS documentos_base (
                 nombre TEXT PRIMARY KEY,
@@ -36,15 +42,15 @@ export async function GET(request, { params }) {
             });
         }
 
-        // 3. Si no está en la DB, inyectar desde el backup
+        // 3. Fallback a inyección
         if (backupContent) {
             try {
                 await db.execute({
                     sql: 'INSERT OR REPLACE INTO documentos_base (nombre, contenido) VALUES (?, ?)',
                     args: [slug, backupContent]
                 });
-            } catch (e) {
-                console.warn("No se pudo persistir en DB, pero devolvemos backup:", e.message);
+            } catch (dbErr) {
+                console.error("Fallo al inyectar backup en Turso:", dbErr.message);
             }
             
             return new Response(backupContent, {
@@ -53,22 +59,20 @@ export async function GET(request, { params }) {
         }
 
     } catch (error) {
-        console.error('Error en DB Turso:', error.message);
+        console.error('Fallo en flujo principal de Documentos:', error.message);
         
-        // 4. FALLBACK SUPREMO: Si Turso falla (ej. no hay variables de entorno o error de red),
-        // devolvemos el contenido estático que está en el bundle.
+        // Fallback final
         if (backupContent) {
-            console.log("Sirviendo contenido desde backup local debido a fallo en DB.");
             return new Response(backupContent, {
                 headers: { 
                     'Content-Type': 'text/markdown; charset=utf-8',
-                    'X-Data-Source': 'Static-Backup'
+                    'X-Data-Source': 'Emergency-Backup'
                 }
             });
         }
     }
 
-    return NextResponse.json({ error: 'No hay datos disponibles' }, { status: 404 });
+    return NextResponse.json({ error: 'Fallo total de carga de datos', details: 'No se pudo conectar a DB ni leer backup.' }, { status: 500 });
 }
 
 export async function POST(request, { params }) {
@@ -77,7 +81,6 @@ export async function POST(request, { params }) {
         const { content } = await request.json();
         if (!content) return NextResponse.json({ error: 'Contenido vacío' }, { status: 400 });
 
-        // Intentar guardar en DB
         await db.execute(`
             CREATE TABLE IF NOT EXISTS documentos_base (
                 nombre TEXT PRIMARY KEY,
@@ -93,10 +96,6 @@ export async function POST(request, { params }) {
 
         return NextResponse.json({ success: true });
     } catch (error) {
-        console.error('Error al guardar:', error.message);
-        return NextResponse.json({ 
-            error: 'No se pudo guardar. Verifica la conexión a Turso.',
-            details: error.message 
-        }, { status: 500 });
+        return NextResponse.json({ error: 'Error al guardar', details: error.message }, { status: 500 });
     }
 }
