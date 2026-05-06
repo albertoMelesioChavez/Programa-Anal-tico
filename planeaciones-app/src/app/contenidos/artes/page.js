@@ -413,9 +413,10 @@ function ContenidosArtesContent() {
                     onScroll={handleScroll}
                     style={{ 
                         flex: 1, 
-                        overflow: 'hidden', // Let the iframe handle its own scroll if in PDF mode
+                        overflowY: viewMode === 'pdf' ? 'hidden' : 'auto',
                         background: viewMode === 'pdf' ? '#525659' : theme.bg,
-                        position: 'relative'
+                        position: 'relative',
+                        scrollBehavior: 'smooth'
                     }}
                 >
                     {viewMode === 'pdf' ? (
@@ -430,13 +431,10 @@ function ContenidosArtesContent() {
                         />
                     ) : (
                         <div 
-                            onScroll={handleScroll}
                             style={{ 
-                                height: '100%',
-                                overflowY: 'auto',
                                 padding: '60px 0',
-                                scrollBehavior: 'smooth',
-                                background: '#f1f5f9' // Grey background for the virtual desk
+                                background: '#f1f5f9', // Grey background for the virtual desk
+                                minHeight: '100%'
                             }}
                         >
                             <div style={{ 
