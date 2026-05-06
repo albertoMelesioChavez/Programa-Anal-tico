@@ -117,7 +117,63 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
         }
     };
 
-    const handleSubmit = async () => {
+    const generateAISequence = async () => {
+        if (!formData.pda_id) {
+            alert("Por favor selecciona un PDA para que la IA tenga contexto.");
+            return;
+        }
+
+        const selectedPda = pdas.find(p => p.id == formData.pda_id);
+        const selectedContenido = [...(contenidos.nacionales || []), ...(contenidos.estatales || [])]
+            .find(c => c.id == (formData.contenido_nacional_id || formData.contenido_estatal_id));
+
+        setIsGeneratingAI(true);
+        try {
+            const prompt = `Genera una secuencia didáctica completa (Inicio, Desarrollo, Cierre) para una clase de primaria. 
+            Metodología sugerida: ${formData.metodologia || 'Aprendizaje Basado en Proyectos'}.
+            Quiero que el resultado sea un JSON con las claves: "inicio", "desarrollo", "cierre", "metodologia_sugerida", "evaluacion_sugerida", "recursos_sugeridos".
+            Sé creativo y asegúrate de que las actividades sean lúdicas y acordes al grado.`;
+
+            const context = {
+                grado: filteredGrados.find(g => g.id == formData.grado_id)?.nombre,
+                contenido: selectedContenido?.descripcion,
+                pda: selectedPda?.descripcion,
+                ejes: formData.ejes_articuladores
+            };
+
+            const res = await fetch('/api/ai', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt, context })
+            });
+
+            const data = await res.json();
+            if (data.error) throw new Error(data.details || data.error);
+
+            const jsonMatch = data.text.match(/\{[\s\S]*\}/);
+            if (jsonMatch) {
+                const aiData = JSON.parse(jsonMatch[0]);
+                setFormData(prev => ({
+                    ...prev,
+                    secuencia_inicio: aiData.inicio || prev.secuencia_inicio,
+                    secuencia_desarrollo: aiData.desarrollo || prev.secuencia_desarrollo,
+                    secuencia_cierre: aiData.cierre || prev.secuencia_cierre,
+                    metodologia: aiData.metodologia_sugerida || prev.metodologia,
+                    evaluacion: aiData.evaluacion_sugerida || prev.evaluacion,
+                    recursos: aiData.recursos_sugeridos || prev.recursos
+                }));
+            } else {
+                setFormData(prev => ({ ...prev, secuencia_desarrollo: data.text }));
+            }
+        } catch (error) {
+            console.error("AI Error:", error);
+            alert("No se pudo generar la planeación: " + error.message);
+        } finally {
+            setIsGeneratingAI(false);
+        }
+    };
+
+    const handleSave = async (e) => {
         if (!validate()) {
             alert('Por favor complete los campos obligatorios: Título, Fase, Grado y Lenguaje.');
             return;
@@ -306,9 +362,32 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
 
                         {/* Section II */}
                         <div style={{ marginBottom: '24px' }}>
-                            <h4 style={{ fontSize: '11px', fontWeight: '900', color: theme.success, textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '1px', borderLeft: `3px solid ${theme.success}`, paddingLeft: '10px' }}>
-                                II. Planeación Didáctica
-                            </h4>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                                <h4 style={{ fontSize: '11px', fontWeight: '900', color: theme.success, textTransform: 'uppercase', letterSpacing: '1px', borderLeft: `3px solid ${theme.success}`, paddingLeft: '10px', margin: 0 }}>
+                                    II. Planeación Didáctica
+                                </h4>
+                                <button 
+                                    onClick={generateAISequence}
+                                    disabled={isGeneratingAI}
+                                    style={{ 
+                                        padding: '4px 12px', 
+                                        borderRadius: '100px', 
+                                        fontSize: '9px', 
+                                        fontWeight: '900', 
+                                        background: 'linear-gradient(135deg, #2563eb, #7c3aed)', 
+                                        color: '#fff', 
+                                        border: 'none', 
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '6px',
+                                        boxShadow: '0 4px 12px rgba(37,99,235,0.2)',
+                                        opacity: isGeneratingAI ? 0.7 : 1
+                                    }}
+                                >
+                                    {isGeneratingAI ? '⚡ GENERANDO...' : '🪄 GENERAR CON IA'}
+                                </button>
+                            </div>
                             <div style={{ marginBottom: '12px' }}>
                                 <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '4px' }}>Metodología</label>
                                 <input type="text" value={formData.metodologia} onChange={(e) => setFormData({...formData, metodologia: e.target.value})} placeholder="Ej. Aprendizaje Basado en Proyectos" style={{ width: '100%', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '8px', color: theme.text, fontSize: '13px', fontWeight: '700', outline: 'none', padding: '6px 12px' }} />

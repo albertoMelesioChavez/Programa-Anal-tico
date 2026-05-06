@@ -182,7 +182,35 @@ function ContenidosArtesContent() {
         const updatedPages = [...pages];
         updatedPages[idx] = { ...updatedPages[idx], title: newTitle };
         setPages(updatedPages);
-        // NO GUARDAMOS EN LA DB EN CADA LETRA
+    };
+
+    const improveWithAI = async (idx) => {
+        setIsSaving(true);
+        try {
+            const prompt = `Actúa como un experto en artes y educación. Mejora el siguiente contenido para un programa analítico de primaria, haciéndolo más profesional, detallado y pedagógicamente rico. Mantén el formato HTML pero mejora la redacción y los conceptos.`;
+            const context = {
+                titulo_seccion: pages[idx].title,
+                contenido_actual: pages[idx].cleanHtml
+            };
+
+            const res = await fetch('/api/ai', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt, context })
+            });
+
+            const data = await res.json();
+            if (data.error) throw new Error(data.error);
+
+            // Limpiar la respuesta de posibles bloques de código markdown
+            const cleanText = data.text.replace(/```html|```/g, '').trim();
+            handleSave(idx, cleanText);
+        } catch (error) {
+            console.error("AI Error:", error);
+            alert("No se pudo mejorar el texto: " + error.message);
+        } finally {
+            setIsSaving(false);
+        }
     };
 
     const handleExport = () => {
@@ -492,8 +520,33 @@ function ContenidosArtesContent() {
                                             />
                                         )}
                                         {/* Page Number Indicator */}
-                                        <div style={{ position: 'absolute', bottom: '30px', right: '40px', fontSize: '11px', fontWeight: '800', color: '#cbd5e1' }}>
-                                            PÁGINA {idx + 1} {isEditMode && currentPageIdx === idx && <span style={{ color: '#2563eb', marginLeft: '10px' }}>(MODO EDICIÓN ACTIVO)</span>}
+                                        <div style={{ position: 'absolute', bottom: '30px', right: '40px', display: 'flex', alignItems: 'center', gap: '20px' }}>
+                                            {isEditMode && currentPageIdx === idx && (
+                                                <button 
+                                                    onClick={() => improveWithAI(idx)}
+                                                    disabled={isSaving}
+                                                    style={{
+                                                        background: 'linear-gradient(135deg, #2563eb, #7c3aed)',
+                                                        color: '#fff',
+                                                        border: 'none',
+                                                        padding: '6px 14px',
+                                                        borderRadius: '100px',
+                                                        fontSize: '10px',
+                                                        fontWeight: '900',
+                                                        cursor: 'pointer',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        gap: '6px',
+                                                        boxShadow: '0 4px 12px rgba(37,99,235,0.2)',
+                                                        opacity: isSaving ? 0.7 : 1
+                                                    }}
+                                                >
+                                                    {isSaving ? '🪄 PROCESANDO...' : '🪄 MEJORAR CON IA'}
+                                                </button>
+                                            )}
+                                            <span style={{ fontSize: '11px', fontWeight: '800', color: '#cbd5e1' }}>
+                                                PÁGINA {idx + 1} {isEditMode && currentPageIdx === idx && <span style={{ color: '#2563eb', marginLeft: '10px' }}>(MODO EDICIÓN ACTIVO)</span>}
+                                            </span>
                                         </div>
                                     </div>
                                 ))}
