@@ -124,11 +124,12 @@ function ContenidosArtesContent() {
     }, [viewMode, router, searchParams]);
 
     const handleSaveDocument = async (updatedPages) => {
+        // No guardar si no hay cambios reales o si está vacío
+        if (!updatedPages || updatedPages.length === 0) return;
         setIsSaving(true);
         try {
             let fullContent = '';
             updatedPages.forEach((p, pIdx) => {
-                // Preservar el título en el formato PAGE_START
                 fullContent += `<!-- PAGE_START ${pIdx + 1} -->\n<p><strong>${p.title}</strong></p>\n${p.cleanHtml}\n<!-- PAGE_END -->\n`;
             });
             await fetch('/api/documentos/artes', {
@@ -138,7 +139,6 @@ function ContenidosArtesContent() {
             });
         } catch (error) { 
             console.error('Save failed', error); 
-            alert('Error al guardar cambios estructurales.');
         } finally { setIsSaving(false); }
     };
 
@@ -153,7 +153,8 @@ function ContenidosArtesContent() {
         const newSection = { title: 'Nueva Sección', cleanHtml: '<p>Contenido de la nueva sección...</p>' };
         const updatedPages = [...pages, newSection];
         setPages(updatedPages);
-        pageRefs.current = updatedPages.map(() => createRef());
+        // Esperar un tick para que el ref se actualice si es necesario, 
+        // aunque pageRefs se maneja en el render
         await handleSaveDocument(updatedPages);
     };
 
@@ -161,9 +162,7 @@ function ContenidosArtesContent() {
         if (!confirm('¿Estás seguro de eliminar esta sección?')) return;
         const updatedPages = pages.filter((_, i) => i !== idx);
         setPages(updatedPages);
-        pageRefs.current = updatedPages.map(() => createRef());
         await handleSaveDocument(updatedPages);
-        if (currentPageIdx >= updatedPages.length) setCurrentPageIdx(Math.max(0, updatedPages.length - 1));
     };
 
     const moveSection = async (idx, direction) => {
@@ -172,16 +171,15 @@ function ContenidosArtesContent() {
         const targetIdx = idx + direction;
         [updatedPages[idx], updatedPages[targetIdx]] = [updatedPages[targetIdx], updatedPages[idx]];
         setPages(updatedPages);
-        pageRefs.current = updatedPages.map(() => createRef());
         setCurrentPageIdx(targetIdx);
         await handleSaveDocument(updatedPages);
     };
 
-    const renameSection = async (idx, newTitle) => {
+    const renameSection = (idx, newTitle) => {
         const updatedPages = [...pages];
         updatedPages[idx] = { ...updatedPages[idx], title: newTitle };
         setPages(updatedPages);
-        await handleSaveDocument(updatedPages);
+        // NO GUARDAMOS EN LA DB EN CADA LETRA
     };
 
     const handleExport = () => {
@@ -256,40 +254,32 @@ function ContenidosArtesContent() {
 
                     <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 32px' }}>
                         {pages.map((p, idx) => (
-                            <div key={idx} style={{ marginBottom: '8px', position: 'relative', group: 'true' }}>
+                            <div key={idx} style={{ marginBottom: '8px', position: 'relative' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                    <button 
-                                        onClick={() => {
-                                            pageRefs.current[idx].current?.scrollIntoView({ behavior: 'smooth' });
-                                            setCurrentPageIdx(idx);
-                                        }}
-                                        style={{
-                                            flex: 1,
-                                            textAlign: 'left',
-                                            padding: '12px 16px',
-                                            borderRadius: '12px',
-                                            border: 'none',
-                                            background: currentPageIdx === idx ? '#2563eb' : 'transparent',
-                                            color: currentPageIdx === idx ? '#fff' : theme.text,
-                                            cursor: 'pointer',
-                                            transition: 'all 0.2s',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            gap: '12px',
-                                            minWidth: 0
-                                        }}
-                                    >
-                                        <span style={{ fontSize: '10px', fontWeight: '900', opacity: 0.5 }}>{String(idx + 1).padStart(2, '0')}</span>
-                                        {isEditMode ? (
+                                    {isEditMode ? (
+                                        <div 
+                                            style={{
+                                                flex: 1,
+                                                padding: '12px 16px',
+                                                borderRadius: '12px',
+                                                background: currentPageIdx === idx ? '#2563eb' : 'transparent',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '12px',
+                                                minWidth: 0,
+                                                border: `1px solid ${currentPageIdx === idx ? 'transparent' : theme.border}`
+                                            }}
+                                        >
+                                            <span style={{ fontSize: '10px', fontWeight: '900', opacity: 0.5, color: currentPageIdx === idx ? '#fff' : theme.subtext }}>{String(idx + 1).padStart(2, '0')}</span>
                                             <input 
                                                 value={p.title} 
                                                 onChange={(e) => renameSection(idx, e.target.value)}
-                                                onClick={(e) => e.stopPropagation()}
+                                                onBlur={() => handleSaveDocument(pages)}
                                                 style={{ 
                                                     background: 'transparent', 
                                                     border: 'none', 
                                                     borderBottom: `1px solid ${currentPageIdx === idx ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.1)'}`, 
-                                                    color: 'inherit', 
+                                                    color: currentPageIdx === idx ? '#fff' : theme.text, 
                                                     fontSize: '13px', 
                                                     fontWeight: '700', 
                                                     padding: '2px 0',
@@ -297,10 +287,33 @@ function ContenidosArtesContent() {
                                                     outline: 'none'
                                                 }}
                                             />
-                                        ) : (
+                                        </div>
+                                    ) : (
+                                        <button 
+                                            onClick={() => {
+                                                pageRefs.current[idx].current?.scrollIntoView({ behavior: 'smooth' });
+                                                setCurrentPageIdx(idx);
+                                            }}
+                                            style={{
+                                                flex: 1,
+                                                textAlign: 'left',
+                                                padding: '12px 16px',
+                                                borderRadius: '12px',
+                                                border: 'none',
+                                                background: currentPageIdx === idx ? '#2563eb' : 'transparent',
+                                                color: currentPageIdx === idx ? '#fff' : theme.text,
+                                                cursor: 'pointer',
+                                                transition: 'all 0.2s',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '12px',
+                                                minWidth: 0
+                                            }}
+                                        >
+                                            <span style={{ fontSize: '10px', fontWeight: '900', opacity: 0.5 }}>{String(idx + 1).padStart(2, '0')}</span>
                                             <span style={{ fontSize: '13px', fontWeight: '700', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.title}</span>
-                                        )}
-                                    </button>
+                                        </button>
+                                    )}
 
                                     {isEditMode && (
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
@@ -327,7 +340,8 @@ function ContenidosArtesContent() {
                                             display: 'flex',
                                             alignItems: 'center',
                                             justifyContent: 'center',
-                                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                                            zIndex: 5
                                         }}
                                     >
                                         ×
