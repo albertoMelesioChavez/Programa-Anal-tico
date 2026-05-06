@@ -94,7 +94,10 @@ function ContenidosArtesContent() {
     }, []);
 
     useEffect(() => {
-        if (loading || pages.length === 0 || viewMode === 'pdf') return;
+        // Desactivamos el observer en modo edición para evitar bucles infinitos de renderizado
+        // y asegurar que el editor no se destruya mientras el usuario hace scroll
+        if (loading || pages.length === 0 || viewMode === 'pdf' || isEditMode) return;
+        
         const observer = new IntersectionObserver(
             (entries) => {
                 let bestEntry = null;
@@ -115,7 +118,7 @@ function ContenidosArtesContent() {
         const currentRefs = pageRefs.current;
         currentRefs.forEach((ref) => { if (ref.current) observer.observe(ref.current); });
         return () => { currentRefs.forEach((ref) => { if (ref.current) observer.unobserve(ref.current); }); };
-    }, [loading, pages, viewMode]);
+    }, [loading, pages, viewMode, isEditMode]);
 
     useEffect(() => {
         const params = new URLSearchParams(searchParams);
@@ -430,8 +433,7 @@ function ContenidosArtesContent() {
                         overflowY: viewMode === 'pdf' ? 'hidden' : 'auto',
                         background: viewMode === 'pdf' ? '#525659' : '#f1f5f9',
                         position: 'relative',
-                        scrollBehavior: 'smooth',
-                        padding: viewMode === 'pdf' ? '0' : '60px 0'
+                        scrollBehavior: 'smooth'
                     }}
                 >
                     {viewMode === 'pdf' ? (
@@ -446,11 +448,12 @@ function ContenidosArtesContent() {
                         />
                     ) : (
                         <div style={{ 
-                            maxWidth: '850px', // Document width
+                            maxWidth: '850px', 
                             margin: '0 auto',
+                            padding: '60px 20px',
                             display: 'flex',
                             flexDirection: 'column',
-                            gap: '2px', // Space between "pages"
+                            gap: '2px',
                             minHeight: '100%'
                         }}>
                             {pages.length === 0 ? (
