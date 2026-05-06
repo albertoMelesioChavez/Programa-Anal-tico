@@ -32,6 +32,15 @@ function getDbClient() {
 
 export const db = getDbClient();
 
+// Log de diagnóstico para asegurar que la conexión en la nube está activa
+if (typeof window === 'undefined') {
+    console.log('--- TURSO CONNECTION DIAGNOSTIC ---');
+    console.log('DB URL defined:', !!url);
+    console.log('Auth Token defined:', !!authToken);
+    console.log('Environment:', process.env.NODE_ENV);
+    console.log('-----------------------------------');
+}
+
 // Helper para manejar queries de forma consistente
 export async function query(sql, params = []) {
     try {
