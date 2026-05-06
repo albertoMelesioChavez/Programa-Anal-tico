@@ -2,8 +2,13 @@ import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import dataFallback from '@/lib/data/catalogs.json';
 
+import { ensureTablesExist } from '@/lib/db-init';
+
 export async function GET() {
     try {
+        // Asegurar que la base de datos está poblada en Turso
+        await ensureTablesExist();
+        
         // En LibSQL/Turso, podemos ejecutar múltiples queries o secuenciales
         const fases = await db.execute('SELECT * FROM fases ORDER BY id ASC');
         const grados = await db.execute('SELECT * FROM grados ORDER BY id ASC');
