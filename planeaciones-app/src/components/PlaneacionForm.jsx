@@ -26,6 +26,8 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
         actividades: ''
     });
 
+    const [isUploading, setIsUploading] = useState(false);
+
     // Cargar datos iniciales si estamos en modo edición
     useEffect(() => {
         if (initialData) {
@@ -82,6 +84,37 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
         return Object.keys(newErrors).length === 0;
     };
 
+    const handleFileUpload = async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        setIsUploading(true);
+        try {
+            const response = await fetch(`/api/upload?filename=${encodeURIComponent(file.name)}`, {
+                method: 'POST',
+                body: file,
+            });
+
+            if (response.ok) {
+                const blob = await response.json();
+                const currentRecursos = formData.recursos || '';
+                const newLine = currentRecursos ? '\n' : '';
+                setFormData({
+                    ...formData,
+                    recursos: `${currentRecursos}${newLine}📎 ${file.name}: ${blob.url}`
+                });
+            } else {
+                const err = await response.json();
+                alert('Error al subir: ' + (err.error || 'Asegúrate de conectar Vercel Blob.'));
+            }
+        } catch (error) {
+            console.error('Upload error:', error);
+            alert('Fallo de conexión al subir.');
+        } finally {
+            setIsUploading(false);
+        }
+    };
+
     const handleSubmit = async () => {
         if (!validate()) {
             alert('Por favor complete los campos obligatorios: Título, Fase, Grado y Lenguaje.');
@@ -94,7 +127,6 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
             const url = isEdit ? `/api/planeaciones/${formData.id}` : '/api/planeaciones';
             const method = isEdit ? 'PUT' : 'POST';
 
-            // Normalizar IDs a strings para la DB
             const submissionData = {
                 ...formData,
                 fase_id: formData.fase_id?.toString(),
@@ -308,9 +340,40 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                                     { key: 'evaluacion', label: 'Evaluación' },
                                     { key: 'recursos', label: 'Recursos' }
                                 ].map(field => (
-                                    <div key={field.key}>
-                                        <label style={{ display: 'block', fontSize: '11px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px' }}>{field.label}</label>
-                                        <textarea value={formData[field.key] || ''} onChange={(e) => setFormData({...formData, [field.key]: e.target.value})} style={{ width: '100%', height: '160px', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '16px', padding: '18px', fontSize: '14px', color: theme.text, outline: 'none', lineHeight: '1.6' }} />
+                                    <div key={field.key} style={{ position: 'relative' }}>
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                                            <label style={{ display: 'block', fontSize: '11px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', letterSpacing: '1px' }}>{field.label}</label>
+                                            
+                                            {field.key === 'recursos' && (
+                                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                                                    <input 
+                                                        type="file" 
+                                                        id="file-upload" 
+                                                        style={{ display: 'none' }} 
+                                                        onChange={handleFileUpload}
+                                                    />
+                                                    <label 
+                                                        htmlFor="file-upload" 
+                                                        style={{ 
+                                                            fontSize: '11px', 
+                                                            fontWeight: '800', 
+                                                            color: theme.accent, 
+                                                            cursor: 'pointer',
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                            gap: '6px',
+                                                            padding: '4px 12px',
+                                                            borderRadius: '8px',
+                                                            background: '#eff6ff',
+                                                            transition: 'all 0.2s'
+                                                        }}
+                                                    >
+                                                        {isUploading ? '📤 SUBIENDO...' : '📎 SUBIR ARCHIVO'}
+                                                    </label>
+                                                </div>
+                                            )}
+                                        </div>
+                                        <textarea value={formData[field.key] || ''} onChange={(e) => setFormData({...formData, [field.key]: e.target.value})} style={{ width: '100%', height: '160px', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '16px', padding: '18px', fontSize: '14px', color: theme.text, outline: 'none', lineHeight: '1.6' }} placeholder={field.key === 'recursos' ? "Escribe o sube archivos (JPG, PNG, Word, MP3, MP4, etc.)..." : ""} />
                                     </div>
                                 ))}
                             </div>
