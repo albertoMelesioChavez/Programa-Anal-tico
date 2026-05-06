@@ -185,11 +185,11 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                 <div className="document-paper" style={{ 
                     maxWidth: '1000px', 
                     margin: '0 auto', 
-                    padding: '60px 40px',
+                    padding: '40px 40px',
                     background: '#fff'
                 }}>
                     {/* Header Section */}
-                    <div style={{ marginBottom: '40px', textAlign: 'center' }}>
+                    <div style={{ marginBottom: '30px', textAlign: 'center' }}>
                         <input 
                             type="text" 
                             value={formData.titulo} 
@@ -203,30 +203,30 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                                 border: 'none', 
                                 borderBottom: errors.titulo ? '2px solid #ef4444' : `2px solid ${theme.border}`, 
                                 textAlign: 'center', 
-                                fontSize: 'clamp(20px, 4vw, 28px)', 
+                                fontSize: 'clamp(18px, 3vw, 24px)', 
                                 fontWeight: '900', 
                                 color: theme.text, 
                                 background: 'transparent', 
                                 outline: 'none', 
-                                padding: '8px', 
+                                padding: '6px', 
                                 textTransform: 'uppercase', 
                                 letterSpacing: '-0.5px' 
                             }} 
                         />
-                        <p style={{ color: theme.subtext, fontSize: '10px', marginTop: '12px', fontWeight: '800', letterSpacing: '2px' }}>
+                        <p style={{ color: theme.subtext, fontSize: '9px', marginTop: '8px', fontWeight: '800', letterSpacing: '2px' }}>
                             {formData.id ? `EDITANDO PLANEACIÓN #${formData.id}` : 'SISTEMA DE PLANEACIÓN ANALÍTICA 2025'}
                         </p>
                     </div>
 
                     {/* Meta Grid */}
-                    <div className="responsive-meta-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginBottom: '40px', padding: '20px 24px', background: theme.sectionBg, borderRadius: '12px', border: `1px solid ${theme.border}` }}>
+                    <div className="responsive-meta-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '24px', padding: '12px 16px', background: theme.sectionBg, borderRadius: '8px', border: `1px solid ${theme.border}` }}>
                         {[
                             { label: 'Fase', key: 'fase_id', options: catalogs?.fases },
                             { label: 'Grado', key: 'grado_id', options: filteredGrados },
                             { label: 'Lenguaje', key: 'lenguaje_id', options: catalogs?.lenguajes }
                         ].map((field) => (
                             <div key={field.label}>
-                                <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px', letterSpacing: '1px' }}>{field.label}</label>
+                                <label style={{ display: 'block', fontSize: '8px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '2px', letterSpacing: '1px' }}>{field.label}</label>
                                 <select 
                                     value={formData[field.key]} 
                                     onChange={(e) => {
@@ -244,10 +244,10 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                                         border: 'none', 
                                         borderBottom: errors[field.key] ? '2px solid #ef4444' : `1px solid ${theme.border}`, 
                                         color: theme.text, 
-                                        fontSize: '14px', 
+                                        fontSize: '13px', 
                                         fontWeight: '700', 
                                         outline: 'none', 
-                                        padding: '4px 0' 
+                                        padding: '1px 0' 
                                     }}>
                                     <option value="">---</option>
                                     {(field.options || []).map(opt => <option key={opt.id} value={opt.id}>{opt.nombre}</option>)}
@@ -258,14 +258,14 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
 
                     <div className="content-padding-container">
                         {/* Ejes Articuladores */}
-                        <div style={{ marginBottom: '40px' }}>
-                            <label style={{ display: 'block', fontSize: '10px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '15px', letterSpacing: '1px' }}>Ejes Articuladores</label>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                        <div style={{ marginBottom: '24px' }}>
+                            <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '8px', letterSpacing: '1px' }}>Ejes Articuladores</label>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
                                 {(catalogs?.ejes_articuladores || []).map(eje => {
                                     const selected = formData.ejes_articuladores.includes(eje.nombre);
                                     return (
                                         <button key={eje.id} type="button" onClick={() => toggleEje(eje.nombre)}
-                                            style={{ padding: '6px 14px', borderRadius: '100px', fontSize: '10px', fontWeight: '800', border: '1px solid', borderColor: selected ? theme.accent : theme.border, background: selected ? '#eff6ff' : 'transparent', color: selected ? theme.accent : theme.subtext, cursor: 'pointer', transition: 'all 0.2s' }}>
+                                            style={{ padding: '3px 10px', borderRadius: '100px', fontSize: '8px', fontWeight: '800', border: '1px solid', borderColor: selected ? theme.accent : theme.border, background: selected ? '#eff6ff' : 'transparent', color: selected ? theme.accent : theme.subtext, cursor: 'pointer', transition: 'all 0.2s' }}>
                                             {eje.nombre}
                                         </button>
                                     );
@@ -274,17 +274,17 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                         </div>
 
                         {/* Section I */}
-                        <div style={{ marginBottom: '80px' }}>
-                            <h4 style={{ fontSize: '13px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', marginBottom: '32px', letterSpacing: '1px', borderLeft: `4px solid ${theme.accent}`, paddingLeft: '15px' }}>
+                        <div style={{ marginBottom: '24px' }}>
+                            <h4 style={{ fontSize: '11px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '1px', borderLeft: `3px solid ${theme.accent}`, paddingLeft: '10px' }}>
                                 I. Contenidos y Procesos de Desarrollo
                             </h4>
                             
-                            <div className="responsive-split-grid" style={{ display: 'grid', gap: '32px' }}>
+                            <div className="responsive-split-grid" style={{ display: 'grid', gap: '16px' }}>
                                 <div>
-                                    <label style={{ display: 'block', fontSize: '11px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px' }}>Contenido</label>
+                                    <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px' }}>Contenido</label>
                                     <select value={formData.contenido_nacional_id || formData.contenido_estatal_id} 
                                         onChange={(e) => setFormData({...formData, contenido_nacional_id: e.target.value, contenido_estatal_id: ''})} 
-                                        style={{ width: '100%', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '12px', color: theme.text, fontSize: '14px', fontWeight: '600', outline: 'none', padding: '14px' }}>
+                                        style={{ width: '100%', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '8px', color: theme.text, fontSize: '13px', fontWeight: '600', outline: 'none', padding: '6px 10px' }}>
                                         <option value="">Seleccione contenido...</option>
                                         <optgroup label="Nacionales">
                                             {(contenidos?.nacionales || []).map(c => <option key={c.id} value={c.id}>{c.descripcion}</option>)}
@@ -294,10 +294,9 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                                         </optgroup>
                                     </select>
                                 </div>
-
                                 <div>
-                                    <label style={{ display: 'block', fontSize: '11px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px' }}>PDA</label>
-                                    <select value={formData.pda_id} onChange={(e) => setFormData({...formData, pda_id: e.target.value})} style={{ width: '100%', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '12px', color: theme.text, fontSize: '14px', fontWeight: '600', outline: 'none', padding: '14px' }}>
+                                    <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px' }}>PDA</label>
+                                    <select value={formData.pda_id} onChange={(e) => setFormData({...formData, pda_id: e.target.value})} style={{ width: '100%', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '8px', color: theme.text, fontSize: '13px', fontWeight: '600', outline: 'none', padding: '6px 10px' }}>
                                         <option value="">Seleccione PDA...</option>
                                         {(pdas || []).map(p => <option key={p.id} value={p.id}>{p.descripcion}</option>)}
                                     </select>
@@ -306,120 +305,72 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                         </div>
 
                         {/* Section II */}
-                        <div style={{ marginBottom: '80px' }}>
-                            <h4 style={{ fontSize: '13px', fontWeight: '900', color: theme.success, textTransform: 'uppercase', marginBottom: '32px', letterSpacing: '1px', borderLeft: `4px solid ${theme.success}`, paddingLeft: '15px' }}>
+                        <div style={{ marginBottom: '24px' }}>
+                            <h4 style={{ fontSize: '11px', fontWeight: '900', color: theme.success, textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '1px', borderLeft: `3px solid ${theme.success}`, paddingLeft: '10px' }}>
                                 II. Planeación Didáctica
                             </h4>
-                            
-                            <div style={{ marginBottom: '32px' }}>
-                                <label style={{ display: 'block', fontSize: '11px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px' }}>Metodología</label>
-                                <input type="text" value={formData.metodologia} onChange={(e) => setFormData({...formData, metodologia: e.target.value})} placeholder="Ej. Aprendizaje Basado en Proyectos" style={{ width: '100%', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '12px', color: theme.text, fontSize: '14px', fontWeight: '700', outline: 'none', padding: '14px' }} />
+                            <div style={{ marginBottom: '12px' }}>
+                                <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '4px' }}>Metodología</label>
+                                <input type="text" value={formData.metodologia} onChange={(e) => setFormData({...formData, metodologia: e.target.value})} placeholder="Ej. Aprendizaje Basado en Proyectos" style={{ width: '100%', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '8px', color: theme.text, fontSize: '13px', fontWeight: '700', outline: 'none', padding: '6px 12px' }} />
                             </div>
-
-                            <div className="responsive-table-grid" style={{ borderRadius: '16px', border: `1px solid ${theme.border}`, overflow: 'hidden' }}>
+                            <div className="responsive-table-grid" style={{ borderRadius: '10px', border: `1px solid ${theme.border}`, overflow: 'hidden' }}>
                                 {[
                                     { label: 'Inicio', key: 'secuencia_inicio', color: theme.success },
                                     { label: 'Desarrollo', key: 'secuencia_desarrollo', color: theme.accent },
                                     { label: 'Cierre', key: 'secuencia_cierre', color: '#db2777' }
                                 ].map((moment) => (
                                     <div key={moment.key} className="moment-row" style={{ display: 'flex', borderBottom: moment.key === 'secuencia_cierre' ? 'none' : `1px solid ${theme.border}` }}>
-                                        <div className="moment-label" style={{ width: '140px', padding: '20px', background: '#f8fafc', borderRight: `1px solid ${theme.border}`, display: 'flex', alignItems: 'flex-start' }}>
-                                            <span style={{ fontWeight: '900', fontSize: '11px', color: moment.color, textTransform: 'uppercase' }}>{moment.label}</span>
+                                        <div className="moment-label" style={{ width: '100px', padding: '10px', background: '#f8fafc', borderRight: `1px solid ${theme.border}`, display: 'flex', alignItems: 'flex-start' }}>
+                                            <span style={{ fontWeight: '900', fontSize: '9px', color: moment.color, textTransform: 'uppercase' }}>{moment.label}</span>
                                         </div>
-                                        <textarea value={formData[moment.key] || ''} onChange={(e) => setFormData({...formData, [moment.key]: e.target.value})} style={{ flex: 1, border: 'none', padding: '20px', minHeight: '140px', fontSize: '14px', color: theme.text, outline: 'none', lineHeight: '1.6', resize: 'none' }} placeholder={`Actividades de ${moment.label.toLowerCase()}...`} />
+                                        <textarea value={formData[moment.key] || ''} onChange={(e) => setFormData({...formData, [moment.key]: e.target.value})} style={{ flex: 1, border: 'none', padding: '10px', minHeight: '60px', fontSize: '13px', color: theme.text, outline: 'none', lineHeight: '1.4', resize: 'none' }} placeholder={`Actividades de ${moment.label.toLowerCase()}...`} />
                                     </div>
                                 ))}
                             </div>
                         </div>
 
                         {/* Section III */}
-                        <div style={{ marginBottom: '40px' }}>
-                            <h4 style={{ fontSize: '13px', fontWeight: '900', color: '#f59e0b', textTransform: 'uppercase', marginBottom: '32px', letterSpacing: '1px', borderLeft: `4px solid #f59e0b`, paddingLeft: '15px' }}>
+                        <div style={{ marginBottom: '24px' }}>
+                            <h4 style={{ fontSize: '11px', fontWeight: '900', color: '#f59e0b', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '1px', borderLeft: `3px solid #f59e0b`, paddingLeft: '10px' }}>
                                 III. Evaluación y Recursos
                             </h4>
-                            <div className="responsive-split-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
+                            <div className="responsive-split-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                                 {[
                                     { key: 'evaluacion', label: 'Evaluación' },
                                     { key: 'recursos', label: 'Recursos' }
                                 ].map(field => (
                                     <div key={field.key} style={{ position: 'relative' }}>
-                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                                            <label style={{ display: 'block', fontSize: '11px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', letterSpacing: '1px' }}>{field.label}</label>
-                                            
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                                            <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', letterSpacing: '1px' }}>{field.label}</label>
                                             {field.key === 'recursos' && (
                                                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                                                    <input 
-                                                        type="file" 
-                                                        id={`file-upload-${field.key}`} 
-                                                        style={{ display: 'none' }} 
-                                                        onChange={(e) => handleFileUpload(e, field.key)}
-                                                    />
-                                                    <label 
-                                                        htmlFor={`file-upload-${field.key}`} 
-                                                        style={{ 
-                                                            fontSize: '11px', 
-                                                            fontWeight: '800', 
-                                                            color: theme.accent, 
-                                                            cursor: 'pointer',
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            gap: '6px',
-                                                            padding: '4px 12px',
-                                                            borderRadius: '8px',
-                                                            background: '#eff6ff',
-                                                            transition: 'all 0.2s'
-                                                        }}
-                                                    >
-                                                        {isUploading ? '📤 SUBIENDO...' : '📎 SUBIR ARCHIVO'}
+                                                    <input type="file" id={`file-upload-${field.key}`} style={{ display: 'none' }} onChange={(e) => handleFileUpload(e, field.key)} />
+                                                    <label htmlFor={`file-upload-${field.key}`} style={{ fontSize: '8px', fontWeight: '800', color: theme.accent, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '3px', padding: '1px 6px', borderRadius: '4px', background: '#eff6ff' }}>
+                                                        {isUploading ? '...' : '📎 SUBIR'}
                                                     </label>
                                                 </div>
                                             )}
                                         </div>
-                                        <textarea value={formData[field.key] || ''} onChange={(e) => setFormData({...formData, [field.key]: e.target.value})} style={{ width: '100%', height: '160px', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '16px', padding: '18px', fontSize: '14px', color: theme.text, outline: 'none', lineHeight: '1.6' }} placeholder={field.key === 'recursos' ? "Escribe o sube archivos (JPG, PNG, Word, MP3, MP4, etc.)..." : ""} />
+                                        <textarea value={formData[field.key] || ''} onChange={(e) => setFormData({...formData, [field.key]: e.target.value})} style={{ width: '100%', height: '80px', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '10px', padding: '10px', fontSize: '13px', color: theme.text, outline: 'none', lineHeight: '1.4' }} placeholder="..." />
                                     </div>
                                 ))}
                             </div>
                         </div>
 
                         {/* Full Width Evidencias Section */}
-                        <div style={{ marginBottom: '80px' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', borderLeft: `4px solid ${theme.accent}`, paddingLeft: '15px' }}>
-                                <h4 style={{ fontSize: '13px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>
+                        <div style={{ marginBottom: '24px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', borderLeft: `3px solid ${theme.accent}`, paddingLeft: '10px' }}>
+                                <h4 style={{ fontSize: '11px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>
                                     IV. Evidencias del Proceso
                                 </h4>
                                 <div>
-                                    <input 
-                                        type="file" 
-                                        id="file-upload-evidencias" 
-                                        style={{ display: 'none' }} 
-                                        onChange={(e) => handleFileUpload(e, 'evidencias')}
-                                    />
-                                    <label 
-                                        htmlFor="file-upload-evidencias" 
-                                        style={{ 
-                                            fontSize: '11px', 
-                                            fontWeight: '800', 
-                                            color: theme.accent, 
-                                            cursor: 'pointer',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            gap: '6px',
-                                            padding: '6px 16px',
-                                            borderRadius: '8px',
-                                            background: '#eff6ff',
-                                            transition: 'all 0.2s'
-                                        }}
-                                    >
-                                        {isUploading ? '📤 SUBIENDO...' : '📸 SUBIR EVIDENCIA'}
+                                    <input type="file" id="file-upload-evidencias" style={{ display: 'none' }} onChange={(e) => handleFileUpload(e, 'evidencias')} />
+                                    <label htmlFor="file-upload-evidencias" style={{ fontSize: '8px', fontWeight: '800', color: theme.accent, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '3px', padding: '2px 8px', borderRadius: '4px', background: '#eff6ff' }}>
+                                        {isUploading ? '...' : '📸 SUBIR'}
                                     </label>
                                 </div>
                             </div>
-                            <textarea 
-                                value={formData.evidencias || ''} 
-                                onChange={(e) => setFormData({...formData, evidencias: e.target.value})} 
-                                style={{ width: '100%', height: '200px', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '16px', padding: '20px', fontSize: '14px', color: theme.text, outline: 'none', lineHeight: '1.6' }} 
-                                placeholder="Registra las evidencias de los trabajos realizados (fotos, videos, observaciones)..." 
-                            />
+                            <textarea value={formData.evidencias || ''} onChange={(e) => setFormData({...formData, evidencias: e.target.value})} style={{ width: '100%', height: '100px', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '10px', padding: '10px', fontSize: '13px', color: theme.text, outline: 'none', lineHeight: '1.4' }} placeholder="Evidencias..." />
                         </div>
                     </div>
                 </div>
