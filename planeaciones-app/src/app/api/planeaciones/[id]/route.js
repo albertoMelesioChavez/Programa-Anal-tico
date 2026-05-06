@@ -37,6 +37,10 @@ export async function PUT(request, { params }) {
             return NextResponse.json({ error: 'El título es requerido' }, { status: 400 });
         }
 
+        if (!process.env.TURSO_DATABASE_URL) {
+            return NextResponse.json({ error: 'Base de datos no configurada en Vercel' }, { status: 503 });
+        }
+
         await db.execute({
             sql: `UPDATE planeaciones SET 
                     titulo = ?, fase_id = ?, grado_id = ?, lenguaje_id = ?, 
@@ -46,8 +50,13 @@ export async function PUT(request, { params }) {
                     secuencia_inicio = ?, secuencia_desarrollo = ?, secuencia_cierre = ?
                   WHERE id = ?`,
             args: [
-                titulo, fase_id, grado_id, lenguaje_id,
-                contenido_nacional_id || null, contenido_estatal_id || null, pda_id || null,
+                titulo, 
+                fase_id?.toString(), 
+                grado_id?.toString(), 
+                lenguaje_id?.toString(),
+                contenido_nacional_id?.toString() || null, 
+                contenido_estatal_id?.toString() || null, 
+                pda_id?.toString() || null,
                 ejes_articuladores || '',
                 metodologia || '', actividades || '', recursos || '', evaluacion || '',
                 secuencia_inicio || '', secuencia_desarrollo || '', secuencia_cierre || '',
@@ -58,6 +67,6 @@ export async function PUT(request, { params }) {
         return NextResponse.json({ success: true });
     } catch (error) {
         console.error('Turso PUT Error:', error);
-        return NextResponse.json({ error: 'Error al actualizar en la base de datos' }, { status: 500 });
+        return NextResponse.json({ error: 'Error al actualizar: ' + error.message }, { status: 500 });
     }
 }

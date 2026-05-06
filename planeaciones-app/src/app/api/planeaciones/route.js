@@ -63,26 +63,34 @@ export async function POST(request) {
         } = body;
 
         if (!titulo || !fase_id || !grado_id || !lenguaje_id) {
-            return NextResponse.json({ error: 'Faltan campos requeridos' }, { status: 400 });
+            console.warn('POST Planeacion: Faltan campos requeridos', { titulo, fase_id, grado_id, lenguaje_id });
+            return NextResponse.json({ error: 'Faltan campos requeridos (Título, Fase, Grado, Lenguaje)' }, { status: 400 });
         }
 
-        const result = await db.execute({
-            sql: `INSERT INTO planeaciones (
+        if (!process.env.TURSO_DATABASE_URL) {
+            console.error('CRÍTICO: TURSO_DATABASE_URL no configurada en el servidor.');
+            return NextResponse.json({ error: 'Base de datos no configurada en Vercel' }, { status: 503 });
+        }
+
+        const sql = `INSERT INTO planeaciones (
                     titulo, fase_id, grado_id, lenguaje_id, 
                     contenido_nacional_id, contenido_estatal_id, pda_id,
                     ejes_articuladores,
                     metodologia, actividades, recursos, evaluacion,
-                    secuencia_inicio, secuencia_desarrollo, secuencia_cierre,
-                    fecha_creacion
-                  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)`,
-            args: [
-                titulo, fase_id, grado_id, lenguaje_id,
-                contenido_nacional_id || null, contenido_estatal_id || null, pda_id || null,
-                ejes_articuladores || '',
-                metodologia || '', actividades || '', recursos || '', evaluacion || '',
-                secuencia_inicio || '', secuencia_desarrollo || '', secuencia_cierre || ''
-            ]
-        });
+                    secuencia_inicio, secuencia_desarrollo, secuencia_cierre
+                  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+        
+        const args = [
+            titulo, fase_id?.toString(), grado_id?.toString(), lenguaje_id?.toString(),
+            contenido_nacional_id?.toString() || null, 
+            contenido_estatal_id?.toString() || null, 
+            pda_id?.toString() || null,
+            ejes_articuladores || '',
+            metodologia || '', actividades || '', recursos || '', evaluacion || '',
+            secuencia_inicio || '', secuencia_desarrollo || '', secuencia_cierre || ''
+        ];
+
+        const result = await db.execute({ sql, args });
 
         return NextResponse.json({ 
             id: result.lastInsertRowid?.toString(), 
@@ -90,7 +98,10 @@ export async function POST(request) {
         }, { status: 201 });
 
     } catch (error) {
-        console.error('Turso POST Error:', error);
-        return NextResponse.json({ error: 'Error al guardar en la base de datos' }, { status: 500 });
+        console.error('Turso POST Error Detallado:', error);
+        return NextResponse.json({ 
+            error: 'Error al guardar en la nube: ' + error.message,
+            details: error.toString()
+        }, { status: 500 });
     }
 }
