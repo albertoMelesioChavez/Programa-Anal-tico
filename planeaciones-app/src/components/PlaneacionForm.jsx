@@ -23,6 +23,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
         secuencia_cierre: '',
         evaluacion: '',
         recursos: '',
+        evidencias: '',
         actividades: ''
     });
 
@@ -40,6 +41,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                 contenido_nacional_id: initialData.contenido_nacional_id?.toString() || '',
                 contenido_estatal_id: initialData.contenido_estatal_id?.toString() || '',
                 pda_id: initialData.pda_id?.toString() || '',
+                evidencias: initialData.evidencias || '',
             });
         }
     }, [initialData]);
@@ -84,7 +86,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleFileUpload = async (e) => {
+    const handleFileUpload = async (e, fieldName = 'recursos') => {
         const file = e.target.files[0];
         if (!file) return;
 
@@ -97,11 +99,11 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
 
             if (response.ok) {
                 const blob = await response.json();
-                const currentRecursos = formData.recursos || '';
-                const newLine = currentRecursos ? '\n' : '';
+                const currentVal = formData[fieldName] || '';
+                const newLine = currentVal ? '\n' : '';
                 setFormData({
                     ...formData,
-                    recursos: `${currentRecursos}${newLine}📎 ${file.name}: ${blob.url}`
+                    [fieldName]: `${currentVal}${newLine}📎 ${file.name}: ${blob.url}`
                 });
             } else {
                 const err = await response.json();
@@ -348,12 +350,12 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                                                 <div style={{ display: 'flex', alignItems: 'center' }}>
                                                     <input 
                                                         type="file" 
-                                                        id="file-upload" 
+                                                        id={`file-upload-${field.key}`} 
                                                         style={{ display: 'none' }} 
-                                                        onChange={handleFileUpload}
+                                                        onChange={(e) => handleFileUpload(e, field.key)}
                                                     />
                                                     <label 
-                                                        htmlFor="file-upload" 
+                                                        htmlFor={`file-upload-${field.key}`} 
                                                         style={{ 
                                                             fontSize: '11px', 
                                                             fontWeight: '800', 
@@ -377,6 +379,47 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
                                     </div>
                                 ))}
                             </div>
+                        </div>
+
+                        {/* Full Width Evidencias Section */}
+                        <div style={{ marginBottom: '80px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px', borderLeft: `4px solid ${theme.accent}`, paddingLeft: '15px' }}>
+                                <h4 style={{ fontSize: '13px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', letterSpacing: '1px', margin: 0 }}>
+                                    IV. Evidencias del Proceso
+                                </h4>
+                                <div>
+                                    <input 
+                                        type="file" 
+                                        id="file-upload-evidencias" 
+                                        style={{ display: 'none' }} 
+                                        onChange={(e) => handleFileUpload(e, 'evidencias')}
+                                    />
+                                    <label 
+                                        htmlFor="file-upload-evidencias" 
+                                        style={{ 
+                                            fontSize: '11px', 
+                                            fontWeight: '800', 
+                                            color: theme.accent, 
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '6px',
+                                            padding: '6px 16px',
+                                            borderRadius: '8px',
+                                            background: '#eff6ff',
+                                            transition: 'all 0.2s'
+                                        }}
+                                    >
+                                        {isUploading ? '📤 SUBIENDO...' : '📸 SUBIR EVIDENCIA'}
+                                    </label>
+                                </div>
+                            </div>
+                            <textarea 
+                                value={formData.evidencias || ''} 
+                                onChange={(e) => setFormData({...formData, evidencias: e.target.value})} 
+                                style={{ width: '100%', height: '200px', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '16px', padding: '20px', fontSize: '14px', color: theme.text, outline: 'none', lineHeight: '1.6' }} 
+                                placeholder="Registra las evidencias de los trabajos realizados (fotos, videos, observaciones)..." 
+                            />
                         </div>
                     </div>
                 </div>

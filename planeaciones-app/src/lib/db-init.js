@@ -76,6 +76,7 @@ export async function ensureTablesExist() {
                 metodologia TEXT,
                 actividades TEXT,
                 recursos TEXT,
+                evidencias TEXT,
                 evaluacion TEXT,
                 secuencia_inicio TEXT,
                 secuencia_desarrollo TEXT,

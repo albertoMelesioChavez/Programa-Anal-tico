@@ -42,7 +42,7 @@ export async function POST(request) {
             titulo, fase_id, grado_id, lenguaje_id,
             contenido_nacional_id, contenido_estatal_id, pda_id,
             ejes_articuladores,
-            metodologia, actividades, recursos, evaluacion,
+            metodologia, actividades, recursos, evidencias, evaluacion,
             secuencia_inicio, secuencia_desarrollo, secuencia_cierre
         } = body;
 
@@ -60,9 +60,9 @@ export async function POST(request) {
                     titulo, fase_id, grado_id, lenguaje_id, 
                     contenido_nacional_id, contenido_estatal_id, pda_id,
                     ejes_articuladores,
-                    metodologia, actividades, recursos, evaluacion,
+                    metodologia, actividades, recursos, evidencias, evaluacion,
                     secuencia_inicio, secuencia_desarrollo, secuencia_cierre
-                  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+                  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
         
         const args = [
             titulo, fase_id?.toString(), grado_id?.toString(), lenguaje_id?.toString(),
@@ -70,7 +70,7 @@ export async function POST(request) {
             contenido_estatal_id?.toString() || null, 
             pda_id?.toString() || null,
             ejes_articuladores || '',
-            metodologia || '', actividades || '', recursos || '', evaluacion || '',
+            metodologia || '', actividades || '', recursos || '', evidencias || '', evaluacion || '',
             secuencia_inicio || '', secuencia_desarrollo || '', secuencia_cierre || ''
         ];
 

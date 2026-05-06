@@ -29,7 +29,7 @@ export async function PUT(request, { params }) {
             titulo, fase_id, grado_id, lenguaje_id,
             contenido_nacional_id, contenido_estatal_id, pda_id,
             ejes_articuladores,
-            metodologia, actividades, recursos, evaluacion,
+            metodologia, actividades, recursos, evidencias, evaluacion,
             secuencia_inicio, secuencia_desarrollo, secuencia_cierre
         } = body;
 
@@ -46,7 +46,7 @@ export async function PUT(request, { params }) {
                     titulo = ?, fase_id = ?, grado_id = ?, lenguaje_id = ?, 
                     contenido_nacional_id = ?, contenido_estatal_id = ?, pda_id = ?,
                     ejes_articuladores = ?,
-                    metodologia = ?, actividades = ?, recursos = ?, evaluacion = ?,
+                    metodologia = ?, actividades = ?, recursos = ?, evidencias = ?, evaluacion = ?,
                     secuencia_inicio = ?, secuencia_desarrollo = ?, secuencia_cierre = ?
                   WHERE id = ?`,
             args: [
@@ -58,7 +58,7 @@ export async function PUT(request, { params }) {
                 contenido_estatal_id?.toString() || null, 
                 pda_id?.toString() || null,
                 ejes_articuladores || '',
-                metodologia || '', actividades || '', recursos || '', evaluacion || '',
+                metodologia || '', actividades || '', recursos || '', evidencias || '', evaluacion || '',
                 secuencia_inicio || '', secuencia_desarrollo || '', secuencia_cierre || '',
                 id
             ]
