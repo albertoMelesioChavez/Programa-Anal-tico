@@ -123,24 +123,65 @@ function ContenidosArtesContent() {
         router.push(`?${params.toString()}`, { scroll: false });
     }, [viewMode, router, searchParams]);
 
-    const handleSave = async (idx, newHtml) => {
+    const handleSaveDocument = async (updatedPages) => {
         setIsSaving(true);
         try {
-            const updatedPages = [...pages];
-            updatedPages[idx] = { ...updatedPages[idx], cleanHtml: newHtml };
-            setPages(updatedPages);
             let fullContent = '';
             updatedPages.forEach((p, pIdx) => {
-                const fullHtml = `<p><strong>${p.title}</strong></p>\n${p.cleanHtml}`;
-                fullContent += `<!-- PAGE_START ${pIdx + 1} -->\n${fullHtml}\n<!-- PAGE_END -->\n`;
+                // Preservar el título en el formato PAGE_START
+                fullContent += `<!-- PAGE_START ${pIdx + 1} -->\n<p><strong>${p.title}</strong></p>\n${p.cleanHtml}\n<!-- PAGE_END -->\n`;
             });
             await fetch('/api/documentos/artes', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ content: fullContent }),
             });
-        } catch (error) { console.error('Save failed', error); }
-        finally { setIsSaving(false); }
+        } catch (error) { 
+            console.error('Save failed', error); 
+            alert('Error al guardar cambios estructurales.');
+        } finally { setIsSaving(false); }
+    };
+
+    const handleSave = async (idx, newHtml) => {
+        const updatedPages = [...pages];
+        updatedPages[idx] = { ...updatedPages[idx], cleanHtml: newHtml };
+        setPages(updatedPages);
+        await handleSaveDocument(updatedPages);
+    };
+
+    const addSection = async () => {
+        const newSection = { title: 'Nueva Sección', cleanHtml: '<p>Contenido de la nueva sección...</p>' };
+        const updatedPages = [...pages, newSection];
+        setPages(updatedPages);
+        pageRefs.current = updatedPages.map(() => createRef());
+        await handleSaveDocument(updatedPages);
+    };
+
+    const deleteSection = async (idx) => {
+        if (!confirm('¿Estás seguro de eliminar esta sección?')) return;
+        const updatedPages = pages.filter((_, i) => i !== idx);
+        setPages(updatedPages);
+        pageRefs.current = updatedPages.map(() => createRef());
+        await handleSaveDocument(updatedPages);
+        if (currentPageIdx >= updatedPages.length) setCurrentPageIdx(Math.max(0, updatedPages.length - 1));
+    };
+
+    const moveSection = async (idx, direction) => {
+        if ((idx === 0 && direction === -1) || (idx === pages.length - 1 && direction === 1)) return;
+        const updatedPages = [...pages];
+        const targetIdx = idx + direction;
+        [updatedPages[idx], updatedPages[targetIdx]] = [updatedPages[targetIdx], updatedPages[idx]];
+        setPages(updatedPages);
+        pageRefs.current = updatedPages.map(() => createRef());
+        setCurrentPageIdx(targetIdx);
+        await handleSaveDocument(updatedPages);
+    };
+
+    const renameSection = async (idx, newTitle) => {
+        const updatedPages = [...pages];
+        updatedPages[idx] = { ...updatedPages[idx], title: newTitle };
+        setPages(updatedPages);
+        await handleSaveDocument(updatedPages);
     };
 
     const handleExport = () => {
@@ -215,32 +256,108 @@ function ContenidosArtesContent() {
 
                     <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 32px' }}>
                         {pages.map((p, idx) => (
+                            <div key={idx} style={{ marginBottom: '8px', position: 'relative', group: 'true' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <button 
+                                        onClick={() => {
+                                            pageRefs.current[idx].current?.scrollIntoView({ behavior: 'smooth' });
+                                            setCurrentPageIdx(idx);
+                                        }}
+                                        style={{
+                                            flex: 1,
+                                            textAlign: 'left',
+                                            padding: '12px 16px',
+                                            borderRadius: '12px',
+                                            border: 'none',
+                                            background: currentPageIdx === idx ? '#2563eb' : 'transparent',
+                                            color: currentPageIdx === idx ? '#fff' : theme.text,
+                                            cursor: 'pointer',
+                                            transition: 'all 0.2s',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '12px',
+                                            minWidth: 0
+                                        }}
+                                    >
+                                        <span style={{ fontSize: '10px', fontWeight: '900', opacity: 0.5 }}>{String(idx + 1).padStart(2, '0')}</span>
+                                        {isEditMode ? (
+                                            <input 
+                                                value={p.title} 
+                                                onChange={(e) => renameSection(idx, e.target.value)}
+                                                onClick={(e) => e.stopPropagation()}
+                                                style={{ 
+                                                    background: 'transparent', 
+                                                    border: 'none', 
+                                                    borderBottom: `1px solid ${currentPageIdx === idx ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.1)'}`, 
+                                                    color: 'inherit', 
+                                                    fontSize: '13px', 
+                                                    fontWeight: '700', 
+                                                    padding: '2px 0',
+                                                    width: '100%',
+                                                    outline: 'none'
+                                                }}
+                                            />
+                                        ) : (
+                                            <span style={{ fontSize: '13px', fontWeight: '700', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.title}</span>
+                                        )}
+                                    </button>
+
+                                    {isEditMode && (
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                                            <button onClick={() => moveSection(idx, -1)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', padding: '2px', color: theme.subtext, opacity: idx === 0 ? 0.2 : 1 }}>▲</button>
+                                            <button onClick={() => moveSection(idx, 1)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', padding: '2px', color: theme.subtext, opacity: idx === pages.length - 1 ? 0.2 : 1 }}>▼</button>
+                                        </div>
+                                    )}
+                                </div>
+                                {isEditMode && (
+                                    <button 
+                                        onClick={() => deleteSection(idx)}
+                                        style={{ 
+                                            position: 'absolute', 
+                                            right: '-5px', 
+                                            top: '-5px', 
+                                            background: '#ef4444', 
+                                            color: '#fff', 
+                                            border: 'none', 
+                                            borderRadius: '50%', 
+                                            width: '18px', 
+                                            height: '18px', 
+                                            fontSize: '10px', 
+                                            cursor: 'pointer',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                                        }}
+                                    >
+                                        ×
+                                    </button>
+                                )}
+                            </div>
+                        ))}
+
+                        {isEditMode && (
                             <button 
-                                key={idx}
-                                onClick={() => {
-                                    pageRefs.current[idx].current?.scrollIntoView({ behavior: 'smooth' });
-                                    setCurrentPageIdx(idx);
-                                }}
+                                onClick={addSection}
                                 style={{
                                     width: '100%',
-                                    textAlign: 'left',
-                                    padding: '16px',
+                                    padding: '12px',
                                     borderRadius: '12px',
-                                    border: 'none',
-                                    background: currentPageIdx === idx ? '#2563eb' : 'transparent',
-                                    color: currentPageIdx === idx ? '#fff' : theme.text,
+                                    border: `2px dashed ${theme.border}`,
+                                    background: 'transparent',
+                                    color: theme.accent,
+                                    fontSize: '11px',
+                                    fontWeight: '800',
                                     cursor: 'pointer',
-                                    transition: 'all 0.2s',
-                                    marginBottom: '4px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '12px'
+                                    marginTop: '16px',
+                                    transition: 'all 0.2s'
                                 }}
+                                onMouseOver={(e) => e.target.style.background = '#f1f5f9'}
+                                onMouseOut={(e) => e.target.style.background = 'transparent'}
                             >
-                                <span style={{ fontSize: '11px', fontWeight: '900', opacity: 0.5 }}>{String(idx + 1).padStart(2, '0')}</span>
-                                <span style={{ fontSize: '13px', fontWeight: '700', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.title}</span>
+                                + AÑADIR NUEVA SECCIÓN
                             </button>
-                        ))}
+                        )}
                     </div>
                 </aside>
             )}
