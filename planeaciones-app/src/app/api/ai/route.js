@@ -40,7 +40,8 @@ export async function POST(request) {
 
         for (const modelName of modelsToTry) {
             try {
-                const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${cleanKey}`;
+                // Probamos con v1 que es la versión estable
+                const url = `https://generativelanguage.googleapis.com/v1/models/${modelName}:generateContent`;
                 
                 const payload = {
                     contents: [
@@ -50,18 +51,15 @@ export async function POST(request) {
                                 { text: `Eres un asistente experto en educación básica en México (NEM). Contexto: ${JSON.stringify(context)}\n\nInstrucción: ${prompt}` }
                             ]
                         }
-                    ],
-                    generationConfig: {
-                        temperature: 0.7,
-                        topK: 40,
-                        topP: 0.95,
-                        maxOutputTokens: 2048,
-                    }
+                    ]
                 };
 
                 const response = await fetch(url, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'x-goog-api-key': cleanKey 
+                    },
                     body: JSON.stringify(payload)
                 });
 
