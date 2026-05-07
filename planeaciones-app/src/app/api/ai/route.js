@@ -33,7 +33,8 @@ export async function POST(request) {
         }
 
         const genAI = new GoogleGenerativeAI(apiKey);
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        // Usamos 'gemini-1.5-flash-latest' para mayor compatibilidad con v1beta
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
 
         const systemInstruction = `Eres un asistente experto en educación básica en México, especializado en el Nuevo Modelo Educativo (NEM). 
         Tu objetivo es ayudar a docentes a redactar planeaciones didácticas y programas analíticos de alta calidad.
