@@ -106,29 +106,18 @@ export default function ProyectoDetallePage() {
             <main style={{ maxWidth: '850px', margin: '40px auto', padding: '0 20px' }}>
                 <div style={{ background: theme.paper, padding: '80px', borderRadius: '4px', boxShadow: '0 20px 50px rgba(0,0,0,0.05)', minHeight: '1000px' }}>
                     
-                    {/* TITULO Y TEMATICA CENTRAL */}
+                    {/* TITULO Y TEMATICA */}
                     <input 
                         value={proyecto.titulo}
                         onChange={e => handleUpdate({ titulo: e.target.value })}
-                        style={{ width: '100%', fontSize: '42px', fontWeight: '900', border: 'none', outline: 'none', marginBottom: '16px', letterSpacing: '-1.5px' }}
+                        style={{ width: '100%', fontSize: '42px', fontWeight: '900', border: 'none', outline: 'none', marginBottom: '8px', letterSpacing: '-1.5px' }}
                         placeholder="Título del Proyecto"
                     />
-                    
-                    <div style={{ marginBottom: '40px' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                            <span style={{ fontSize: '12px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', letterSpacing: '1px' }}>🎯 Temática Central:</span>
-                        </div>
-                        <textarea 
-                            value={proyecto.tematica}
-                            onChange={e => handleUpdate({ tematica: e.target.value })}
-                            style={{ width: '100%', fontSize: '18px', fontWeight: '600', color: theme.text, border: 'none', outline: 'none', background: '#f8fafc', padding: '16px', borderRadius: '12px', resize: 'none', minHeight: '60px' }}
-                            placeholder="Describe la temática central..."
-                        />
-                    </div>
-
-                    <div style={{ marginBottom: '60px', color: theme.subtext, fontSize: '13px', fontWeight: '500', display: 'flex', gap: '20px' }}>
-                        <span>📅 {new Date(proyecto.created_at).toLocaleString()}</span>
-                        <span>🆔 Proyecto #{proyecto.id}</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '60px' }}>
+                        <span style={{ background: theme.accent + '10', color: theme.accent, padding: '6px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: '800' }}>
+                            🎯 {proyecto.tematica || 'Sin temática definida'}
+                        </span>
+                        <span style={{ color: theme.subtext, fontSize: '13px', fontWeight: '500' }}>📅 {new Date(proyecto.created_at).toLocaleString()}</span>
                     </div>
 
                     {/* INTRODUCCIÓN */}
