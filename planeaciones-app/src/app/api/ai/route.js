@@ -1,12 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from 'next/server';
-
-import { createClient } from '@libsql/client';
-
-const client = createClient({
-    url: process.env.TURSO_DATABASE_URL,
-    authToken: process.env.TURSO_AUTH_TOKEN,
-});
+import { db } from '@/lib/db';
 
 export async function POST(request) {
     try {
@@ -16,7 +10,7 @@ export async function POST(request) {
 
         // Si no está en env, buscar en DB
         if (!apiKey) {
-            const dbRes = await client.execute({
+            const dbRes = await db.execute({
                 sql: "SELECT valor FROM configuracion WHERE clave = 'GOOGLE_AI_KEY'",
                 args: []
             });
