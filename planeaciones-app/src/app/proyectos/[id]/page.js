@@ -132,12 +132,12 @@ export default function ProyectoDetallePage() {
 
                     {/* PRODUCTOS */}
                     <section style={{ marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '14px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '24px', borderBottom: `2px solid ${theme.accent}20`, paddingBottom: '8px', display: 'inline-block' }}>II. Productos Artísticos</h2>
+                        <h2 style={{ fontSize: '14px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '24px', borderBottom: `2px solid ${theme.accent}20`, paddingBottom: '8px', display: 'inline-block' }}>II. Productos Esperados</h2>
                         
-                        {proyecto.productos && Object.entries(proyecto.productos).map(([fase, items]) => Array.isArray(items) && items.length > 0 && (
-                            <div key={fase} style={{ marginBottom: '24px' }}>
+                        {proyecto.productos && Object.entries(proyecto.productos).sort().map(([key, items]) => Array.isArray(items) && items.length > 0 && (
+                            <div key={key} style={{ marginBottom: '24px' }}>
                                 <h3 style={{ fontSize: '12px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase', marginBottom: '12px' }}>
-                                    {fase === 'fase3' ? 'Fase 3 (1º y 2º)' : fase === 'fase4' ? 'Fase 4 (3º y 4º)' : 'Fase 5 (5º y 6º)'}
+                                    {key.replace('grado', '')}º Grado
                                 </h3>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                                     {items.map((it, i) => (

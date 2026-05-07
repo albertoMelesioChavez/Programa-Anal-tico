@@ -8,6 +8,7 @@ export default function NuevoProyectoPage() {
     const [step, setStep] = useState(1);
     const [isGenerating, setIsGenerating] = useState(false);
     const [isSaving, setIsSaving] = useState(false);
+    const [isSuggesting, setIsSuggesting] = useState(false);
     const [customPrompt, setCustomPrompt] = useState('');
     
     // Modal state for products
@@ -23,9 +24,7 @@ export default function NuevoProyectoPage() {
         tematica: '',
         introduccion: '',
         productos: {
-            fase3: [], // 1º y 2º
-            fase4: [], // 3º y 4º
-            fase5: []  // 5º y 6º
+            grado1: [], grado2: [], grado3: [], grado4: [], grado5: [], grado6: []
         },
         vinculacion: []
     });
@@ -100,7 +99,7 @@ export default function NuevoProyectoPage() {
             
             ESTRUCTURA OBLIGATORIA DEL TEXTO:
             1. PÁRRAFO 1 (EL CORAZÓN): Debe iniciar explicando directamente de qué trata el proyecto "${formData.titulo}" y cómo se vincula específicamente con la temática de "${formData.tematica}". No uses rodeos, entra directo a la relación entre el título y el tema.
-            2. PÁRRAFO 2 (EL SUSTENTO): Justifica pedagógicamente por qué el arte es la mejor herramienta para abordar "${formData.tematica}". Menciona cómo los productos (como ${formData.productos.fase3.concat(formData.productos.fase4, formData.productos.fase5).join(', ') || 'las actividades artísticas'}) ayudarán a los alumnos.
+            2. PÁRRAFO 2 (EL SUSTENTO): Justifica pedagógicamente por qué el arte es la mejor herramienta para abordar "${formData.tematica}". Menciona cómo los productos (como ${Object.values(formData.productos).flat().join(', ') || 'las actividades artísticas'}) ayudarán a los alumnos.
             3. PÁRRAFO 3 (LA PROYECCIÓN): Describe cómo este trabajo culminará en festivales, muestras o soluciones reales que impacten a la comunidad escolar.
 
             REGLAS ESTRICTAS DE ESTILO:
@@ -133,7 +132,68 @@ export default function NuevoProyectoPage() {
             setIsGenerating(false);
         }
     };
+    const suggestCurriculum = async () => {
+        if (!dbData.estatales.length || formData.vinculacion.length > 0 || isSuggesting) return;
+        
+        setIsSuggesting(true);
+        try {
+            const context = {
+                titulo: formData.titulo,
+                tematica: formData.tematica,
+                introduccion: formData.introduccion,
+                productos: formData.productos
+            };
+            
+            // Enviamos solo los primeros 100 contenidos para no saturar el prompt, o una muestra relevante
+            const listado = dbData.estatales.slice(0, 150).map(c => `ID:${c.id} - ${c.descripcion}`).join('\n');
+            
+            const prompt = `Como experto pedagogo en artes, analiza este proyecto:
+            TÍTULO: ${context.titulo}
+            TEMÁTICA: ${context.tematica}
+            INTRODUCCIÓN: ${context.introduccion}
+            PRODUCTOS ESPERADOS: ${JSON.stringify(context.productos)}
 
+            Tu tarea es seleccionar los 3 IDs de contenidos del catálogo que mejor se vinculen con este proyecto.
+            Responde ÚNICAMENTE con un array JSON de IDs, ejemplo: [12, 45, 102].
+            Si no encuentras coincidencias perfectas, elige las más cercanas.
+
+            LISTADO DE CONTENIDOS (ID - Descripción):
+            ${listado}`;
+
+            const res = await fetch('/api/ai', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt, context })
+            });
+            
+            const data = await res.json();
+            if (data.text) {
+                // Extraer el array del texto (a veces la IA pone markdown)
+                const match = data.text.match(/\[.*\]/);
+                if (match) {
+                    const suggestedIds = JSON.parse(match[0]);
+                    const newVinculacion = suggestedIds.map(id => ({ contenido_id: id, pda_ids: [] }));
+                    setFormData(prev => ({ ...prev, vinculacion: newVinculacion }));
+                    
+                    // Seleccionar el primero para que el usuario vea PDAs
+                    if (suggestedIds.length > 0) {
+                        const firstContent = dbData.estatales.find(c => c.id === suggestedIds[0]);
+                        if (firstContent) setSelectedContenido(firstContent);
+                    }
+                }
+            }
+        } catch (error) {
+            console.error("AI Suggestion Error:", error);
+        } finally {
+            setIsSuggesting(false);
+        }
+    };
+
+    useEffect(() => {
+        if (step === 4) {
+            suggestCurriculum();
+        }
+    }, [step]);
     const openProductModal = (fase) => {
         setActiveFase(fase);
         setProductInputValue('');
@@ -143,16 +203,24 @@ export default function NuevoProyectoPage() {
 
     const generateProductWithAI = async () => {
         setIsGeneratingProduct(true);
-        // Borramos lo que esté escrito para que se vea el skeleton
         setProductInputValue('');
         try {
-            const prompt = `Propón un producto artístico CREATIVO y ORIGINAL para alumnos de ${activeFase === 'fase3' ? '1º y 2º de primaria' : activeFase === 'fase4' ? '3º y 4º de primaria' : '5º y 6º de primaria'}.
+            const gradeMapping = {
+                grado1: '1º de primaria (6-7 años, pensamiento simbólico, motricidad fina en desarrollo)',
+                grado2: '2º de primaria (7-8 años, mayor control de trazos, interés por el detalle)',
+                grado3: '3º de primaria (8-9 años, pensamiento más estructurado, interés en técnicas mixtas)',
+                grado4: '4º de primaria (9-10 años, capacidad de abstracción, interés en lo social)',
+                grado5: '5º de primaria (10-11 años, pensamiento crítico, dominio técnico avanzado)',
+                grado6: '6º de primaria (11-12 años, pre-adolescencia, búsqueda de identidad, proyectos complejos)'
+            };
+
+            const prompt = `Propón un producto artístico CREATIVO y ORIGINAL para alumnos de ${gradeMapping[activeFase]}.
             Tema del proyecto: "${formData.titulo}"
             Temática central: ${formData.tematica}
             
             Instrucción adicional del docente: ${productAIInstruction || 'Crea algo innovador y acorde a la edad.'}
             
-            REGLA DE ORO: Responde ÚNICAMENTE con el nombre del producto (ej. "Un mural de plastilina sobre la biodiversidad"). NO des explicaciones, NO pongas comillas, NO saludes. Máximo 15 palabras.`;
+            REGLA DE ORO: Responde ÚNICAMENTE con el nombre del producto (ej. "Mural de siluetas expresivas"). NO des explicaciones, NO pongas comillas, NO saludes. Máximo 12 palabras. Asegúrate de que el producto sea realizable por un niño de este grado específico.`;
 
             const res = await fetch('/api/ai', {
                 method: 'POST',
@@ -342,14 +410,14 @@ export default function NuevoProyectoPage() {
                 {step === 3 && (
                     <div className="fade-in">
                         <span style={{ fontSize: '12px', fontWeight: '900', color: theme.accent, letterSpacing: '2px' }}>PASO 03</span>
-                        <h2 style={{ fontSize: '40px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '40px' }}>Productos por Fase</h2>
-                        <p style={{ color: theme.subtext, marginBottom: '40px', fontSize: '15px' }}>Define qué productos artísticos quieres obtener de cada grupo o fase.</p>
+                        <h2 style={{ fontSize: '40px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '40px' }}>Productos Esperados</h2>
+                        <p style={{ color: theme.subtext, marginBottom: '40px', fontSize: '15px' }}>Define qué productos tangibles quieres obtener de cada grupo o fase.</p>
 
-                        {['fase3', 'fase4', 'fase5'].map(f => (
+                        {['grado1', 'grado2', 'grado3', 'grado4', 'grado5', 'grado6'].map(f => (
                             <div key={f} style={{ background: '#fff', borderRadius: '24px', padding: '32px', border: `1px solid ${theme.border}`, marginBottom: '24px' }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
                                     <h3 style={{ fontSize: '18px', fontWeight: '900', textTransform: 'uppercase' }}>
-                                        {f === 'fase3' ? 'Fase 3 (1º y 2º)' : f === 'fase4' ? 'Fase 4 (3º y 4º)' : 'Fase 5 (5º y 6º)'}
+                                        {f.replace('grado', '')}º Grado
                                     </h3>
                                     <button onClick={() => openProductModal(f)} style={{ background: '#f5f3ff', color: theme.accent, border: 'none', padding: '8px 16px', borderRadius: '100px', fontSize: '12px', fontWeight: '900', cursor: 'pointer' }}>+ AÑADIR PRODUCTO</button>
                                 </div>
@@ -377,7 +445,15 @@ export default function NuevoProyectoPage() {
                     <div className="fade-in">
                         <span style={{ fontSize: '12px', fontWeight: '900', color: theme.accent, letterSpacing: '2px' }}>PASO 04</span>
                         <h2 style={{ fontSize: '40px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '20px' }}>Vinculación Curricular</h2>
-                        <p style={{ color: theme.subtext, marginBottom: '40px', fontSize: '15px' }}>Busca y selecciona los contenidos y PDAs que sustentan tus productos artísticos.</p>
+                        <p style={{ color: theme.subtext, marginBottom: '40px', fontSize: '15px' }}>Busca y selecciona los contenidos y PDAs que sustentan tus productos esperados.</p>
+
+                        {isSuggesting && (
+                            <div style={{ marginBottom: '24px', padding: '16px 24px', background: 'linear-gradient(135deg, #f5f3ff, #ede9fe)', borderRadius: '20px', border: `1px solid ${theme.accent}30`, display: 'flex', alignItems: 'center', gap: '16px', animation: 'pulse 2s infinite' }}>
+                                <span style={{ fontSize: '20px' }}>🪄</span>
+                                <span style={{ fontSize: '14px', fontWeight: '700', color: theme.accent }}>IA sugiriendo contenidos basados en tu proyecto...</span>
+                                <style jsx>{`@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }`}</style>
+                            </div>
+                        )}
 
                         {/* BUSCADOR */}
                         <div style={{ marginBottom: '32px', position: 'relative' }}>
@@ -544,7 +620,7 @@ export default function NuevoProyectoPage() {
 
                         <div style={{ marginTop: '48px', padding: '40px', background: 'linear-gradient(135deg, #fff, #f5f3ff)', borderRadius: '32px', border: `1px solid ${theme.accent}30`, boxShadow: '0 20px 40px rgba(124,58,237,0.1)', textAlign: 'center' }}>
                             <h3 style={{ fontSize: '24px', fontWeight: '900', marginBottom: '8px' }}>¡Todo listo! 🎨</h3>
-                            <p style={{ fontSize: '15px', color: theme.subtext, marginBottom: '32px' }}>Has definido el alma, el sustento, los productos y la vinculación de tu proyecto.</p>
+                            <p style={{ fontSize: '15px', color: theme.subtext, marginBottom: '32px' }}>Has definido el alma, el sustento, los productos esperados y la vinculación de tu proyecto.</p>
                             <button 
                                 onClick={handleSaveProject}
                                 disabled={isSaving || formData.vinculacion.length === 0}
@@ -567,7 +643,7 @@ export default function NuevoProyectoPage() {
             {showProductModal && (
                 <div style={{ position: 'fixed', inset: 0, background: 'rgba(15, 23, 42, 0.8)', backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px' }}>
                     <div className="fade-in" style={{ background: '#fff', width: '100%', maxWidth: '500px', borderRadius: '32px', padding: '40px', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}>
-                        <h3 style={{ fontSize: '24px', fontWeight: '900', marginBottom: '8px' }}>Nuevo Producto Artístico</h3>
+                        <h3 style={{ fontSize: '24px', fontWeight: '900', marginBottom: '8px' }}>Nuevo Producto Esperado</h3>
                         <p style={{ fontSize: '14px', color: theme.subtext, marginBottom: '32px' }}>
                             Define qué van a crear los alumnos de {activeFase === 'fase3' ? '1º y 2º' : activeFase === 'fase4' ? '3º y 4º' : '5º y 6º'}.
                         </p>
