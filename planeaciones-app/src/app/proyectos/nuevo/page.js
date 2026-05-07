@@ -31,8 +31,9 @@ export default function NuevoProyectoPage() {
     });
 
     // Database Content for Linking
-    const [dbData, setDbData] = useState({ contenidos: [], pdas: [] });
+    const [dbData, setDbData] = useState({ nacionales: [], estatales: [], pdas: [] });
     const [searchTerm, setSearchTerm] = useState('');
+    const [selectedContenido, setSelectedContenido] = useState(null);
 
     useEffect(() => {
         fetchCurriculumData();
@@ -42,12 +43,48 @@ export default function NuevoProyectoPage() {
         try {
             const res = await fetch('/api/contenidos');
             const data = await res.json();
-            // Aplanamos los contenidos para búsqueda fácil
-            const allContenidos = [...(data.nacionales || []), ...(data.estatales || [])];
-            setDbData({ contenidos: allContenidos, pdas: [] });
+            setDbData({ 
+                nacionales: data.nacionales || [], 
+                estatales: data.estatales || [], 
+                pdas: data.pdas || [] 
+            });
         } catch (error) {
             console.error("Error loading curriculum data", error);
         }
+    };
+
+    const toggleContenido = (contenido) => {
+        const isSelected = formData.vinculacion.some(v => v.contenido_id === contenido.id);
+        if (isSelected) {
+            setFormData({
+                ...formData,
+                vinculacion: formData.vinculacion.filter(v => v.contenido_id !== contenido.id)
+            });
+            if (selectedContenido?.id === contenido.id) setSelectedContenido(null);
+        } else {
+            setFormData({
+                ...formData,
+                vinculacion: [...formData.vinculacion, { contenido_id: contenido.id, pda_ids: [] }]
+            });
+            setSelectedContenido(contenido);
+        }
+    };
+
+    const togglePDA = (contenidoId, pdaId) => {
+        const vinculacion = [...formData.vinculacion];
+        let contentIndex = vinculacion.findIndex(v => v.contenido_id === contenidoId);
+        
+        if (contentIndex === -1) {
+            vinculacion.push({ contenido_id: contenidoId, pda_ids: [pdaId] });
+        } else {
+            const pdaIndex = vinculacion[contentIndex].pda_ids.indexOf(pdaId);
+            if (pdaIndex === -1) {
+                vinculacion[contentIndex].pda_ids.push(pdaId);
+            } else {
+                vinculacion[contentIndex].pda_ids.splice(pdaIndex, 1);
+            }
+        }
+        setFormData({ ...formData, vinculacion });
     };
 
     const generateIntroduction = async () => {
@@ -152,15 +189,24 @@ export default function NuevoProyectoPage() {
     const handleSaveProject = async () => {
         setIsSaving(true);
         try {
+            console.log("Saving project:", formData);
             const res = await fetch('/api/proyectos', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({
+                    ...formData,
+                    vinculacion: formData.vinculacion || []
+                })
             });
-            if (res.ok) router.push('/proyectos');
-            else throw new Error("Error al guardar");
+            const data = await res.json();
+            if (res.ok) {
+                router.push('/proyectos');
+            } else {
+                throw new Error(data.error || "Error desconocido al guardar");
+            }
         } catch (error) {
-            alert(error.message);
+            console.error("Save Error:", error);
+            alert("Error al guardar: " + error.message);
         } finally {
             setIsSaving(false);
         }
@@ -331,46 +377,187 @@ export default function NuevoProyectoPage() {
                     <div className="fade-in">
                         <span style={{ fontSize: '12px', fontWeight: '900', color: theme.accent, letterSpacing: '2px' }}>PASO 04</span>
                         <h2 style={{ fontSize: '40px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '20px' }}>Vinculación Curricular</h2>
-                        <p style={{ color: theme.subtext, marginBottom: '40px', fontSize: '15px' }}>Selecciona los contenidos y PDA que encajan con los productos que definiste.</p>
+                        <p style={{ color: theme.subtext, marginBottom: '40px', fontSize: '15px' }}>Busca y selecciona los contenidos y PDAs que sustentan tus productos artísticos.</p>
 
-                        <div style={{ marginBottom: '32px' }}>
+                        {/* BUSCADOR */}
+                        <div style={{ marginBottom: '32px', position: 'relative' }}>
                             <input 
                                 type="text" 
-                                placeholder="Buscar contenido o PDA... (ej. paz, ritmo, colores)" 
+                                placeholder="🔍 Buscar por contenido o PDA... (ej. ritmo, color, paz)" 
                                 value={searchTerm}
-                                onChange={e => setSearchTerm(e.target.value)}
-                                style={{ width: '100%', padding: '20px', borderRadius: '16px', border: `1px solid ${theme.border}`, fontSize: '16px', fontWeight: '600', outline: 'none' }}
+                                onChange={e => {
+                                    setSearchTerm(e.target.value);
+                                    setSelectedContenido(null); // Limpiar selección al buscar para mostrar resultados globales
+                                }}
+                                style={{ width: '100%', padding: '24px 32px 24px 64px', borderRadius: '24px', border: `1px solid ${theme.border}`, fontSize: '18px', fontWeight: '600', outline: 'none', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', transition: 'all 0.3s' }}
                             />
+                            <span style={{ position: 'absolute', left: '24px', top: '50%', transform: 'translateY(-50%)', fontSize: '24px', opacity: 0.5 }}>🔎</span>
                         </div>
 
-                        <div style={{ maxHeight: '400px', overflowY: 'auto', background: '#fff', borderRadius: '24px', border: `1px solid ${theme.border}`, padding: '24px' }}>
-                            {dbData.contenidos.filter(c => c.descripcion.toLowerCase().includes(searchTerm.toLowerCase())).map(c => (
-                                <div key={c.id} style={{ padding: '16px', borderBottom: `1px solid ${theme.border}`, cursor: 'pointer' }} onClick={() => {
-                                    if (!formData.vinculacion.includes(c.id)) {
-                                        setFormData({...formData, vinculacion: [...formData.vinculacion, c.id]});
-                                    }
-                                }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                        <p style={{ fontSize: '14px', fontWeight: '700', margin: 0 }}>{c.descripcion}</p>
-                                        <div style={{ width: '20px', height: '20px', borderRadius: '50%', border: `2px solid ${formData.vinculacion.includes(c.id) ? theme.accent : theme.border}`, background: formData.vinculacion.includes(c.id) ? theme.accent : 'transparent' }}></div>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '32px', minHeight: '600px' }}>
+                            
+                            {/* CATÁLOGO / RESULTADOS */}
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                    <label style={{ fontSize: '11px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase' }}>
+                                        {searchTerm ? 'Resultados de búsqueda' : 'Catálogo de Contenidos'}
+                                    </label>
+                                    <span style={{ fontSize: '11px', color: theme.subtext }}>{dbData.estatales.length} contenidos disponibles</span>
+                                </div>
+                                
+                                <div style={{ flex: 1, maxHeight: '600px', overflowY: 'auto', background: '#fff', borderRadius: '32px', border: `1px solid ${theme.border}`, padding: '16px' }}>
+                                    {dbData.estatales
+                                        .filter(c => {
+                                            const matchesContent = c.descripcion.toLowerCase().includes(searchTerm.toLowerCase());
+                                            const matchesPDA = dbData.pdas.some(p => p.contenido_estatal_id === c.id && p.descripcion.toLowerCase().includes(searchTerm.toLowerCase()));
+                                            return matchesContent || matchesPDA;
+                                        })
+                                        .map(c => {
+                                            const vinculacion = formData.vinculacion.find(v => v.contenido_id === c.id);
+                                            const isSelected = !!vinculacion;
+                                            const pdaMatches = dbData.pdas.filter(p => p.contenido_estatal_id === c.id && p.descripcion.toLowerCase().includes(searchTerm.toLowerCase()));
+
+                                            return (
+                                                <div 
+                                                    key={c.id} 
+                                                    style={{ 
+                                                        padding: '20px', borderRadius: '20px', marginBottom: '12px', cursor: 'pointer',
+                                                        background: selectedContenido?.id === c.id ? '#f5f3ff' : 'transparent',
+                                                        border: `1px solid ${selectedContenido?.id === c.id ? theme.accent : isSelected ? theme.accent + '30' : 'transparent'}`,
+                                                        transition: 'all 0.2s'
+                                                    }}
+                                                    onClick={() => setSelectedContenido(c)}
+                                                >
+                                                    <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+                                                        <div 
+                                                            onClick={(e) => { e.stopPropagation(); toggleContenido(c); }}
+                                                            style={{ 
+                                                                minWidth: '24px', height: '24px', borderRadius: '8px', marginTop: '2px',
+                                                                border: `2px solid ${isSelected ? theme.accent : theme.border}`,
+                                                                background: isSelected ? theme.accent : 'transparent',
+                                                                display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '14px'
+                                                            }}
+                                                        >
+                                                            {isSelected && '✓'}
+                                                        </div>
+                                                        <div style={{ flex: 1 }}>
+                                                            <p style={{ fontSize: '14px', fontWeight: '700', lineHeight: '1.4', margin: 0, color: isSelected ? theme.text : theme.text + '80' }}>{c.descripcion}</p>
+                                                            {searchTerm && pdaMatches.length > 0 && (
+                                                                <div style={{ marginTop: '10px' }}>
+                                                                    {pdaMatches.map(pm => (
+                                                                        <div key={pm.id} style={{ fontSize: '11px', color: theme.accent, background: theme.accent + '10', padding: '4px 8px', borderRadius: '6px', marginTop: '4px', display: 'inline-block', marginRight: '4px' }}>
+                                                                            🎯 PDA: {pm.descripcion.substring(0, 40)}...
+                                                                        </div>
+                                                                    ))}
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                </div>
+                            </div>
+
+                            {/* MI SELECCIÓN Y PDAs */}
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                                
+                                {/* PDAs DEL CONTENIDO SELECCIONADO */}
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                    <label style={{ fontSize: '11px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase' }}>
+                                        PDAs del Contenido
+                                    </label>
+                                    <div style={{ minHeight: '300px', background: '#fff', borderRadius: '32px', border: `1px solid ${theme.border}`, padding: '24px' }}>
+                                        {!selectedContenido ? (
+                                            <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: theme.subtext, opacity: 0.5 }}>
+                                                <span style={{ fontSize: '40px', marginBottom: '16px' }}>👈</span>
+                                                <p style={{ fontSize: '14px', fontWeight: '600' }}>Selecciona un contenido del catálogo para ver y elegir sus PDAs.</p>
+                                            </div>
+                                        ) : (
+                                            <div>
+                                                <div style={{ marginBottom: '20px' }}>
+                                                    <h4 style={{ fontSize: '13px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', marginBottom: '4px' }}>Contenido seleccionado:</h4>
+                                                    <p style={{ fontSize: '12px', color: theme.subtext, fontWeight: '500' }}>{selectedContenido.descripcion}</p>
+                                                </div>
+                                                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                                    {dbData.pdas.filter(p => p.contenido_estatal_id === selectedContenido.id).map(p => {
+                                                        const vinculacion = formData.vinculacion.find(v => v.contenido_id === selectedContenido.id);
+                                                        const isPDASelected = vinculacion?.pda_ids.includes(p.id);
+                                                        
+                                                        return (
+                                                            <div 
+                                                                key={p.id} 
+                                                                onClick={() => togglePDA(selectedContenido.id, p.id)}
+                                                                style={{ 
+                                                                    padding: '16px', borderRadius: '16px', background: isPDASelected ? theme.accent + '05' : 'transparent',
+                                                                    border: `1px solid ${isPDASelected ? theme.accent + '30' : theme.border + '50'}`,
+                                                                    cursor: 'pointer', transition: 'all 0.2s'
+                                                                }}
+                                                            >
+                                                                <div style={{ display: 'flex', gap: '12px' }}>
+                                                                    <div style={{ 
+                                                                        minWidth: '18px', height: '18px', borderRadius: '50%', marginTop: '2px',
+                                                                        border: `2px solid ${isPDASelected ? theme.accent : theme.border}`,
+                                                                        background: isPDASelected ? theme.accent : 'transparent',
+                                                                        display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '10px'
+                                                                    }}>
+                                                                        {isPDASelected && '✓'}
+                                                                    </div>
+                                                                    <p style={{ fontSize: '13px', fontWeight: '500', lineHeight: '1.5', margin: 0, color: isPDASelected ? theme.text : theme.text + '90' }}>{p.descripcion}</p>
+                                                                </div>
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
-                            ))}
+
+                                {/* LISTADO DE MI SELECCIÓN */}
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                    <label style={{ fontSize: '11px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase' }}>
+                                        Mi Selección ({formData.vinculacion.length})
+                                    </label>
+                                    <div style={{ background: theme.accent + '05', borderRadius: '32px', border: `2px dashed ${theme.accent}30`, padding: '24px', maxHeight: '200px', overflowY: 'auto' }}>
+                                        {formData.vinculacion.length === 0 ? (
+                                            <p style={{ fontSize: '13px', color: theme.subtext, textAlign: 'center', margin: '20px 0' }}>No hay contenidos seleccionados aún.</p>
+                                        ) : (
+                                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                                {formData.vinculacion.map(v => {
+                                                    const content = dbData.estatales.find(c => c.id === v.contenido_id);
+                                                    return (
+                                                        <div key={v.contenido_id} style={{ background: '#fff', padding: '8px 12px', borderRadius: '12px', border: `1px solid ${theme.accent}30`, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                                            <span style={{ fontSize: '11px', fontWeight: '900', color: theme.accent }}>ID:{v.contenido_id}</span>
+                                                            <span style={{ fontSize: '11px', fontWeight: '700' }}>{v.pda_ids.length} PDA(s)</span>
+                                                            <button onClick={() => toggleContenido(content)} style={{ background: 'transparent', border: 'none', color: '#ef4444', cursor: 'pointer', fontWeight: '900' }}>✕</button>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div style={{ marginTop: '40px', padding: '32px', background: '#fff', borderRadius: '24px', border: `1px solid ${theme.accent}`, boxShadow: '0 10px 40px rgba(124,58,237,0.1)' }}>
-                            <h3 style={{ fontSize: '20px', fontWeight: '900', marginBottom: '8px' }}>Resumen del Proyecto</h3>
-                            <p style={{ fontSize: '14px', color: theme.subtext, marginBottom: '24px' }}>Todo listo para guardar y empezar a planear tus sesiones.</p>
+                        <div style={{ marginTop: '48px', padding: '40px', background: 'linear-gradient(135deg, #fff, #f5f3ff)', borderRadius: '32px', border: `1px solid ${theme.accent}30`, boxShadow: '0 20px 40px rgba(124,58,237,0.1)', textAlign: 'center' }}>
+                            <h3 style={{ fontSize: '24px', fontWeight: '900', marginBottom: '8px' }}>¡Todo listo! 🎨</h3>
+                            <p style={{ fontSize: '15px', color: theme.subtext, marginBottom: '32px' }}>Has definido el alma, el sustento, los productos y la vinculación de tu proyecto.</p>
                             <button 
                                 onClick={handleSaveProject}
-                                disabled={isSaving}
-                                style={{ width: '100%', padding: '20px', borderRadius: '16px', background: theme.accent, color: '#fff', border: 'none', fontWeight: '900', fontSize: '16px', cursor: 'pointer' }}
+                                disabled={isSaving || formData.vinculacion.length === 0}
+                                style={{ width: '100%', maxWidth: '400px', padding: '24px', borderRadius: '20px', background: theme.accent, color: '#fff', border: 'none', fontWeight: '900', fontSize: '18px', cursor: 'pointer', opacity: (isSaving || formData.vinculacion.length === 0) ? 0.5 : 1, boxShadow: '0 10px 30px rgba(124,58,237,0.3)' }}
                             >
-                                {isSaving ? 'GUARDANDO...' : 'FINALIZAR Y CREAR PROYECTO 🎨'}
+                                {isSaving ? '📦 GUARDANDO PROYECTO...' : '🚀 FINALIZAR Y CREAR PROYECTO'}
                             </button>
+                            {formData.vinculacion.length === 0 && (
+                                <p style={{ fontSize: '12px', color: '#ef4444', marginTop: '16px', fontWeight: '700' }}>⚠️ Debes seleccionar al menos un contenido antes de finalizar.</p>
+                            )}
                         </div>
 
-                        <button onClick={() => setStep(3)} style={{ width: '100%', marginTop: '16px', padding: '20px', borderRadius: '16px', background: 'transparent', color: theme.subtext, border: 'none', fontWeight: '900' }}>ATRÁS</button>
+                        <button onClick={() => setStep(3)} style={{ width: '100%', marginTop: '24px', padding: '20px', borderRadius: '16px', background: 'transparent', color: theme.subtext, border: 'none', fontWeight: '900', cursor: 'pointer' }}>← VOLVER A PRODUCTOS</button>
                     </div>
                 )}
 
