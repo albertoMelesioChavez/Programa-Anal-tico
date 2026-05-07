@@ -50,9 +50,15 @@ export async function POST(request) {
             }
 
             if (listRes.ok && listData.models) {
-                // Buscamos un modelo que soporte generación de contenido (preferencia gemini-1.5-flash)
+                // Buscamos un modelo estable que soporte generación de contenido
                 const compatibleModels = listData.models.filter(m => m.supportedGenerationMethods.includes("generateContent"));
-                const selectedModel = compatibleModels.find(m => m.name.includes("gemini-1.5-flash")) || compatibleModels[0];
+                
+                // Prioridad: 1.5-flash -> 1.5-pro -> cualquier 1.5 -> el primero disponible
+                const selectedModel = 
+                    compatibleModels.find(m => m.name.includes("gemini-1.5-flash")) || 
+                    compatibleModels.find(m => m.name.includes("gemini-1.5-pro")) ||
+                    compatibleModels.find(m => m.name.includes("gemini-1.5")) ||
+                    compatibleModels[0];
 
                 if (selectedModel) {
                     const modelName = selectedModel.name; // Ej: models/gemini-1.5-flash
