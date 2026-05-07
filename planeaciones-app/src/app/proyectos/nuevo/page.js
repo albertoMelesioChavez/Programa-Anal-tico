@@ -49,20 +49,21 @@ export default function NuevoProyectoPage() {
 
         setIsGenerating(true);
         try {
-            const prompt = `Actúa como especialista en artes y educación para la Nueva Escuela Mexicana (NEM). 
-            Redacta una introducción profesional, pedagógica y de sustento para el proyecto titulado "${formData.titulo}".
+            const prompt = `Imagina que eres un maestro de Educación Artística muy creativo y apasionado, y estás redactando la "Introducción y Sustento" de tu nuevo proyecto escolar para presentarlo en tu escuela.
             
-            TEMÁTICA CENTRAL: ${formData.tematica}
-            PRODUCTOS PLANEADOS:
-            - Fase 3 (1º y 2º): ${formData.productos.fase3.join(', ') || 'Por definir'}
-            - Fase 4 (3º y 4º): ${formData.productos.fase4.join(', ') || 'Por definir'}
-            - Fase 5 (5º y 6º): ${formData.productos.fase5.join(', ') || 'Por definir'}
+            Título de tu proyecto: "${formData.titulo}"
+            Tema principal que van a trabajar los alumnos: ${formData.tematica}
+            
+            Lo que van a crear en el salón (Productos):
+            - 1º y 2º grado: ${formData.productos.fase3.join(', ') || 'Actividades de exploración artística'}
+            - 3º y 4º grado: ${formData.productos.fase4.join(', ') || 'Creaciones artísticas guiadas'}
+            - 5º y 6º grado: ${formData.productos.fase5.join(', ') || 'Proyectos artísticos avanzados'}
 
-            La introducción debe:
-            1. Explicar el propósito del proyecto y su relevancia social/comunitaria.
-            2. Justificar cómo los productos artísticos mencionados ayudan a abordar la temática "${formData.tematica}".
-            3. Estar redactada en un tono académico, inspirador y alineado a los ejes articuladores de la NEM.
-            4. No uses introducciones genéricas, intégralo todo en un texto fluido de unos 3-4 párrafos.`;
+            INSTRUCCIONES ESTRICTAS:
+            1. Escribe un texto natural, inspirador y directo al grano, como lo haría un humano llenando su propia planeación.
+            2. PROHIBIDO dar definiciones de diccionario, PROHIBIDO explicar qué es la "Nueva Escuela Mexicana" y PROHIBIDO sonar como un libro de texto aburrido.
+            3. Usa los productos y la temática que te compartí como inspiración para contar de forma creativa de qué trata este proyecto, por qué será divertido e importante para los niños, y cómo se vincula con la comunidad.
+            4. Escribe 2 o 3 párrafos fluidos y bien conectados. No uses plantillas ni viñetas repetitivas.`;
             
             const res = await fetch('/api/ai', {
                 method: 'POST',
