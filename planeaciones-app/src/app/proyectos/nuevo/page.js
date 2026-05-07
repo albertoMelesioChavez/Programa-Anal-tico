@@ -49,8 +49,8 @@ export default function NuevoProyectoPage() {
         }
 
         setIsGenerating(true);
-        // Borramos el texto anterior y ponemos un mensaje de carga
-        setFormData(prev => ({ ...prev, introduccion: '⏳ Escribiendo con IA...' }));
+        // Borramos el texto anterior para que se muestre el skeleton
+        setFormData(prev => ({ ...prev, introduccion: '' }));
         try {
             const prompt = `Imagina que eres un maestro de Educación Artística muy creativo y apasionado, y estás redactando la "Introducción y Sustento" de tu nuevo proyecto escolar para presentarlo en tu escuela.
             
@@ -212,13 +212,25 @@ export default function NuevoProyectoPage() {
                             />
                         </div>
 
-                        <div style={{ background: '#fff', borderRadius: '24px', padding: '32px', border: `1px solid ${theme.border}`, position: 'relative' }}>
-                            <textarea 
-                                value={formData.introduccion}
-                                onChange={e => setFormData({...formData, introduccion: e.target.value})}
-                                placeholder="Describe el propósito y sustento del proyecto..."
-                                style={{ width: '100%', minHeight: '300px', border: 'none', fontSize: '16px', lineHeight: '1.8', outline: 'none', resize: 'none' }}
-                            />
+                        <div style={{ background: '#fff', borderRadius: '24px', padding: '32px', border: `1px solid ${theme.border}`, position: 'relative', minHeight: '364px' }}>
+                            {isGenerating ? (
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%' }}>
+                                    <div className="skeleton-line" style={{ width: '100%', height: '18px', borderRadius: '4px' }}></div>
+                                    <div className="skeleton-line" style={{ width: '100%', height: '18px', borderRadius: '4px' }}></div>
+                                    <div className="skeleton-line" style={{ width: '92%', height: '18px', borderRadius: '4px' }}></div>
+                                    
+                                    <div className="skeleton-line" style={{ width: '100%', height: '18px', borderRadius: '4px', marginTop: '16px' }}></div>
+                                    <div className="skeleton-line" style={{ width: '96%', height: '18px', borderRadius: '4px' }}></div>
+                                    <div className="skeleton-line" style={{ width: '85%', height: '18px', borderRadius: '4px' }}></div>
+                                </div>
+                            ) : (
+                                <textarea 
+                                    value={formData.introduccion}
+                                    onChange={e => setFormData({...formData, introduccion: e.target.value})}
+                                    placeholder="Describe el propósito y sustento del proyecto..."
+                                    style={{ width: '100%', minHeight: '300px', border: 'none', fontSize: '16px', lineHeight: '1.8', outline: 'none', resize: 'none' }}
+                                />
+                            )}
                             <button 
                                 onClick={generateIntroduction}
                                 disabled={isGenerating}
@@ -328,6 +340,17 @@ export default function NuevoProyectoPage() {
             <style jsx>{`
                 .fade-in { animation: fadeIn 0.5s ease-out; }
                 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+                
+                .skeleton-line {
+                    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+                    background-size: 200% 100%;
+                    animation: skeleton-loading 1.5s infinite;
+                }
+                
+                @keyframes skeleton-loading {
+                    0% { background-position: 200% 0; }
+                    100% { background-position: -200% 0; }
+                }
             `}</style>
         </div>
     );
