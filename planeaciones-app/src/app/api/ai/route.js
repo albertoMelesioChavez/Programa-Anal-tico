@@ -89,8 +89,6 @@ export async function POST(request) {
         }, { status: 500 });
 
     } catch (error) {
-
-    } catch (error) {
         console.error("AI Fatal Error:", error);
         return NextResponse.json({ error: "Error interno del servidor", details: error.message }, { status: 500 });
     }
