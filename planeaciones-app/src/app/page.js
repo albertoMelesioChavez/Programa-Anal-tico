@@ -64,10 +64,11 @@ export default function Home() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ key: 'GOOGLE_AI_KEY', value: aiKey })
             });
+            const data = await res.json();
             if (res.ok) {
                 alert("Configuración guardada. La IA ya debería funcionar.");
                 setShowConfig(false);
-            } else throw new Error("Error al guardar");
+            } else throw new Error(data.error || "Error desconocido");
         } catch (error) {
             alert("Error al guardar: " + error.message);
         } finally {
