@@ -35,57 +35,60 @@ export async function POST(request) {
         // Limpieza extrema de la API Key
         const cleanKey = apiKey.trim().replace(/[^a-zA-Z0-9_-]/g, '');
         
-        const modelsToTry = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"];
-        let lastError = null;
+        // PASO 1: DIAGNÓSTICO - Preguntar a Google qué modelos ve esta llave
+        try {
+            const listUrl = `https://generativelanguage.googleapis.com/v1/models?key=${cleanKey}`;
+            const listRes = await fetch(listUrl);
+            const listData = await listRes.json();
+            
+            if (listRes.ok && listData.models) {
+                console.log("Modelos disponibles para esta llave:", listData.models.map(m => m.name));
+                // Si encontramos modelos, intentamos el primero que sea compatible con generateContent
+                const compatibleModel = listData.models.find(m => m.supportedGenerationMethods.includes("generateContent"));
+                if (compatibleModel) {
+                    const modelName = compatibleModel.name; // Ya viene con "models/"
+                    const url = `https://generativelanguage.googleapis.com/v1/${modelName}:generateContent?key=${cleanKey}`;
+                    
+                    const payload = {
+                        contents: [{ role: "user", parts: [{ text: `Eres un asistente experto en NEM. Contexto: ${JSON.stringify(context)}\n\nInstrucción: ${prompt}` }] }]
+                    };
 
-        for (const modelName of modelsToTry) {
-            try {
-                // Probamos con v1 que es la versión estable
-                const url = `https://generativelanguage.googleapis.com/v1/models/${modelName}:generateContent`;
-                
-                const payload = {
-                    contents: [
-                        {
-                            role: "user",
-                            parts: [
-                                { text: `Eres un asistente experto en educación básica en México (NEM). Contexto: ${JSON.stringify(context)}\n\nInstrucción: ${prompt}` }
-                            ]
-                        }
-                    ]
-                };
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
 
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: { 
-                        'Content-Type': 'application/json',
-                        'x-goog-api-key': cleanKey 
-                    },
-                    body: JSON.stringify(payload)
-                });
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    console.error(`Error con ${modelName}:`, data);
-                    lastError = data.error?.message || response.statusText;
-                    continue;
+                    const data = await response.json();
+                    if (response.ok) {
+                        return NextResponse.json({ text: data.candidates?.[0]?.content?.parts?.[0]?.text });
+                    }
                 }
-
-                const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
-                if (text) return NextResponse.json({ text, modelUsed: modelName });
-                
-                throw new Error("No se generó texto en la respuesta");
-            } catch (error) {
-                console.error(`Fallo en fetch con ${modelName}:`, error);
-                lastError = error.message;
+            } else {
+                console.error("No se pudieron listar modelos:", listData);
             }
+        } catch (diagError) {
+            console.error("Error en diagnóstico:", diagError);
         }
 
+        // Si el diagnóstico falla o no encuentra nada, probamos el método estándar como último recurso
+        const modelName = "gemini-1.5-flash";
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${cleanKey}`;
+        
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+        });
+        const data = await response.json();
+
         return NextResponse.json({ 
-            error: "Fallo total en la conexión con la IA de Google", 
-            details: lastError,
-            suggestion: "Tu cuenta de Google podría tener restricciones para usar Gemini en aplicaciones externas. Prueba a usar una cuenta de Gmail personal diferente."
+            error: "La IA de Google no reconoce tu llave para ningún modelo", 
+            details: data.error?.message || "Acceso denegado",
+            suggestion: "Tu cuenta de Google tiene bloqueado el acceso a la IA. POR FAVOR, prueba creando una llave con un correo @gmail.com diferente (personal)."
         }, { status: 500 });
+
+    } catch (error) {
 
     } catch (error) {
         console.error("AI Fatal Error:", error);
