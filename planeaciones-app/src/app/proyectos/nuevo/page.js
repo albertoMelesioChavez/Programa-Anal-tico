@@ -59,26 +59,18 @@ export default function NuevoProyectoPage() {
         // Borramos el texto anterior para que se muestre el skeleton
         setFormData(prev => ({ ...prev, introduccion: '' }));
         try {
-            const prompt = `Redacta la "Introducción y Sustento" para un nuevo proyecto escolar de Educación Artística. El texto debe tener un tono FORMAL, PROFESIONAL y PEDAGÓGICO, adecuado para un documento oficial de planeación escolar.
+            const prompt = `MISIÓN: Redacta la "Introducción y Sustento" de un proyecto escolar titulado "${formData.titulo}" cuya temática central es "${formData.tematica}".
             
-            Título del proyecto: "${formData.titulo}"
-            Temática central a abordar: ${formData.tematica}
-            
-            Productos esperados por fase:
-            - 1º y 2º grado: ${formData.productos.fase3.join(', ') || 'Actividades de exploración'}
-            - 3º y 4º grado: ${formData.productos.fase4.join(', ') || 'Creaciones guiadas'}
-            - 5º y 6º grado: ${formData.productos.fase5.join(', ') || 'Proyectos avanzados'}
+            ESTRUCTURA OBLIGATORIA DEL TEXTO:
+            1. PÁRRAFO 1 (EL CORAZÓN): Debe iniciar explicando directamente de qué trata el proyecto "${formData.titulo}" y cómo se vincula específicamente con la temática de "${formData.tematica}". No uses rodeos, entra directo a la relación entre el título y el tema.
+            2. PÁRRAFO 2 (EL SUSTENTO): Justifica pedagógicamente por qué el arte es la mejor herramienta para abordar "${formData.tematica}". Menciona cómo los productos (como ${formData.productos.fase3.concat(formData.productos.fase4, formData.productos.fase5).join(', ') || 'las actividades artísticas'}) ayudarán a los alumnos.
+            3. PÁRRAFO 3 (LA PROYECCIÓN): Describe cómo este trabajo culminará en festivales, muestras o soluciones reales que impacten a la comunidad escolar.
 
-            INSTRUCCIONES EXTRA DEL MAESTRO (OBLIGATORIO CUMPLIR):
-            ${customPrompt ? customPrompt : 'Proporciona un sustento sólido.'}
-
-            INSTRUCCIONES ESTRICTAS DE REDACCIÓN:
-            1. TONO: Formal y académico. PROHIBIDO usar lenguaje coloquial, entusiasta o saludos informales (ej. prohibido decir "¡Hola a todos!", "Prepárense", "Me tiene saltando de emoción").
-            2. CONTENIDO: Explica de qué trata el proyecto y dale un sustento pedagógico claro. Propón cómo este proyecto dará soluciones a la temática planteada.
-            3. CREATIVIDAD FORMAL: Imagina y menciona posibles eventos de cierre, festivales, o exposiciones donde se mostrarán los productos de los alumnos.
-            4. ESTRUCTURA: Redacta 2 a 3 párrafos fluidos y bien estructurados. No uses plantillas rígidas ni viñetas.
-            5. MUY IMPORTANTE: Entrega ÚNICAMENTE el texto final de la introducción. Empieza directamente con el primer párrafo del documento.
-            6. EJE CONDUCTOR: El Título ("${formData.titulo}") y la Temática ("${formData.tematica}") DEBEN ser el centro de la narrativa. Explica por qué son importantes y cómo se conectan profundamente con las actividades artísticas planteadas.`;
+            REGLAS ESTRICTAS DE ESTILO:
+            - TONO: Formal, profesional y pedagógico.
+            - PROHIBIDO: Saludos informales, exclamaciones, lenguaje infantil o frases tipo "¡Hola!".
+            - INTEGRACIÓN: El título "${formData.titulo}" y la temática "${formData.tematica}" deben ser el hilo conductor de toda la redacción, no solo mencionarse al principio.
+            - ENTREGA: Entrega ÚNICAMENTE los 3 párrafos de texto.`;
             
             const res = await fetch('/api/ai', {
                 method: 'POST',
