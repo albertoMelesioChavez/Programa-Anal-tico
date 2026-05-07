@@ -77,7 +77,8 @@ export default function NuevoProyectoPage() {
             2. CONTENIDO: Explica de qué trata el proyecto y dale un sustento pedagógico claro. Propón cómo este proyecto dará soluciones a la temática planteada.
             3. CREATIVIDAD FORMAL: Imagina y menciona posibles eventos de cierre, festivales, o exposiciones donde se mostrarán los productos de los alumnos.
             4. ESTRUCTURA: Redacta 2 a 3 párrafos fluidos y bien estructurados. No uses plantillas rígidas ni viñetas.
-            5. MUY IMPORTANTE: Entrega ÚNICAMENTE el texto final de la introducción. Empieza directamente con el primer párrafo del documento.`;
+            5. MUY IMPORTANTE: Entrega ÚNICAMENTE el texto final de la introducción. Empieza directamente con el primer párrafo del documento.
+            6. EJE CONDUCTOR: El Título ("${formData.titulo}") y la Temática ("${formData.tematica}") DEBEN ser el centro de la narrativa. Explica por qué son importantes y cómo se conectan profundamente con las actividades artísticas planteadas.`;
             
             const res = await fetch('/api/ai', {
                 method: 'POST',
