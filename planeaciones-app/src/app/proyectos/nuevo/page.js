@@ -8,6 +8,7 @@ export default function NuevoProyectoPage() {
     const [step, setStep] = useState(1);
     const [isGenerating, setIsGenerating] = useState(false);
     const [isSaving, setIsSaving] = useState(false);
+    const [customPrompt, setCustomPrompt] = useState('');
 
     // Form Data
     const [formData, setFormData] = useState({
@@ -48,6 +49,8 @@ export default function NuevoProyectoPage() {
         }
 
         setIsGenerating(true);
+        // Borramos el texto anterior y ponemos un mensaje de carga
+        setFormData(prev => ({ ...prev, introduccion: '⏳ Escribiendo con IA...' }));
         try {
             const prompt = `Imagina que eres un maestro de Educación Artística muy creativo y apasionado, y estás redactando la "Introducción y Sustento" de tu nuevo proyecto escolar para presentarlo en tu escuela.
             
@@ -58,6 +61,9 @@ export default function NuevoProyectoPage() {
             - 1º y 2º grado: ${formData.productos.fase3.join(', ') || 'Actividades de exploración artística'}
             - 3º y 4º grado: ${formData.productos.fase4.join(', ') || 'Creaciones artísticas guiadas'}
             - 5º y 6º grado: ${formData.productos.fase5.join(', ') || 'Proyectos artísticos avanzados'}
+
+            INSTRUCCIONES EXTRA DEL MAESTRO (OBLIGATORIO CUMPLIR):
+            ${customPrompt ? customPrompt : 'Redacta libremente siguiendo tu instinto creativo.'}
 
             INSTRUCCIONES ESTRICTAS:
             1. Escribe un texto natural, inspirador y directo al grano, como lo haría un humano llenando su propia planeación.
@@ -193,8 +199,18 @@ export default function NuevoProyectoPage() {
                 {step === 2 && (
                     <div className="fade-in">
                         <span style={{ fontSize: '12px', fontWeight: '900', color: theme.accent, letterSpacing: '2px' }}>PASO 02</span>
-                        <h2 style={{ fontSize: '40px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '40px' }}>Introducción y Sustento</h2>
+                        <h2 style={{ fontSize: '40px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '20px' }}>Introducción y Sustento</h2>
                         
+                        <div style={{ marginBottom: '20px' }}>
+                            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase', marginBottom: '8px' }}>Instrucciones adicionales para la IA (Opcional)</label>
+                            <input 
+                                value={customPrompt}
+                                onChange={e => setCustomPrompt(e.target.value)}
+                                placeholder="Ej. Hazlo más corto, menciona a los padres, usa un tono más formal..."
+                                style={{ width: '100%', padding: '16px', borderRadius: '12px', border: `1px solid ${theme.accent}50`, fontSize: '14px', outline: 'none', background: '#f5f3ff' }}
+                            />
+                        </div>
+
                         <div style={{ background: '#fff', borderRadius: '24px', padding: '32px', border: `1px solid ${theme.border}`, position: 'relative' }}>
                             <textarea 
                                 value={formData.introduccion}
