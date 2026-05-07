@@ -108,6 +108,20 @@ export default function Home() {
                             position: 'relative',
                             zIndex: 1
                         }}>
+                            {/* Card 0: Proyectos */}
+                            <Link href="/proyectos" style={{ textDecoration: 'none' }}>
+                                <div className="main-card-light" style={{ background: 'linear-gradient(135deg, #7c3aed, #4f46e5)', borderColor: 'transparent' }}>
+                                    <div style={{ fontSize: '48px', marginBottom: '24px' }}>✨</div>
+                                    <h2 style={{ fontSize: '24px', fontWeight: '900', color: '#fff', marginBottom: '12px' }}>Proyectos</h2>
+                                    <p style={{ fontSize: '15px', color: 'rgba(255,255,255,0.8)', marginBottom: '32px', lineHeight: '1.6' }}>
+                                        Gestiona, sube y genera proyectos creativos. Primero el producto, luego el contenido.
+                                    </p>
+                                    <div className="btn-add" style={{ background: '#fff', color: '#7c3aed', fontWeight: '900' }}>
+                                        ACCEDER →
+                                    </div>
+                                </div>
+                            </Link>
+
                             {/* Card 1 */}
                             <Link href="/contenidos/artes" style={{ textDecoration: 'none' }}>
                                 <div className="main-card-light">
