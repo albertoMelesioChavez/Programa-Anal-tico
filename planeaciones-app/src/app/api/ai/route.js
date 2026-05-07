@@ -33,10 +33,11 @@ export async function POST(request) {
         }
 
         const genAI = new GoogleGenerativeAI(apiKey.trim());
-        // Forzamos el uso de v1 si v1beta da problemas, y limpiamos la key de espacios
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }, { apiVersion: 'v1' });
+        // Intentamos con gemini-1.5-pro que a veces tiene mayor disponibilidad en ciertos proyectos
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
         
-        console.log("Using AI model: gemini-1.5-flash (v1)");
+        console.log("Using AI model: gemini-1.5-pro");
+        console.log("API Key preview:", apiKey.trim().substring(0, 4) + "...");
 
         const systemInstruction = `Eres un asistente experto en educación básica en México, especializado en el Nuevo Modelo Educativo (NEM). 
         Tu objetivo es ayudar a docentes a redactar planeaciones didácticas y programas analíticos de alta calidad.
