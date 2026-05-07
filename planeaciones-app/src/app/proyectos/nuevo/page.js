@@ -9,6 +9,13 @@ export default function NuevoProyectoPage() {
     const [isGenerating, setIsGenerating] = useState(false);
     const [isSaving, setIsSaving] = useState(false);
     const [customPrompt, setCustomPrompt] = useState('');
+    
+    // Modal state for products
+    const [showProductModal, setShowProductModal] = useState(false);
+    const [activeFase, setActiveFase] = useState('');
+    const [productInputValue, setProductInputValue] = useState('');
+    const [productAIInstruction, setProductAIInstruction] = useState('');
+    const [isGeneratingProduct, setIsGeneratingProduct] = useState(false);
 
     // Form Data
     const [formData, setFormData] = useState({
@@ -97,17 +104,56 @@ export default function NuevoProyectoPage() {
         }
     };
 
-    const addProduct = (fase) => {
-        const product = prompt("¿Qué producto quieres sacar en esta fase? (Ej. Una canción de rap, Un mural colectivo, Una obra de teatro)");
-        if (product) {
-            setFormData({
-                ...formData,
-                productos: {
-                    ...formData.productos,
-                    [fase]: [...formData.productos[fase], product]
-                }
+    const openProductModal = (fase) => {
+        setActiveFase(fase);
+        setProductInputValue('');
+        setProductAIInstruction('');
+        setShowProductModal(true);
+    };
+
+    const generateProductWithAI = async () => {
+        setIsGeneratingProduct(true);
+        // Borramos lo que esté escrito para mostrar que está pensando
+        setProductInputValue('⏳ Pensando producto...');
+        try {
+            const prompt = `Propón un producto artístico CREATIVO y ORIGINAL para alumnos de ${activeFase === 'fase3' ? '1º y 2º de primaria' : activeFase === 'fase4' ? '3º y 4º de primaria' : '5º y 6º de primaria'}.
+            Tema del proyecto: "${formData.titulo}"
+            Temática central: ${formData.tematica}
+            
+            Instrucción adicional del docente: ${productAIInstruction || 'Crea algo innovador y acorde a la edad.'}
+            
+            REGLA DE ORO: Responde ÚNICAMENTE con el nombre del producto (ej. "Un mural de plastilina sobre la biodiversidad"). NO des explicaciones, NO pongas comillas, NO saludes. Máximo 15 palabras.`;
+
+            const res = await fetch('/api/ai', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt, context: formData })
             });
+            const data = await res.json();
+            if (data.error) throw new Error(data.error);
+            setProductInputValue(data.text.trim());
+        } catch (error) {
+            alert("Error: " + error.message);
+            setProductInputValue('');
+        } finally {
+            setIsGeneratingProduct(false);
         }
+    };
+
+    const confirmAddProduct = () => {
+        if (!productInputValue || productInputValue.includes('⏳')) return;
+        setFormData({
+            ...formData,
+            productos: {
+                ...formData.productos,
+                [activeFase]: [...formData.productos[activeFase], productInputValue]
+            }
+        });
+        setShowProductModal(false);
+    };
+
+    const addProduct = (fase) => {
+        // Esta función ya no se usa, ahora usamos openProductModal
     };
 
     const handleSaveProject = async () => {
@@ -266,7 +312,7 @@ export default function NuevoProyectoPage() {
                                     <h3 style={{ fontSize: '18px', fontWeight: '900', textTransform: 'uppercase' }}>
                                         {f === 'fase3' ? 'Fase 3 (1º y 2º)' : f === 'fase4' ? 'Fase 4 (3º y 4º)' : 'Fase 5 (5º y 6º)'}
                                     </h3>
-                                    <button onClick={() => addProduct(f)} style={{ background: '#f5f3ff', color: theme.accent, border: 'none', padding: '8px 16px', borderRadius: '100px', fontSize: '12px', fontWeight: '900', cursor: 'pointer' }}>+ AÑADIR PRODUCTO</button>
+                                    <button onClick={() => openProductModal(f)} style={{ background: '#f5f3ff', color: theme.accent, border: 'none', padding: '8px 16px', borderRadius: '100px', fontSize: '12px', fontWeight: '900', cursor: 'pointer' }}>+ AÑADIR PRODUCTO</button>
                                 </div>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
                                     {formData.productos[f].length === 0 ? (
@@ -336,6 +382,50 @@ export default function NuevoProyectoPage() {
                 )}
 
             </main>
+
+            {/* PRODUCT MODAL */}
+            {showProductModal && (
+                <div style={{ position: 'fixed', inset: 0, background: 'rgba(15, 23, 42, 0.8)', backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px' }}>
+                    <div className="fade-in" style={{ background: '#fff', width: '100%', maxWidth: '500px', borderRadius: '32px', padding: '40px', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '900', marginBottom: '8px' }}>Nuevo Producto Artístico</h3>
+                        <p style={{ fontSize: '14px', color: theme.subtext, marginBottom: '32px' }}>
+                            Define qué van a crear los alumnos de {activeFase === 'fase3' ? '1º y 2º' : activeFase === 'fase4' ? '3º y 4º' : '5º y 6º'}.
+                        </p>
+
+                        <div style={{ marginBottom: '24px' }}>
+                            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase', marginBottom: '8px' }}>Instrucción para la IA (Opcional)</label>
+                            <input 
+                                value={productAIInstruction}
+                                onChange={e => setProductAIInstruction(e.target.value)}
+                                placeholder="Ej. Que sea una manualidad, que use música..."
+                                style={{ width: '100%', padding: '16px', borderRadius: '12px', border: `1px solid ${theme.border}`, fontSize: '14px', outline: 'none', marginBottom: '12px' }}
+                            />
+                            <button 
+                                onClick={generateProductWithAI}
+                                disabled={isGeneratingProduct}
+                                style={{ width: '100%', padding: '12px', borderRadius: '12px', background: '#f5f3ff', color: theme.accent, border: `1px solid ${theme.accent}30`, fontWeight: '900', fontSize: '13px', cursor: 'pointer' }}
+                            >
+                                {isGeneratingProduct ? '🪄 PENSANDO...' : '🪄 GENERAR CON IA'}
+                            </button>
+                        </div>
+
+                        <div style={{ marginBottom: '40px' }}>
+                            <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase', marginBottom: '8px' }}>Nombre del Producto</label>
+                            <textarea 
+                                value={productInputValue}
+                                onChange={e => setProductInputValue(e.target.value)}
+                                placeholder="Ej. Un mural colectivo con materiales reciclados"
+                                style={{ width: '100%', padding: '20px', borderRadius: '16px', border: `1px solid ${theme.border}`, fontSize: '16px', fontWeight: '700', outline: 'none', minHeight: '100px', resize: 'none' }}
+                            />
+                        </div>
+
+                        <div style={{ display: 'flex', gap: '12px' }}>
+                            <button onClick={() => setShowProductModal(false)} style={{ flex: 1, padding: '16px', borderRadius: '12px', border: 'none', background: '#f1f5f9', color: theme.subtext, fontWeight: '900', cursor: 'pointer' }}>CANCELAR</button>
+                            <button onClick={confirmAddProduct} style={{ flex: 2, padding: '16px', borderRadius: '12px', border: 'none', background: theme.accent, color: '#fff', fontWeight: '900', cursor: 'pointer' }}>AGREGAR PRODUCTO</button>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             <style jsx>{`
                 .fade-in { animation: fadeIn 0.5s ease-out; }
