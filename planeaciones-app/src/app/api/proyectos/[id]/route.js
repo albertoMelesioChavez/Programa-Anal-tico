@@ -7,7 +7,7 @@ const client = createClient({
 });
 
 export async function GET(request, { params }) {
-    const { id } = params;
+    const { id } = await params;
     try {
         const result = await client.execute({
             sql: "SELECT * FROM proyectos WHERE id = ?",
@@ -36,7 +36,7 @@ export async function GET(request, { params }) {
 }
 
 export async function PATCH(request, { params }) {
-    const { id } = params;
+    const { id } = await params;
     try {
         const data = await request.json();
         const { titulo, tematica, introduccion, productos, vinculacion } = data;
@@ -62,7 +62,7 @@ export async function PATCH(request, { params }) {
 }
 
 export async function DELETE(request, { params }) {
-    const { id } = params;
+    const { id } = await params;
     try {
         await client.execute({
             sql: "DELETE FROM proyectos WHERE id = ?",

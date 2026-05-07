@@ -15,8 +15,10 @@ export default function ProyectoDetallePage() {
     const [curriculum, setCurriculum] = useState({ estatales: [], pdas: [] });
 
     useEffect(() => {
-        fetchProyecto();
-        fetchCurriculum();
+        if (id) {
+            fetchProyecto();
+            fetchCurriculum();
+        }
     }, [id]);
 
     const fetchProyecto = async () => {
