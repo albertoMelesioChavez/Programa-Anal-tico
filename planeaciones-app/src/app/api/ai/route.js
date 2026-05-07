@@ -41,16 +41,25 @@ export async function POST(request) {
             const listRes = await fetch(listUrl);
             const listData = await listRes.json();
             
+            if (listData.error) {
+                return NextResponse.json({ 
+                    error: "Error de Llave API", 
+                    details: listData.error.message,
+                    suggestion: "Tu API Key parece ser incorrecta o está desactivada. Por favor, genera una nueva en Google AI Studio." 
+                }, { status: 401 });
+            }
+
             if (listRes.ok && listData.models) {
-                console.log("Modelos disponibles para esta llave:", listData.models.map(m => m.name));
-                // Si encontramos modelos, intentamos el primero que sea compatible con generateContent
-                const compatibleModel = listData.models.find(m => m.supportedGenerationMethods.includes("generateContent"));
-                if (compatibleModel) {
-                    const modelName = compatibleModel.name; // Ya viene con "models/"
+                // Buscamos un modelo que soporte generación de contenido (preferencia gemini-1.5-flash)
+                const compatibleModels = listData.models.filter(m => m.supportedGenerationMethods.includes("generateContent"));
+                const selectedModel = compatibleModels.find(m => m.name.includes("gemini-1.5-flash")) || compatibleModels[0];
+
+                if (selectedModel) {
+                    const modelName = selectedModel.name; // Ej: models/gemini-1.5-flash
                     const url = `https://generativelanguage.googleapis.com/v1/${modelName}:generateContent?key=${cleanKey}`;
                     
                     const payload = {
-                        contents: [{ role: "user", parts: [{ text: `Eres un asistente experto en NEM. Contexto: ${JSON.stringify(context)}\n\nInstrucción: ${prompt}` }] }]
+                        contents: [{ role: "user", parts: [{ text: `Contexto del proyecto: ${JSON.stringify(context)}\n\nInstrucción: ${prompt}` }] }]
                     };
 
                     const response = await fetch(url, {
@@ -62,30 +71,24 @@ export async function POST(request) {
                     const data = await response.json();
                     if (response.ok) {
                         return NextResponse.json({ text: data.candidates?.[0]?.content?.parts?.[0]?.text });
+                    } else {
+                        // Si el modelo seleccionado falla, lanzamos error detallado
+                        return NextResponse.json({ 
+                            error: `Error con el modelo ${modelName}`, 
+                            details: data.error?.message || "Error desconocido en generación" 
+                        }, { status: response.status });
                     }
                 }
-            } else {
-                console.error("No se pudieron listar modelos:", listData);
             }
         } catch (diagError) {
             console.error("Error en diagnóstico:", diagError);
         }
 
-        // Si el diagnóstico falla o no encuentra nada, probamos el método estándar como último recurso
-        const modelName = "gemini-1.5-flash";
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${cleanKey}`;
-        
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-        });
-        const data = await response.json();
-
+        // Si nada funcionó
         return NextResponse.json({ 
-            error: "La IA de Google no reconoce tu llave para ningún modelo", 
-            details: data.error?.message || "Acceso denegado",
-            suggestion: "Tu cuenta de Google tiene bloqueado el acceso a la IA. POR FAVOR, prueba creando una llave con un correo @gmail.com diferente (personal)."
+            error: "No se encontró ningún modelo compatible", 
+            details: "Tu API Key no tiene permiso para usar modelos generativos o el servicio no está disponible en tu región.",
+            suggestion: "Prueba creando una API Key con una cuenta personal (@gmail.com) para descartar bloqueos institucionales."
         }, { status: 500 });
 
     } catch (error) {
