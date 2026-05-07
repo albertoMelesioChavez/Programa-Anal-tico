@@ -52,25 +52,25 @@ export default function NuevoProyectoPage() {
         // Borramos el texto anterior para que se muestre el skeleton
         setFormData(prev => ({ ...prev, introduccion: '' }));
         try {
-            const prompt = `Imagina que eres un maestro de Educación Artística muy creativo y apasionado, y estás redactando la "Introducción y Sustento" de tu nuevo proyecto escolar para presentarlo en tu escuela.
+            const prompt = `Redacta la "Introducción y Sustento" para un nuevo proyecto escolar de Educación Artística. El texto debe tener un tono FORMAL, PROFESIONAL y PEDAGÓGICO, adecuado para un documento oficial de planeación escolar.
             
-            Título de tu proyecto: "${formData.titulo}"
-            Tema principal que van a trabajar los alumnos: ${formData.tematica}
+            Título del proyecto: "${formData.titulo}"
+            Temática central a abordar: ${formData.tematica}
             
-            Lo que van a crear en el salón (Productos):
-            - 1º y 2º grado: ${formData.productos.fase3.join(', ') || 'Actividades de exploración artística'}
-            - 3º y 4º grado: ${formData.productos.fase4.join(', ') || 'Creaciones artísticas guiadas'}
-            - 5º y 6º grado: ${formData.productos.fase5.join(', ') || 'Proyectos artísticos avanzados'}
+            Productos esperados por fase:
+            - 1º y 2º grado: ${formData.productos.fase3.join(', ') || 'Actividades de exploración'}
+            - 3º y 4º grado: ${formData.productos.fase4.join(', ') || 'Creaciones guiadas'}
+            - 5º y 6º grado: ${formData.productos.fase5.join(', ') || 'Proyectos avanzados'}
 
             INSTRUCCIONES EXTRA DEL MAESTRO (OBLIGATORIO CUMPLIR):
-            ${customPrompt ? customPrompt : 'Redacta libremente siguiendo tu instinto creativo.'}
+            ${customPrompt ? customPrompt : 'Proporciona un sustento sólido.'}
 
-            INSTRUCCIONES ESTRICTAS:
-            1. Escribe un texto natural, inspirador y directo al grano, como lo haría un humano llenando su propia planeación.
-            2. PROHIBIDO dar definiciones de diccionario, PROHIBIDO explicar qué es la "Nueva Escuela Mexicana" y PROHIBIDO sonar como un libro de texto aburrido.
-            3. Usa los productos y la temática que te compartí como inspiración para contar de forma creativa de qué trata este proyecto, por qué será divertido e importante para los niños, y cómo se vincula con la comunidad.
-            4. Escribe 2 o 3 párrafos fluidos y bien conectados. No uses plantillas ni viñetas repetitivas.
-            5. MUY IMPORTANTE: Entrega ÚNICAMENTE el texto final de la introducción. NO saludes, NO te despidas, NO digas '¡Claro que sí!' ni 'Aquí tienes el texto'. Empieza directamente con el primer párrafo del sustento.`;
+            INSTRUCCIONES ESTRICTAS DE REDACCIÓN:
+            1. TONO: Formal y académico. PROHIBIDO usar lenguaje coloquial, entusiasta o saludos informales (ej. prohibido decir "¡Hola a todos!", "Prepárense", "Me tiene saltando de emoción").
+            2. CONTENIDO: Explica de qué trata el proyecto y dale un sustento pedagógico claro. Propón cómo este proyecto dará soluciones a la temática planteada.
+            3. CREATIVIDAD FORMAL: Imagina y menciona posibles eventos de cierre, festivales, o exposiciones donde se mostrarán los productos de los alumnos.
+            4. ESTRUCTURA: Redacta 2 a 3 párrafos fluidos y bien estructurados. No uses plantillas rígidas ni viñetas.
+            5. MUY IMPORTANTE: Entrega ÚNICAMENTE el texto final de la introducción. Empieza directamente con el primer párrafo del documento.`;
             
             const res = await fetch('/api/ai', {
                 method: 'POST',
