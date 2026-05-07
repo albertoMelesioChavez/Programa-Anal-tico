@@ -644,7 +644,7 @@ export default function NuevoProyectoPage() {
                     <div className="fade-in" style={{ background: '#fff', width: '100%', maxWidth: '500px', borderRadius: '32px', padding: '40px', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}>
                         <h3 style={{ fontSize: '24px', fontWeight: '900', marginBottom: '8px' }}>Nuevo Producto Esperado</h3>
                         <p style={{ fontSize: '14px', color: theme.subtext, marginBottom: '32px' }}>
-                            Define qué van a crear los alumnos de {activeFase === 'fase3' ? '1º y 2º' : activeFase === 'fase4' ? '3º y 4º' : '5º y 6º'}.
+                            Define qué van a crear los alumnos de {activeFase.replace('grado', '')}º Grado.
                         </p>
 
                         <div style={{ marginBottom: '24px' }}>
