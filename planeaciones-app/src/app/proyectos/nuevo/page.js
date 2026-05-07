@@ -43,23 +43,47 @@ export default function NuevoProyectoPage() {
     };
 
     const generateIntroduction = async () => {
-        if (!formData.tematica) return alert("Escribe una temática primero");
+        if (!formData.tematica || !formData.titulo) {
+            return alert("Por favor completa el Título y la Temática antes de generar el sustento.");
+        }
+
         setIsGenerating(true);
         try {
             const prompt = `Actúa como especialista en artes y educación para la Nueva Escuela Mexicana (NEM). 
-            Redacta una introducción profesional y pedagógica para un proyecto artístico basado en la temática: "${formData.tematica}". 
-            La introducción debe incluir el propósito del proyecto, su relevancia social y cómo las artes ayudan a abordar este tema. 
-            Sé inspirador y académico.`;
+            Redacta una introducción profesional, pedagógica y de sustento para el proyecto titulado "${formData.titulo}".
+            
+            TEMÁTICA CENTRAL: ${formData.tematica}
+            PRODUCTOS PLANEADOS:
+            - Fase 3 (1º y 2º): ${formData.productos.fase3.join(', ') || 'Por definir'}
+            - Fase 4 (3º y 4º): ${formData.productos.fase4.join(', ') || 'Por definir'}
+            - Fase 5 (5º y 6º): ${formData.productos.fase5.join(', ') || 'Por definir'}
+
+            La introducción debe:
+            1. Explicar el propósito del proyecto y su relevancia social/comunitaria.
+            2. Justificar cómo los productos artísticos mencionados ayudan a abordar la temática "${formData.tematica}".
+            3. Estar redactada en un tono académico, inspirador y alineado a los ejes articuladores de la NEM.
+            4. No uses introducciones genéricas, intégralo todo en un texto fluido de unos 3-4 párrafos.`;
             
             const res = await fetch('/api/ai', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ prompt, context: { tematica: formData.tematica } })
+                body: JSON.stringify({ 
+                    prompt, 
+                    context: { 
+                        titulo: formData.titulo,
+                        tematica: formData.tematica,
+                        productos: formData.productos
+                    } 
+                })
             });
+            
             const data = await res.json();
-            setFormData({ ...formData, introduccion: data.text });
+            if (data.error) throw new Error(data.details || data.error);
+            
+            setFormData(prev => ({ ...prev, introduccion: data.text }));
         } catch (error) {
-            alert("Error con la IA: " + error.message);
+            console.error("AI Generation Error:", error);
+            alert("No se pudo generar el sustento: " + error.message);
         } finally {
             setIsGenerating(false);
         }
