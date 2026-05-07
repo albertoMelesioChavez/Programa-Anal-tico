@@ -1,21 +1,38 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from 'next/server';
 
-// Inicializamos la IA con la API KEY del entorno
-// El usuario debe configurar GOOGLE_AI_STUDIO_API_KEY en Vercel
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_STUDIO_API_KEY || "");
+import { createClient } from '@libsql/client';
+
+const client = createClient({
+    url: process.env.TURSO_DATABASE_URL,
+    authToken: process.env.TURSO_AUTH_TOKEN,
+});
 
 export async function POST(request) {
     try {
         const { prompt, context } = await request.json();
         
-        if (!process.env.GOOGLE_AI_STUDIO_API_KEY) {
+        let apiKey = process.env.GOOGLE_AI_STUDIO_API_KEY;
+
+        // Si no está en env, buscar en DB
+        if (!apiKey) {
+            const dbRes = await client.execute({
+                sql: "SELECT valor FROM configuracion WHERE clave = 'GOOGLE_AI_KEY'",
+                args: []
+            });
+            if (dbRes.rows.length > 0) {
+                apiKey = dbRes.rows[0].valor;
+            }
+        }
+
+        if (!apiKey) {
             return NextResponse.json({ 
                 error: "Configuración incompleta", 
-                details: "Falta la API Key de Google AI Studio. Asegúrate de añadir GOOGLE_AI_STUDIO_API_KEY a tus variables de entorno." 
+                details: "Falta la API Key de Google AI Studio. Ve a la configuración de la app para añadirla." 
             }, { status: 500 });
         }
 
+        const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         const systemInstruction = `Eres un asistente experto en educación básica en México, especializado en el Nuevo Modelo Educativo (NEM). 

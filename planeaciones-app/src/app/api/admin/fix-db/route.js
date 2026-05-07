@@ -9,11 +9,17 @@ const client = createClient({
 export async function GET() {
     try {
         await client.execute(`ALTER TABLE planeaciones ADD COLUMN evidencias TEXT`);
-        return NextResponse.json({ message: "Columna 'evidencias' añadida con éxito." });
+    } catch (e) {}
+
+    try {
+        await client.execute(`
+            CREATE TABLE IF NOT EXISTS configuracion (
+                clave TEXT PRIMARY KEY,
+                valor TEXT
+            )
+        `);
+        return NextResponse.json({ message: "Tablas y columnas actualizadas con éxito." });
     } catch (error) {
-        if (error.message.includes("duplicate column name")) {
-            return NextResponse.json({ message: "La columna 'evidencias' ya existía." });
-        }
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 }
