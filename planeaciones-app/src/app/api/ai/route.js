@@ -32,40 +32,65 @@ export async function POST(request) {
             }, { status: 500 });
         }
 
-        const genAI = new GoogleGenerativeAI(apiKey.trim());
+        // Limpieza extrema de la API Key
+        const cleanKey = apiKey.trim().replace(/[^a-zA-Z0-9_-]/g, '');
         
         const modelsToTry = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"];
-        let errors = [];
+        let lastError = null;
 
         for (const modelName of modelsToTry) {
             try {
-                // Probamos sin especificar apiVersion para que el SDK use su mejor opción
-                const model = genAI.getGenerativeModel({ model: modelName });
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${cleanKey}`;
                 
-                const systemInstruction = `Eres un asistente experto en educación básica en México, especializado en el Nuevo Modelo Educativo (NEM). 
-                Tu objetivo es ayudar a docentes a redactar planeaciones didácticas y programas analíticos de alta calidad.`;
+                const payload = {
+                    contents: [
+                        {
+                            role: "user",
+                            parts: [
+                                { text: `Eres un asistente experto en educación básica en México (NEM). Contexto: ${JSON.stringify(context)}\n\nInstrucción: ${prompt}` }
+                            ]
+                        }
+                    ],
+                    generationConfig: {
+                        temperature: 0.7,
+                        topK: 40,
+                        topP: 0.95,
+                        maxOutputTokens: 2048,
+                    }
+                };
 
-                const fullPrompt = `Contexto académico: ${JSON.stringify(context)}\n\nInstrucción del docente: ${prompt}`;
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
 
-                const result = await model.generateContent([systemInstruction, fullPrompt]);
-                const response = await result.response;
-                const text = response.text();
+                const data = await response.json();
 
-                return NextResponse.json({ text, modelUsed: modelName });
+                if (!response.ok) {
+                    console.error(`Error con ${modelName}:`, data);
+                    lastError = data.error?.message || response.statusText;
+                    continue;
+                }
+
+                const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (text) return NextResponse.json({ text, modelUsed: modelName });
+                
+                throw new Error("No se generó texto en la respuesta");
             } catch (error) {
-                console.error(`Error con modelo ${modelName}:`, error.message);
-                errors.push(`${modelName}: ${error.message}`);
-                continue;
+                console.error(`Fallo en fetch con ${modelName}:`, error);
+                lastError = error.message;
             }
         }
 
         return NextResponse.json({ 
-            error: "Fallo al generar contenido con todos los modelos", 
-            details: errors.join(" | "),
-            suggestion: "Tu API Key parece no tener permiso para usar Gemini. Intenta crear una NUEVA llave en un proyecto nuevo en Google AI Studio."
+            error: "Fallo total en la conexión con la IA de Google", 
+            details: lastError,
+            suggestion: "Tu cuenta de Google podría tener restricciones para usar Gemini en aplicaciones externas. Prueba a usar una cuenta de Gmail personal diferente."
         }, { status: 500 });
+
     } catch (error) {
-        console.error("AI Generation Final Failure:", error);
-        return NextResponse.json({ error: "Error fatal de IA", details: error.message }, { status: 500 });
+        console.error("AI Fatal Error:", error);
+        return NextResponse.json({ error: "Error interno del servidor", details: error.message }, { status: 500 });
     }
 }
