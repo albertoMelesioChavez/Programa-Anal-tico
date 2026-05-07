@@ -448,10 +448,9 @@ export default function NuevoProyectoPage() {
                         <p style={{ color: theme.subtext, marginBottom: '40px', fontSize: '15px' }}>Busca y selecciona los contenidos y PDAs que sustentan tus productos esperados.</p>
 
                         {isSuggesting && (
-                            <div style={{ marginBottom: '24px', padding: '16px 24px', background: 'linear-gradient(135deg, #f5f3ff, #ede9fe)', borderRadius: '20px', border: `1px solid ${theme.accent}30`, display: 'flex', alignItems: 'center', gap: '16px', animation: 'pulse 2s infinite' }}>
+                            <div className="pulse-suggest" style={{ marginBottom: '24px', padding: '16px 24px', background: 'linear-gradient(135deg, #f5f3ff, #ede9fe)', borderRadius: '20px', border: `1px solid ${theme.accent}30`, display: 'flex', alignItems: 'center', gap: '16px' }}>
                                 <span style={{ fontSize: '20px' }}>🪄</span>
                                 <span style={{ fontSize: '14px', fontWeight: '700', color: theme.accent }}>IA sugiriendo contenidos basados en tu proyecto...</span>
-                                <style jsx>{`@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }`}</style>
                             </div>
                         )}
 
@@ -703,6 +702,13 @@ export default function NuevoProyectoPage() {
                 @keyframes skeleton-loading {
                     0% { background-position: 200% 0; }
                     100% { background-position: -200% 0; }
+                }
+
+                .pulse-suggest { animation: pulse 2s infinite; }
+                @keyframes pulse { 
+                    0% { opacity: 1; } 
+                    50% { opacity: 0.6; } 
+                    100% { opacity: 1; } 
                 }
             `}</style>
         </div>
