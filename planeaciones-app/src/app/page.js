@@ -102,12 +102,27 @@ export default function Home() {
                 {!showForm && (
                     <>
                         {/* Hero Header */}
-                        <header style={{ textAlign: 'center', margin: '60px 0', position: 'relative' }}>
+                        <header style={{ textAlign: 'center', margin: '60px 0', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <button 
                                 onClick={() => setShowConfig(true)}
-                                style={{ position: 'absolute', right: 0, top: 0, background: 'transparent', border: 'none', fontSize: '24px', cursor: 'pointer', opacity: 0.5 }}
+                                style={{ 
+                                    position: 'absolute', 
+                                    right: 0, 
+                                    top: 0, 
+                                    background: '#f1f5f9', 
+                                    border: '1px solid #e2e8f0', 
+                                    padding: '10px 20px', 
+                                    borderRadius: '12px', 
+                                    fontSize: '12px', 
+                                    fontWeight: '800', 
+                                    cursor: 'pointer',
+                                    color: '#64748b',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '8px'
+                                }}
                             >
-                                ⚙️
+                                ⚙️ CONFIGURAR IA
                             </button>
                             <div style={{ display: 'inline-block', padding: '8px 20px', borderRadius: '100px', background: '#eff6ff', border: '1px solid #dbeafe', fontSize: '11px', fontWeight: '800', color: '#2563eb', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '24px' }}>
                                 NEM 2025 • Sinaloa
