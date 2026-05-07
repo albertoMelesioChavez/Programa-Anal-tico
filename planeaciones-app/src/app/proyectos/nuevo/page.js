@@ -106,8 +106,8 @@ export default function NuevoProyectoPage() {
 
     const generateProductWithAI = async () => {
         setIsGeneratingProduct(true);
-        // Borramos lo que esté escrito para mostrar que está pensando
-        setProductInputValue('⏳ Pensando producto...');
+        // Borramos lo que esté escrito para que se vea el skeleton
+        setProductInputValue('');
         try {
             const prompt = `Propón un producto artístico CREATIVO y ORIGINAL para alumnos de ${activeFase === 'fase3' ? '1º y 2º de primaria' : activeFase === 'fase4' ? '3º y 4º de primaria' : '5º y 6º de primaria'}.
             Tema del proyecto: "${formData.titulo}"
@@ -402,14 +402,21 @@ export default function NuevoProyectoPage() {
                             </button>
                         </div>
 
-                        <div style={{ marginBottom: '40px' }}>
+                        <div style={{ marginBottom: '40px', minHeight: '140px' }}>
                             <label style={{ display: 'block', fontSize: '11px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase', marginBottom: '8px' }}>Nombre del Producto</label>
-                            <textarea 
-                                value={productInputValue}
-                                onChange={e => setProductInputValue(e.target.value)}
-                                placeholder="Ej. Un mural colectivo con materiales reciclados"
-                                style={{ width: '100%', padding: '20px', borderRadius: '16px', border: `1px solid ${theme.border}`, fontSize: '16px', fontWeight: '700', outline: 'none', minHeight: '100px', resize: 'none' }}
-                            />
+                            {isGeneratingProduct ? (
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', padding: '20px', background: '#f8fafc', borderRadius: '16px', border: `1px solid ${theme.border}` }}>
+                                    <div className="skeleton-line" style={{ width: '100%', height: '16px', borderRadius: '4px' }}></div>
+                                    <div className="skeleton-line" style={{ width: '70%', height: '16px', borderRadius: '4px' }}></div>
+                                </div>
+                            ) : (
+                                <textarea 
+                                    value={productInputValue}
+                                    onChange={e => setProductInputValue(e.target.value)}
+                                    placeholder="Ej. Un mural colectivo con materiales reciclados"
+                                    style={{ width: '100%', padding: '20px', borderRadius: '16px', border: `1px solid ${theme.border}`, fontSize: '16px', fontWeight: '700', outline: 'none', minHeight: '100px', resize: 'none' }}
+                                />
+                            )}
                         </div>
 
                         <div style={{ display: 'flex', gap: '12px' }}>
