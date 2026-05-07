@@ -69,7 +69,8 @@ export default function NuevoProyectoPage() {
             1. Escribe un texto natural, inspirador y directo al grano, como lo haría un humano llenando su propia planeación.
             2. PROHIBIDO dar definiciones de diccionario, PROHIBIDO explicar qué es la "Nueva Escuela Mexicana" y PROHIBIDO sonar como un libro de texto aburrido.
             3. Usa los productos y la temática que te compartí como inspiración para contar de forma creativa de qué trata este proyecto, por qué será divertido e importante para los niños, y cómo se vincula con la comunidad.
-            4. Escribe 2 o 3 párrafos fluidos y bien conectados. No uses plantillas ni viñetas repetitivas.`;
+            4. Escribe 2 o 3 párrafos fluidos y bien conectados. No uses plantillas ni viñetas repetitivas.
+            5. MUY IMPORTANTE: Entrega ÚNICAMENTE el texto final de la introducción. NO saludes, NO te despidas, NO digas '¡Claro que sí!' ni 'Aquí tienes el texto'. Empieza directamente con el primer párrafo del sustento.`;
             
             const res = await fetch('/api/ai', {
                 method: 'POST',
