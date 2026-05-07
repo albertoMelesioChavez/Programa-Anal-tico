@@ -34,8 +34,9 @@ export async function POST(request) {
 
         const genAI = new GoogleGenerativeAI(apiKey.trim());
         
-        // Intentamos varios modelos por si uno no está disponible para esa key
-        const modelsToTry = ["gemini-1.5-flash", "gemini-1.5-pro", "gemini-pro"];
+        // Intentamos varios modelos. Ponemos gemini-pro primero porque es el más compatible
+        // aunque gemini-1.5-flash sea mejor, queremos asegurar que funcione YA.
+        const modelsToTry = ["gemini-pro", "gemini-1.5-flash", "gemini-1.5-pro"];
         let lastError = null;
 
         for (const modelName of modelsToTry) {
