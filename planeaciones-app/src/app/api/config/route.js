@@ -9,6 +9,15 @@ const client = createClient({
 export async function POST(request) {
     try {
         const { key, value } = await request.json();
+        
+        // Asegurar que la tabla existe
+        await client.execute(`
+            CREATE TABLE IF NOT EXISTS configuracion (
+                clave TEXT PRIMARY KEY,
+                valor TEXT
+            )
+        `);
+
         await client.execute({
             sql: "INSERT OR REPLACE INTO configuracion (clave, valor) VALUES (?, ?)",
             args: [key, value]
