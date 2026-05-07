@@ -113,7 +113,9 @@ export default function ProyectosPage() {
                                     {p.introduccion || 'Sin descripción disponible.'}
                                 </p>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '24px', borderTop: `1px solid ${theme.border}` }}>
-                                    <span style={{ fontSize: '12px', color: theme.subtext, fontWeight: '600' }}>Creado el {new Date(p.created_at).toLocaleDateString()}</span>
+                                    <span style={{ fontSize: '12px', color: theme.subtext, fontWeight: '600' }}>
+                                        Creado: {new Date(p.created_at).toLocaleDateString()} {new Date(p.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                    </span>
                                     <button 
                                         onClick={() => router.push(`/proyectos/${p.id}`)}
                                         style={{ color: theme.accent, background: 'transparent', border: 'none', fontWeight: '800', fontSize: '13px', cursor: 'pointer' }}
