@@ -28,6 +28,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel }) {
     });
 
     const [isUploading, setIsUploading] = useState(false);
+    const [isGeneratingAI, setIsGeneratingAI] = useState(false);
 
     // Cargar datos iniciales si estamos en modo edición
     useEffect(() => {
