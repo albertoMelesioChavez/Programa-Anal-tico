@@ -145,7 +145,7 @@ export default function ProyectoDetallePage() {
                     <section style={{ marginBottom: '60px' }}>
                         <h2 style={{ fontSize: '14px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '24px', borderBottom: `2px solid ${theme.accent}20`, paddingBottom: '8px', display: 'inline-block' }}>II. Productos Artísticos</h2>
                         
-                        {Object.entries(proyecto.productos).map(([fase, items]) => items.length > 0 && (
+                        {proyecto.productos && Object.entries(proyecto.productos).map(([fase, items]) => Array.isArray(items) && items.length > 0 && (
                             <div key={fase} style={{ marginBottom: '24px' }}>
                                 <h3 style={{ fontSize: '12px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase', marginBottom: '12px' }}>
                                     {fase === 'fase3' ? 'Fase 3 (1º y 2º)' : fase === 'fase4' ? 'Fase 4 (3º y 4º)' : 'Fase 5 (5º y 6º)'}
@@ -166,13 +166,13 @@ export default function ProyectoDetallePage() {
                     <section>
                         <h2 style={{ fontSize: '14px', fontWeight: '900', color: theme.accent, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '24px', borderBottom: `2px solid ${theme.accent}20`, paddingBottom: '8px', display: 'inline-block' }}>III. Vinculación Curricular</h2>
                         
-                        {proyecto.vinculacion.map((v, i) => {
+                        {Array.isArray(proyecto.vinculacion) && proyecto.vinculacion.map((v, i) => {
                             const content = curriculum.estatales?.find(c => c.id === v.contenido_id);
                             return (
                                 <div key={i} style={{ marginBottom: '32px', padding: '24px', borderRadius: '16px', background: '#f8fafc', border: `1px solid ${theme.border}` }}>
                                     <h3 style={{ fontSize: '14px', fontWeight: '900', marginBottom: '12px', color: theme.text }}>{content?.descripcion || `Contenido ID: ${v.contenido_id}`}</h3>
                                     <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                                        {v.pda_ids.map(pid => {
+                                        {Array.isArray(v.pda_ids) && v.pda_ids.map(pid => {
                                             const pda = curriculum.pdas?.find(p => p.id === pid);
                                             return (
                                                 <div key={pid} style={{ display: 'flex', gap: '10px', paddingLeft: '12px', borderLeft: `2px solid ${theme.accent}30` }}>
