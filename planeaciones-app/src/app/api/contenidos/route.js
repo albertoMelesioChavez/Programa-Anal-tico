@@ -10,10 +10,18 @@ export async function GET(request) {
         const estatales = await db.execute('SELECT * FROM contenidos_estatales');
         const pdas = await db.execute('SELECT * FROM pdas');
         
+        const serializeRows = (rows) => rows.map(row => {
+            const newRow = {};
+            for (const key in row) {
+                newRow[key] = typeof row[key] === 'bigint' ? Number(row[key]) : row[key];
+            }
+            return newRow;
+        });
+
         return NextResponse.json({ 
-            nacionales: nacionales.rows, 
-            estatales: estatales.rows,
-            pdas: pdas.rows
+            nacionales: serializeRows(nacionales.rows), 
+            estatales: serializeRows(estatales.rows),
+            pdas: serializeRows(pdas.rows)
         });
     } catch (e) {
         console.error("Turso Contenidos Error:", e);
