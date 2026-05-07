@@ -211,7 +211,7 @@ export default function Home() {
                                 value={aiKey}
                                 onChange={e => setAiKey(e.target.value)}
                                 placeholder="AIza..."
-                                style={{ width: '100%', padding: '16px', borderRadius: '16px', border: '1px solid #e2e8f0', fontSize: '14px', marginBottom: '12px' }}
+                                style={{ width: '100%', padding: '16px', borderRadius: '16px', border: '1px solid #e2e8f0', fontSize: '14px', marginBottom: '12px', color: '#0f172a' }}
                             />
                             <div style={{ display: 'flex', gap: '12px' }}>
                                 <button onClick={() => setShowConfig(false)} style={{ flex: 1, padding: '16px', borderRadius: '14px', border: 'none', background: '#f1f5f9', fontWeight: '800' }}>CANCELAR</button>
