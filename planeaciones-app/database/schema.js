@@ -99,6 +99,42 @@ db.exec(`
     url TEXT
   );
 
+  CREATE TABLE IF NOT EXISTS proyectos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo TEXT NOT NULL,
+    tematica TEXT,
+    introduccion TEXT,
+    productos TEXT,
+    vinculacion TEXT,
+    configuracion TEXT,
+    proyecto_escolar_id INTEGER,
+    nombre_archivo TEXT,
+    tipo_archivo TEXT,
+    archivo_url TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
+
+  CREATE TABLE IF NOT EXISTS proyecto_escolar (
+    id INTEGER PRIMARY KEY CHECK (id = 1),
+    titulo TEXT NOT NULL,
+    nombre_archivo TEXT,
+    tipo_archivo TEXT,
+    archivo_url TEXT,
+    contenido TEXT NOT NULL,
+    fecha_actualizacion DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
+
+  CREATE TABLE IF NOT EXISTS proyectos_escolares (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo TEXT NOT NULL,
+    nombre_archivo TEXT,
+    tipo_archivo TEXT,
+    archivo_url TEXT,
+    contenido TEXT NOT NULL,
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    fecha_actualizacion DATETIME DEFAULT CURRENT_TIMESTAMP
+  );
+
   CREATE TABLE IF NOT EXISTS planeaciones (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -109,10 +145,14 @@ db.exec(`
     contenido_nacional_id INTEGER,
     contenido_estatal_id INTEGER,
     pda_id INTEGER,
+    proyecto_escolar_id INTEGER,
+    proyecto_arte_id INTEGER,
+    valor_mensual TEXT,
     ejes_articuladores TEXT,
     metodologia TEXT,
     actividades TEXT,
     recursos TEXT,
+    evidencias TEXT,
     evaluacion TEXT,
     secuencia_inicio TEXT,
     secuencia_desarrollo TEXT,
@@ -122,7 +162,9 @@ db.exec(`
     FOREIGN KEY (lenguaje_id) REFERENCES lenguajes_artisticos(id),
     FOREIGN KEY (contenido_nacional_id) REFERENCES contenidos_nacionales(id),
     FOREIGN KEY (contenido_estatal_id) REFERENCES contenidos_estatales(id),
-    FOREIGN KEY (pda_id) REFERENCES pdas(id)
+    FOREIGN KEY (pda_id) REFERENCES pdas(id),
+    FOREIGN KEY (proyecto_escolar_id) REFERENCES proyectos_escolares(id),
+    FOREIGN KEY (proyecto_arte_id) REFERENCES proyectos(id)
   );
 `);
 

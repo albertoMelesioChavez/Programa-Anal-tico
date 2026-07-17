@@ -150,7 +150,7 @@ export default function ProyectoDetallePage() {
                     <Link href="/proyectos" style={{ textDecoration: 'none', color: theme.subtext, fontWeight: '700', fontSize: '14px' }}>← VOLVER</Link>
                     <div style={{ width: '1px', height: '24px', background: theme.border }}></div>
                     <span style={{ fontSize: '12px', color: theme.subtext, fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                        {saving ? '⏳ Guardando...' : lastSaved ? `✓ Guardado ${lastSaved.toLocaleTimeString()}` : 'Vista de Documento'}
+                        {saving ? '⏳ Guardando...' : lastSaved ? `✓ Guardado ${lastSaved.toLocaleTimeString()}` : 'Proyecto del maestro de arte'}
                     </span>
                 </div>
                 <div style={{ display: 'flex', gap: '12px' }}>

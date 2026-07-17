@@ -1,9 +1,16 @@
 import { db as client } from '@/lib/db';
 import { NextResponse } from 'next/server';
+import { ensureProyectoArteTable, ensureProyectoEscolarTable } from '@/lib/context-schema';
+
+async function initDB() {
+    await ensureProyectoEscolarTable();
+    await ensureProyectoArteTable();
+}
 
 export async function GET(request, { params }) {
     const { id } = await params;
     try {
+        await initDB();
         const result = await client.execute({
             sql: "SELECT * FROM proyectos WHERE id = ?",
             args: [id]
@@ -33,19 +40,21 @@ export async function GET(request, { params }) {
 export async function PATCH(request, { params }) {
     const { id } = await params;
     try {
+        await initDB();
         const data = await request.json();
-        const { titulo, tematica, introduccion, productos, vinculacion } = data;
+        const { titulo, tematica, introduccion, productos, vinculacion, proyecto_escolar_id } = data;
 
         await client.execute({
             sql: `UPDATE proyectos 
-                  SET titulo = ?, tematica = ?, introduccion = ?, productos = ?, vinculacion = ?
+                  SET titulo = ?, tematica = ?, introduccion = ?, productos = ?, vinculacion = ?, proyecto_escolar_id = COALESCE(?, proyecto_escolar_id)
                   WHERE id = ?`,
             args: [
                 titulo, 
                 tematica, 
                 introduccion, 
                 JSON.stringify(productos || []), 
-                JSON.stringify(vinculacion || []), 
+                JSON.stringify(vinculacion || []),
+                proyecto_escolar_id?.toString() || null,
                 id
             ]
         });
@@ -59,6 +68,7 @@ export async function PATCH(request, { params }) {
 export async function DELETE(request, { params }) {
     const { id } = await params;
     try {
+        await initDB();
         await client.execute({
             sql: "DELETE FROM proyectos WHERE id = ?",
             args: [id]

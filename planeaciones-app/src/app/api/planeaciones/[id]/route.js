@@ -1,5 +1,6 @@
 import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
+import { ensurePlaneacionContextColumns } from '@/lib/context-schema';
 
 export async function DELETE(request, { params }) {
     try {
@@ -27,7 +28,8 @@ export async function PUT(request, { params }) {
         const body = await request.json();
         const {
             titulo, fase_id, grado_id, lenguaje_id,
-            contenido_nacional_id, contenido_estatal_id, pda_id,
+            contenido_nacional_id, contenido_estatal_id, pda_id, pda_por_grado, evaluacion_por_grado, recursos_por_grado, evidencias_por_grado,
+            proyecto_escolar_id, proyecto_arte_id, valor_mensual,
             ejes_articuladores,
             metodologia, actividades, recursos, evidencias, evaluacion,
             secuencia_inicio, secuencia_desarrollo, secuencia_cierre
@@ -37,14 +39,13 @@ export async function PUT(request, { params }) {
             return NextResponse.json({ error: 'El título es requerido' }, { status: 400 });
         }
 
-        if (!process.env.TURSO_DATABASE_URL) {
-            return NextResponse.json({ error: 'Base de datos no configurada en Vercel' }, { status: 503 });
-        }
+        await ensurePlaneacionContextColumns();
 
         await db.execute({
             sql: `UPDATE planeaciones SET 
                     titulo = ?, fase_id = ?, grado_id = ?, lenguaje_id = ?, 
-                    contenido_nacional_id = ?, contenido_estatal_id = ?, pda_id = ?,
+                    contenido_nacional_id = ?, contenido_estatal_id = ?, pda_id = ?, pda_por_grado = ?, evaluacion_por_grado = ?, recursos_por_grado = ?, evidencias_por_grado = ?,
+                    proyecto_escolar_id = ?, proyecto_arte_id = ?, valor_mensual = ?,
                     ejes_articuladores = ?,
                     metodologia = ?, actividades = ?, recursos = ?, evidencias = ?, evaluacion = ?,
                     secuencia_inicio = ?, secuencia_desarrollo = ?, secuencia_cierre = ?
@@ -57,6 +58,13 @@ export async function PUT(request, { params }) {
                 contenido_nacional_id?.toString() || null, 
                 contenido_estatal_id?.toString() || null, 
                 pda_id?.toString() || null,
+                JSON.stringify(pda_por_grado || []),
+                JSON.stringify(evaluacion_por_grado || []),
+                JSON.stringify(recursos_por_grado || []),
+                JSON.stringify(evidencias_por_grado || []),
+                proyecto_escolar_id?.toString() || null,
+                proyecto_arte_id?.toString() || null,
+                valor_mensual?.trim() || '',
                 ejes_articuladores || '',
                 metodologia || '', actividades || '', recursos || '', evidencias || '', evaluacion || '',
                 secuencia_inicio || '', secuencia_desarrollo || '', secuencia_cierre || '',

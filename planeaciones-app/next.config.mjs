@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  // Mantiene el paquete y su worker disponibles en las funciones de servidor.
+  serverExternalPackages: ['pdf-parse'],
   reactCompiler: true,
 };
 

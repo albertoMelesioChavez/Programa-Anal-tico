@@ -19,6 +19,7 @@ export default function NuevoProyectoPage() {
 
     // Form Data
     const [formData, setFormData] = useState({
+        proyecto_escolar_id: '',
         titulo: '',
         tematica: '',
         introduccion: '',
@@ -30,6 +31,7 @@ export default function NuevoProyectoPage() {
 
     // Database Content for Linking
     const [dbData, setDbData] = useState({ nacionales: [], estatales: [], pdas: [] });
+    const [proyectosEscolares, setProyectosEscolares] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedContenido, setSelectedContenido] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -40,13 +42,18 @@ export default function NuevoProyectoPage() {
 
     const fetchCurriculumData = async () => {
         try {
-            const res = await fetch('/api/contenidos');
+            const [res, schoolRes] = await Promise.all([
+                fetch('/api/contenidos'),
+                fetch('/api/proyecto-escolar')
+            ]);
             const data = await res.json();
+            const schoolData = await schoolRes.json();
             setDbData({ 
                 nacionales: data.nacionales || [], 
                 estatales: data.estatales || [], 
                 pdas: data.pdas || [] 
             });
+            setProyectosEscolares(schoolData.proyectos || []);
         } catch (error) {
             console.error("Error loading curriculum data", error);
         } finally {
@@ -96,7 +103,7 @@ export default function NuevoProyectoPage() {
         setIsGenerating(true);
         setFormData(prev => ({ ...prev, introduccion: '' }));
         try {
-            const prompt = `MISIÓN: Redacta la "Introducción y Sustento" de un proyecto escolar titulado "${formData.titulo}" cuya temática central es "${formData.tematica}".
+            const prompt = `MISIÓN: Redacta la "Introducción y Sustento" de un proyecto del maestro de arte titulado "${formData.titulo}" cuya temática central es "${formData.tematica}".
             Menciona cómo los productos esperados ayudarán a los alumnos. Usa un tono formal y pedagógico. 3 párrafos.`;
             
             const res = await fetch('/api/ai', {
@@ -242,10 +249,17 @@ export default function NuevoProyectoPage() {
             <main style={{ maxWidth: '800px', margin: '60px auto', padding: '0 20px' }}>
                 {step === 1 && (
                     <div className="fade-in">
-                        <h2 style={{ fontSize: '40px', fontWeight: '900', marginBottom: '40px' }}>Define el alma del proyecto</h2>
+                        <h2 style={{ fontSize: '40px', fontWeight: '900', marginBottom: '16px' }}>Proyecto del maestro de arte</h2>
+                        <p style={{ color: theme.subtext, lineHeight: '1.6', marginBottom: '28px' }}>Elige primero el proyecto escolar que le da contexto. Este proyecto de arte podrá contener varias planeaciones.</p>
+                        <label style={{ display: 'block', fontSize: '12px', fontWeight: '900', color: theme.subtext, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>Proyecto escolar de contexto</label>
+                        <select value={formData.proyecto_escolar_id} onChange={e => setFormData({ ...formData, proyecto_escolar_id: e.target.value })} style={{ width: '100%', padding: '18px 20px', borderRadius: '16px', border: `1px solid ${theme.border}`, fontSize: '16px', fontWeight: '700', marginBottom: '24px', background: '#fff', outline: 'none' }}>
+                            <option value="">Selecciona un proyecto escolar...</option>
+                            {proyectosEscolares.map(proyecto => <option key={proyecto.id} value={proyecto.id}>{proyecto.titulo}</option>)}
+                        </select>
+                        {proyectosEscolares.length === 0 && <p style={{ color: '#b45309', fontSize: '13px', marginTop: '-12px', marginBottom: '20px' }}>Primero sube un proyecto escolar desde el inicio para poder crear un proyecto de arte.</p>}
                         <input value={formData.titulo} onChange={e => setFormData({...formData, titulo: e.target.value})} placeholder="Título del Proyecto" style={{ width: '100%', padding: '20px', borderRadius: '16px', border: `1px solid ${theme.border}`, fontSize: '20px', fontWeight: '700', marginBottom: '24px', outline: 'none' }} />
                         <input value={formData.tematica} onChange={e => setFormData({...formData, tematica: e.target.value})} placeholder="Temática Central" style={{ width: '100%', padding: '20px', borderRadius: '16px', border: `1px solid ${theme.border}`, fontSize: '18px', fontWeight: '700', marginBottom: '40px', outline: 'none' }} />
-                        <button onClick={() => setStep(2)} disabled={!formData.titulo || !formData.tematica} style={{ width: '100%', padding: '20px', borderRadius: '16px', background: theme.accent, color: '#fff', border: 'none', fontWeight: '900', cursor: 'pointer', opacity: (!formData.titulo || !formData.tematica) ? 0.5 : 1 }}>CONTINUAR →</button>
+                        <button onClick={() => setStep(2)} disabled={!formData.proyecto_escolar_id || !formData.titulo || !formData.tematica} style={{ width: '100%', padding: '20px', borderRadius: '16px', background: theme.accent, color: '#fff', border: 'none', fontWeight: '900', cursor: 'pointer', opacity: (!formData.proyecto_escolar_id || !formData.titulo || !formData.tematica) ? 0.5 : 1 }}>CONTINUAR →</button>
                     </div>
                 )}
 

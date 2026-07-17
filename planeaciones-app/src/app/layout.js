@@ -2,19 +2,19 @@ import './globals.css';
 
 export const metadata = {
     metadataBase: new URL('https://programa-anal-tico.vercel.app'),
-    title: 'Programa Analítico de Artes 2025',
+    title: 'Gestión del aula',
     description: 'Plataforma inteligente para la gestión, edición y creación de planeaciones analíticas de primaria (NEM).',
     openGraph: {
-        title: 'Programa Analítico de Artes 2025',
+        title: 'Gestión del aula',
         description: 'Generador inteligente de planeaciones analíticas NEM.',
         url: 'https://programa-anal-tico.vercel.app/',
-        siteName: 'Programa Analítico de Artes',
+        siteName: 'Gestión del aula',
         images: [
             {
                 url: '/og-image.png',
                 width: 1200,
                 height: 1200,
-                alt: 'Programa Analítico de Artes 2025',
+                alt: 'Gestión del aula',
             },
         ],
         locale: 'es_MX',
@@ -22,7 +22,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Programa Analítico de Artes 2025',
+        title: 'Gestión del aula',
         description: 'Generador inteligente de planeaciones analíticas NEM.',
         images: ['/og-image.png'],
     },

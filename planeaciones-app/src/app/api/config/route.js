@@ -1,33 +1,18 @@
-import { db as client } from '@/lib/db';
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-export async function POST(request) {
-    try {
-        const { key, value } = await request.json();
-        
-        // Asegurar que la tabla existe
-        await client.execute(`
-            CREATE TABLE IF NOT EXISTS configuracion (
-                clave TEXT PRIMARY KEY,
-                valor TEXT
-            )
-        `);
-
-        await client.execute({
-            sql: "INSERT OR REPLACE INTO configuracion (clave, valor) VALUES (?, ?)",
-            args: [key, value]
-        });
-        return NextResponse.json({ success: true });
-    } catch (error) {
-        return NextResponse.json({ error: error.message }, { status: 500 });
-    }
-}
+const disabledResponse = () =>
+  NextResponse.json(
+    {
+      error:
+        "La configuración de IA se administra automáticamente desde el servidor.",
+    },
+    { status: 410 },
+  );
 
 export async function GET() {
-    try {
-        const res = await client.execute("SELECT * FROM configuracion");
-        return NextResponse.json(res.rows);
-    } catch (error) {
-        return NextResponse.json({ error: error.message }, { status: 500 });
-    }
+  return disabledResponse();
+}
+
+export async function POST() {
+  return disabledResponse();
 }
