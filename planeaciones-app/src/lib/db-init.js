@@ -41,6 +41,18 @@ export async function ensureTablesExist() {
             }
         }
 
+        // Esta tabla se consulta al abrir el formulario y debe existir en Turso.
+        await db.execute("CREATE TABLE IF NOT EXISTS ejes_articuladores (id INTEGER PRIMARY KEY, nombre TEXT, descripcion TEXT)");
+        const ejeCheck = await db.execute("SELECT count(*) as count FROM ejes_articuladores");
+        if (ejeCheck.rows[0].count === 0) {
+            for (const eje of fases.ejes_articuladores) {
+                await db.execute({
+                    sql: "INSERT INTO ejes_articuladores (id, nombre, descripcion) VALUES (?, ?, ?)",
+                    args: [eje.id, eje.nombre, eje.descripcion || '']
+                });
+            }
+        }
+
         // 4. Contenidos Nacionales
         await db.execute("CREATE TABLE IF NOT EXISTS contenidos_nacionales (id INTEGER PRIMARY KEY, descripcion TEXT, fase_id INTEGER)");
         const cnCheck = await db.execute("SELECT count(*) as count FROM contenidos_nacionales");
@@ -51,13 +63,32 @@ export async function ensureTablesExist() {
             }
         }
 
+        // Las planeaciones hacen JOIN sobre esta tabla en producción.
+        await db.execute("CREATE TABLE IF NOT EXISTS contenidos_estatales (id INTEGER PRIMARY KEY, contenido_nacional_id INTEGER, fase_id INTEGER, lenguaje_id INTEGER, descripcion TEXT)");
+        const ceCheck = await db.execute("SELECT count(*) as count FROM contenidos_estatales");
+        if (ceCheck.rows[0].count === 0) {
+            for (const c of contenidosEst) {
+                await db.execute({
+                    sql: "INSERT INTO contenidos_estatales (id, contenido_nacional_id, fase_id, lenguaje_id, descripcion) VALUES (?, ?, ?, ?, ?)",
+                    args: [c.id, c.contenido_nacional_id, c.fase_id, c.lenguaje_id, c.descripcion]
+                });
+            }
+        }
+
         // 5. PDAs
-        await db.execute("CREATE TABLE IF NOT EXISTS pdas (id INTEGER PRIMARY KEY, descripcion TEXT, contenido_id INTEGER, grado_id INTEGER)");
+        await db.execute("CREATE TABLE IF NOT EXISTS pdas (id INTEGER PRIMARY KEY, descripcion TEXT, contenido_estatal_id INTEGER, grado_id INTEGER, lenguaje_id INTEGER, grado_numero INTEGER)");
+        const pdaColumns = new Set((await db.execute("PRAGMA table_info('pdas')")).rows.map((row) => String(row.name)));
+        for (const [column, type] of [['contenido_estatal_id', 'INTEGER'], ['lenguaje_id', 'INTEGER'], ['grado_numero', 'INTEGER']]) {
+            if (!pdaColumns.has(column)) await db.execute(`ALTER TABLE pdas ADD COLUMN ${column} ${type}`);
+        }
         const pdaCheck = await db.execute("SELECT count(*) as count FROM pdas");
         if (pdaCheck.rows[0].count === 0) {
             console.log("Inyectando PDAs...");
             for (const p of pdas) {
-                await db.execute({ sql: "INSERT INTO pdas (id, descripcion, contenido_id, grado_id) VALUES (?, ?, ?, ?)", args: [p.id, p.descripcion, p.contenido_id, p.grado_id] });
+                await db.execute({
+                    sql: "INSERT INTO pdas (id, descripcion, contenido_estatal_id, grado_id, lenguaje_id, grado_numero) VALUES (?, ?, ?, ?, ?, ?)",
+                    args: [p.id, p.descripcion, p.contenido_estatal_id, p.grado_id, p.lenguaje_id, p.grado_numero]
+                });
             }
         }
 

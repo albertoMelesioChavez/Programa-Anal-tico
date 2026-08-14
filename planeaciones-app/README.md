@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Planeaciones App
 
-## Getting Started
+Aplicación de planeación didáctica para Artes. La interfaz se puede publicar
+en Vercel, pero los proyectos y las planeaciones necesitan una base de datos
+Turso configurada en el entorno de despliegue.
 
-First, run the development server:
+## Desarrollo local
 
 ```bash
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Completa `TURSO_DATABASE_URL` y `TURSO_AUTH_TOKEN` en `.env.local` para probar
+las operaciones de guardado. Sin ellos, solo funcionan los catálogos de
+consulta y las plantillas de IA locales.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Despliegue en Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+En **Project Settings → Environment Variables**, agrega estas variables para
+Production (y Preview si también quieres probar ahí):
 
-## Learn More
+- `TURSO_DATABASE_URL`
+- `TURSO_AUTH_TOKEN`
+- `GOOGLE_AI_STUDIO_API_KEY` (opcional; sin ella se usa la plantilla local)
+- `BLOB_READ_WRITE_TOKEN` (opcional; necesario para conservar archivos subidos)
 
-To learn more about Next.js, take a look at the following resources:
+Después de guardarlas, vuelve a desplegar. En una base Turso vacía, la primera
+petición crea y carga las tablas de catálogo automáticamente.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Si alguna operación falla, revisa **Vercel → Deployments → Functions → Logs**.
+El mensaje `Base de datos no configurada (Faltan variables de entorno)` indica
+que faltan las dos variables de Turso o que se guardaron solo para otro entorno.
