@@ -84,6 +84,7 @@ export default function Home() {
     const [uploading, setUploading] = useState('');
     const [uploadMessage, setUploadMessage] = useState('');
     const [artUploadSchoolId, setArtUploadSchoolId] = useState('');
+    const [planningContext, setPlanningContext] = useState(null);
     const [mobileTreeOpen, setMobileTreeOpen] = useState(false);
 
     const fetchWorkspace = async () => {
@@ -212,6 +213,7 @@ export default function Home() {
 
     const handleSaved = () => {
         setShowForm(false);
+        setPlanningContext(null);
         setActiveMode('planeaciones');
         setSelectedNode(null);
         fetchWorkspace();
@@ -219,6 +221,7 @@ export default function Home() {
 
     const handleCancel = () => {
         setShowForm(false);
+        setPlanningContext(null);
     };
 
     const toggleInlineEditor = (type, id) => {
@@ -238,6 +241,30 @@ export default function Home() {
         setExpandedEditor(null);
         setExpandedPreview(null);
         setCreationPanel((current) => current === type ? null : type);
+    };
+
+    const createArtProjectFromSchool = (schoolId) => {
+        setArtUploadSchoolId(String(schoolId));
+        setSelectedNode({ type: 'school', id: schoolId });
+        setActiveMode('arte');
+        setExpandedEditor(null);
+        setExpandedPreview(null);
+        setCreationPanel('art');
+        setMobileTreeOpen(false);
+    };
+
+    const createPlanningFromArtProject = (project) => {
+        setPlanningContext({
+            proyecto_escolar_id: String(project.proyecto_escolar_id),
+            proyecto_arte_id: String(project.id)
+        });
+        setSelectedNode({ type: 'art', id: project.id });
+        setActiveMode('planeaciones');
+        setExpandedEditor(null);
+        setExpandedPreview(null);
+        setCreationPanel(null);
+        setShowForm(true);
+        setMobileTreeOpen(false);
     };
 
     const togglePreview = (type, id) => {
@@ -376,15 +403,25 @@ export default function Home() {
                                     {tree.length === 0 && <p className="tree-empty">Agrega un proyecto escolar para comenzar a construir el árbol.</p>}
                                     {tree.map((school) => (
                                         <div className="tree-school" key={school.id}>
-                                            <button className={`tree-node school-node ${selectedNode?.type === 'school' && String(selectedNode.id) === String(school.id) ? 'selected' : ''}`} onClick={() => selectTreeNode('school', school.id)}>
-                                                <span>🏫</span><span className="tree-label"><strong>{school.titulo}</strong><small>{school.proyectos.length} proyecto{school.proyectos.length === 1 ? '' : 's'} de arte</small></span>
-                                            </button>
+                                            <div className="tree-node-row">
+                                                <button className={`tree-node school-node ${selectedNode?.type === 'school' && String(selectedNode.id) === String(school.id) ? 'selected' : ''}`} onClick={() => selectTreeNode('school', school.id)}>
+                                                    <span>🏫</span><span className="tree-label"><strong>{school.titulo}</strong><small>{school.proyectos.length} proyecto{school.proyectos.length === 1 ? '' : 's'} de arte</small></span>
+                                                </button>
+                                                <button className="tree-quick-action school-quick-action" onClick={() => createArtProjectFromSchool(school.id)} title={`Crear proyecto de arte en ${school.titulo}`} aria-label={`Crear proyecto de arte en ${school.titulo}`}>
+                                                    <span aria-hidden="true">＋</span><span className="tree-quick-action-label">Arte</span>
+                                                </button>
+                                            </div>
                                             <div className="tree-children">
                                                 {school.proyectos.map((project) => (
                                                     <div className="tree-project" key={project.id}>
-                                                        <button className={`tree-node art-node ${selectedNode?.type === 'art' && String(selectedNode.id) === String(project.id) ? 'selected' : ''}`} onClick={() => selectTreeNode('art', project.id)}>
-                                                            <span>🎨</span><span className="tree-label"><strong>{project.titulo}</strong><small>{project.planeaciones.length} planeación{project.planeaciones.length === 1 ? '' : 'es'}</small></span>
-                                                        </button>
+                                                        <div className="tree-node-row">
+                                                            <button className={`tree-node art-node ${selectedNode?.type === 'art' && String(selectedNode.id) === String(project.id) ? 'selected' : ''}`} onClick={() => selectTreeNode('art', project.id)}>
+                                                                <span>🎨</span><span className="tree-label"><strong>{project.titulo}</strong><small>{project.planeaciones.length} planeación{project.planeaciones.length === 1 ? '' : 'es'}</small></span>
+                                                            </button>
+                                                            <button className="tree-quick-action planning-quick-action" onClick={() => createPlanningFromArtProject(project)} title={`Crear planeación para ${project.titulo}`} aria-label={`Crear planeación para ${project.titulo}`}>
+                                                                <span aria-hidden="true">＋</span><span className="tree-quick-action-label">Plan</span>
+                                                            </button>
+                                                        </div>
                                                         <div className="tree-children planning-children">
                                                             {project.planeaciones.map((planning) => (
                                                                 <button key={planning.id} className={`tree-node planning-node ${selectedNode?.type === 'planning' && String(selectedNode.id) === String(planning.id) ? 'selected' : ''}`} onClick={() => selectTreeNode('planning', planning.id)}>
@@ -516,7 +553,7 @@ export default function Home() {
 
                 {showForm && (
                     <section className="planning-form-shell">
-                        <PlaneacionForm initialData={null} onSaved={handleSaved} onCancel={handleCancel} />
+                        <PlaneacionForm initialData={planningContext} onSaved={handleSaved} onCancel={handleCancel} />
                     </section>
                 )}
             </div>
@@ -581,9 +618,17 @@ export default function Home() {
                 .finder-title-actions { display: flex; gap: 6px; }
                 .mobile-tree-close { display: none; }
                 .tree-empty { padding: 18px 10px; color: #64748b; font-size: 12px; line-height: 1.5; }
+                .tree-node-row { display: flex; align-items: center; gap: 4px; }
                 .tree-node { width: 100%; display: flex; align-items: flex-start; gap: 8px; padding: 9px 8px; border: 1px solid transparent; background: transparent; border-radius: 9px; text-align: left; cursor: pointer; font-family: inherit; color: #334155; }
+                .tree-node-row .tree-node { min-width: 0; flex: 1; }
                 .tree-node:hover { background: rgba(255,255,255,.72); }
                 .tree-node.selected { background: #fff; border-color: #bfdbfe; box-shadow: 0 3px 10px rgba(15,23,42,.06); }
+                .tree-quick-action { min-width: 38px; height: 30px; padding: 0 6px; display: inline-flex; align-items: center; justify-content: center; gap: 1px; border: 1px solid; border-radius: 8px; background: #fff; font-family: inherit; font-size: 11px; font-weight: 900; line-height: 1; cursor: pointer; transition: transform .16s ease, box-shadow .16s ease, background .16s ease; }
+                .tree-quick-action-label { font-size: 8px; letter-spacing: -.1px; }
+                .school-quick-action { border-color: #99f6e4; color: #0f766e; background: #f0fdfa; }
+                .planning-quick-action { border-color: #bfdbfe; color: #2563eb; background: #eff6ff; }
+                .tree-quick-action:hover { transform: translateY(-1px); background: #fff; box-shadow: 0 4px 10px rgba(15,23,42,.1); }
+                .tree-quick-action:focus-visible { outline: 3px solid rgba(37,99,235,.3); outline-offset: 2px; }
                 .tree-label { min-width: 0; }
                 .tree-label strong { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 11px; line-height: 1.25; }
                 .tree-label small { display: block; color: #94a3b8; font-size: 9px; margin-top: 3px; }
@@ -761,6 +806,8 @@ export default function Home() {
                     .finder-title button { width: 36px; height: 36px; font-size: 16px; }
                     .mobile-tree-close { display: inline-grid; place-items: center; }
                     .tree-node { min-height: 44px; align-items: center; padding: 9px 10px; }
+                    .tree-quick-action { min-width: 48px; height: 36px; padding: 0 7px; border-radius: 10px; }
+                    .tree-quick-action-label { font-size: 9px; }
                     .tree-label strong { font-size: 12px; }
                     .tree-label small { font-size: 9px; }
                     .tree-children { margin-left: 20px; }
