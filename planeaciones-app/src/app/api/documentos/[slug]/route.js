@@ -37,7 +37,22 @@ export async function GET(request, { params }) {
         });
 
         if (result.rows.length > 0 && result.rows[0].contenido) {
-            return new Response(result.rows[0].contenido, {
+            let storedContent = result.rows[0].contenido;
+            const currentPdfSyncMarker = '<!-- PDF_CONTENT_SYNC_V7 -->';
+            const backupIsPdfSynchronized = slug === 'artes' && backupContent?.includes(currentPdfSyncMarker);
+            const storedNeedsPdfSync = backupIsPdfSynchronized && !storedContent.includes(currentPdfSyncMarker);
+
+            // One-time content migration: replace only the old flattened extraction.
+            // Future edits preserve the marker and continue to be served from the DB.
+            if (storedNeedsPdfSync) {
+                storedContent = backupContent;
+                await db.execute({
+                    sql: 'UPDATE documentos_base SET contenido = ?, fecha_actualizacion = CURRENT_TIMESTAMP WHERE nombre = ?',
+                    args: [storedContent, slug]
+                });
+            }
+
+            return new Response(storedContent, {
                 headers: { 'Content-Type': 'text/markdown; charset=utf-8' }
             });
         }

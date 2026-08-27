@@ -1,6 +1,5 @@
 <!-- PAGE_START 1 -->
-
-
+<!-- PDF_CONTENT_SYNC_V7 -->
 <small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	1</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
 Educación Primaria
@@ -12,5434 +11,1435 @@ Lenguajes Artísticos
 ### Artes Visuales
 ### Teatro
 ### Danza
-
-
+<img class="programa-cover-art" src="/programa-analitico/portada-artes-digital.png" alt="Ilustración de música, danza, teatro y artes visuales para el Programa Analítico de Artes" />
 <!-- PAGE_END -->
 <!-- PAGE_START 2 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	2</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 2</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Edición agosto de 2025
-El Programa Analítico de Artes para las tres fases de la Educación Primaria se elaboró en la ciudad de
-Culiacán Sinaloa, por el grupo de Asesores Técnico Pedagógicos de la mesa técnica del Departamento
-de Educación Artística y de las seis Supervisiones Escolares de Educación Artística de la Secretaría de
-Educación Pública y Cultura del Gobierno del Estado de Sinaloa.
-Edición alterna de los Programas Sintéticos para la Educación Primaria
-Fases 3, 4 y 5
-Coordinadora general del diseño y compilación de contenido
-M.C. Iris Neyda Beltrán Fernández
-Coordinadora Académica del DEA
-Validación y colaboración
-LEA. Mónica Lucrecia Villalpando Ramírez
-Jefa del Departamento de Educación Artística de SEPyC
-Asesor de contenido
-M.C. Heriberto Inzunza Ramírez
-Supervisor de región centro I
-Coordinadora de edición
-Dra. Karele Maxinahí Félix Piña
-Asesora Técnica Pedagógica del DEA
-M.C. Paúl Sánchez Díaz
-Asesor Técnico Pedagógico de teatro del DEA
-M.C. Meztli Borbolla Osuna
-Asesora Técnica Pedagógica de danza del DEA
-Lic. Miriam Dionicia Chaidez Núñez
-Asesora Técnica Pedagógica de Artes visuales del DEA
-Lic. Diego Baltasar Hernández Verdugo
-Asesor Técnico Pedagógico de Música del DEA
-LEA. Pamela del Carmen Camacho González
-Asesora Técnica Pedagógica coordinadora de preescolar del DEA
-M.C. América Martínez de la Cruz
-Asesora Técnica Pedagógica del DEA
-Colaboradores
-Asesores Técnico-Pedagógicos de las 6 Supervisiones de Educación Artística del estado de Sinaloa.
-Culiacán, Sinaloa, México
-2025 D.R. Secretaría de Educación Pública y Cultura
-
-
+<p class="pdf-source-line">Educación Primaria</p>
+<p class="pdf-source-line">Programa Analítico de Artes</p>
+<p class="pdf-source-line">Fases 3, 4 y 5</p>
+<p class="pdf-source-line">Campo Formativo Lenguajes</p>
+<p class="pdf-source-line">Lenguajes Artísticos</p>
+<p class="pdf-source-line">Música</p>
+<p class="pdf-source-line">Artes Visuales</p>
+<p class="pdf-source-line">Teatro</p>
+<p class="pdf-source-line">Danza</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 3 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	3</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 3</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Índice
-
-<div class="indice-item indice-main"><span class="indice-title">Introducción</span><span class="indice-dots"></span><span class="indice-page">5</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Los campos formativos</span><span class="indice-dots"></span><span class="indice-page">7</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Descripción general del campo formativo Lenguajes</span><span class="indice-dots"></span><span class="indice-page">8</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Finalidades del campo de lenguajes</span><span class="indice-dots"></span><span class="indice-page">9</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Las artes en la Nueva Escuela Mexicana</span><span class="indice-dots"></span><span class="indice-page">9</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Formas de trabajo en artes</span><span class="indice-dots"></span><span class="indice-page">11</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Aprendizaje basado en proyectos</span><span class="indice-dots"></span><span class="indice-page">12</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Los lenguajes artísticos en la educación básica</span><span class="indice-dots"></span><span class="indice-page">13</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Música</span><span class="indice-dots"></span><span class="indice-page">13</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Danza</span><span class="indice-dots"></span><span class="indice-page">13</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Artes visuales</span><span class="indice-dots"></span><span class="indice-page">14</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Teatro</span><span class="indice-dots"></span><span class="indice-page">15</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Los ejes articuladores</span><span class="indice-dots"></span><span class="indice-page">15</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Arte y experiencias estéticas</span><span class="indice-dots"></span><span class="indice-page">17</span></div>
-<div class="indice-item indice-main"><span class="indice-title">El programa analítico: contextualización y codiseño</span><span class="indice-dots"></span><span class="indice-page">19</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Análisis del contexto socioeducativo de la escuela</span><span class="indice-dots"></span><span class="indice-page">19</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Contenidos nacionales y procesos del desarrollo de aprendizaje (PDA)</span><span class="indice-dots"></span><span class="indice-page">20</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Tercera fase</span><span class="indice-dots"></span><span class="indice-page">21</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Contenidos nacionales de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">22</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">23</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">25</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">28</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">31</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">34</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Cuarta fase</span><span class="indice-dots"></span><span class="indice-page">37</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Contenidos nacionales de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">38</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">39</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">41</span></div>
-
+<p class="pdf-source-line">Edición agosto de 2025</p>
+<p class="pdf-source-line">El Programa Analítico de Artes para las tres fases de la Educación Primaria se elaboró en la ciudad de</p>
+<p class="pdf-source-line">Culiacán Sinaloa, por el grupo de Asesores Técnico Pedagógicos de la mesa técnica del Departamento</p>
+<p class="pdf-source-line">de Educación Artística y de las seis Supervisiones Escolares de Educación Artística de la Secretaría de</p>
+<p class="pdf-source-line">Educación Pública y Cultura del Gobierno del Estado de Sinaloa.</p>
+<p class="pdf-source-line">Edición alterna de los Programas Sintéticos para la Educación Primaria</p>
+<p class="pdf-source-line">Fases 3, 4 y 5</p>
+<p class="pdf-source-line">Coordinadora general del diseño y compilación de contenido</p>
+<p class="pdf-source-line">M.C. Iris Neyda Beltrán Fernández</p>
+<p class="pdf-source-line">Coordinadora Académica del DEA</p>
+<p class="pdf-source-line">Validación y colaboración</p>
+<p class="pdf-source-line">LEA. Mónica Lucrecia Villalpando Ramírez</p>
+<p class="pdf-source-line">Jefa del Departamento de Educación Artística de SEPyC</p>
+<p class="pdf-source-line">Asesor de contenido</p>
+<p class="pdf-source-line">M.C. Heriberto Inzunza Ramírez</p>
+<p class="pdf-source-line">Supervisor de región centro I</p>
+<p class="pdf-source-line">Coordinadora de edición</p>
+<p class="pdf-source-line">Dra. Karele Maxinahí Félix Piña</p>
+<p class="pdf-source-line">Asesora Técnica Pedagógica del DEA</p>
+<p class="pdf-source-line">M.C. Paúl Sánchez Díaz</p>
+<p class="pdf-source-line">Asesor Técnico Pedagógico de teatro del DEA</p>
+<p class="pdf-source-line">M.C. Meztli Borbolla Osuna</p>
+<p class="pdf-source-line">Asesora Técnica Pedagógica de danza del DEA</p>
+<p class="pdf-source-line">Lic. Miriam Dionicia Chaidez Núñez</p>
+<p class="pdf-source-line">Asesora Técnica Pedagógica de Artes visuales del DEA</p>
+<p class="pdf-source-line">Lic. Diego Baltasar Hernández Verdugo</p>
+<p class="pdf-source-line">Asesor Técnico Pedagógico de Música del DEA</p>
+<p class="pdf-source-line">LEA. Pamela del Carmen Camacho González</p>
+<p class="pdf-source-line">Asesora Técnica Pedagógica coordinadora de preescolar del DEA</p>
+<p class="pdf-source-line">M.C. América Martínez de la Cruz</p>
+<p class="pdf-source-line">Asesora Técnica Pedagógica del DEA</p>
+<p class="pdf-source-line">Colaboradores</p>
+<p class="pdf-source-line">Asesores Técnico-Pedagógicos de las 6 Supervisiones de Educación Artística del estado de Sinaloa.</p>
+<p class="pdf-source-line">Culiacán, Sinaloa, México</p>
+<p class="pdf-source-line">2025 D.R. Secretaría de Educación Pública y Cultura</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 4 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	4</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 4</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">44</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">48</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">54</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Quinta fase</span><span class="indice-dots"></span><span class="indice-page">62</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Contenidos nacionales de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">63</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">64</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">67</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje de danza de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">71</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">75</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">78</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Orientaciones didácticas por lenguaje artístico</span><span class="indice-dots"></span><span class="indice-page">82</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Orientaciones didácticas de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">83</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de música de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">83</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de danza de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">85</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de Artes visuales de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">87</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de teatro de la tercera fase</span><span class="indice-dots"></span><span class="indice-page">88</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Orientaciones didácticas de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">90</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de música de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">90</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de danza de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">93</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de artes visuales de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">96</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de teatro de la cuarta fase</span><span class="indice-dots"></span><span class="indice-page">98</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Orientaciones didácticas de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">100</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de música de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">100</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de danza de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">102</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de Artes visuales de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">105</span></div>
-<div class="indice-item indice-sub-sub"><span class="indice-title">Orientación didáctica de de Teatro de la quinta fase</span><span class="indice-dots"></span><span class="indice-page">108</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Relación de actividades y proyectos de los libros de la Nueva Escuela Mexicana</span><span class="indice-dots"></span><span class="indice-page">111</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Libros múltiples lenguajes</span><span class="indice-dots"></span><span class="indice-page">111</span></div>
-<div class="indice-item indice-sub"><span class="indice-title">Del Libro Proyectos Escolares</span><span class="indice-dots"></span><span class="indice-page">119</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Material de consulta</span><span class="indice-dots"></span><span class="indice-page">124</span></div>
-<div class="indice-item indice-main"><span class="indice-title">Referencias</span><span class="indice-dots"></span><span class="indice-page">125</span></div>
-
-
+<p class="pdf-source-line">Índice</p>
+<p class="pdf-source-line">Introducción ................................................................................................................... 5</p>
+<p class="pdf-source-line">Los campos formativos ................................................................................................. 7</p>
+<p class="pdf-source-line">Descripción general del campo formativo Lenguajes ............................................ 8</p>
+<p class="pdf-source-line">Finalidades del campo de lenguajes ........................................................................ 9</p>
+<p class="pdf-source-line">Las artes en la Nueva Escuela Mexicana .................................................................... 9</p>
+<p class="pdf-source-line">Formas de trabajo en artes ......................................................................................... 11</p>
+<p class="pdf-source-line">Aprendizaje basado en proyectos.............................................................................. 12</p>
+<p class="pdf-source-line">Los lenguajes artísticos en la educación básica ...................................................... 13</p>
+<p class="pdf-source-line">Música ....................................................................................................................... 13</p>
+<p class="pdf-source-line">Danza ......................................................................................................................... 13</p>
+<p class="pdf-source-line">Artes visuales ........................................................................................................... 14</p>
+<p class="pdf-source-line">Teatro ......................................................................................................................... 15</p>
+<p class="pdf-source-line">Los ejes articuladores ................................................................................................. 15</p>
+<p class="pdf-source-line">Arte y experiencias estéticas .................................................................................. 17</p>
+<p class="pdf-source-line">El programa analítico: contextualización y codiseño .............................................. 19</p>
+<p class="pdf-source-line">Análisis del contexto socioeducativo de la escuela ............................................. 19</p>
+<h3 class="pdf-section-title">Contenidos nacionales y procesos del desarrollo de aprendizaje (PDA) .............. 20</h3>
+<p class="pdf-source-line">Tercera fase .................................................................................................................. 21</p>
+<h3 class="pdf-section-title">Contenidos nacionales de la tercera fase .............................................................. 22</h3>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la tercera fase</h3>
+<p class="pdf-source-line">.................................................................................................................................... 23</p>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la tercera fase ...... 25</h3>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la tercera fase ........ 28</h3>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la tercera fase</h3>
+<p class="pdf-source-line">............................................................................................................................................................ 31</p>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la tercera fase ........ 34</h3>
+<p class="pdf-source-line">Cuarta fase ................................................................................................................... 37</p>
+<h3 class="pdf-section-title">Contenidos nacionales de la cuarta fase ............................................................... 38</h3>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la cuarta fase</h3>
+<p class="pdf-source-line">.................................................................................................................................... 39</p>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la cuarta fase ....... 41</h3>
 <!-- PAGE_END -->
 <!-- PAGE_START 5 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	5</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 5</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-## Introducción
-El presente Programa Sintético de Artes para las 3 fases de la Educación Primaria, surge
-atendiendo como necesidad específica la situación en la que interactúan docentes
-especialistas en la materia y las niñas y niños de los centros educativos de Educación
-Básica del subsistema estatal en Sinaloa. Se retoman en gran medida los enfoques y
-planteamientos, así como contenidos de las fases de la propuesta educativa basada en
-la concepción de la Nueva Escuela Mexicana, pero profundizando y fortaleciendo las
-actividades artísticas para que las y los alumnos se apropien de los tecnicismos y del
-lenguaje propio utilizado como parte de los elementos básicos de los lenguajes artísticos.
-El Departamento de Educación Artística, a través de su equipo de asesores
-técnicos, ha diseñado este programa analítico como herramienta de apoyo especializado
-para docentes de primaria. La propuesta integra adaptaciones curriculares basadas en
-diagnósticos situacionales y buenas prácticas pedagógicas documentadas en el sistema
-educativo estatal
-Este documento pretende facilitar la labor pedagógica de las y los docentes, sin
-intención de ser directivo o normativo para el trabajo didáctico. Es importante señalar
-que el documento no representa la única forma de abordar los contenidos específicos de
-Artes, puesto que se abren múltiples posibilidades con el codiseño para que las y los
-docentes puedan elaborar proyectos como un complemento a los Programas de estudio
-rmediante un proceso de contextualización de los saberes y como parte de la autonomía
-profesional (SEP, 2024).
-El dominio de contenidos específicos de cada uno de los lenguajes artísticos será
-de gran ayuda en las aulas puesto que las y los docentes podrán comprender a
-profundidad la forma en que se debe de dar una clase de artes. Es de suma importancia
-el acercamiento de los especialistas con las madres y padres de familia, puesto que
-muchos de los trabajos se culminan en casa, sobre todo aquellos que requieren
-dedicación y cuidado como lo son las obras de artes visuales; la memorización de
-guiones teatrales; el dominio o elaboración de instrumentos cotidiáfonos; la correcta
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la cuarta fase ......... 44</h3>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la cuarta fase</h3>
+<p class="pdf-source-line">............................................................................................................................................................ 48</p>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la cuarta fase ......... 54</h3>
+<p class="pdf-source-line">Quinta fase ................................................................................................................... 62</p>
+<h3 class="pdf-section-title">Contenidos nacionales de la quinta fase ............................................................... 63</h3>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la quinta fase</h3>
+<p class="pdf-source-line">fase ............................................................................................................................ 64</p>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la quinta fase ....... 67</h3>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje de danza de la quinta fase ............................. 71</h3>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales de la quinta fase</h3>
+<p class="pdf-source-line">............................................................................................................................................................ 75</p>
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la quinta fase .......... 78</h3>
+<h3 class="pdf-section-title">Orientaciones didácticas por lenguaje artístico ....................................................... 82</h3>
+<h3 class="pdf-section-title">Orientaciones didácticas de la tercera fase ........................................................... 83</h3>
+<h3 class="pdf-section-title">Orientación didáctica de de música de la tercera fase ....................................................................... 83</h3>
+<h3 class="pdf-section-title">Orientación didáctica de de danza de la tercera fase ........................................................................ 85</h3>
+<h3 class="pdf-section-title">Orientación didáctica de Artes visuales de la tercera fase ................................................................. 87</h3>
+<h3 class="pdf-section-title">Orientación didáctica de teatro de la tercera fase .............................................................................. 88</h3>
+<h3 class="pdf-section-title">Orientaciones didácticas de la cuarta fase ............................................................ 90</h3>
+<h3 class="pdf-section-title">Orientación didáctica de de música de la cuarta fase ........................................................................ 90</h3>
+<h3 class="pdf-section-title">Orientación didáctica de danza de la cuarta fase ............................................................................... 93</h3>
+<h3 class="pdf-section-title">Orientación didáctica de artes visuales de la cuarta fase .................................................................. 96</h3>
+<h3 class="pdf-section-title">Orientación didáctica de teatro de la cuarta fase ............................................................................... 98</h3>
+<h3 class="pdf-section-title">Orientaciones didácticas de la quinta fase .......................................................... 100</h3>
+<h3 class="pdf-section-title">Orientación didáctica de de música de la quinta fase ...................................................................... 100</h3>
+<h3 class="pdf-section-title">Orientación didáctica de de danza de la quinta fase ........................................................................ 102</h3>
+<h3 class="pdf-section-title">Orientación didáctica de de Artes visuales de la quinta fase ........................................................... 105</h3>
+<h3 class="pdf-section-title">Orientación didáctica de de Teatro de la quinta fase ....................................................................... 108</h3>
+<h3 class="pdf-section-title">Relación de actividades y proyectos de los libros de la Nueva Escuela Mexicana</h3>
+<p class="pdf-source-line">..................................................................................................................................... 111</p>
+<p class="pdf-source-line">Libros múltiples lenguajes .................................................................................... 111</p>
+<p class="pdf-source-line">Del Libro Proyectos Escolares .............................................................................. 119</p>
+<h3 class="pdf-section-title">Material de consulta .................................................................................................. 124</h3>
+<h3 class="pdf-section-title">Referencias ................................................................................................................ 125</h3>
 <!-- PAGE_END -->
 <!-- PAGE_START 6 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	6</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 6</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-expresión corporal, en fin, establecer acuerdos de corresponsabilidad para que los
-proyectos artísticos sean de calidad tomando en cuenta el contexto escolar.
-Por tanto, se agrupan en este programa los contenidos, así como los procesos
-de desarrollo de aprendizaje de las tres fases de primaria. Esto también permitirá que
-los colectivos escolares visualicen el grado de complejidad de los mismos, y que puedan
-realizar las adecuaciones pertinentes en el diseño de la planeación didáctica, razón por
-la que se retoman las conceptualizaciones para que el programa docente o plano
-didáctico esté acorde y en sintonía con las utilizadas por el resto del colectivo.
-A continuación, se enuncian algunos principios didácticos que pueden orientar el
-trabajo que realice con sus estudiantes:
-• 	El trabajo pedagógico es fundamentalmente un encuentro entre personas, que
-reconocen sus potencialidades, singularidades y condiciones; mediados por
-múltiples saberes y sus condiciones materiales de existencia;
-• 	El trabajo didáctico es una tarea compleja que requiere el compromiso de todas
-las personas involucradas: docentes, alumnado, madres y padres de familia, así
-como directivos;
-• 	El aprendizaje se realiza en una construcción con las otras y otros, en diálogo, se
-tienen que encontrar las formas o adecuaciones para que las y los alumnos
-puedan interactuar cara a cara.
-• 	El trabajo didáctico requiere que la y el alumno construya la tarea de aprendizaje
-como un proyecto personal.
-• 	El 	aprendizaje 	se 	construye 	a 	través 	de 	múltiples 	interacciones:
-docentes/estudiantes; estudiantes/estudiantes; contenidos-problema/actividades
-individuales y colectivas; actividades/contenidos-problema/realidad.
-• 	Todo aprendizaje requiere de esfuerzo, lo que no significa crear dificultades en las
-tareas 	demandadas, 	pero 	al 	mismo 	tiempo 	requiere 	satisfacción 	personal,
-colectiva y lograr la experiencia de éxito en el trabajo o bien, entender en dónde
-estuvieron las dificultades que se enfrentaron.
-
-
+<p class="pdf-source-line">Introducción</p>
+<p class="pdf-source-line">El presente Programa Sintético de Artes para las 3 fases de la Educación Primaria, surge</p>
+<p class="pdf-source-line">atendiendo como necesidad específica la situación en la que interactúan docentes</p>
+<p class="pdf-source-line">especialistas en la materia y las niñas y niños de los centros educativos de Educación</p>
+<p class="pdf-source-line">Básica del subsistema estatal en Sinaloa. Se retoman en gran medida los enfoques y</p>
+<p class="pdf-source-line">planteamientos, así como contenidos de las fases de la propuesta educativa basada en</p>
+<p class="pdf-source-line">la concepción de la Nueva Escuela Mexicana, pero profundizando y fortaleciendo las</p>
+<p class="pdf-source-line">actividades artísticas para que las y los alumnos se apropien de los tecnicismos y del</p>
+<p class="pdf-source-line">lenguaje propio utilizado como parte de los elementos básicos de los lenguajes artísticos.</p>
+<p class="pdf-source-line">El Departamento de Educación Artística, a través de su equipo de asesores</p>
+<p class="pdf-source-line">técnicos, ha diseñado este programa analítico como herramienta de apoyo especializado</p>
+<p class="pdf-source-line">para docentes de primaria. La propuesta integra adaptaciones curriculares basadas en</p>
+<p class="pdf-source-line">diagnósticos situacionales y buenas prácticas pedagógicas documentadas en el sistema</p>
+<p class="pdf-source-line">educativo estatal</p>
+<p class="pdf-source-line">Este documento pretende facilitar la labor pedagógica de las y los docentes, sin</p>
+<p class="pdf-source-line">intención de ser directivo o normativo para el trabajo didáctico. Es importante señalar</p>
+<p class="pdf-source-line">que el documento no representa la única forma de abordar los contenidos específicos de</p>
+<p class="pdf-source-line">Artes, puesto que se abren múltiples posibilidades con el codiseño para que las y los</p>
+<p class="pdf-source-line">docentes puedan elaborar proyectos como un complemento a los Programas de estudio</p>
+<p class="pdf-source-line">rmediante un proceso de contextualización de los saberes y como parte de la autonomía</p>
+<p class="pdf-source-line">profesional (SEP, 2024).</p>
+<p class="pdf-source-line">El dominio de contenidos específicos de cada uno de los lenguajes artísticos será</p>
+<p class="pdf-source-line">de gran ayuda en las aulas puesto que las y los docentes podrán comprender a</p>
+<p class="pdf-source-line">profundidad la forma en que se debe de dar una clase de artes. Es de suma importancia</p>
+<p class="pdf-source-line">el acercamiento de los especialistas con las madres y padres de familia, puesto que</p>
+<p class="pdf-source-line">muchos de los trabajos se culminan en casa, sobre todo aquellos que requieren</p>
+<p class="pdf-source-line">dedicación y cuidado como lo son las obras de artes visuales; la memorización de</p>
+<p class="pdf-source-line">guiones teatrales; el dominio o elaboración de instrumentos cotidiáfonos; la correcta</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 7 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	7</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 7</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-• 	La actitud del estudiantado para el aprendizaje, mejora cuando se reconocen sus
-aciertos por pequeños que sean, para permitirle analizar lo que queda pendiente
-por alcanzar.
-• 	Corresponden a las y los docentes decidir el momento en que una dificultad de
-aprendizaje reclama realizar un abordaje específico desde la lógica de las
-disciplinas.
-## Los campos formativos
-Son organizadores que establecen objetos de aprendizaje a desarrollar en las distintas
-fases y niveles educativos; tienen como propósito abordar temas o problemáticas desde
-una perspectiva complementaria entre las disciplinas o áreas de conocimiento que se
-incorporan en cada uno, impulsando con ello una menor fragmentación de los saberes.
-Esta Fase representa la oportunidad de poner en práctica lo que han aprendido
-previamente, tanto en casa, como en los distintos espacios de la comunidad donde se
-desenvuelven e interactúan y que favorecen su bienestar individual y colectivo. Los
-conocimientos, saberes y experiencias para el desarrollo de los aprendizajes que
-componen esta Fase, son motores del aprendizaje, los cuales pueden estar ligados a
-situaciones o problemáticas que sean pertinentes para los procesos de enseñanza y
-aprendizaje. 	Además, 	serán 	la 	base 	para 	el 	proceso 	de 	contextualización,
-descubrimiento y significación que tendrán que construir en colectivo. En el currículo, los
-contenidos y los procesos de desarrollo de aprendizaje son componentes que
-permiten su organización, así mismo, son la base para que cada colectivo escolar pueda
-trabajar 	juntamente, 	tomando 	en 	cuenta 	los 	saberes 	docentes, 	comunitarios 	y
-estudiantiles, así como el contexto escolar, para que diseñen su Programa Analítico
-(SEP, 2022b).
-Son 4 los campos formativos, columna vertebral de los nuevos programas de
-estudio de todos los niveles educativos de la Educación Básica.
-
-
+<p class="pdf-source-line">expresión corporal, en fin, establecer acuerdos de corresponsabilidad para que los</p>
+<p class="pdf-source-line">proyectos artísticos sean de calidad tomando en cuenta el contexto escolar.</p>
+<p class="pdf-source-line">Por tanto, se agrupan en este programa los contenidos, así como los procesos</p>
+<p class="pdf-source-line">de desarrollo de aprendizaje de las tres fases de primaria. Esto también permitirá que</p>
+<p class="pdf-source-line">los colectivos escolares visualicen el grado de complejidad de los mismos, y que puedan</p>
+<p class="pdf-source-line">realizar las adecuaciones pertinentes en el diseño de la planeación didáctica, razón por</p>
+<p class="pdf-source-line">la que se retoman las conceptualizaciones para que el programa docente o plano</p>
+<p class="pdf-source-line">didáctico esté acorde y en sintonía con las utilizadas por el resto del colectivo.</p>
+<p class="pdf-source-line">A continuación, se enuncian algunos principios didácticos que pueden orientar el</p>
+<p class="pdf-source-line">trabajo que realice con sus estudiantes:</p>
+<p class="pdf-source-line">• El trabajo pedagógico es fundamentalmente un encuentro entre personas, que</p>
+<p class="pdf-source-line">reconocen sus potencialidades, singularidades y condiciones; mediados por</p>
+<p class="pdf-source-line">múltiples saberes y sus condiciones materiales de existencia;</p>
+<p class="pdf-source-line">• El trabajo didáctico es una tarea compleja que requiere el compromiso de todas</p>
+<p class="pdf-source-line">las personas involucradas: docentes, alumnado, madres y padres de familia, así</p>
+<p class="pdf-source-line">como directivos;</p>
+<p class="pdf-source-line">• El aprendizaje se realiza en una construcción con las otras y otros, en diálogo, se</p>
+<p class="pdf-source-line">tienen que encontrar las formas o adecuaciones para que las y los alumnos</p>
+<p class="pdf-source-line">puedan interactuar cara a cara.</p>
+<p class="pdf-source-line">• El trabajo didáctico requiere que la y el alumno construya la tarea de aprendizaje</p>
+<p class="pdf-source-line">como un proyecto personal.</p>
+<p class="pdf-source-line">• El aprendizaje se construye a través de múltiples interacciones:</p>
+<p class="pdf-source-line">docentes/estudiantes; estudiantes/estudiantes; contenidos-problema/actividades</p>
+<p class="pdf-source-line">individuales y colectivas; actividades/contenidos-problema/realidad.</p>
+<p class="pdf-source-line">• Todo aprendizaje requiere de esfuerzo, lo que no significa crear dificultades en las</p>
+<p class="pdf-source-line">tareas demandadas, pero al mismo tiempo requiere satisfacción personal,</p>
+<p class="pdf-source-line">colectiva y lograr la experiencia de éxito en el trabajo o bien, entender en dónde</p>
+<p class="pdf-source-line">estuvieron las dificultades que se enfrentaron.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 8 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	8</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 8</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Este programa, al que también se puede llamar alterno, centrará su propuesta de
-trabajo en el campo formativo de Lenguajes, considerando que los lenguajes artísticos
--danza, música, artes visuales y teatro- son las disciplinas con las que interactúan las y
-los alumnos durante su trayecto formativo en la educación básica.
-Figura 1
-Campos formativos
-Nota. Programa de estudio para la educación primaria: programa sintético de la fase 3
-## Descripción general del campo formativo Lenguajes
-Los lenguajes son construcciones cognitivas, sociales y dinámicas que las personas
-utilizan desde su nacimiento para expresar, conocer, pensar, aprender, representar,
-comunicar, interpretar y nombrar el mundo, así como compartir necesidades, emociones,
-sentimientos, experiencias, ideas, significados, saberes y conocimientos; por tanto, los
-lenguajes permiten establecer vínculos que propicien la convivencia y la participación
-colaborativa, 	a 	fin 	de 	comprender 	y 	atender 	situaciones 	que 	se 	presentan
-cotidianamente. El objeto de aprendizaje de este campo se constituye a partir de las
-experiencias y la interacción con el mundo a través del empleo de diferentes lenguajes.
-Niñas, niños y adolescentes amplían sus posibilidades de expresión en distintas
-
-
+<p class="pdf-source-line">• La actitud del estudiantado para el aprendizaje, mejora cuando se reconocen sus</p>
+<p class="pdf-source-line">aciertos por pequeños que sean, para permitirle analizar lo que queda pendiente</p>
+<p class="pdf-source-line">por alcanzar.</p>
+<p class="pdf-source-line">• Corresponden a las y los docentes decidir el momento en que una dificultad de</p>
+<p class="pdf-source-line">aprendizaje reclama realizar un abordaje específico desde la lógica de las</p>
+<p class="pdf-source-line">disciplinas.</p>
+<p class="pdf-source-line">Los campos formativos</p>
+<p class="pdf-source-line">Son organizadores que establecen objetos de aprendizaje a desarrollar en las distintas</p>
+<p class="pdf-source-line">fases y niveles educativos; tienen como propósito abordar temas o problemáticas desde</p>
+<p class="pdf-source-line">una perspectiva complementaria entre las disciplinas o áreas de conocimiento que se</p>
+<p class="pdf-source-line">incorporan en cada uno, impulsando con ello una menor fragmentación de los saberes.</p>
+<p class="pdf-source-line">Esta Fase representa la oportunidad de poner en práctica lo que han aprendido</p>
+<p class="pdf-source-line">previamente, tanto en casa, como en los distintos espacios de la comunidad donde se</p>
+<p class="pdf-source-line">desenvuelven e interactúan y que favorecen su bienestar individual y colectivo. Los</p>
+<p class="pdf-source-line">conocimientos, saberes y experiencias para el desarrollo de los aprendizajes que</p>
+<p class="pdf-source-line">componen esta Fase, son motores del aprendizaje, los cuales pueden estar ligados a</p>
+<p class="pdf-source-line">situaciones o problemáticas que sean pertinentes para los procesos de enseñanza y</p>
+<p class="pdf-source-line">aprendizaje. Además, serán la base para el proceso de contextualización,</p>
+<p class="pdf-source-line">descubrimiento y significación que tendrán que construir en colectivo. En el currículo, los</p>
+<p class="pdf-source-line">contenidos y los procesos de desarrollo de aprendizaje son componentes que</p>
+<p class="pdf-source-line">permiten su organización, así mismo, son la base para que cada colectivo escolar pueda</p>
+<p class="pdf-source-line">trabajar juntamente, tomando en cuenta los saberes docentes, comunitarios y</p>
+<p class="pdf-source-line">estudiantiles, así como el contexto escolar, para que diseñen su Programa Analítico</p>
+<p class="pdf-source-line">(SEP, 2022b).</p>
+<p class="pdf-source-line">Son 4 los campos formativos, columna vertebral de los nuevos programas de</p>
+<p class="pdf-source-line">estudio de todos los niveles educativos de la Educación Básica.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 9 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	9</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 9</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-situaciones; construyen significados compartidos y comunican de manera asertiva
-intereses, necesidades, motivaciones, afectos y saberes. Dichas situaciones favorecen,
-por una parte, la puesta en práctica de los lenguajes que potencien y complejicen
-gradualmente su uso, y en otro ámbito, ofrecen la oportunidad de explorar y desarrollar
-la sensibilidad, percepción, imaginación y creatividad como herramientas para interpretar
-e incidir en la realidad (SEP, 2022b).
-## Finalidades del campo de lenguajes
-El campo de Lenguajes está orientado a que niñas, niños y adolescentes adquieran y
-desarrollen de manera gradual, razonada, vivencial y consciente:
-• 	La expresión y la comunicación de sus formas de ser y estar en el mundo, para
-conformar y manifestar su identidad personal y colectiva, al tiempo que conocen,
-reconocen y valoran la diversidad étnica, cultural, lingüística, sexual, de género,
-social, de capacidades, necesidades, condiciones, intereses y formas de pensar,
-las cuales constituyen a nuestro país y al mundo, y de esta manera se propicia,
-además, el diálogo intercultural e inclusivo.
-• 	La apropiación progresiva de formas de expresión y comunicación mediante la
-oralidad, la escucha, lectura, escritura, sensorialidad y la percepción.
-## Las artes en la Nueva Escuela Mexicana
-Las artes se conciben como una manifestación de la actividad humana en la que el sujeto
-interpreta y representa su realidad, partiendo de la construcción de relaciones de sentido
-entre sus experiencias y concepciones de vida, tanto individuales como socioculturales,
-manifestando su manera particular de apreciar o construir una producción artística. Es
-decir, las niñas, niños y adolescentes (NNA) necesitan asomarse a sí mismos y al mundo,
-para llevar a cabo procesos, ya sea de percepción o de creación artística, que le brinden
-una 	nueva 	mirada 	a 	su 	entorno, 	le 	posibiliten 	entenderlo 	y 	vincularse 	con 	él.
-Precisamente las artes permiten relacionar a las personas con su medio sociocultural, ya
-que las manifestaciones artísticas no pueden desprenderse del entorno en el que son
-
-
+<p class="pdf-source-line">Este programa, al que también se puede llamar alterno, centrará su propuesta de</p>
+<p class="pdf-source-line">trabajo en el campo formativo de Lenguajes, considerando que los lenguajes artísticos</p>
+<p class="pdf-source-line">-danza, música, artes visuales y teatro- son las disciplinas con las que interactúan las y</p>
+<p class="pdf-source-line">los alumnos durante su trayecto formativo en la educación básica.</p>
+<p class="pdf-source-line">Figura 1</p>
+<p class="pdf-source-line">Campos formativos</p>
+<figure class="programa-inline-visual"><img src="/programa-analitico/ilustraciones/campos-formativos.svg" alt="Diagrama de los campos formativos, contenidos y procesos de desarrollo de aprendizaje" loading="lazy" /><figcaption>Figura 1. Campos formativos</figcaption></figure>
+<p class="pdf-source-line">Nota. Programa de estudio para la educación primaria: programa sintético de la fase 3</p>
+<p class="pdf-source-line">Descripción general del campo formativo Lenguajes</p>
+<p class="pdf-source-line">Los lenguajes son construcciones cognitivas, sociales y dinámicas que las personas</p>
+<p class="pdf-source-line">utilizan desde su nacimiento para expresar, conocer, pensar, aprender, representar,</p>
+<p class="pdf-source-line">comunicar, interpretar y nombrar el mundo, así como compartir necesidades, emociones,</p>
+<p class="pdf-source-line">sentimientos, experiencias, ideas, significados, saberes y conocimientos; por tanto, los</p>
+<p class="pdf-source-line">lenguajes permiten establecer vínculos que propicien la convivencia y la participación</p>
+<p class="pdf-source-line">colaborativa, a fin de comprender y atender situaciones que se presentan</p>
+<p class="pdf-source-line">cotidianamente. El objeto de aprendizaje de este campo se constituye a partir de las</p>
+<p class="pdf-source-line">experiencias y la interacción con el mundo a través del empleo de diferentes lenguajes.</p>
+<p class="pdf-source-line">Niñas, niños y adolescentes amplían sus posibilidades de expresión en distintas</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 10 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	10</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 10</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-creadas 	al 	contener 	experiencias 	y 	significados 	colectivos 	que 	desencadenan 	la
-expresión artística. Por ello, cobra total sentido pensar las artes como expresión
-socializada de la subjetividad individual, tal como lo planteaba Lev Vigotsky (2003).
-Lo anterior hace posible que las artes contribuyan a la construcción crítica de la
-identidad personal y colectiva a través de la representación y expresión de sensaciones,
-emociones, sentimientos e ideas; para ello, resulta fundamental incentivar procesos
-creativos que fomenten la exploración, experimentación y composición de elementos de
-las artes y de recursos estéticos en creaciones propias —individuales y colectivas—, así
-como la apreciación estética de la naturaleza, la vida cotidiana y las manifestaciones
-culturales y artísticas, que conlleva el desarrollo de los valores estéticos que el plan de
-estudios manifiesta. Asimismo, se busca fortalecer el reconocimiento, aprecio, respeto y
-valoración de manifestaciones culturales y artísticas de la comunidad, del país y del
-mundo, considerándolas en el mismo plano de igualdad, sin privilegiar su origen,
-proponiendo un tratamiento decolonial al acercarse desde la escuela a las diferentes
-expresiones creativas: arte popular, arte infantil, arte juvenil, bellas artes, arte urbano,
-arte de contracultura, arte crítico-político, arte del sur global, entre otras. Las experiencias
-artísticas 	y 	estéticas 	desde 	la 	Nueva 	Escuela 	Mexicana 	promueven 	en 	NNA 	la
-conformación del pensamiento artístico como una modalidad cognitiva que favorece el
-desarrollo de la sensibilidad, percepción, imaginación y creatividad, nutriendo del mismo
-modo, el pensamiento crítico al propiciar la reflexión sobre las experiencias con el
-entorno.
-El acercamiento a las artes considera necesidades, intereses, realidades y
-contextos de NNA, a fin de que los aprendizajes les resulten significativos e incidan en
-su ámbito cognitivo, afectivo y social, pues se les reconoce no solo como portadores de
-una cultura, sino como partícipes en la construcción de ella. Además, se fomenta la
-libertad de expresión en sus creaciones y la difusión de sus producciones en la
-comunidad (SEP, 2024, p.7).
-
-
+<p class="pdf-source-line">situaciones; construyen significados compartidos y comunican de manera asertiva</p>
+<p class="pdf-source-line">intereses, necesidades, motivaciones, afectos y saberes. Dichas situaciones favorecen,</p>
+<p class="pdf-source-line">por una parte, la puesta en práctica de los lenguajes que potencien y complejicen</p>
+<p class="pdf-source-line">gradualmente su uso, y en otro ámbito, ofrecen la oportunidad de explorar y desarrollar</p>
+<p class="pdf-source-line">la sensibilidad, percepción, imaginación y creatividad como herramientas para interpretar</p>
+<p class="pdf-source-line">e incidir en la realidad (SEP, 2022b).</p>
+<p class="pdf-source-line">Finalidades del campo de lenguajes</p>
+<p class="pdf-source-line">El campo de Lenguajes está orientado a que niñas, niños y adolescentes adquieran y</p>
+<p class="pdf-source-line">desarrollen de manera gradual, razonada, vivencial y consciente:</p>
+<p class="pdf-source-line">• La expresión y la comunicación de sus formas de ser y estar en el mundo, para</p>
+<p class="pdf-source-line">conformar y manifestar su identidad personal y colectiva, al tiempo que conocen,</p>
+<p class="pdf-source-line">reconocen y valoran la diversidad étnica, cultural, lingüística, sexual, de género,</p>
+<p class="pdf-source-line">social, de capacidades, necesidades, condiciones, intereses y formas de pensar,</p>
+<p class="pdf-source-line">las cuales constituyen a nuestro país y al mundo, y de esta manera se propicia,</p>
+<p class="pdf-source-line">además, el diálogo intercultural e inclusivo.</p>
+<p class="pdf-source-line">• La apropiación progresiva de formas de expresión y comunicación mediante la</p>
+<p class="pdf-source-line">oralidad, la escucha, lectura, escritura, sensorialidad y la percepción.</p>
+<p class="pdf-source-line">Las artes en la Nueva Escuela Mexicana</p>
+<p class="pdf-source-line">Las artes se conciben como una manifestación de la actividad humana en la que el sujeto</p>
+<p class="pdf-source-line">interpreta y representa su realidad, partiendo de la construcción de relaciones de sentido</p>
+<p class="pdf-source-line">entre sus experiencias y concepciones de vida, tanto individuales como socioculturales,</p>
+<p class="pdf-source-line">manifestando su manera particular de apreciar o construir una producción artística. Es</p>
+<p class="pdf-source-line">decir, las niñas, niños y adolescentes (NNA) necesitan asomarse a sí mismos y al mundo,</p>
+<p class="pdf-source-line">para llevar a cabo procesos, ya sea de percepción o de creación artística, que le brinden</p>
+<p class="pdf-source-line">una nueva mirada a su entorno, le posibiliten entenderlo y vincularse con él.</p>
+<p class="pdf-source-line">Precisamente las artes permiten relacionar a las personas con su medio sociocultural, ya</p>
+<p class="pdf-source-line">que las manifestaciones artísticas no pueden desprenderse del entorno en el que son</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 11 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	11</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 11</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-## Formas de trabajo en artes
-El proceso que conlleva la realización de ejercicios expresivos personales, así como de
-composiciones y propuestas colectivas es diverso, al igual que sus resultados, por ello,
-aun cuando no se puede enmarcar una sola forma de trabajo con las Artes, es posible
-referir a distintas posibilidades, cuidando que cada una sea amplia, flexible, imaginativa
-y que considere todo tipo de espacios, tiempos y materiales.
-Es por ello que los contenidos de los programas de estudio se definieron desde
-una perspectiva interdisciplinaria, a partir de las relaciones que se establecen entre los
-elementos de las artes que son comunes a todos los lenguajes, aun cuando su
-tratamiento particular sea distinto; de tal manera que los contenidos se pueden trabajar
-desde cualquier disciplina artística respetando sus particularidades, o bien fomentando
-la combinación, mezcla, fusión e hibridación entre ellas.
-Cabe mencionar que en el trabajo con el campo de las artes se concibe la
-interdisciplina como un lugar de llegada y no como un punto de partida. Es decir, es
-una meta por conseguir, a través del conocimiento y práctica tanto de diferentes
-manifestaciones artísticas como de diferentes áreas del saber que es posible vincular
-con las temáticas propias de las artes. Así, se busca que NNA reconozcan que los
-elementos de las artes pueden combinarse entre sí, pero también que diferentes saberes
-pueden ser articulados desde el estudio de las artes, buscando que los vinculen con las
-problemáticas de la vida cotidiana (SEP, 2024).
-
-
+<p class="pdf-source-line">creadas al contener experiencias y significados colectivos que desencadenan la</p>
+<p class="pdf-source-line">expresión artística. Por ello, cobra total sentido pensar las artes como expresión</p>
+<p class="pdf-source-line">socializada de la subjetividad individual, tal como lo planteaba Lev Vigotsky (2003).</p>
+<p class="pdf-source-line">Lo anterior hace posible que las artes contribuyan a la construcción crítica de la</p>
+<p class="pdf-source-line">identidad personal y colectiva a través de la representación y expresión de sensaciones,</p>
+<p class="pdf-source-line">emociones, sentimientos e ideas; para ello, resulta fundamental incentivar procesos</p>
+<p class="pdf-source-line">creativos que fomenten la exploración, experimentación y composición de elementos de</p>
+<p class="pdf-source-line">las artes y de recursos estéticos en creaciones propias —individuales y colectivas—, así</p>
+<p class="pdf-source-line">como la apreciación estética de la naturaleza, la vida cotidiana y las manifestaciones</p>
+<p class="pdf-source-line">culturales y artísticas, que conlleva el desarrollo de los valores estéticos que el plan de</p>
+<p class="pdf-source-line">estudios manifiesta. Asimismo, se busca fortalecer el reconocimiento, aprecio, respeto y</p>
+<p class="pdf-source-line">valoración de manifestaciones culturales y artísticas de la comunidad, del país y del</p>
+<p class="pdf-source-line">mundo, considerándolas en el mismo plano de igualdad, sin privilegiar su origen,</p>
+<p class="pdf-source-line">proponiendo un tratamiento decolonial al acercarse desde la escuela a las diferentes</p>
+<p class="pdf-source-line">expresiones creativas: arte popular, arte infantil, arte juvenil, bellas artes, arte urbano,</p>
+<p class="pdf-source-line">arte de contracultura, arte crítico-político, arte del sur global, entre otras. Las experiencias</p>
+<p class="pdf-source-line">artísticas y estéticas desde la Nueva Escuela Mexicana promueven en NNA la</p>
+<p class="pdf-source-line">conformación del pensamiento artístico como una modalidad cognitiva que favorece el</p>
+<p class="pdf-source-line">desarrollo de la sensibilidad, percepción, imaginación y creatividad, nutriendo del mismo</p>
+<p class="pdf-source-line">modo, el pensamiento crítico al propiciar la reflexión sobre las experiencias con el</p>
+<p class="pdf-source-line">entorno.</p>
+<p class="pdf-source-line">El acercamiento a las artes considera necesidades, intereses, realidades y</p>
+<p class="pdf-source-line">contextos de NNA, a fin de que los aprendizajes les resulten significativos e incidan en</p>
+<p class="pdf-source-line">su ámbito cognitivo, afectivo y social, pues se les reconoce no solo como portadores de</p>
+<p class="pdf-source-line">una cultura, sino como partícipes en la construcción de ella. Además, se fomenta la</p>
+<p class="pdf-source-line">libertad de expresión en sus creaciones y la difusión de sus producciones en la</p>
+<p class="pdf-source-line">comunidad (SEP, 2024, p.7).</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 12 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	12</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 12</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-## Aprendizaje basado en proyectos
-El trabajo mediante proyectos es una estrategia que
-permite 	organizar 	y 	optimizar 	el 	trabajo 	escolar 	y
-favorece 	la 	implementación 	integrada 	de
-conocimientos y saberes. Sus fines están dirigidos a
-que NNA encuentren respuestas a sus inquietudes,
-participen en la conducción de sus propios procesos de
-aprendizaje, diseñen estrategias de trabajo y a la
-solución de problemas, que se sitúan en un contexto que les resulta significativo. Los
-proyectos 	artísticos 	promueven 	la 	participación 	de 	NNA, 	respecto 	a 	la
-corresponsabilidad 	de 	tareas, 	reconocimiento 	y 	aprovechamiento 	de 	habilidades,
-intereses y experiencias, así mismo, fortalecen sus habilidades y actitudes como la
-capacidad de diálogo, la toma de decisiones, manejo de fuentes de información,
-comunicación asertiva, planeación y realización de producciones artísticas, el respeto a
-la diversidad, así como la formación de opiniones informadas, argumentos sustentados
-y juicios críticos. En términos generales, la metodología por proyectos debe cumplir con
-tres etapas: planeación, desarrollo y comunicación (SEP, 2024, p.24).
-En cuanto a la primera etapa, la planeación es de vital importancia escuchar los
-gustos e intereses de NNA, respecto a lo que desean expresar; resulta primordial tener
-clara la intención o propósito del proyecto, su duración, las acciones o actividades, los
-recursos requeridos y la distribución de tareas. En la segunda parte, el desarrollo, 	se
-pone 	en 	práctica 	el 	proceso 	del 	proyecto 	donde 	se 	buscan 	diversas 	formas 	de
-representar algo, y se gesta la producción artística; y, en la tercera, la comunicación,
-las y los estudiantes presentan sus producciones a destinatarios específicos dentro o
-fuera del aula, en la escuela o la comunidad. También cabe la posibilidad de llevar o no
-a cabo alguna presentación frente a público, pero sí se podrá organizar una reflexión
-colectiva de cierre.
-
-
+<p class="pdf-source-line">Formas de trabajo en artes</p>
+<p class="pdf-source-line">El proceso que conlleva la realización de ejercicios expresivos personales, así como de</p>
+<p class="pdf-source-line">composiciones y propuestas colectivas es diverso, al igual que sus resultados, por ello,</p>
+<p class="pdf-source-line">aun cuando no se puede enmarcar una sola forma de trabajo con las Artes, es posible</p>
+<p class="pdf-source-line">referir a distintas posibilidades, cuidando que cada una sea amplia, flexible, imaginativa</p>
+<p class="pdf-source-line">y que considere todo tipo de espacios, tiempos y materiales.</p>
+<p class="pdf-source-line">Es por ello que los contenidos de los programas de estudio se definieron desde</p>
+<p class="pdf-source-line">una perspectiva interdisciplinaria, a partir de las relaciones que se establecen entre los</p>
+<p class="pdf-source-line">elementos de las artes que son comunes a todos los lenguajes, aun cuando su</p>
+<p class="pdf-source-line">tratamiento particular sea distinto; de tal manera que los contenidos se pueden trabajar</p>
+<p class="pdf-source-line">desde cualquier disciplina artística respetando sus particularidades, o bien fomentando</p>
+<p class="pdf-source-line">la combinación, mezcla, fusión e hibridación entre ellas.</p>
+<p class="pdf-source-line">Cabe mencionar que en el trabajo con el campo de las artes se concibe la</p>
+<p class="pdf-source-line">interdisciplina como un lugar de llegada y no como un punto de partida. Es decir, es</p>
+<p class="pdf-source-line">una meta por conseguir, a través del conocimiento y práctica tanto de diferentes</p>
+<p class="pdf-source-line">manifestaciones artísticas como de diferentes áreas del saber que es posible vincular</p>
+<p class="pdf-source-line">con las temáticas propias de las artes. Así, se busca que NNA reconozcan que los</p>
+<p class="pdf-source-line">elementos de las artes pueden combinarse entre sí, pero también que diferentes saberes</p>
+<p class="pdf-source-line">pueden ser articulados desde el estudio de las artes, buscando que los vinculen con las</p>
+<p class="pdf-source-line">problemáticas de la vida cotidiana (SEP, 2024).</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 13 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	13</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 13</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Una particularidad de los proyectos artísticos son los momentos de exploración
-para representar ideas, mediante objetos, materiales, elementos de la naturaleza y el
-propio cuerpo que se lleva a cabo durante todo el proceso. (SEP, 2024, p.20).
-## Los lenguajes artísticos en la educación básica
-### Música
-Esta expresión tiene un papel ineludible dentro y fuera de la
-escuela, porque abunda en estímulos constantes provenientes de
-diversas fuentes. Dichos estímulos están presentes en la música
-tradicional, salas de conciertos, medios electrónicos, publicidad,
-### música ambiental, música de cine, radio, internet y en cualquier
-momento y lugar.
-Esta cualidad hace que los alumnos tengan ciertas concepciones y actitudes
-respecto a la música; sin embargo, es necesaria una formación que les permita
-comprenderla, 	transformarla, 	enriquecerla 	o 	adaptarla 	a 	sus 	propios 	intereses 	y
-necesidades expresivas. Por lo cual, mediante la experimentación de las cualidades del
-sonido, el pulso, la melodía, el canto, la elaboración de cotidiáfonos, del registro de los
-eventos sonoros y de los primeros recursos de la notación musical convencional, los
-alumnos contarán con los elementos necesarios para dar claridad y rumbo a su
-experiencia musical.
-### Danza
-La expresión corporal es la introducción básica para el estudio de la danza como lenguaje
-artístico, con ella los alumnos experimentan una variedad de movimientos que les
-permite expresar ideas, sentimientos y emociones, para reconocer la capacidad de su
-cuerpo, 	contar historias empleando lenguaje no verbal, con o sin acompañamiento
-musical.
-
-
+<p class="pdf-source-line">Aprendizaje basado en proyectos</p>
+<figure class="programa-inline-visual"><img src="/programa-analitico/ilustraciones/aprendizaje-proyectos.jpg" alt="Estudiantes colaboran en un proyecto artístico escolar con pintura, materiales reciclados y recursos escénicos" loading="lazy" /><figcaption>Aprendizaje artístico basado en proyectos</figcaption></figure>
+<p class="pdf-source-line">El trabajo mediante proyectos es una estrategia que</p>
+<p class="pdf-source-line">permite organizar y optimizar el trabajo escolar y</p>
+<p class="pdf-source-line">favorece la implementación integrada de</p>
+<p class="pdf-source-line">conocimientos y saberes. Sus fines están dirigidos a</p>
+<p class="pdf-source-line">que NNA encuentren respuestas a sus inquietudes,</p>
+<p class="pdf-source-line">participen en la conducción de sus propios procesos de</p>
+<p class="pdf-source-line">aprendizaje, diseñen estrategias de trabajo y a la</p>
+<p class="pdf-source-line">solución de problemas, que se sitúan en un contexto que les resulta significativo. Los</p>
+<p class="pdf-source-line">proyectos artísticos promueven la participación de NNA, respecto a la</p>
+<p class="pdf-source-line">corresponsabilidad de tareas, reconocimiento y aprovechamiento de habilidades,</p>
+<p class="pdf-source-line">intereses y experiencias, así mismo, fortalecen sus habilidades y actitudes como la</p>
+<p class="pdf-source-line">capacidad de diálogo, la toma de decisiones, manejo de fuentes de información,</p>
+<p class="pdf-source-line">comunicación asertiva, planeación y realización de producciones artísticas, el respeto a</p>
+<p class="pdf-source-line">la diversidad, así como la formación de opiniones informadas, argumentos sustentados</p>
+<p class="pdf-source-line">y juicios críticos. En términos generales, la metodología por proyectos debe cumplir con</p>
+<p class="pdf-source-line">tres etapas: planeación, desarrollo y comunicación (SEP, 2024, p.24).</p>
+<p class="pdf-source-line">En cuanto a la primera etapa, la planeación es de vital importancia escuchar los</p>
+<p class="pdf-source-line">gustos e intereses de NNA, respecto a lo que desean expresar; resulta primordial tener</p>
+<p class="pdf-source-line">clara la intención o propósito del proyecto, su duración, las acciones o actividades, los</p>
+<p class="pdf-source-line">recursos requeridos y la distribución de tareas. En la segunda parte, el desarrollo, se</p>
+<p class="pdf-source-line">pone en práctica el proceso del proyecto donde se buscan diversas formas de</p>
+<p class="pdf-source-line">representar algo, y se gesta la producción artística; y, en la tercera, la comunicación,</p>
+<p class="pdf-source-line">las y los estudiantes presentan sus producciones a destinatarios específicos dentro o</p>
+<p class="pdf-source-line">fuera del aula, en la escuela o la comunidad. También cabe la posibilidad de llevar o no</p>
+<p class="pdf-source-line">a cabo alguna presentación frente a público, pero sí se podrá organizar una reflexión</p>
+<p class="pdf-source-line">colectiva de cierre.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 14 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	14</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 14</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-La 	danza 	incluye 	conocimientos 	específicos 	que
-permiten el estudio de los componentes del movimiento y del
-gesto corporal, a partir de cómo se estructuran en el tiempo
-y el espacio. Se busca familiarizar a los alumnos con la
-expresión corporal y la danza, por medio de la identificación
-y exploración de acciones corporales básicas, además de
-propiciar la capacidad de apreciar la danza en todas sus manifestaciones como un medio
-de expresión artística y una manifestación cultural digna de ser valorada, conservada y
-recreada.
-### Artes visuales
-Las artes visuales integran todas las expresiones que
-involucran las imágenes artísticas; su estudio brinda la
-posibilidad de aprender a mirar las imágenes del entorno
-y descubrir información que permita interpretar la realidad
-por medio del pensamiento artístico. En la actualidad se
-reconoce como parte de las artes visuales a la pintura, la
-escultura, la arquitectura, la gráfica, la fotografía, los
-medios audiovisuales (arte digital, video, cine, etc.), así como los medios alternativos
-(performance, instalación, e intervención, entre otros).
-Mediante su estudio se adquieren conocimientos básicos del lenguaje visual
-(forma, punto, línea, textura, espacio y composición). Así mismo, con el uso de diversas
-técnicas y materiales, se propicia la expresión y la interpretación de la realidad, lo que a
-su vez permite desarrollar habilidades del pensamiento artístico, lo que genera, como
-resultado final, un aprendizaje significativo.
-
-
+<p class="pdf-source-line">Una particularidad de los proyectos artísticos son los momentos de exploración</p>
+<p class="pdf-source-line">para representar ideas, mediante objetos, materiales, elementos de la naturaleza y el</p>
+<p class="pdf-source-line">propio cuerpo que se lleva a cabo durante todo el proceso. (SEP, 2024, p.20).</p>
+<p class="pdf-source-line">Los lenguajes artísticos en la educación básica</p>
+<p class="pdf-source-line">Música</p>
+<figure class="programa-inline-visual"><img src="/programa-analitico/ilustraciones/musica.jpg" alt="Estudiantes cantan y exploran ritmo, melodía e instrumentos musicales" loading="lazy" /><figcaption>Exploración del lenguaje artístico de la música</figcaption></figure>
+<p class="pdf-source-line">Esta expresión tiene un papel ineludible dentro y fuera de la</p>
+<p class="pdf-source-line">escuela, porque abunda en estímulos constantes provenientes de</p>
+<p class="pdf-source-line">diversas fuentes. Dichos estímulos están presentes en la música</p>
+<p class="pdf-source-line">tradicional, salas de conciertos, medios electrónicos, publicidad,</p>
+<p class="pdf-source-line">música ambiental, música de cine, radio, internet y en cualquier</p>
+<p class="pdf-source-line">momento y lugar.</p>
+<p class="pdf-source-line">Esta cualidad hace que los alumnos tengan ciertas concepciones y actitudes</p>
+<p class="pdf-source-line">respecto a la música; sin embargo, es necesaria una formación que les permita</p>
+<p class="pdf-source-line">comprenderla, transformarla, enriquecerla o adaptarla a sus propios intereses y</p>
+<p class="pdf-source-line">necesidades expresivas. Por lo cual, mediante la experimentación de las cualidades del</p>
+<p class="pdf-source-line">sonido, el pulso, la melodía, el canto, la elaboración de cotidiáfonos, del registro de los</p>
+<p class="pdf-source-line">eventos sonoros y de los primeros recursos de la notación musical convencional, los</p>
+<p class="pdf-source-line">alumnos contarán con los elementos necesarios para dar claridad y rumbo a su</p>
+<p class="pdf-source-line">experiencia musical.</p>
+<p class="pdf-source-line">Danza</p>
+<figure class="programa-inline-visual"><img src="/programa-analitico/ilustraciones/danza.jpg" alt="Estudiantes expresan ideas y emociones mediante movimientos de danza en distintos niveles y direcciones" loading="lazy" /><figcaption>Exploración del lenguaje artístico de la danza</figcaption></figure>
+<p class="pdf-source-line">La expresión corporal es la introducción básica para el estudio de la danza como lenguaje</p>
+<p class="pdf-source-line">artístico, con ella los alumnos experimentan una variedad de movimientos que les</p>
+<p class="pdf-source-line">permite expresar ideas, sentimientos y emociones, para reconocer la capacidad de su</p>
+<p class="pdf-source-line">cuerpo, contar historias empleando lenguaje no verbal, con o sin acompañamiento</p>
+<p class="pdf-source-line">musical.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 15 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	15</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 15</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Teatro
-Se espera que el teatro sea creado y producido por los niños para ser apreciado,
-expresado y evaluado por ellos mismos, además, es un lugar donde ellos pueden
-conversar, reflexionar, conocerse mejor y relacionarse con otras personas.
-La actividad teatral en la escuela debe provocar
-el interés del alumno por el arte dramático en su
-dimensión 	práctica, 	donde 	él 	sea 	el 	auténtico
-protagonista realizando juegos de expresión corporal y
-voz, 	improvisaciones 	y 	ejercicios 	de 	socialización;
-viviendo los procesos de creación literaria y producción
-escénica, como escritor-creador, protagonista de una historia, partícipe de la producción
-teatral o como espectador informado. Al estudiar teatro los alumnos exploran elementos
-para acercarse a él y comprender el lenguaje, participando activamente con las
-posibilidades expresivas del cuerpo, del gesto, de la voz y de la conciencia espacial para
-desplazarse e identificar las partes de un escenario.
-## Los ejes articuladores
-El plan de estudios distingue siete ejes articuladores de carácter transversal por lo que
-es importante conocerlos para poder detectarlos cuando de manera natural aparezcan
-en la planificación del proyecto. Estos siete ejes tienen una función muy importante, ya
-que se refieren a temáticas de relevancia social que pueden abordarse en más de un
-campo formativo y con los contenidos específicos de cada grado, nivel y modalidad
-educativa.
-Los ejes representan una perspectiva ética para aproximarse a los contenidos del
-programa de estudios y con ello, evitar que las desigualdades y exclusiones que siempre
-están entrelazadas se reflejen en la clase social, el sexo, el género, la condición física,
-
-
+<p class="pdf-source-line">La danza incluye conocimientos específicos que</p>
+<p class="pdf-source-line">permiten el estudio de los componentes del movimiento y del</p>
+<p class="pdf-source-line">gesto corporal, a partir de cómo se estructuran en el tiempo</p>
+<p class="pdf-source-line">y el espacio. Se busca familiarizar a los alumnos con la</p>
+<p class="pdf-source-line">expresión corporal y la danza, por medio de la identificación</p>
+<p class="pdf-source-line">y exploración de acciones corporales básicas, además de</p>
+<p class="pdf-source-line">propiciar la capacidad de apreciar la danza en todas sus manifestaciones como un medio</p>
+<p class="pdf-source-line">de expresión artística y una manifestación cultural digna de ser valorada, conservada y</p>
+<p class="pdf-source-line">recreada.</p>
+<p class="pdf-source-line">Artes visuales</p>
+<figure class="programa-inline-visual"><img src="/programa-analitico/ilustraciones/artes-visuales.jpg" alt="Estudiantes pintan, dibujan, crean collage y modelan una escultura de arcilla" loading="lazy" /><figcaption>Exploración de los lenguajes de las artes visuales</figcaption></figure>
+<p class="pdf-source-line">Las artes visuales integran todas las expresiones que</p>
+<p class="pdf-source-line">involucran las imágenes artísticas; su estudio brinda la</p>
+<p class="pdf-source-line">posibilidad de aprender a mirar las imágenes del entorno</p>
+<p class="pdf-source-line">y descubrir información que permita interpretar la realidad</p>
+<p class="pdf-source-line">por medio del pensamiento artístico. En la actualidad se</p>
+<p class="pdf-source-line">reconoce como parte de las artes visuales a la pintura, la</p>
+<p class="pdf-source-line">escultura, la arquitectura, la gráfica, la fotografía, los</p>
+<p class="pdf-source-line">medios audiovisuales (arte digital, video, cine, etc.), así como los medios alternativos</p>
+<p class="pdf-source-line">(performance, instalación, e intervención, entre otros).</p>
+<p class="pdf-source-line">Mediante su estudio se adquieren conocimientos básicos del lenguaje visual</p>
+<p class="pdf-source-line">(forma, punto, línea, textura, espacio y composición). Así mismo, con el uso de diversas</p>
+<p class="pdf-source-line">técnicas y materiales, se propicia la expresión y la interpretación de la realidad, lo que a</p>
+<p class="pdf-source-line">su vez permite desarrollar habilidades del pensamiento artístico, lo que genera, como</p>
+<p class="pdf-source-line">resultado final, un aprendizaje significativo.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 16 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	16</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 16</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-el grupo étnico, limitando a través del desarrollo de las artes, que se reproduzcan tanto
-en el currículo, como en las relaciones de poder dentro de las escuelas y en las formas
-de evaluación (SEP, 2022a)
-Se plantea desde los ejes establecidos en el documento de ejes articuladores, pensar
-desde la diversidad:
-Figura 2.
-Ejes articuladores
-Nota: Ejes articuladores, pensar la diversidad (Gobierno de México y MEJOREDU,
-2024).
-INCLUSIÓN
-PENSAMIENTO CRÍTICO
-INTERCULTURALIDAD CRÍTICA
-IGUALDAD DE GÉNERO
-APROPIACIÓN DE LA CULTURA A TRAVÉS DE LA LECTURA Y LA ESCRITURA
-## ARTE Y EXPERIENCIAS ESTÉTICAS
-VIDA SALUDABLE
-
-
+<p class="pdf-source-line">Teatro</p>
+<figure class="programa-inline-visual"><img src="/programa-analitico/ilustraciones/teatro.jpg" alt="Estudiantes representan una escena teatral con máscaras, utilería y narración" loading="lazy" /><figcaption>Exploración del lenguaje artístico del teatro</figcaption></figure>
+<p class="pdf-source-line">Se espera que el teatro sea creado y producido por los niños para ser apreciado,</p>
+<p class="pdf-source-line">expresado y evaluado por ellos mismos, además, es un lugar donde ellos pueden</p>
+<p class="pdf-source-line">conversar, reflexionar, conocerse mejor y relacionarse con otras personas.</p>
+<p class="pdf-source-line">La actividad teatral en la escuela debe provocar</p>
+<p class="pdf-source-line">el interés del alumno por el arte dramático en su</p>
+<p class="pdf-source-line">dimensión práctica, donde él sea el auténtico</p>
+<p class="pdf-source-line">protagonista realizando juegos de expresión corporal y</p>
+<p class="pdf-source-line">voz, improvisaciones y ejercicios de socialización;</p>
+<p class="pdf-source-line">viviendo los procesos de creación literaria y producción</p>
+<p class="pdf-source-line">escénica, como escritor-creador, protagonista de una historia, partícipe de la producción</p>
+<p class="pdf-source-line">teatral o como espectador informado. Al estudiar teatro los alumnos exploran elementos</p>
+<p class="pdf-source-line">para acercarse a él y comprender el lenguaje, participando activamente con las</p>
+<p class="pdf-source-line">posibilidades expresivas del cuerpo, del gesto, de la voz y de la conciencia espacial para</p>
+<p class="pdf-source-line">desplazarse e identificar las partes de un escenario.</p>
+<p class="pdf-source-line">Los ejes articuladores</p>
+<p class="pdf-source-line">El plan de estudios distingue siete ejes articuladores de carácter transversal por lo que</p>
+<p class="pdf-source-line">es importante conocerlos para poder detectarlos cuando de manera natural aparezcan</p>
+<p class="pdf-source-line">en la planificación del proyecto. Estos siete ejes tienen una función muy importante, ya</p>
+<p class="pdf-source-line">que se refieren a temáticas de relevancia social que pueden abordarse en más de un</p>
+<p class="pdf-source-line">campo formativo y con los contenidos específicos de cada grado, nivel y modalidad</p>
+<p class="pdf-source-line">educativa.</p>
+<p class="pdf-source-line">Los ejes representan una perspectiva ética para aproximarse a los contenidos del</p>
+<p class="pdf-source-line">programa de estudios y con ello, evitar que las desigualdades y exclusiones que siempre</p>
+<p class="pdf-source-line">están entrelazadas se reflejen en la clase social, el sexo, el género, la condición física,</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 17 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	17</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 17</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-## Arte y experiencias estéticas
-La inclusión de un eje de educación estética busca dar suficiente peso a las áreas
-expresivas y de trabajo que las niñas, niños y adolescentes hagan sobre sí mismos en
-los campos formativos, colocando en las artes y en la perspectiva estética la promesa de
-producir mejores aprendizajes tanto para la integración social como para el desarrollo
-cognitivo y la expresión personal, desarrollando debidos valores estéticos.
-Por educación estética se entiende una dimensión didáctica, metodológica y
-pedagógica que ofrece a las y los estudiantes la posibilidad de crear relaciones con el
-mundo que atienden a los aspectos reflexivos y emocionales, con la finalidad de
-contribuir al autoconocimiento y a una mejor relación con la comunidad desde lo
-sensible, lo plural y el ejercicio del pensamiento crítico.
-Este eje busca valorar la exploración sensible del mundo al reconocer y recuperar
-el valor formativo de las experiencias estéticas que se producen en las y los estudiantes
-en la relación con las manifestaciones culturales, las producciones artísticas y la
-naturaleza, así como con los contenidos de los demás campos formativos.
-Cuando se habla de experiencias estéticas, no propone el estudio de la disciplina
-filosófica que así se denomina, sino el acercamiento a un conjunto de procesos que se
-pueden poner en juego en la relación con diversos objetos y sucesos. Entre ellos cabe
-destacar la ampliación de la percepción, el desarrollo de la sensorialidad, el desarrollo
-y regulación emocional, el sentimiento de pertenencia, la empatía, la posibilidad de
-cooperar y afrontar conflictos, y la capacidad de disentir a partir del ejercicio del juicio
-crítico.
-El campo de la estética presenta a las y los docentes estrategias de enseñanza y
-aprendizaje, herramientas didácticas y ejemplos diversos que pueden ilustrar y propiciar
-aprendizajes significativos al abordar los contenidos específicos de los cuatro campos
-formativos. 	Considera, 	asimismo, 	los 	avances 	científicos 	en 	el 	campo 	de 	las
-neurociencias, sociología, educación, historia, entre otros, los cuales han demostrado
-
-
+<p class="pdf-source-line">el grupo étnico, limitando a través del desarrollo de las artes, que se reproduzcan tanto</p>
+<p class="pdf-source-line">en el currículo, como en las relaciones de poder dentro de las escuelas y en las formas</p>
+<p class="pdf-source-line">de evaluación (SEP, 2022a)</p>
+<p class="pdf-source-line">Se plantea desde los ejes establecidos en el documento de ejes articuladores, pensar</p>
+<p class="pdf-source-line">desde la diversidad:</p>
+<p class="pdf-source-line">Figura 2.</p>
+<p class="pdf-source-line">Ejes articuladores</p>
+<figure class="programa-inline-visual"><img src="/programa-analitico/ilustraciones/ejes-articuladores.svg" alt="Diagrama con los siete ejes articuladores del Plan de Estudios" loading="lazy" /><figcaption>Figura 2. Ejes articuladores</figcaption></figure>
+<p class="pdf-source-line">INCLUSIÓN</p>
+<p class="pdf-source-line">PENSAMIENTO CRÍTICO</p>
+<p class="pdf-source-line">INTERCULTURALIDAD CRÍTICA</p>
+<p class="pdf-source-line">IGUALDAD DE GÉNERO</p>
+<p class="pdf-source-line">APROPIACIÓN DE LA CULTURA A TRAVÉS DE LA LECTURA Y LA ESCRITURA</p>
+<p class="pdf-source-line">ARTE Y EXPERIENCIAS ESTÉTICAS</p>
+<p class="pdf-source-line">VIDA SALUDABLE</p>
+<p class="pdf-source-line">Nota: Ejes articuladores, pensar la diversidad (Gobierno de México y MEJOREDU,</p>
+<p class="pdf-source-line">2024).</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 18 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	18</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 18</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-que la estética genera lazos profundos de cohesión social, potenciando el desarrollo
-cognitivo, crítico, emocional y que tiene incidencia en la formación de la conducta ética,
-desarrollando valores estéticos que le permiten realizar una valoración de su entorno, de
-una forma sensible y respetuosa con los otros, formando un ser humano integral,
-creativo, reflexivo y un ciudadano que se permite pensar en los otros, pertenecientes a
-la sociedad.
-Por tanto, el eje de arte y experiencias estéticas en el plan de estudios para la
-educación básica de la Nueva Escuela Mexicana:
-• 	Favorece un clima de respeto y cordialidad en todos los campos formativos, en el
-que sea posible, para todas y todos, la expresión de las ideas, las emociones y
-los juicios, sin temor a represalias o exclusiones.
-• 	Crea un ambiente estético en las escuelas, a partir de las manifestaciones
-culturales propias de sus comunidades, en cuya producción todas y todos puedan
-participar.
-• 	Permite 	aprovechar 	los 	materiales 	y 	recursos 	de 	las 	artes 	para 	promover
-experiencias estéticas dentro de todos los campos formativos, a partir de los
-momentos 	creativo 	y 	apreciativo. 	Pueden 	considerarse, 	entre 	otros, 	el
-movimiento, el sonido, la expresión corporal y verbal, la composición escrita de
-poemas y relatos, la experimentación con el color y el uso de las formas, la
-producción de instalaciones, videos, performances, o el uso de objetos cotidianos
-de formas no convencionales.
-• 	Fomenta tanto momentos de producción individual y colectiva, como situaciones
-de apreciación de las producciones en todos los campos formativos, ayudando a
-encontrar modos de articulación en cada uno de ellos.
-• 	Da tiempo a los procesos, hacer pausas, permitir que las y los estudiantes
-permanezcan con atención en lo que están haciendo, así como generar momentos
-para 	compartir 	las 	experiencias, 	procesar 	las 	emociones 	y 	reflexionar,
-individualmente y en colectivo.
-
-
+<p class="pdf-source-line">Arte y experiencias estéticas</p>
+<p class="pdf-source-line">La inclusión de un eje de educación estética busca dar suficiente peso a las áreas</p>
+<p class="pdf-source-line">expresivas y de trabajo que las niñas, niños y adolescentes hagan sobre sí mismos en</p>
+<p class="pdf-source-line">los campos formativos, colocando en las artes y en la perspectiva estética la promesa de</p>
+<p class="pdf-source-line">producir mejores aprendizajes tanto para la integración social como para el desarrollo</p>
+<p class="pdf-source-line">cognitivo y la expresión personal, desarrollando debidos valores estéticos.</p>
+<p class="pdf-source-line">Por educación estética se entiende una dimensión didáctica, metodológica y</p>
+<p class="pdf-source-line">pedagógica que ofrece a las y los estudiantes la posibilidad de crear relaciones con el</p>
+<p class="pdf-source-line">mundo que atienden a los aspectos reflexivos y emocionales, con la finalidad de</p>
+<p class="pdf-source-line">contribuir al autoconocimiento y a una mejor relación con la comunidad desde lo</p>
+<p class="pdf-source-line">sensible, lo plural y el ejercicio del pensamiento crítico.</p>
+<p class="pdf-source-line">Este eje busca valorar la exploración sensible del mundo al reconocer y recuperar</p>
+<p class="pdf-source-line">el valor formativo de las experiencias estéticas que se producen en las y los estudiantes</p>
+<p class="pdf-source-line">en la relación con las manifestaciones culturales, las producciones artísticas y la</p>
+<p class="pdf-source-line">naturaleza, así como con los contenidos de los demás campos formativos.</p>
+<p class="pdf-source-line">Cuando se habla de experiencias estéticas, no propone el estudio de la disciplina</p>
+<p class="pdf-source-line">filosófica que así se denomina, sino el acercamiento a un conjunto de procesos que se</p>
+<p class="pdf-source-line">pueden poner en juego en la relación con diversos objetos y sucesos. Entre ellos cabe</p>
+<p class="pdf-source-line">destacar la ampliación de la percepción, el desarrollo de la sensorialidad, el desarrollo</p>
+<p class="pdf-source-line">y regulación emocional, el sentimiento de pertenencia, la empatía, la posibilidad de</p>
+<p class="pdf-source-line">cooperar y afrontar conflictos, y la capacidad de disentir a partir del ejercicio del juicio</p>
+<p class="pdf-source-line">crítico.</p>
+<p class="pdf-source-line">El campo de la estética presenta a las y los docentes estrategias de enseñanza y</p>
+<p class="pdf-source-line">aprendizaje, herramientas didácticas y ejemplos diversos que pueden ilustrar y propiciar</p>
+<p class="pdf-source-line">aprendizajes significativos al abordar los contenidos específicos de los cuatro campos</p>
+<p class="pdf-source-line">formativos. Considera, asimismo, los avances científicos en el campo de las</p>
+<p class="pdf-source-line">neurociencias, sociología, educación, historia, entre otros, los cuales han demostrado</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 19 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	19</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 19</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-• 	Permite diseñar secuencias de actividades en todos los campos formativos, en las
-que los estudiantes puedan apreciar los detalles, los ritmos, el equilibrio, los
-contrastes, las distintas relaciones entre los elementos.
-• 	Favorece que las y los estudiantes tengan momentos de encuentro gozosos,
-lúdicos y sorprendentes con todos los contenidos escolares: que experimenten la
-alegría de producir en conjunto, que tengan el gozo de cooperar en proyectos
-colectivos con sentido (multi e interdisciplinarios), que puedan ser críticos de las
-producciones 	propias 	y 	ajenas, 	así 	como 	recibir 	la 	crítica; 	que 	sientan 	la
-satisfacción de proponer y ver plasmadas sus ideas, que puedan volcar su
-atención plenamente en un proceso, etc.
-## El programa analítico: contextualización y codiseño
-## Análisis del contexto socioeducativo de la escuela
-Este plano del programa analítico refiere a la lectura de la realidad escuela-comunidad
-región-país-mundo que realiza el colectivo docente. Por lectura de la realidad se entiende
-al 	ejercicio 	de 	problematización 	sobre 	las 	condiciones 	educativas 	de 	la 	escuela,
-refiriéndose a sus retos en términos de aprendizaje en relación con el perfil de sus
-estudiantes: la reflexión fundamental sobre las características de los alumnos; sus
-procesos de aprendizaje y sus dificultades. También los retos de sus maestros, así como
-la intersección con el papel de las madres, los padres de familia y del contexto social de
-la escuela, tanto en las condiciones inmediatas o mediatas que afectan el contexto
-escolar, sea desde la perspectiva comunitaria, hasta de las necesidades de convivencia
-que tiene la humanidad entre sí y con el planeta.
-Las y los maestros de arte de Sinaloa deben de participar en este ejercicio que
-regularmente se realiza durante momentos propios del diagnóstico al inicio del ciclo
-escolar, pero además, deberán analizar el programa sintético de artes ¿Cómo trabajarán
-las y los docentes en cada fase? ¿Qué actividades de aprendizaje y evaluación serán
-
-
+<p class="pdf-source-line">que la estética genera lazos profundos de cohesión social, potenciando el desarrollo</p>
+<p class="pdf-source-line">cognitivo, crítico, emocional y que tiene incidencia en la formación de la conducta ética,</p>
+<p class="pdf-source-line">desarrollando valores estéticos que le permiten realizar una valoración de su entorno, de</p>
+<p class="pdf-source-line">una forma sensible y respetuosa con los otros, formando un ser humano integral,</p>
+<p class="pdf-source-line">creativo, reflexivo y un ciudadano que se permite pensar en los otros, pertenecientes a</p>
+<p class="pdf-source-line">la sociedad.</p>
+<p class="pdf-source-line">Por tanto, el eje de arte y experiencias estéticas en el plan de estudios para la</p>
+<p class="pdf-source-line">educación básica de la Nueva Escuela Mexicana:</p>
+<p class="pdf-source-line">• Favorece un clima de respeto y cordialidad en todos los campos formativos, en el</p>
+<p class="pdf-source-line">que sea posible, para todas y todos, la expresión de las ideas, las emociones y</p>
+<p class="pdf-source-line">los juicios, sin temor a represalias o exclusiones.</p>
+<p class="pdf-source-line">• Crea un ambiente estético en las escuelas, a partir de las manifestaciones</p>
+<p class="pdf-source-line">culturales propias de sus comunidades, en cuya producción todas y todos puedan</p>
+<p class="pdf-source-line">participar.</p>
+<p class="pdf-source-line">• Permite aprovechar los materiales y recursos de las artes para promover</p>
+<p class="pdf-source-line">experiencias estéticas dentro de todos los campos formativos, a partir de los</p>
+<p class="pdf-source-line">momentos creativo y apreciativo. Pueden considerarse, entre otros, el</p>
+<p class="pdf-source-line">movimiento, el sonido, la expresión corporal y verbal, la composición escrita de</p>
+<p class="pdf-source-line">poemas y relatos, la experimentación con el color y el uso de las formas, la</p>
+<p class="pdf-source-line">producción de instalaciones, videos, performances, o el uso de objetos cotidianos</p>
+<p class="pdf-source-line">de formas no convencionales.</p>
+<p class="pdf-source-line">• Fomenta tanto momentos de producción individual y colectiva, como situaciones</p>
+<p class="pdf-source-line">de apreciación de las producciones en todos los campos formativos, ayudando a</p>
+<p class="pdf-source-line">encontrar modos de articulación en cada uno de ellos.</p>
+<p class="pdf-source-line">• Da tiempo a los procesos, hacer pausas, permitir que las y los estudiantes</p>
+<p class="pdf-source-line">permanezcan con atención en lo que están haciendo, así como generar momentos</p>
+<p class="pdf-source-line">para compartir las experiencias, procesar las emociones y reflexionar,</p>
+<p class="pdf-source-line">individualmente y en colectivo.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 20 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	20</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 20</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-compartidas, con qué finalidad? ¿Qué impacto tendrá en cada fase-grado el desarrollo
-de los contenidos de este programa? ¿Cómo pueden los ejes articuladores del plan de
-estudios, integrar actividades conjuntas entre fases-grados? ¿Hay contenidos prioritarios
-de acuerdo con el perfil de las y los estudiantes? ¿Qué necesidades de formación
-docente se derivan del tratamiento de los contenidos, tanto en sus temas como enfoques
-didácticos? 	Con 	estas 	y 	otras 	preguntas 	o 	ejes 	de 	análisis, 	las 	y 	los 	docentes
-especialistas pueden conocer los programas sintéticos de estudio a profundidad para
-establecer las estrategias de trabajo conjunto entre docentes a nivel grado, fase y
-escuela.
-## Contenidos nacionales y procesos del desarrollo de aprendizaje (PDA)
-El presente material integra los componentes curriculares del campo formativo Lenguajes
-para educación primaria, incluyendo el programa sintético (bases conceptuales), las
-progresiones de aprendizaje (PDA) por ciclo escolar y las orientaciones didácticas
-especializadas, organizados en tres fases secuenciales que articulan el desarrollo
-artístico con las competencias pedagógicas. 	Esta estructura sistematizada facilita la
-identificación de relaciones transversales entre contenidos, estrategias metodológicas y
-estándares de aprendizaje, permitiendo su adaptación contextualizada a proyectos
-artísticos innovadores dentro del marco curricular vigente de la NEM.
-
-
+<p class="pdf-source-line">• Permite diseñar secuencias de actividades en todos los campos formativos, en las</p>
+<p class="pdf-source-line">que los estudiantes puedan apreciar los detalles, los ritmos, el equilibrio, los</p>
+<p class="pdf-source-line">contrastes, las distintas relaciones entre los elementos.</p>
+<p class="pdf-source-line">• Favorece que las y los estudiantes tengan momentos de encuentro gozosos,</p>
+<p class="pdf-source-line">lúdicos y sorprendentes con todos los contenidos escolares: que experimenten la</p>
+<p class="pdf-source-line">alegría de producir en conjunto, que tengan el gozo de cooperar en proyectos</p>
+<p class="pdf-source-line">colectivos con sentido (multi e interdisciplinarios), que puedan ser críticos de las</p>
+<p class="pdf-source-line">producciones propias y ajenas, así como recibir la crítica; que sientan la</p>
+<p class="pdf-source-line">satisfacción de proponer y ver plasmadas sus ideas, que puedan volcar su</p>
+<p class="pdf-source-line">atención plenamente en un proceso, etc.</p>
+<p class="pdf-source-line">El programa analítico: contextualización y codiseño</p>
+<p class="pdf-source-line">Análisis del contexto socioeducativo de la escuela</p>
+<p class="pdf-source-line">Este plano del programa analítico refiere a la lectura de la realidad escuela-comunidad</p>
+<p class="pdf-source-line">región-país-mundo que realiza el colectivo docente. Por lectura de la realidad se entiende</p>
+<p class="pdf-source-line">al ejercicio de problematización sobre las condiciones educativas de la escuela,</p>
+<p class="pdf-source-line">refiriéndose a sus retos en términos de aprendizaje en relación con el perfil de sus</p>
+<p class="pdf-source-line">estudiantes: la reflexión fundamental sobre las características de los alumnos; sus</p>
+<p class="pdf-source-line">procesos de aprendizaje y sus dificultades. También los retos de sus maestros, así como</p>
+<p class="pdf-source-line">la intersección con el papel de las madres, los padres de familia y del contexto social de</p>
+<p class="pdf-source-line">la escuela, tanto en las condiciones inmediatas o mediatas que afectan el contexto</p>
+<p class="pdf-source-line">escolar, sea desde la perspectiva comunitaria, hasta de las necesidades de convivencia</p>
+<p class="pdf-source-line">que tiene la humanidad entre sí y con el planeta.</p>
+<p class="pdf-source-line">Las y los maestros de arte de Sinaloa deben de participar en este ejercicio que</p>
+<p class="pdf-source-line">regularmente se realiza durante momentos propios del diagnóstico al inicio del ciclo</p>
+<p class="pdf-source-line">escolar, pero además, deberán analizar el programa sintético de artes ¿Cómo trabajarán</p>
+<p class="pdf-source-line">las y los docentes en cada fase? ¿Qué actividades de aprendizaje y evaluación serán</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 21 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	21</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 21</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-# Tercera fase
-
-
+<p class="pdf-source-line">compartidas, con qué finalidad? ¿Qué impacto tendrá en cada fase-grado el desarrollo</p>
+<p class="pdf-source-line">de los contenidos de este programa? ¿Cómo pueden los ejes articuladores del plan de</p>
+<p class="pdf-source-line">estudios, integrar actividades conjuntas entre fases-grados? ¿Hay contenidos prioritarios</p>
+<p class="pdf-source-line">de acuerdo con el perfil de las y los estudiantes? ¿Qué necesidades de formación</p>
+<p class="pdf-source-line">docente se derivan del tratamiento de los contenidos, tanto en sus temas como enfoques</p>
+<p class="pdf-source-line">didácticos? Con estas y otras preguntas o ejes de análisis, las y los docentes</p>
+<p class="pdf-source-line">especialistas pueden conocer los programas sintéticos de estudio a profundidad para</p>
+<p class="pdf-source-line">establecer las estrategias de trabajo conjunto entre docentes a nivel grado, fase y</p>
+<p class="pdf-source-line">escuela.</p>
+<h3 class="pdf-section-title">Contenidos nacionales y procesos del desarrollo de aprendizaje (PDA)</h3>
+<p class="pdf-source-line">El presente material integra los componentes curriculares del campo formativo Lenguajes</p>
+<p class="pdf-source-line">para educación primaria, incluyendo el programa sintético (bases conceptuales), las</p>
+<p class="pdf-source-line">progresiones de aprendizaje (PDA) por ciclo escolar y las orientaciones didácticas</p>
+<p class="pdf-source-line">especializadas, organizados en tres fases secuenciales que articulan el desarrollo</p>
+<p class="pdf-source-line">artístico con las competencias pedagógicas. Esta estructura sistematizada facilita la</p>
+<p class="pdf-source-line">identificación de relaciones transversales entre contenidos, estrategias metodológicas y</p>
+<p class="pdf-source-line">estándares de aprendizaje, permitiendo su adaptación contextualizada a proyectos</p>
+<p class="pdf-source-line">artísticos innovadores dentro del marco curricular vigente de la NEM.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 22 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	22</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 22</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos nacionales de la tercera fase
-Ø 	Narración de actividades y eventos relevantes que tengan lugar en la familia, la
-escuela o el resto de la comunidad.
-Ø 	Descripción de objetos, lugares y seres vivos.
-Ø 	Intervención del entorno familiar y escolar para imaginar y realizar propuestas
-de mejora.
-Ø 	Uso de elementos de los lenguajes artísticos en la vida cotidiana.
-Ø 	Uso de los lenguajes artísticos para expresar rasgos de las identidades personal
-y colectiva.
-Ø 	Apreciación de canciones, rondas infantiles, arrullos y cuentos.
-Ø 	Experimentación con elementos sonoros en composiciones literarias.
-Ø 	Interacción con manifestaciones culturales y artísticas.
-Ø 	Recreación de historias mediante el uso artístico de las palabras, del cuerpo,
-del espacio y del tiempo.
-Ø 	Representación de distintas formas de ser y estar en el mundo a partir de la
-ficción.
-Contenidos nacionales relacionado con las artes
-# Tercera Fase
-
-
+<p class="pdf-source-line">Tercera fase</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 23 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	23</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 23</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje estatales de la tercera fase
-Contenidos estatales por lenguaje
-# Tercera fase
-| Música | Danza | Artes visuales | Teatro |
-| :--- | :--- | :--- | :--- |
-| Acompañamiento de canciones utilizando sonidos y silencios producidos con diferentes partes del cuerpo. | Exploración del movimiento corporal en niveles (alto, medio y bajo) y alcances (cerca-lejos, extensión y contracción). | Distinción de elementos plásticos de las artes visuales para la representación en diversas producciones (el punto y la línea). | Utilización de la expresión corporal para la comunicación de ideas y sentimientos. |
-| Diferenciación de las cualidades del sonido (duración e intensidad, altura y timbre). | Realización de movimientos con diferentes segmentos corporales de elementos de la naturaleza y del entorno. | Uso de las posibilidades expresivas de la línea y el punto en la creación de formas. | Uso de expresiones corporales para la comunicación de eventos de su vida cotidiana. |
-| Recreación de paisajes sonoros mediante la exploración de las cualidades del sonido. | Preparación de secuencias sencillas donde se ubique en el espacio general y en el personal. | Utilización de posibilidades plásticas de las formas considerando su relación con el fondo. | Uso de los sentidos en la evocación de formas, olores, sonidos, texturas y sabores de su entorno. |
-| Representación de sensaciones que producen la escucha de piezas musicales a través de la danza, artes visuales o teatro. | Experimentación de las posibilidades del movimiento, utilizando los elementos de tiempo, energía y espacio. | Elaboración de dibujo libre y reconocimiento de la bidimensionalidad. | Expresión de sensaciones y comunicación de ideas con el uso de las posibilidades de su voz. |
-| Desarrollo de audición e interpretación de canciones haciendo discriminación en las cualidades del sonido. | Creación de secuencias cortas y movimiento utilizando distintos ejes corporales. | Uso del color como un elemento plástico en la creación de imágenes. | Representación de ideas utilizando la expresión corporal y verbal en diferentes situaciones. |
-| Construcción de distintitos instrumentos de percusión utilizando materiales de uso cotidiano para improvisar acompañamientos rítmicos de canciones. | Realización de montaje coreográfico de una ronda y/o danza creativa con temática. | Comparación de sensaciones que le producen las texturas de diferentes objetos percibidos por el tacto y la vista. | Exploración del movimiento y el uso consciente de las partes del cuerpo para la expresión de ideas, emociones y la creación de la relación escénica con otras personas. |
-| Ejecución del pulso en diversas melodías con el cuerpo, objetos o instrumentos de percusión para presentarlas frente a un público. | | Representación de ritmos visuales en imágenes, a partir de diferentes formas. | Distinción y utilización de rasgos principales de un personaje como (movimientos, gestos y voz) a partir de ideas, frases, imágenes, canciones o cuentos. |
-| | | Elaboración de producciones bidimensionales utilizando diversas formas básicas, orgánicas y accidentadas. | |
-
-
+<h3 class="pdf-section-title">Contenidos nacionales de la tercera fase</h3>
+<h3 class="pdf-section-title">Contenidos nacionales relacionado con las artes</h3>
+<p class="pdf-source-line">Tercera Fase</p>
+<p class="pdf-source-line">Ø Narración de actividades y eventos relevantes que tengan lugar en la familia, la</p>
+<p class="pdf-source-line">escuela o el resto de la comunidad.</p>
+<p class="pdf-source-line">Ø Descripción de objetos, lugares y seres vivos.</p>
+<p class="pdf-source-line">Ø Intervención del entorno familiar y escolar para imaginar y realizar propuestas</p>
+<p class="pdf-source-line">de mejora.</p>
+<p class="pdf-source-line">Ø Uso de elementos de los lenguajes artísticos en la vida cotidiana.</p>
+<p class="pdf-source-line">Ø Uso de los lenguajes artísticos para expresar rasgos de las identidades personal</p>
+<p class="pdf-source-line">y colectiva.</p>
+<p class="pdf-source-line">Ø Apreciación de canciones, rondas infantiles, arrullos y cuentos.</p>
+<p class="pdf-source-line">Ø Experimentación con elementos sonoros en composiciones literarias.</p>
+<p class="pdf-source-line">Ø Interacción con manifestaciones culturales y artísticas.</p>
+<p class="pdf-source-line">Ø Recreación de historias mediante el uso artístico de las palabras, del cuerpo,</p>
+<p class="pdf-source-line">del espacio y del tiempo.</p>
+<p class="pdf-source-line">Ø Representación de distintas formas de ser y estar en el mundo a partir de la</p>
+<p class="pdf-source-line">ficción.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 24 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	24</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 24</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-(Contenido continuado de la tabla anterior)
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la tercera fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 24" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="4">Contenidos estatales por lenguaje</th></tr><tr><td colspan="4">Tercera fase</td></tr><tr><td>Música</td><td>Danza</td><td>Artes visuales</td><td>Teatro</td></tr><tr><td>Acompañamiento de canciones utilizando sonidos y silencios producidos con diferentes partes del cuerpo. Diferenciación de las cualidades del sonido (duración e intensidad, altura y timbre). Recreación de paisajes sonoros mediante la exploración de las cualidades del sonido. Representación de sensaciones que producen la escucha de piezas musicales a través de la danza, artes visuales o teatro. Desarrollo de audición e</td><td>Exploración del movimiento corporal en niveles (alto, medio y bajo) y alcances (cerca- lejos, extensión y contracción). Realización de movimientos con diferentes segmentos corporales de elementos de la naturaleza y del entorno. Preparación de secuencias sencillas donde se ubique en el espacio general y en el personal. Experimentación de las posibilidades del movimiento, utilizando los elementos de tiempo, energía y espacio. Creación de secuencias cortas</td><td>Distinción de elementos plásticos de las artes visuales para la representación en diversas producciones (el punto y la línea). Uso de las posibilidades expresivas de la línea y el punto en la creación de formas. Utilización de posibilidades plásticas de las formas considerando su relación con el fondo. Elaboración de dibujo libre y reconocimiento de la bidimensionalidad. Uso del color como un elemento plástico</td><td>Utilización de la expresión corporal para la comunicación de ideas y sentimientos. Uso de expresiones corporales para la comunicación de eventos de su vida cotidiana. Uso de los sentidos en la evocación de formas, olores, sonidos, texturas y sabores de su entorno. Expresión de sensaciones y comunicación de ideas con el uso de las posibilidades de su voz. Representación de ideas utilizando la</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Acompañamiento de Exploración del Distinción de Utilización de la</p><p class="pdf-source-line">canciones utilizando movimiento elementos plásticos expresión corporal</p><p class="pdf-source-line">sonidos y silencios corporal en niveles de las artes visuales para la</p><p class="pdf-source-line">producidos con (alto, medio y bajo) para la comunicación de</p><p class="pdf-source-line">diferentes partes del y alcances (cerca- representación en ideas y</p><p class="pdf-source-line">cuerpo. lejos, extensión y diversas sentimientos.</p><p class="pdf-source-line">contracción). producciones (el</p><p class="pdf-source-line">Diferenciación de Realización de Uso de las Uso de</p><p class="pdf-source-line">las cualidades del movimientos con posibilidades expresiones</p><p class="pdf-source-line">sonido (duración e diferentes expresivas de la corporales para la</p><p class="pdf-source-line">intensidad, altura y segmentos línea y el punto en la comunicación de</p><p class="pdf-source-line">timbre). corporales de creación de formas. eventos de su vida</p><p class="pdf-source-line">elementos de la cotidiana.</p><p class="pdf-source-line">Recreación de Preparación de Utilización de Uso de los sentidos</p><p class="pdf-source-line">paisajes sonoros secuencias posibilidades en la evocación de</p><p class="pdf-source-line">mediante la sencillas donde se plásticas de las formas, olores,</p><p class="pdf-source-line">exploración de las ubique en el formas sonidos, texturas y</p><p class="pdf-source-line">cualidades del espacio general y considerando su sabores de su</p><p class="pdf-source-line">sonido. en el personal. relación con el entorno.</p><p class="pdf-source-line">Representación de Experimentación Elaboración de Expresión de</p><p class="pdf-source-line">sensaciones que de las dibujo libre y sensaciones y</p><p class="pdf-source-line">producen la escucha posibilidades del reconocimiento de la comunicación de</p><p class="pdf-source-line">de piezas musicales movimiento, bidimensionalidad. ideas con el uso de</p><p class="pdf-source-line">a través de la danza, utilizando los las posibilidades</p><p class="pdf-source-line">artes visuales o elementos de de su voz.</p><p class="pdf-source-line">teatro. tiempo, energía y</p><p class="pdf-source-line">Desarrollo de Creación de Uso del color como Representación de</p><p class="pdf-source-line">audición e secuencias cortas un elemento plástico ideas utilizando la</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 25 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	25</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 25</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la
-# tercera fase
-Contenido nacional
-Uso de elementos de los lenguajes artísticos en la vida cotidiana
-Contenido estatal de música
-• 	Diferenciación de las cualidades del sonido (duración e intensidad, altura y
-timbre).
-• 	Recreación paisajes sonoros mediante la exploración de las cualidades del
-sonido.
-PDA 1° 	PDA 2°
-Reconocimiento 	del 	sonido 	con 	sus
-cualidades (duración, intensidad, altura y
-timbre), 	para 	la 	comunicación 	de
-sensaciones, emociones, sentimientos e
-ideas.
-Representación de situaciones cotidianas
-relacionadas 	con 	el 	entorno 	natural 	y
-social, 	por 	medio 	de 	sonidos 	con 	sus
-cualidades 	para 	la 	comunicación 	de
-sensaciones, emociones, sentimientos e
-ideas.
-Contenido nacional
-Intervención del entorno familiar y escolar para imaginar y realizar propuestas de
-mejora
-Contenido estatal de música
-• 	Acompañamiento de canciones utilizando sonidos y silencios producidos con
-diferentes partes de su cuerpo.
-• 	Representación de sensaciones que producen la escucha de piezas musicales
-a través de la danza, artes visuales o teatro.
-PDA 1° 	PDA 2°
-Exploración 	y 	experimentación 	de 	las
-cualidades del entorno familiar y escolar
-para la representación de canciones por
-medio 	de 	sonidos 	producidos 	con
-diferentes partes de su cuerpo.
-Imaginación 	y 	proposición 	de
-posibilidades de cambio y mejora en el
-entorno familiar y escolar, representación
-de 	dichas 	posibilidades 	mediante 	una
-producción artística que incluya cantos,
-sonidos u otras expresiones del arte, a
-partir 	de 	acuerdos 	grupales 	y 	la
-identificación de un problema común.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 25" tabindex="0"><table class="pdf-table"><tbody><tr><th>interpretación de canciones haciendo discriminación en las cualidades del sonido. Construcción de distintitos instrumentos de percusión utilizando materiales de uso cotidiano para improvisar acompañamientos rítmicos de canciones. Ejecución del pulso en diversas melodías con el cuerpo, objetos o instrumentos de percusión para presentarlas frente a un público.</th><th>y movimiento utilizando distintos ejes corporales. Realización de montaje coreográfico de una ronda y/o danza creativa con temática.</th><th>en la creación de imágenes. Comparación de sensaciones que le producen las texturas de diferentes objetos percibidos por el tacto y la vista. Representación de ritmos visuales en imágenes, a partir de diferentes formas. Elaboración de producciones bidimensionales utilizando diversas formas básicas, orgánicas y accidentadas</th><th>expresión corporal y verbal en diferentes situaciones. Exploración del movimiento y el uso consciente de las partes del cuerpo para la expresión de ideas, emociones y la creación de la relación escénica con otras personas. Distinción y utilización de rasgos principales de un personaje como (movimientos, gestos y voz) a partir de ideas, frases, imágenes, canciones o cuentos.</th></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">interpretación de y movimiento en la creación de expresión corporal</p><p class="pdf-source-line">canciones haciendo utilizando distintos imágenes. y verbal en</p><p class="pdf-source-line">discriminación en ejes corporales. diferentes</p><p class="pdf-source-line">las cualidades del situaciones.</p><p class="pdf-source-line">Construcción de montaje Comparación de Exploración del</p><p class="pdf-source-line">distintitos coreográfico de sensaciones que le movimiento y el</p><p class="pdf-source-line">instrumentos de una ronda y/o producen las uso consciente de</p><p class="pdf-source-line">percusión utilizando danza creativa con texturas de las partes del</p><p class="pdf-source-line">materiales de uso temática. diferentes objetos cuerpo para la</p><p class="pdf-source-line">cotidiano para percibidos por el expresión de ideas,</p><p class="pdf-source-line">improvisar tacto y la vista. emociones y la</p><p class="pdf-source-line">acompañamientos creación de la</p><p class="pdf-source-line">rítmicos de relación escénica</p><p class="pdf-source-line">canciones. con otras</p><p class="pdf-source-line">Ejecución del pulso Representación de Distinción y</p><p class="pdf-source-line">en diversas ritmos visuales en utilización de</p><p class="pdf-source-line">melodías con el imágenes, a partir rasgos principales</p><p class="pdf-source-line">cuerpo, objetos o de diferentes de un personaje</p><p class="pdf-source-line">instrumentos de formas. como</p><p class="pdf-source-line">percusión para (movimientos,</p><p class="pdf-source-line">presentarlas frente a gestos y voz) a</p><p class="pdf-source-line">un público. partir de ideas,</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 26 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	26</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 26</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Apreciación y ejecución de canciones, rondas infantiles, arrullos y cuentos
-Contenido estatal de música
-• 	Audición 	e 	interpretación 	de 	canciones 	haciendo 	discriminación 	en 	las
-cualidades del sonido
-• 	Ejecución 	del 	pulso 	de 	diversas 	melodías 	con 	el 	cuerpo, 	objetos 	o
-instrumentos de percusión para presentarlas frente a un público.
-PDA 1° 	PDA 2°
-Seguimiento 	del 	pulso 	en 	diversas
-canciones, rondas infantiles y arrullos al
-cantarlas con el docente de artes, elección
-y explicación de las que son de su agrado
-Seguimiento de la letra de canciones,
-rondas infantiles y arrullos conocidos e
-identificación del pulso y el ritmo.
-Contenido nacional
-Experimentación con elementos sonoros en composiciones literarias
-Contenido estatal de música
-• 	Ejecución 	del 	pulso 	de 	diversas 	melodías 	con 	el 	cuerpo, 	objetos 	o
-instrumentos de percusión para presentarlas frente a un público
-• 	Construcción de distintos instrumentos de percusión utilizando materiales de
-uso cotidiano para improvisar acompañamientos rítmicos de canciones.
-PDA 1° 	PDA 2°
-Producción y reconocimiento de la función
-y características de la rima (sonoridad,
-ritmo, musicalidad) en canciones, a partir
-de situaciones cotidianas, así como la
-interpretación de estas utilizando objetos
-de uso cotidiano.
-Construcción 	de 	distintos 	cotidiáfonos
-para 	el 	acompañamiento 	de 	una
-secuencia 	sonora 	que 	represente 	las
-sensaciones, 	emociones 	e 	ideas
-provocadas por composiciones literarias,
-mediante la exploración de variaciones
-en las cualidades del sonido.
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la</h3>
+<p class="pdf-source-line">tercera fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 26" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Uso de elementos de los lenguajes artísticos en la vida cotidiana</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Diferenciación de las cualidades del sonido (duración e intensidad, altura y timbre). • Recreación paisajes sonoros mediante la exploración de las cualidades del sonido.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Reconocimiento del sonido con sus cualidades (duración, intensidad, altura y timbre), para la comunicación de sensaciones, emociones, sentimientos e ideas.</td><td>Representación de situaciones cotidianas relacionadas con el entorno natural y social, por medio de sonidos con sus cualidades para la comunicación de sensaciones, emociones, sentimientos e ideas.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 26" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Intervención del entorno familiar y escolar para imaginar y realizar propuestas de</td></tr><tr><td colspan="2">mejora</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Acompañamiento de canciones utilizando sonidos y silencios producidos con</td></tr><tr><td colspan="2">diferentes partes de su cuerpo.</td></tr><tr><td colspan="2">• Representación de sensaciones que producen la escucha de piezas musicales</td></tr><tr><td colspan="2">a través de la danza, artes visuales o teatro.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Exploración y experimentación de las cualidades del entorno familiar y escolar para la representación de canciones por medio de sonidos producidos con diferentes partes de su cuerpo.</td><td>Imaginación y proposición de posibilidades de cambio y mejora en el entorno familiar y escolar, representación de dichas posibilidades mediante una producción artística que incluya cantos, sonidos u otras expresiones del arte, a partir de acuerdos grupales y la identificación de un problema común.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Reconocimiento del sonido con sus Representación de situaciones cotidianas</p><p class="pdf-source-line">cualidades (duración, intensidad, altura y relacionadas con el entorno natural y</p><p class="pdf-source-line">timbre), para la comunicación de social, por medio de sonidos con sus</p><p class="pdf-source-line">sensaciones, emociones, sentimientos e cualidades para la comunicación de</p><p class="pdf-source-line">ideas. sensaciones, emociones, sentimientos e</p><p class="pdf-source-line">Exploración y experimentación de las Imaginación y proposición de</p><p class="pdf-source-line">cualidades del entorno familiar y escolar posibilidades de cambio y mejora en el</p><p class="pdf-source-line">para la representación de canciones por entorno familiar y escolar, representación</p><p class="pdf-source-line">medio de sonidos producidos con de dichas posibilidades mediante una</p><p class="pdf-source-line">diferentes partes de su cuerpo. producción artística que incluya cantos,</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 27 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	27</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 27</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Interacción con manifestaciones culturales y artísticas
-Contenido estatal de música
-• 	Acompañamiento de canciones utilizando sonidos y silencios producidos con
-diferentes partes de su cuerpo.
-• 	Audición 	e 	interpretación 	de 	canciones 	haciendo 	discriminación 	en 	las
-cualidades del sonido.
-PDA1° 	PDA 2°
-Interacción 	con 	manifestaciones
-musicales (música popular, clásica, baile
-o festiva) presentes en su comunidad, y
-reconocimiento 	de 	que 	las 	personas
-expresan sensaciones, emociones e ideas
-a través de estas.
-Reflexión 	sobre 	la 	música 	como
-manifestación 	cultural 	y 	expresión 	de
-formas de ser, estar y nombrar el mundo,
-con identificación de la comunicación de
-emociones, ideas y visiones de la realidad
-a través de sonidos, silencios y pulso.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 27" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Apreciación y ejecución de canciones, rondas infantiles, arrullos y cuentos</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Audición e interpretación de canciones haciendo discriminación en las</td></tr><tr><td colspan="2">cualidades del sonido</td></tr><tr><td colspan="2">• Ejecución del pulso de diversas melodías con el cuerpo, objetos o</td></tr><tr><td colspan="2">instrumentos de percusión para presentarlas frente a un público.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Seguimiento del pulso en diversas canciones, rondas infantiles y arrullos al cantarlas con el docente de artes, elección y explicación de las que son de su agrado</td><td>Seguimiento de la letra de canciones, rondas infantiles y arrullos conocidos e identificación del pulso y el ritmo.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 27" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Experimentación con elementos sonoros en composiciones literarias</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Ejecución del pulso de diversas melodías con el cuerpo, objetos o</td></tr><tr><td colspan="2">instrumentos de percusión para presentarlas frente a un público</td></tr><tr><td colspan="2">• Construcción de distintos instrumentos de percusión utilizando materiales de</td></tr><tr><td colspan="2">uso cotidiano para improvisar acompañamientos rítmicos de canciones.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Producción y reconocimiento de la función y características de la rima (sonoridad, ritmo, musicalidad) en canciones, a partir de situaciones cotidianas, así como la interpretación de estas utilizando objetos de uso cotidiano.</td><td>Construcción de distintos cotidiáfonos para el acompañamiento de una secuencia sonora que represente las sensaciones, emociones e ideas provocadas por composiciones literarias, mediante la exploración de variaciones en las cualidades del sonido.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Seguimiento del pulso en diversas Seguimiento de la letra de canciones,</p><p class="pdf-source-line">canciones, rondas infantiles y arrullos al rondas infantiles y arrullos conocidos e</p><p class="pdf-source-line">cantarlas con el docente de artes, elección identificación del pulso y el ritmo.</p><p class="pdf-source-line">Producción y reconocimiento de la función Construcción de distintos cotidiáfonos</p><p class="pdf-source-line">y características de la rima (sonoridad, para el acompañamiento de una</p><p class="pdf-source-line">ritmo, musicalidad) en canciones, a partir secuencia sonora que represente las</p><p class="pdf-source-line">de situaciones cotidianas, así como la sensaciones, emociones e ideas</p><p class="pdf-source-line">interpretación de estas utilizando objetos provocadas por composiciones literarias,</p><p class="pdf-source-line">de uso cotidiano. mediante la exploración de variaciones</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 28 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	28</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 28</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la
-# tercera fase
-Contenido nacional
-Descripción de objetos, lugares y seres vivos
-Contenido estatal de danza
-• 	Realización de movimientos con los diferentes segmentos corporales con
-elementos de la naturaleza del entorno.
-PDA 1° 	PDA 2°
-Exploración 	y 	experimentación 	de
-cualidades 	del 	movimiento 	para 	la
-representación de objetos, lugares y seres
-vivos 	del 	entorno, 	mediante
-desplazamientos, 	gestos, 	posturas 	y
-secuencias corporales.
-Descripción, interpretación y recreación
-de objetos, lugares y seres vivos mediante
-movimientos corporales, con utilización de
-elementos 	básicos 	de 	la 	expresión
-corporal 	para 	la 	comunicación 	de 	sus
-características.
-Contenido nacional
-Uso de elementos de los lenguajes artísticos en la vida cotidiana
-Contenido estatal de danza
-• 	Exploración del movimiento corporal en niveles (alto, medio y bajo) y alcances
-(cerca-lejos, extensión y contracción).
-• 	Realización de movimientos con los diferentes segmentos corporales con
-elementos de la naturaleza y el entorno.
-PDA1° 	PDA 2°
-Reconocimiento 	de 	los 	movimientos
-corporales 	(niveles 	y 	alcances) 	como
-lenguajes que posibilitan la comunicación
-de sensaciones, emociones, sentimientos e
-ideas.
-Representación 	de 	situaciones
-cotidianas vinculadas al entorno natural
-y 	social 	mediante 	movimientos
-corporales 	para 	la 	comunicación 	de
-sensaciones, emociones, sentimientos e
-ideas.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 28" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Interacción con manifestaciones culturales y artísticas</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Acompañamiento de canciones utilizando sonidos y silencios producidos con</td></tr><tr><td colspan="2">diferentes partes de su cuerpo.</td></tr><tr><td colspan="2">• Audición e interpretación de canciones haciendo discriminación en las</td></tr><tr><td colspan="2">cualidades del sonido.</td></tr><tr><td>PDA1°</td><td>PDA 2°</td></tr><tr><td>Interacción con manifestaciones musicales (música popular, clásica, baile o festiva) presentes en su comunidad, y reconocimiento de que las personas expresan sensaciones, emociones e ideas a través de estas.</td><td>Reflexión sobre la música como manifestación cultural y expresión de formas de ser, estar y nombrar el mundo, con identificación de la comunicación de emociones, ideas y visiones de la realidad a través de sonidos, silencios y pulso.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Interacción con manifestaciones Reflexión sobre la música como</p><p class="pdf-source-line">musicales (música popular, clásica, baile manifestación cultural y expresión de</p><p class="pdf-source-line">o festiva) presentes en su comunidad, y formas de ser, estar y nombrar el mundo,</p><p class="pdf-source-line">reconocimiento de que las personas con identificación de la comunicación de</p><p class="pdf-source-line">expresan sensaciones, emociones e ideas emociones, ideas y visiones de la realidad</p><p class="pdf-source-line">a través de estas. a través de sonidos, silencios y pulso.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 29 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	29</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 29</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Intervención del entorno familiar y escolar para imaginar y realizar propuestas de
-mejora
-Contenido estatal de danza
-• 	Experimentación de las posibilidades del movimiento, utilizando los elementos de
-tiempo, energía y espacio.
-• 	Creación de secuencias cortas de movimiento utilizando distintos ejes y planos.
-PDA 1° 	PDA 2°
-Exploración y experimentación creativa de
-las 	cualidades 	del 	entorno 	familiar 	y
-escolar mediante el uso de los elementos
-de 	tiempo, 	energía 	y 	espacio 	para 	la
-creación 	de 	movimientos 	y
-desplazamientos propios de la danza.
-Imaginación y propuesta de mejoras para
-el 	entorno 	familiar 	y 	escolar 	mediante
-representaciones en secuencias breves
-de movimiento que exploran ejes y planos
-diversos, 	organizadas 	colectivamente
-para 	la 	creación 	de 	una 	composición
-dancística.
-Contenido nacional
-Apreciación de canciones, rondas infantiles, arrullos y cuentos
-Contenido estatal de danza
-• 	Preparación de secuencias sencillas donde se ubique en el espacio general y
-en el personal.
-PDA 1° 	PDA 2°
-Seguimiento del ritmo y la melodía de
-canciones 	y 	rondas 	mediante
-movimientos corporales, con ubicación en
-el espacio personal y general, y reflexión
-sobre la expresión de palabras y frases a
-través del cuerpo.
-Seguimiento del ritmo y la melodía de
-canciones 	y 	rondas 	infantiles, 	con
-interpretación 	corporal 	de 	frases 	y
-palabras, y aprendizaje del movimiento
-con cuidado del espacio propio y el de los
-compañeros.
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la</h3>
+<p class="pdf-source-line">tercera fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 29" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Descripción de objetos, lugares y seres vivos</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Realización de movimientos con los diferentes segmentos corporales con</td></tr><tr><td colspan="2">elementos de la naturaleza del entorno.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Exploración y experimentación de cualidades del movimiento para la representación de objetos, lugares y seres vivos del entorno, mediante desplazamientos, gestos, posturas y secuencias corporales.</td><td>Descripción, interpretación y recreación de objetos, lugares y seres vivos mediante movimientos corporales, con utilización de elementos básicos de la expresión corporal para la comunicación de sus características.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 29" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Uso de elementos de los lenguajes artísticos en la vida cotidiana</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Exploración del movimiento corporal en niveles (alto, medio y bajo) y alcances</td></tr><tr><td colspan="2">(cerca-lejos, extensión y contracción).</td></tr><tr><td colspan="2">• Realización de movimientos con los diferentes segmentos corporales con</td></tr><tr><td colspan="2">elementos de la naturaleza y el entorno.</td></tr><tr><td>PDA1°</td><td>PDA 2°</td></tr><tr><td>Reconocimiento de los movimientos corporales (niveles y alcances) como lenguajes que posibilitan la comunicación de sensaciones, emociones, sentimientos e ideas.</td><td>Representación de situaciones cotidianas vinculadas al entorno natural y social mediante movimientos corporales para la comunicación de sensaciones, emociones, sentimientos e ideas.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Exploración y experimentación de Descripción, interpretación y recreación</p><p class="pdf-source-line">cualidades del movimiento para la de objetos, lugares y seres vivos mediante</p><p class="pdf-source-line">representación de objetos, lugares y seres movimientos corporales, con utilización de</p><p class="pdf-source-line">vivos del entorno, mediante elementos básicos de la expresión</p><p class="pdf-source-line">desplazamientos, gestos, posturas y corporal para la comunicación de sus</p><p class="pdf-source-line">secuencias corporales. características.</p><p class="pdf-source-line">Reconocimiento de los movimientos Representación de situaciones</p><p class="pdf-source-line">corporales (niveles y alcances) como cotidianas vinculadas al entorno natural</p><p class="pdf-source-line">lenguajes que posibilitan la comunicación y social mediante movimientos</p><p class="pdf-source-line">de sensaciones, emociones, sentimientos e corporales para la comunicación de</p><p class="pdf-source-line">ideas. sensaciones, emociones, sentimientos e</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 30 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	30</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 30</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Interacción con manifestaciones culturales y artísticas
-Contenido estatal de danza
-• 	Realización 	de 	movimientos 	con 	los 	diferentes 	segmentos 	corporales 	con
-elementos de la naturaleza y el entorno.
-• 	Realización de montaje coreográfico de una ronda y/o danza creativa con temática.
-PDA 1° 	PDA 2°
-Observación de danzas y bailes de la
-comunidad 	para 	la 	identificación 	de
-emociones 	e 	ideas 	que 	transmiten, 	y
-realización de un montaje coreográfico
-mediante 	movimientos 	corporales 	y
-desplazamientos 	que 	expresen 	dichas
-emociones e ideas.
-Exploración e interacción con danzas y
-bailes de la comunidad, en relación con
-ideas y experiencias propias, y creación
-de una danza creativa mediante ritmo,
-gestos y movimientos que representen la
-identidad individual y colectiva.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 30" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Intervención del entorno familiar y escolar para imaginar y realizar propuestas de</td></tr><tr><td colspan="2">mejora</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Experimentación de las posibilidades del movimiento, utilizando los elementos de</td></tr><tr><td colspan="2">tiempo, energía y espacio.</td></tr><tr><td colspan="2">• Creación de secuencias cortas de movimiento utilizando distintos ejes y planos.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Exploración y experimentación creativa de las cualidades del entorno familiar y escolar mediante el uso de los elementos de tiempo, energía y espacio para la creación de movimientos y desplazamientos propios de la danza.</td><td>Imaginación y propuesta de mejoras para el entorno familiar y escolar mediante representaciones en secuencias breves de movimiento que exploran ejes y planos diversos, organizadas colectivamente para la creación de una composición dancística.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 30" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Apreciación de canciones, rondas infantiles, arrullos y cuentos</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Preparación de secuencias sencillas donde se ubique en el espacio general y</td></tr><tr><td colspan="2">en el personal.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Seguimiento del ritmo y la melodía de canciones y rondas mediante movimientos corporales, con ubicación en el espacio personal y general, y reflexión sobre la expresión de palabras y frases a través del cuerpo.</td><td>Seguimiento del ritmo y la melodía de canciones y rondas infantiles, con interpretación corporal de frases y palabras, y aprendizaje del movimiento con cuidado del espacio propio y el de los compañeros.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Exploración y experimentación creativa de Imaginación y propuesta de mejoras para</p><p class="pdf-source-line">las cualidades del entorno familiar y el entorno familiar y escolar mediante</p><p class="pdf-source-line">escolar mediante el uso de los elementos representaciones en secuencias breves</p><p class="pdf-source-line">de tiempo, energía y espacio para la de movimiento que exploran ejes y planos</p><p class="pdf-source-line">creación de movimientos y diversos, organizadas colectivamente</p><p class="pdf-source-line">desplazamientos propios de la danza. para la creación de una composición</p><p class="pdf-source-line">Seguimiento del ritmo y la melodía de Seguimiento del ritmo y la melodía de</p><p class="pdf-source-line">canciones y rondas mediante canciones y rondas infantiles, con</p><p class="pdf-source-line">movimientos corporales, con ubicación en interpretación corporal de frases y</p><p class="pdf-source-line">el espacio personal y general, y reflexión palabras, y aprendizaje del movimiento</p><p class="pdf-source-line">sobre la expresión de palabras y frases a con cuidado del espacio propio y el de los</p><p class="pdf-source-line">través del cuerpo. compañeros.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 31 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	31</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 31</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales
-de la tercera fase
-Contenido nacional
-Descripción de objetos, lugares y seres vivos
-Contenido estatal de artes visuales
-• 	Distinción de elementos plásticos de las artes visuales para representarlos en
-diversas producciones (el punto y la línea).
-• 	Elaboración de dibujo libre y reconocimiento de la bidimensionalidad.
-PDA 1° 	PDA 2°
-Representación 	de 	objetos, 	lugares 	y
-seres vivos mediante dibujos sencillos,
-con utilización de elementos básicos de
-las artes visuales como el punto, la línea,
-la forma y el color.
-Descripción 	y 	recreación 	plástica 	de
-objetos, lugares y seres vivos mediante
-dibujos, 	con 	utilización 	de 	elementos
-como el punto, la línea, la forma y el color.
-Contenido nacional
-Uso de elementos de los lenguajes artísticos en la vida cotidiana
-Contenido estatal de artes visuales
-• 	Uso del color como un elemento plástico en la creación de imágenes.
-• 	Comparación de sensaciones que le producen las texturas de diferentes objetos
-percibidos con el tacto y la vista.
-PDA 1° 	PDA 2°
-Reconocimiento de las imágenes como
-lenguaje que posibilita la comunicación, y
-experimentación 	con 	formas, 	colores 	y
-texturas 	para 	la 	expresión 	de
-sensaciones, emociones, sentimientos e
-ideas provenientes del entorno.
-Representación de situaciones cotidianas
-del entorno natural y social mediante la
-creación de imágenes, con exploración de
-formas, 	colores 	y 	texturas 	de 	distintos
-objetos 	para 	la 	comunicación 	de
-sensaciones, emociones, sentimientos e
-ideas a través de composiciones visuales.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 31" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Interacción con manifestaciones culturales y artísticas</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Realización de movimientos con los diferentes segmentos corporales con</td></tr><tr><td colspan="2">elementos de la naturaleza y el entorno.</td></tr><tr><td colspan="2">• Realización de montaje coreográfico de una ronda y/o danza creativa con temática.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Observación de danzas y bailes de la comunidad para la identificación de emociones e ideas que transmiten, y realización de un montaje coreográfico mediante movimientos corporales y desplazamientos que expresen dichas emociones e ideas.</td><td>Exploración e interacción con danzas y bailes de la comunidad, en relación con ideas y experiencias propias, y creación de una danza creativa mediante ritmo, gestos y movimientos que representen la identidad individual y colectiva.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Observación de danzas y bailes de la Exploración e interacción con danzas y</p><p class="pdf-source-line">comunidad para la identificación de bailes de la comunidad, en relación con</p><p class="pdf-source-line">emociones e ideas que transmiten, y ideas y experiencias propias, y creación</p><p class="pdf-source-line">realización de un montaje coreográfico de una danza creativa mediante ritmo,</p><p class="pdf-source-line">mediante movimientos corporales y gestos y movimientos que representen la</p><p class="pdf-source-line">desplazamientos que expresen dichas identidad individual y colectiva.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 32 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	32</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 32</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Intervención del entorno familiar y escolar para imaginar y realizar propuestas de
-mejora
-Contenido estatal de artes visuales
-• 	Elaboración de dibujo libre y reconocimiento de la bidimensionalidad
-• 	Uso de las posibilidades expresivas de la línea y el punto en la creación de formas
-PDA 1° 	PDA 2°
-Exploración y representación creativa de
-las 	cualidades 	del 	entorno 	familiar 	y
-escolar mediante el uso intencional de
-formas 	y 	colores, 	con 	creación 	de
-composiciones visuales que intervienen
-temporalmente 	el 	espacio 	para 	la
-expresión 	y 	transformación 	de 	la
-percepción del entorno.
-Imaginación de posibilidades de cambio y
-mejora en el entorno familiar y escolar, y
-participación en intervenciones colectivas
-mediante 	la 	creación 	de 	imágenes,
-objetos 	y 	composiciones 	visuales 	que
-expresen propuestas para la resolución de
-problemáticas del entorno.
-Contenido nacional
-Uso de los lenguajes artísticos para expresar rasgos de las identidades personal y
-colectiva
-Contenido estatal de artes visuales
-• 	Elaboración de dibujo libre y reconocimiento de la bidimensional.
-• 	Uso del color como un elemento plástico en la creación de imágenes.
-PDA 1° 	PDA 2°
-Representación 	mediante 	dibujo 	libre,
-formas 	y 	colores 	del 	significado 	del
-nombre, 	gustos 	e 	intereses, 	y
-participación en la creación colectiva de
-un mural o secuencia de imágenes para
-compartir la identidad grupal.
-Reconocimiento 	y 	representación 	de
-aspectos de la identidad y de aquello que
-provoca 	curiosidad, 	gusto, 	temor 	o
-asombro, 	mediante 	dibujos
-bidimensionales 	que 	integran
-creativamente formas, figuras, colores y
-texturas.
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales</h3>
+<p class="pdf-source-line">de la tercera fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 32" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Descripción de objetos, lugares y seres vivos</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Distinción de elementos plásticos de las artes visuales para representarlos en</td></tr><tr><td colspan="2">diversas producciones (el punto y la línea).</td></tr><tr><td colspan="2">• Elaboración de dibujo libre y reconocimiento de la bidimensionalidad.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Representación de objetos, lugares y seres vivos mediante dibujos sencillos, con utilización de elementos básicos de las artes visuales como el punto, la línea, la forma y el color.</td><td>Descripción y recreación plástica de objetos, lugares y seres vivos mediante dibujos, con utilización de elementos como el punto, la línea, la forma y el color.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 32" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Uso de elementos de los lenguajes artísticos en la vida cotidiana</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Uso del color como un elemento plástico en la creación de imágenes.</td></tr><tr><td colspan="2">• Comparación de sensaciones que le producen las texturas de diferentes objetos</td></tr><tr><td colspan="2">percibidos con el tacto y la vista.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Reconocimiento de las imágenes como lenguaje que posibilita la comunicación, y experimentación con formas, colores y texturas para la expresión de sensaciones, emociones, sentimientos e ideas provenientes del entorno.</td><td>Representación de situaciones cotidianas del entorno natural y social mediante la creación de imágenes, con exploración de formas, colores y texturas de distintos objetos para la comunicación de sensaciones, emociones, sentimientos e ideas a través de composiciones visuales.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Representación de objetos, lugares y Descripción y recreación plástica de</p><p class="pdf-source-line">seres vivos mediante dibujos sencillos, objetos, lugares y seres vivos mediante</p><p class="pdf-source-line">con utilización de elementos básicos de dibujos, con utilización de elementos</p><p class="pdf-source-line">las artes visuales como el punto, la línea, como el punto, la línea, la forma y el color.</p><p class="pdf-source-line">Reconocimiento de las imágenes como Representación de situaciones cotidianas</p><p class="pdf-source-line">lenguaje que posibilita la comunicación, y del entorno natural y social mediante la</p><p class="pdf-source-line">experimentación con formas, colores y creación de imágenes, con exploración de</p><p class="pdf-source-line">texturas para la expresión de formas, colores y texturas de distintos</p><p class="pdf-source-line">sensaciones, emociones, sentimientos e objetos para la comunicación de</p><p class="pdf-source-line">ideas provenientes del entorno. sensaciones, emociones, sentimientos e</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 33 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	33</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 33</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacionales
-Interacción con manifestaciones culturales y artísticas
-Contenido estatal de artes visuales
-• 	Elaboración 	de 	producciones 	bidimensionales 	utilizando 	diversas 	formas
-básicas geométricas, orgánicas y accidentadas.
-PDA 1° 	PDA 2°
-Interacción 	con 	manifestaciones
-culturales 	y 	artísticas 	visuales 	de 	la
-comunidad (murales, pinturas, artesanías
-o 	carteles) 	para 	la 	reflexión 	sobre 	las
-emociones 	e 	ideas 	que 	generan, 	y
-elaboración 	de 	producciones
-bidimensionales que integren imágenes,
-formas y colores.
-Exploración e interacción con murales,
-cerámica, 	grabados 	y 	textiles 	de 	la
-comunidad, 	en 	relación 	con 	ideas 	y
-experiencias 	propias, 	y 	elaboración 	de
-producciones 	bidimensionales 	que
-representen 	aspectos 	de 	la 	identidad
-personal y colectiva.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 33" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Intervención del entorno familiar y escolar para imaginar y realizar propuestas de</td></tr><tr><td colspan="2">mejora</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Elaboración de dibujo libre y reconocimiento de la bidimensionalidad</td></tr><tr><td colspan="2">• Uso de las posibilidades expresivas de la línea y el punto en la creación de formas</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Exploración y representación creativa de las cualidades del entorno familiar y escolar mediante el uso intencional de formas y colores, con creación de composiciones visuales que intervienen temporalmente el espacio para la expresión y transformación de la percepción del entorno.</td><td>Imaginación de posibilidades de cambio y mejora en el entorno familiar y escolar, y participación en intervenciones colectivas mediante la creación de imágenes, objetos y composiciones visuales que expresen propuestas para la resolución de problemáticas del entorno.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 33" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Uso de los lenguajes artísticos para expresar rasgos de las identidades personal y</td></tr><tr><td colspan="2">colectiva</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Elaboración de dibujo libre y reconocimiento de la bidimensional.</td></tr><tr><td colspan="2">• Uso del color como un elemento plástico en la creación de imágenes.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Representación mediante dibujo libre, formas y colores del significado del nombre, gustos e intereses, y participación en la creación colectiva de un mural o secuencia de imágenes para compartir la identidad grupal.</td><td>Reconocimiento y representación de aspectos de la identidad y de aquello que provoca curiosidad, gusto, temor o asombro, mediante dibujos bidimensionales que integran creativamente formas, figuras, colores y texturas.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Exploración y representación creativa de Imaginación de posibilidades de cambio y</p><p class="pdf-source-line">las cualidades del entorno familiar y mejora en el entorno familiar y escolar, y</p><p class="pdf-source-line">escolar mediante el uso intencional de participación en intervenciones colectivas</p><p class="pdf-source-line">formas y colores, con creación de mediante la creación de imágenes,</p><p class="pdf-source-line">composiciones visuales que intervienen objetos y composiciones visuales que</p><p class="pdf-source-line">temporalmente el espacio para la expresen propuestas para la resolución de</p><p class="pdf-source-line">expresión y transformación de la problemáticas del entorno.</p><p class="pdf-source-line">Representación mediante dibujo libre, Reconocimiento y representación de</p><p class="pdf-source-line">formas y colores del significado del aspectos de la identidad y de aquello que</p><p class="pdf-source-line">nombre, gustos e intereses, y provoca curiosidad, gusto, temor o</p><p class="pdf-source-line">participación en la creación colectiva de asombro, mediante dibujos</p><p class="pdf-source-line">un mural o secuencia de imágenes para bidimensionales que integran</p><p class="pdf-source-line">compartir la identidad grupal. creativamente formas, figuras, colores y</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 34 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	34</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 34</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la
-# tercera fase
-Contenido nacional
-Narración de actividades y eventos relevantes que tengan lugar en la familia, la
-escuela o el resto de la comunidad
-Contenido estatal de teatro
-• 	Utilización de la expresión corporal y las posibilidades de su voz para comunicar
-ideas, sentimientos y sensaciones.
-PDA 1° 	PDA 2°
-Narración de historias vinculadas con el
-entorno inmediato mediante la expresión
-corporal 	y 	la 	utilización 	de 	sonidos
-onomatopéyicos (agudos y graves).
-Narración de actividades y eventos del
-entorno mediante el uso claro y adecuado
-de la voz, con organización de acciones
-en 	orden 	para 	la 	representación 	de
-personajes, lugares y acontecimientos a
-través del juego dramático
-Contenido nacional
-Descripción de objetos, lugares y seres vivos
-Contenido estatal de teatro
-• 	Distinción 	y 	utilización 	de 	rasgos 	principales 	de 	un 	personaje 	como
-(movimientos, gestos y voz) a partir de ideas, frases, imágenes, canciones o
-cuentos.
-• 	Exploración del movimiento y el uso consciente de las partes del cuerpo para la
-expresión de ideas, emociones y la creación de la relación escénica con otras
-personas.
-PDA 1° 	PDA 2°
-Representación 	de 	objetos, 	lugares 	y
-seres vivos mediante el uso expresivo del
-cuerpo, 	la 	voz 	y 	el 	gesto, 	para 	la
-comunicación 	de 	ideas, 	emociones 	y
-situaciones.
-Descripción 	y 	recreación 	de 	lugares 	y
-personajes del entorno mediante el uso
-del cuerpo, la voz y el gesto, para la
-comunicación 	de 	ideas, 	emociones 	y
-situaciones de la vida cotidiana.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 34" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacionales</th></tr><tr><td colspan="2">Interacción con manifestaciones culturales y artísticas</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Elaboración de producciones bidimensionales utilizando diversas formas</td></tr><tr><td colspan="2">básicas geométricas, orgánicas y accidentadas.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Interacción con manifestaciones culturales y artísticas visuales de la comunidad (murales, pinturas, artesanías o carteles) para la reflexión sobre las emociones e ideas que generan, y elaboración de producciones bidimensionales que integren imágenes, formas y colores.</td><td>Exploración e interacción con murales, cerámica, grabados y textiles de la comunidad, en relación con ideas y experiencias propias, y elaboración de producciones bidimensionales que representen aspectos de la identidad personal y colectiva.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Interacción con manifestaciones Exploración e interacción con murales,</p><p class="pdf-source-line">culturales y artísticas visuales de la cerámica, grabados y textiles de la</p><p class="pdf-source-line">comunidad (murales, pinturas, artesanías comunidad, en relación con ideas y</p><p class="pdf-source-line">o carteles) para la reflexión sobre las experiencias propias, y elaboración de</p><p class="pdf-source-line">emociones e ideas que generan, y producciones bidimensionales que</p><p class="pdf-source-line">elaboración de producciones representen aspectos de la identidad</p><p class="pdf-source-line">bidimensionales que integren imágenes, personal y colectiva.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 35 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	35</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 35</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Uso de elementos de los lenguajes artísticos en la vida cotidiana
-Contenido estatal de teatro
-• 	Uso de expresiones corporales para la 	comunicación eventos de su vida
-cotidiana
-PDA 1° 	PDA 2°
-Imitación de sonidos, gestos e imágenes
-del 	entorno 	para 	la 	representación
-expresiva 	de 	situaciones 	de 	la 	vida
-cotidiana, mediante el uso del cuerpo y la
-voz con intención teatral.
-Experimentación mediante el juego teatral
-de acciones de la vida cotidiana para su
-representación creativa.
-Contenido nacional
-Intervención del entorno familiar y escolar para imaginar y realizar propuestas de
-mejora
-Contenido estatal de teatro
-• 	Uso de los sentidos en la evocación de formas, olores, sonidos, texturas y
-sabores de su entorno.
-PDA1° 	PDA 2°
-Exploración mediante la imaginación y la
-creatividad del entorno familiar y escolar
-para la transformación de lo percibido en
-el juego teatral.
-Reconocimiento 	y 	expresión 	de
-sensaciones y emociones provocadas por
-el entorno mediante el uso intencional del
-cuerpo, con creación de representaciones
-colectivas y propuesta de soluciones a
-problemáticas comunes del entorno.
-Contenido nacional
-Uso de los lenguajes artísticos para expresar rasgos de las identidades personal y
-colectiva
-Contenido estatal de teatro
-• 	Representación de ideas utilizando la expresión corporal y verbal en diferentes
-situaciones.
-PDA 1° 	PDA 2°
-Crea 	y 	representa 	con 	movimientos
-corporales 	y 	gestos 	donde 	exprese 	el
-significado personal de su nombre.
-Reconoce y representa con movimientos
-corporales 	y 	gestos 	la 	creación 	de
-personaje que exprese quién es y cómo se
-siente.
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la</h3>
+<p class="pdf-source-line">tercera fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 35" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Narración de actividades y eventos relevantes que tengan lugar en la familia, la</td></tr><tr><td colspan="2">escuela o el resto de la comunidad</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Utilización de la expresión corporal y las posibilidades de su voz para comunicar</td></tr><tr><td colspan="2">ideas, sentimientos y sensaciones.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Narración de historias vinculadas con el entorno inmediato mediante la expresión corporal y la utilización de sonidos onomatopéyicos (agudos y graves).</td><td>Narración de actividades y eventos del entorno mediante el uso claro y adecuado de la voz, con organización de acciones en orden para la representación de personajes, lugares y acontecimientos a través del juego dramático</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 35" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Descripción de objetos, lugares y seres vivos</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Distinción y utilización de rasgos principales de un personaje como</td></tr><tr><td colspan="2">(movimientos, gestos y voz) a partir de ideas, frases, imágenes, canciones o</td></tr><tr><td colspan="2">cuentos.</td></tr><tr><td colspan="2">• Exploración del movimiento y el uso consciente de las partes del cuerpo para la</td></tr><tr><td colspan="2">expresión de ideas, emociones y la creación de la relación escénica con otras</td></tr><tr><td colspan="2">personas.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Representación de objetos, lugares y seres vivos mediante el uso expresivo del cuerpo, la voz y el gesto, para la comunicación de ideas, emociones y situaciones.</td><td>Descripción y recreación de lugares y personajes del entorno mediante el uso del cuerpo, la voz y el gesto, para la comunicación de ideas, emociones y situaciones de la vida cotidiana.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Narración de historias vinculadas con el Narración de actividades y eventos del</p><p class="pdf-source-line">entorno inmediato mediante la expresión entorno mediante el uso claro y adecuado</p><p class="pdf-source-line">corporal y la utilización de sonidos de la voz, con organización de acciones</p><p class="pdf-source-line">onomatopéyicos (agudos y graves). en orden para la representación de</p><p class="pdf-source-line">Representación de objetos, lugares y Descripción y recreación de lugares y</p><p class="pdf-source-line">seres vivos mediante el uso expresivo del personajes del entorno mediante el uso</p><p class="pdf-source-line">cuerpo, la voz y el gesto, para la del cuerpo, la voz y el gesto, para la</p><p class="pdf-source-line">comunicación de ideas, emociones y comunicación de ideas, emociones y</p><p class="pdf-source-line">situaciones. situaciones de la vida cotidiana.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 36 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	36</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 36</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Recreación de historias mediante el uso artístico de las palabras, del cuerpo, del
-espacio y del tiempo
-Contenido estatal de teatro
-• 	Exploración del movimiento y el uso consciente de las partes del cuerpo para la
-expresión de ideas, emociones y la creación de la relación escénica con otras
-personas.
-PDA 1° 	PDA 2°
-Representación mediante el juego teatral
-de historias propias o ficticias para su
-puesta en escena en el espacio escénico.
-Representación de una historia creada
-colectivamente mediante la utilización de
-objetos del entorno para la caracterización
-de personajes.
-Contenido nacional
-Representación de distintas formas de ser y estar en el mundo a partir de la ficción
-Contenido estatal de teatro
-• 	Distinción y utilización de rasgos principales de un personaje (movimientos,
-gestos y voz) a partir de ideas, frases, imágenes, canciones o cuentos.
-PDA 1° 	PDA 2°
-Interpretación 	de 	personajes 	ficticios
-inspirados 	en 	el 	entorno 	o 	en
-manifestaciones 	artísticas 	(cuentos,
-literatura, historietas) mediante el uso de
-recursos propios del personaje, vestuario y
-maquillaje para el enriquecimiento de la
-representación.
-Investigación 	y 	construcción 	de
-personajes 	ficticios 	inspirados 	en
-manifestaciones 	culturales, 	con
-incorporación 	de 	rasgos 	propios
-mediante 	movimientos, 	gestos, 	voz 	y
-recursos como vestuario, maquillaje o
-máscaras.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 36" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Uso de elementos de los lenguajes artísticos en la vida cotidiana</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Uso de expresiones corporales para la comunicación eventos de su vida</td></tr><tr><td colspan="2">cotidiana</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Imitación de sonidos, gestos e imágenes del entorno para la representación expresiva de situaciones de la vida cotidiana, mediante el uso del cuerpo y la voz con intención teatral.</td><td>Experimentación mediante el juego teatral de acciones de la vida cotidiana para su representación creativa.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 36" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Intervención del entorno familiar y escolar para imaginar y realizar propuestas de</td></tr><tr><td colspan="2">mejora</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Uso de los sentidos en la evocación de formas, olores, sonidos, texturas y</td></tr><tr><td colspan="2">sabores de su entorno.</td></tr><tr><td>PDA1°</td><td>PDA 2°</td></tr><tr><td>Exploración mediante la imaginación y la creatividad del entorno familiar y escolar para la transformación de lo percibido en el juego teatral.</td><td>Reconocimiento y expresión de sensaciones y emociones provocadas por el entorno mediante el uso intencional del cuerpo, con creación de representaciones colectivas y propuesta de soluciones a problemáticas comunes del entorno.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 3 de la página 36" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Uso de los lenguajes artísticos para expresar rasgos de las identidades personal y</td></tr><tr><td colspan="2">colectiva</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Representación de ideas utilizando la expresión corporal y verbal en diferentes</td></tr><tr><td colspan="2">situaciones.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Crea y representa con movimientos corporales y gestos donde exprese el significado personal de su nombre.</td><td>Reconoce y representa con movimientos corporales y gestos la creación de personaje que exprese quién es y cómo se siente.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Imitación de sonidos, gestos e imágenes Experimentación mediante el juego teatral</p><p class="pdf-source-line">del entorno para la representación de acciones de la vida cotidiana para su</p><p class="pdf-source-line">expresiva de situaciones de la vida representación creativa.</p><p class="pdf-source-line">Exploración mediante la imaginación y la Reconocimiento y expresión de</p><p class="pdf-source-line">creatividad del entorno familiar y escolar sensaciones y emociones provocadas por</p><p class="pdf-source-line">para la transformación de lo percibido en el entorno mediante el uso intencional del</p><p class="pdf-source-line">el juego teatral. cuerpo, con creación de representaciones</p><p class="pdf-source-line">Crea y representa con movimientos Reconoce y representa con movimientos</p><p class="pdf-source-line">corporales y gestos donde exprese el corporales y gestos la creación de</p><p class="pdf-source-line">significado personal de su nombre. personaje que exprese quién es y cómo se</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 37 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	37</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 37</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-# Cuarta fase
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 37" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Recreación de historias mediante el uso artístico de las palabras, del cuerpo, del</td></tr><tr><td colspan="2">espacio y del tiempo</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Exploración del movimiento y el uso consciente de las partes del cuerpo para la</td></tr><tr><td colspan="2">expresión de ideas, emociones y la creación de la relación escénica con otras</td></tr><tr><td colspan="2">personas.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Representación mediante el juego teatral de historias propias o ficticias para su puesta en escena en el espacio escénico.</td><td>Representación de una historia creada colectivamente mediante la utilización de objetos del entorno para la caracterización de personajes.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 37" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Representación de distintas formas de ser y estar en el mundo a partir de la ficción</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Distinción y utilización de rasgos principales de un personaje (movimientos,</td></tr><tr><td colspan="2">gestos y voz) a partir de ideas, frases, imágenes, canciones o cuentos.</td></tr><tr><td>PDA 1°</td><td>PDA 2°</td></tr><tr><td>Interpretación de personajes ficticios inspirados en el entorno o en manifestaciones artísticas (cuentos, literatura, historietas) mediante el uso de recursos propios del personaje, vestuario y maquillaje para el enriquecimiento de la representación.</td><td>Investigación y construcción de personajes ficticios inspirados en manifestaciones culturales, con incorporación de rasgos propios mediante movimientos, gestos, voz y recursos como vestuario, maquillaje o máscaras.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Representación mediante el juego teatral Representación de una historia creada</p><p class="pdf-source-line">de historias propias o ficticias para su colectivamente mediante la utilización de</p><p class="pdf-source-line">Interpretación de personajes ficticios Investigación y construcción de</p><p class="pdf-source-line">inspirados en el entorno o en personajes ficticios inspirados en</p><p class="pdf-source-line">manifestaciones artísticas (cuentos, manifestaciones culturales, con</p><p class="pdf-source-line">literatura, historietas) mediante el uso de incorporación de rasgos propios</p><p class="pdf-source-line">recursos propios del personaje, vestuario y mediante movimientos, gestos, voz y</p><p class="pdf-source-line">maquillaje para el enriquecimiento de la recursos como vestuario, maquillaje o</p><p class="pdf-source-line">representación. máscaras.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 38 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	38</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 38</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos nacionales de la cuarta fase
-Contenidos nacionales relacionado con las Artes
-# Cuarta fase
-Ø 	Reconocimiento y reflexión sobre el uso de elementos de los lenguajes
-artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto
-del mundo.
-Ø 	Creación de propuestas con intención artística para mejorar la escuela y el resto
-de la comunidad.
-Ø 	Lectura y creación de poemas, canciones y juegos de palabras para su disfrute.
-Ø 	Experimentación con elementos visuales y sonoros en producciones colectivas
-artísticas.
-Ø 	Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas
-que tienen lugar en la vida cotidiana.
-Ø 	Representación de hechos y experiencias significativas mediante el empleo de
-recursos textuales, visuales, corporales y sonoros.
-Ø 	Identificación del uso de la fantasía y la realidad en diferentes manifestaciones
-culturales y artísticas.
-Ø 	Lectura dramatizada y representación teatral.
-Ø 	Comprensión y producción de cuentos para su disfrute.
-
-
+<p class="pdf-source-line">Cuarta fase</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 39 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	39</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 39</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje estatales de la cuarta fase
-Contenidos estatales por lenguaje
-# Cuarta fase
-| Música | Danza | Artes visuales | Teatro |
-| :--- | :--- | :--- | :--- |
-| Distinción visual y auditiva de las familias instrumentales. | Identificación de las formas de trabajo grupal dentro de una creación dancística. | Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana. | Identificación de las zonas del escenario para conocer las posibilidades de interacción que tiene con cada una: el público, otros actores, la escenografía y el mismo. |
-| Elaboración de distintos instrumentos de percusión (idiófonos, membranófonos), de viento y de cuerda, utilizando objetos de uso cotidiano. | Exploración de movimientos de aproximación y lejanía relacionándose con objetos y compañeros en el espacio personal y general. | Identificación de representaciones bidimensionales y tridimensionales donde estén presentes diferentes formatos, soportes y materiales. | Investigación sobre las narraciones de su comunidad o de otras regiones para crear diálogos sencillos, de historias ficticias y/o de realidad. |
-| Conocimiento de los elementos de la música y los identifica en las canciones que canta o escucha. | Indagación de historias y leyendas de su entrono o de otras regiones acerca de la danza. | Realización de producciones visuales que permitan observar y comparar el uso del color según su clasificación básica. | Identificación de los elementos que constituyen una obra de teatro: inicio, desarrollo, nudo o conflicto, desenlace o cierre. |
-| Identificación de los tres planos en que puede escucharse la música. | Creación de secuencias de movimiento y figuras espaciales en grupos (dúos, tríos, cuartetos, etc.) | Reconocimiento del impacto visual que produce el contraste de los colores complementarios y lo emplea en la elaboración de producciones artísticas. | Creación de una historia de su comunidad con pequeños diálogos. |
-| Formación de un ensamble musical para presentarlo frente al público. | Aplicación de conocimientos adquiridos para crear una danza o un baile colectivo de tu región. | Utilización del color como elemento expresivo para comunicar ideas, en la creación de obras visuales donde utilicen gamas cromáticas (Cálidas y frías) | Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su voz. |
-| | Realización de trazos coreográficos (desplazamientos y trayectorias de forma grupal o individual en el espacio general). | Elaboración de dibujos utilizando plano y perspectiva. | Investigación sobre tradiciones culturales (ritual, religioso y festivo) de México donde se fabrican y utilizan mascaras. |
-| | Creación de un montaje dancístico en colectivo a partir de una creación dancística con un tema sugerido: diseño y elaboración de maquillaje, entre otros. | Realización de una composición empleando una técnica pictórica. | Elaboración de una máscara u otros objetos para la representación de un personaje en un escenario. |
-| | Montaje de un baile o danza de tu entidad. | Elaboración de bocetos y dibujos para crear producciones visuales. | |
-
-
+<h3 class="pdf-section-title">Contenidos nacionales de la cuarta fase</h3>
+<h3 class="pdf-section-title">Contenidos nacionales relacionado con las Artes</h3>
+<p class="pdf-source-line">Cuarta fase</p>
+<p class="pdf-source-line">Ø Reconocimiento y reflexión sobre el uso de elementos de los lenguajes</p>
+<p class="pdf-source-line">artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto</p>
+<p class="pdf-source-line">del mundo.</p>
+<p class="pdf-source-line">Ø Creación de propuestas con intención artística para mejorar la escuela y el resto</p>
+<p class="pdf-source-line">de la comunidad.</p>
+<p class="pdf-source-line">Ø Lectura y creación de poemas, canciones y juegos de palabras para su disfrute.</p>
+<p class="pdf-source-line">Ø Experimentación con elementos visuales y sonoros en producciones colectivas</p>
+<p class="pdf-source-line">artísticas.</p>
+<p class="pdf-source-line">Ø Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas</p>
+<p class="pdf-source-line">que tienen lugar en la vida cotidiana.</p>
+<p class="pdf-source-line">Ø Representación de hechos y experiencias significativas mediante el empleo de</p>
+<p class="pdf-source-line">recursos textuales, visuales, corporales y sonoros.</p>
+<p class="pdf-source-line">Ø Identificación del uso de la fantasía y la realidad en diferentes manifestaciones</p>
+<p class="pdf-source-line">culturales y artísticas.</p>
+<p class="pdf-source-line">Ø Lectura dramatizada y representación teatral.</p>
+<p class="pdf-source-line">Ø Comprensión y producción de cuentos para su disfrute.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 40 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	40</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 40</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-(Contenido continuado de la tabla anterior)
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la cuarta fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 40" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="4">Contenidos estatales por lenguaje Cuarta fase</th></tr><tr><td>Música</td><td>Danza</td><td>Artes visuales</td><td>Teatro</td></tr><tr><td>Distinción visual y auditiva de las familias instrumentales. Elaboración de distintos instrumentos de percusión (idiófonos, membranófonos), de viento y de cuerda, utilizando objetos de uso cotidiano. Conocimiento de los elementos de la música y los identifica en las canciones que canta o escucha. Identificación de los tres planos en que puede escucharse la música.</td><td>Identificación de las formas de trabajo grupal dentro de una creación dancística. Exploración de movimientos de aproximación y lejanía relacionándose con objetos y compañeros en el espacio personal y general. Indagación de historias y leyendas de su entrono o de otras regiones acerca de la danza. Creación de secuencias de movimiento y figuras espaciales en</td><td>Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana. Identificación de representaciones bidimensionales y tridimensionales donde estén presentes diferentes formatos, soportes y materiales. Realización de producciones visuales que permitan observar y comparar el uso del color según su clasificación básica. Reconocimiento del impacto visual que produce el contraste de los colores</td><td>Identificación de las zonas del escenario para conocer las posibilidades de interacción que tiene con cada una: el público, otros actores, la escenografía y el mismo. Investigación sobre las narraciones de su comunidad o de otras regiones para crear diálogos sencillos, de historias ficticias y/o de realidad. Identificación de los elementos que constituyen una obra de teatro: inicio, desarrollo, nudo o conflicto, desenlace o cierre. Creación de una historia de su comunidad con pequeños diálogos.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Distinción visual y Observación de Identificación de las</p><p class="pdf-source-line">auditiva de las diversas imágenes zonas del</p><p class="pdf-source-line">familias artísticas y de su escenario para</p><p class="pdf-source-line">instrumentales. entorno donde se conocer las</p><p class="pdf-source-line">aprecien los posibilidades de</p><p class="pdf-source-line">colores (primarios y interacción que</p><p class="pdf-source-line">secundarios) del tiene con cada una:</p><p class="pdf-source-line">circulo cromático y el público, otros</p><p class="pdf-source-line">su presencia en la actores, la</p><p class="pdf-source-line">vida cotidiana. escenografía y el</p><p class="pdf-source-line">Elaboración de Identificación de Investigación sobre</p><p class="pdf-source-line">distintos representaciones las narraciones de</p><p class="pdf-source-line">instrumentos de bidimensionales y su comunidad o de</p><p class="pdf-source-line">percusión tridimensionales otras regiones para</p><p class="pdf-source-line">(idiófonos, donde estén crear diálogos</p><p class="pdf-source-line">membranófonos), presentes sencillos, de</p><p class="pdf-source-line">de viento y de diferentes historias ficticias</p><p class="pdf-source-line">cuerda, utilizando formatos, soportes y/o de realidad.</p><p class="pdf-source-line">objetos de uso y materiales.</p><p class="pdf-source-line">Conocimiento de Realización de Identificación de los</p><p class="pdf-source-line">los elementos de la producciones elementos que</p><p class="pdf-source-line">música y los visuales que constituyen una</p><p class="pdf-source-line">identifica en las permitan observar y obra de teatro:</p><p class="pdf-source-line">canciones que comparar el uso del inicio, desarrollo,</p><p class="pdf-source-line">canta o escucha. color según su nudo o conflicto,</p><p class="pdf-source-line">clasificación desenlace o cierre.</p><p class="pdf-source-line">Identificación de Reconocimiento del Creación de una</p><p class="pdf-source-line">los tres planos en impacto visual que historia de su</p><p class="pdf-source-line">que puede produce el comunidad con</p><p class="pdf-source-line">escucharse la contraste de los pequeños diálogos.</p><p class="pdf-source-line">música. colores</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 41 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	41</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 41</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la
-# cuarta fase
-Contenido nacional
-Lectura y creación de poemas, canciones y juegos de palabras para su disfrute
-Contenido estatal de música
-• 	Conocimiento de los elementos de la música y los identifica en las canciones
-que canta o escucha.
-PDA 3° 	PDA 4°
-Exploración y combinación de sonidos y
-palabras para el juego con su acomodo y
-entonación, 	así 	como 	modificación 	de
-palabras o letras de una canción siguiendo
-el ritmo original.
-Composición 	de 	letras 	de 	canciones
-considerando los elementos rítmicos y
-melódicos de los textos poéticos: ritmos
-y 	duraciones, 	repetición 	de 	frases,
-palabras y sílabas.
-Contenido nacional
-Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en
-manifestaciones culturales y artísticas de la comunidad y del resto del mundo
-Contenido estatal de música
-• 	Conocimiento de los elementos de la música y los identifica en las canciones
-que canta y escucha.
-PDA 3° 	PDA 4°
-Identificación de las cualidades del sonido
-(duración, intensidad, altura y timbre) en
-manifestaciones culturales y artísticas de la
-comunidad.
-Reconocimiento de los elementos de la
-música (ritmo, armonía y melodía) en
-manifestaciones culturales y artísticas de
-la 	comunidad 	y 	de 	otros 	lugares 	del
-mundo, para la reflexión sobre su sentido
-y significado.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 41" tabindex="0"><table class="pdf-table"><tbody><tr><th>Formación de un ensamble musical para presentarlo frente al público.</th><th>grupos (dúos, tríos, cuartetos, etc.) Aplicación de conocimientos adquiridos para crear una danza o un baile colectivo de tu región. Realización de trazos coreográficos (desplazamientos y trayectorias de forma grupal o individual en el espacio general). Creación de un montaje dancístico en colectivo a partir de una creación dancística con un tema sugerido: diseño y elaboración de maquillaje, entre otros. Montaje de un baile o danza de tu entidad.</th><th>complementarios y lo emplea en la elaboración de producciones artísticas. Utilización del color como elemento expresivo para comunicar ideas, en la creación de obras visuales donde utilicen gamas cromáticas (Cálidas y frías) Elaboración de dibujos utilizando plano y perspectiva. Realización de una composición empleando una técnica pictórica. Elaboración de bocetos y dibujos para crear producciones visuales.</th><th>Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su voz. Investigación sobre tradiciones culturales (ritual, religioso y festivo) de México donde se fabrican y utilizan mascaras. Elaboración de una máscara u otros objetos para la representación de un personaje en un escenario.</th></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">grupos (dúos, tríos, complementarios y</p><p class="pdf-source-line">cuartetos, etc.) lo emplea en la</p><p class="pdf-source-line">Formación de un Aplicación de Utilización del color Expresión e</p><p class="pdf-source-line">ensamble musical conocimientos como elemento interpretación de</p><p class="pdf-source-line">para presentarlo adquiridos para expresivo para sensaciones para</p><p class="pdf-source-line">frente al público. crear una danza o comunicar ideas, comunicar ideas</p><p class="pdf-source-line">un baile colectivo de en la creación de utilizando las</p><p class="pdf-source-line">tu región. obras visuales posibilidades de su</p><p class="pdf-source-line">donde utilicen voz.</p><p class="pdf-source-line">Realización de Elaboración de Investigación sobre</p><p class="pdf-source-line">trazos coreográficos dibujos utilizando tradiciones</p><p class="pdf-source-line">(desplazamientos y plano y culturales (ritual,</p><p class="pdf-source-line">trayectorias de perspectiva. religioso y festivo)</p><p class="pdf-source-line">forma grupal o de México donde</p><p class="pdf-source-line">individual en el se fabrican y</p><p class="pdf-source-line">espacio general). utilizan mascaras.</p><p class="pdf-source-line">Creación de un Realización de una Elaboración de una</p><p class="pdf-source-line">montaje dancístico composición máscara u otros</p><p class="pdf-source-line">en colectivo a partir empleando una objetos para la</p><p class="pdf-source-line">de una creación técnica pictórica. representación de</p><p class="pdf-source-line">dancística con un un personaje en un</p><p class="pdf-source-line">tema sugerido: escenario.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 42 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	42</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 42</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de música
-• 	Formación de un ensamble musical para presentarlo frente a público.
-PDA 3° 	PDA 4°
-Exploración y experimentación de sonidos
-musicales 	para 	la 	representación 	de
-situaciones del espacio escolar o de la
-localidad.
-Expresión 	de 	variedades 	de 	sonidos
-musicales 	para 	la 	creación 	de 	una
-propuesta artística colectiva orientada a
-la mejora del espacio escolar o de la
-localidad de pertenencia.
-Contenido nacional
-Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que
-tienen lugar en la vida cotidiana
-Contenido estatal de música
-• 	Formación de un ensamble musical para representarlo frente al público.
-PDA 3° 	PDA 4°
-Identificación y recreación, mediante el uso
-de 	los 	elementos 	de 	la 	música, 	de
-sensaciones, 	emociones, 	sentimientos 	e
-ideas 	provenientes 	de 	distintas
-experiencias 	significativas 	de 	la 	vida
-cotidiana.
-Reconocimiento de los elementos del
-entorno natural y social, y recreación de
-los 	mismos 	mediante 	producciones
-musicales individuales y colectivas para
-la reflexión sobre la presencia de los
-lenguajes artísticos en la vida cotidiana.
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la</h3>
+<p class="pdf-source-line">cuarta fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 42" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura y creación de poemas, canciones y juegos de palabras para su disfrute</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Conocimiento de los elementos de la música y los identifica en las canciones que canta o escucha.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Exploración y combinación de sonidos y palabras para el juego con su acomodo y entonación, así como modificación de palabras o letras de una canción siguiendo el ritmo original.</td><td>Composición de letras de canciones considerando los elementos rítmicos y melódicos de los textos poéticos: ritmos y duraciones, repetición de frases, palabras y sílabas.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 42" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Conocimiento de los elementos de la música y los identifica en las canciones que canta y escucha.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Identificación de las cualidades del sonido (duración, intensidad, altura y timbre) en manifestaciones culturales y artísticas de la comunidad.</td><td>Reconocimiento de los elementos de la música (ritmo, armonía y melodía) en manifestaciones culturales y artísticas de la comunidad y de otros lugares del mundo, para la reflexión sobre su sentido y significado.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Exploración y combinación de sonidos y Composición de letras de canciones</p><p class="pdf-source-line">palabras para el juego con su acomodo y considerando los elementos rítmicos y</p><p class="pdf-source-line">entonación, así como modificación de melódicos de los textos poéticos: ritmos</p><p class="pdf-source-line">palabras o letras de una canción siguiendo y duraciones, repetición de frases,</p><p class="pdf-source-line">el ritmo original. palabras y sílabas.</p><p class="pdf-source-line">Identificación de las cualidades del sonido Reconocimiento de los elementos de la</p><p class="pdf-source-line">(duración, intensidad, altura y timbre) en música (ritmo, armonía y melodía) en</p><p class="pdf-source-line">manifestaciones culturales y artísticas de la manifestaciones culturales y artísticas de</p><p class="pdf-source-line">comunidad. la comunidad y de otros lugares del</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 43 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	43</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 43</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Experimentación con elementos visuales y sonoros en producciones colectivas
-artísticas
-Contenido estatal de música
-• 	Conocimiento de los elementos de la música y los identifica en las canciones
-que canta o escucha.
-PDA 3° 	PDA 4°
-Combinación 	de 	los 	elementos 	de 	la
-música 	(ritmo, 	melodía 	y 	armonía)
-producidos con objetos del entorno para la
-transmisión de una idea colectiva
-Exploración de la creación de paisajes
-sonoros 	y 	composiciones 	musicales
-colaborativas mediante la utilización de
-objetos 	del 	entorno 	y/o 	sonidos
-producidos por el cuerpo humano.
-Contenido nacional
-Lectura y creación de poemas, canciones y juegos de palabras para su disfrute
-Contenido estatal de música
-• 	Conocimiento de los elementos de la música y los identifica en las canciones
-que canta o escucha.
-PDA 3° 	PDA 4°
-Reconocimiento de la rima y la aliteración
-como elementos rítmicos y sonoros para
-la comprensión de su utilidad en el ámbito
-musical.
-Experimentación de la rima y la aliteración
-en fragmentos de canciones a partir del
-establecimiento de un tema significativo.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 43" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Formación de un ensamble musical para presentarlo frente a público.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Exploración y experimentación de sonidos musicales para la representación de situaciones del espacio escolar o de la localidad.</td><td>Expresión de variedades de sonidos musicales para la creación de una propuesta artística colectiva orientada a la mejora del espacio escolar o de la localidad de pertenencia.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 43" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Formación de un ensamble musical para representarlo frente al público.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Identificación y recreación, mediante el uso de los elementos de la música, de sensaciones, emociones, sentimientos e ideas provenientes de distintas experiencias significativas de la vida cotidiana.</td><td>Reconocimiento de los elementos del entorno natural y social, y recreación de los mismos mediante producciones musicales individuales y colectivas para la reflexión sobre la presencia de los lenguajes artísticos en la vida cotidiana.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Exploración y experimentación de sonidos Expresión de variedades de sonidos</p><p class="pdf-source-line">musicales para la representación de musicales para la creación de una</p><p class="pdf-source-line">situaciones del espacio escolar o de la propuesta artística colectiva orientada a</p><p class="pdf-source-line">localidad. la mejora del espacio escolar o de la</p><p class="pdf-source-line">Identificación y recreación, mediante el uso Reconocimiento de los elementos del</p><p class="pdf-source-line">de los elementos de la música, de entorno natural y social, y recreación de</p><p class="pdf-source-line">sensaciones, emociones, sentimientos e los mismos mediante producciones</p><p class="pdf-source-line">ideas provenientes de distintas musicales individuales y colectivas para</p><p class="pdf-source-line">experiencias significativas de la vida la reflexión sobre la presencia de los</p><p class="pdf-source-line">cotidiana. lenguajes artísticos en la vida cotidiana.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 44 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	44</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 44</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la
-# cuarta fase
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de danza
-• 	Creación de montaje dancístico en colectivo, a partir de un tema sugerido:
-diseño y elaboración de vestuario y maquillaje, entre otros.
-PDA 3° 	PDA 4°
-Diálogo 	sobre 	las 	transformaciones 	de
-espacios escolares y comunitarios a partir
-de cambios impulsados mediante la danza
-(recitales o bailes al aire libre).
-Creación 	de 	producciones 	dancísticas
-con diseño de vestuario, maquillaje y
-utilería 	que 	representen 	vínculos
-respetuosos con la diversidad para la
-participación en la mejora comunitaria.
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de danza
-• 	Aplicación de conocimientos adquiridos para crear una danza o un baile de tu
-región.
-PDA 3° 	PDA 4°
-Construcción 	de 	propuestas 	dancísticas
-colectivas que generen una mejora para el
-bien común.
-Experimentación con una variedad de
-movimientos corporales y objetos, para
-la creación de una propuesta artística
-colectiva que mejore el espacio habitado.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 44" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Experimentación con elementos visuales y sonoros en producciones colectivas artísticas</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Conocimiento de los elementos de la música y los identifica en las canciones que canta o escucha.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Combinación de los elementos de la música (ritmo, melodía y armonía) producidos con objetos del entorno para la transmisión de una idea colectiva</td><td>Exploración de la creación de paisajes sonoros y composiciones musicales colaborativas mediante la utilización de objetos del entorno y/o sonidos producidos por el cuerpo humano.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 44" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura y creación de poemas, canciones y juegos de palabras para su disfrute</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Conocimiento de los elementos de la música y los identifica en las canciones que canta o escucha.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Reconocimiento de la rima y la aliteración como elementos rítmicos y sonoros para la comprensión de su utilidad en el ámbito musical.</td><td>Experimentación de la rima y la aliteración en fragmentos de canciones a partir del establecimiento de un tema significativo.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Combinación de los elementos de la Exploración de la creación de paisajes</p><p class="pdf-source-line">música (ritmo, melodía y armonía) sonoros y composiciones musicales</p><p class="pdf-source-line">producidos con objetos del entorno para la colaborativas mediante la utilización de</p><p class="pdf-source-line">transmisión de una idea colectiva objetos del entorno y/o sonidos</p><p class="pdf-source-line">Reconocimiento de la rima y la aliteración Experimentación de la rima y la aliteración</p><p class="pdf-source-line">como elementos rítmicos y sonoros para en fragmentos de canciones a partir del</p><p class="pdf-source-line">la comprensión de su utilidad en el ámbito establecimiento de un tema significativo.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 45 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	45</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 45</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en
-manifestaciones culturales y artísticas de la comunidad y del resto del mundo
-Contenido estatal de danza
-• 	Indagación de historias y leyendas de su entorno o de otras regiones acerca de
-la danza.
-PDA 3° 	PDA 4°
-Indagación y comparación de elementos de
-la 	danza 	presentes 	en 	manifestaciones
-culturales y artísticas de su comunidad.
-Distinción y creación de movimientos,
-vestuarios 	y 	utilería 	a 	partir 	de
-manifestaciones culturales y artísticas de
-otros lugares de México y del mundo,
-para 	reflexionar 	sobre 	su 	sentido 	y
-significado.
-Contenido nacional
-Representación de hechos y experiencias significativas mediante el empleo de
-recursos textuales, visuales, corporales y sonoros
-Contenido estatal de danza
-• 	Creación de secuencias de movimientos y figuras espaciales en grupos (dúos,
-tríos, cuartetos, etc.)
-• 	Realización de trazos coreográficos (desplazamientos y trayectorias de forma
-grupal o individual en el espacio general).
-PDA 3° 	PDA 4°
-Descripción 	de 	un 	hecho 	significativo
-mediante 	la 	estructura 	narrativa 	de 	su
-elección, estableciendo para cada parte una
-secuencia de movimientos.
-Descripción de un hecho significativo
-mediante la estructura narrativa de su
-elección, estableciendo para cada parte
-una 	secuencia 	de 	movimientos 	con
-acompañamiento 	musical,
-complementada con desplazamientos,
-pausas, 	acentos 	y 	velocidades
-corporales.
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de danza de la</h3>
+<p class="pdf-source-line">cuarta fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 45" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Creación de montaje dancístico en colectivo, a partir de un tema sugerido: diseño y elaboración de vestuario y maquillaje, entre otros.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Diálogo sobre las transformaciones de espacios escolares y comunitarios a partir de cambios impulsados mediante la danza (recitales o bailes al aire libre).</td><td>Creación de producciones dancísticas con diseño de vestuario, maquillaje y utilería que representen vínculos respetuosos con la diversidad para la participación en la mejora comunitaria.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 45" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Aplicación de conocimientos adquiridos para crear una danza o un baile de tu región.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Construcción de propuestas dancísticas colectivas que generen una mejora para el bien común.</td><td>Experimentación con una variedad de movimientos corporales y objetos, para la creación de una propuesta artística colectiva que mejore el espacio habitado.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Diálogo sobre las transformaciones de Creación de producciones dancísticas</p><p class="pdf-source-line">espacios escolares y comunitarios a partir con diseño de vestuario, maquillaje y</p><p class="pdf-source-line">de cambios impulsados mediante la danza utilería que representen vínculos</p><p class="pdf-source-line">(recitales o bailes al aire libre). respetuosos con la diversidad para la</p><p class="pdf-source-line">Construcción de propuestas dancísticas Experimentación con una variedad de</p><p class="pdf-source-line">colectivas que generen una mejora para el movimientos corporales y objetos, para</p><p class="pdf-source-line">bien común. la creación de una propuesta artística</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 46 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	46</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 46</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de danza
-• 	Creación de montaje dancístico en colectivo, a partir de un tema sugerido:
-diseño y elaboración de vestuario y maquillaje, entre otros.
-PDA 3° 	PDA 4°
-Exploración 	y 	empleo 	de 	movimientos
-corporales 	y 	objetos, 	para 	representar
-situaciones del espacio escolar o de la
-localidad.
-Elaboración 	de 	una 	propuesta 	con
-intención 	dancística, 	en 	colectivo,
-mediante movimientos y objetos, para
-ofrecer 	soluciones 	a 	situaciones 	o
-problemas identificados en la escuela o
-en la comunidad.
-Contenido nacional
-Representación de hechos y experiencias significativas mediante el empleo de
-recursos textuales, visuales, corporales y sonoros
-Contenido estatal de danza
-• 	Exploración de movimientos relacionándose con objetos y compañeros en el
-espacio personal y general.
-PDA 3° 	PDA 4°
-Reelaboración 	de 	acciones 	cotidianas 	al
-jugar 	con 	movimientos 	rápidos 	o 	lentos,
-fuertes o débiles, con pausas o acentos.
-Reelaboración de acciones cotidianas
-al 	jugar 	con 	movimientos 	rápidos 	o
-lentos, fuertes o débiles, con pausas o
-acentos, imaginando distintos espacios
-donde se llevan a cabo para descubrir
-nuevas 	maneras 	de 	realizarlas 	y
-creación de un montaje coreográfico.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 46" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Indagación de historias y leyendas de su entorno o de otras regiones acerca de la danza.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Indagación y comparación de elementos de la danza presentes en manifestaciones culturales y artísticas de su comunidad.</td><td>Distinción y creación de movimientos, vestuarios y utilería a partir de manifestaciones culturales y artísticas de otros lugares de México y del mundo, para reflexionar sobre su sentido y significado.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 46" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Representación de hechos y experiencias significativas mediante el empleo de recursos textuales, visuales, corporales y sonoros</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Creación de secuencias de movimientos y figuras espaciales en grupos (dúos, tríos, cuartetos, etc.) • Realización de trazos coreográficos (desplazamientos y trayectorias de forma grupal o individual en el espacio general).</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Descripción de un hecho significativo mediante la estructura narrativa de su elección, estableciendo para cada parte una secuencia de movimientos.</td><td>Descripción de un hecho significativo mediante la estructura narrativa de su elección, estableciendo para cada parte una secuencia de movimientos con acompañamiento musical, complementada con desplazamientos, pausas, acentos y velocidades corporales.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Indagación y comparación de elementos de Distinción y creación de movimientos,</p><p class="pdf-source-line">la danza presentes en manifestaciones vestuarios y utilería a partir de</p><p class="pdf-source-line">culturales y artísticas de su comunidad. manifestaciones culturales y artísticas de</p><p class="pdf-source-line">Descripción de un hecho significativo Descripción de un hecho significativo</p><p class="pdf-source-line">mediante la estructura narrativa de su mediante la estructura narrativa de su</p><p class="pdf-source-line">elección, estableciendo para cada parte una elección, estableciendo para cada parte</p><p class="pdf-source-line">secuencia de movimientos. una secuencia de movimientos con</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 47 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	47</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 47</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que
-tienen lugar en la vida cotidiana
-Contenido estatal de danza
-• 	Aplicación de conocimientos adquiridos para crear una danza o baile colectivo
-de tu región.
-PDA 3° 	PDA 4°
-Utilización de la danza y sus elementos
-para representar experiencias que observa
-en su vida cotidiana; por ejemplo, la pesca,
-la agricultura, la flora y fauna de su región.
-Uso 	de 	movimientos 	para 	recrear
-producciones 	dancísticas 	que 	le 	han
-causado interés e impacto.
-Contenido nacional
-Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que
-tienen lugar en la vida cotidiana
-Contenido estatal de danza
-• 	Aplicación de conocimientos adquiridos para crear una danza o baile colectivo
-de la región.
-PDA 3° 	PDA 4°
-Utilización de la danza y sus elementos
-para representar experiencias que observa
-en su vida cotidiana; por ejemplo, la pesca,
-la agricultura, la flora y fauna de su región.
-Uso 	de 	movimientos 	para 	recrear
-producciones 	dancísticas 	que 	le 	han
-causado interés e impacto.
-Contenido nacional
-Identificación del uso de la fantasía y la realidad en diferentes manifestaciones
-culturales y artísticas
-Contenido estatal de danza
-• 	Indagación de historias y leyendas de su entorno o de otras regiones acerca de
-la danza.
-• 	Montaje de un baile o danza de tu entidad.
-PDA 3° 	PDA 4°
-Apreciación y reflexión del uso intencional de
-movimientos 	corporales 	y 	objetos 	que
-expresan 	la 	realidad 	y 	la 	fantasía 	en
-manifestaciones culturales y artísticas
-Creación de un montaje coreográfico a
-partir 	de 	la 	identificación 	del 	uso
-intencional de movimientos corporales
-en 	las 	manifestaciones 	culturales 	y
-artísticas de su interés.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 47" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Creación de montaje dancístico en colectivo, a partir de un tema sugerido: diseño y elaboración de vestuario y maquillaje, entre otros.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Exploración y empleo de movimientos corporales y objetos, para representar situaciones del espacio escolar o de la localidad.</td><td>Elaboración de una propuesta con intención dancística, en colectivo, mediante movimientos y objetos, para ofrecer soluciones a situaciones o problemas identificados en la escuela o en la comunidad.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 47" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Representación de hechos y experiencias significativas mediante el empleo de recursos textuales, visuales, corporales y sonoros</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Exploración de movimientos relacionándose con objetos y compañeros en el espacio personal y general.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Reelaboración de acciones cotidianas al jugar con movimientos rápidos o lentos, fuertes o débiles, con pausas o acentos.</td><td>Reelaboración de acciones cotidianas al jugar con movimientos rápidos o lentos, fuertes o débiles, con pausas o acentos, imaginando distintos espacios donde se llevan a cabo para descubrir nuevas maneras de realizarlas y creación de un montaje coreográfico.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Exploración y empleo de movimientos Elaboración de una propuesta con</p><p class="pdf-source-line">corporales y objetos, para representar intención dancística, en colectivo,</p><p class="pdf-source-line">situaciones del espacio escolar o de la mediante movimientos y objetos, para</p><p class="pdf-source-line">localidad. ofrecer soluciones a situaciones o</p><p class="pdf-source-line">Reelaboración de acciones cotidianas al Reelaboración de acciones cotidianas</p><p class="pdf-source-line">jugar con movimientos rápidos o lentos, al jugar con movimientos rápidos o</p><p class="pdf-source-line">fuertes o débiles, con pausas o acentos. lentos, fuertes o débiles, con pausas o</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 48 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	48</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 48</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales
-de la cuarta fase
-Contenido nacional
-Representación de hechos y experiencias significativas mediante el empleo de
-recursos textuales, visuales, corporales y sonoros
-Contenido estatal de artes visuales
-• 	Observación de diversas imágenes artísticas y de su entorno donde se aprecien
-los colores (primarios y secundarios) del circulo cromático y su presencia en la
-vida cotidiana.
-• 	Elaboración de bocetos y dibujos para crear producciones visuales.
-PDA 3° 	PDA 4°
-Representación lúdica de una experiencia
-significativa 	mediante 	el 	uso 	de 	formas,
-colores y texturas para la construcción de
-nuevos significados.
-Realización de un folioscopio (flip book)
-con 	imágenes 	del 	entorno 	para 	la
-narración 	de 	un 	acontecimiento
-significativo de la comunidad.
-Contenido nacional
-Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en
-manifestaciones culturales y artísticas de la comunidad y del resto del mundo
-Contenido estatal de artes visuales
-• 	Realización de producciones visuales que permitan observar y comparar el uso
-del color según su clasificación básica.
-PDA 3° 	PDA 4°
-Recreaciones 	orales 	o 	escritas,
-acompañadas 	de 	representaciones
-gráficas como dibujos, cómics, historietas o
-secuencias 	de 	dibujos 	en 	movimiento
-(“folioscopio” o flip books), a partir de la
-observación de videos o de la asistencia a
-espacios 	donde 	se 	realicen
-manifestaciones culturales y artísticas.
-Interacción 	con 	manifestaciones
-culturales y artísticas de la comunidad y
-comparación con las de otros lugares,
-con 	comunicación 	de 	conclusiones
-mediante 	fotografías 	o 	dibujos
-comentados.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 48" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="2">CCoonntteenniiddoo nnaacciioonnaall</td></tr><tr><td colspan="2">RReefflleexxiióónn yy uussoo ddee llooss lleenngguuaajjeess aarrttííssttiiccooss,, ppaarraa rreeccrreeaarr eexxppeerriieenncciiaass eessttééttiiccaass qquuee ttiieenneenn lluuggaarr eenn llaa vviiddaa ccoottiiddiiaannaa</td></tr><tr><td colspan="2">CCoonntteenniiddoo eessttaattaall ddee ddaannzzaa</td></tr><tr><td colspan="2">•• AApplliiccaacciióónn ddee ccoonnoocciimmiieennttooss aaddqquuiirriiddooss ppaarraa ccrreeaarr uunnaa ddaannzzaa oo bbaaiillee ccoolleeccttiivvoo ddee tlau rreeggiióónn..</td></tr><tr><td>PPDDAA 33°°</td><td>PPDDAA 44°°</td></tr><tr><td>UUttiilliizzaacciióónn ddee llaa ddaannzzaa yy ssuuss eelleemmeennttooss ppaarraa rreepprreesseennttaarr eexxppeerriieenncciiaass qquuee oobbsseerrvvaa eenn ssuu vviiddaa ccoottiiddiiaannaa;; ppoorr eejjeemmpplloo,, llaa ppeessccaa,, llaa aaggrriiccuullttuurraa,, llaa fflloorraa yy ffaauunnaa ddee ssuu rreeggiióónn..</td><td>UUssoo ddee mmoovviimmiieennttooss ppaarraa rreeccrreeaarr pprroodduucccciioonneess ddaannccííssttiiccaass qquuee llee hhaann ccaauussaaddoo iinntteerrééss ee iimmppaaccttoo..</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 48" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Indagación de historias y leyendas de su entorno o de otras regiones acerca de la danza. • Montaje de un baile o danza de tu entidad.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Apreciación y reflexión del uso intencional de movimientos corporales y objetos que expresan la realidad y la fantasía en manifestaciones culturales y artísticas</td><td>Creación de un montaje coreográfico a partir de la identificación del uso intencional de movimientos corporales en las manifestaciones culturales y artísticas de su interés.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">UUttiilliizzaacciióónn ddee llaa ddaannzzaa yy ssuuss eelleemmeennttooss UUssoo ddee mmoovviimmiieennttooss ppaarraa rreeccrreeaarr</p><p class="pdf-source-line">ppaarraa rreepprreesseennttaarr eexxppeerriieenncciiaass qquuee oobbsseerrvvaa pprroodduucccciioonneess ddaannccííssttiiccaass qquuee llee hhaann</p><p class="pdf-source-line">eenn ssuu vviiddaa ccoottiiddiiaannaa;; ppoorr eejjeemmpplloo,, llaa ppeessccaa,, ccaauussaaddoo iinntteerrééss ee iimmppaaccttoo..</p><p class="pdf-source-line">Apreciación y reflexión del uso intencional de Creación de un montaje coreográfico a</p><p class="pdf-source-line">movimientos corporales y objetos que partir de la identificación del uso</p><p class="pdf-source-line">expresan la realidad y la fantasía en intencional de movimientos corporales</p><p class="pdf-source-line">manifestaciones culturales y artísticas en las manifestaciones culturales y</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 49 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	49</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 49</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en
-manifestaciones culturales y artísticas de la comunidad y del resto del mundo
-Contenido estatal de artes visuales
-• 	Realización de producciones visuales que permitan observar y comparar el uso
-del color según su clasificación básica.
-• 	Elaboración de dibujos utilizando planos y perspectiva.
-PDA 3° 	PDA 4°
-Expresión de gustos e intereses hacia las
-manifestaciones culturales y artísticas, con
-realización 	de 	descripciones 	orales 	o
-escritas y representación mediante dibujos.
-Expresión de gustos e intereses hacia
-las 	manifestaciones 	culturales 	y
-artísticas, 	con 	realización 	de
-descripciones orales o escritas para su
-agrupación de acuerdo con similitudes
-en un collage de dibujos, fotografías y
-recortes.
-Contenido nacional
-Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en
-manifestaciones culturales y artísticas de la comunidad y del resto del mundo
-Contenido estatal de artes visuales
-• 	Observación de diversas imágenes artísticas y de su entorno donde se aprecien
-los colores (primarios y secundarios) del circulo cromático y su presencia en la
-vida cotidiana.
-PDA 3° 	PDA 4°
-Comparación de formas, colores primarios
-y secundarios, así como de objetos de
-manifestaciones 	culturales 	y 	artísticas
-(pintura, escultura, grabado, dibujo) de la
-comunidad con los de otros lugares.
-Distinción de formas, colores y objetos
-en manifestaciones culturales y artísticas
-(pintura, escultura, grabado, dibujo) de la
-comunidad y de otros lugares del mundo,
-para 	la 	reflexión 	sobre 	su 	sentido 	y
-significado.
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales</h3>
+<p class="pdf-source-line">de la cuarta fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 49" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Realización de producciones visuales que permitan observar y comparar el uso del color según su clasificación básica.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Recreaciones orales o escritas, acompañadas de representaciones gráficas como dibujos, cómics, historietas o secuencias de dibujos en movimiento (“folioscopio” o flip books), a partir de la observación de videos o de la asistencia a espacios donde se realicen manifestaciones culturales y artísticas.</td><td>Interacción con manifestaciones culturales y artísticas de la comunidad y comparación con las de otros lugares, con comunicación de conclusiones mediante fotografías o dibujos comentados.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 49" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Representación de hechos y experiencias significativas mediante el empleo de recursos textuales, visuales, corporales y sonoros</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana. • Elaboración de bocetos y dibujos para crear producciones visuales.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Representación lúdica de una experiencia significativa mediante el uso de formas, colores y texturas para la construcción de nuevos significados.</td><td>Realización de un folioscopio (flip book) con imágenes del entorno para la narración de un acontecimiento significativo de la comunidad.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Recreaciones orales o escritas, Interacción con manifestaciones</p><p class="pdf-source-line">acompañadas de representaciones culturales y artísticas de la comunidad y</p><p class="pdf-source-line">gráficas como dibujos, cómics, historietas o comparación con las de otros lugares,</p><p class="pdf-source-line">secuencias de dibujos en movimiento con comunicación de conclusiones</p><p class="pdf-source-line">(“folioscopio” o flip books), a partir de la mediante fotografías o dibujos</p><p class="pdf-source-line">observación de videos o de la asistencia a comentados.</p><p class="pdf-source-line">Representación lúdica de una experiencia Realización de un folioscopio (flip book)</p><p class="pdf-source-line">significativa mediante el uso de formas, con imágenes del entorno para la</p><p class="pdf-source-line">colores y texturas para la construcción de narración de un acontecimiento</p><p class="pdf-source-line">nuevos significados. significativo de la comunidad.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 50 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	50</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 50</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que
-tienen lugar en la vida cotidiana
-Contenido estatal de artes visuales
-• 	Observación de diversas imágenes artísticas y de su entorno donde se aprecien
-los colores (primarios y secundarios) del circulo cromático y su presencia en la
-vida cotidiana.
-PDA 3° 	PDA 4°
-Identificación y plasmado de experiencias
-significativas de la vida cotidiana mediante
-el uso de colores primarios y secundarios.
-Creación 	de 	producciones 	visuales
-individuales y colectivas mediante el uso
-del 	círculo 	cromático, 	a 	partir 	de 	la
-observación 	de 	diversas 	imágenes
-artísticas y del entorno.
-Contenido nacional
-Identificación del uso de la fantasía y la realidad en diferentes manifestaciones
-culturales y artísticas
-Contenido estatal de artes visuales
-• 	Reconocimiento del impacto visual que produce el contraste de los colores
-complementarios en producciones artísticas.
-• 	Realización de una composición empleando una técnica pictórica.
-PDA 3° 	PDA 4°
-Apreciación del uso intencional de formas
-y colores que expresan la realidad y la
-fantasía en manifestaciones culturales y
-artísticas.
-Creación de una composición pictórica a
-partir 	de 	la 	identificación 	del 	uso
-intencional 	de 	formas 	y 	colores 	en
-manifestaciones culturales y artísticas de
-interés.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 50" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Realización de producciones visuales que permitan observar y comparar el uso del color según su clasificación básica. • Elaboración de dibujos utilizando planos y perspectiva.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Expresión de gustos e intereses hacia las manifestaciones culturales y artísticas, con realización de descripciones orales o escritas y representación mediante dibujos.</td><td>Expresión de gustos e intereses hacia las manifestaciones culturales y artísticas, con realización de descripciones orales o escritas para su agrupación de acuerdo con similitudes en un collage de dibujos, fotografías y recortes.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 50" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Comparación de formas, colores primarios y secundarios, así como de objetos de manifestaciones culturales y artísticas (pintura, escultura, grabado, dibujo) de la comunidad con los de otros lugares.</td><td>Distinción de formas, colores y objetos en manifestaciones culturales y artísticas (pintura, escultura, grabado, dibujo) de la comunidad y de otros lugares del mundo, para la reflexión sobre su sentido y significado.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Expresión de gustos e intereses hacia las Expresión de gustos e intereses hacia</p><p class="pdf-source-line">manifestaciones culturales y artísticas, con las manifestaciones culturales y</p><p class="pdf-source-line">realización de descripciones orales o artísticas, con realización de</p><p class="pdf-source-line">escritas y representación mediante dibujos. descripciones orales o escritas para su</p><p class="pdf-source-line">Comparación de formas, colores primarios Distinción de formas, colores y objetos</p><p class="pdf-source-line">y secundarios, así como de objetos de en manifestaciones culturales y artísticas</p><p class="pdf-source-line">comunidad con los de otros lugares. para la reflexión sobre su sentido y</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 51 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	51</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 51</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de artes visuales
-• 	Realización de una composición empleando una técnica pictórica.
-• 	Utiliza el color como elemento expresivo para comunicar ideas.
-PDA 3° 	PDA 4°
-Experimentación 	de 	propuestas 	visuales
-colectivas 	mediante 	el 	uso 	de 	formas,
-colores y texturas, para la generación de
-mejoras orientadas al bien común.
-Construcción con variedad de formas,
-colores y texturas para la creación de
-una 	composición 	visual 	colectiva 	que
-mejore el espacio habitado.
-Contenido nacional
-Experimentación con elementos visuales y sonoros en producciones colectivas
-artísticas
-Contenido estatal de artes visuales
-• 	Identificación de representaciones bidimensionales y tridimensionales donde
-estés presentes diferentes formatos, soportes y materiales.
-• 	Realización de producciones visuales que permitan observar y comparar el uso
-del color según su clasificación básica.
-PDA 3° 	PDA 4°
-Elaboración de un libro de artista a partir de
-la selección de textos, con experimentación
-en el uso de materiales diversos y de
-distintos elementos del lenguaje visual
-(puntos, líneas, texturas, formas, colores e
-imágenes), para su socialización con los
-pares.
-Recreación colectiva de una obra de
-arte 	de 	un 	artista 	visual 	reconocido
-mediante 	el 	uso 	de 	colores, 	telas,
-materiales reciclados y elementos de la
-naturaleza, entre otros. .
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 51" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Identificación y plasmado de experiencias significativas de la vida cotidiana mediante el uso de colores primarios y secundarios.</td><td>Creación de producciones visuales individuales y colectivas mediante el uso del círculo cromático, a partir de la observación de diversas imágenes artísticas y del entorno.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 51" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Reconocimiento del impacto visual que produce el contraste de los colores complementarios en producciones artísticas. • Realización de una composición empleando una técnica pictórica.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Apreciación del uso intencional de formas y colores que expresan la realidad y la fantasía en manifestaciones culturales y artísticas.</td><td>Creación de una composición pictórica a partir de la identificación del uso intencional de formas y colores en manifestaciones culturales y artísticas de interés.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Identificación y plasmado de experiencias Creación de producciones visuales</p><p class="pdf-source-line">significativas de la vida cotidiana mediante individuales y colectivas mediante el uso</p><p class="pdf-source-line">el uso de colores primarios y secundarios. del círculo cromático, a partir de la</p><p class="pdf-source-line">Apreciación del uso intencional de formas Creación de una composición pictórica a</p><p class="pdf-source-line">y colores que expresan la realidad y la partir de la identificación del uso</p><p class="pdf-source-line">fantasía en manifestaciones culturales y intencional de formas y colores en</p><p class="pdf-source-line">artísticas. manifestaciones culturales y artísticas de</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 52 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	52</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 52</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Experimentación con elementos visuales y sonoros en producciones colectivas
-artísticas
-Contenido estatal de artes visuales
-• 	Identificación de representaciones bidimensionales y tridimensionales donde
-estén presentes diferentes formatos, soportes y materiales.
-PDA 3° 	PDA 4°
-Realización de una composición visual
-colectiva con objetos disponibles para la
-representación de distintas ideas y formas
-mediante esculturas efímeras o
-instalaciones.
-Uso 	de 	medios 	digitales 	para 	la
-creación de un cortometraje colectivo
-mediante animaciones con secuencias
-fotográficas de objetos cotidianos, con
-sonorización 	para 	el 	intercambio 	de
-ideas y experiencias.
-Contenido nacional
-Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que
-tienen lugar en la vida cotidiana
-Contenido estatal de artes visuales
-• 	Observación de diversas imágenes artísticas y de su entorno donde se aprecien
-los colores (primarios y secundarios) del circulo cromático y su presencia en la
-vida cotidiana.
-• 	Identificación de representaciones bidimensionales y tridimensionales donde
-estén presentes diferentes formatos, soportes y materiales.
-PDA 3° 	PDA 4°
-Uso 	de 	elementos 	visuales 	para 	la
-representación de experiencias significativas
-de la vida cotidiana, como la puesta de sol,
-la 	flora 	y 	la 	fauna, 	en 	producciones
-bidimensionales.
-Uso de formas, colores y texturas para
-la 	recreación 	de 	obras 	de 	arte 	de
-interés 	e 	impacto 	mediante
-producciones 	bidimensionales 	o
-tridimensionales.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 52" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Realización de una composición empleando una técnica pictórica. • Utiliza el color como elemento expresivo para comunicar ideas.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Experimentación de propuestas visuales colectivas mediante el uso de formas, colores y texturas, para la generación de mejoras orientadas al bien común.</td><td>Construcción con variedad de formas, colores y texturas para la creación de una composición visual colectiva que mejore el espacio habitado.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 52" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Experimentación con elementos visuales y sonoros en producciones colectivas artísticas</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Identificación de representaciones bidimensionales y tridimensionales donde estés presentes diferentes formatos, soportes y materiales. • Realización de producciones visuales que permitan observar y comparar el uso del color según su clasificación básica.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Elaboración de un libro de artista a partir de la selección de textos, con experimentación en el uso de materiales diversos y de distintos elementos del lenguaje visual (puntos, líneas, texturas, formas, colores e imágenes), para su socialización con los pares.</td><td>Recreación colectiva de una obra de arte de un artista visual reconocido mediante el uso de colores, telas, materiales reciclados y elementos de la naturaleza, entre otros. .</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Experimentación de propuestas visuales Construcción con variedad de formas,</p><p class="pdf-source-line">colectivas mediante el uso de formas, colores y texturas para la creación de</p><p class="pdf-source-line">colores y texturas, para la generación de una composición visual colectiva que</p><p class="pdf-source-line">mejoras orientadas al bien común. mejore el espacio habitado.</p><p class="pdf-source-line">Elaboración de un libro de artista a partir de Recreación colectiva de una obra de</p><p class="pdf-source-line">la selección de textos, con experimentación arte de un artista visual reconocido</p><p class="pdf-source-line">en el uso de materiales diversos y de mediante el uso de colores, telas,</p><p class="pdf-source-line">distintos elementos del lenguaje visual materiales reciclados y elementos de la</p><p class="pdf-source-line">(puntos, líneas, texturas, formas, colores e naturaleza, entre otros. .</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 53 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	53</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 53</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en
-manifestaciones culturales y artísticas de la comunidad y del resto del mundo
-Contenido estatal de artes visuales
-• 	Observación de diversas imágenes artísticas y de su entorno donde se aprecien
-los colores (primarios y secundarios) del circulo cromático y su presencia en la
-vida cotidiana.
-PDA 3° 	PDA 4°
-Compara formas, colores primarios y
-secundarios 	y 	objetos 	de
-manifestaciones culturales y artísticas
-(pintura, escultura, grabado, dibujo) de
-su comunidad con los de otros lugares.
-Distingue formas, colores y objetos en las
-manifestaciones 	culturales 	y 	artísticas
-(pintura, escultura, grabado, dibujo) de su
-comunidad y otros lugares del mundo, para
-reflexionar sobre su sentido y significado.
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de artes visuales
-• 	Identificación de representaciones bidimensionales y tridimensionales donde
-estén presentes diferentes formatos, soportes y materiales.
-PDA 3° 	PDA 4°
-Identificación de aspectos por mejorar
-en la escuela o en la comunidad a partir
-de gustos e intereses propios, para la
-generación 	de 	ideas 	sobre 	distintas
-posibilidades de transformación y su
-representación 	mediante
-descripciones, 	dibujos, 	bocetos 	o
-maquetas.
-Creación 	de 	producciones 	visuales 	que
-representen 	vínculos 	respetuosos 	con 	la
-diversidad para la participación en la mejora
-comunitaria.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 53" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Experimentación con elementos visuales y sonoros en producciones colectivas artísticas</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Identificación de representaciones bidimensionales y tridimensionales donde estén presentes diferentes formatos, soportes y materiales.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Realización de una composición visual colectiva con objetos disponibles para la representación de distintas ideas y formas mediante esculturas efímeras o instalaciones.</td><td>Uso de medios digitales para la creación de un cortometraje colectivo mediante animaciones con secuencias fotográficas de objetos cotidianos, con sonorización para el intercambio de ideas y experiencias.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 53" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana. • Identificación de representaciones bidimensionales y tridimensionales donde estén presentes diferentes formatos, soportes y materiales.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Uso de elementos visuales para la representación de experiencias significativas de la vida cotidiana, como la puesta de sol, la flora y la fauna, en producciones bidimensionales.</td><td>Uso de formas, colores y texturas para la recreación de obras de arte de interés e impacto mediante producciones bidimensionales o tridimensionales.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Realización de una composición visual Uso de medios digitales para la</p><p class="pdf-source-line">colectiva con objetos disponibles para la creación de un cortometraje colectivo</p><p class="pdf-source-line">representación de distintas ideas y formas mediante animaciones con secuencias</p><p class="pdf-source-line">mediante esculturas efímeras o fotográficas de objetos cotidianos, con</p><p class="pdf-source-line">instalaciones. sonorización para el intercambio de</p><p class="pdf-source-line">Uso de elementos visuales para la Uso de formas, colores y texturas para</p><p class="pdf-source-line">representación de experiencias significativas la recreación de obras de arte de</p><p class="pdf-source-line">de la vida cotidiana, como la puesta de sol, interés e impacto mediante</p><p class="pdf-source-line">la flora y la fauna, en producciones producciones bidimensionales o</p><p class="pdf-source-line">bidimensionales. tridimensionales.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 54 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	54</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 54</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la
-# cuarta fase
-Contenido nacional
-Lectura y creación de poemas, canciones y juegos de palabras para su disfrute
-Contenido estatal de teatro
-• 	Investigación sobre las narraciones de su comunidad o de otras regiones para
-crear diálogos sencillos, de historias ficticias y/o de realidad.
-PDA 3° 	PDA 4°
-Investigación 	y 	reconocimiento 	del
-contenido 	de 	distintos 	escritos 	con
-diversas 	estructuras 	gramaticales
-(poemas, 	cuentos, 	canciones,
-adivinanzas y trabalenguas), en relación
-con 	experiencias 	personales 	y
-comunitarias.
-Reconocimiento 	de 	características 	del
-contexto en la creación de un texto teatral,
-para la elaboración de la estructura de una
-historia 	corta 	en 	función 	de 	las
-características físicas y emocionales de
-los personajes.
-Contenido nacional
-Lectura y creación de poemas, canciones y juegos de palabras para su disfrute
-Contenido estatal de teatro
-• 	Expresión e interpretación de sensaciones para comunicar ideas utilizando las
-posibilidades de su voz.
-PDA 3° 	PDA 4°
-Realización 	de 	inferencias 	de 	sentido 	y
-significado 	a 	partir 	de 	la 	lectura 	y
-socialización 	de 	trabalenguas, 	chistes,
-adivinanzas, refranes, acertijos, cuentos y
-textos teatrales.
-Revisión lúdica de las variaciones en la
-lectura en voz alta en cuanto a tonos,
-pausas, 	acentos 	y 	cambios 	de
-intencionalidad, así como de los gestos
-y movimientos corporales.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 54" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Identificación de representaciones bidimensionales y tridimensionales donde estén presentes diferentes formatos, soportes y materiales.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Identificación de aspectos por mejorar en la escuela o en la comunidad a partir de gustos e intereses propios, para la generación de ideas sobre distintas posibilidades de transformación y su representación mediante descripciones, dibujos, bocetos o maquetas.</td><td>Creación de producciones visuales que representen vínculos respetuosos con la diversidad para la participación en la mejora comunitaria.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 54" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reconocimiento y reflexión sobre el uso de elementos de los lenguajes artísticos, en manifestaciones culturales y artísticas de la comunidad y del resto del mundo</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Observación de diversas imágenes artísticas y de su entorno donde se aprecien los colores (primarios y secundarios) del circulo cromático y su presencia en la vida cotidiana.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Compara formas, colores primarios y secundarios y objetos de manifestaciones culturales y artísticas (pintura, escultura, grabado, dibujo) de su comunidad con los de otros lugares.</td><td>Distingue formas, colores y objetos en las manifestaciones culturales y artísticas (pintura, escultura, grabado, dibujo) de su comunidad y otros lugares del mundo, para reflexionar sobre su sentido y significado.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Identificación de aspectos por mejorar Creación de producciones visuales que</p><p class="pdf-source-line">en la escuela o en la comunidad a partir representen vínculos respetuosos con la</p><p class="pdf-source-line">de gustos e intereses propios, para la diversidad para la participación en la mejora</p><p class="pdf-source-line">generación de ideas sobre distintas comunitaria.</p><p class="pdf-source-line">Compara formas, colores primarios y Distingue formas, colores y objetos en las</p><p class="pdf-source-line">(pintura, escultura, grabado, dibujo) de comunidad y otros lugares del mundo, para</p><p class="pdf-source-line">su comunidad con los de otros lugares. reflexionar sobre su sentido y significado.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 55 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	55</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 55</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de teatro
-• 	Creación de una historia de su comunidad con pequeños diálogos.
-PDA 3° 	PDA 4°
-Diálogo sobre las transformaciones que han
-tenido 	distintos 	espacios 	escolares 	y
-comunitarios a partir de cambios impulsados
-mediante el lenguaje teatral, y creación de un
-guion con la técnica de teatro callejero.
-Elaboración 	de 	un 	montaje 	teatral
-colectivo, para ofrecer propuestas de
-solución 	a 	situaciones 	o 	problemas
-identificados 	en 	la 	escuela 	o 	en 	la
-comunidad.
-Contenido nacional
-Lectura y creación de poemas, canciones y juegos de palabras para su disfrute
-Contenido estatal de teatro
-• 	Creación de una historia de su comunidad con pequeños diálogos.
-PDA 3° 	PDA 4°
-Reconocimiento de la rima y la aliteración
-como elementos rítmicos de poemas y
-juegos de palabras para la construcción
-de creaciones propias.
-Establecimiento 	de 	relaciones 	entre 	el
-texto y las experiencias de vida de la
-comunidad 	mediante 	la 	creación 	de
-pequeños diálogos en forma de rimas o
-poemas.
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la</h3>
+<p class="pdf-source-line">cuarta fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 55" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura y creación de poemas, canciones y juegos de palabras para su disfrute</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Investigación sobre las narraciones de su comunidad o de otras regiones para crear diálogos sencillos, de historias ficticias y/o de realidad.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Investigación y reconocimiento del contenido de distintos escritos con diversas estructuras gramaticales (poemas, cuentos, canciones, adivinanzas y trabalenguas), en relación con experiencias personales y comunitarias.</td><td>Reconocimiento de características del contexto en la creación de un texto teatral, para la elaboración de la estructura de una historia corta en función de las características físicas y emocionales de los personajes.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 55" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura y creación de poemas, canciones y juegos de palabras para su disfrute</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su voz.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Realización de inferencias de sentido y significado a partir de la lectura y socialización de trabalenguas, chistes, adivinanzas, refranes, acertijos, cuentos y textos teatrales.</td><td>Revisión lúdica de las variaciones en la lectura en voz alta en cuanto a tonos, pausas, acentos y cambios de intencionalidad, así como de los gestos y movimientos corporales.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Investigación y reconocimiento del Reconocimiento de características del</p><p class="pdf-source-line">contenido de distintos escritos con contexto en la creación de un texto teatral,</p><p class="pdf-source-line">diversas estructuras gramaticales para la elaboración de la estructura de una</p><p class="pdf-source-line">(poemas, cuentos, canciones, historia corta en función de las</p><p class="pdf-source-line">adivinanzas y trabalenguas), en relación características físicas y emocionales de</p><p class="pdf-source-line">con experiencias personales y los personajes.</p><p class="pdf-source-line">Realización de inferencias de sentido y Revisión lúdica de las variaciones en la</p><p class="pdf-source-line">significado a partir de la lectura y lectura en voz alta en cuanto a tonos,</p><p class="pdf-source-line">socialización de trabalenguas, chistes, pausas, acentos y cambios de</p><p class="pdf-source-line">adivinanzas, refranes, acertijos, cuentos y intencionalidad, así como de los gestos</p><p class="pdf-source-line">textos teatrales. y movimientos corporales.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 56 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	56</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 56</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Lectura y creación de poemas, canciones y juegos de palabras para su disfrute
-Contenido estatal de teatro
-• 	Creación de una historia de su comunidad con pequeños diálogos.
-PDA 3° 	PDA 4°
-Investigación 	y 	reconocimiento 	de 	la
-estructura gramatical de un cuento o fábula,
-y selección de una historia para su lectura
-con atención a las cualidades de la voz:
-matiz, 	grave, 	agudo 	y 	cambios 	de
-intencionalidad.
-Experimentación 	y 	creación 	de 	una
-fábula a partir del establecimiento de un
-tema 	significativo 	de 	la 	comunidad
-escolar.
-Contenido nacional
-Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que
-tienen lugar en la vida cotidiana
-Contenido estatal de teatro
-• 	Expresión e interpretación de sensaciones para comunicar ideas utilizando las
-posibilidades de su cuerpo y voz.
-PDA 3° 	PDA 4°
-Uso de elementos del lenguaje teatral para
-la 	representación 	de 	experiencias
-significativas de la vida cotidiana (paseo
-familiar, puesta de sol, comida deliciosa);
-identificación de emociones provocadas y
-expresiones gestuales y corporales.
-Uso de formas, colores, texturas, sonidos
-y 	movimientos 	para 	la 	recreación 	de
-atmósferas 	en 	diferentes 	producciones
-teatrales (guiones, cuentos o fábulas) de
-interés e impacto
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 56" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Creación de una historia de su comunidad con pequeños diálogos.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Diálogo sobre las transformaciones que han tenido distintos espacios escolares y comunitarios a partir de cambios impulsados mediante el lenguaje teatral, y creación de un guion con la técnica de teatro callejero.</td><td>Elaboración de un montaje teatral colectivo, para ofrecer propuestas de solución a situaciones o problemas identificados en la escuela o en la comunidad.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 56" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura y creación de poemas, canciones y juegos de palabras para su disfrute</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Creación de una historia de su comunidad con pequeños diálogos.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Reconocimiento de la rima y la aliteración como elementos rítmicos de poemas y juegos de palabras para la construcción de creaciones propias.</td><td>Establecimiento de relaciones entre el texto y las experiencias de vida de la comunidad mediante la creación de pequeños diálogos en forma de rimas o poemas.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Diálogo sobre las transformaciones que han Elaboración de un montaje teatral</p><p class="pdf-source-line">tenido distintos espacios escolares y colectivo, para ofrecer propuestas de</p><p class="pdf-source-line">comunitarios a partir de cambios impulsados solución a situaciones o problemas</p><p class="pdf-source-line">mediante el lenguaje teatral, y creación de un identificados en la escuela o en la</p><p class="pdf-source-line">guion con la técnica de teatro callejero. comunidad.</p><p class="pdf-source-line">Reconocimiento de la rima y la aliteración Establecimiento de relaciones entre el</p><p class="pdf-source-line">como elementos rítmicos de poemas y texto y las experiencias de vida de la</p><p class="pdf-source-line">juegos de palabras para la construcción comunidad mediante la creación de</p><p class="pdf-source-line">de creaciones propias. pequeños diálogos en forma de rimas o</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 57 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	57</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 57</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Experimentación con elementos sonoros en composiciones literarias
-Contenido estatal de teatro
-• 	Expresión e interpretación de sensaciones para comunicar ideas utilizando las
-posibilidades de su voz.
-PDA 3° 	PDA 4°
-Audición y lectura de poemas, trabalenguas
-y 	adivinanzas 	para 	el 	disfrute 	y 	el
-conocimiento de recursos lingüísticos como
-la rima, la onomatopeya y el calambur.
-Participación lúdica en el disfrute y la
-creación 	de 	juegos 	de 	palabras 	con
-cualidades sonoras, mediante el empleo
-de recursos lingüísticos como la rima, la
-onomatopeya y el calambur.
-Contenido nacional
-Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que
-tienen lugar en la vida cotidiana
-Contenido estatal de teatro
-• 	Identificación de las zonas del escenario para conocer las posibilidades de
-interacción que tiene con cada una: el público, otros actores, la escenografía y el
-mismo.
-PDA 3° 	PDA 4°
-Identificación y recreación de sensaciones,
-emociones, 	sentimientos 	e 	ideas 	de
-experiencias significativas de la vida cotidiana
-mediante formas, colores, texturas y sonidos;
-experimentación de movimientos, posiciones
-corporales y sonidos onomatopéyicos en el
-escenario.
-Reconocimiento 	de 	formas, 	líneas,
-colores y texturas del entorno natural y
-social; recreación de los mismos en
-producciones artísticas individuales y/o
-colectivas; exploración de zonas del
-escenario para la realización de una
-escena de cuento o fábula.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 57" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura y creación de poemas, canciones y juegos de palabras para su disfrute</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Creación de una historia de su comunidad con pequeños diálogos.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Investigación y reconocimiento de la estructura gramatical de un cuento o fábula, y selección de una historia para su lectura con atención a las cualidades de la voz: matiz, grave, agudo y cambios de intencionalidad.</td><td>Experimentación y creación de una fábula a partir del establecimiento de un tema significativo de la comunidad escolar.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 57" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su cuerpo y voz.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Uso de elementos del lenguaje teatral para la representación de experiencias significativas de la vida cotidiana (paseo familiar, puesta de sol, comida deliciosa); identificación de emociones provocadas y expresiones gestuales y corporales.</td><td>Uso de formas, colores, texturas, sonidos y movimientos para la recreación de atmósferas en diferentes producciones teatrales (guiones, cuentos o fábulas) de interés e impacto</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Investigación y reconocimiento de la Experimentación y creación de una</p><p class="pdf-source-line">estructura gramatical de un cuento o fábula, fábula a partir del establecimiento de un</p><p class="pdf-source-line">y selección de una historia para su lectura tema significativo de la comunidad</p><p class="pdf-source-line">con atención a las cualidades de la voz: escolar.</p><p class="pdf-source-line">Uso de elementos del lenguaje teatral para Uso de formas, colores, texturas, sonidos</p><p class="pdf-source-line">la representación de experiencias y movimientos para la recreación de</p><p class="pdf-source-line">significativas de la vida cotidiana (paseo atmósferas en diferentes producciones</p><p class="pdf-source-line">familiar, puesta de sol, comida deliciosa); teatrales (guiones, cuentos o fábulas) de</p><p class="pdf-source-line">identificación de emociones provocadas y interés e impacto</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 58 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	58</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 58</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Identificación del uso de la fantasía y la realidad en diferentes manifestaciones
-culturales y artísticas
-Contenido estatal de teatro
-• 	Investigación sobre tradiciones culturales (rituales religioso y festivo) de México
-donde se fabrican y utilizan máscaras.
-PDA 3° 	PDA 4°
-Apreciación del uso intencional de formas,
-colores, 	sonidos, 	texturas, 	movimientos
-corporales, 	gestuales 	y 	objetos 	para 	la
-expresión de la realidad y la fantasía en
-manifestaciones culturales y artísticas.
-Creación de un personaje empleando
-elementos de los lenguajes artísticos,
-que 	retome 	aspectos 	reales 	y
-fantásticos 	de 	una 	manifestación
-cultural o artística, para la expresión de
-gustos 	e 	intereses 	mediante 	una
-máscara.
-Contenido nacional
-Identificación del uso de la fantasía y la realidad en diferentes manifestaciones
-culturales y artísticas
-Contenido estatal de teatro
-• 	Expresión e interpretación de sensaciones para comunicar ideas utilizando las
-posibilidades de su cuerpo.
-PDA 3° 	PDA 4°
-Comentario de impresiones y sensaciones a
-partir de la identificación del uso intencional
-de 	formas, 	colores, 	sonidos, 	texturas,
-movimientos 	o 	gestos 	en 	diferentes
-estructuras gramaticales.
-Investigación, 	reconocimiento 	y
-creación de la corporalidad en distintos
-movimientos actorales y gestuales, así
-como de las emociones provocadas por
-cada movimiento corporal
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 58" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Experimentación con elementos sonoros en composiciones literarias</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su voz.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Audición y lectura de poemas, trabalenguas y adivinanzas para el disfrute y el conocimiento de recursos lingüísticos como la rima, la onomatopeya y el calambur.</td><td>Participación lúdica en el disfrute y la creación de juegos de palabras con cualidades sonoras, mediante el empleo de recursos lingüísticos como la rima, la onomatopeya y el calambur.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 58" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reflexión y uso de los lenguajes artísticos, para recrear experiencias estéticas que tienen lugar en la vida cotidiana</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Identificación de las zonas del escenario para conocer las posibilidades de interacción que tiene con cada una: el público, otros actores, la escenografía y el mismo.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Identificación y recreación de sensaciones, emociones, sentimientos e ideas de experiencias significativas de la vida cotidiana mediante formas, colores, texturas y sonidos; experimentación de movimientos, posiciones corporales y sonidos onomatopéyicos en el escenario.</td><td>Reconocimiento de formas, líneas, colores y texturas del entorno natural y social; recreación de los mismos en producciones artísticas individuales y/o colectivas; exploración de zonas del escenario para la realización de una escena de cuento o fábula.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Audición y lectura de poemas, trabalenguas Participación lúdica en el disfrute y la</p><p class="pdf-source-line">y adivinanzas para el disfrute y el creación de juegos de palabras con</p><p class="pdf-source-line">conocimiento de recursos lingüísticos como cualidades sonoras, mediante el empleo</p><p class="pdf-source-line">la rima, la onomatopeya y el calambur. de recursos lingüísticos como la rima, la</p><p class="pdf-source-line">Identificación y recreación de sensaciones, Reconocimiento de formas, líneas,</p><p class="pdf-source-line">emociones, sentimientos e ideas de colores y texturas del entorno natural y</p><p class="pdf-source-line">experiencias significativas de la vida cotidiana social; recreación de los mismos en</p><p class="pdf-source-line">mediante formas, colores, texturas y sonidos; producciones artísticas individuales y/o</p><p class="pdf-source-line">experimentación de movimientos, posiciones colectivas; exploración de zonas del</p><p class="pdf-source-line">corporales y sonidos onomatopéyicos en el escenario para la realización de una</p><p class="pdf-source-line">escenario. escena de cuento o fábula.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 59 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	59</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 59</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Identificación del uso de la fantasía y la realidad en diferentes manifestaciones
-culturales y artísticas
-CONTENIDO ESTATAL DE TEATRO
-• 	Expresión e interpretación de sensaciones para comunicar ideas utilizando las
-posibilidades de su cuerpo.
-PDA 3° 	PDA 4°
-Comentario de impresiones y sensaciones
-a 	partir 	de 	la 	identificación 	del 	uso
-intencional 	de 	formas, 	colores, 	sonidos,
-texturas, 	movimientos 	o 	gestos 	en
-diferentes estructuras gramaticales.
-Investigación, reconocimiento y creación
-de 	la 	corporalidad 	en 	distintos
-movimientos actorales y gestuales, así
-como de las emociones provocadas por
-cada movimiento corporal
-Contenido nacional
-Comprensión y producción de cuentos para su disfrute
-Contenido estatal de teatro
-• 	Creación de una historia de su comunidad con pequeños diálogos.
-PDA 3° 	PDA 4°
-Reconocimiento 	de 	semejanzas 	y
-diferencias entre los cuentos y los eventos
-o 	sucesos 	de 	la 	vida 	cotidiana, 	para
-otorgarles un sentido y significado propios.
-Escritura 	colectiva 	de 	un 	cuento,
-elaboración de personajes con objetos
-cotidianos de su entorno y presentación
-frente a un público.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 59" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Investigación sobre tradiciones culturales (rituales religioso y festivo) de México donde se fabrican y utilizan máscaras.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Apreciación del uso intencional de formas, colores, sonidos, texturas, movimientos corporales, gestuales y objetos para la expresión de la realidad y la fantasía en manifestaciones culturales y artísticas.</td><td>Creación de un personaje empleando elementos de los lenguajes artísticos, que retome aspectos reales y fantásticos de una manifestación cultural o artística, para la expresión de gustos e intereses mediante una máscara.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 59" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su cuerpo.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Comentario de impresiones y sensaciones a partir de la identificación del uso intencional de formas, colores, sonidos, texturas, movimientos o gestos en diferentes estructuras gramaticales.</td><td>Investigación, reconocimiento y creación de la corporalidad en distintos movimientos actorales y gestuales, así como de las emociones provocadas por cada movimiento corporal</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Apreciación del uso intencional de formas, Creación de un personaje empleando</p><p class="pdf-source-line">colores, sonidos, texturas, movimientos elementos de los lenguajes artísticos,</p><p class="pdf-source-line">corporales, gestuales y objetos para la que retome aspectos reales y</p><p class="pdf-source-line">expresión de la realidad y la fantasía en fantásticos de una manifestación</p><p class="pdf-source-line">manifestaciones culturales y artísticas. cultural o artística, para la expresión de</p><p class="pdf-source-line">Comentario de impresiones y sensaciones a Investigación, reconocimiento y</p><p class="pdf-source-line">partir de la identificación del uso intencional creación de la corporalidad en distintos</p><p class="pdf-source-line">de formas, colores, sonidos, texturas, movimientos actorales y gestuales, así</p><p class="pdf-source-line">movimientos o gestos en diferentes como de las emociones provocadas por</p><p class="pdf-source-line">estructuras gramaticales. cada movimiento corporal</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 60 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	60</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 60</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Lectura dramatizada y representación teatral
-CONTENIDO ESTATAL DE TEATRO
-• 	Identificación de los elementos que constituyen una obra de teatro: inicio,
-desarrollo nudo o conflicto, desenlace o cierre.
-PDA 3° 	PDA 4°
-Análisis de guion teatral e identificación
-de características del texto dramático:
-diálogos, ambientaciones, acotaciones,
-listado 	de 	personajes, 	temporalidad,
-ritmo, 	inicio, 	desarrollo, 	conflicto 	y
-cierre (trabajo de mesa).
-Exploración colectiva de la imaginación, el
-movimiento, el gesto, la forma, el color y el
-sonido, para la recreación de fragmentos de
-un guion teatral de interés mediante teatro de
-títeres, sombras o papel.
-Contenido nacional
-Lectura dramatizada y representación teatral
-Contenido estatal de teatro
-• 	Expresión e interpretación de sensaciones para comunicar ideas utilizando las
-posibilidades de su voz.
-PDA 3° 	PDA 4°
-Transformación creativa de objetos y
-recursos 	a 	su 	alcance 	para 	su
-utilización 	en 	la 	representación 	de
-personajes 	durante 	una 	lectura
-dramatizada.
-Realización 	colectiva 	de 	una 	lectura
-dramatizada o teatro de atril de un texto
-dramático, 	mediante 	el 	juego 	con
-combinaciones de secuencias de sonidos
-rápidos, 	lentos, 	agudos, 	graves, 	fuertes,
-débiles, con pausas y acentos variados en la
-técnica de radioteatro.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 60" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Identificación del uso de la fantasía y la realidad en diferentes manifestaciones culturales y artísticas</td></tr><tr><td colspan="2">CONTENIDO ESTATAL DE TEATRO</td></tr><tr><td colspan="2">• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su cuerpo.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Comentario de impresiones y sensaciones a partir de la identificación del uso intencional de formas, colores, sonidos, texturas, movimientos o gestos en diferentes estructuras gramaticales.</td><td>Investigación, reconocimiento y creación de la corporalidad en distintos movimientos actorales y gestuales, así como de las emociones provocadas por cada movimiento corporal</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 60" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Comprensión y producción de cuentos para su disfrute</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Creación de una historia de su comunidad con pequeños diálogos.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Reconocimiento de semejanzas y diferencias entre los cuentos y los eventos o sucesos de la vida cotidiana, para otorgarles un sentido y significado propios.</td><td>Escritura colectiva de un cuento, elaboración de personajes con objetos cotidianos de su entorno y presentación frente a un público.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Comentario de impresiones y sensaciones Investigación, reconocimiento y creación</p><p class="pdf-source-line">a partir de la identificación del uso de la corporalidad en distintos</p><p class="pdf-source-line">intencional de formas, colores, sonidos, movimientos actorales y gestuales, así</p><p class="pdf-source-line">texturas, movimientos o gestos en como de las emociones provocadas por</p><p class="pdf-source-line">diferentes estructuras gramaticales. cada movimiento corporal</p><p class="pdf-source-line">Reconocimiento de semejanzas y Escritura colectiva de un cuento,</p><p class="pdf-source-line">diferencias entre los cuentos y los eventos elaboración de personajes con objetos</p><p class="pdf-source-line">o sucesos de la vida cotidiana, para cotidianos de su entorno y presentación</p><p class="pdf-source-line">otorgarles un sentido y significado propios. frente a un público.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 61 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	61</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 61</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Lectura dramatizada y representación teatral
-Contenido estatal de teatro
-• 	Expresión e interpretación de sensaciones para comunicar ideas utilizando las
-posibilidades de su cuerpo y voz.
-PDA 3° 	PDA 4°
-Improvisación con el uso del cuerpo y
-la 	voz 	de 	situaciones 	significativas
-identificadas 	en 	narraciones, 	y
-representación de personajes mediante
-el juego de roles.
-Identificación y selección de la estructura de
-un texto dramático, conformado por diálogos,
-escenas, 	listado 	de 	personajes 	y
-acotaciones, para su representación en un
-espacio escénico.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 61" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura dramatizada y representación teatral</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su voz.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Transformación creativa de objetos y recursos a su alcance para su utilización en la representación de personajes durante una lectura dramatizada.</td><td>Realización colectiva de una lectura dramatizada o teatro de atril de un texto dramático, mediante el juego con combinaciones de secuencias de sonidos rápidos, lentos, agudos, graves, fuertes, débiles, con pausas y acentos variados en la técnica de radioteatro.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 61" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura dramatizada y representación teatral</td></tr><tr><td colspan="2">CONTENIDO ESTATAL DE TEATRO</td></tr><tr><td colspan="2">• Identificación de los elementos que constituyen una obra de teatro: inicio, desarrollo nudo o conflicto, desenlace o cierre.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Análisis de guion teatral e identificación de características del texto dramático: diálogos, ambientaciones, acotaciones, listado de personajes, temporalidad, ritmo, inicio, desarrollo, conflicto y cierre (trabajo de mesa).</td><td>Exploración colectiva de la imaginación, el movimiento, el gesto, la forma, el color y el sonido, para la recreación de fragmentos de un guion teatral de interés mediante teatro de títeres, sombras o papel.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Transformación creativa de objetos y Realización colectiva de una lectura</p><p class="pdf-source-line">recursos a su alcance para su dramatizada o teatro de atril de un texto</p><p class="pdf-source-line">utilización en la representación de dramático, mediante el juego con</p><p class="pdf-source-line">personajes durante una lectura combinaciones de secuencias de sonidos</p><p class="pdf-source-line">dramatizada. rápidos, lentos, agudos, graves, fuertes,</p><p class="pdf-source-line">Análisis de guion teatral e identificación Exploración colectiva de la imaginación, el</p><p class="pdf-source-line">de características del texto dramático: movimiento, el gesto, la forma, el color y el</p><p class="pdf-source-line">diálogos, ambientaciones, acotaciones, sonido, para la recreación de fragmentos de</p><p class="pdf-source-line">listado de personajes, temporalidad, un guion teatral de interés mediante teatro de</p><p class="pdf-source-line">ritmo, inicio, desarrollo, conflicto y títeres, sombras o papel.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 62 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	62</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 62</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Quinta 	fase
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 62" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura dramatizada y representación teatral</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Expresión e interpretación de sensaciones para comunicar ideas utilizando las posibilidades de su cuerpo y voz.</td></tr><tr><td>PDA 3°</td><td>PDA 4°</td></tr><tr><td>Improvisación con el uso del cuerpo y la voz de situaciones significativas identificadas en narraciones, y representación de personajes mediante el juego de roles.</td><td>Identificación y selección de la estructura de un texto dramático, conformado por diálogos, escenas, listado de personajes y acotaciones, para su representación en un espacio escénico.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Improvisación con el uso del cuerpo y Identificación y selección de la estructura de</p><p class="pdf-source-line">la voz de situaciones significativas un texto dramático, conformado por diálogos,</p><p class="pdf-source-line">identificadas en narraciones, y escenas, listado de personajes y</p><p class="pdf-source-line">representación de personajes mediante acotaciones, para su representación en un</p><p class="pdf-source-line">el juego de roles. espacio escénico.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 63 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	63</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 63</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos nacionales de la quinta fase
-Contenidos nacionales relacionado con las artes
-# Quinta Fase
-➢ Reconocimiento de la diversidad lingüística de México.
-➢ Interpretación y valoración de manifestaciones culturales y artísticas de México
-y del mundo.
-➢ Apropiación e intervención artística en el espacio comunitario.
-➢ Análisis de cuentos y poemas para su disfrute y comprensión.
-➢ Combinación de elementos visuales, sonoros y corporales, en composiciones
-artísticas colectivas, para expresar rasgos 	de sus identidades personal y
-colectiva.
-➢ Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas
-que tienen lugar en la naturaleza.
-➢ Creación y representación de narrativas a partir de acontecimientos relevantes
-de la comunidad, empleando recursos literarios, visuales, corporales y sonoros.
-➢ Combinación 	de 	la 	realidad 	y 	la 	ficción 	en 	elementos 	simbólicos 	de 	las
-manifestaciones 	culturales 	y 	artísticas, 	que 	dan 	identidad 	y 	sentido 	de
-pertenencia.
-➢ Análisis y representación de guiones teatrales.
-➢ Lectura y análisis de mitos y leyendas, para su disfrute y valoración.
-
-
+<p class="pdf-source-line">Quinta fase</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 64 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	64</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 64</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje estatales de la quinta fase
-fase
-Contenidos estatales por lenguaje
-# Quinta fase
-| Música | Artes visuales | Teatro | Danza |
-| :--- | :--- | :--- | :--- |
-| Aplicación de técnicas de respiración en la emisión vocal en la práctica del canto. | Comprensión de la tridimensionalidad por medio de objetos que se encuentren en el entorno. | Investigación de obras de teatro mexicanas de los géneros de comedia y tragedia. | Identificación de diferentes movimientos que pueden manejarse mediante el uso de distintos tipos de música. |
-| Identificación y graficación de la notación musical. | Investigación sobre diferentes procesos y materiales para diseñar y construir esculturas. | Identificación de las características tonales (voz, carácter) de los personajes que aparecen en una historia. | Interpretación de un género dancístico utilizando elementos coreográficos. |
-| Conocimiento e identificación del compás musical en las canciones que escucha. | Recopilación de imágenes de obras de arte, objetos o artefactos, películas o fotografías de diferentes épocas para comprender y discutir la memoria de la importancia del patrimonio tangible como parte del pueblo. | Selección de un tema de su comunidad para escribir una obra de teatro que contenga todos los elementos de un género. | Investigación de una danza o baile de su comunidad o de otra región. |
-| Conocimiento e identificación auditiva de las características de los diferentes géneros musicales. | Observación de los bienes muebles e inmuebles de valor cultural (patrimonio arquitectónico) que existen en su comunidad, estado, región o en el país. | Creación de títeres para representar personajes de obras, considerando sus características físicas, personalidad, forma de ser y de comportarse. | Construcción colectiva de una representación dancística integrando elementos de la cultura local regional o nacional. |
-| Creación de polirritmias para el acompañamiento musical. | Valora la importancia de conservar y difundir el patrimonio artístico mexicano. | Elaboración del escenario adecuado para ambientar una puesta en escena con materiales diversos. | Diferenciación entre una danza o baile de México y del mundo. |
-| Conformación de una orquesta de percusiones para presentarla frente al público. | Exploración de diferentes procesos y materiales en la creación de obras tridimensionales. | Realización del montaje de una puesta en escena con títeres, o bien, en teatro corporal ante un público. | Selección de un baile popular mexicano o de Latinoamérica. |
-| | Creación de una obra bidimensional o tridimensional a partir de elementos de su entorno que hagan referencia a sucesos relevantes de su comunidad. | Investigación de obras de teatro mexicanas de los géneros de comedia y tragedia. | Interpretación de un baile regional mexicano o del mundo. |
-| | Creación de obras tridimensionales con movimiento, utilizando diferentes soportes procesos y materiales con los que se puedan experimentar las diferentes formas. | Identificación de las características tonales (voz, carácter) de los personajes que aparecen en una historia. | Presentación y reflexión de los bailes folclóricos como parte del patrimonio cultural. |
-
-
+<h3 class="pdf-section-title">Contenidos nacionales de la quinta fase</h3>
+<h3 class="pdf-section-title">Contenidos nacionales relacionado con las artes</h3>
+<p class="pdf-source-line">Quinta Fase</p>
+<p class="pdf-source-line">➢ Reconocimiento de la diversidad lingüística de México.</p>
+<p class="pdf-source-line">➢ Interpretación y valoración de manifestaciones culturales y artísticas de México</p>
+<p class="pdf-source-line">y del mundo.</p>
+<p class="pdf-source-line">➢ Apropiación e intervención artística en el espacio comunitario.</p>
+<p class="pdf-source-line">➢ Análisis de cuentos y poemas para su disfrute y comprensión.</p>
+<p class="pdf-source-line">➢ Combinación de elementos visuales, sonoros y corporales, en composiciones</p>
+<p class="pdf-source-line">artísticas colectivas, para expresar rasgos de sus identidades personal y</p>
+<p class="pdf-source-line">colectiva.</p>
+<p class="pdf-source-line">➢ Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas</p>
+<p class="pdf-source-line">que tienen lugar en la naturaleza.</p>
+<p class="pdf-source-line">➢ Creación y representación de narrativas a partir de acontecimientos relevantes</p>
+<p class="pdf-source-line">de la comunidad, empleando recursos literarios, visuales, corporales y sonoros.</p>
+<p class="pdf-source-line">➢ Combinación de la realidad y la ficción en elementos simbólicos de las</p>
+<p class="pdf-source-line">manifestaciones culturales y artísticas, que dan identidad y sentido de</p>
+<p class="pdf-source-line">pertenencia.</p>
+<p class="pdf-source-line">➢ Análisis y representación de guiones teatrales.</p>
+<p class="pdf-source-line">➢ Lectura y análisis de mitos y leyendas, para su disfrute y valoración.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 65 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	65</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 65</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-(Contenido continuado de la tabla anterior)
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje estatales de la quinta fase</h3>
+<p class="pdf-source-line">fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 65" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="4">Contenidos estatales por lenguaje</th></tr><tr><td colspan="4">Quinta fase</td></tr><tr><td>Música</td><td>Artes visuales</td><td>Teatro</td><td>Danza</td></tr><tr><td>Aplicación de técnicas de respiración en la emisión vocal en la práctica del canto. Identificación y graficación de la notación musical. Conocimiento e identificación del compás musical en las canciones que escucha.</td><td>Comprensión de la tridimensionalidad por medio de objetos que se encuentren en el entorno. Investigación sobre diferentes procesos y materiales para diseñar y construir esculturas. Recopilación de imágenes de obras de arte, objetos o artefactos, películas o fotografías de diferentes épocas para comprender y discutir la memoria de la importancia del patrimonio tangible como parte del pueblo.</td><td>Investigación de obras de teatro mexicanas de los géneros de comedia y tragedia. Identificación de las características tonales (voz, carácter) de los personajes que aparecen en una historia. Selección de un tema de su comunidad para escribir una obra de teatro que contenga todos los elementos de un género. Creación de títeres para representar personajes de obras, considerando sus características físicas, personalidad, forma</td><td>Identificación de diferentes movimientos que pueden manejarse mediante el uso de distintos tipos de música. Interpretación de un género dancístico utilizando elementos coreográficos. Investigación de una danza o baile de su comunidad o de otra región. Construcción colectiva de una representación dancística integrando elementos de la cultura local regional o nacional. Diferenciación entre una danza o</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Aplicación de Comprensión de la Investigación de Identificación de</p><p class="pdf-source-line">técnicas de tridimensionalidad obras de teatro diferentes</p><p class="pdf-source-line">respiración en la por medio de objetos mexicanas de los movimientos que</p><p class="pdf-source-line">emisión vocal en la que se encuentren géneros de pueden manejarse</p><p class="pdf-source-line">práctica del canto. en el entorno. comedia y tragedia. mediante el uso de</p><p class="pdf-source-line">Identificación y Investigación sobre género dancístico</p><p class="pdf-source-line">graficación de la diferentes procesos y utilizando</p><p class="pdf-source-line">notación musical. materiales para elementos</p><p class="pdf-source-line">diseñar y construir coreográficos.</p><p class="pdf-source-line">historia. Investigación de</p><p class="pdf-source-line">Conocimiento e de su comunidad o</p><p class="pdf-source-line">Recopilación de tema de su</p><p class="pdf-source-line">identificación del de otra región.</p><p class="pdf-source-line">imágenes de obras comunidad para</p><p class="pdf-source-line">de arte, objetos o escribir una obra de</p><p class="pdf-source-line">artefactos, películas teatro que contenga</p><p class="pdf-source-line">escucha. Construcción</p><p class="pdf-source-line">o fotografías de todos los elementos</p><p class="pdf-source-line">diferentes épocas de un género.</p><p class="pdf-source-line">Creación de títeres dancística</p><p class="pdf-source-line">para representar integrando</p><p class="pdf-source-line">personajes de elementos de la</p><p class="pdf-source-line">obras, cultura local</p><p class="pdf-source-line">considerando sus regional o nacional.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 66 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	66</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 66</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-utilizando 	diferentes
-soportes procesos y
-materiales 	con 	los
-que 	se 	puedan
-experimentar 	las
-diferentes formas.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 66" tabindex="0"><table class="pdf-table"><tbody><tr><th>Conocimiento e identificación auditiva de las características de los diferentes géneros musicales. Creación de polirritmias para el acompañamiento musical. Conformación de una orquesta de percusiones para presentarla frente al público</th><th>Observación de los bienes muebles e inmuebles de valor cultural (patrimonio arquitectónico) que existen en su comunidad, estado, región o en el país. Valora la importancia de conservar y difundir el patrimonio artístico mexicano. Exploración de diferentes procesos y materiales en la creación de obras tridimensionales. Creación de una obra bidimensional o tridimensional a partir de elementos de su entorno que hagan referencia a sucesos relevantes de su comunidad. Creación de obras tridimensionales con movimiento,</th><th>de ser y de comportarse. Elaboración del escenario adecuado para ambientar una puesta en escena con materiales diversos. Realización del montaje de una puesta en escena con títeres, o bien, en teatro corporal ante un público. Investigación de obras de teatro mexicanas de los géneros de comedia y tragedia. Identificación de las características tonales (voz, carácter) de los personajes que aparecen en una historia.</th><th>baile de México y del mundo. Selección de un baile popular mexicano o de Latinoamérica. Interpretación de un baile regional mexicano o del mundo. Presentación y reflexión de los bailes folclóricos como parte del patrimonio cultural.</th></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">de ser y de baile de México y</p><p class="pdf-source-line">comportarse. del mundo.</p><p class="pdf-source-line">escenario Selección de un</p><p class="pdf-source-line">adecuado para baile popular</p><p class="pdf-source-line">ambientar una mexicano o de</p><p class="pdf-source-line">Conocimiento e Observación de los</p><p class="pdf-source-line">puesta en escena Latinoamérica.</p><p class="pdf-source-line">identificación bienes muebles e</p><p class="pdf-source-line">auditiva de las inmuebles de valor</p><p class="pdf-source-line">características de cultural (patrimonio</p><p class="pdf-source-line">los diferentes arquitectónico) que</p><p class="pdf-source-line">géneros musicales. existen en su</p><p class="pdf-source-line">montaje de una Interpretación de un</p><p class="pdf-source-line">puesta en escena baile regional</p><p class="pdf-source-line">Valora la importancia con títeres, o bien, mexicano o del</p><p class="pdf-source-line">de conservar y en teatro corporal mundo.</p><p class="pdf-source-line">difundir el patrimonio ante un público.</p><p class="pdf-source-line">obras de teatro Presentación y</p><p class="pdf-source-line">mexicanas de los reflexión de los</p><p class="pdf-source-line">Conformación de Exploración de géneros de bailes folclóricos</p><p class="pdf-source-line">una orquesta de diferentes procesos y comedia y tragedia. como parte del</p><p class="pdf-source-line">percusiones para materiales en la patrimonio cultural.</p><p class="pdf-source-line">presentarla frente al creación de obras</p><p class="pdf-source-line">público tridimensionales.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 67 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	67</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 67</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la
-# quinta fase
-Contenido nacional
-Reconocimiento de la diversidad lingüística de México
-Contenido estatal de música
-• 	Aplicación de técnicas de respiración en la emisión vocal en la práctica del
-canto.
-PDA 5° 	PDA 6°
-Interpretación grupal de cantos cívicos y
-canciones en lenguas originarias, para la
-reflexión sobre la diversidad lingüística de
-México.
-Elección y análisis de una canción en
-lengua originaria o de un canto cívico,
-considerando su letra y estructura para
-una presentación, en la que se explique
-la importancia de preservar esa lengua y
-los desafíos que enfrenta.
-Contenido nacional
-Interpretación y valoración de manifestaciones culturales y artísticas de México y del
-mundo
-Contenido estatal de música
-• 	Conocimiento e identificación auditiva de las características de los diferentes
-géneros musicales.
-PDA 5° 	PDA 6°
-Exploración 	de 	manifestaciones
-musicales (indígena, banda sinaloense,
-mariachi, entre otros), de diversas partes
-de México, e identificación de los géneros
-musicales para su recreación.
-Reconocimiento 	y 	valoración 	de 	la
-diversidad cultural del mundo mediante el
-análisis 	de 	obras 	musicales
-representativas de diferentes contextos,
-identificando 	sus 	elementos 	(melodía,
-armonía 	y 	ritmo) 	y 	significados 	para
-desarrollar un ensamble.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 67" tabindex="0"><table class="pdf-table"><tbody><tr><td>utilizando diferentes soportes procesos y materiales con los que se puedan experimentar las diferentes formas.</td></tr></tbody></table></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 68 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	68</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 68</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Apropiación e intervención artística en el espacio comunitario
-Contenido estatal de música
-• 	Conformación de una orquesta de percusiones para presentarla frente al
-público.
-PDA 5° 	PDA 6°
-Construcción 	de 	significados 	en 	lo
-individual, a partir de la observación de
-manifestaciones culturales (música de las
-fiestas tradicionales de su comunidad)
-para la creación de cotidiáfonos.
-Construcción y ejecución, a partir de la
-observación de manifestaciones culturales
-(fiestas 	tradicionales 	de 	México 	y 	del
-mundo), de una orquesta de percusiones.
-Contenido nacional
-Combinación de elementos visuales, sonoros y corporales, en composiciones
-artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva
-Contenido estatal de música
-• 	Conocimiento e identificación auditiva de las características de los diferentes
-géneros musicales.
-PDA 5° 	PDA 6°
-Identificación 	del 	ritmo 	de 	diferentes
-géneros 	musicales 	y 	ejecución 	de
-combinaciones 	con sonidos 	corporales 	a
-partir de piezas de la comunidad
-Construcción de propuestas artísticas
-grupales a partir de sonidos, ritmos y
-movimientos 	que 	representan 	la
-identidad.
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de música de la</h3>
+<p class="pdf-source-line">quinta fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 68" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Reconocimiento de la diversidad lingüística de México</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Aplicación de técnicas de respiración en la emisión vocal en la práctica del canto.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Interpretación grupal de cantos cívicos y canciones en lenguas originarias, para la reflexión sobre la diversidad lingüística de México.</td><td>Elección y análisis de una canción en lengua originaria o de un canto cívico, considerando su letra y estructura para una presentación, en la que se explique la importancia de preservar esa lengua y los desafíos que enfrenta.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 68" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Interpretación y valoración de manifestaciones culturales y artísticas de México y del mundo</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Conocimiento e identificación auditiva de las características de los diferentes géneros musicales.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Exploración de manifestaciones musicales (indígena, banda sinaloense, mariachi, entre otros), de diversas partes de México, e identificación de los géneros musicales para su recreación.</td><td>Reconocimiento y valoración de la diversidad cultural del mundo mediante el análisis de obras musicales representativas de diferentes contextos, identificando sus elementos (melodía, armonía y ritmo) y significados para desarrollar un ensamble.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Interpretación grupal de cantos cívicos y Elección y análisis de una canción en</p><p class="pdf-source-line">canciones en lenguas originarias, para la lengua originaria o de un canto cívico,</p><p class="pdf-source-line">reflexión sobre la diversidad lingüística de considerando su letra y estructura para</p><p class="pdf-source-line">México. una presentación, en la que se explique</p><p class="pdf-source-line">Exploración de manifestaciones Reconocimiento y valoración de la</p><p class="pdf-source-line">musicales (indígena, banda sinaloense, diversidad cultural del mundo mediante el</p><p class="pdf-source-line">mariachi, entre otros), de diversas partes análisis de obras musicales</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 69 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	69</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 69</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que
-tienen lugar en la naturaleza
-• 	Contenido estatal de música
-• 	Conformación de una orquesta de percusiones para presentarla frente al
-público
-PDA 5° 	PDA 6°
-Reconocimiento y recreación de sonidos y
-movimientos de la naturaleza por medio de
-la música.
-Apreciación de sonidos y movimientos
-del entorno natural y conformación de
-una 	orquesta 	de 	percusiones 	con
-elementos orgánicos.
-Contenido nacional
-Creación y representación de narrativas a partir de acontecimientos relevantes de la
-comunidad, empleando recursos literarios, visuales, corporales y sonoros
-Contenido estatal de música
-• 	Creación de polirritmias para el acompañamiento musical.
-PDA 5° 	PDA 6°
-Combinación de secuencias sonoras a partir
-de narrativas de historias y leyendas leídas
-o escuchadas.
-Exploración 	colectiva 	de 	sonidos 	y
-silencios, acuerdo de estructura creativa
-(ensamble de percusiones) y creación
-de 	acontecimiento 	improvisado
-(flashmob) en la escuela o comunidad.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 69" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Apropiación e intervención artística en el espacio comunitario</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Conformación de una orquesta de percusiones para presentarla frente al público.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Construcción de significados en lo</td><td>Construcción y ejecución, a partir de la observación de manifestaciones culturales (fiestas tradicionales de México y del mundo), de una orquesta de percusiones.</td></tr><tr><td colspan="2">individual, a partir de la observación de</td></tr><tr><td colspan="2">manifestaciones culturales (música de las</td></tr><tr><td colspan="2">fiestas tradicionales de su comunidad)</td></tr><tr><td colspan="2">para la creación de cotidiáfonos.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 69" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="3">Contenido nacional</th></tr><tr><td colspan="3">Combinación de elementos visuales, sonoros y corporales, en composiciones artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva</td></tr><tr><td colspan="3">Contenido estatal de música</td></tr><tr><td colspan="3">• Conocimiento e identificación auditiva de las características de los diferentes géneros musicales.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td><td>PDA 6°</td></tr><tr><td>Identificación del ritmo de diferentes géneros musicales y ejecución de combinaciones con sonidos corporales a partir de piezas de la comunidad</td><td>Construcción de propuestas artísticas grupales a partir de sonidos, ritmos y movimientos que representan la identidad.</td><td>Construcción de propuestas artísticas</td></tr><tr><td colspan="3">grupales a partir de sonidos, ritmos y</td></tr><tr><td colspan="3">movimientos que representan la</td></tr><tr><td colspan="3">identidad.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">individual, a partir de la observación de observación de manifestaciones culturales</p><p class="pdf-source-line">manifestaciones culturales (música de las (fiestas tradicionales de México y del</p><p class="pdf-source-line">fiestas tradicionales de su comunidad) mundo), de una orquesta de percusiones.</p><p class="pdf-source-line">Identificación del ritmo de diferentes Construcción de propuestas artísticas</p><p class="pdf-source-line">géneros musicales y ejecución de grupales a partir de sonidos, ritmos y</p><p class="pdf-source-line">combinaciones con sonidos corporales a movimientos que representan la</p><p class="pdf-source-line">partir de piezas de la comunidad identidad.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 70 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	70</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 70</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Combinación de la realidad y la ficción en elementos simbólicos de las
-manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia
-Contenido estatal de música
-1. Conocimiento e identificación del compás musical en las canciones que
-escucha.
-PDA 5° 	PDA 6°
-Apreciación del compás en canciones de
-música sinaloense tradicional y relación con
-su significado representativo.
-Reinterpretación de canción tradicional
-sinaloense 	con 	uso 	de 	diferentes
-compases musicales para creación de
-nuevas formas de simbolización.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 70" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que tienen lugar en la naturaleza</td></tr><tr><td colspan="2">• Contenido estatal de música</td></tr><tr><td colspan="2">• Conformación de una orquesta de percusiones para presentarla frente al público</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Reconocimiento y recreación de sonidos y movimientos de la naturaleza por medio de la música.</td><td>Apreciación de sonidos y movimientos del entorno natural y conformación de una orquesta de percusiones con elementos orgánicos.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 70" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación y representación de narrativas a partir de acontecimientos relevantes de la comunidad, empleando recursos literarios, visuales, corporales y sonoros</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">• Creación de polirritmias para el acompañamiento musical.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Combinación de secuencias sonoras a partir de narrativas de historias y leyendas leídas o escuchadas.</td><td>Exploración colectiva de sonidos y silencios, acuerdo de estructura creativa (ensamble de percusiones) y creación de acontecimiento improvisado (flashmob) en la escuela o comunidad.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Reconocimiento y recreación de sonidos y Apreciación de sonidos y movimientos</p><p class="pdf-source-line">movimientos de la naturaleza por medio de del entorno natural y conformación de</p><p class="pdf-source-line">la música. una orquesta de percusiones con</p><p class="pdf-source-line">Combinación de secuencias sonoras a partir Exploración colectiva de sonidos y</p><p class="pdf-source-line">de narrativas de historias y leyendas leídas silencios, acuerdo de estructura creativa</p><p class="pdf-source-line">o escuchadas. (ensamble de percusiones) y creación</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 71 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	71</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 71</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenidos y procesos de desarrollo de aprendizaje de danza de la quinta fase
-Contenido nacional
-Interpretación y valoración de manifestaciones culturales y artísticas de México y del
-mundo
-Contenido estatal de danza
-• 	Interpretación de un baile regional mexicano o del mundo.
-PDA 5° 	PDA 6°
-Observación de elementos de la danza en
-manifestaciones 	culturales 	y 	artísticas,
-para comprensión de su significado.
-Interpretación 	de 	bailes 	regionales 	de
-México 	y 	del 	mundo 	como 	forma 	de
-expresión cultural que refleje identidad y
-tradición.
-Contenido nacional
-Apropiación e intervención artística en el espacio comunitario
-Contenido estatal de danza
-• 	Construcción colectiva de una representación dancística integrando elementos
-de la cultura local regional o nacional.
-PDA 5° 	PDA 6°
-Planteamiento de propuestas creativas de
-bailes 	o 	danzas 	para 	la 	atención 	y/o
-solución 	de 	necesidades 	del 	espacio
-comunitario mediante su identificación y
-socialización
-Creación 	de 	producciones 	artísticas
-mediante el lenguaje dancístico para la
-transformación 	de 	un 	espacio 	público
-comunitario a favor del bienestar social.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 71" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia</td></tr><tr><td colspan="2">Contenido estatal de música</td></tr><tr><td colspan="2">1. Conocimiento e identificación del compás musical en las canciones que escucha.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Apreciación del compás en canciones de música sinaloense tradicional y relación con su significado representativo.</td><td>Reinterpretación de canción tradicional sinaloense con uso de diferentes compases musicales para creación de nuevas formas de simbolización.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Apreciación del compás en canciones de Reinterpretación de canción tradicional</p><p class="pdf-source-line">música sinaloense tradicional y relación con sinaloense con uso de diferentes</p><p class="pdf-source-line">su significado representativo. compases musicales para creación de</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 72 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	72</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 72</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Combinación de elementos visuales, sonoros y corporales, en composiciones
-artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva
-Contenido estatal de danza
-• 	Identificación de diferentes movimientos que pueden manejarse mediante el uso
-de distintos tipos de música.
-PDA 5° 	PDA 6°
-Relación de movimientos corporales con
-sonidos del entorno, el cuerpo y/o la voz
-en secuencias colectivas para la narración
-de una historia significativa.
-Recreación 	de 	movimientos 	para 	la
-representación 	de 	rasgos 	de 	identidad
-personal y colectiva, con presentación a la
-comunidad escolar.
-Contenido nacional
-Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que
-tienen lugar en la naturaleza
-Contenido estatal de danza
-• 	Presentación y reflexión de los bailes folclóricos como parte del patrimonio
-cultural
-PDA 5° 	PDA 6°
-Interpretación 	de 	danzas 	y 	bailes
-folclóricos a partir de la observación de
-formas, 	sonidos 	y 	movimientos 	de 	la
-naturaleza.
-Uso de movimientos para la expresión de
-emociones surgidas de una experiencia
-significativa 	en 	el 	entorno 	natural 	y 	su
-representación 	colectiva 	mediante 	un
-performance.
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje de danza de la quinta fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 72" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="3">Contenido nacional</th></tr><tr><td colspan="3">Interpretación y valoración de manifestaciones culturales y artísticas de México y del</td></tr><tr><td colspan="3">mundo</td></tr><tr><td colspan="3">Contenido estatal de danza</td></tr><tr><td colspan="3">• Interpretación de un baile regional mexicano o del mundo.</td></tr><tr><td>PDA 5°</td><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Observación de elementos de la danza en manifestaciones culturales y artísticas, para comprensión de su significado.</td><td>Observación de elementos de la danza en</td><td>Interpretación de bailes regionales de</td></tr><tr><td>manifestaciones culturales y artísticas,</td><td>México y del mundo como forma de</td><td></td></tr><tr><td>para comprensión de su significado.</td><td>expresión cultural que refleje identidad y</td><td></td></tr><tr><td colspan="3">tradición.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 72" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Apropiación e intervención artística en el espacio comunitario</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Construcción colectiva de una representación dancística integrando elementos</td></tr><tr><td colspan="2">de la cultura local regional o nacional.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Planteamiento de propuestas creativas de</td><td>Creación de producciones artísticas</td></tr><tr><td>bailes o danzas para la atención y/o</td><td>mediante el lenguaje dancístico para la</td></tr><tr><td>solución de necesidades del espacio</td><td>transformación de un espacio público</td></tr><tr><td>comunitario mediante su identificación y</td><td>comunitario a favor del bienestar social.</td></tr><tr><td colspan="2">socialización</td></tr></tbody></table></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 73 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	73</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 73</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Creación y representación de narrativas a partir de acontecimientos relevantes de la
-comunidad, empleando recursos literarios, visuales, corporales y sonoros
-Contenido estatal de danza
-• 	Interpretación de un género dancístico utilizando elementos coreográficos.
-PDA 5° 	PDA 5°
-Narración y representación dancística de
-historias o situaciones cotidianas de la
-comunidad con matices trágicos, cómicos,
-románticos, etc.
-Representación 	dancística 	de 	un
-acontecimiento 	comunitario 	mediante
-experimentación de movimientos suaves,
-fuertes, rápidos, lentos, fluidos o pausados,
-en diversas trayectorias, desplazamientos
-y con acompañamiento musical.
-Contenido nacional
-Creación y representación de narrativas a partir de acontecimientos relevantes de la
-comunidad, empleando recursos literarios, visuales, corporales y sonoros
-Contenido estatal de danza
-Interpretación de un género dancístico utilizando elementos coreográficos.
-PDA 5° 	PDA 6°
-Combinación 	de 	secuencias 	de
-movimientos a partir de investigación de
-historias y leyendas comunitarias.
-Exploración 	colectiva 	de 	movimientos 	y
-acuerdo 	de 	estructura 	creativa 	para
-creación 	de 	acontecimiento 	improvisado
-(flashmob) en escuela o comunidad.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 73" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Combinación de elementos visuales, sonoros y corporales, en composiciones</td></tr><tr><td colspan="2">artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva</td></tr><tr><td>Contenido estatal de</td><td>danza</td></tr><tr><td colspan="2">• Identificación de diferentes movimientos que pueden manejarse mediante el uso</td></tr><tr><td colspan="2">de distintos tipos de música.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Relación de movimientos corporales con sonidos del entorno, el cuerpo y/o la voz en secuencias colectivas para la narración de una historia significativa.</td><td>Recreación de movimientos para la representación de rasgos de identidad personal y colectiva, con presentación a la comunidad escolar.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 73" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que</td></tr><tr><td colspan="2">tienen lugar en la naturaleza</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Presentación y reflexión de los bailes folclóricos como parte del patrimonio</td></tr><tr><td colspan="2">cultural</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Interpretación de danzas y bailes folclóricos a partir de la observación de formas, sonidos y movimientos de la naturaleza.</td><td>Uso de movimientos para la expresión de emociones surgidas de una experiencia significativa en el entorno natural y su representación colectiva mediante un performance.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Relación de movimientos corporales con Recreación de movimientos para la</p><p class="pdf-source-line">sonidos del entorno, el cuerpo y/o la voz representación de rasgos de identidad</p><p class="pdf-source-line">en secuencias colectivas para la narración personal y colectiva, con presentación a la</p><p class="pdf-source-line">de una historia significativa. comunidad escolar.</p><p class="pdf-source-line">Interpretación de danzas y bailes Uso de movimientos para la expresión de</p><p class="pdf-source-line">folclóricos a partir de la observación de emociones surgidas de una experiencia</p><p class="pdf-source-line">formas, sonidos y movimientos de la significativa en el entorno natural y su</p><p class="pdf-source-line">naturaleza. representación colectiva mediante un</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 74 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	74</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 74</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Lectura y análisis de mitos y leyendas para su disfrute y valoración
-Contenido estatal de danza
-Construcción colectiva de una representación dancística integrando elementos de la
-cultura local, regional o nacional.
-PDA 5° 	PDA 6°
-Indagación con personas adultas mayores
-sobre mitos y leyendas de la región e
-interpretación 	mediante 	lenguaje
-dancístico
-Representación de un mito o leyenda de
-interés mediante performance.
-Contenido nacional
-Combinación de la realidad y la ficción en elementos simbólicos de las
-manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia
-Contenido estatal de danza
-Presentación y reflexión de los bailes folclóricos como parte del patrimonio cultural
-PDA 5° 	PDA 6°
-Apreciación 	de 	movimientos 	y
-características de bailes folclóricos en una
-manifestación cultural para reflexión sobre
-su simbolismo.
-Apreciación y recreación colectiva de una
-danza y/o baile para invitar a la comunidad
-escolar a la reflexión sobre identidad y
-sentido de pertenencia.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 74" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación y representación de narrativas a partir de acontecimientos relevantes de la</td></tr><tr><td colspan="2">comunidad, empleando recursos literarios, visuales, corporales y sonoros</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">• Interpretación de un género dancístico utilizando elementos coreográficos.</td></tr><tr><td>PDA 5°</td><td>PDA 5°</td></tr><tr><td>Narración y representación dancística de historias o situaciones cotidianas de la comunidad con matices trágicos, cómicos, románticos, etc.</td><td>Representación dancística de un acontecimiento comunitario mediante experimentación de movimientos suaves, fuertes, rápidos, lentos, fluidos o pausados, en diversas trayectorias, desplazamientos y con acompañamiento musical.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 74" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación y representación de narrativas a partir de acontecimientos relevantes de la</td></tr><tr><td colspan="2">comunidad, empleando recursos literarios, visuales, corporales y sonoros</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">Interpretación de un género dancístico utilizando elementos coreográficos.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Combinación de secuencias de movimientos a partir de investigación de historias y leyendas comunitarias.</td><td>Exploración colectiva de movimientos y acuerdo de estructura creativa para creación de acontecimiento improvisado (flashmob) en escuela o comunidad.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Narración y representación dancística de Representación dancística de un</p><p class="pdf-source-line">historias o situaciones cotidianas de la acontecimiento comunitario mediante</p><p class="pdf-source-line">comunidad con matices trágicos, cómicos, experimentación de movimientos suaves,</p><p class="pdf-source-line">Combinación de secuencias de Exploración colectiva de movimientos y</p><p class="pdf-source-line">movimientos a partir de investigación de acuerdo de estructura creativa para</p><p class="pdf-source-line">historias y leyendas comunitarias. creación de acontecimiento improvisado</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 75 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	75</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 75</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales
-de la quinta fase
-Contenido nacional
-Reconocimiento de la diversidad lingüística de México
-Contenido estatal de artes visuales
-• 	Valora la importancia de conservar y difundir el patrimonio artístico mexicano.
-• 	Interpreta hechos artísticos y culturales a través de la observación de imágenes
-y objetos pertenecientes al patrimonio histórico tangible.
-PDA 5° 	PDA 6°
-Investigación 	y 	análisis 	de 	la 	diversidad
-lingüística en México (patrimonio 	cultural,
-sitios 	arqueológicos, 	obras 	de 	arte) 	con
-reflexión sobre su riqueza.
-Investigación 	y 	clasificación 	de
-características, estilos y funciones de
-bienes 	inmuebles 	de 	México 	como
-patrimonio arquitectónico.
-Contenido nacional
-Apropiación e intervención artística en el espacio comunitario
-Contenido estatal de artes visuales
-• 	Recopilación de imágenes de obras de arte, objetos o artefactos, películas o
-fotografías de diferentes épocas para comprender y discutir la memoria de la
-importancia del patrimonio tangible como parte del pueblo.
-PDA 5° 	PDA 6°
-Identificación 	y 	socialización 	de
-necesidades, 	intereses 	y 	problemas
-comunitarios 	mediante 	imágenes 	y
-fotografías 	de 	diferentes 	épocas, 	para 	la
-creación 	de 	propuestas 	de 	atención 	y/o
-solución en un espacio escolar.
-Creación 	de 	producciones 	visuales
-para la transformación permanente de
-un espacio público comunitario en favor
-del bienestar social.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 75" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura y análisis de mitos y leyendas para su disfrute y valoración</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">Construcción colectiva de una representación dancística integrando elementos de la</td></tr><tr><td colspan="2">cultura local, regional o nacional.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Indagación con personas adultas mayores sobre mitos y leyendas de la región e interpretación mediante lenguaje dancístico</td><td>Representación de un mito o leyenda de interés mediante performance.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 75" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia</td></tr><tr><td colspan="2">Contenido estatal de danza</td></tr><tr><td colspan="2">Presentación y reflexión de los bailes folclóricos como parte del patrimonio cultural</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Apreciación de movimientos y</td><td>Apreciación y recreación colectiva de una danza y/o baile para invitar a la comunidad escolar a la reflexión sobre identidad y sentido de pertenencia.</td></tr><tr><td colspan="2">características de bailes folclóricos en una</td></tr><tr><td colspan="2">manifestación cultural para reflexión sobre</td></tr><tr><td colspan="2">su simbolismo.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Indagación con personas adultas mayores Representación de un mito o leyenda de</p><p class="pdf-source-line">sobre mitos y leyendas de la región e interés mediante performance.</p><p class="pdf-source-line">características de bailes folclóricos en una danza y/o baile para invitar a la comunidad</p><p class="pdf-source-line">manifestación cultural para reflexión sobre escolar a la reflexión sobre identidad y</p><p class="pdf-source-line">su simbolismo. sentido de pertenencia.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 76 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	76</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 76</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Combinación de elementos visuales, sonoros y corporales, en composiciones
-artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva
-Contenido estatal de artes visuales
-• 	Creación de obras tridimensionales con movimiento, utilizando diferentes
-soportes procesos y materiales con los que se puedan experimentar las
-diferentes formas.
-PDA 5° 	PDA 6°
-Construcción 	de 	propuestas 	visuales
-individuales a partir de formas, colores y
-texturas 	que 	representen 	la 	identidad
-colectiva.
-Construcción de propuestas visuales
-grupales a partir de formas, colores y
-texturas que representen la identidad
-colectiva.
-Contenido nacional
-Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas
-que tienen lugar en la naturaleza
-Contenido estatal de artes visuales
-• 	Comprensión de la tridimensionalidad por medio de objetos que se encuentren
-en el entorno.
-• 	Utiliza 	el 	lenguaje 	tridimensional 	para 	expresar 	en 	forma 	libre 	ideas,
-emociones y experiencias.
-PDA 5° 	PDA 6°
-Reconocimiento 	y 	recreación 	de 	formas,
-colores, texturas, sonidos y movimientos de
-la 	naturaleza 	mediante 	producciones
-tridimensionales.
-Apreciación 	y 	representación 	de
-formas y objetos tridimensionales del
-entorno natural mediante escultura
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de artes visuales</h3>
+<p class="pdf-source-line">de la quinta fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 76" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="3">Contenido nacional</th></tr><tr><td colspan="3">Reconocimiento de la diversidad lingüística de México</td></tr><tr><td colspan="3">Contenido estatal de artes visuales</td></tr><tr><td colspan="3">• Valora la importancia de conservar y difundir el patrimonio artístico mexicano. • Interpreta hechos artísticos y culturales a través de la observación de imágenes y objetos pertenecientes al patrimonio histórico tangible.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td><td></td></tr><tr><td>Investigación y análisis de la diversidad lingüística en México (patrimonio cultural, sitios arqueológicos, obras de arte) con reflexión sobre su riqueza.</td><td>Investigación y análisis de la diversidad</td><td>Investigación y clasificación de características, estilos y funciones de bienes inmuebles de México como patrimonio arquitectónico.</td></tr><tr><td colspan="3">lingüística en México (patrimonio cultural,</td></tr><tr><td colspan="3">sitios arqueológicos, obras de arte) con</td></tr><tr><td colspan="3">reflexión sobre su riqueza.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 76" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Apropiación e intervención artística en el espacio comunitario</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Recopilación de imágenes de obras de arte, objetos o artefactos, películas o fotografías de diferentes épocas para comprender y discutir la memoria de la importancia del patrimonio tangible como parte del pueblo.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Identificación y socialización de necesidades, intereses y problemas comunitarios mediante imágenes y fotografías de diferentes épocas, para la creación de propuestas de atención y/o solución en un espacio escolar.</td><td>Creación de producciones visuales para la transformación permanente de un espacio público comunitario en favor del bienestar social.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">lingüística en México (patrimonio cultural, características, estilos y funciones de</p><p class="pdf-source-line">sitios arqueológicos, obras de arte) con bienes inmuebles de México como</p><p class="pdf-source-line">reflexión sobre su riqueza. patrimonio arquitectónico.</p><p class="pdf-source-line">Identificación y socialización de Creación de producciones visuales</p><p class="pdf-source-line">necesidades, intereses y problemas para la transformación permanente de</p><p class="pdf-source-line">comunitarios mediante imágenes y un espacio público comunitario en favor</p><p class="pdf-source-line">fotografías de diferentes épocas, para la del bienestar social.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 77 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	77</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 77</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas
-que tienen lugar en la naturaleza
-Contenido estatal de artes visuales
-• 	Comprensión 	de 	la 	tridimensionalidad 	por 	medio 	de 	objetos 	que 	se
-encuentren en el entorno.
-PDA 5° 	PDA 6°
-Reconocimiento y recreación de formas,
-colores, texturas, sonidos y movimientos de
-la naturaleza mediante lenguaje visual.
-Apreciación 	y 	representación 	de
-experiencias 	significativas 	de 	la
-naturaleza mediante formas, colores y
-texturas del entorno.
-Contenido nacional
-Combinación 	de 	la 	realidad 	y 	la 	ficción 	en 	elementos 	simbólicos 	de 	las
-manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia.
-Contenido estatal de artes visuales
-• 	Creación de una obra bidimensional o tridimensional a partir de elementos
-de su entorno que hagan referencia a sucesos relevantes de su comunidad.
-PDA 5° 	PDA 6°
-Combinación 	intencional 	de 	formas,
-colores 	y 	texturas 	para 	recreación
-bidimensional de elementos simbólicos
-de identidad y pertenencia.
-Combinación 	intencional 	de 	formas,
-colores 	y 	texturas 	para 	recreación
-tridimensional 	de 	fragmentos 	del
-patrimonio artístico y cultural de México
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 77" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Combinación de elementos visuales, sonoros y corporales, en composiciones artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Creación de obras tridimensionales con movimiento, utilizando diferentes</td></tr><tr><td colspan="2">soportes procesos y materiales con los que se puedan experimentar las</td></tr><tr><td colspan="2">diferentes formas.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Construcción de propuestas visuales individuales a partir de formas, colores y texturas que representen la identidad colectiva.</td><td>Construcción de propuestas visuales grupales a partir de formas, colores y texturas que representen la identidad colectiva.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 77" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas</td></tr><tr><td colspan="2">que tienen lugar en la naturaleza</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Comprensión de la tridimensionalidad por medio de objetos que se encuentren</td></tr><tr><td colspan="2">en el entorno.</td></tr><tr><td colspan="2">• Utiliza el lenguaje tridimensional para expresar en forma libre ideas,</td></tr><tr><td colspan="2">emociones y experiencias.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Reconocimiento y recreación de formas,</td><td>Apreciación y representación de formas y objetos tridimensionales del entorno natural mediante escultura</td></tr><tr><td colspan="2">colores, texturas, sonidos y movimientos de</td></tr><tr><td colspan="2">la naturaleza mediante producciones</td></tr><tr><td colspan="2">tridimensionales.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Construcción de propuestas visuales Construcción de propuestas visuales</p><p class="pdf-source-line">individuales a partir de formas, colores y grupales a partir de formas, colores y</p><p class="pdf-source-line">texturas que representen la identidad texturas que representen la identidad</p><p class="pdf-source-line">colectiva. colectiva.</p><p class="pdf-source-line">colores, texturas, sonidos y movimientos de formas y objetos tridimensionales del</p><p class="pdf-source-line">la naturaleza mediante producciones entorno natural mediante escultura</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 78 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	78</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 78</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la
-# quinta fase
-Contenido nacional
-Interpretación y valoración de manifestaciones culturales y artísticas de México y del
-mundo.
-Contenido estatal de teatro
-• 	Selección de un tema de su comunidad para escribir una obra de teatro que
-contenga todos los elementos de un género
-PDA 5° 	PDA 6°
-Exploración y análisis de elementos del
-género teatral (texto, personajes, conflicto,
-espacio, argumento, tema, estructura) para
-identificación en manifestaciones culturales
-teatrales 	de 	México 	(teatro 	callejero 	y
-actual).
-Redacción 	de 	un 	guion 	con 	los
-elementos de un género teatral para la
-representación 	de 	manifestaciones
-culturales de danzas teatrales y rituales
-del mundo
-Contenido nacional
-Apropiación e intervención artística en el espacio comunitario.
-Contenido estatal de teatro
-• 	Elaboración del escenario adecuado para ambientar una puesta en escena
-con materiales diversos
-PDA 5° 	PDA 6°
-Investigación 	de 	problemas
-comunitarios 	y 	ambientación 	del
-espacio escénico para la representación
-individual de improvisaciones teatrales.
-Representación colectiva de problemáticas
-comunitarias mediante obras teatrales y
-ambientación de un espacio público para la
-generación de reflexión y el favorecimiento
-del bienestar social.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 78" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas</td></tr><tr><td colspan="2">que tienen lugar en la naturaleza</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Comprensión de la tridimensionalidad por medio de objetos que se</td></tr><tr><td colspan="2">encuentren en el entorno.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Reconocimiento y recreación de formas, colores, texturas, sonidos y movimientos de la naturaleza mediante lenguaje visual.</td><td>Apreciación y representación de experiencias significativas de la naturaleza mediante formas, colores y texturas del entorno.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 78" tabindex="0"><table class="pdf-table"><tbody><tr><td>Reconocimiento y recreación de formas,</td></tr><tr><td>colores, texturas, sonidos y movimientos de</td></tr><tr><td>la naturaleza mediante lenguaje visual.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 3 de la página 78" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia.</td></tr><tr><td colspan="2">Contenido estatal de artes visuales</td></tr><tr><td colspan="2">• Creación de una obra bidimensional o tridimensional a partir de elementos de su entorno que hagan referencia a sucesos relevantes de su comunidad.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Combinación intencional de formas, colores y texturas para recreación bidimensional de elementos simbólicos de identidad y pertenencia.</td><td>Combinación intencional de formas, colores y texturas para recreación tridimensional de fragmentos del patrimonio artístico y cultural de México</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Reconocimiento y recreación de formas, Apreciación y representación de</p><p class="pdf-source-line">colores, texturas, sonidos y movimientos de experiencias significativas de la</p><p class="pdf-source-line">la naturaleza mediante lenguaje visual. naturaleza mediante formas, colores y</p><p class="pdf-source-line">Combinación intencional de formas, Combinación intencional de formas,</p><p class="pdf-source-line">colores y texturas para recreación colores y texturas para recreación</p><p class="pdf-source-line">bidimensional de elementos simbólicos tridimensional de fragmentos del</p><p class="pdf-source-line">de identidad y pertenencia. patrimonio artístico y cultural de México</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 79 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	79</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 79</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Combinación de elementos visuales, sonoros y corporales, en composiciones
-artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva.
-Contenido estatal de teatro
-• 	Identificación de las características tonales (voz, carácter) de los personajes que
-aparecen en una historia.
-PDA 5° 	PDA 6°
-Construcción 	de 	propuestas 	teatrales
-colectivas 	que 	representen 	identidad 	y
-entorno mediante secuencias escénicas.
-Desarrollo 	colectivo 	de 	un 	guion 	con
-identificación 	de 	tonalidades,
-intencionalidades y emociones de la voz
-actoral para la creación de un material
-audiovisual.
-Contenido nacional
-Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que
-tienen lugar en la naturaleza.
-Contenido estatal de teatro
-• 	Realización del montaje de una puesta en escena con títeres, o bien, en teatro
-corporal ante un público.
-PDA 5° 	PDA 6°
-Expresión 	de 	sensaciones, 	emociones,
-sentimientos e ideas generadas 	por la
-observación de la naturaleza y su entorno
-mediante el teatro de títeres.
-Expresión colectiva de emociones surgidas
-de 	una 	experiencia 	significativa 	en 	el
-entorno natural mediante una puesta en
-escena con títeres o teatro corporal
-
-
+<h3 class="pdf-section-title">Contenidos y procesos de desarrollo de aprendizaje del lenguaje de teatro de la</h3>
+<p class="pdf-source-line">quinta fase</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 79" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Interpretación y valoración de manifestaciones culturales y artísticas de México y del</td></tr><tr><td colspan="2">mundo.</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Selección de un tema de su comunidad para escribir una obra de teatro que</td></tr><tr><td colspan="2">contenga todos los elementos de un género</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Exploración y análisis de elementos del</td><td>Redacción de un guion con los elementos de un género teatral para la representación de manifestaciones culturales de danzas teatrales y rituales del mundo</td></tr><tr><td colspan="2">género teatral (texto, personajes, conflicto,</td></tr><tr><td colspan="2">espacio, argumento, tema, estructura) para</td></tr><tr><td colspan="2">identificación en manifestaciones culturales</td></tr><tr><td colspan="2">teatrales de México (teatro callejero y</td></tr><tr><td colspan="2">actual).</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 79" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Apropiación e intervención artística en el espacio comunitario.</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Elaboración del escenario adecuado para ambientar una puesta en escena con materiales diversos</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Investigación de problemas comunitarios y ambientación del espacio escénico para la representación individual de improvisaciones teatrales.</td><td>Representación colectiva de problemáticas</td></tr><tr><td colspan="2">comunitarias mediante obras teatrales y</td></tr><tr><td colspan="2">ambientación de un espacio público para la</td></tr><tr><td colspan="2">generación de reflexión y el favorecimiento</td></tr><tr><td colspan="2">del bienestar social.</td></tr><tr><td colspan="2">78</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">género teatral (texto, personajes, conflicto, elementos de un género teatral para la</p><p class="pdf-source-line">espacio, argumento, tema, estructura) para representación de manifestaciones</p><p class="pdf-source-line">identificación en manifestaciones culturales culturales de danzas teatrales y rituales</p><p class="pdf-source-line">teatrales de México (teatro callejero y del mundo</p><p class="pdf-source-line">Investigación de problemas Representación colectiva de problemáticas</p><p class="pdf-source-line">comunitarios y ambientación del comunitarias mediante obras teatrales y</p><p class="pdf-source-line">espacio escénico para la representación ambientación de un espacio público para la</p><p class="pdf-source-line">individual de improvisaciones teatrales. generación de reflexión y el favorecimiento</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 80 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	80</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 80</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Creación y representación de narrativas a partir de acontecimientos relevantes de la
-comunidad, empleando recursos literarios, visuales, corporales y sonoros
-Contenido estatal de teatro
-• 	Selección de un tema de su comunidad para escribir una obra de teatro que
-contenga todos los elementos de un género
-PDA 5° 	PDA 6°
-Escritura de relatos narrativos a partir del
-significado del nombre y la historia familiar
-asociada a su elección para la creación de
-una obra de teatro.
-Representación 	teatral 	de 	historias 	o
-situaciones cotidianas de la comunidad a
-través de diferentes géneros teatrales.
-Contenido nacional
-Combinación de la realidad y la ficción en elementos simbólicos de las
-manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia
-Contenido estatal de teatro
-• 	Creación de títeres para representar personajes de obras, considerando sus
-características físicas, personalidad, forma de ser y de comportarse.
-PDA 5° 	PDA 6°
-Combinación 	intencional 	de secuencias
-de sonidos onomatopéyicos, movimientos
-y gestos para recreación de una leyenda y
-creación 	de 	títeres 	como 	medio 	de
-expresión artística.
-Reinterpretación de una leyenda a través
-del teatro de títeres, con combinación de
-realidad 	y 	ficción 	mediante 	elementos
-simbólicos para expresión de identidad y
-sentido de pertenencia comunitaria.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 80" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Combinación de elementos visuales, sonoros y corporales, en composiciones artísticas colectivas, para expresar rasgos de sus identidades personal y colectiva.</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Identificación de las características tonales (voz, carácter) de los personajes que</td></tr><tr><td colspan="2">aparecen en una historia.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Construcción de propuestas teatrales colectivas que representen identidad y entorno mediante secuencias escénicas.</td><td>Desarrollo colectivo de un guion con</td></tr><tr><td colspan="2">identificación de tonalidades,</td></tr><tr><td colspan="2">intencionalidades y emociones de la voz</td></tr><tr><td colspan="2">actoral para la creación de un material</td></tr><tr><td colspan="2">audiovisual.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 80" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Expresión, mediante el uso de los lenguajes artísticos, de experiencias estéticas que</td></tr><tr><td colspan="2">tienen lugar en la naturaleza.</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Realización del montaje de una puesta en escena con títeres, o bien, en teatro</td></tr><tr><td colspan="2">corporal ante un público.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Expresión de sensaciones, emociones, sentimientos e ideas generadas por la observación de la naturaleza y su entorno mediante el teatro de títeres.</td><td>Expresión colectiva de emociones surgidas de una experiencia significativa en el entorno natural mediante una puesta en escena con títeres o teatro corporal</td></tr><tr><td colspan="2">79</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Construcción de propuestas teatrales Desarrollo colectivo de un guion con</p><p class="pdf-source-line">colectivas que representen identidad y identificación de tonalidades,</p><p class="pdf-source-line">entorno mediante secuencias escénicas. intencionalidades y emociones de la voz</p><p class="pdf-source-line">Expresión de sensaciones, emociones, Expresión colectiva de emociones surgidas</p><p class="pdf-source-line">sentimientos e ideas generadas por la de una experiencia significativa en el</p><p class="pdf-source-line">observación de la naturaleza y su entorno entorno natural mediante una puesta en</p><p class="pdf-source-line">mediante el teatro de títeres. escena con títeres o teatro corporal</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 81 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	81</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 81</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Contenido nacional
-Análisis y representación de guiones teatrales
-Contenido estatal de teatro
-• 	Identificación de las características tonales (tono, matices y niveles de voz) de los
-personajes que aparecen en una historia.
-PDA 5° 	PDA 6°
-Lectura y análisis de cuentos, guiones
-cortos o poemas mexicanos a partir de
-intereses, con distinción de características
-e 	interpretación 	oral 	para 	creación 	y
-presentación 	colectiva 	de 	nuevas
-versiones 	o 	producciones 	en 	recital
-literario dirigido a la comunidad escolar.
-Selección y lectura de cuentos, guiones
-cortos o poemas del mundo a partir de
-intereses 	y 	gustos, 	con 	intercambio 	y
-discusión 	colectiva 	de 	significados,
-reconocimiento de características tonales,
-matices y niveles de voz de los personajes,
-para 	presentación 	expresiva 	ante 	la
-comunidad escolar.
-Contenido nacional
-Lectura y análisis de mitos y leyendas, para su disfrute y valoración
-Contenido estatal de teatro
-• 	Elaboración y acondicionamiento del escenario para ambientar una puesta en
-escena.
-PDA 5° 	PDA 6°
-Investigación de mitos y leyendas de la
-comunidad y de México para identificación
-de características y escenificación de uno
-de interés frente a un público.
-Análisis y comparación de mitos y leyendas
-de 	México 	y 	del 	mundo, 	con
-reconocimiento 	de 	características,
-funciones, similitudes y diferencias, para
-representación 	de 	uno 	mediante 	obra
-teatral 	en 	escenario 	elaborado
-colectivamente.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 81" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Creación y representación de narrativas a partir de acontecimientos relevantes de la</td></tr><tr><td colspan="2">comunidad, empleando recursos literarios, visuales, corporales y sonoros</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Selección de un tema de su comunidad para escribir una obra de teatro que</td></tr><tr><td colspan="2">contenga todos los elementos de un género</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Escritura de relatos narrativos a partir del</td><td>Representación teatral de historias o situaciones cotidianas de la comunidad a través de diferentes géneros teatrales.</td></tr><tr><td colspan="2">significado del nombre y la historia familiar</td></tr><tr><td colspan="2">asociada a su elección para la creación de</td></tr><tr><td colspan="2">una obra de teatro.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 81" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td colspan="2">• Creación de títeres para representar personajes de obras, considerando sus</td></tr><tr><td colspan="2">características físicas, personalidad, forma de ser y de comportarse.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Combinación intencional de secuencias de sonidos onomatopéyicos, movimientos y gestos para recreación de una leyenda y creación de títeres como medio de expresión artística.</td><td>Reinterpretación de una leyenda a través del teatro de títeres, con combinación de realidad y ficción mediante elementos simbólicos para expresión de identidad y sentido de pertenencia comunitaria.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">significado del nombre y la historia familiar situaciones cotidianas de la comunidad a</p><p class="pdf-source-line">asociada a su elección para la creación de través de diferentes géneros teatrales.</p><p class="pdf-source-line">Combinación intencional de secuencias Reinterpretación de una leyenda a través</p><p class="pdf-source-line">de sonidos onomatopéyicos, movimientos del teatro de títeres, con combinación de</p><p class="pdf-source-line">y gestos para recreación de una leyenda y realidad y ficción mediante elementos</p><p class="pdf-source-line">creación de títeres como medio de simbólicos para expresión de identidad y</p><p class="pdf-source-line">expresión artística. sentido de pertenencia comunitaria.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 82 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	82</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 82</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-## Orientaciones didácticas por lenguaje artístico
-“Mi entorno cobra vida: sonidos, colores, movimientos e historias”.
-Propósito general
-Que 	los 	alumnos 	reconozcan 	que 	los 	lenguajes 	artísticos 	permiten 	comunicar
-emociones, ideas y experiencias de su vida diaria, y los utilicen para crear una
-representación colectiva del entorno escolar y familiar.
-Productos
-Presentación artística grupal que puede incluir:
-• 	Una historia breve dramatizada (teatro)
-• 	Con acompañamiento de paisajes sonoros creados por ellos mismos
-(música)
-• 	Movimientos corporales y pequeñas coreografías (danza)
-• 	Fondos, máscaras, carteles o collages elaborados por los alumnos (artes
-visuales)
-Desarrollo general del proyecto
-### Música
-• 	Exploran y recrean sonidos del entorno: pasos, pájaros, timbres, voces.
-• 	Diferencian cualidades del sonido: intensidad, timbre, duración, altura.
-• 	Construyen un paisaje sonoro que servirá como fondo para la representación
-teatral.
-### Danza
-• 	Exploran movimientos corporales en diferentes niveles y alcances.
-• 	Crean una pequeña secuencia de movimientos que represente elementos del
-entorno (viento, hojas, animales).
-• 	Integran esta secuencia como parte de la dramatización.
-### Artes visuales
-• 	Observan colores y texturas en objetos cotidianos.
-• 	Elaboran collages, máscaras, carteles o decorados usando colores y texturas.
-• 	Usan su producción para ambientar y caracterizar la historia teatral.
-### Teatro
-• 	Representan situaciones cotidianas de la escuela o la casa usando el cuerpo y
-gestos.
-• 	Crean estatuas emocionales, mini escenas y sonidos corporales.
-• 	Organizan todo en una breve historia colectiva que se presentará ante otros
-compañeros o padres.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 82" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Análisis y representación de guiones teatrales</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td>• Id p</td><td>entificación de las características tonales (tono, matices y niveles de voz) de los</td></tr><tr><td colspan="2">ersonajes que aparecen en una historia.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Lectura y análisis de cuentos, guiones cortos o poemas mexicanos a partir de intereses, con distinción de características e interpretación oral para creación y presentación colectiva de nuevas versiones o producciones en recital literario dirigido a la comunidad escolar.</td><td>Selección y lectura de cuentos, guiones cortos o poemas del mundo a partir de intereses y gustos, con intercambio y discusión colectiva de significados, reconocimiento de características tonales, matices y niveles de voz de los personajes, para presentación expresiva ante la comunidad escolar.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 82" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="2">Contenido nacional</th></tr><tr><td colspan="2">Lectura y análisis de mitos y leyendas, para su disfrute y valoración</td></tr><tr><td colspan="2">Contenido estatal de teatro</td></tr><tr><td>•</td><td>Elaboración y acondicionamiento del escenario para ambientar una puesta en</td></tr><tr><td colspan="2">escena.</td></tr><tr><td>PDA 5°</td><td>PDA 6°</td></tr><tr><td>Investigación de mitos y leyendas de la comunidad y de México para identificación de características y escenificación de uno de interés frente a un público.</td><td>Análisis y comparación de mitos y leyendas</td></tr><tr><td colspan="2">de México y del mundo, con</td></tr><tr><td colspan="2">reconocimiento de características,</td></tr><tr><td colspan="2">funciones, similitudes y diferencias, para</td></tr><tr><td colspan="2">representación de uno mediante obra</td></tr><tr><td colspan="2">teatral en escenario elaborado</td></tr><tr><td colspan="2">colectivamente.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">• Identificación de las características tonales (tono, matices y niveles de voz) de los</p><p class="pdf-source-line">personajes que aparecen en una historia.</p><p class="pdf-source-line">Lectura y análisis de cuentos, guiones Selección y lectura de cuentos, guiones</p><p class="pdf-source-line">cortos o poemas mexicanos a partir de cortos o poemas del mundo a partir de</p><p class="pdf-source-line">intereses, con distinción de características intereses y gustos, con intercambio y</p><p class="pdf-source-line">Investigación de mitos y leyendas de la Análisis y comparación de mitos y leyendas</p><p class="pdf-source-line">comunidad y de México para identificación de México y del mundo, con</p><p class="pdf-source-line">de características y escenificación de uno reconocimiento de características,</p><p class="pdf-source-line">de interés frente a un público. funciones, similitudes y diferencias, para</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 83 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	83</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 83</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Orientaciones didácticas de la tercera fase
-### Orientación didáctica de de música de la tercera fase
-Contenido nacional
-Uso de elementos de los lenguajes artísticos en la vida cotidiana
-Contenido estatal de música
-• 	Diferencia las cualidades del sonido (duración e intensidad, altura y timbre).
-• 	Recrea paisajes sonoros mediante la exploración de las cualidades del
-sonido.
-PDA 1°
-Reconoce que el sonido con sus cualidades (duración, intensidad, altura y timbre),
-constituye el lenguaje que permite la comunicación de sensaciones, emociones,
-sentimientos e ideas.
-Orientación didáctica
-Exploración de sonidos del entorno.
-- 	Dirige a tus alumnos a una caminata breve por el aula o al patio de la escuela, para
-que identifiquen los sonidos: pasos, pájaros, viento, voces, etc. Realiza las
-siguientes preguntas:
-¿Diario pones atención a este tipo de sonidos?
-¿Son sonidos fuertes o suaves?
-¿Quién lo hace? ¿Es un instrumento, un animal o una cosa?
-- 	En el aula o salón de clases repárteles tarjetas donde venga la imagen de
-intensidad (fuerte o suave) reproduce sonidos grabados que tiene que ver con la
-vida cotidiana (risas, llanto, lluvia, sirena) y vayan levantando la tarjeta a la cual
-pertenece el sonido.
-- 	Para continuar que elijan un objeto o instrumento de su entorno que puedan
-producir diferentes sonidos y organiza una “mesa sonora” con instrumentos. Por
-turnos, los niños exploran libremente los objetos. Pide que describan:
-¿Cómo suena? ¿Es fuerte o suave?
-¿Qué lo hace diferente a otro sonido? (timbre)
-- 	Invítalos a mostrar su objeto a la clase y compartir su descubrimiento.
-Ejemplo: “Mi botella con arroz suena suave como la lluvia. Tiene un timbre seco y
-bajito
-Reflexión
-Cuestionamiento:
-
-
+<h3 class="pdf-section-title">Orientaciones didácticas por lenguaje artístico</h3>
+<p class="pdf-source-line">“Mi entorno cobra vida: sonidos, colores, movimientos e historias”.</p>
+<p class="pdf-source-line">Propósito general</p>
+<p class="pdf-source-line">Que los alumnos reconozcan que los lenguajes artísticos permiten comunicar</p>
+<p class="pdf-source-line">emociones, ideas y experiencias de su vida diaria, y los utilicen para crear una</p>
+<p class="pdf-source-line">representación colectiva del entorno escolar y familiar.</p>
+<p class="pdf-source-line">Productos</p>
+<p class="pdf-source-line">Presentación artística grupal que puede incluir:</p>
+<p class="pdf-source-line">• Una historia breve dramatizada (teatro)</p>
+<p class="pdf-source-line">• Con acompañamiento de paisajes sonoros creados por ellos mismos</p>
+<p class="pdf-source-line">(música)</p>
+<p class="pdf-source-line">• Movimientos corporales y pequeñas coreografías (danza)</p>
+<p class="pdf-source-line">• Fondos, máscaras, carteles o collages elaborados por los alumnos (artes</p>
+<p class="pdf-source-line">visuales)</p>
+<p class="pdf-source-line">Desarrollo general del proyecto</p>
+<p class="pdf-source-line">Música</p>
+<p class="pdf-source-line">• Exploran y recrean sonidos del entorno: pasos, pájaros, timbres, voces.</p>
+<p class="pdf-source-line">• Diferencian cualidades del sonido: intensidad, timbre, duración, altura.</p>
+<p class="pdf-source-line">• Construyen un paisaje sonoro que servirá como fondo para la representación</p>
+<p class="pdf-source-line">teatral.</p>
+<p class="pdf-source-line">Danza</p>
+<p class="pdf-source-line">• Exploran movimientos corporales en diferentes niveles y alcances.</p>
+<p class="pdf-source-line">• Crean una pequeña secuencia de movimientos que represente elementos del</p>
+<p class="pdf-source-line">entorno (viento, hojas, animales).</p>
+<p class="pdf-source-line">• Integran esta secuencia como parte de la dramatización.</p>
+<p class="pdf-source-line">Artes visuales</p>
+<p class="pdf-source-line">• Observan colores y texturas en objetos cotidianos.</p>
+<p class="pdf-source-line">• Elaboran collages, máscaras, carteles o decorados usando colores y texturas.</p>
+<p class="pdf-source-line">• Usan su producción para ambientar y caracterizar la historia teatral.</p>
+<p class="pdf-source-line">Teatro</p>
+<p class="pdf-source-line">• Representan situaciones cotidianas de la escuela o la casa usando el cuerpo y</p>
+<p class="pdf-source-line">gestos.</p>
+<p class="pdf-source-line">• Crean estatuas emocionales, mini escenas y sonidos corporales.</p>
+<p class="pdf-source-line">• Organizan todo en una breve historia colectiva que se presentará ante otros</p>
+<p class="pdf-source-line">compañeros o padres.</p>
 <!-- PAGE_END -->
 <!-- PAGE_START 84 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	84</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 84</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-¿Qué objeto te gustó más para hacer sonido?
-¿Cuál sonaba más fuerte? ¿Cuál más suave?
-¿En qué lugar escuchamos sonidos así?
-Sugerencia de evaluación formativa
-
-| Criterio | Indicador observable | Técnica / Instrumento |
-| :--- | :--- | :--- |
-| Reconoce la intensidad del sonido | Identifica si un sonido es fuerte o suave mediante gestos, tarjetas o palabras | Observación directa / lista de cotejo |
-| Identifica el timbre | Relaciona un sonido con su fuente (instrumento, objeto, animal) | Preguntas orales / diálogo. |
-| Aplica lo aprendido en contexto lúdico | Recrea sonidos cotidianos con creatividad | Registro anecdótico del docente |
-
-
+<h3 class="pdf-section-title">Orientaciones didácticas de la tercera fase</h3>
+<h3 class="pdf-section-title">Orientación didáctica de de música de la tercera fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 84" tabindex="0"><table class="pdf-table"><tbody><tr><th>Contenido nacional</th></tr><tr><td>Uso de elementos de los lenguajes artísticos en la vida cotidiana</td></tr><tr><td>Contenido estatal de música</td></tr><tr><td>• Diferencia las cualidades del sonido (duración e intensidad, altura y timbre). • Recrea paisajes sonoros mediante la exploración de las cualidades del sonido.</td></tr><tr><td>PDA 1°</td></tr><tr><td>Reconoce que el sonido con sus cualidades (duración, intensidad, altura y timbre), constituye el lenguaje que permite la comunicación de sensaciones, emociones, sentimientos e ideas.</td></tr><tr><td>Orientación didáctica</td></tr><tr><td>Exploración de sonidos del entorno. - Dirige a tus alumnos a una caminata breve por el aula o al patio de la escuela, para que identifiquen los sonidos: pasos, pájaros, viento, voces, etc. Realiza las siguientes preguntas: ¿Diario pones atención a este tipo de sonidos? ¿Son sonidos fuertes o suaves? ¿Quién lo hace? ¿Es un instrumento, un animal o una cosa? - En el aula o salón de clases repárteles tarjetas donde venga la imagen de intensidad (fuerte o suave) reproduce sonidos grabados que tiene que ver con la vida cotidiana (risas, llanto, lluvia, sirena) y vayan levantando la tarjeta a la cual pertenece el sonido. - Para continuar que elijan un objeto o instrumento de su entorno que puedan producir diferentes sonidos y organiza una “mesa sonora” con instrumentos. Por turnos, los niños exploran libremente los objetos. Pide que describan: ¿Cómo suena? ¿Es fuerte o suave? ¿Qué lo hace diferente a otro sonido? (timbre) - Invítalos a mostrar su objeto a la clase y compartir su descubrimiento. Ejemplo: “Mi botella con arroz suena suave como la lluvia. Tiene un timbre seco y bajito Reflexión Cuestionamiento:</td></tr></tbody></table></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 85 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	85</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 85</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Orientación didáctica de de danza de la tercera fase
-Contenido nacional
-Uso de elementos de los lenguajes artísticos en la vida cotidiana
-Contenido estatal de artes de danza
-• 	Explora el movimiento corporal en niveles (alto, medio y bajo) y alcances (cerca-
-lejos, extensión y contracción).
-• 	Realiza movimientos con los diferentes segmentos corporales con elementos
-de la naturaleza y el entorno
-PDA 1°:
-Reconoce que los movimientos corporales constituyen lenguajes que permiten la
-comunicación de sensaciones, emociones, sentimientos e ideas.
-Secuencia de actividades
-- 	Comienza tu clase con una activación corporal, “Hola con movimiento” de tal
-manera que tus alumnos se saluden creativamente con el cuerpo.
-Ejemplo:
-“Saluda con tus rodillas”
-“Saluda como si fueras un árbol”
-“Saluda desde arriba como una nube”
-- 	Luego en una Mini exploración guíalos por niveles:
-• 	Nivel bajo: nos arrastramos como gusanos.
-• 	Nivel medio: caminamos como gatos.
-• 	Nivel alto: nos estiramos como jirafas.
-- 	Ahora muéstrales imágenes de elementos naturales o del entorno de tal manera
-que los imiten con movimiento y que los relaciones con niveles (alto, medio,
-bajo), Alcance (lejos o cerca; extendido o contraído)
-Ejemplo:
-¿Cómo se movería el viento? (rápido y extendido)
-¿Y un caracol?” (lento, contraído y cerca del suelo)
-¿Y una mariposa?” (ligero, saltando en nivel alto).
-- 	Para continuar coloca en el suelo líneas o figuras hechas con cinta adhesiva
-(rectas, curvas, zigzag), divide al grupo en equipos y que caminen sobre las
-líneas con distintas consignas e integra música suave o natural para ambientar.
-“Muévete como si fueras agua por un río”
-“Camina como una flor abriéndose al sol”
-“Deslízate como si fueras viento que acaricia las hojas
-Expresión libre y reflexión.
-- 	Cada 	alumno 	elige 	su 	movimiento 	favorito 	del 	día 	y 	lo 	representa. 	Luego
-reflexionan sobre el uso de su cuerpo y lo que más disfrutaron.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 85" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="3">¿Qué objeto te gustó más para hacer sonido? ¿Cuál sonaba más fuerte? ¿Cuál más suave? ¿En qué lugar escuchamos sonidos así?</td></tr><tr><td colspan="3">Sugerencia de evaluacion formativa</td></tr><tr><td>Criterio</td><td>Indicador observable</td><td>Técnica / Instrumento</td></tr><tr><td>Reconoce la intensidad del sonido</td><td>Identifica si un sonido es fuerte o suave mediante gestos, tarjetas o palabras</td><td>Observación directa / lista de cotejo</td></tr><tr><td>Identifica el timbre</td><td>Relaciona un sonido con su fuente (instrumento, objeto, animal)</td><td>Preguntas orales / diálogo.</td></tr><tr><td>Aplica lo aprendido en contexto lúdico</td><td>Recrea sonidos cotidianos con creatividad</td><td>Registro anecdótico del docente</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Reconoce la intensidad del Identifica si un sonido es Observación directa / lista de</p><p class="pdf-source-line">sonido fuerte o suave mediante cotejo</p><p class="pdf-source-line">Identifica el timbre Relaciona un sonido con Preguntas orales / diálogo.</p><p class="pdf-source-line">Aplica lo aprendido en Recrea sonidos Registro anecdótico del</p><p class="pdf-source-line">contexto lúdico cotidianos con docente</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 86 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	86</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 86</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Sugerencia de evaluación formativa
-
-| Criterio | Nivel logrado |
-| :--- | :--- |
-| Identifica y aplica los niveles del movimiento (alto, medio, bajo) | ☐ Sí / ☐ En proceso / ☐ No |
-| Realiza movimientos con alcances variados (cerca-lejos, extensión-contracción) | ☐ Sí / ☐ En proceso / ☐ No |
-| Participa activamente y representa elementos del entorno natural con movimientos corporales | ☐ Sí / ☐ En proceso / ☐ No |
-
-
+<h3 class="pdf-section-title">Orientación didáctica de de danza de la tercera fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 86" tabindex="0"><table class="pdf-table"><tbody><tr><th>Contenido nacional</th></tr><tr><td>Uso de elementos de los lenguajes artísticos en la vida cotidiana</td></tr><tr><td>Contenido estatal de artes de danza</td></tr><tr><td>• Explora el movimiento corporal en niveles (alto, medio y bajo) y alcances (cerca- lejos, extensión y contracción). • Realiza movimientos con los diferentes segmentos corporales con elementos de la naturaleza y el entorno</td></tr><tr><td>PDA 1°:</td></tr><tr><td>Reconoce que los movimientos corporales constituyen lenguajes que permiten la comunicación de sensaciones, emociones, sentimientos e ideas.</td></tr><tr><td>Secuencia de actividades</td></tr><tr><td>- Comienza tu clase con una activación corporal, “Hola con movimiento” de tal manera que tus alumnos se saluden creativamente con el cuerpo. Ejemplo: “Saluda con tus rodillas” “Saluda como si fueras un árbol” “Saluda desde arriba como una nube” - Luego en una Mini exploración guíalos por niveles: • Nivel bajo: nos arrastramos como gusanos. • Nivel medio: caminamos como gatos. • Nivel alto: nos estiramos como jirafas. - Ahora muéstrales imágenes de elementos naturales o del entorno de tal manera que los imiten con movimiento y que los relaciones con niveles (alto, medio, bajo), Alcance (lejos o cerca; extendido o contraído) Ejemplo: ¿Cómo se movería el viento? (rápido y extendido) ¿Y un caracol?” (lento, contraído y cerca del suelo) ¿Y una mariposa?” (ligero, saltando en nivel alto). - Para continuar coloca en el suelo líneas o figuras hechas con cinta adhesiva (rectas, curvas, zigzag), divide al grupo en equipos y que caminen sobre las líneas con distintas consignas e integra música suave o natural para ambientar. “Muévete como si fueras agua por un río” “Camina como una flor abriéndose al sol” “Deslízate como si fueras viento que acaricia las hojas Expresión libre y reflexión. - Cada alumno elige su movimiento favorito del día y lo representa. Luego reflexionan sobre el uso de su cuerpo y lo que más disfrutaron.</td></tr></tbody></table></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 87 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	87</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 87</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Orientación didáctica de Artes visuales de la tercera fase
-Contenido nacional
-Uso de elementos de los lenguajes artísticos en la vida cotidiana
-Contenido estatal de artes visuales
-• 	Utiliza el color como un elemento plástico en la creación de imágenes.
-• 	Compara las sensaciones de texturas de diferentes objetos que percibe con el tacto
-y la vista
-PDA1°
-Reconoce que las imágenes constituyen un lenguaje que permite la comunicación, y
-experimenta con formas, colores y texturas para expresar sensaciones, emociones,
-sentimientos e ideas que surgen de su entorno.
-Secuencia de actividades
-- 	Comienza con una charla lúdica: ¿Qué colores ven en la escuela? ¿Y en su casa?
-¿Cómo sensación les provoca cada color?
-- 	Muéstrales imágenes de objetos cotidianos con colores intensos (por ejemplo:
-frutas, ropa, juguetes) para hacer una lluvia de ideas sobre qué emociones o cosas
-les recuerdan ciertos colores (ej. rojo = amor o fuego).
-- 	Invita a los niños a hacer una "Caza del color" en el salón o casa (si es híbrido o
-tarea): buscar y recortar de revistas pedacitos de colores (rojo, azul, verde, etc.).
-Luego, que peguen los recortes que llevaron en una hoja para formar un collage
-libre que represente cómo se sienten hoy usando colores.
-- 	Para finalizar la actividad que cada niño muestre su collage y comparta brevemente
-qué colores usó y por qué, también puedes preguntarle ¿Qué sientes cuando ves
-tu imagen (collage libre)?
-Sugerencia de evaluación formativa
-Criterio 	Observación 	del
-docente
-¿Cómo se evidencia?
-Usa colores para expresar
-emociones
-Participa en la caza del
-color
-Usa 	variedad 	de 	colores 	y
-explica su elección
-Crea 	composiciones
-visuales propias
-Elabora collage y obra
-con texturas
-Participa 	con 	entusiasmo 	y
-creatividad
-Explica 	sus 	elecciones
-artísticas
-Comparte 	sus 	ideas 	y
-emociones al final
-Usa frases como “esto me
-recuerda a…”
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 87" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="2">Sugerencia de evaluación formativa</td></tr><tr><td>Criterio</td><td>Nivel logrado</td></tr><tr><td>Identifica y aplica los niveles del movimiento (alto, medio, bajo)</td><td>☐ Sí / ☐ En proceso / ☐ No</td></tr><tr><td>Realiza movimientos con alcances variados (cerca-lejos, extensión- contracción)</td><td>☐ Sí / ☐ En proceso / ☐ No</td></tr><tr><td>Participa activamente y representa elementos del entorno natural con movimientos corporales</td><td>☐ Sí / ☐ En proceso / ☐ No</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Identifica y aplica los niveles del ☐ Sí / ☐ En proceso / ☐ No</p><p class="pdf-source-line">Realiza movimientos con alcances ☐ Sí / ☐ En proceso / ☐ No</p><p class="pdf-source-line">Participa activamente y representa ☐ Sí / ☐ En proceso / ☐ No</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 88 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	88</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 88</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Orientación didáctica de teatro de la tercera fase
-Contenido nacional
-Uso de elementos de los lenguajes artísticos en la vida cotidiana
-Aprendizajes esperados de teatro
-• 	Emplea expresiones corporales para comunicar eventos de su vida cotidiana.
-• 	Representa situaciones de la vida cotidiana con movimientos corporales.
-Emplea l expresión corporal y verbal para representar ideas y eventos de su
-vida cotidiana en diferentes situaciones.
-PDA 1°
-Imita sonidos, gestos e imágenes de su entorno para representar de manera expresiva
-situaciones de la vida cotidiana, usando su cuerpo y su voz con intención teatral.
-Secuencia de actividades
-- 	Inicia tu clase de teatro con la actividad “Enciendo mi cuerpo” lo cual consiste en
-que todos se coloquen de pie y en círculo, realiza un breve calentamiento corporal,
-como si “encendieran” partes del cuerpo:
-Vamos a encender nuestras manos (las movemos rápido), ahora nuestros pies y
-después el cuerpo completo, como si fuéramos robots que se están encendiendo.
-- 	En el mismo círculo mencionar una situación cotidiana (Ej.: despertar tarde, perder
-el lápiz, recibir un helado de regalo, caerse al jugar. Y que los niños, al escuchar la
-situación, deben representar con su cuerpo una “estatua” que exprese esa emoción
-o momento. (esta actividad se puede realizar individual o grupal). Luego que
-adivinen: “¿Qué emoción o momento crees que representó tu compañero?”
-- 	Pide a tus alumnos que elijan de su alrededor objetos que hagan sonidos, incluso
-pueden utilizar su cuerpo (aplausos, pasos, soplar, golpear suave una mesa, etc.).
-Después cuenta una historia inventada (por ejemplo: Una caminata por el bosque),
-y que los niños aporten sonidos con su cuerpo y objetos:
-• 	Pájaros (con la voz)
-• 	Viento (soplando)
-• 	Ramas (golpecitos con crayones)
-Para finalizar crea una historia y divide por equipos, que cada uno de estos cumpla
-con el roll para llevarla a cabo. (Ej. Equipo 1 narra la historia, equipo 2 actuación y
-equipo 3 sonidos).
-Sugerencia de evaluación formativa
-Criterio 	¿Cómo se observa? 	Instrumento
-
-
+<h3 class="pdf-section-title">Orientación didáctica de Artes visuales de la tercera fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 88" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="3">Contenido nacional</th></tr><tr><td colspan="3">Uso de elementos de los lenguajes artísticos en la vida cotidiana</td></tr><tr><td colspan="3">Contenido estatal de artes visuales</td></tr><tr><td colspan="3">• Utiliza el color como un elemento plástico en la creación de imágenes. • Compara las sensaciones de texturas de diferentes objetos que percibe con el tacto y la vista</td></tr><tr><td colspan="3">PDA1°</td></tr><tr><td colspan="3">Reconoce que las imágenes constituyen un lenguaje que permite la comunicación, y experimenta con formas, colores y texturas para expresar sensaciones, emociones, sentimientos e ideas que surgen de su entorno.</td></tr><tr><td colspan="3">Secuencia de actividades</td></tr><tr><td colspan="3">- Comienza con una charla lúdica: ¿Qué colores ven en la escuela? ¿Y en su casa? ¿Cómo sensación les provoca cada color? - Muéstrales imágenes de objetos cotidianos con colores intensos (por ejemplo: frutas, ropa, juguetes) para hacer una lluvia de ideas sobre qué emociones o cosas les recuerdan ciertos colores (ej. rojo = amor o fuego). - Invita a los niños a hacer una &quot;Caza del color&quot; en el salón o casa (si es híbrido o tarea): buscar y recortar de revistas pedacitos de colores (rojo, azul, verde, etc.). Luego, que peguen los recortes que llevaron en una hoja para formar un collage libre que represente cómo se sienten hoy usando colores. - Para finalizar la actividad que cada niño muestre su collage y comparta brevemente qué colores usó y por qué, también puedes preguntarle ¿Qué sientes cuando ves tu imagen (collage libre)?</td></tr><tr><td colspan="3">Sugerencia de evaluación formativa</td></tr><tr><td>Criterio</td><td>Observación del docente</td><td>¿Cómo se evidencia?</td></tr><tr><td>Usa colores para expresar emociones</td><td>Participa en la caza del color</td><td>Usa variedad de colores y explica su elección</td></tr><tr><td>Crea composiciones visuales propias</td><td>Elabora collage y obra con texturas</td><td>Participa con entusiasmo y creatividad</td></tr><tr><td>Explica sus elecciones artísticas</td><td>Comparte sus ideas y emociones al final</td><td>Usa frases como “esto me recuerda a…”</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Criterio Observación del ¿Cómo se evidencia?</p><p class="pdf-source-line">Usa colores para expresar Participa en la caza del Usa variedad de colores y</p><p class="pdf-source-line">emociones color explica su elección</p><p class="pdf-source-line">Crea composiciones Elabora collage y obra Participa con entusiasmo y</p><p class="pdf-source-line">visuales propias con texturas creatividad</p><p class="pdf-source-line">Explica sus elecciones Comparte sus ideas y Usa frases como “esto me</p><p class="pdf-source-line">artísticas emociones al final recuerda a…”</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 89 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	89</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 89</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Usa el cuerpo para expresar
-una emoción o situación
-Participa activamente en
-las 	estatuas
-emocionales 	y 	mini
-escenas
-Lista de cotejo
-(Sí / No / En proceso)
-Imita sonidos con el cuerpo
-u objetos
-Durante 	la 	historia
-sonora aporta sonidos
-Observación directa
-Colabora en grupo 	Trabaja con su equipo
-sin 	conflictos 	y 	aporta
-ideas
-Rúbrica 	sencilla 	con
-caritas 🙂😐☹
-
-
+<h3 class="pdf-section-title">Orientación didáctica de teatro de la tercera fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 89" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="3">Contenido nacional</th></tr><tr><td colspan="3">Uso de elementos de los lenguajes artísticos en la vida cotidiana</td></tr><tr><td colspan="3">Aprendizajes esperados de teatro</td></tr><tr><td colspan="3">• Emplea expresiones corporales para comunicar eventos de su vida cotidiana. • Representa situaciones de la vida cotidiana con movimientos corporales. Emplea l expresión corporal y verbal para representar ideas y eventos de su vida cotidiana en diferentes situaciones.</td></tr><tr><td colspan="3">PDA 1°</td></tr><tr><td colspan="3">Imita sonidos, gestos e imágenes de su entorno para representar de manera expresiva situaciones de la vida cotidiana, usando su cuerpo y su voz con intención teatral.</td></tr><tr><td colspan="3">Secuencia de actividades</td></tr><tr><td colspan="3">- Inicia tu clase de teatro con la actividad “Enciendo mi cuerpo” lo cual consiste en</td></tr><tr><td colspan="3">que todos se coloquen de pie y en círculo, realiza un breve calentamiento corporal,</td></tr><tr><td colspan="3">como si “encendieran” partes del cuerpo:</td></tr><tr><td colspan="3">Vamos a encender nuestras manos (las movemos rápido), ahora nuestros pies y</td></tr><tr><td colspan="3">después el cuerpo completo, como si fuéramos robots que se están encendiendo.</td></tr><tr><td colspan="3">- En el mismo círculo mencionar una situación cotidiana (Ej.: despertar tarde, perder</td></tr><tr><td colspan="3">el lápiz, recibir un helado de regalo, caerse al jugar. Y que los niños, al escuchar la</td></tr><tr><td colspan="3">situación, deben representar con su cuerpo una “estatua” que exprese esa emoción</td></tr><tr><td colspan="3">o momento. (esta actividad se puede realizar individual o grupal). Luego que</td></tr><tr><td colspan="3">adivinen: “¿Qué emoción o momento crees que representó tu compañero?”</td></tr><tr><td colspan="3">- Pide a tus alumnos que elijan de su alrededor objetos que hagan sonidos, incluso</td></tr><tr><td colspan="3">pueden utilizar su cuerpo (aplausos, pasos, soplar, golpear suave una mesa, etc.).</td></tr><tr><td colspan="3">Después cuenta una historia inventada (por ejemplo: Una caminata por el bosque),</td></tr><tr><td colspan="3">y que los niños aporten sonidos con su cuerpo y objetos:</td></tr><tr><td colspan="3">• Pájaros (con la voz)</td></tr><tr><td colspan="3">• Viento (soplando)</td></tr><tr><td colspan="3">• Ramas (golpecitos con crayones)</td></tr><tr><td colspan="3">Para finalizar crea una historia y divide por equipos, que cada uno de estos cumpla</td></tr><tr><td colspan="3">con el roll para llevarla a cabo. (Ej. Equipo 1 narra la historia, equipo 2 actuación y</td></tr><tr><td colspan="3">equipo 3 sonidos).</td></tr><tr><td colspan="3">Sugerencia de evaluación formativa</td></tr><tr><td>Criterio</td><td>¿Cómo se observa?</td><td>Instrumento</td></tr><tr><td colspan="3">88</td></tr></tbody></table></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 90 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	90</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 90</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Orientaciones didácticas de la cuarta fase
-### Orientación didáctica de de música de la cuarta fase
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de música
-• 	Formación de un ensamble musical para presentarlo frente a público.
-PDA 4°
-Expresa variedades de sonidos musicales para crear una propuesta artística colectiva
-que mejore el espacio escolar o de la localidad en la que pertenece.
-### Orientación didáctica de música
-Propósito:
-Que los estudiantes diseñen y ensayen una breve propuesta musical en formato de
-ensamble con un mensaje positivo, con la intención de compartirla frente a la
-comunidad escolar.
-Secuencia de actividades
-Momento 	Actividad 	Materiales 	Estrategia de
-evaluación
-formativa
-Inicio 	-Escuchar un fragmento
-de 	una 	canción 	que
-transmita 	un 	mensaje
-social 	positivo 	(ej.
-cuidado 	ambiental,
-respeto, inclusión).
-- En dialogo, cuestionar
-Bocinas,
-reproductor 	de
-audio, 	pizarra,
-plumones.
-Observación directa:
-Identifica 	un
-problema y propone
-un tema.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 90" tabindex="0"><table class="pdf-table"><tbody><tr><td>Usa el cuerpo para expresar una emoción o situación</td><td>Participa activamente en</td><td>Lista de cotejo (Sí / No / En proceso)</td><td></td></tr><tr><td colspan="4">las estatuas</td></tr><tr><td colspan="4">emocionales y mini</td></tr><tr><td colspan="4">escenas</td></tr><tr><td>Imita sonidos con el cuerpo</td><td>Durante la historia</td><td>Observación directa</td><td></td></tr><tr><td>u objetos</td><td>sonora aporta sonidos</td><td></td><td></td></tr><tr><td>Colabora en grupo</td><td>Colabora en grupo</td><td>Trabaja con su equipo</td><td>Rúbrica sencilla con caritas 🙂😐☹</td></tr><tr><td colspan="4">sin conflictos y aporta</td></tr><tr><td colspan="4">ideas</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Usa el cuerpo para expresar Participa activamente en Lista de cotejo</p><p class="pdf-source-line">una emoción o situación las estatuas (Sí / No / En proceso)</p><p class="pdf-source-line">sin conflictos y aporta caritas 🙂😐☹</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 91 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	91</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 91</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-sobre problemáticas que
-podrían 	mejorar 	en 	la
-escuela o comunidad.
-- Elegir en grupo un tema
-que 	será 	el 	eje 	del
-ensamble.
-Desarrollo 	- 	Formar 	pequeños
-ensambles 	(equipos)
-instrumentales, vocales o
-mixtos.
-- 	Asignar 	roles 	(voz,
-percusión,
-acompañamiento,
-dirección).
-- 	Crear 	o 	adaptar 	un
-fragmento 	musical 	con
-letra 	alusiva 	al 	tema
-elegido.
-- 	Ensayar 	la 	pieza
-cuidando 	coordinación,
-ritmo y mensaje.
-Instrumentos
-escolares 	o
-reciclados, 	hojas
-y 	lápices, 	atriles
-(opcional).
-Lista de cotejo:
-- 	Participa 	en 	el
-trabajo grupal.
-- Asume y respeta su
-rol.
-- 	Aplica 	elementos
-musicales 	básicos
-(ritmo, 	melodía,
-dinámica).
-Cierre 	- 	Presentar 	cada
-ensamble frente al grupo
-como 	simulacro 	de
-presentación pública.
-- 	Retroalimentación
-grupal sobre el mensaje y
-la 	interpretación 	de 	los
-ensambles.
-- 	Reflexión 	final 	sobre
-cómo 	la 	música 	puede
-impactar en la mejora de
-la comunidad escolar.
-Espacio 	para
-presentación,
-equipo de sonido
-(opcional).
-Rúbrica rápida:
-- 	Claridad 	del
-mensaje.
-- 	Coordinación 	y
-participación 	del
-grupo.
-- 	Expresividad 	y
-seguridad 	en 	la
-interpretación.
-
-
+<h3 class="pdf-section-title">Orientaciones didácticas de la cuarta fase</h3>
+<h3 class="pdf-section-title">Orientación didáctica de de música de la cuarta fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 91" tabindex="0"><table class="pdf-table"><tbody><tr><th>Contenido nacional</th></tr><tr><td>Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad</td></tr><tr><td>Contenido estatal de música</td></tr><tr><td>• Formación de un ensamble musical para presentarlo frente a público.</td></tr><tr><td>PDA 4°</td></tr><tr><td>Expresa variedades de sonidos musicales para crear una propuesta artística colectiva que mejore el espacio escolar o de la localidad en la que pertenece.</td></tr><tr><td>Orientación didáctica de música</td></tr><tr><td>Propósito: Que los estudiantes diseñen y ensayen una breve propuesta musical en formato de ensamble con un mensaje positivo, con la intención de compartirla frente a la comunidad escolar. Secuencia de actividades Momento Actividad Materiales Estrategia de evaluación formativa Inicio -Escuchar un fragmento Bocinas, Observación directa: de una canción que reproductor de Identifica un transmita un mensaje audio, pizarra, problema y propone social positivo (ej. plumones. un tema. cuidado ambiental, respeto, inclusión). - En dialogo, cuestionar</td></tr><tr><td>90</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 91" tabindex="0"><table class="pdf-table"><tbody><tr><th>Momento</th><th>Actividad</th><th>Materiales</th><th>Estrategia de</th><th></th></tr><tr><td colspan="5">evaluación</td></tr><tr><td colspan="5">formativa</td></tr><tr><td>Inicio</td><td>-Escuchar un fragmento</td><td>Bocinas, reproductor de audio, pizarra, plumones.</td><td>Observación directa: Identifica un problema y propone un tema.</td><td>Observación directa:</td></tr><tr><td>de una canción que</td><td>Identifica un</td><td></td><td></td><td></td></tr><tr><td>transmita un mensaje</td><td>problema y propone</td><td></td><td></td><td></td></tr><tr><td>social positivo (ej.</td><td>un tema.</td><td></td><td></td><td></td></tr><tr><td colspan="5">cuidado ambiental,</td></tr><tr><td colspan="5">respeto, inclusión).</td></tr><tr><td colspan="5">- En dialogo, cuestionar</td></tr></tbody></table></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 92 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	92</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 92</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Rúbrica de evaluación formativa
-| Aspectos a evaluar | Con debilidad | Satisfactorio | Excelente |
-| --- | --- | --- | --- |
-| Participa activamente en la elección del tema y propuesta. | | | |
-| Colabora y respeta su rol dentro del ensamble. | | | |
-| Mantiene ritmo y coordinación durante el ensayo y presentación. | | | |
-| El mensaje artístico es claro y se relaciona con la mejora de la escuela o comunidad. | | | |
-
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 92" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="5">sobre problemáticas que</td></tr><tr><td colspan="5">podrían mejorar en la</td></tr><tr><td colspan="5">escuela o comunidad.</td></tr><tr><td colspan="5">- Elegir en grupo un tema</td></tr><tr><td colspan="5">que será el eje del</td></tr><tr><td colspan="5">ensamble.</td></tr><tr><td>Desarrollo</td><td>- Formar pequeños</td><td>Instrumentos escolares o reciclados, hojas y lápices, atriles (opcional).</td><td>Lista de cotejo: - Participa en el trabajo grupal. - Asume y respeta su rol. - Aplica elementos musicales básicos (ritmo, melodía, dinámica).</td><td></td></tr><tr><td colspan="5">ensambles (equipos)</td></tr><tr><td colspan="5">instrumentales, vocales o</td></tr><tr><td colspan="5">mixtos.</td></tr><tr><td colspan="5">- Asignar roles (voz,</td></tr><tr><td colspan="5">percusión,</td></tr><tr><td colspan="5">acompañamiento,</td></tr><tr><td colspan="5">dirección).</td></tr><tr><td colspan="5">- Crear o adaptar un</td></tr><tr><td colspan="5">fragmento musical con</td></tr><tr><td colspan="5">letra alusiva al tema</td></tr><tr><td colspan="5">elegido.</td></tr><tr><td colspan="5">- Ensayar la pieza</td></tr><tr><td colspan="5">cuidando coordinación,</td></tr><tr><td colspan="5">r itmo y mensaje.</td></tr><tr><td>Cierre</td><td>- Presentar cada ensamble frente al grupo como simulacro de presentación pública. - Retroalimentación grupal sobre el mensaje y la interpretación de los ensambles. - Reflexión final sobre cómo la música puede impactar en la mejora de la comunidad escolar.</td><td>- Presentar cada</td><td>Espacio para presentación, equipo de sonido (opcional).</td><td>Rúbrica rápida: - Claridad del mensaje. - Coordinación y participación del grupo. - Expresividad y seguridad en la interpretación.</td></tr><tr><td colspan="5">ensamble frente al grupo</td></tr><tr><td colspan="5">como simulacro de</td></tr><tr><td colspan="5">presentación pública.</td></tr><tr><td colspan="5">- Retroalimentación</td></tr><tr><td colspan="5">grupal sobre el mensaje y</td></tr><tr><td colspan="5">la interpretación de los</td></tr><tr><td colspan="5">ensambles.</td></tr><tr><td colspan="5">- Reflexión final sobre</td></tr><tr><td colspan="5">cómo la música puede</td></tr><tr><td colspan="5">impactar en la mejora de</td></tr><tr><td colspan="5">la comunidad escolar.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Desarrollo - Formar pequeños Instrumentos Lista de cotejo:</p><p class="pdf-source-line">ensambles (equipos) escolares o - Participa en el</p><p class="pdf-source-line">instrumentales, vocales o reciclados, hojas trabajo grupal.</p><p class="pdf-source-line">mixtos. y lápices, atriles</p><p class="pdf-source-line">(opcional). - Asume y respeta su</p><p class="pdf-source-line">- Asignar roles (voz, rol.</p><p class="pdf-source-line">acompañamiento, - Aplica elementos</p><p class="pdf-source-line">dirección). musicales básicos</p><p class="pdf-source-line">- Crear o adaptar un dinámica).</p><p class="pdf-source-line">Cierre - Presentar cada Espacio para Rúbrica rápida:</p><p class="pdf-source-line">ensamble frente al grupo presentación, - Claridad del</p><p class="pdf-source-line">como simulacro de equipo de sonido mensaje.</p><p class="pdf-source-line">presentación pública. (opcional).</p><p class="pdf-source-line">- Retroalimentación participación del</p><p class="pdf-source-line">grupal sobre el mensaje y grupo.</p><p class="pdf-source-line">ensambles. - Expresividad y</p><p class="pdf-source-line">- Reflexión final sobre interpretación.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 93 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	93</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 93</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Orientación didáctica de danza de la cuarta fase
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de danza
-• 	Creación de montaje dancístico en colectivo, a partir de un tema sugerido:
-diseño y elaboración de vestuario y maquillaje, entre otros.
-PDA 4°
-Elabora una propuesta con intención dancística, en colectivo, mediante movimientos,
-y objetos para ofrecer propuestas de solución a situaciones o problemas identificados,
-ya sea en la escuela o en el resto de la comunidad.
-### Orientación didáctica de danza
-Propósito:
-Que los estudiantes, en trabajo colectivo, desarrollen una propuesta dancística breve
-inspirada 	en 	un 	tema 	que 	promueva 	la 	mejora 	de 	la 	escuela 	o 	comunidad,
-incorporando ideas para vestuario y maquillaje que refuercen el mensaje artístico.
-Secuencia de actividades
-Momento 	Actividad 	Materiales 	Estrategia de
-evaluación formativa
-Inicio 	-Presentar videos o
-imágenes de
-montajes dancísticos
-donde el vestuario y
-maquillaje apoyen el
-mensaje (ej.
-festivales escolares,
-### danza
-contemporánea con
-temática social).
-- Conversar sobre un
-tema sugerido (ej.
-respeto, inclusión,
-Proyector o
-pantalla,
-bocinas, pizarra,
-plumones.
-Observación directa:
-Reconoce cómo el
-vestuario y maquillaje
-refuerzan el mensaje en
-la danza.
-
-
+<p class="pdf-source-line">Rúbrica de evaluación formativa</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 93" tabindex="0"><table class="pdf-table"><tbody><tr><th>Aspectos a evaluar</th><th>Con debilidad</th><th>Satisfactorio</th><th>Excelente</th></tr><tr><td colspan="4">Participa activamente en la elección del tema y propuesta.</td></tr><tr><td colspan="4">Colabora y respeta su rol dentro del ensamble.</td></tr><tr><td colspan="4">Mantiene ritmo y coordinación durante el ensayo y presentación.</td></tr><tr><td colspan="4">El mensaje artístico es claro y se relaciona con la mejora de la escuela o comunidad.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Aspectos a evaluar Con Satisfactorio Excelente</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 94 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	94</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 94</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-cuidado ambiental)
-que será el eje de la
-propuesta.
-Desarrollo 	- Formar equipos de
-trabajo para la
-creación del montaje.
-- Diseñar una breve
-secuencia
-coreográfica de 16
-tiempos, que
-represente el tema
-elegido.
-- Definir ideas de
-vestuario y maquillaje
-que refuercen la
-propuesta (pueden
-dibujar bocetos o
-seleccionar
-materiales).
-- Ensayar la
-secuencia cuidando
-coordinación, ritmo y
-expresividad.
-Hojas, lápices,
-colores, tela o
-recortes de
-revistas, equipo
-de sonido,
-espacio libre
-para ensayar.
-Lista de cotejo:
-- Movimientos
-coherentes con el
-mensaje.
-- Coordinación en
-equipo.
-- Ideas claras para
-vestuario/maquillaje.
-Cierre 	- Presentar cada
-montaje breve al
-grupo.
-- Explicar cómo los
-movimientos,
-vestuario y maquillaje
-contribuyen al
-mensaje artístico.
--Retroalimentación
-grupal para resaltar
-fortalezas y posibles
-mejoras.
-Espacio para
-presentación.
-Rúbrica rápida:
-- Claridad del mensaje
-artístico.
-- Creatividad en la
-propuesta.
-- Expresividad y
-coordinación grupal.
-
-
+<h3 class="pdf-section-title">Orientación didáctica de danza de la cuarta fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 94" tabindex="0"><table class="pdf-table"><tbody><tr><th>Contenido nacional</th></tr><tr><td>Creación de propuestas con intención artística para mejorar la escuela y el resto de la comunidad</td></tr><tr><td>Contenido estatal de danza</td></tr><tr><td>• Creación de montaje dancístico en colectivo, a partir de un tema sugerido: diseño y elaboración de vestuario y maquillaje, entre otros.</td></tr><tr><td>PDA 4°</td></tr><tr><td>Elabora una propuesta con intención dancística, en colectivo, mediante movimientos, y objetos para ofrecer propuestas de solución a situaciones o problemas identificados, ya sea en la escuela o en el resto de la comunidad.</td></tr><tr><td>Orientación didáctica de danza</td></tr><tr><td>Propósito: Que los estudiantes, en trabajo colectivo, desarrollen una propuesta dancística breve inspirada en un tema que promueva la mejora de la escuela o comunidad, incorporando ideas para vestuario y maquillaje que refuercen el mensaje artístico. Secuencia de actividades Momento Actividad Materiales Estrategia de evaluación formativa Inicio -Presentar videos o Proyector o Observación directa: imágenes de pantalla, Reconoce cómo el montajes dancísticos bocinas, pizarra, vestuario y maquillaje donde el vestuario y plumones. refuerzan el mensaje en maquillaje apoyen el la danza. mensaje (ej. festivales escolares, danza contemporánea con temática social). - Conversar sobre un tema sugerido (ej. respeto, inclusión,</td></tr><tr><td>93</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 94" tabindex="0"><table class="pdf-table"><tbody><tr><th>Momento</th><th>Actividad</th><th>Materiales</th><th>Estrategia de</th><th></th></tr><tr><td colspan="5">evaluación formativa</td></tr><tr><td>Inicio</td><td>-Presentar videos o</td><td>Proyector o pantalla, bocinas, pizarra, plumones.</td><td>Observación directa: Reconoce cómo el vestuario y maquillaje refuerzan el mensaje en la danza.</td><td>Observación directa:</td></tr><tr><td>imágenes de</td><td>Reconoce cómo el</td><td></td><td></td><td></td></tr><tr><td>montajes dancísticos</td><td>vestuario y maquillaje</td><td></td><td></td><td></td></tr><tr><td>donde el vestuario y</td><td>refuerzan el mensaje en</td><td></td><td></td><td></td></tr><tr><td>maquillaje apoyen el</td><td>la danza.</td><td></td><td></td><td></td></tr><tr><td colspan="5">mensaje (ej.</td></tr><tr><td colspan="5">festivales escolares,</td></tr><tr><td colspan="5">danza</td></tr><tr><td colspan="5">contemporánea con</td></tr><tr><td colspan="5">temática social).</td></tr><tr><td colspan="5">- Conversar sobre un</td></tr><tr><td colspan="5">tema sugerido (ej.</td></tr><tr><td colspan="5">respeto, inclusión,</td></tr></tbody></table></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 95 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	95</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 95</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Rúbrica de evaluación formativa
-Aspectos a evaluar 	Con
-debilidad
-Satisfactorio 	Excelente
-Participa 	activamente 	en 	la 	creación
-colectiva de la coreografía.
-Movimientos 	y 	secuencia 	dancística
-coherentes con el tema y mensaje.
-Aporta 	ideas 	creativas 	para 	vestuario 	y
-maquillaje que refuercen el mensaje.
-Se coordina con el grupo y respeta tiempos
-durante el ensayo/presentación.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 95" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="4">cuidado ambiental)</td></tr><tr><td colspan="4">que será el eje de la</td></tr><tr><td colspan="4">propuesta.</td></tr><tr><td>Desarrollo</td><td>- Formar equipos de</td><td>Hojas, lápices, colores, tela o recortes de revistas, equipo de sonido, espacio libre para ensayar.</td><td>Lista de cotejo: - Movimientos coherentes con el mensaje. - Coordinación en equipo. - Ideas claras para vestuario/maquillaje.</td></tr><tr><td colspan="4">trabajo para la</td></tr><tr><td colspan="4">creación del montaje.</td></tr><tr><td colspan="4">- Diseñar una breve</td></tr><tr><td colspan="4">secuencia</td></tr><tr><td colspan="4">coreográfica de 16</td></tr><tr><td colspan="4">tiempos, que</td></tr><tr><td colspan="4">represente el tema</td></tr><tr><td colspan="4">elegido.</td></tr><tr><td colspan="4">- Definir ideas de</td></tr><tr><td colspan="4">vestuario y maquillaje</td></tr><tr><td colspan="4">que refuercen la</td></tr><tr><td colspan="4">propuesta (pueden</td></tr><tr><td colspan="4">dibujar bocetos o</td></tr><tr><td colspan="4">seleccionar</td></tr><tr><td colspan="4">materiales).</td></tr><tr><td colspan="4">- Ensayar la</td></tr><tr><td colspan="4">secuencia cuidando</td></tr><tr><td colspan="4">coordinación, ritmo y</td></tr><tr><td colspan="4">expresividad.</td></tr><tr><td>Cierre</td><td>- Presentar cada</td><td>Espacio para presentación.</td><td>Rúbrica rápida: - Claridad del mensaje artístico. - Creatividad en la propuesta. - Expresividad y coordinación grupal.</td></tr><tr><td colspan="4">montaje breve al</td></tr><tr><td colspan="4">grupo.</td></tr><tr><td colspan="4">- Explicar cómo los</td></tr><tr><td colspan="4">movimientos,</td></tr><tr><td colspan="4">vestuario y maquillaje</td></tr><tr><td colspan="4">contribuyen al</td></tr><tr><td colspan="4">mensaje artístico.</td></tr><tr><td colspan="4">-Retroalimentación</td></tr><tr><td colspan="4">grupal para resaltar</td></tr><tr><td colspan="4">fortalezas y posibles</td></tr><tr><td colspan="4">mejoras.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Desarrollo - Formar equipos de Hojas, lápices, Lista de cotejo:</p><p class="pdf-source-line">trabajo para la colores, tela o</p><p class="pdf-source-line">creación del montaje. recortes de - Movimientos</p><p class="pdf-source-line">revistas, equipo coherentes con el</p><p class="pdf-source-line">- Diseñar una breve de sonido, mensaje.</p><p class="pdf-source-line">secuencia espacio libre</p><p class="pdf-source-line">coreográfica de 16 para ensayar. - Coordinación en</p><p class="pdf-source-line">tiempos, que equipo.</p><p class="pdf-source-line">elegido. - Ideas claras para</p><p class="pdf-source-line">Cierre - Presentar cada Espacio para Rúbrica rápida:</p><p class="pdf-source-line">montaje breve al presentación. - Claridad del mensaje</p><p class="pdf-source-line">grupo. artístico.</p><p class="pdf-source-line">- Explicar cómo los - Creatividad en la</p><p class="pdf-source-line">movimientos, propuesta.</p><p class="pdf-source-line">contribuyen al - Expresividad y</p><p class="pdf-source-line">mensaje artístico. coordinación grupal.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 96 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	96</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 96</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Orientación didáctica de artes visuales de la cuarta fase
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de artes visuales
-• 	Identificación de representaciones bidimensionales y tridimensionales donde
-estén presentes diferentes formatos, soportes y materiales.
-PDA 4°
-Crea producciones visuales, que representen vínculos respetuosos con la diversidad
-para su participación en la mejora comunitaria.
-### Orientación didáctica de artes visuales
-Propósito:
-Que 	los 	estudiantes 	identifiquen 	y 	utilicen 	formatos, 	soportes 	y 	materiales
-bidimensionales 	y 	tridimensionales 	para 	diseñar 	una 	propuesta 	artística 	que
-comunique un mensaje positivo para la mejora de la escuela o la comunidad.
-Secuencia de actividades
-Momento 	Actividad 	Materiales 	Estrategia de
-evaluación
-formativa
-Inicio 	- 	Presentar 	ejemplos
-visuales 	de 	obras
-bidimensionales
-(murales, 	carteles,
-ilustraciones) 	y
-tridimensionales
-(esculturas, 	maquetas,
-instalaciones).
-- Dialogar sobre cómo el
-arte 	visual 	puede
-transmitir 	mensajes
-Proyector 	o
-impresiones 	de
-obras, 	pizarra,
-plumones.
-Observación
-directa: 	Reconoce
-las 	diferencias
-entre 	2D 	y 	3D 	y
-participa 	en 	el
-diálogo.
-
-
+<p class="pdf-source-line">Rúbrica de evaluación formativa</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 96" tabindex="0"><table class="pdf-table"><tbody><tr><th>Aspectos a evaluar</th><th>Con debilidad</th><th>Satisfactorio</th><th>Excelente</th></tr><tr><td colspan="4">Participa activamente en la creación colectiva de la coreografía.</td></tr><tr><td colspan="4">Aporta ideas creativas para vestuario y maquillaje que refuercen el mensaje.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Aspectos a evaluar Con Satisfactorio Excelente</p><p class="pdf-source-line">Movimientos y secuencia dancística</p><p class="pdf-source-line">coherentes con el tema y mensaje.</p><p class="pdf-source-line">Se coordina con el grupo y respeta tiempos</p><p class="pdf-source-line">durante el ensayo/presentación.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 97 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	97</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 97</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-positivos 	y 	proponer
-mejoras.
-Desarrollo 	- 	En 	equipos, 	elegir 	un
-tema relacionado con la
-mejora de la escuela o
-comunidad (ej. limpieza,
-inclusión, 	cuidado
-ambiental).
-- Decidir si su propuesta
-será 	bidimensional 	o
-tridimensional.
-- 	Elaborar 	un 	boceto 	o
-maqueta inicial, eligiendo
-formato, 	soporte 	y
-materiales.
-Cartulinas,
-papel, 	lápices,
-colores,
-plastilina,
-materiales
-reciclados, 	cinta
-adhesiva, tijeras.
-Lista 	de 	cotejo: 	-
-Selecciona 	un
-formato 	y 	soporte
-adecuado.
-- Integra elementos
-coherentes 	con 	el
-mensaje.
-- 	Participa
-activamente 	en 	la
-creación.
-Cierre 	- Presentar brevemente el
-boceto 	o 	maqueta 	al
-grupo, 	explicando 	el
-mensaje, el formato y los
-materiales elegidos.
-- 	Retroalimentación
-grupal 	sobre 	claridad 	y
-pertinencia del mensaje.
-Espacio 	para
-exposición,
-mesa de trabajo.
-Rúbrica 	rápida: 	-
-Mensaje 	claro 	y
-positivo.
-- 	Elección
-adecuada 	del
-formato (2D o 3D).
-- Creatividad y uso
-funcional 	de
-materiales.
-Rúbrica de evaluación formativa
-Aspectos a evaluar 	Con
-debilidad
-Satisfactorio 	Excelente
-Reconoce y diferencia representaciones
-bidimensionales y tridimensionales.
-Participa activamente en la planificación y
-creación de la propuesta artística.
-Selecciona y utiliza adecuadamente
-formatos, soportes y materiales.
-Comunica un mensaje artístico claro para
-la mejora de la escuela o comunidad.
-
-
+<h3 class="pdf-section-title">Orientación didáctica de artes visuales de la cuarta fase</h3>
+<h4 class="pdf-subtitle">Contenido nacional</h4>
+<p class="pdf-source-line">Creación de propuestas con intención artística para mejorar la escuela y el resto de</p>
+<p class="pdf-source-line">la comunidad</p>
+<p class="pdf-source-line">Contenido estatal de artes visuales</p>
+<p class="pdf-source-line">• Identificación de representaciones bidimensionales y tridimensionales donde</p>
+<p class="pdf-source-line">estén presentes diferentes formatos, soportes y materiales.</p>
+<h4 class="pdf-subtitle">PDA 4°</h4>
+<p class="pdf-source-line">Crea producciones visuales, que representen vínculos respetuosos con la diversidad</p>
+<p class="pdf-source-line">para su participación en la mejora comunitaria.</p>
+<h3 class="pdf-section-title">Orientación didáctica de artes visuales</h3>
+<p class="pdf-source-line">Propósito:</p>
+<p class="pdf-source-line">Que los estudiantes identifiquen y utilicen formatos, soportes y materiales</p>
+<p class="pdf-source-line">bidimensionales y tridimensionales para diseñar una propuesta artística que</p>
+<p class="pdf-source-line">comunique un mensaje positivo para la mejora de la escuela o la comunidad.</p>
+<p class="pdf-source-line">Secuencia de actividades</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 97" tabindex="0"><table class="pdf-table"><tbody><tr><th>Momento</th><th>Actividad</th><th>Materiales</th><th>Estrategia de</th></tr><tr><td colspan="4">evaluación</td></tr><tr><td colspan="4">formativa</td></tr><tr><td>Inicio</td><td>- Presentar ejemplos</td><td>Proyector o impresiones de obras, pizarra, plumones.</td><td>Observación</td></tr><tr><td>visuales de obras</td><td>directa: Reconoce</td><td></td><td></td></tr><tr><td>bidimensionales</td><td>las diferencias</td><td></td><td></td></tr><tr><td>(murales, carteles,</td><td>entre 2D y 3D y</td><td></td><td></td></tr><tr><td>ilustraciones) y</td><td>participa en el</td><td></td><td></td></tr><tr><td>tridimensionales</td><td>diálogo.</td><td></td><td></td></tr><tr><td colspan="4">(esculturas, maquetas,</td></tr><tr><td colspan="4">instalaciones).</td></tr><tr><td colspan="4">- Dialogar sobre cómo el</td></tr><tr><td colspan="4">arte visual puede</td></tr><tr><td colspan="4">transmitir mensajes</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Inicio - Presentar ejemplos Proyector o Observación</p><p class="pdf-source-line">visuales de obras impresiones de directa: Reconoce</p><p class="pdf-source-line">bidimensionales obras, pizarra, las diferencias</p><p class="pdf-source-line">(murales, carteles, plumones. entre 2D y 3D y</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 98 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	98</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 98</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Orientación didáctica de teatro de la cuarta fase
-Contenido nacional
-Creación de propuestas con intención artística para mejorar la escuela y el resto de
-la comunidad
-Contenido estatal de teatro
-• 	Creación de una historia de su comunidad con pequeños diálogos.
-PDA 4°
-Elabora un montaje teatral en colectivo, para ofrecer propuestas de solución a
-situaciones o problemas identificados, ya sea en la escuela o en el resto de la
-comunidad.
-### Orientación didáctica de teatro
-Propósito:
-Que los estudiantes, en forma colaborativa, elaboren y representen una breve escena
-teatral inspirada en una historia de su comunidad, incorporando un mensaje artístico
-que contribuya a la mejora de la escuela o el entorno social.
-Momento 	Actividad 	Materiales 	Estrategia de
-evaluación
-formativa
-Inicio 	- Conversar sobre historias
-reales 	o 	ficticias 	de 	la
-comunidad 	que 	reflejen
-valores, retos o tradiciones.
-- 	Elegir 	de 	manera
-colectiva 	un 	tema 	que
-pueda generar un mensaje
-positivo para la escuela o
-comunidad 	(ej. 	respeto,
-cuidado 	del 	medio
-ambiente, unión).
-Pizarra,
-plumones.
-Observación
-directa: 	Participa
-en la elección del
-tema 	y 	aporta
-ideas 	para 	la
-historia.
-Desarrollo 	- 	Formar 	equipos
-pequeños.
-Hojas, 	lápices,
-vestuario 	o
-accesorios
-Lista de cotejo:
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 98" tabindex="0"><table class="pdf-table"><tbody><tr><th>positivos y proponer mejoras. Desarrollo - En equipos, elegir un Cartulinas, Lista de cotejo: - tema relacionado con la papel, lápices, Selecciona un mejora de la escuela o colores, formato y soporte comunidad (ej. limpieza, plastilina, adecuado. inclusión, cuidado materiales ambiental). reciclados, cinta - Integra elementos - Decidir si su propuesta adhesiva, tijeras. coherentes con el será bidimensional o mensaje. tridimensional. - Participa - Elaborar un boceto o activamente en la maqueta inicial, eligiendo creación. formato, soporte y materiales. Cierre - Presentar brevemente el Espacio para Rúbrica rápida: - boceto o maqueta al exposición, Mensaje claro y grupo, explicando el mesa de trabajo. positivo. mensaje, el formato y los materiales elegidos. - Elección adecuada del - Retroalimentación formato (2D o 3D). grupal sobre claridad y pertinencia del mensaje. - Creatividad y uso funcional de materiales. Rúbrica de evaluación formativa Aspectos a evaluar Con Satisfactorio Excelente debilidad Reconoce y diferencia representaciones bidimensionales y tridimensionales. Participa activamente en la planificación y creación de la propuesta artística. Selecciona y utiliza adecuadamente formatos, soportes y materiales. Comunica un mensaje artístico claro para la mejora de la escuela o comunidad.</th><th>positivos y proponer mejoras.</th><th></th><th></th><th></th></tr><tr><td>Desarrollo</td><td>- En equipos, elegir un tema relacionado con la mejora de la escuela o comunidad (ej. limpieza, inclusión, cuidado ambiental). - Decidir si su propuesta será bidimensional o tridimensional. - Elaborar un boceto o maqueta inicial, eligiendo formato, soporte y materiales.</td><td>Cartulinas, papel, lápices, colores, plastilina, materiales reciclados, cinta adhesiva, tijeras.</td><td>Lista de cotejo: - Selecciona un formato y soporte adecuado. - Integra elementos coherentes con el mensaje. - Participa activamente en la creación.</td><td></td></tr><tr><td>Cierre</td><td>- Presentar brevemente el boceto o maqueta al grupo, explicando el mensaje, el formato y los materiales elegidos. - Retroalimentación grupal sobre claridad y pertinencia del mensaje.</td><td>Espacio para exposición, mesa de trabajo.</td><td>Rúbrica rápida: -</td><td></td></tr><tr><td colspan="5">Mensaje claro y</td></tr><tr><td colspan="5">positivo.</td></tr><tr><td colspan="5">- Elección</td></tr><tr><td colspan="5">adecuada del</td></tr><tr><td colspan="5">formato (2D o 3D).</td></tr><tr><td colspan="5">- Creatividad y uso</td></tr><tr><td colspan="5">funcional de</td></tr><tr><td colspan="5">materiales.</td></tr><tr><td>Aspectos a evaluar</td><td>Aspectos a evaluar</td><td>Con debilidad</td><td>Satisfactorio</td><td>Excelente</td></tr><tr><td>Reconoce y diferencia representaciones bidimensionales y tridimensionales.</td><td>Reconoce y diferencia representaciones</td><td></td><td></td><td></td></tr><tr><td colspan="5">bidimensionales y tridimensionales.</td></tr><tr><td>Selecciona y utiliza adecuadamente formatos, soportes y materiales.</td><td>Selecciona y utiliza adecuadamente</td><td></td><td></td><td></td></tr><tr><td colspan="5">formatos, soportes y materiales.</td></tr></tbody></table></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 99 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	99</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 99</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-- Crear una historia breve
-(3–5 	min) 	con 	una
-estructura 	sencilla: 	inicio,
-desarrollo y final.
-- 	Incluir 	al 	menos 	3–4
-diálogos 	cortos 	entre
-personajes.
-- Asignar roles y ensayar
-cuidando 	voz, 	gestos 	y
-desplazamientos.
-sencillos
-(opcional).
-- 	Historia 	con
-mensaje positivo.
-- Diálogos claros y
-relacionados 	con
-el tema.
-- Uso de expresión
-corporal y vocal.
-Cierre 	- 	Presentar 	cada 	escena
-frente al grupo.
-- 	Después 	de 	cada
-presentación, 	comentar
-brevemente el mensaje de
-la 	historia 	y 	cómo 	se
-conecta con la mejora de la
-escuela o comunidad.
-- Retroalimentación grupal
-destacando logros y áreas
-de mejora.
-Espacio 	para
-presentación.
-Rúbrica rápida:
-- Mensaje artístico
-claro.
-- Coherencia entre
-historia y diálogos.
-- 	Expresividad 	y
-coordinación
-grupal.
-Rúbrica de evaluación formativa
-Aspectos a evaluar 	Con
-debilidad
-Satisfactorio 	Excelente
-Participa activamente en la creación de la
-historia.
-Construye diálogos coherentes y
-relacionados con el tema.
-Interpreta con expresión corporal y vocal
-adecuadas.
-La escena transmite un mensaje positivo
-para la escuela o comunidad.
-
-
+<h3 class="pdf-section-title">Orientación didáctica de teatro de la cuarta fase</h3>
+<h4 class="pdf-subtitle">Contenido nacional</h4>
+<p class="pdf-source-line">Creación de propuestas con intención artística para mejorar la escuela y el resto de</p>
+<p class="pdf-source-line">la comunidad</p>
+<p class="pdf-source-line">Contenido estatal de teatro</p>
+<p class="pdf-source-line">• Creación de una historia de su comunidad con pequeños diálogos.</p>
+<h4 class="pdf-subtitle">PDA 4°</h4>
+<p class="pdf-source-line">Elabora un montaje teatral en colectivo, para ofrecer propuestas de solución a</p>
+<p class="pdf-source-line">situaciones o problemas identificados, ya sea en la escuela o en el resto de la</p>
+<p class="pdf-source-line">comunidad.</p>
+<h3 class="pdf-section-title">Orientación didáctica de teatro</h3>
+<p class="pdf-source-line">Propósito:</p>
+<p class="pdf-source-line">Que los estudiantes, en forma colaborativa, elaboren y representen una breve escena</p>
+<p class="pdf-source-line">teatral inspirada en una historia de su comunidad, incorporando un mensaje artístico</p>
+<p class="pdf-source-line">que contribuya a la mejora de la escuela o el entorno social.</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 99" tabindex="0"><table class="pdf-table"><tbody><tr><th>Momento</th><th>Actividad</th><th>Materiales</th><th>Estrategia de</th><th></th></tr><tr><td colspan="5">evaluación</td></tr><tr><td colspan="5">formativa</td></tr><tr><td>Inicio</td><td>- Conversar sobre historias</td><td>Pizarra, plumones.</td><td>Observación directa: Participa en la elección del tema y aporta ideas para la historia.</td><td>Observación</td></tr><tr><td>reales o ficticias de la</td><td>directa: Participa</td><td></td><td></td><td></td></tr><tr><td>comunidad que reflejen</td><td>en la elección del</td><td></td><td></td><td></td></tr><tr><td>valores, retos o tradiciones.</td><td>tema y aporta</td><td></td><td></td><td></td></tr><tr><td colspan="5">ideas para la</td></tr><tr><td>- Elegir de manera</td><td>historia.</td><td></td><td></td><td></td></tr><tr><td colspan="5">colectiva un tema que</td></tr><tr><td colspan="5">pueda generar un mensaje</td></tr><tr><td colspan="5">positivo para la escuela o</td></tr><tr><td colspan="5">comunidad (ej. respeto,</td></tr><tr><td colspan="5">cuidado del medio</td></tr><tr><td colspan="5">ambiente, unión).</td></tr><tr><td>Desarrollo</td><td>- Formar equipos</td><td>Hojas, lápices,</td><td>Lista de cotejo:</td><td></td></tr><tr><td>pequeños.</td><td>vestuario o</td><td></td><td></td><td></td></tr><tr><td colspan="5">accesorios</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Inicio - Conversar sobre historias Pizarra, Observación</p><p class="pdf-source-line">reales o ficticias de la plumones. directa: Participa</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 100 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	100</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 100</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Orientaciones didácticas de la quinta fase
-### Orientación didáctica de de música de la quinta fase
-Contenido nacional
-Creación de narrativas a partir de acontecimientos relevantes de la comunidad,
-empleando recursos literarios, visuales, corporales y sonoros.
-Contenido estatal de música
-Crea polirritmias para el acompañamiento musical
-PDA 5
-Combinación de secuencias sonoras a partir de narrativas de historias y leyendas
-leídas o escuchadas
-Orientación didáctica
-Momento 	Actividad 	Materiales 	Estrategias de
-evaluación
-Inicio 	Observar diversos
-videos donde se realiza
-flasmoob y comentar
-en que consiste.
-Dialogar sobre su
-implementación en la
-comunidad escolar
-durante algún festejo,
-recreo o actividad
-cívica.
-Abordar también la
-ejecución de batucadas
-donde los participantes
-desarrollan distintos
-ritmos
-Bocinas,
-reproductor
-de sonido,
-videos
-relacionados
-y proyector.
-Pizarra,
-plumones
-Observación directa
-Lista de cotejo
-Desarrollo 	Formar pequeños
-grupos; crear o adaptar
-diversos ritmos para
-cada grupo.
-Utilizar y adaptar
-garrafones de agua
-vacíos para producir
-sonido
-Crear una secuencia
-de movimientos y
-Garrafones
-de agua
-Baquetas,
-cinta
-Lista de cotejo:
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 100" tabindex="0"><table class="pdf-table"><tbody><tr><td>- Crear una historia breve</td><td>sencillos (opcional).</td><td>- Historia con mensaje positivo. - Diálogos claros y relacionados con el tema. - Uso de expresión corporal y vocal.</td><td></td></tr><tr><td colspan="4">(3–5 min) con una</td></tr><tr><td colspan="4">estructura sencilla: inicio,</td></tr><tr><td colspan="4">desarrollo y final.</td></tr><tr><td colspan="4">- Incluir al menos 3–4</td></tr><tr><td colspan="4">diálogos cortos entre</td></tr><tr><td colspan="4">personajes.</td></tr><tr><td colspan="4">- Asignar roles y ensayar</td></tr><tr><td colspan="4">cuidando voz, gestos y</td></tr><tr><td colspan="4">desplazamientos.</td></tr><tr><td>Cierre</td><td>- Presentar cada escena</td><td>Espacio para presentación.</td><td>Rúbrica rápida: - Mensaje artístico claro. - Coherencia entre historia y diálogos. - Expresividad y coordinación grupal.</td></tr><tr><td colspan="4">frente al grupo.</td></tr><tr><td colspan="4">- Después de cada</td></tr><tr><td colspan="4">presentación, comentar</td></tr><tr><td colspan="4">brevemente el mensaje de</td></tr><tr><td colspan="4">la historia y cómo se</td></tr><tr><td colspan="4">conecta con la mejora de la</td></tr><tr><td colspan="4">escuela o comunidad.</td></tr><tr><td colspan="4">- Retroalimentación grupal</td></tr><tr><td colspan="4">destacando logros y áreas</td></tr><tr><td colspan="4">de mejora.</td></tr></tbody></table></div>
+<p class="pdf-source-line">Rúbrica de evaluación formativa</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 100" tabindex="0"><table class="pdf-table"><tbody><tr><th>Aspectos a evaluar</th><th>Con debilidad</th><th>Satisfactorio</th><th>Excelente</th></tr><tr><td colspan="4">Participa activamente en la creación de la</td></tr><tr><td colspan="4">historia.</td></tr><tr><td colspan="4">Construye diálogos coherentes y relacionados con el tema.</td></tr><tr><td colspan="4">Interpreta con expresión corporal y vocal adecuadas.</td></tr><tr><td colspan="4">La escena transmite un mensaje positivo para la escuela o comunidad.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">- Crear una historia breve sencillos - Historia con</p><p class="pdf-source-line">(3–5 min) con una (opcional). mensaje positivo.</p><p class="pdf-source-line">estructura sencilla: inicio, - Diálogos claros y</p><p class="pdf-source-line">desarrollo y final. relacionados con</p><p class="pdf-source-line">- Incluir al menos 3–4 - Uso de expresión</p><p class="pdf-source-line">diálogos cortos entre corporal y vocal.</p><p class="pdf-source-line">Cierre - Presentar cada escena Espacio para Rúbrica rápida:</p><p class="pdf-source-line">frente al grupo. presentación.</p><p class="pdf-source-line">- Después de cada claro.</p><p class="pdf-source-line">brevemente el mensaje de - Coherencia entre</p><p class="pdf-source-line">la historia y cómo se historia y diálogos.</p><p class="pdf-source-line">escuela o comunidad. - Expresividad y</p><p class="pdf-source-line">- Retroalimentación grupal grupal.</p><p class="pdf-source-line">Aspectos a evaluar Con Satisfactorio Excelente</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 101 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	101</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 101</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-desplazamiento por el
-área a presenta
-Ensayar la pieza
-cuidando coordinación,
-ritmo y mensaje
-Cierre 	Presentar cada
-ensamble frente al
-grupo como ensayo de
-presentación pública.
-.
-Reflexión final sobre
-como la música puede
-impactar en la mejora
-de la comunidad
-escolar
-Espacio para
-la
-presentación.
-Equipo de
-sonido
-Rúbrica
-Retroalimentación
-breve de manera
-grupal sobre la
-interpretación
-sugerencia de evaluación formativa
-Aspectos para evaluar 	Con debilidad 	Satisfactorio 	Excelente
-Participación en clase
-Trabajo en equipo
-Integración en la actividad
-Comprensión de las
-secuencias sonoras
-
-
+<h3 class="pdf-section-title">Orientaciones didácticas de la quinta fase</h3>
+<h3 class="pdf-section-title">Orientación didáctica de de música de la quinta fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 101" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="4">Contenido nacional</th></tr><tr><td colspan="4">Creación de narrativas a partir de acontecimientos relevantes de la comunidad, empleando recursos literarios, visuales, corporales y sonoros.</td></tr><tr><td colspan="4">Contenido estatal de música</td></tr><tr><td colspan="4">Crea polirritmias para el acompañamiento musical</td></tr><tr><td colspan="4">PDA 5</td></tr><tr><td colspan="4">Combinación de secuencias sonoras a partir de narrativas de historias y leyendas leídas o escuchadas</td></tr><tr><td colspan="4">Orientación didáctica</td></tr><tr><td>Momento</td><td>Actividad</td><td>Materiales</td><td>Estrategias de evaluación</td></tr><tr><td>Inicio</td><td>Observar diversos</td><td>Bocinas, reproductor de sonido, videos relacionados y proyector. Pizarra, plumones</td><td>Observación directa Lista de cotejo</td></tr><tr><td colspan="4">videos donde se realiza</td></tr><tr><td colspan="4">flasmoob y comentar</td></tr><tr><td colspan="4">en que consiste.</td></tr><tr><td colspan="4">Dialogar sobre su</td></tr><tr><td colspan="4">implementación en la</td></tr><tr><td colspan="4">comunidad escolar</td></tr><tr><td colspan="4">durante algún festejo,</td></tr><tr><td colspan="4">recreo o actividad</td></tr><tr><td colspan="4">cívica.</td></tr><tr><td colspan="4">Abordar también la</td></tr><tr><td colspan="4">ejecución de batucadas</td></tr><tr><td colspan="4">donde los participantes</td></tr><tr><td colspan="4">desarrollan distintos</td></tr><tr><td colspan="4">ritmos</td></tr><tr><td>Desarrollo</td><td>Formar pequeños</td><td>Garrafones de agua Baquetas, cinta</td><td>Lista de cotejo:</td></tr><tr><td colspan="4">grupos; crear o adaptar</td></tr><tr><td colspan="4">diversos ritmos para</td></tr><tr><td colspan="4">cada grupo.</td></tr><tr><td colspan="4">Utilizar y adaptar</td></tr><tr><td colspan="4">garrafones de agua</td></tr><tr><td colspan="4">vacíos para producir</td></tr><tr><td colspan="4">sonido</td></tr><tr><td colspan="4">Crear una secuencia</td></tr><tr><td colspan="4">de movimientos y</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Inicio Observar diversos Bocinas, Observación directa</p><p class="pdf-source-line">videos donde se realiza reproductor Lista de cotejo</p><p class="pdf-source-line">flasmoob y comentar de sonido,</p><p class="pdf-source-line">en que consiste. videos</p><p class="pdf-source-line">Dialogar sobre su relacionados</p><p class="pdf-source-line">implementación en la y proyector.</p><p class="pdf-source-line">comunidad escolar Pizarra,</p><p class="pdf-source-line">durante algún festejo, plumones</p><p class="pdf-source-line">Desarrollo Formar pequeños Garrafones Lista de cotejo:</p><p class="pdf-source-line">grupos; crear o adaptar de agua</p><p class="pdf-source-line">diversos ritmos para Baquetas,</p><p class="pdf-source-line">cada grupo. cinta</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 102 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	102</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 102</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Orientación didáctica de de danza de la quinta fase
-Contenido nacional
-Apropiación e intervención artística en el espacio comunitario
-Contenido estatal de danza
-Construcción colectiva de una representación dancística integrando elementos de la
-cultura local, regional o nacional.
-PDA 5
-Planteamiento de propuestas creativas de bailes o danzas para la atención y/o solución
-de necesidades del espacio comunitario mediante su identificación y socialización.
-### Orientación didáctica de danza
-Secuencia de actividades
-Momento 	Actividad 	Materiales 	Estrategia 	de
-evaluación formativa
-Inicio 	Inicia 	con 	una
-breve charla sobre
-la importancia del
-arte 	en 	la
-comunidad y como
-puede transformar
-espacios y vidas.
-Muestra imágenes
-o 	videos 	de
-intervenciones
-artísticas 	en
-espacios 	públicos
-que hayan tenido
-un 	impacto
-positivo.
-Reproductor
-audiovisual
-Videos
-Bocinas
-Observación directa
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 102" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="4">desplazamiento por el</td></tr><tr><td colspan="4">área a presenta</td></tr><tr><td colspan="4">Ensayar la pieza</td></tr><tr><td colspan="4">cuidando coordinación,</td></tr><tr><td colspan="4">ritmo y mensaje</td></tr><tr><td>Cierre</td><td>Presentar cada</td><td>Espacio para la presentación. Equipo de sonido</td><td>Rúbrica Retroalimentación breve de manera grupal sobre la interpretación</td></tr><tr><td colspan="4">ensamble frente al</td></tr><tr><td colspan="4">grupo como ensayo de</td></tr><tr><td colspan="4">presentación pública.</td></tr><tr><td colspan="4">.</td></tr><tr><td colspan="4">Reflexión final sobre</td></tr><tr><td colspan="4">como la música puede</td></tr><tr><td colspan="4">impactar en la mejora</td></tr><tr><td colspan="4">de la comunidad</td></tr><tr><td colspan="4">escolar</td></tr><tr><td colspan="4">sugerencia de evaluación formativa</td></tr><tr><td>Aspectos para evaluar</td><td>Con debilidad</td><td>Satisfactorio</td><td>Excelente</td></tr><tr><td colspan="4">Participación en clase</td></tr><tr><td colspan="4">Trabajo en equipo</td></tr><tr><td colspan="4">Integración en la actividad</td></tr><tr><td colspan="4">Comprensión de las secuencias sonoras</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Cierre Presentar cada Espacio para Rúbrica</p><p class="pdf-source-line">ensamble frente al la</p><p class="pdf-source-line">grupo como ensayo de presentación. Retroalimentación</p><p class="pdf-source-line">presentación pública. Equipo de breve de manera</p><p class="pdf-source-line">. sonido grupal sobre la</p><p class="pdf-source-line">Reflexión final sobre interpretación</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 103 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	103</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 103</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Desarrollo 	Integra 	equipos
-para 	que 	los
-alumnos
-identifiquen
-necesidades 	e
-intereses 	de 	su
-comunidad
-relacionados 	con
-el arte y el espacio
-público.
-Cada 	equipo
-selecciona 	una
-problemática 	o
-interés social, por
-ejem: 	falta 	de
-espacios 	de
-recreación,
-necesidades 	de
-expresar
-sentimientos,
-promover 	la
-cultura local.
-Posteriormente,
-diseñan 	una
-propuesta creativa
-de 	intervención
-artística como un
-baile o danza, que
-pueda 	ayudar 	a
-socializar 	o
-solucionar 	esa
-necesidad.
-Espacio 	para
-ensayo 	y
-exposición,
-Reproductor 	de
-### música
-Distintos tipos de
-### música
-Rúbrica.
-Preguntas abiertas.
-Observación 	de
-participaciones 	en
-equipos
-Cierre 	Cada 	equipo
-presenta 	su
-propuesta 	de
-intervención
-artística,
-Retroalimentación breve
-de manera grupal sobre
-la interpretación
-
-
+<h3 class="pdf-section-title">Orientación didáctica de de danza de la quinta fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 103" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="5">Contenido nacional</th></tr><tr><td colspan="5">Apropiación e intervención artística en el espacio comunitario</td></tr><tr><td colspan="5">Contenido estatal de danza</td></tr><tr><td colspan="5">Construcción colectiva de una representación dancística integrando elementos de la cultura local, regional o nacional.</td></tr><tr><td colspan="5">PDA 5</td></tr><tr><td colspan="5">Planteamiento de propuestas creativas de bailes o danzas para la atención y/o solución de necesidades del espacio comunitario mediante su identificación y socialización.</td></tr><tr><td colspan="5">Orientación didáctica de danza</td></tr><tr><td colspan="5">Secuencia de actividades</td></tr><tr><td>Momento</td><td>Actividad</td><td>Materiales</td><td>Estrategia de</td><td></td></tr><tr><td colspan="5">evaluación formativa</td></tr><tr><td>Inicio</td><td>Inicia con una</td><td>Reproductor audiovisual Videos Bocinas</td><td>Observación directa</td><td>Observación directa</td></tr><tr><td colspan="5">breve charla sobre</td></tr><tr><td colspan="5">la importancia del</td></tr><tr><td colspan="5">arte en la</td></tr><tr><td colspan="5">comunidad y como</td></tr><tr><td colspan="5">puede transformar</td></tr><tr><td colspan="5">espacios y vidas.</td></tr><tr><td colspan="5">Muestra imágenes</td></tr><tr><td colspan="5">o videos de</td></tr><tr><td colspan="5">intervenciones</td></tr><tr><td colspan="5">artísticas en</td></tr><tr><td colspan="5">espacios públicos</td></tr><tr><td colspan="5">que hayan tenido</td></tr><tr><td colspan="5">un impacto</td></tr><tr><td colspan="5">positivo.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Inicio Inicia con una Reproductor Observación directa</p><p class="pdf-source-line">breve charla sobre audiovisual</p><p class="pdf-source-line">la importancia del Videos</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 104 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	104</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 104</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-explicando 	cómo
-su baile o danza
-puede contribuir a
-mejorar 	o
-socializar 	la
-problemática
-identificada.
-Reflexión 	grupal
-sobre 	la
-importancia de la
-creatividad 	y 	el
-arte 	en 	la
-transformación
-social 	y
-comunitaria.
-Sugerencia de evalución formativa
-Aspectos para
-evaluar
-Con debilidad 	Satisfactorio 	Excelente
-Evalúa la
-participación y
-colaborativa de los
-estudiantes durante
-las actividades.
-Considera la
-creatividad y
-pertinencia de las
-propuestas de
-intervención
-artística.
-Valora la capacidad
-de los alumnos
-para identificar
-necesidades
-sociales y proponer
-soluciones
-mediante el arte.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 104" tabindex="0"><table class="pdf-table"><tbody><tr><th>Desarrollo</th><th>Integra equipos</th><th>Espacio para ensayo y exposición, Reproductor de música Distintos tipos de música</th><th>Rúbrica. Preguntas abiertas. Observación de participaciones en equipos</th></tr><tr><td colspan="4">para que los</td></tr><tr><td colspan="4">alumnos</td></tr><tr><td colspan="4">identifiquen</td></tr><tr><td colspan="4">necesidades e</td></tr><tr><td colspan="4">intereses de su</td></tr><tr><td colspan="4">comunidad</td></tr><tr><td colspan="4">relacionados con</td></tr><tr><td colspan="4">el arte y el espacio</td></tr><tr><td colspan="4">público.</td></tr><tr><td colspan="4">Cada equipo</td></tr><tr><td colspan="4">selecciona una</td></tr><tr><td colspan="4">problemática o</td></tr><tr><td colspan="4">interés social, por</td></tr><tr><td colspan="4">ejem: falta de</td></tr><tr><td colspan="4">espacios de</td></tr><tr><td colspan="4">recreación,</td></tr><tr><td colspan="4">necesidades de</td></tr><tr><td colspan="4">expresar</td></tr><tr><td colspan="4">sentimientos,</td></tr><tr><td colspan="4">promover la</td></tr><tr><td colspan="4">cultura local.</td></tr><tr><td colspan="4">Posteriormente,</td></tr><tr><td colspan="4">diseñan una</td></tr><tr><td colspan="4">propuesta creativa</td></tr><tr><td colspan="4">de intervención</td></tr><tr><td colspan="4">artística como un</td></tr><tr><td colspan="4">baile o danza, que</td></tr><tr><td colspan="4">pueda ayudar a</td></tr><tr><td colspan="4">socializar o</td></tr><tr><td colspan="4">solucionar esa</td></tr><tr><td colspan="4">necesidad.</td></tr><tr><td>Cierre</td><td>Cada equipo</td><td>Retroalimentación breve de manera grupal sobre la interpretación</td><td></td></tr><tr><td colspan="4">presenta su</td></tr><tr><td colspan="4">propuesta de</td></tr><tr><td colspan="4">intervención</td></tr><tr><td colspan="4">artística,</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Desarrollo Integra equipos Espacio para Rúbrica.</p><p class="pdf-source-line">para que los ensayo y</p><p class="pdf-source-line">alumnos exposición,</p><p class="pdf-source-line">identifiquen Preguntas abiertas.</p><p class="pdf-source-line">comunidad Distintos tipos de Observación de</p><p class="pdf-source-line">relacionados con música participaciones en</p><p class="pdf-source-line">el arte y el espacio equipos</p><p class="pdf-source-line">presenta su de manera grupal sobre</p><p class="pdf-source-line">propuesta de la interpretación</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 105 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	105</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 105</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Orientación didáctica de de Artes visuales de la quinta fase
-Contenido nacional
-Combinación de la realidad y la ficción en elementos simbólicos de las
-manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia
-Contenido estatal de artes visuales
-Creación de una obra bidimensional o tridimensional a partir de elementos de su
-entorno que hagan referencia a sucesos relevantes de su comunidad.
-PDA 5 °
-Combinación intencional de formas, colores y texturas para recreación bidimensional
-de elementos simbólicos de identidad y pertenencia.
-Orientación didáctica
-Secuencia de actividades
-Momento 	Actividad 	Materiales 	Estrategia de
-evaluación formativa
-Inicio 	Inicia con una
-breve charla sobre
-como en las
-manifestaciones
-culturales
-mexicanas, se
-mezclan la
-realidad y la
-ficción para contar
-historias, expresar
-tradiciones y
-fortalecer la
-identidad.
-Muestra imágenes
-o videos para que
-observen algunos
-ejemplos.
-Pregunta
-generadora:
-Reproductor
-audiovisual
-Videos
-Bocinas
-Observación directa
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 105" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="4">explicando cómo</td></tr><tr><td colspan="4">su baile o danza</td></tr><tr><td colspan="4">puede contribuir a</td></tr><tr><td colspan="4">mejorar o</td></tr><tr><td colspan="4">socializar la</td></tr><tr><td colspan="4">problemática</td></tr><tr><td colspan="4">identificada.</td></tr><tr><td colspan="4">Reflexión grupal</td></tr><tr><td colspan="4">sobre la</td></tr><tr><td colspan="4">importancia de la</td></tr><tr><td colspan="4">creatividad y el</td></tr><tr><td colspan="4">arte en la</td></tr><tr><td colspan="4">transformación</td></tr><tr><td colspan="4">social y</td></tr><tr><td colspan="4">comunitaria.</td></tr><tr><td colspan="4">Sugerencia de evalución formativa</td></tr><tr><td>Aspectos para evaluar</td><td>Con debilidad</td><td>Satisfactorio</td><td>Excelente</td></tr><tr><td colspan="4">Evalúa la participación y colaborativa de los estudiantes durante las actividades.</td></tr><tr><td colspan="4">Considera la creatividad y pertinencia de las propuestas de intervención artística.</td></tr><tr><td colspan="4">Valora la capacidad de los alumnos para identificar necesidades sociales y proponer soluciones mediante el arte.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Aspectos para Con debilidad Satisfactorio Excelente</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 106 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	106</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 106</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-De qué manera
-las tradiciones
-combinan hechos
-reales con
-elementos de
-fantasía.
-Dinámica Rápida:
-Pide a a los
-alumnos que
-compartan alguna
-tradición o
-elementos cultural
-de su comunidad
-que tenga
-símbolos o
-elementos que
-parezcan
-fantásticos o
-exagerados y que
-expliquen que
-representan.
-Desarrollo 	En equipos los
-alumnos
-diseñarán una
-obra
-bidimensional con
-imágenes de ele
-elementos que
-expresen su
-cultura
-Cartulina
-Plumones
-Colores
-Lista de cotejo
-Cierre 	Cada grupo
-presenta su
-producción visual
-y comparte con
-sus compañeros
-como vivió el
-proceso
-Espacio para la
-exposición
-Rubrica
-Preguntas abiertas.
-Observación de
-participaciones de
-equipos
-
-
+<h3 class="pdf-section-title">Orientación didáctica de de Artes visuales de la quinta fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 106" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="5">Contenido nacional</th></tr><tr><td colspan="5">Combinación de la realidad y la ficción en elementos simbólicos de las manifestaciones culturales y artísticas, que dan identidad y sentido de pertenencia</td></tr><tr><td colspan="5">Contenido estatal de artes visuales</td></tr><tr><td colspan="5">Creación de una obra bidimensional o tridimensional a partir de elementos de su entorno que hagan referencia a sucesos relevantes de su comunidad.</td></tr><tr><td colspan="5">PDA 5 °</td></tr><tr><td colspan="5">Combinación intencional de formas, colores y texturas para recreación bidimensional de elementos simbólicos de identidad y pertenencia.</td></tr><tr><td colspan="5">Orientación didáctica</td></tr><tr><td colspan="5">Secuencia de actividades</td></tr><tr><td>Momento</td><td>Actividad</td><td>Materiales</td><td>Estrategia de</td><td></td></tr><tr><td colspan="5">evaluación formativa</td></tr><tr><td>Inicio</td><td>Inicia con una</td><td>Reproductor audiovisual Videos Bocinas</td><td>Observación directa</td><td>Observación directa</td></tr><tr><td colspan="5">breve charla sobre</td></tr><tr><td colspan="5">como en las</td></tr><tr><td colspan="5">manifestaciones</td></tr><tr><td colspan="5">culturales</td></tr><tr><td colspan="5">mexicanas, se</td></tr><tr><td colspan="5">mezclan la</td></tr><tr><td colspan="5">realidad y la</td></tr><tr><td colspan="5">ficción para contar</td></tr><tr><td colspan="5">historias, expresar</td></tr><tr><td colspan="5">tradiciones y</td></tr><tr><td colspan="5">fortalecer la</td></tr><tr><td colspan="5">identidad.</td></tr><tr><td colspan="5">Muestra imágenes</td></tr><tr><td colspan="5">o videos para que</td></tr><tr><td colspan="5">observen algunos</td></tr><tr><td colspan="5">ejemplos.</td></tr><tr><td colspan="5">Pregunta</td></tr><tr><td colspan="5">generadora:</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Inicio Inicia con una Reproductor Observación directa</p><p class="pdf-source-line">breve charla sobre audiovisual</p><p class="pdf-source-line">como en las Videos</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 107 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	107</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 107</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Sugerencia de evalución formativa
-Aspectos para
-evaluar
-Con debilidad 	Muy bien 	Excelente
-Participación y
-colaborativa en el
-trabajo en equipo.
-Valoración del
-patrimonio
-mexicano y su
-papel en la
-identidad y sentido
-de pertenencia.
-Creatividad y
-originalidad en la
-obra artística.
-Presentación
-donde expliquen su
-obra
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 107" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="5">De qué manera</td></tr><tr><td colspan="5">las tradiciones</td></tr><tr><td colspan="5">combinan hechos</td></tr><tr><td colspan="5">reales con</td></tr><tr><td colspan="5">elementos de</td></tr><tr><td colspan="5">fantasía.</td></tr><tr><td colspan="5">Dinámica Rápida:</td></tr><tr><td colspan="5">Pide a a los</td></tr><tr><td colspan="5">alumnos que</td></tr><tr><td colspan="5">compartan alguna</td></tr><tr><td colspan="5">tradición o</td></tr><tr><td colspan="5">elementos cultural</td></tr><tr><td colspan="5">de su comunidad</td></tr><tr><td colspan="5">que tenga</td></tr><tr><td colspan="5">símbolos o</td></tr><tr><td colspan="5">elementos que</td></tr><tr><td colspan="5">parezcan</td></tr><tr><td colspan="5">fantásticos o</td></tr><tr><td colspan="5">exagerados y que</td></tr><tr><td colspan="5">expliquen que</td></tr><tr><td colspan="5">representan.</td></tr><tr><td>Desarrollo</td><td>En equipos los</td><td>Cartulina Plumones Colores</td><td>Lista de cotejo</td><td></td></tr><tr><td colspan="5">alumnos</td></tr><tr><td colspan="5">diseñarán una</td></tr><tr><td colspan="5">obra</td></tr><tr><td colspan="5">bidimensional con</td></tr><tr><td colspan="5">imágenes de ele</td></tr><tr><td colspan="5">elementos que</td></tr><tr><td colspan="5">expresen su</td></tr><tr><td colspan="5">cultura</td></tr><tr><td>Cierre</td><td>Cada grupo presenta su producción visual y comparte con sus compañeros como vivió el proceso</td><td>Cada grupo</td><td>Espacio para la</td><td>Rubrica Preguntas abiertas. Observación de participaciones de equipos</td></tr><tr><td>presenta su</td><td>exposición</td><td></td><td></td><td></td></tr><tr><td colspan="5">producción visual</td></tr><tr><td colspan="5">y comparte con</td></tr><tr><td colspan="5">sus compañeros</td></tr><tr><td colspan="5">como vivió el</td></tr><tr><td colspan="5">proceso</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Desarrollo En equipos los Cartulina Lista de cotejo</p><p class="pdf-source-line">alumnos Plumones</p><p class="pdf-source-line">diseñarán una Colores</p><p class="pdf-source-line">Cierre Cada grupo Espacio para la Rubrica</p><p class="pdf-source-line">producción visual Preguntas abiertas.</p><p class="pdf-source-line">sus compañeros Observación de</p><p class="pdf-source-line">como vivió el participaciones de</p><p class="pdf-source-line">proceso equipos</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 108 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	108</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 108</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Orientación didáctica de de Teatro de la quinta fase
-Contenido nacional
-Lectura y análisis de mitos y leyendas, para su disfrute y valoración
-Contenido estatal de teatro
-Elaboración y acondicionamiento del escenario para ambientar una puesta en
-escena.
-PDA 5
-• 	Investigación 	de 	mitos 	y 	leyendas 	de 	la 	comunidad 	y 	de 	México 	para
-identificación de características y escenificación de uno de interés frente a un
-público.
-### Orientación didáctica de teatro
-Secuencia de actividades
-Momento 	Actividad 	Materiales 	Estrategia 	de
-evaluación formativa
-Saludo inicial
-En lluvia de ideas
-cuestionar 	a 	los
-alumnos sobre su
-conocimiento 	de
-los 	mitos,
-leyendas 	y 	sus
-características.
-Comentar que en
-la 	presente 	clase
-investigarán 	los
-mitos 	y 	leyendas
-de 	México 	e
-iniciarán 	el
-montaje 	del 	que
-decidan
-escenificar.
-Proyector,
-impresiones 	de
-mitos 	y 	leyendas
-de 	México,
-pizarra, plumones.
-Bocina,
-reproductor 	de
-sonido
-Observación directa
-Desarrollo 	En equipos, leer y
-analizar 	diversos
-mitos y leyendas,
-identificando 	sus
-características,
-Textos de mitos y
-leyendas
-Lista de cotejo
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 108" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="4">Sugerencia de evalución formativa</td></tr><tr><td>Aspectos para evaluar</td><td>Con debilidad</td><td>Muy bien</td><td>Excelente</td></tr><tr><td colspan="4">Participación y colaborativa en el trabajo en equipo.</td></tr><tr><td colspan="4">Valoración del patrimonio mexicano y su papel en la identidad y sentido de pertenencia.</td></tr><tr><td colspan="4">Creatividad y originalidad en la obra artística.</td></tr><tr><td colspan="4">Presentación donde expliquen su obra</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Aspectos para Con debilidad Muy bien Excelente</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 109 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	109</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 109</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-funciones, 	y
-elementos 	de
-realidad y fantasía
-Elaborar un guion
-breve 	con
-personajes,
-acciones 	y
-desplazamiento
-en el escenario,
-Realizar 	lista 	de
-utilería
-escenográfica,
-vestuario 	y
-### música.
-Cuaderno, 	hojas
-blancas, 	lápices,
-bolígrafos.
-Cierre 	En 	equipo,
-presentar 	el
-avance 	del
-montaje 	de 	los
-mitos y/o leyendas
-frente al grupo.
-Posterior 	a 	las
-participaciones,
-solicitar 	que
-reflexionen 	sobre
-lo aprendido y qué
-les 	gustó 	de 	la
-escenificación
-Espacio 	para
-ensayo 	y
-exposición,
-Reproductor 	de
-### música
-Distintos tipos de
-### música
-Rúbrica.
-Preguntas abiertas.
-Observación 	de
-participaciones 	en
-equipos
-
-
+<h3 class="pdf-section-title">Orientación didáctica de de Teatro de la quinta fase</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 109" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="5">Contenido nacional</th></tr><tr><td colspan="5">Lectura y análisis de mitos y leyendas, para su disfrute y valoración</td></tr><tr><td colspan="5">Contenido estatal de teatro</td></tr><tr><td colspan="5">Elaboración y acondicionamiento del escenario para ambientar una puesta en escena.</td></tr><tr><td colspan="5">PDA 5</td></tr><tr><td colspan="5">• Investigación de mitos y leyendas de la comunidad y de México para identificación de características y escenificación de uno de interés frente a un público.</td></tr><tr><td colspan="5">Orientación didáctica de teatro</td></tr><tr><td colspan="5">Secuencia de actividades</td></tr><tr><td>Momento</td><td>Actividad</td><td>Materiales</td><td>Estrategia de</td><td></td></tr><tr><td colspan="5">evaluación formativa</td></tr><tr><td>Saludo inicial En lluvia de ideas cuestionar a los alumnos sobre su conocimiento de los mitos, leyendas y sus características. Comentar que en la presente clase investigarán los mitos y leyendas de México e iniciarán el montaje del que decidan escenificar.</td><td>Proyector,</td><td>Observación directa</td><td>Observación directa</td><td></td></tr><tr><td colspan="5">impresiones de</td></tr><tr><td colspan="5">mitos y leyendas</td></tr><tr><td colspan="5">de México,</td></tr><tr><td colspan="5">pizarra, plumones.</td></tr><tr><td colspan="5">Bocina,</td></tr><tr><td colspan="5">reproductor de</td></tr><tr><td colspan="5">sonido</td></tr><tr><td>Desarrollo</td><td>En equipos, leer y</td><td>Textos de mitos y leyendas</td><td>Textos de mitos y</td><td>Lista de cotejo</td></tr><tr><td>analizar diversos</td><td>leyendas</td><td></td><td></td><td></td></tr><tr><td colspan="5">mitos y leyendas,</td></tr><tr><td colspan="5">identificando sus</td></tr><tr><td colspan="5">características,</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Saludo inicial Proyector, Observación directa</p><p class="pdf-source-line">los mitos, Bocina,</p><p class="pdf-source-line">leyendas y sus reproductor de</p><p class="pdf-source-line">características. sonido</p><p class="pdf-source-line">Desarrollo En equipos, leer y Textos de mitos y Lista de cotejo</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 110 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	110</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 110</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Sugerencia de evalución formativa
-Aspectos para
-evaluar
-Con debilidad 	Muy bien 	Excelente
-Comprensión 	de
-características tiene
-el 	mito 	o 	leyenda
-que investigaste
-Cómo se relaciona
-el 	mito 	o 	leyenda
-con la realidad y la
-fantasía
-Escenificación 	de
-tus compañeros
-Participación 	y 	el
-entusiasmo 	de 	los
-estudiantes durante
-la 	investigación,
-análisis 	y
-escenificación
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 110" tabindex="0"><table class="pdf-table"><tbody><tr><th colspan="5">funciones, y elementos de realidad y fantasía Elaborar un guion breve con personajes, acciones y desplazamiento en el escenario, Realizar lista de utilería escenográfica, vestuario y música.</th></tr><tr><td colspan="5">Cuaderno, hojas</td></tr><tr><td colspan="5">blancas, lápices,</td></tr><tr><td colspan="5">bolígrafos.</td></tr><tr><td>Cierre</td><td>En equipo,</td><td>Espacio para ensayo y exposición, Reproductor de música Distintos tipos de música</td><td>Espacio para</td><td>Rúbrica. Preguntas abiertas. Observación de participaciones en equipos</td></tr><tr><td>presentar el</td><td>ensayo y</td><td></td><td></td><td></td></tr><tr><td>avance del</td><td>exposición,</td><td></td><td></td><td></td></tr><tr><td colspan="5">montaje de los</td></tr><tr><td colspan="5">Reproductor de</td></tr><tr><td colspan="5">mitos y/o leyendas</td></tr><tr><td colspan="5">música</td></tr><tr><td colspan="5">frente al grupo.</td></tr><tr><td colspan="5">Distintos tipos de</td></tr><tr><td colspan="5">música</td></tr><tr><td colspan="5">Posterior a las</td></tr><tr><td colspan="5">participaciones,</td></tr><tr><td colspan="5">solicitar que</td></tr><tr><td colspan="5">reflexionen sobre</td></tr><tr><td colspan="5">lo aprendido y qué</td></tr><tr><td colspan="5">les gustó de la</td></tr><tr><td colspan="5">escenificación</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">desplazamiento Cuaderno, hojas</p><p class="pdf-source-line">en el escenario, blancas, lápices,</p><p class="pdf-source-line">Cierre En equipo, Espacio para Rúbrica.</p><p class="pdf-source-line">montaje de los Preguntas abiertas.</p><p class="pdf-source-line">Distintos tipos de Observación de</p><p class="pdf-source-line">música participaciones en</p><p class="pdf-source-line">Posterior a las equipos</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 111 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	111</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 111</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-### Relación de actividades y proyectos de los libros de la Nueva Escuela Mexicana
-Libros múltiples lenguajes
-Múltiples lenguajes 1° grado
-Página Nombre de la
-Actividad
-Lenguaje
-Artístico
-Campos
-Formativos Ejes Articuladores
-8 	Alebrijes
-Artes
-visuales
-Lenguaje. De lo
-humano y lo
-comunitario.
-Interculturalidad crítica. Apropiación de
-las culturas a través de la lectura y la
-escritura.
-32
-El ojo que
-piensa.
-Artes
-visuales 	Lenguajes.
-Pensamiento crítico. Apropiación de las
-culturas a través de la lectura y la
-escritura.
-44
-Se buscan
-flores.
-Artes
-visuales
-Lenguaje. Ética,
-naturaleza y
-sociedades.
-Apropiación de las culturas a través de
-la lectura y la escritura. Artes y
-experiencias estéticas
-50
-Formas de
-libertad 	Danza
-Lenguajes. De lo
-humano y lo
-comunitario.
-Apropiación de las culturas a través de
-la lectura y la escritura. Artes y
-experiencias estéticas
-74
-Texturas
-visuales
-Artes
-visuales
-Ética, naturaleza y
-sociedades.
-Interculturalidad crítica. Artes y
-experiencias estéticas.
-78
-Reta de
-ritmos y
-colores. 	Música
-Lenguaje. De lo
-humano y lo
-comunitario. 	Artes y experiencias estéticas.
-88
-Gigantes y
-fantasmas
-Artes
-visuales
-Lenguaje. De lo
-humano y lo
-comunitario.
-Pensamiento crítico. Artes y
-experiencias estéticas.
-96
-Pintura de
-Roger von
-Guten
-Artes
-visuales 	Lenguaje.
-Apropiación de las culturas a través de
-la lectura y la escritura. Artes y
-experiencias estéticas
-100
-El origen de
-las letras
-Artes
-visuales
-Lenguaje. De lo
-humano y lo
-comunitario.
-Pensamiento crítico. Apropiación de las
-culturas a través de la lectura y la
-escritura. Artes y experiencias estéticas.
-146
-Y tú, ¿que
-ves?
-Artes
-visuales 	Lenguaje.
-Pensamiento crítico. Artes y
-experiencias estéticas.
-56 	Partituras 	Música
-Lenguaje. De lo
-humano y lo
-comunitario.
-Apropiación de las culturas a través de
-la lectura y la escritura. Artes y
-experiencias estéticas
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 111" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="4">Sugerencia de evalución formativa</td></tr><tr><td>Aspectos para evaluar</td><td>Con debilidad</td><td>Muy bien</td><td>Excelente</td></tr><tr><td colspan="4">Comprensión de características tiene el mito o leyenda que investigaste</td></tr><tr><td colspan="4">Cómo se relaciona el mito o leyenda con la realidad y la fantasía</td></tr><tr><td colspan="4">Escenificación de tus compañeros</td></tr><tr><td colspan="4">Participación y el entusiasmo de los estudiantes durante la investigación, análisis y escenificación</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Aspectos para Con debilidad Muy bien Excelente</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 112 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	112</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 112</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Múltiples lenguajes 2° grado
-Página Nombre de la
-Actividad
-Lenguaje
-Artístico Campos Formativos 	Ejes Articuladores
-32
-Análisis de la
-pintura de Román
-Andrade LLaguno.
-Artes
-visuales
-Lenguajes. De lo
-humano y lo
-comunitario.
-Apropiación de las culturas a
-través de la lectura y la
-escritura. Artes y experiencias
-estéticas.
-68 	¡Yo estuve aquí!
-Artes
-visuales
-Lenguajes. De lo
-humano y lo
-comunitario. Ética,
-naturaleza y
-sociedades.
-Interculturalidad crítica.
-Apropiación de las culturas a
-través de la lectura y la
-escritura.
-84 	Música salvaje 	Música
-Lenguajes. De lo
-humano y lo
-comunitario. Ética,
-naturaleza y
-sociedades.
-Interculturalidad crítica. Artes y
-experiencias estéticas.
-98 	Pareidolia
-Artes
-visuales
-De lo humano y lo
-comunitario.
-Apropiación de las culturas a
-través de la lectura y la
-escritura. Artes y experiencias
-estéticas.
-108
-Texturas visuales
-frutas
-Artes
-visuales
-Ética, naturaleza y
-sociedades. 	Artes y experiencias estéticas.
-184
-Pregúntale a
-las rocas
-Artes
-visuales
-De lo humano y lo
-comunitario. 	Interculturalidad crítica.
-196
-Pintura de
-Jaime
-Lupercio
-Artes
-visuales,
-### Teatro
-Lenguaje. De lo
-humano y lo
-comunitario
-Apropiación de las culturas a través de
-la lectura y la escritura. Artesy
-experiencias estéticas.
-204
-El paso a paso
-del baile 	Danza
-De lo humano y lo
-comunitario.
-Vida saludable. Artes y experiencias
-estéticas.
-214
-Seamos
-silvestres 	Danza
-De lo humano y lo
-comunitario.
-Apropiación de las culturas a través de
-la lectura y la escritura.
-224
-### Música en
-todas partes 	Música
-Lenguaje. De lo
-humano y lo
-comunitario. 	Artes y experiencias estéticas.
-234 	El salterio 	Música
-Lenguaje. De lo
-humano y lo
-comunitario. 	Artes y experiencias estéticas.
-
-
+<h3 class="pdf-section-title">Relación de actividades y proyectos de los libros de la Nueva Escuela Mexicana</h3>
+<p class="pdf-source-line">Libros múltiples lenguajes</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 112" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="5">Múltiples lenguajes 1° grado</td></tr><tr><td></td><td>Nombre de la</td><td>Lenguaje</td><td>Campos</td><td></td></tr><tr><td>Página</td><td></td><td></td><td></td><td>Ejes Articuladores</td></tr><tr><td></td><td>Actividad</td><td>Artístico</td><td>Formativos</td><td></td></tr><tr><td>8</td><td>Alebrijes</td><td>Artes visuales</td><td>Lenguaje. De lo humano y lo comunitario.</td><td>Interculturalidad crítica. Apropiación de las culturas a través de la lectura y la escritura.</td></tr><tr><td>32</td><td>El ojo que piensa.</td><td>Artes visuales</td><td>Lenguajes.</td><td>Pensamiento crítico. Apropiación de las culturas a través de la lectura y la escritura.</td></tr><tr><td>44</td><td>Se buscan flores.</td><td>Artes visuales</td><td>Lenguaje. Ética, naturaleza y sociedades.</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas</td></tr><tr><td>50</td><td>Formas de libertad</td><td>Danza</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas</td></tr><tr><td>74</td><td>Texturas visuales</td><td>Artes visuales</td><td>Ética, naturaleza y sociedades.</td><td>Interculturalidad crítica. Artes y experiencias estéticas.</td></tr><tr><td>78</td><td>Reta de ritmos y colores.</td><td>Música</td><td>Lenguaje. De lo humano y lo comunitario.</td><td>Artes y experiencias estéticas.</td></tr><tr><td>88</td><td>Gigantes y fantasmas</td><td>Artes visuales</td><td>Lenguaje. De lo humano y lo comunitario.</td><td>Pensamiento crítico. Artes y experiencias estéticas.</td></tr><tr><td>96</td><td>Pintura de Roger von Guten</td><td>Artes visuales</td><td>Lenguaje.</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas</td></tr><tr><td>100</td><td>El origen de las letras</td><td>Artes visuales</td><td>Lenguaje. De lo humano y lo comunitario.</td><td>Pensamiento crítico. Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas.</td></tr><tr><td>146</td><td>Y tú, ¿que ves?</td><td>Artes visuales</td><td>Lenguaje.</td><td>Pensamiento crítico. Artes y experiencias estéticas.</td></tr><tr><td>56</td><td>Partituras</td><td>Música</td><td>Lenguaje. De lo humano y lo comunitario.</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Lenguaje. De lo Interculturalidad crítica. Apropiación de</p><p class="pdf-source-line">Artes humano y lo las culturas a través de la lectura y la</p><p class="pdf-source-line">8 Alebrijes visuales comunitario. escritura.</p><p class="pdf-source-line">El ojo que Artes culturas a través de la lectura y la</p><p class="pdf-source-line">32 piensa. visuales Lenguajes. escritura.</p><p class="pdf-source-line">Lenguaje. Ética, Apropiación de las culturas a través de</p><p class="pdf-source-line">Se buscan Artes naturaleza y la lectura y la escritura. Artes y</p><p class="pdf-source-line">44 flores. visuales sociedades. experiencias estéticas</p><p class="pdf-source-line">Lenguajes. De lo Apropiación de las culturas a través de</p><p class="pdf-source-line">Formas de humano y lo la lectura y la escritura. Artes y</p><p class="pdf-source-line">50 libertad Danza comunitario. experiencias estéticas</p><p class="pdf-source-line">Texturas Artes Ética, naturaleza y Interculturalidad crítica. Artes y</p><p class="pdf-source-line">74 visuales visuales sociedades. experiencias estéticas.</p><p class="pdf-source-line">Reta de Lenguaje. De lo</p><p class="pdf-source-line">ritmos y humano y lo</p><p class="pdf-source-line">78 colores. Música comunitario. Artes y experiencias estéticas.</p><p class="pdf-source-line">Gigantes y Artes humano y lo Pensamiento crítico. Artes y</p><p class="pdf-source-line">88 fantasmas visuales comunitario. experiencias estéticas.</p><p class="pdf-source-line">Pintura de Apropiación de las culturas a través de</p><p class="pdf-source-line">Roger von Artes la lectura y la escritura. Artes y</p><p class="pdf-source-line">96 Guten visuales Lenguaje. experiencias estéticas</p><p class="pdf-source-line">Lenguaje. De lo Pensamiento crítico. Apropiación de las</p><p class="pdf-source-line">El origen de Artes humano y lo culturas a través de la lectura y la</p><p class="pdf-source-line">100 las letras visuales comunitario. escritura. Artes y experiencias estéticas.</p><p class="pdf-source-line">Y tú, ¿que Artes Pensamiento crítico. Artes y</p><p class="pdf-source-line">146 ves? visuales Lenguaje. experiencias estéticas.</p><p class="pdf-source-line">Lenguaje. De lo Apropiación de las culturas a través de</p><p class="pdf-source-line">humano y lo la lectura y la escritura. Artes y</p><p class="pdf-source-line">56 Partituras Música comunitario. experiencias estéticas</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 113 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	113</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 113</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-126
-Como es un lado
-es el otro: la
-simetría
-Artes
-visuales
-Saberes y
-pensamiento
-científico.
-Pensamiento crítico. Artes y
-experiencias estéticas.
-130
-La danza de los
-animales. 	Danza
-De lo humano y lo
-comunitario. Ética,
-naturaleza y
-sociedades.
-Interculturalidad crítica.
-Apropiación de las culturas a
-través de la lectura y la
-escritura.
-142 	Palo de lluvia
-Artes
-visuales,
-### Música
-Lenguajes. Ética,
-naturaleza y
-sociedades.
-Apropiación de las culturas a
-través de la lectura y la
-escritura.
-144 	Autorretrato
-Artes
-visuales
-Lenguajes. De lo
-humano y lo
-comunitario. 	Artes y experiencias estéticas.
-148 	Papel picado
-Artes
-visuales
-De lo humano y lo
-comunitario. Ética,
-naturaleza y
-sociedades.
-Pensamiento crítico.
-Interculturalidad crítica.
-Apropiación de las culturas a
-través de la lectura y la
-escritura.
-152
-¿Qué es para ti la
-fotografía?
-Artes
-visuales
-Lenguajes. De lo
-humano y lo
-comunitario.
-Pensamiento crítico. Artes y
-experiencias estéticas.
-162
-Y tú, ¿lo dibujarías
-sin verlo?
-Artes
-visuales
-Lenguajes. Ética,
-naturaleza y
-sociedades.
-Pensamiento crítico. Artes y
-experiencias estéticas
-174 	Árbol de la vida.
-Artes
-visuales
-De lo humano y lo
-comunitario. Ética,
-naturaleza y
-sociedades.
-Interculturalidad crítica.
-Apropiación de las culturas a
-través de la lectura y la
-escritura. Artes y experiencias E
-184
-Canción de un
-pirata 	Música
-Lenguajes. De lo
-humano y lo
-comunitario.
-Apropiación de las culturas a
-través de la lectura y la
-escritura. Artes y experiencias
-estéticas.
-188 	El gusano musical. Música
-Lenguajes. De lo
-humano y lo
-comunitario. 	Artes y experiencias estéticas.
-200
-Análisis de la
-pintura de
-Santiago Savi
-Artes
-visuales,
-### Teatro 	Lenguajes. 	Artes y experiencias estéticas.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 113" tabindex="0"><table class="pdf-table"><tbody><tr><th>184</th><th>Pregúntale a las rocas</th><th>Artes visuales</th><th>De lo humano y lo comunitario.</th><th>Interculturalidad crítica.</th></tr><tr><td>196</td><td>Pintura de Jaime Lupercio</td><td>Artes visuales, Teatro</td><td>Lenguaje. De lo humano y lo comunitario</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artesy experiencias estéticas.</td></tr><tr><td>204</td><td>El paso a paso del baile</td><td>Danza</td><td>De lo humano y lo comunitario.</td><td>Vida saludable. Artes y experiencias estéticas.</td></tr><tr><td>214</td><td>Seamos silvestres</td><td>Danza</td><td>De lo humano y lo comunitario.</td><td>Apropiación de las culturas a través de la lectura y la escritura.</td></tr><tr><td>224</td><td>Música en todas partes</td><td>Música</td><td>Lenguaje. De lo humano y lo comunitario.</td><td>Artes y experiencias estéticas.</td></tr><tr><td>234</td><td>El salterio</td><td>Música</td><td>Lenguaje. De lo humano y lo comunitario.</td><td>Artes y experiencias estéticas.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 113" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="5">Múltiples lenguajes 2° grado</td></tr><tr><td></td><td>Nombre de la</td><td>Lenguaje</td><td></td><td></td></tr><tr><td>Página</td><td></td><td></td><td>Campos Formativos</td><td>Ejes Articuladores</td></tr><tr><td></td><td>Actividad</td><td>Artístico</td><td></td><td></td></tr><tr><td>32</td><td>Análisis de la pintura de Román Andrade LLaguno.</td><td>Artes visuales</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas.</td></tr><tr><td>68</td><td>¡Yo estuve aquí!</td><td>Artes visuales</td><td>Lenguajes. De lo humano y lo comunitario. Ética, naturaleza y sociedades.</td><td>Interculturalidad crítica. Apropiación de las culturas a través de la lectura y la escritura.</td></tr><tr><td>84</td><td>Música salvaje</td><td>Música</td><td>Lenguajes. De lo humano y lo comunitario. Ética, naturaleza y sociedades.</td><td>Interculturalidad crítica. Artes y experiencias estéticas.</td></tr><tr><td>98</td><td>Pareidolia</td><td>Artes visuales</td><td>De lo humano y lo comunitario.</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas.</td></tr><tr><td>108</td><td>Texturas visuales frutas</td><td>Artes visuales</td><td>Ética, naturaleza y sociedades.</td><td>Artes y experiencias estéticas.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Pregúntale a Artes De lo humano y lo</p><p class="pdf-source-line">184 las rocas visuales comunitario. Interculturalidad crítica.</p><p class="pdf-source-line">Pintura de Artes Lenguaje. De lo Apropiación de las culturas a través de</p><p class="pdf-source-line">Jaime visuales, humano y lo la lectura y la escritura. Artesy</p><p class="pdf-source-line">196 Lupercio Teatro comunitario experiencias estéticas.</p><p class="pdf-source-line">El paso a paso De lo humano y lo Vida saludable. Artes y experiencias</p><p class="pdf-source-line">204 del baile Danza comunitario. estéticas.</p><p class="pdf-source-line">Seamos De lo humano y lo Apropiación de las culturas a través de</p><p class="pdf-source-line">214 silvestres Danza comunitario. la lectura y la escritura.</p><p class="pdf-source-line">Música en humano y lo</p><p class="pdf-source-line">224 todas partes Música comunitario. Artes y experiencias estéticas.</p><p class="pdf-source-line">234 El salterio Música comunitario. Artes y experiencias estéticas.</p><p class="pdf-source-line">Análisis de la Lenguajes. De lo través de la lectura y la</p><p class="pdf-source-line">pintura de Román Artes humano y lo escritura. Artes y experiencias</p><p class="pdf-source-line">32 Andrade LLaguno. visuales comunitario. estéticas.</p><p class="pdf-source-line">humano y lo Interculturalidad crítica.</p><p class="pdf-source-line">comunitario. Ética, Apropiación de las culturas a</p><p class="pdf-source-line">Artes naturaleza y través de la lectura y la</p><p class="pdf-source-line">68 ¡Yo estuve aquí! visuales sociedades. escritura.</p><p class="pdf-source-line">naturaleza y Interculturalidad crítica. Artes y</p><p class="pdf-source-line">84 Música salvaje Música sociedades. experiencias estéticas.</p><p class="pdf-source-line">Artes De lo humano y lo escritura. Artes y experiencias</p><p class="pdf-source-line">98 Pareidolia visuales comunitario. estéticas.</p><p class="pdf-source-line">Texturas visuales Artes Ética, naturaleza y</p><p class="pdf-source-line">108 frutas visuales sociedades. Artes y experiencias estéticas.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 114 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	114</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 114</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-206
-El mundo cabe en
-un carro.
-Artes
-visuales
-Lenguajes. De lo
-humano y lo
-comunitario.
-Pensamiento crítico. Artes y
-experiencias estéticas.
-216
-Texturas visuales
-verduras
-Artes
-visuales 	Lenguajes.
-Apropiación de las culturas a
-través de la lectura y la
-escritura.
-218 	Cuenta historias 	Teatro 	Lenguajes.
-Apropiación de las culturas a
-través de la lectura y la
-escritura. Artes y experiencias
-estéticas.
-224
-Creatividad a
-pesar de la
-adversidad
-Artes
-visuales
-Lenguajes. De lo
-humano y lo
-comunitario.
-Pensamiento crítico.
-Apropiación de las culturas a
-través de la lectura y la
-escritura. Artes y experiencias
-estéticas.
-237
-Los géneros
-teatrales. 	Teatro
-Lenguajes. De lo
-humano y lo
-comunitario. 	Artes y experiencias estéticas.
-248
-Notas musicales y
-sus duraciones 	Música
-Lenguajes. De lo
-humano y lo
-comunitario.
-Apropiación de las culturas a
-través de la lectura y la
-escritura. Artes y experiencias
-estéticas.
-Múltiples lenguajes 3° grado
-Página Nombre de la
-Actividad
-Lenguaje
-Artístico
-Campos
-Formativos Ejes Articuladores
-18
-¿Hacemos
-papel reciclado
-en casa? 	Artes visuales
-De lo Humano y lo
-comunitario,
-Ética, naturaleza y
-sociedades.
-Pensamiento Crítico, Vida
-Saludable, Artes y experiencias
-estéticas
-52
-Como lo vez, lo
-lees 	Artes visuales
-Lenguajes, Ética,
-naturaleza y
-sociedad.
-Pensamiento Crítico,
-Apropiación de las ideas, Artes y
-experiencias estéticas
-58
-¿Qué es la
-### música? 	Música
-Lenguajes, Ética,
-naturaleza y
-sociedad.
-Pensamiento Crítico,
-Apropiación de las culturas a
-través de la lectura y escritura
-105
-Dividiendo
-dibujamos 	Artes visuales
-Lenguajes,
-saberes y
-Pensamiento Crítico,
-Apropiación de las culturas a
-través de la lectura y escritura
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 114" tabindex="0"><table class="pdf-table"><tbody><tr><th>126</th><th>Como es un lado es el otro: la simetría</th><th>Artes visuales</th><th>Saberes y pensamiento científico.</th><th>Pensamiento crítico. Artes y experiencias estéticas.</th></tr><tr><td>130</td><td>La danza de los animales.</td><td>Danza</td><td>De lo humano y lo comunitario. Ética, naturaleza y sociedades.</td><td>Interculturalidad crítica. Apropiación de las culturas a través de la lectura y la escritura.</td></tr><tr><td>142</td><td>Palo de lluvia</td><td>Artes visuales, Música</td><td>Lenguajes. Ética, naturaleza y sociedades.</td><td>Apropiación de las culturas a través de la lectura y la escritura.</td></tr><tr><td>144</td><td>Autorretrato</td><td>Artes visuales</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Artes y experiencias estéticas.</td></tr><tr><td>148</td><td>Papel picado</td><td>Artes visuales</td><td>De lo humano y lo comunitario. Ética, naturaleza y sociedades.</td><td>Pensamiento crítico. Interculturalidad crítica. Apropiación de las culturas a través de la lectura y la escritura.</td></tr><tr><td>152</td><td>¿Qué es para ti la fotografía?</td><td>Artes visuales</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Pensamiento crítico. Artes y experiencias estéticas.</td></tr><tr><td>162</td><td>Y tú, ¿lo dibujarías sin verlo?</td><td>Artes visuales</td><td>Lenguajes. Ética, naturaleza y sociedades.</td><td>Pensamiento crítico. Artes y experiencias estéticas</td></tr><tr><td>174</td><td>Árbol de la vida.</td><td>Artes visuales</td><td>De lo humano y lo comunitario. Ética, naturaleza y sociedades.</td><td>Interculturalidad crítica. Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias E</td></tr><tr><td>184</td><td>Canción de un pirata</td><td>Música</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas.</td></tr><tr><td>188</td><td>El gusano musical.</td><td>Música</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Artes y experiencias estéticas.</td></tr><tr><td>200</td><td>Análisis de la pintura de Santiago Savi</td><td>Artes visuales, Teatro</td><td>Lenguajes.</td><td>Artes y experiencias estéticas.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Como es un lado Saberes y</p><p class="pdf-source-line">es el otro: la Artes pensamiento Pensamiento crítico. Artes y</p><p class="pdf-source-line">126 simetría visuales científico. experiencias estéticas.</p><p class="pdf-source-line">De lo humano y lo Interculturalidad crítica.</p><p class="pdf-source-line">comunitario. Ética, Apropiación de las culturas a</p><p class="pdf-source-line">La danza de los naturaleza y través de la lectura y la</p><p class="pdf-source-line">130 animales. Danza sociedades. escritura.</p><p class="pdf-source-line">Artes Lenguajes. Ética, Apropiación de las culturas a</p><p class="pdf-source-line">visuales, naturaleza y través de la lectura y la</p><p class="pdf-source-line">142 Palo de lluvia Música sociedades. escritura.</p><p class="pdf-source-line">Artes humano y lo</p><p class="pdf-source-line">144 Autorretrato visuales comunitario. Artes y experiencias estéticas.</p><p class="pdf-source-line">Artes naturaleza y través de la lectura y la</p><p class="pdf-source-line">148 Papel picado visuales sociedades. escritura.</p><p class="pdf-source-line">¿Qué es para ti la Artes humano y lo Pensamiento crítico. Artes y</p><p class="pdf-source-line">152 fotografía? visuales comunitario. experiencias estéticas.</p><p class="pdf-source-line">Y tú, ¿lo dibujarías Artes naturaleza y Pensamiento crítico. Artes y</p><p class="pdf-source-line">162 sin verlo? visuales sociedades. experiencias estéticas</p><p class="pdf-source-line">174 Árbol de la vida. visuales sociedades. escritura. Artes y experiencias E</p><p class="pdf-source-line">Lenguajes. De lo través de la lectura y la</p><p class="pdf-source-line">Canción de un humano y lo escritura. Artes y experiencias</p><p class="pdf-source-line">184 pirata Música comunitario. estéticas.</p><p class="pdf-source-line">188 El gusano musical. Música comunitario. Artes y experiencias estéticas.</p><p class="pdf-source-line">Análisis de la Artes</p><p class="pdf-source-line">pintura de visuales,</p><p class="pdf-source-line">200 Santiago Savi Teatro Lenguajes. Artes y experiencias estéticas.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 115 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	115</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 115</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-fracciones en
-las fracciones
-pensamiento
-científico
-108
-Colores en el
-cielo 	Artes visuales
-Lenguajes, De lo
-humano y lo
-comunitario
-Interculturalidad crítica, Artes y
-experiencias estéticas
-144
-Mary cassatt,
-el arte de vivir
-y pintar como
-se piensa 	Artes visuales
-Lenguajes, De lo
-humano y lo
-comunitario
-Pensamiento Crítico, Igualdad
-de Género, Artes y experiencias
-estéticas
-182
-Llegó el
-carnaval 	Teatro
-Lenguajes, De lo
-humano y lo
-comunitario,
-Ética, naturaleza y
-sociedad 	Interculturalidad crítica.
-208
-Hugo Brehme,
-el hombre que
-capturó México
-en fotografías 	Artes visuales
-Lenguajes, De lo
-humano y lo
-comunitario.
-Interculturalidad crítica, Artes y
-experiencias estéticas,
-Apropiación de las culturas a
-través de la lectura y la escritura
-224
-Artesanías
-mexicanas. 	Contextualización
-De lo Humano y lo
-comunitario,
-Ética, naturaleza y
-sociedades
-Interculturalidad crítica, Artes y
-experiencias estéticas
-228
-¿Palabras o
-dibujos? 	Artes visuales
-Lenguajes, De lo
-humano y lo
-comunitario,
-Ética, naturaleza y
-sociedad
-Pensamiento crítico,
-Interculturalidad crítica,
-Apropiación de las culturas a
-través de la lectura y la
-escritura, Artes y experiencias
-estéticas.
-Múltiples lenguajes 4° grado
-Página Nombre de la
-Actividad
-Lenguaje
-Artístico Campos Formativos 	Ejes Articuladores
-26 	Leonardo Davinci
-Artes
-visuales
-lenguajes, De lo
-humano y lo
-comunitario.
-Educación estética,
-pensamiento crítico.
-34
-Xilitla,un jardín
-mágico.
-Artes
-visuales 	lenguajes
-Interculturalidad crítica,
-fomento a la lectura y
-escritura.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 115" tabindex="0"><table class="pdf-table"><tbody><tr><th>206</th><th>El mundo cabe en un carro.</th><th>Artes visuales</th><th>Lenguajes. De lo humano y lo comunitario.</th><th>Pensamiento crítico. Artes y experiencias estéticas.</th></tr><tr><td>216</td><td>Texturas visuales verduras</td><td>Artes visuales</td><td>Lenguajes.</td><td>Apropiación de las culturas a través de la lectura y la escritura.</td></tr><tr><td>218</td><td>Cuenta historias</td><td>Teatro</td><td>Lenguajes.</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas.</td></tr><tr><td>224</td><td>Creatividad a pesar de la adversidad</td><td>Artes visuales</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Pensamiento crítico. Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas.</td></tr><tr><td>237</td><td>Los géneros teatrales.</td><td>Teatro</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Artes y experiencias estéticas.</td></tr><tr><td>248</td><td>Notas musicales y sus duraciones</td><td>Música</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 115" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="5">Múltiples lenguajes 3° grado</td></tr><tr><td></td><td>Nombre de la</td><td>Lenguaje</td><td>Campos</td><td></td></tr><tr><td>Página</td><td></td><td></td><td></td><td>Ejes Articuladores</td></tr><tr><td></td><td>Actividad</td><td>Artístico</td><td>Formativos</td><td></td></tr><tr><td>18</td><td>¿Hacemos papel reciclado en casa?</td><td>Artes visuales</td><td>De lo Humano y lo comunitario, Ética, naturaleza y sociedades.</td><td>Pensamiento Crítico, Vida Saludable, Artes y experiencias estéticas</td></tr><tr><td>52</td><td>Como lo vez, lo lees</td><td>Artes visuales</td><td>Lenguajes, Ética, naturaleza y sociedad.</td><td>Pensamiento Crítico, Apropiación de las ideas, Artes y experiencias estéticas</td></tr><tr><td>58</td><td>¿Qué es la música?</td><td>Música</td><td>Lenguajes, Ética, naturaleza y sociedad.</td><td>Pensamiento Crítico, Apropiación de las culturas a través de la lectura y escritura</td></tr><tr><td>105</td><td>Dividiendo dibujamos</td><td>Artes visuales</td><td>Lenguajes, saberes y</td><td>Pensamiento Crítico, Apropiación de las culturas a través de la lectura y escritura</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">El mundo cabe en Artes humano y lo Pensamiento crítico. Artes y</p><p class="pdf-source-line">206 un carro. visuales comunitario. experiencias estéticas.</p><p class="pdf-source-line">Texturas visuales Artes través de la lectura y la</p><p class="pdf-source-line">216 verduras visuales Lenguajes. escritura.</p><p class="pdf-source-line">218 Cuenta historias Teatro Lenguajes. estéticas.</p><p class="pdf-source-line">Creatividad a Lenguajes. De lo través de la lectura y la</p><p class="pdf-source-line">pesar de la Artes humano y lo escritura. Artes y experiencias</p><p class="pdf-source-line">224 adversidad visuales comunitario. estéticas.</p><p class="pdf-source-line">Los géneros humano y lo</p><p class="pdf-source-line">237 teatrales. Teatro comunitario. Artes y experiencias estéticas.</p><p class="pdf-source-line">Lenguajes. De lo través de la lectura y la</p><p class="pdf-source-line">Notas musicales y humano y lo escritura. Artes y experiencias</p><p class="pdf-source-line">248 sus duraciones Música comunitario. estéticas.</p><p class="pdf-source-line">¿Hacemos comunitario, Pensamiento Crítico, Vida</p><p class="pdf-source-line">papel reciclado Ética, naturaleza y Saludable, Artes y experiencias</p><p class="pdf-source-line">18 en casa? Artes visuales sociedades. estéticas</p><p class="pdf-source-line">Lenguajes, Ética, Pensamiento Crítico,</p><p class="pdf-source-line">Como lo vez, lo naturaleza y Apropiación de las ideas, Artes y</p><p class="pdf-source-line">52 lees Artes visuales sociedad. experiencias estéticas</p><p class="pdf-source-line">¿Qué es la naturaleza y Apropiación de las culturas a</p><p class="pdf-source-line">58 música? Música sociedad. través de la lectura y escritura</p><p class="pdf-source-line">Dividiendo Lenguajes, Apropiación de las culturas a</p><p class="pdf-source-line">105 dibujamos Artes visuales saberes y través de la lectura y escritura</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 116 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	116</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 116</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-38
-La magia del actor y
-### teatro 	Teatro 	lenguajes
-Artes y experiencias
-estéticas, pensamiento
-crítico.
-54
-Códices o libros de
-pintura
-Artes
-visuales 	lenguajes
-Apropiación de culturas a
-través de la lectura y
-escritura.
-74
-Somos como
-prismas
-Artes
-visuales 	lenguajes
-Artes y experiencias
-estéticas, pensamiento
-crítico.
-78
-La mirada
-sorprendente de
-tina
-Artes
-visuales 	lenguajes
-Artes y experiencias
-estéticas.
-146 	Aliria Morales
-Artes
-visuales 	lenguajes
-Artes y experiencias
-estéticas.
-152
-Amoxcalli,la casa de
-los libros
-Artes
-visuales 	lenguajes
-Apropiación de las culturas a
-través de la lectura y
-escritura.
-199
-Análisis de la pintura
-de Santiago Savi.
-Artes
-visuales 	lenguajes
-Artes y experiencias
-estéticas, pensamiento
-crítico.
-222 	Máscaras mexicanas
-Artes
-visuales 	lenguajes
-Artes y experiencias
-estéticas, interculturalidad
-crítica.
-236 	Cortitos 	Música 	lenguajes
-Artes y experiencias
-estéticas, interculturalidad
-crítica.
-Múltiples lenguajes 5° grado
-Página
-Nombre de
-la Actividad
-Lenguaje
-Artístico 	Campos Formativos 	Ejes Articuladores
-60
-Dilo sin
-palabras. 	Teatro.
-Lenguajes. De lo
-humano y lo
-comunitario.
-Inclusión y pensamiento crítico.
-Apropiación de las culturas a través
-de la lectura y la escritura. Artes y
-experiencias estéticas.
-102
-Pedro y el
-lobo 	Teatro.
-Lenguajes. De lo
-humano y lo
-comunitario.
-Apropiación de las culturas a través
-de la lectura y la escritura.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 116" tabindex="0"><table class="pdf-table"><tbody><tr><td></td><td>fracciones en las fracciones</td><td></td><td>pensamiento científico</td><td></td></tr><tr><td>108</td><td>Colores en el cielo</td><td>Artes visuales</td><td>Lenguajes, De lo humano y lo comunitario</td><td>Interculturalidad crítica, Artes y experiencias estéticas</td></tr><tr><td>144</td><td>Mary cassatt, el arte de vivir y pintar como se piensa</td><td>Artes visuales</td><td>Lenguajes, De lo humano y lo comunitario</td><td>Pensamiento Crítico, Igualdad de Género, Artes y experiencias estéticas</td></tr><tr><td>182</td><td>Llegó el carnaval</td><td>Teatro</td><td>Lenguajes, De lo humano y lo comunitario, Ética, naturaleza y sociedad</td><td>Interculturalidad crítica.</td></tr><tr><td>208</td><td>Hugo Brehme, el hombre que capturó México en fotografías</td><td>Artes visuales</td><td>Lenguajes, De lo humano y lo comunitario.</td><td>Interculturalidad crítica, Artes y experiencias estéticas, Apropiación de las culturas a través de la lectura y la escritura</td></tr><tr><td>224</td><td>Artesanías mexicanas.</td><td>Contextualización</td><td>De lo Humano y lo comunitario, Ética, naturaleza y sociedades</td><td>Interculturalidad crítica, Artes y experiencias estéticas</td></tr><tr><td>228</td><td>¿Palabras o dibujos?</td><td>Artes visuales</td><td>Lenguajes, De lo humano y lo comunitario, Ética, naturaleza y sociedad</td><td>Pensamiento crítico, Interculturalidad crítica, Apropiación de las culturas a través de la lectura y la escritura, Artes y experiencias estéticas.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 116" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="5">Múltiples lenguajes 4° grado</td></tr><tr><td>Nombre de la</td><td>Lenguaje Artístico</td><td></td><td></td><td></td></tr><tr><td>Página</td><td>Campos Formativos</td><td>Ejes Articuladores</td><td></td><td></td></tr><tr><td colspan="5">Actividad</td></tr><tr><td>26</td><td>Leonardo Davinci</td><td>Artes visuales</td><td>lenguajes, De lo humano y lo comunitario.</td><td>Educación estética, pensamiento crítico.</td></tr><tr><td>34</td><td>Xilitla,un jardín mágico.</td><td>Artes visuales</td><td>lenguajes</td><td>Interculturalidad crítica, fomento a la lectura y escritura.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">fracciones en pensamiento</p><p class="pdf-source-line">las fracciones científico</p><p class="pdf-source-line">Colores en el humano y lo Interculturalidad crítica, Artes y</p><p class="pdf-source-line">108 cielo Artes visuales comunitario experiencias estéticas</p><p class="pdf-source-line">el arte de vivir Lenguajes, De lo Pensamiento Crítico, Igualdad</p><p class="pdf-source-line">y pintar como humano y lo de Género, Artes y experiencias</p><p class="pdf-source-line">144 se piensa Artes visuales comunitario estéticas</p><p class="pdf-source-line">Llegó el Ética, naturaleza y</p><p class="pdf-source-line">182 carnaval Teatro sociedad Interculturalidad crítica.</p><p class="pdf-source-line">Hugo Brehme, Interculturalidad crítica, Artes y</p><p class="pdf-source-line">el hombre que Lenguajes, De lo experiencias estéticas,</p><p class="pdf-source-line">capturó México humano y lo Apropiación de las culturas a</p><p class="pdf-source-line">208 en fotografías Artes visuales comunitario. través de la lectura y la escritura</p><p class="pdf-source-line">Artesanías Ética, naturaleza y Interculturalidad crítica, Artes y</p><p class="pdf-source-line">224 mexicanas. Contextualización sociedades experiencias estéticas</p><p class="pdf-source-line">Lenguajes, De lo Interculturalidad crítica,</p><p class="pdf-source-line">humano y lo Apropiación de las culturas a</p><p class="pdf-source-line">comunitario, través de la lectura y la</p><p class="pdf-source-line">¿Palabras o Ética, naturaleza y escritura, Artes y experiencias</p><p class="pdf-source-line">228 dibujos? Artes visuales sociedad estéticas.</p><p class="pdf-source-line">Actividad Artístico</p><p class="pdf-source-line">Artes humano y lo Educación estética,</p><p class="pdf-source-line">26 Leonardo Davinci visuales comunitario. pensamiento crítico.</p><p class="pdf-source-line">Xilitla,un jardín Artes fomento a la lectura y</p><p class="pdf-source-line">34 mágico. visuales lenguajes escritura.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 117 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	117</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 117</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-130 	Ojos
-Artes
-visuales.
-Lenguajes. De lo
-humano y lo
-comunitario.
-Interculturalidad critica. Apropiación
-de las culturas a través de la lectura
-y la escritura.
-152
-Terror
-original 	Teatro.
-Lenguajes. De lo
-humano y lo
-comunitario.
-Pensamiento crítico. A apropiación
-de las culturas a través de la lectura
-y la escritura.
-160 	Xantolo 	Danza
-Lenguajes. De lo
-humano y lo
-comunitario.
-Interculturalidad critica. Apropiación
-de las culturas a través de la lectura
-y la escritura.
-166
-José María
-Velazco
-Artes
-visuales.
-Lenguajes. De lo
-humano y lo
-comunitario. Ética,
-naturaleza y sociedades
-Pensamiento crítico. Artes y
-experiencias estéticas.
-214
-los chínelos
-de
-Tepoztlán 	Danza
-De lo humano y lo
-comunitario. Ética,
-naturaleza y sociedad.
-Apropiación de las culturas a través
-de la lectura y la escritura. Artes y
-experiencias estéticas.
-Múltiples lenguajes 6° grado
-Página Nombre de la
-Actividad
-Lenguaje
-Artístico Campos Formativos 	Ejes Articuladores
-40
-Cuerpo humano
-y ¿cabeza de
-tigre? 	Teatro
-De lo humano y lo
-comunitario
-Interculturalidad crítica,
-apropiación de las culturas a
-través de la lectura y la escritura,
-artes y expresiones artísticas
-100
-Mazoyiwua o la
-### danza del venado Danza
-Lenguajes, De lo
-humano y lo
-comunitario
-Pensamiento crítico,
-interculturalidad crítica,
-apropiación de las culturas de la
-lectura y la escritura
-122
-Te lo explico a
-color
-Artes
-visuales
-De lo humano y lo
-comunitario, ética,
-naturaleza y
-sociedades
-Pensamiento crítico,
-interculturalidad crítica,
-apropiación de las culturas de la
-lectura y la escritura, artes y
-experiencias estéticas
-128
-Se levanta el
-telón 	Teatro
-Lenguajes, de lo
-humano y lo
-comunitario
-Pensamiento crítico, apropiación
-de las culturas a través de la
-lectura y la escritura, artes y
-expresiones estéticas.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 117" tabindex="0"><table class="pdf-table"><tbody><tr><th>38</th><th>La magia del actor y teatro</th><th>Teatro</th><th>lenguajes</th><th>Artes y experiencias estéticas, pensamiento crítico.</th></tr><tr><td>54</td><td>Códices o libros de pintura</td><td>Artes visuales</td><td>lenguajes</td><td>Apropiación de culturas a través de la lectura y escritura.</td></tr><tr><td>74</td><td>Somos como prismas</td><td>Artes visuales</td><td>lenguajes</td><td>Artes y experiencias estéticas, pensamiento crítico.</td></tr><tr><td>78</td><td>La mirada sorprendente de tina</td><td>Artes visuales</td><td>lenguajes</td><td>Artes y experiencias estéticas.</td></tr><tr><td>146</td><td>Aliria Morales</td><td>Artes visuales</td><td>lenguajes</td><td>Artes y experiencias estéticas.</td></tr><tr><td>152</td><td>Amoxcalli,la casa de los libros</td><td>Artes visuales</td><td>lenguajes</td><td>Apropiación de las culturas a través de la lectura y escritura.</td></tr><tr><td>199</td><td>Análisis de la pintura de Santiago Savi.</td><td>Artes visuales</td><td>lenguajes</td><td>Artes y experiencias estéticas, pensamiento crítico.</td></tr><tr><td>222</td><td>Máscaras mexicanas</td><td>Artes visuales</td><td>lenguajes</td><td>Artes y experiencias estéticas, interculturalidad crítica.</td></tr><tr><td>236</td><td>Cortitos</td><td>Música</td><td>lenguajes</td><td>Artes y experiencias estéticas, interculturalidad crítica.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 117" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="5">Múltiples lenguajes 5° grado</td></tr><tr><td></td><td>Nombre de</td><td>Lenguaje</td><td></td><td></td></tr><tr><td>Página</td><td>la Actividad</td><td>Artístico</td><td>Campos Formativos</td><td>Ejes Articuladores</td></tr><tr><td>60</td><td>Dilo sin palabras.</td><td>Teatro.</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Inclusión y pensamiento crítico. Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas.</td></tr><tr><td>102</td><td>Pedro y el lobo</td><td>Teatro.</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Apropiación de las culturas a través de la lectura y la escritura.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">La magia del actor y estéticas, pensamiento</p><p class="pdf-source-line">38 teatro Teatro lenguajes crítico.</p><p class="pdf-source-line">Códices o libros de Artes través de la lectura y</p><p class="pdf-source-line">54 pintura visuales lenguajes escritura.</p><p class="pdf-source-line">Somos como Artes estéticas, pensamiento</p><p class="pdf-source-line">74 prismas visuales lenguajes crítico.</p><p class="pdf-source-line">sorprendente de Artes Artes y experiencias</p><p class="pdf-source-line">78 tina visuales lenguajes estéticas.</p><p class="pdf-source-line">Artes Artes y experiencias</p><p class="pdf-source-line">146 Aliria Morales visuales lenguajes estéticas.</p><p class="pdf-source-line">Amoxcalli,la casa de Artes través de la lectura y</p><p class="pdf-source-line">152 los libros visuales lenguajes escritura.</p><p class="pdf-source-line">Análisis de la pintura Artes estéticas, pensamiento</p><p class="pdf-source-line">199 de Santiago Savi. visuales lenguajes crítico.</p><p class="pdf-source-line">Artes estéticas, interculturalidad</p><p class="pdf-source-line">222 Máscaras mexicanas visuales lenguajes crítica.</p><p class="pdf-source-line">236 Cortitos Música lenguajes crítica.</p><p class="pdf-source-line">Lenguajes. De lo Apropiación de las culturas a través</p><p class="pdf-source-line">Dilo sin humano y lo de la lectura y la escritura. Artes y</p><p class="pdf-source-line">60 palabras. Teatro. comunitario. experiencias estéticas.</p><p class="pdf-source-line">Pedro y el humano y lo Apropiación de las culturas a través</p><p class="pdf-source-line">102 lobo Teatro. comunitario. de la lectura y la escritura.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 118 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	118</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 118</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-148
-¡Esto no es solo
-una área
-pintada! ¡Es un
-mundo!
-Artes
-visuales
-Lenguajes, de lo
-humano y lo
-comunitario, ética,
-naturaleza y
-sociedades
-Pensamiento crítico,
-interculturalidad crítica,
-apropiación de las culturas a
-través de la lectura y la escritura,
-artes y experiencias estéticas
-152 	Animación
-Artes
-visuales
-Lenguajes, de lo
-humano y lo
-comunitario
-Pensamiento crítico, apropiación
-de las culturas a través de la
-lectura y la escritura, artes y
-expresiones estéticas.
-170
-Un mundo hecho
-de hilos y colores
-Artes
-visuales
-Lenguajes, de lo
-humano y lo
-comunitario, ética,
-naturaleza y
-sociedades
-Pensamiento crítico,
-interculturalidad crítica,
-apropiación de las culturas a
-través de la lectura y la escritura,
-artes y experiencias estéticas
-210
-Kandinsky, el
-niño que soño
-pintar música de
-colores
-Artes
-visuales
-Lenguajes, de lo
-humano y lo
-comunitario
-Pensamiento crítico, apropiación
-de las culturas a través de la
-lectura y la escritura, artes y
-expresiones estéticas.
-220
-Una historia de
-película
-Artes
-visuales
-Lenguajes, de lo
-humano y lo
-comunitario, ética,
-naturaleza y
-sociedades
-Pensamiento crítico,
-interculturalidad crítica,
-apropiación de las culturas a
-través de la lectura y la escritura,
-artes y experiencias estéticas
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 118" tabindex="0"><table class="pdf-table"><tbody><tr><th>130</th><th>Ojos</th><th>Artes visuales.</th><th>Lenguajes. De lo humano y lo comunitario.</th><th>Interculturalidad critica. Apropiación de las culturas a través de la lectura y la escritura.</th></tr><tr><td>152</td><td>Terror original</td><td>Teatro.</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Pensamiento crítico. A apropiación de las culturas a través de la lectura y la escritura.</td></tr><tr><td>160</td><td>Xantolo</td><td>Danza</td><td>Lenguajes. De lo humano y lo comunitario.</td><td>Interculturalidad critica. Apropiación de las culturas a través de la lectura y la escritura.</td></tr><tr><td>166</td><td>José María Velazco</td><td>Artes visuales.</td><td>Lenguajes. De lo humano y lo comunitario. Ética, naturaleza y sociedades</td><td>Pensamiento crítico. Artes y experiencias estéticas.</td></tr><tr><td>214</td><td>los chínelos de Tepoztlán</td><td>Danza</td><td>De lo humano y lo comunitario. Ética, naturaleza y sociedad.</td><td>Apropiación de las culturas a través de la lectura y la escritura. Artes y experiencias estéticas.</td></tr></tbody></table></div>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 2 de la página 118" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="5">Múltiples lenguajes 6° grado</td></tr><tr><td></td><td>Nombre de la</td><td>Lenguaje</td><td></td><td></td></tr><tr><td>Página</td><td></td><td></td><td>Campos Formativos</td><td>Ejes Articuladores</td></tr><tr><td></td><td>Actividad</td><td>Artístico</td><td></td><td></td></tr><tr><td>40</td><td>Cuerpo humano y ¿cabeza de tigre?</td><td>Teatro</td><td>De lo humano y lo comunitario</td><td>Interculturalidad crítica, apropiación de las culturas a través de la lectura y la escritura, artes y expresiones artísticas</td></tr><tr><td>100</td><td>Mazoyiwua o la danza del venado</td><td>Danza</td><td>Lenguajes, De lo humano y lo comunitario</td><td>Pensamiento crítico, interculturalidad crítica, apropiación de las culturas de la lectura y la escritura</td></tr><tr><td>122</td><td>Te lo explico a color</td><td>Artes visuales</td><td>De lo humano y lo comunitario, ética, naturaleza y sociedades</td><td>Pensamiento crítico, interculturalidad crítica, apropiación de las culturas de la lectura y la escritura, artes y experiencias estéticas</td></tr><tr><td>128</td><td>Se levanta el telón</td><td>Teatro</td><td>Lenguajes, de lo humano y lo comunitario</td><td>Pensamiento crítico, apropiación de las culturas a través de la lectura y la escritura, artes y expresiones estéticas.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Lenguajes. De lo Interculturalidad critica. Apropiación</p><p class="pdf-source-line">Artes humano y lo de las culturas a través de la lectura</p><p class="pdf-source-line">130 Ojos visuales. comunitario. y la escritura.</p><p class="pdf-source-line">Lenguajes. De lo Pensamiento crítico. A apropiación</p><p class="pdf-source-line">Terror humano y lo de las culturas a través de la lectura</p><p class="pdf-source-line">152 original Teatro. comunitario. y la escritura.</p><p class="pdf-source-line">humano y lo de las culturas a través de la lectura</p><p class="pdf-source-line">160 Xantolo Danza comunitario. y la escritura.</p><p class="pdf-source-line">José María Artes comunitario. Ética, Pensamiento crítico. Artes y</p><p class="pdf-source-line">166 Velazco visuales. naturaleza y sociedades experiencias estéticas.</p><p class="pdf-source-line">los chínelos De lo humano y lo Apropiación de las culturas a través</p><p class="pdf-source-line">de comunitario. Ética, de la lectura y la escritura. Artes y</p><p class="pdf-source-line">214 Tepoztlán Danza naturaleza y sociedad. experiencias estéticas.</p><p class="pdf-source-line">Cuerpo humano apropiación de las culturas a</p><p class="pdf-source-line">y ¿cabeza de De lo humano y lo través de la lectura y la escritura,</p><p class="pdf-source-line">40 tigre? Teatro comunitario artes y expresiones artísticas</p><p class="pdf-source-line">Lenguajes, De lo interculturalidad crítica,</p><p class="pdf-source-line">Mazoyiwua o la humano y lo apropiación de las culturas de la</p><p class="pdf-source-line">100 danza del venado Danza comunitario lectura y la escritura</p><p class="pdf-source-line">De lo humano y lo interculturalidad crítica,</p><p class="pdf-source-line">comunitario, ética, apropiación de las culturas de la</p><p class="pdf-source-line">Te lo explico a Artes naturaleza y lectura y la escritura, artes y</p><p class="pdf-source-line">122 color visuales sociedades experiencias estéticas</p><p class="pdf-source-line">Lenguajes, de lo de las culturas a través de la</p><p class="pdf-source-line">Se levanta el humano y lo lectura y la escritura, artes y</p><p class="pdf-source-line">128 telón Teatro comunitario expresiones estéticas.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 119 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	119</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 119</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Del Libro Proyectos Escolares
-Proyectos escolares
-1° Grado
-Página
-Nombre del
-Proyecto
-Campo
-Formativo
-Lenguaje
-Artístico 	Ejes Articuladores
-Producto(s) del
-proyecto
-60
-¡Modelamos
-una vida de
-paz! 	Lenguajes
-Artes
-visuales
-Apropiación de las
-culturas a través de
-la lectura y la
-escritura, artes y
-experiencias
-estéticas
-Escultura para expresar
-ideas sobre la paz
-90
-Historias de
-mi comunidad
-escolar 	Lenguajes 	Teatro
-Inclusión,
-pensamiento crítico,
-interculturalidad
-crítica, artes y
-experiencias
-estéticas 	Obra de teatro guiñol
-118
-Mi escuela y el
-paisaje que la
-rodea
-Ética,
-naturaleza y
-sociedades
-Artes
-visuales
-Inclusión,
-pensamiento crítico,
-interculturalidad
-crítica, igualdad de
-género, vida
-saludable, artes y
-experiencias
-estéticas
-Galería de arte de
-pinturas del paisaje
-que les rodea
-238
-Los sonidos de
-la naturaleza
-Saberes y
-pensamiento
-científico 	Música
-Pensamiento crítico,
-apropiación de las
-culturas a través de
-la lectura y la
-escritura, artes y
-experiencias
-estéticas
-Características del
-sonido y construcción
-de alarma sísmica
-Proyectos escolares
-2° Grado
-Página
-Nombre del
-Proyecto
-Campo
-Formativo
-Lenguaje
-Artístico 	Ejes Articuladores
-Producto(s) del
-proyecto
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 119" tabindex="0"><table class="pdf-table"><tbody><tr><th>148</th><th>¡Esto no es solo una área pintada! ¡Es un mundo!</th><th>Artes visuales</th><th>Lenguajes, de lo humano y lo comunitario, ética, naturaleza y sociedades</th><th>Pensamiento crítico, interculturalidad crítica, apropiación de las culturas a través de la lectura y la escritura, artes y experiencias estéticas</th></tr><tr><td>152</td><td>Animación</td><td>Artes visuales</td><td>Lenguajes, de lo humano y lo comunitario</td><td>Pensamiento crítico, apropiación de las culturas a través de la lectura y la escritura, artes y expresiones estéticas.</td></tr><tr><td>170</td><td>Un mundo hecho de hilos y colores</td><td>Artes visuales</td><td>Lenguajes, de lo humano y lo comunitario, ética, naturaleza y sociedades</td><td>Pensamiento crítico, interculturalidad crítica, apropiación de las culturas a través de la lectura y la escritura, artes y experiencias estéticas</td></tr><tr><td>210</td><td>Kandinsky, el niño que soño pintar música de colores</td><td>Artes visuales</td><td>Lenguajes, de lo humano y lo comunitario</td><td>Pensamiento crítico, apropiación de las culturas a través de la lectura y la escritura, artes y expresiones estéticas.</td></tr><tr><td>220</td><td>Una historia de película</td><td>Artes visuales</td><td>Lenguajes, de lo humano y lo comunitario, ética, naturaleza y sociedades</td><td>Pensamiento crítico, interculturalidad crítica, apropiación de las culturas a través de la lectura y la escritura, artes y experiencias estéticas</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Lenguajes, de lo Pensamiento crítico,</p><p class="pdf-source-line">¡Esto no es solo humano y lo interculturalidad crítica,</p><p class="pdf-source-line">una área comunitario, ética, apropiación de las culturas a</p><p class="pdf-source-line">pintada! ¡Es un Artes naturaleza y través de la lectura y la escritura,</p><p class="pdf-source-line">148 mundo! visuales sociedades artes y experiencias estéticas</p><p class="pdf-source-line">Lenguajes, de lo de las culturas a través de la</p><p class="pdf-source-line">Artes humano y lo lectura y la escritura, artes y</p><p class="pdf-source-line">152 Animación visuales comunitario expresiones estéticas.</p><p class="pdf-source-line">humano y lo interculturalidad crítica,</p><p class="pdf-source-line">comunitario, ética, apropiación de las culturas a</p><p class="pdf-source-line">Un mundo hecho Artes naturaleza y través de la lectura y la escritura,</p><p class="pdf-source-line">170 de hilos y colores visuales sociedades artes y experiencias estéticas</p><p class="pdf-source-line">Kandinsky, el Pensamiento crítico, apropiación</p><p class="pdf-source-line">niño que soño Lenguajes, de lo de las culturas a través de la</p><p class="pdf-source-line">pintar música de Artes humano y lo lectura y la escritura, artes y</p><p class="pdf-source-line">210 colores visuales comunitario expresiones estéticas.</p><p class="pdf-source-line">Una historia de Artes naturaleza y través de la lectura y la escritura,</p><p class="pdf-source-line">220 película visuales sociedades artes y experiencias estéticas</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 120 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	120</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 120</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-10
-había una
-vez... una obra
-de teatro 	Lenguajes 	Teatro
-Pensamiento crítico,
-igualdad de género,
-apropiación de las
-culturas a través de
-la lectura y la
-escritura, artes y
-experiencias
-estéticas 	Obra de teatro
-52
-Instalando
-sensaciones 	Lenguajes
-Artes
-visuales
-Pensamiento crítico,
-apropiación de las
-culturas a través de
-la lectura y la
-escritura, artes y
-experiencias
-estéticas
-Obras de arte e
-instalación artística
-72
-Reconozco y
-represento un
-estado de mi
-país 	Lenguajes 	Danza
-Inclusión,
-interculturalidad
-crítica, igualdad de
-género, apropiación
-de las culturas a
-través de la lectura y
-la escritura, artes y
-experiencias
-estéticas
-Exposición de trajes
-representativos y
-platillos de cada estado
-de la República
-mexicana
-184
-Actividades
-artesanales
-Ética,
-naturaleza y
-sociedades
-Artes
-visuales
-Inclusión,
-interculturalidad
-crítica, artes y
-experiencias
-estéticas 	Muestra de artesanías
-Proyectos escolares
-3° Grado
-Página
-Nombre del
-Proyecto
-Campo
-Formativo
-Lenguaje
-Artístico 	Ejes Articuladores
-Producto(s) del
-proyecto
-72
-La ruta para
-conocer las
-maravillas de
-mi localidad 	Lenguajes
-Artes
-Visuales
-Pensamiento Crítico,
-interculturalidad
-crítica, artes y
-experiencias
-estéticas
-Elaboración de un
-croquis
-
-
+<p class="pdf-source-line">Del Libro Proyectos Escolares</p>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 120" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="6">Proyectos escolares</td></tr><tr><td colspan="6">1° Grado</td></tr><tr><td></td><td>Nombre del</td><td>Campo</td><td>Lenguaje</td><td></td><td>Producto(s) del</td></tr><tr><td>Página</td><td>Proyecto</td><td>Formativo</td><td>Artístico</td><td>Ejes Articuladores</td><td>proyecto</td></tr><tr><td>60</td><td>¡Modelamos una vida de paz!</td><td>Lenguajes</td><td>Artes visuales</td><td>Apropiación de las culturas a través de la lectura y la escritura, artes y experiencias estéticas</td><td>Escultura para expresar ideas sobre la paz</td></tr><tr><td>90</td><td>Historias de mi comunidad escolar</td><td>Lenguajes</td><td>Teatro</td><td>Inclusión, pensamiento crítico, interculturalidad crítica, artes y experiencias estéticas</td><td>Obra de teatro guiñol</td></tr><tr><td>118</td><td>Mi escuela y el paisaje que la rodea</td><td>Ética, naturaleza y sociedades</td><td>Artes visuales</td><td>Inclusión, pensamiento crítico, interculturalidad crítica, igualdad de género, vida saludable, artes y experiencias estéticas</td><td>Galería de arte de pinturas del paisaje que les rodea</td></tr><tr><td>238</td><td>Los sonidos de la naturaleza</td><td>Saberes y pensamiento científico</td><td>Música</td><td>Pensamiento crítico, apropiación de las culturas a través de la lectura y la escritura, artes y experiencias estéticas</td><td>Características del sonido y construcción de alarma sísmica</td></tr><tr><td colspan="6">Proyectos escolares</td></tr><tr><td colspan="6">2° Grado</td></tr><tr><td></td><td>Nombre del</td><td>Campo</td><td>Lenguaje</td><td></td><td>Producto(s) del</td></tr><tr><td>Página</td><td>Proyecto</td><td>Formativo</td><td>Artístico</td><td>Ejes Articuladores</td><td>proyecto</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">¡Modelamos escritura, artes y</p><p class="pdf-source-line">una vida de Artes experiencias Escultura para expresar</p><p class="pdf-source-line">60 paz! Lenguajes visuales estéticas ideas sobre la paz</p><p class="pdf-source-line">Historias de crítica, artes y</p><p class="pdf-source-line">mi comunidad experiencias</p><p class="pdf-source-line">90 escolar Lenguajes Teatro estéticas Obra de teatro guiñol</p><p class="pdf-source-line">Mi escuela y el Ética, saludable, artes y Galería de arte de</p><p class="pdf-source-line">paisaje que la naturaleza y Artes experiencias pinturas del paisaje</p><p class="pdf-source-line">118 rodea sociedades visuales estéticas que les rodea</p><p class="pdf-source-line">Saberes y escritura, artes y Características del</p><p class="pdf-source-line">Los sonidos de pensamiento experiencias sonido y construcción</p><p class="pdf-source-line">238 la naturaleza científico Música estéticas de alarma sísmica</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 121 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	121</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 121</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-88
-Las rimas,
-como el pan,
-con todo van 	Lenguajes 	Música
-Igualdad de género,
-apropiación de las
-culturas a través de
-la lectura y la
-escritura, artes y
-experiencias
-estéticas 	Crea tu propia canción
-104
-Un día en la
-escuela 	Lenguajes 	Teatro
-Inclusión,
-pensamiento crítico,
-igualdad de género
-Guion teatral, vestuario
-o utilería y la
-representación del
-guion teatral
-Proyectos escolares
-4° Grado
-Página
-Nombre del
-Proyecto
-Campo
-Formativo
-Lenguaje
-Artístico 	Ejes Articuladores
-Producto(s) del
-proyecto
-76
-La poesía en la
-vida cotidiana. Lenguajes 	Teatro
-Pensamiento crítico.
-Vida saludable.
-Apropiación de las
-culturas a través de
-la cultura y la
-escritura. Artes y
-experiencias
-estéticas.
-Escritura de un poema
-con versos y estrofas.
-92
-Hagamos
-talleres de
-### teatro. 	Lenguajes 	Teatro 	Pensamiento crítico.
-Lectura dramatizada y
-montaje de una obra
-teatral.
-106
-Pequeños
-cineastas. 	Lenguajes
-### Teatro y
-artes
-visuales
-Inclusión,
-pensamiento crítico,
-Apropiación de las
-culturas a través de
-la lectura y la
-escritura. artes y
-experiencias
-estéticas
-Elaboración de una
-pantalla y pasar
-secuencias de cuento o
-elaboración de video
-"stop motion"
-124
-¡Serás la
-arquitecta o
-arquitecto de
-tu escuela! 	Lenguajes
-Artes
-visuales
-Pensamiento crítico.
-Apropiación de las
-culturas a través de
-la lectura y la
-escritura.
-Realizar un mapa
-ubicando su escuela en
-la comunidad y un
-croquis de su escuela.
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 121" tabindex="0"><table class="pdf-table"><tbody><tr><th>10</th><th>había una vez... una obra de teatro</th><th>Lenguajes</th><th>Teatro</th><th>Pensamiento crítico, igualdad de género, apropiación de las culturas a través de la lectura y la escritura, artes y experiencias estéticas</th><th>Obra de teatro</th></tr><tr><td>52</td><td>Instalando sensaciones</td><td>Lenguajes</td><td>Artes visuales</td><td>Pensamiento crítico, apropiación de las culturas a través de la lectura y la escritura, artes y experiencias estéticas</td><td>Obras de arte e instalación artística</td></tr><tr><td>72</td><td>Reconozco y represento un estado de mi país</td><td>Lenguajes</td><td>Danza</td><td>Inclusión, interculturalidad crítica, igualdad de género, apropiación de las culturas a través de la lectura y la escritura, artes y experiencias estéticas</td><td>Exposición de trajes representativos y platillos de cada estado de la República mexicana</td></tr><tr><td>184</td><td>Actividades artesanales</td><td>Ética, naturaleza y sociedades</td><td>Artes visuales</td><td>Inclusión, interculturalidad crítica, artes y experiencias estéticas</td><td>Muestra de artesanías</td></tr><tr><td colspan="6">Proyectos escolares</td></tr><tr><td colspan="6">3° Grado</td></tr><tr><td></td><td>Nombre del</td><td>Campo</td><td>Lenguaje</td><td></td><td>Producto(s) del</td></tr><tr><td>Página</td><td>Proyecto</td><td>Formativo</td><td>Artístico</td><td>Ejes Articuladores</td><td>proyecto</td></tr><tr><td>72</td><td>La ruta para conocer las maravillas de mi localidad</td><td>Lenguajes</td><td>Artes Visuales</td><td>Pensamiento Crítico, interculturalidad crítica, artes y experiencias estéticas</td><td>Elaboración de un croquis</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">había una escritura, artes y</p><p class="pdf-source-line">vez... una obra experiencias</p><p class="pdf-source-line">10 de teatro Lenguajes Teatro estéticas Obra de teatro</p><p class="pdf-source-line">Instalando Artes experiencias Obras de arte e</p><p class="pdf-source-line">52 sensaciones Lenguajes visuales estéticas instalación artística</p><p class="pdf-source-line">de las culturas a Exposición de trajes</p><p class="pdf-source-line">Reconozco y través de la lectura y representativos y</p><p class="pdf-source-line">represento un la escritura, artes y platillos de cada estado</p><p class="pdf-source-line">estado de mi experiencias de la República</p><p class="pdf-source-line">72 país Lenguajes Danza estéticas mexicana</p><p class="pdf-source-line">Ética, crítica, artes y</p><p class="pdf-source-line">Actividades naturaleza y Artes experiencias</p><p class="pdf-source-line">184 artesanales sociedades visuales estéticas Muestra de artesanías</p><p class="pdf-source-line">La ruta para interculturalidad</p><p class="pdf-source-line">conocer las crítica, artes y</p><p class="pdf-source-line">maravillas de Artes experiencias Elaboración de un</p><p class="pdf-source-line">72 mi localidad Lenguajes Visuales estéticas croquis</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 122 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	122</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 122</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-154
-¡Todas y todos
-a escena…!
-Pero con
-seguridad.
-Saberes y
-pensamiento
-científico 	Danza
-Pensamiento crítico.
-Artes y experiencias
-estéticas.
-Diseño de un croquis
-con desplazamientos
-272
-Festival de
-talentos
-De lo
-humano y lo
-comunitario
-### Danza,
-### música,
-### Teatro y
-artes
-visuales
-Inclusión,
-pensamiento crítico,
-artes y experiencias
-estéticas
-Elaboración y
-coordinación de
-festival de talentos
-Proyectos escolares
-5° Grado
-Página
-Nombre del
-Proyecto
-Campo
-Formativo
-Lenguaje
-Artístico 	Ejes Articuladores
-Producto(s) del
-proyecto
-40
-"Como
-entendemos
-el arte" 	Lenguajes
-Artes V.
-### teatro,
-### música,
-### danza
-Inclusión, pensam.
-Crítico, Intercult.
-Crítica, Aprop, de las
-culturas, Artes y
-estéticas
-Exhibición de las
-manifestaciones
-artísticas de diferentes
-culturas
-51
-"La
-perspectiva de
-género desde
-la música" 	Lenguajes 	Música
-Pensam. crítico,
-igualdad de género,
-artes y experiencias
-estéticas.
-Interpretación de una
-canción sobre los roles
-de género
-64
-"Sobre
-cuentos y
-poemas" 	Lenguajes 	Teatro
-Intec. crítica,
-Igualdad de género,
-artes y exp.
-estéticas.
-Recital literario de
-cuentos y poemas
-76
-"Sonido e
-imágenes de
-nuestro
-entorno" 	Lenguajes
-### Música,
-Artes
-Visuales
-Apropiación de las
-cult. atrav. de la lec.
-y e.
-Reconocim. de sonidos
-ambientales,
-presentación de
-historietas
-90
-"Expresarte
-con el cuerpo" Lenguajes 	Danza
-Apropiación de las
-cult. atrav. de la lec.
-y e. Artes y exp.
-estéticas
-Narración de la historia
-del nombre propio e
-interpretación corporal
-104
-"La Historia Se
-mueve!" 	Lenguajes
-Artes
-visuales
-Pensam. crítico, vida
-saludable. artes y
-exp. Estéticas
-Presentación de una
-galería viviente
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 122" tabindex="0"><table class="pdf-table"><tbody><tr><th>88</th><th>Las rimas, como el pan, con todo van</th><th>Lenguajes</th><th>Música</th><th>Igualdad de género, apropiación de las culturas a través de la lectura y la escritura, artes y experiencias estéticas</th><th>Crea tu propia canción</th></tr><tr><td>104</td><td>Un día en la escuela</td><td>Lenguajes</td><td>Teatro</td><td>Inclusión, pensamiento crítico, igualdad de género</td><td>Guion teatral, vestuario o utilería y la representación del guion teatral</td></tr><tr><td colspan="6">Proyectos escolares</td></tr><tr><td colspan="6">4° Grado</td></tr><tr><td></td><td>Nombre del</td><td>Campo</td><td>Lenguaje</td><td></td><td>Producto(s) del</td></tr><tr><td>Página</td><td>Proyecto</td><td>Formativo</td><td>Artístico</td><td>Ejes Articuladores</td><td>proyecto</td></tr><tr><td>76</td><td>La poesía en la vida cotidiana.</td><td>Lenguajes</td><td>Teatro</td><td>Pensamiento crítico. Vida saludable. Apropiación de las culturas a través de la cultura y la escritura. Artes y experiencias estéticas.</td><td>Escritura de un poema con versos y estrofas.</td></tr><tr><td>92</td><td>Hagamos talleres de teatro.</td><td>Lenguajes</td><td>Teatro</td><td>Pensamiento crítico.</td><td>Lectura dramatizada y montaje de una obra teatral.</td></tr><tr><td>106</td><td>Pequeños cineastas.</td><td>Lenguajes</td><td>Teatro y artes visuales</td><td>Inclusión, pensamiento crítico, Apropiación de las culturas a través de la lectura y la escritura. artes y experiencias estéticas</td><td>Elaboración de una pantalla y pasar secuencias de cuento o elaboración de video &quot;stop motion&quot;</td></tr><tr><td>124</td><td>¡Serás la arquitecta o arquitecto de tu escuela!</td><td>Lenguajes</td><td>Artes visuales</td><td>Pensamiento crítico. Apropiación de las culturas a través de la lectura y la escritura.</td><td>Realizar un mapa ubicando su escuela en la comunidad y un croquis de su escuela.</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">Las rimas, escritura, artes y</p><p class="pdf-source-line">como el pan, experiencias</p><p class="pdf-source-line">88 con todo van Lenguajes Música estéticas Crea tu propia canción</p><p class="pdf-source-line">Inclusión, o utilería y la</p><p class="pdf-source-line">Un día en la pensamiento crítico, representación del</p><p class="pdf-source-line">104 escuela Lenguajes Teatro igualdad de género guion teatral</p><p class="pdf-source-line">La poesía en la experiencias Escritura de un poema</p><p class="pdf-source-line">76 vida cotidiana. Lenguajes Teatro estéticas. con versos y estrofas.</p><p class="pdf-source-line">Hagamos Lectura dramatizada y</p><p class="pdf-source-line">talleres de montaje de una obra</p><p class="pdf-source-line">92 teatro. Lenguajes Teatro Pensamiento crítico. teatral.</p><p class="pdf-source-line">culturas a través de Elaboración de una</p><p class="pdf-source-line">la lectura y la pantalla y pasar</p><p class="pdf-source-line">Teatro y escritura. artes y secuencias de cuento o</p><p class="pdf-source-line">Pequeños artes experiencias elaboración de video</p><p class="pdf-source-line">106 cineastas. Lenguajes visuales estéticas &quot;stop motion&quot;</p><p class="pdf-source-line">¡Serás la Apropiación de las Realizar un mapa</p><p class="pdf-source-line">arquitecta o culturas a través de ubicando su escuela en</p><p class="pdf-source-line">arquitecto de Artes la lectura y la la comunidad y un</p><p class="pdf-source-line">124 tu escuela! Lenguajes visuales escritura. croquis de su escuela.</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 123 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	123</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 123</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-Proyectos escolares
-6° Grado
-Página
-Nombre del
-Proyecto
-Campo
-Formativo
-Lenguaje
-Artístico 	Ejes Articuladores
-Producto(s) del
-proyecto
-10 	Comunicarte 	Lenguajes 	teatro
-pensamiento crítico,
-artes y experiencias
-estéticas
-Minidrama con apoyo
-de un texto dramático
-70
-Tormenta de
-miradas...
-cosecha de
-ideas 	Lenguajes
-artes
-visuales
-pensamiento crítico,
-artes y experiencias
-estéticas
-Elaboración de un
-mural
-82 	Colectivizarte 	Lenguajes
-artes
-visuales y
-### danza
-Aprop. de las
-culturas a través de
-la lec. y escr. Artes y
-expe. Estéticas
-Representación de un
-happening (acción en
-tiempo real que se
-considera de arte
-92
-Soy pasado y
-presente, soy
-mis raíces y mi
-presente 	Lenguajes 	danza
-Aprop. de las
-culturas a través de
-la lec. y escr. Artes y
-expe. Estéticas,
-intercultaridad
-critica, artes y
-experiencias
-estéticas.
-Presentación de
-secuencia dancística
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 123" tabindex="0"><table class="pdf-table"><tbody><tr><th>154</th><th>¡Todas y todos a escena…! Pero con seguridad.</th><th>Saberes y pensamiento científico</th><th>Danza</th><th>Pensamiento crítico. Artes y experiencias estéticas.</th><th>Diseño de un croquis con desplazamientos</th></tr><tr><td>272</td><td>Festival de talentos</td><td>De lo humano y lo comunitario</td><td>Danza, música, Teatro y artes visuales</td><td>Inclusión, pensamiento crítico, artes y experiencias estéticas</td><td>Elaboración y coordinación de festival de talentos</td></tr><tr><td colspan="6">Proyectos escolares</td></tr><tr><td colspan="6">5° Grado</td></tr><tr><td></td><td>Nombre del</td><td>Campo</td><td>Lenguaje</td><td></td><td>Producto(s) del</td></tr><tr><td>Página</td><td>Proyecto</td><td>Formativo</td><td>Artístico</td><td>Ejes Articuladores</td><td>proyecto</td></tr><tr><td>40</td><td>&quot;Como entendemos el arte&quot;</td><td>Lenguajes</td><td>Artes V. teatro, música, danza</td><td>Inclusión, pensam. Crítico, Intercult. Crítica, Aprop, de las culturas, Artes y estéticas</td><td>Exhibición de las manifestaciones artísticas de diferentes culturas</td></tr><tr><td>51</td><td>&quot;La perspectiva de género desde la música&quot;</td><td>Lenguajes</td><td>Música</td><td>Pensam. crítico, igualdad de género, artes y experiencias estéticas.</td><td>Interpretación de una canción sobre los roles de género</td></tr><tr><td>64</td><td>&quot;Sobre cuentos y poemas&quot;</td><td>Lenguajes</td><td>Teatro</td><td>Intec. crítica, Igualdad de género, artes y exp. estéticas.</td><td>Recital literario de cuentos y poemas</td></tr><tr><td>76</td><td>&quot;Sonido e imágenes de nuestro entorno&quot;</td><td>Lenguajes</td><td>Música, Artes Visuales</td><td>Apropiación de las cult. atrav. de la lec. y e.</td><td>Reconocim. de sonidos ambientales, presentación de historietas</td></tr><tr><td>90</td><td>&quot;Expresarte con el cuerpo&quot;</td><td>Lenguajes</td><td>Danza</td><td>Apropiación de las cult. atrav. de la lec. y e. Artes y exp. estéticas</td><td>Narración de la historia del nombre propio e interpretación corporal</td></tr><tr><td>104</td><td>&quot;La Historia Se mueve!&quot;</td><td>Lenguajes</td><td>Artes visuales</td><td>Pensam. crítico, vida saludable. artes y exp. Estéticas</td><td>Presentación de una galería viviente</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">a escena…! Saberes y Pensamiento crítico.</p><p class="pdf-source-line">Pero con pensamiento Artes y experiencias Diseño de un croquis</p><p class="pdf-source-line">154 seguridad. científico Danza estéticas. con desplazamientos</p><p class="pdf-source-line">música, Inclusión,</p><p class="pdf-source-line">De lo Teatro y pensamiento crítico, Elaboración y</p><p class="pdf-source-line">Festival de humano y lo artes artes y experiencias coordinación de</p><p class="pdf-source-line">272 talentos comunitario visuales estéticas festival de talentos</p><p class="pdf-source-line">Artes V. Crítico, Intercult. Exhibición de las</p><p class="pdf-source-line">&quot;Como teatro, Crítica, Aprop, de las manifestaciones</p><p class="pdf-source-line">entendemos música, culturas, Artes y artísticas de diferentes</p><p class="pdf-source-line">40 el arte&quot; Lenguajes danza estéticas culturas</p><p class="pdf-source-line">&quot;La Pensam. crítico,</p><p class="pdf-source-line">perspectiva de igualdad de género, Interpretación de una</p><p class="pdf-source-line">género desde artes y experiencias canción sobre los roles</p><p class="pdf-source-line">51 la música&quot; Lenguajes Música estéticas. de género</p><p class="pdf-source-line">&quot;Sobre Igualdad de género,</p><p class="pdf-source-line">cuentos y artes y exp. Recital literario de</p><p class="pdf-source-line">64 poemas&quot; Lenguajes Teatro estéticas. cuentos y poemas</p><p class="pdf-source-line">&quot;Sonido e Reconocim. de sonidos</p><p class="pdf-source-line">imágenes de Música, Apropiación de las ambientales,</p><p class="pdf-source-line">nuestro Artes cult. atrav. de la lec. presentación de</p><p class="pdf-source-line">76 entorno&quot; Lenguajes Visuales y e. historietas</p><p class="pdf-source-line">cult. atrav. de la lec. Narración de la historia</p><p class="pdf-source-line">&quot;Expresarte y e. Artes y exp. del nombre propio e</p><p class="pdf-source-line">90 con el cuerpo&quot; Lenguajes Danza estéticas interpretación corporal</p><p class="pdf-source-line">&quot;La Historia Se Artes saludable. artes y</p><p class="pdf-source-line">104 mueve!&quot; Lenguajes visuales exp. Estéticas</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 124 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	124</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 124</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-## Material de consulta
-## Material de consulta
-### Música 	https://apmusem.org/wp-
-content/uploads/2020/09/ACTIVIDADES-MUSICALES-
-ADAPTADAS-A-LA-NUEVA-NORMALIDAD.pdf
-https://www.escuelablascanas.cl/colegio-
-online/docs/14052020_637am_5ebd3b794c35c.pdf
-### Danza 	https://cee.edu.mx/NuestrasPublicaciones/22_Crear-
-Crecer/Capitulos/Crear-Crecer_1.pdf
-https://alasyraices.gob.mx/
-### Artes visuales 	http://www.bnm.me.gov.ar/giga1/documentos/EL002229.pdf
-### Teatro 	https://www.cee.edu.mx/NuestrasPublicaciones/22_Crear-
-Crecer/Capitulos/Crear-Crecer_2.pdf
-https://www.educa.jcyl.es/crol/es/recursos-
-educativos/juego-dramatico.ficheros/1542693-
-Juego%20Dram%C3%A1tico%209-05-2022.pdf
-Material audiovisual
-https://www.youtube.com/watch?v=-iSHn9MFKw4
-https://inba.gob.mx/sitios/recorridos-virtuales/museo-nacional-de-arquitectura/
-
-
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 124" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="6">Proyectos escolares</td></tr><tr><td colspan="6">6° Grado</td></tr><tr><td></td><td>Nombre del</td><td>Campo</td><td>Lenguaje</td><td></td><td>Producto(s) del</td></tr><tr><td>Página</td><td>Proyecto</td><td>Formativo</td><td>Artístico</td><td>Ejes Articuladores</td><td>proyecto</td></tr><tr><td>10</td><td>Comunicarte</td><td>Lenguajes</td><td>teatro</td><td>pensamiento crítico, artes y experiencias estéticas</td><td>Minidrama con apoyo de un texto dramático</td></tr><tr><td>70</td><td>Tormenta de miradas... cosecha de ideas</td><td>Lenguajes</td><td>artes visuales</td><td>pensamiento crítico, artes y experiencias estéticas</td><td>Elaboración de un mural</td></tr><tr><td>82</td><td>Colectivizarte</td><td>Lenguajes</td><td>artes visuales y danza</td><td>Aprop. de las culturas a través de la lec. y escr. Artes y expe. Estéticas</td><td>Representación de un happening (acción en tiempo real que se considera de arte</td></tr><tr><td>92</td><td>Soy pasado y presente, soy mis raíces y mi presente</td><td>Lenguajes</td><td>danza</td><td>Aprop. de las culturas a través de la lec. y escr. Artes y expe. Estéticas, intercultaridad critica, artes y experiencias estéticas.</td><td>Presentación de secuencia dancística</td></tr></tbody></table></div>
+<div class="pdf-recovered-content" aria-label="Contenido recuperado del PDF"><p class="pdf-source-line">artes y experiencias Minidrama con apoyo</p><p class="pdf-source-line">10 Comunicarte Lenguajes teatro estéticas de un texto dramático</p><p class="pdf-source-line">miradas... pensamiento crítico,</p><p class="pdf-source-line">cosecha de artes artes y experiencias Elaboración de un</p><p class="pdf-source-line">70 ideas Lenguajes visuales estéticas mural</p><p class="pdf-source-line">Aprop. de las Representación de un</p><p class="pdf-source-line">artes culturas a través de happening (acción en</p><p class="pdf-source-line">visuales y la lec. y escr. Artes y tiempo real que se</p><p class="pdf-source-line">82 Colectivizarte Lenguajes danza expe. Estéticas considera de arte</p><p class="pdf-source-line">Soy pasado y intercultaridad</p><p class="pdf-source-line">presente, soy critica, artes y</p><p class="pdf-source-line">mis raíces y mi experiencias Presentación de</p><p class="pdf-source-line">92 presente Lenguajes danza estéticas. secuencia dancística</p></div>
 <!-- PAGE_END -->
 <!-- PAGE_START 125 -->
-
-
-<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 	125</small>
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 125</small>
 Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
-## Referencias
-SEP (2011) Programa de educación artística. Primarias. México
-Sep (2022a) Programa de estudio para la educación preescolar, primaria y secundaria
-para la Educación Plan de Estudio 2022. México.
-SEP (2022b) Programa de estudio para la educación primaria: programa sintético de la
-fase 3. México
-SEP (2024) Cuadernos de apoyo curricular para la práctica docente. Dossier del
-espacio curricular de artes. Educación básica. Fase de la 1 a la 6. México
-Vygotsky, L.S. (2003). La imaginación y el arte en la infancia. Akal.
-
-
+<h3 class="pdf-section-title">Material de consulta</h3>
+<div class="pdf-table-scroll" role="region" aria-label="Tabla 1 de la página 125" tabindex="0"><table class="pdf-table"><tbody><tr><td colspan="2">Material de consulta</td></tr><tr><td>Música</td><td>https://apmusem.org/wp- content/uploads/2020/09/ACTIVIDADES-MUSICALES- ADAPTADAS-A-LA-NUEVA-NORMALIDAD.pdf https://www.escuelablascanas.cl/colegio- online/docs/14052020_637am_5ebd3b794c35c.pdf</td></tr><tr><td>Danza</td><td>https://cee.edu.mx/NuestrasPublicaciones/22_Crear- Crecer/Capitulos/Crear-Crecer_1.pdf https://alasyraices.gob.mx/</td></tr><tr><td>Artes visuales</td><td>http://www.bnm.me.gov.ar/giga1/documentos/EL002229.pdf</td></tr><tr><td>Teatro</td><td>https://www.cee.edu.mx/NuestrasPublicaciones/22_Crear- Crecer/Capitulos/Crear-Crecer_2.pdf https://www.educa.jcyl.es/crol/es/recursos- educativos/juego-dramatico.ficheros/1542693- Juego%20Dram%C3%A1tico%209-05-2022.pdf</td></tr></tbody></table></div>
+<p class="pdf-source-line">Material audiovisual</p>
+<p class="pdf-source-line">https://www.youtube.com/watch?v=-iSHn9MFKw4</p>
+<p class="pdf-source-line">https://inba.gob.mx/sitios/recorridos-virtuales/museo-nacional-de-arquitectura/</p>
+<!-- PAGE_END -->
+<!-- PAGE_START 126 -->
+<small class="block text-xs opacity-50 mb-2">Programa analítico primaria 126</small>
+Programa Analítico de Artes de las Fases 3, 4 y 5 Versión 2025
+<h3 class="pdf-section-title">Referencias</h3>
+<p class="pdf-source-line">SEP (2011) Programa de educación artística. Primarias. México</p>
+<p class="pdf-source-line">Sep (2022a) Programa de estudio para la educación preescolar, primaria y secundaria</p>
+<p class="pdf-source-line">para la Educación Plan de Estudio 2022. México.</p>
+<p class="pdf-source-line">SEP (2022b) Programa de estudio para la educación primaria: programa sintético de la</p>
+<p class="pdf-source-line">fase 3. México</p>
+<p class="pdf-source-line">SEP (2024) Cuadernos de apoyo curricular para la práctica docente. Dossier del</p>
+<p class="pdf-source-line">espacio curricular de artes. Educación básica. Fase de la 1 a la 6. México</p>
+<p class="pdf-source-line">Vygotsky, L.S. (2003). La imaginación y el arte en la infancia. Akal.</p>
 <!-- PAGE_END -->

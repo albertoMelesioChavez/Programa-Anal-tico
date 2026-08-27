@@ -635,6 +635,66 @@ function ContenidosArtesContent() {
                 .prose-custom h4 { margin: 40px 0 16px; font-size: 20px; font-weight: 800; }
                 .prose-custom ul, .prose-custom ol { margin-bottom: 24px; padding-left: 20px; }
                 .prose-custom li { margin-bottom: 8px; }
+                .programa-cover-art {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    margin: 30px 0 18px;
+                    border-radius: 18px;
+                    box-shadow: 0 18px 42px rgba(234, 88, 12, .18);
+                }
+                .programa-inline-visual {
+                    margin: 24px 0 34px;
+                    overflow: hidden;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 16px;
+                    background: #fff;
+                    box-shadow: 0 12px 30px rgba(15, 23, 42, .08);
+                }
+                .programa-inline-visual img {
+                    display: block;
+                    width: 100%;
+                    max-height: 540px;
+                    object-fit: contain;
+                    background: #f8fafc;
+                }
+                .programa-inline-visual figcaption {
+                    padding: 12px 16px;
+                    border-top: 1px solid #e2e8f0;
+                    color: #475569;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 1.45;
+                }
+                .pdf-source-line { margin: 0 0 10px !important; line-height: 1.55; }
+                .pdf-section-title { margin: 24px 0 14px; color: #1d4ed8; font-size: 20px; line-height: 1.25; }
+                .pdf-subtitle { margin: 18px 0 10px !important; color: #0f172a; font-size: 16px !important; }
+                .pdf-table-scroll {
+                    width: 100%;
+                    margin: 20px 0 30px;
+                    overflow-x: auto;
+                    border: 1px solid #cbd5e1;
+                    border-radius: 12px;
+                    background: #fff;
+                    box-shadow: 0 5px 18px rgba(15, 23, 42, .06);
+                }
+                .pdf-table {
+                    width: 100%;
+                    min-width: 620px;
+                    border-collapse: collapse;
+                    table-layout: auto;
+                    font-size: 13px;
+                    line-height: 1.45;
+                }
+                .pdf-table th, .pdf-table td {
+                    padding: 12px 14px;
+                    border: 1px solid #cbd5e1;
+                    vertical-align: top;
+                    text-align: left;
+                    overflow-wrap: anywhere;
+                }
+                .pdf-table th { background: #eff6ff; color: #1e3a8a; font-weight: 900; }
+                .pdf-table tr:nth-child(even) td { background: #f8fafc; }
                 .loader-blue {
                     width: 48px;
                     height: 48px;
