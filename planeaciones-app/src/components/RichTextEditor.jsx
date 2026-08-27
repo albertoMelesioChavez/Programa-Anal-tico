@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import { BubbleMenu } from '@tiptap/react/menus';
 import StarterKit from '@tiptap/starter-kit';
@@ -44,7 +44,7 @@ const Toolbar = ({ editor, darkMode }) => {
   });
 
   return (
-    <div style={{ 
+    <div className="rich-text-editor" style={{
       display: 'flex', 
       flexWrap: 'wrap',
       gap: '4px', 
@@ -211,7 +211,7 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
           color: ${darkMode ? '#9ca3af' : '#475569'};
         }
         .custom-editor .ProseMirror blockquote {
-          border-left: 4px solid #2563eb;
+          border-left: 1px solid #2563eb;
           padding-left: 1.5rem;
           font-style: italic;
           color: ${darkMode ? '#d1d5db' : '#64748b'};
@@ -225,7 +225,7 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
       `}</style>
 
       {editable && isFocused && (
-        <div style={{
+        <div className="rich-text-editor-toolbar" style={{
             position: 'fixed',
             top: '64px',
             left: '280px',
@@ -259,6 +259,35 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
       <div style={{ width: '100%' }}>
         <EditorContent editor={editor} />
       </div>
+
+      <style jsx global>{`
+        @media (max-width: 768px) {
+          .rich-text-editor-toolbar {
+            position: sticky !important;
+            top: 0 !important;
+            left: auto !important;
+            right: auto !important;
+            width: 100%;
+            max-height: 120px;
+            overflow-x: auto;
+            overflow-y: auto;
+            z-index: 20 !important;
+          }
+          .rich-text-editor-toolbar > div {
+            flex-wrap: nowrap !important;
+            min-width: max-content;
+          }
+          .rich-text-editor .custom-editor {
+            min-height: 260px !important;
+            padding: 24px 16px !important;
+            font-size: 16px !important;
+          }
+          .rich-text-editor .custom-editor table {
+            display: block;
+            overflow-x: auto;
+          }
+        }
+      `}</style>
 
     </div>
   );

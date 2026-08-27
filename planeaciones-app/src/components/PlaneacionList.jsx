@@ -47,8 +47,6 @@ export default function PlaneacionList({ planeaciones, onDelete, onEdit, editing
                                 <span style={{ fontSize: '10px', padding: '4px 12px', borderRadius: '100px', background: '#ecfdf5', color: '#10b981', fontWeight: '800', textTransform: 'uppercase' }}>{p.lenguaje_nombre || `Lenguaje ${p.lenguaje_id}`}</span>
                             </div>
                             {isExpanded && <div style={{ marginTop: '12px', display: 'flex', alignItems: 'center', gap: '7px', flexWrap: 'wrap', color: '#64748b', fontSize: '10px', fontWeight: '800' }}>
-                                <span style={{ padding: '5px 9px', borderRadius: '8px', background: '#ecfdf5', color: '#047857' }}>🏫 {p.proyecto_escolar_titulo || 'Sin proyecto escolar'}</span>
-                                <span style={{ color: '#cbd5e1', fontSize: '14px' }}>›</span>
                                 <span style={{ padding: '5px 9px', borderRadius: '8px', background: '#f5f3ff', color: '#6d28d9' }}>🎨 {p.proyecto_arte_titulo || 'Sin proyecto de arte'}</span>
                                 <span style={{ color: '#cbd5e1', fontSize: '14px' }}>›</span>
                                 <span>Esta planeación</span>

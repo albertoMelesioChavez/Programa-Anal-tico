@@ -19,11 +19,16 @@ function ContenidosArtesContent() {
     
     const [viewMode, setViewMode] = useState(searchParams.get('view') || 'digital');
     const [scrollPercentage, setScrollPercentage] = useState(0);
+    const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
     
     const mainRef = useRef(null);
     const isDragging = useRef(false);
     const minimapRef = useRef(null);
     const pageRefs = useRef([]);
+
+    const syncPageRefs = (nextPages) => {
+        pageRefs.current = nextPages.map((_, index) => pageRefs.current[index] || createRef());
+    };
 
     // Theme logic
     const theme = {
@@ -82,7 +87,7 @@ function ContenidosArtesContent() {
                     return { title, cleanHtml };
                 }));
                 setPages(htmlPages);
-                pageRefs.current = htmlPages.map(() => createRef());
+                syncPageRefs(htmlPages);
             } catch (error) {
                 console.error('Error loading content:', error);
                 alert('Atención: No se pudo cargar el contenido. ' + error.message);
@@ -126,6 +131,14 @@ function ContenidosArtesContent() {
         router.push(`?${params.toString()}`, { scroll: false });
     }, [viewMode, router, searchParams]);
 
+    useEffect(() => {
+        const closeOnEscape = (event) => {
+            if (event.key === 'Escape') setIsMobileNavOpen(false);
+        };
+        window.addEventListener('keydown', closeOnEscape);
+        return () => window.removeEventListener('keydown', closeOnEscape);
+    }, []);
+
     const handleSaveDocument = async (updatedPages) => {
         // No guardar si no hay cambios reales o si está vacío
         if (!updatedPages || updatedPages.length === 0) return;
@@ -135,13 +148,15 @@ function ContenidosArtesContent() {
             updatedPages.forEach((p, pIdx) => {
                 fullContent += `<!-- PAGE_START ${pIdx + 1} -->\n<p><strong>${p.title}</strong></p>\n${p.cleanHtml}\n<!-- PAGE_END -->\n`;
             });
-            await fetch('/api/documentos/artes', {
+            const response = await fetch('/api/documentos/artes', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ content: fullContent }),
             });
+            if (!response.ok) throw new Error('No se pudo guardar el documento. Intenta de nuevo.');
         } catch (error) { 
-            console.error('Save failed', error); 
+            console.error('Save failed', error);
+            alert(error.message);
         } finally { setIsSaving(false); }
     };
 
@@ -149,6 +164,7 @@ function ContenidosArtesContent() {
         const updatedPages = [...pages];
         updatedPages[idx] = { ...updatedPages[idx], cleanHtml: newHtml };
         setPages(updatedPages);
+        syncPageRefs(updatedPages);
         await handleSaveDocument(updatedPages);
     };
 
@@ -156,8 +172,8 @@ function ContenidosArtesContent() {
         const newSection = { title: 'Nueva Sección', cleanHtml: '<p>Contenido de la nueva sección...</p>' };
         const updatedPages = [...pages, newSection];
         setPages(updatedPages);
-        // Esperar un tick para que el ref se actualice si es necesario, 
-        // aunque pageRefs se maneja en el render
+        syncPageRefs(updatedPages);
+        setCurrentPageIdx(updatedPages.length - 1);
         await handleSaveDocument(updatedPages);
     };
 
@@ -165,6 +181,8 @@ function ContenidosArtesContent() {
         if (!confirm('¿Estás seguro de eliminar esta sección?')) return;
         const updatedPages = pages.filter((_, i) => i !== idx);
         setPages(updatedPages);
+        syncPageRefs(updatedPages);
+        setCurrentPageIdx((current) => Math.min(current, Math.max(0, updatedPages.length - 1)));
         await handleSaveDocument(updatedPages);
     };
 
@@ -174,6 +192,7 @@ function ContenidosArtesContent() {
         const targetIdx = idx + direction;
         [updatedPages[idx], updatedPages[targetIdx]] = [updatedPages[targetIdx], updatedPages[idx]];
         setPages(updatedPages);
+        syncPageRefs(updatedPages);
         setCurrentPageIdx(targetIdx);
         await handleSaveDocument(updatedPages);
     };
@@ -182,6 +201,20 @@ function ContenidosArtesContent() {
         const updatedPages = [...pages];
         updatedPages[idx] = { ...updatedPages[idx], title: newTitle };
         setPages(updatedPages);
+        syncPageRefs(updatedPages);
+    };
+
+    const selectSection = (idx) => {
+        pageRefs.current[idx]?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setCurrentPageIdx(idx);
+        setIsMobileNavOpen(false);
+    };
+
+    const toggleDocumentVersion = () => {
+        const nextView = viewMode === 'pdf' ? 'digital' : 'pdf';
+        setViewMode(nextView);
+        setIsMobileNavOpen(false);
+        if (nextView === 'pdf') setIsEditMode(false);
     };
 
     const improveWithAI = async (idx) => {
@@ -224,7 +257,13 @@ function ContenidosArtesContent() {
         const a = document.createElement('a');
         a.href = url;
         a.download = 'Programa_Analitico_Artes_2025.md';
+        a.style.display = 'none';
+        document.body.appendChild(a);
         a.click();
+        window.setTimeout(() => {
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }, 1000);
     };
 
     const handleScroll = (e) => {
@@ -264,10 +303,10 @@ function ContenidosArtesContent() {
     }
 
     return (
-        <div style={{ display: 'flex', height: '100vh', background: theme.bg, color: theme.text, overflow: 'hidden' }}>
+        <div className="analitico-shell" style={{ display: 'flex', height: '100vh', background: theme.bg, color: theme.text, overflow: 'hidden' }}>
             {/* Sidebar / Navigation */}
             {viewMode !== 'pdf' && (
-                <aside style={{ 
+                <aside id="artes-secciones" className={`analitico-sidebar ${isMobileNavOpen ? 'is-open' : ''}`} style={{
                     width: '320px', 
                     background: theme.sidebar, 
                     borderRight: `1px solid ${theme.border}`,
@@ -306,6 +345,8 @@ function ContenidosArtesContent() {
                                                 value={p.title} 
                                                 onChange={(e) => renameSection(idx, e.target.value)}
                                                 onBlur={() => handleSaveDocument(pages)}
+                                                onFocus={() => selectSection(idx)}
+                                                aria-label={`Nombre de la sección ${idx + 1}`}
                                                 style={{ 
                                                     background: 'transparent', 
                                                     border: 'none', 
@@ -321,10 +362,7 @@ function ContenidosArtesContent() {
                                         </div>
                                     ) : (
                                         <button 
-                                            onClick={() => {
-                                                pageRefs.current[idx].current?.scrollIntoView({ behavior: 'smooth' });
-                                                setCurrentPageIdx(idx);
-                                            }}
+                                            onClick={() => selectSection(idx)}
                                             style={{
                                                 flex: 1,
                                                 textAlign: 'left',
@@ -348,8 +386,8 @@ function ContenidosArtesContent() {
 
                                     {isEditMode && (
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                                            <button onClick={() => moveSection(idx, -1)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', padding: '2px', color: theme.subtext, opacity: idx === 0 ? 0.2 : 1 }}>▲</button>
-                                            <button onClick={() => moveSection(idx, 1)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', padding: '2px', color: theme.subtext, opacity: idx === pages.length - 1 ? 0.2 : 1 }}>▼</button>
+                                            <button aria-label={`Subir sección ${idx + 1}`} disabled={idx === 0} onClick={() => moveSection(idx, -1)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', padding: '2px', color: theme.subtext, opacity: idx === 0 ? 0.2 : 1 }}>▲</button>
+                                            <button aria-label={`Bajar sección ${idx + 1}`} disabled={idx === pages.length - 1} onClick={() => moveSection(idx, 1)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', padding: '2px', color: theme.subtext, opacity: idx === pages.length - 1 ? 0.2 : 1 }}>▼</button>
                                         </div>
                                     )}
                                 </div>
@@ -390,7 +428,7 @@ function ContenidosArtesContent() {
                                     borderRadius: '12px',
                                     border: `2px dashed ${theme.border}`,
                                     background: 'transparent',
-                                    color: theme.accent,
+                                                    color: '#2563eb',
                                     fontSize: '11px',
                                     fontWeight: '800',
                                     cursor: 'pointer',
@@ -406,11 +444,14 @@ function ContenidosArtesContent() {
                     </div>
                 </aside>
             )}
+            {viewMode !== 'pdf' && isMobileNavOpen && (
+                <button className="analitico-overlay" aria-label="Cerrar secciones" onClick={() => setIsMobileNavOpen(false)} />
+            )}
 
             {/* Main Editor / Viewer */}
-            <main style={{ flex: 1, position: 'relative', display: 'flex', flexDirection: 'column' }}>
+            <main className="analitico-main" style={{ flex: 1, position: 'relative', display: 'flex', flexDirection: 'column' }}>
                 {/* Fixed Top Bar */}
-                <header style={{ 
+                <header className="analitico-header" style={{
                     height: '80px', 
                     padding: '0 40px', 
                     display: 'flex', 
@@ -421,33 +462,31 @@ function ContenidosArtesContent() {
                     backdropFilter: 'blur(10px)',
                     zIndex: 100
                 }}>
-                    <div style={{ display: 'flex', gap: '8px' }}>
-                        <button 
-                            onClick={() => setViewMode('digital')}
-                            style={{ padding: '8px 20px', borderRadius: '100px', fontSize: '12px', fontWeight: '800', background: viewMode === 'digital' ? theme.text : 'transparent', color: viewMode === 'digital' ? theme.bg : theme.text, border: `1px solid ${theme.border}`, cursor: 'pointer' }}
+                    <div className="analitico-header-tabs" style={{ display: 'flex', gap: '8px' }}>
+                        {viewMode !== 'pdf' && <button className="mobile-sections-button" onClick={() => setIsMobileNavOpen(true)} aria-expanded={isMobileNavOpen} aria-controls="artes-secciones">☰ <span>SECCIONES</span></button>}
+                        <button
+                            className="document-version-toggle"
+                            onClick={toggleDocumentVersion}
+                            aria-label={viewMode === 'pdf' ? 'Abrir la versión digital del Programa Analítico del departamento de Artística' : 'Abrir el PDF del Programa Analítico del departamento de Artística'}
+                            style={{ padding: '9px 18px', borderRadius: '12px', fontSize: '12px', fontWeight: '800', background: theme.text, color: theme.bg, border: 'none', cursor: 'pointer' }}
                         >
-                            VISTA DIGITAL
-                        </button>
-                        <button 
-                            onClick={() => setViewMode('pdf')}
-                            style={{ padding: '8px 20px', borderRadius: '100px', fontSize: '12px', fontWeight: '800', background: viewMode === 'pdf' ? theme.text : 'transparent', color: viewMode === 'pdf' ? theme.bg : theme.text, border: `1px solid ${theme.border}`, cursor: 'pointer' }}
-                        >
-                            MODO DOCUMENTO
+                            <span className="document-version-title">Programa Analítico del departamento de Artística</span>
+                            <span className="document-version-action">{viewMode === 'pdf' ? 'Ver versión digital' : 'Abrir PDF'}</span>
                         </button>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                    <div className="analitico-header-actions" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
                         <button 
                             onClick={() => setIsEditMode(!isEditMode)}
                             style={{ padding: '10px 24px', borderRadius: '100px', fontSize: '12px', fontWeight: '900', background: isEditMode ? '#ef4444' : '#0f172a', color: '#fff', border: 'none', cursor: 'pointer' }}
                         >
-                            {isEditMode ? 'SALIR DE EDICIÓN' : 'EDITAR CONTENIDO'}
+                            {isEditMode ? 'SALIR DE EDICIÓN' : 'EDITAR'}
                         </button>
                         <button 
                             onClick={handleExport}
                             style={{ padding: '10px 24px', borderRadius: '100px', fontSize: '12px', fontWeight: '900', background: '#2563eb', color: '#fff', border: 'none', cursor: 'pointer' }}
                         >
-                            EXPORTAR .MD
+                            EXPORTAR
                         </button>
                     </div>
                 </header>
@@ -456,6 +495,7 @@ function ContenidosArtesContent() {
                 <div 
                     ref={mainRef}
                     onScroll={handleScroll}
+                    className="analitico-content-area"
                     style={{ 
                         flex: 1, 
                         overflowY: viewMode === 'pdf' ? 'hidden' : 'auto',
@@ -475,7 +515,7 @@ function ContenidosArtesContent() {
                             title="Programa Analítico Artes PDF"
                         />
                     ) : (
-                        <div style={{ 
+                        <div className="analitico-content" style={{
                             maxWidth: '850px', 
                             margin: '0 auto',
                             padding: '60px 20px',
@@ -502,7 +542,7 @@ function ContenidosArtesContent() {
                                         borderBottom: idx !== pages.length - 1 ? '1px solid #f1f5f9' : 'none',
                                         position: 'relative'
                                     }}
-                                    className="virtual-page"
+                                    className="virtual-page analitico-page"
                                 >
                                         <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
                                         {isEditMode && currentPageIdx === idx ? (
@@ -520,11 +560,12 @@ function ContenidosArtesContent() {
                                             />
                                         )}
                                         {/* Page Number Indicator */}
-                                        <div style={{ position: 'absolute', bottom: '30px', right: '40px', display: 'flex', alignItems: 'center', gap: '20px' }}>
+                                        <div className="analitico-page-footer" style={{ position: 'absolute', bottom: '30px', right: '40px', display: 'flex', alignItems: 'center', gap: '20px' }}>
                                             {isEditMode && currentPageIdx === idx && (
                                                 <button 
                                                     onClick={() => improveWithAI(idx)}
                                                     disabled={isSaving}
+                                                    className="ai-improve-button"
                                                     style={{
                                                         background: 'linear-gradient(135deg, #2563eb, #7c3aed)',
                                                         color: '#fff',
@@ -559,6 +600,7 @@ function ContenidosArtesContent() {
                 {viewMode === 'digital' && (
                     <div 
                         ref={minimapRef}
+                        className="analitico-minimap"
                         onMouseDown={handleDragStart}
                         onMouseMove={handleDragMove}
                         onMouseUp={handleDragEnd}
@@ -604,6 +646,89 @@ function ContenidosArtesContent() {
                     animation: rotation 1s linear infinite;
                 }
                 @keyframes rotation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+                .mobile-sections-button, .analitico-overlay { display: none; }
+                .document-version-toggle { display: inline-flex; align-items: center; gap: 12px; text-align: left; }
+                .document-version-title { line-height: 1.2; }
+                .document-version-action { color: #bfdbfe; font-size: 10px; white-space: nowrap; }
+
+                @media (max-width: 768px) {
+                    .analitico-shell { height: 100dvh !important; }
+                    .analitico-sidebar {
+                        position: fixed !important;
+                        inset: 0 auto 0 0;
+                        width: min(86vw, 320px) !important;
+                        z-index: 200 !important;
+                        transform: translateX(-105%);
+                        transition: transform .22s ease;
+                        box-shadow: 12px 0 30px rgba(15, 23, 42, .16);
+                    }
+                    .analitico-sidebar.is-open { transform: translateX(0); }
+                    .analitico-overlay {
+                        display: block;
+                        position: fixed;
+                        inset: 0;
+                        z-index: 150;
+                        border: 0;
+                        background: rgba(15, 23, 42, .35);
+                    }
+                    .analitico-header {
+                        height: auto !important;
+                        min-height: 64px;
+                        padding: 10px 12px !important;
+                        gap: 8px;
+                        flex-wrap: wrap;
+                    }
+                    .analitico-header-tabs {
+                        flex: 1 1 100%;
+                        min-width: 0;
+                        overflow-x: auto;
+                        padding-bottom: 2px;
+                        scrollbar-width: none;
+                    }
+                    .analitico-header-tabs::-webkit-scrollbar { display: none; }
+                    .analitico-header-tabs button { flex: 0 0 auto; white-space: nowrap; padding: 8px 13px !important; font-size: 10px !important; }
+                    .document-version-toggle { flex: 1 1 230px !important; min-height: 44px; justify-content: space-between; gap: 8px; white-space: normal !important; text-align: left; }
+                    .document-version-title { line-height: 1.2; }
+                    .document-version-action { flex: 0 0 auto; color: #bfdbfe; font-size: 9px; }
+                    .mobile-sections-button {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 5px;
+                        border: 1px solid #cbd5e1;
+                        background: #fff;
+                        color: #0f172a;
+                        border-radius: 999px;
+                        font-weight: 900;
+                        cursor: pointer;
+                    }
+                    .analitico-header-actions { width: 100%; justify-content: stretch; gap: 8px !important; }
+                    .analitico-header-actions button { flex: 1; min-width: 0; min-height: 44px; padding: 9px 8px !important; font-size: 10px !important; white-space: nowrap; }
+                    .analitico-content-area { overflow-x: hidden !important; }
+                    .analitico-content {
+                        width: 100%;
+                        box-sizing: border-box;
+                        padding: 18px 10px 40px !important;
+                        gap: 10px !important;
+                    }
+                    .analitico-page {
+                        box-sizing: border-box;
+                        width: 100%;
+                        padding: 30px 18px 68px !important;
+                        border-radius: 12px;
+                        box-shadow: 0 2px 10px rgba(15, 23, 42, .06) !important;
+                        overflow-wrap: anywhere;
+                    }
+                    .analitico-page h3 { font-size: 25px !important; line-height: 1.12; margin-bottom: 22px !important; }
+                    .analitico-page .prose-custom { font-size: 16px !important; line-height: 1.7 !important; }
+                    .analitico-page .prose-custom h4 { font-size: 18px; margin: 28px 0 12px; }
+                    .analitico-page .prose-custom table { display: block; max-width: 100%; overflow-x: auto; }
+                    .analitico-page-footer { right: 18px !important; bottom: 20px !important; gap: 10px !important; max-width: calc(100% - 36px); }
+                    .ai-improve-button { min-height: 36px; padding: 8px 10px !important; }
+                    .analitico-sidebar input { min-height: 44px; }
+                    .analitico-sidebar button:focus-visible, .analitico-header button:focus-visible { outline: 3px solid rgba(37, 99, 235, .4); outline-offset: 2px; }
+                    .analitico-minimap { display: none; }
+                }
             `}</style>
         </div>
     );

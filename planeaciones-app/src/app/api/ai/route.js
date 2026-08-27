@@ -11,17 +11,15 @@ function localPlanning(context = {}) {
     const grado = clean(context.grado, 'primaria');
     const contenido = clean(context.contenido, 'el contenido seleccionado');
     const pda = clean(context.pda, 'el proceso de desarrollo de aprendizaje seleccionado');
-    const schoolTitle = clean(context.proyecto_escolar?.titulo, 'el contexto de la escuela');
-    const schoolContext = clean(context.proyecto_escolar?.contexto_y_problematicas, 'las necesidades identificadas por la comunidad escolar').slice(0, 700);
     const artTitle = clean(context.proyecto_del_maestro_de_arte?.titulo, 'el proyecto artístico del grupo');
     const artTheme = clean(context.proyecto_del_maestro_de_arte?.tematica, 'expresión y creación colectiva');
     const value = clean(context.valor_mensual);
     const valuePhrase = value ? `, practicando el valor de ${value}` : '';
 
     return JSON.stringify({
-        inicio: `Recuperar saberes previos mediante una conversación breve y una observación sensible relacionada con “${contenido}”. Presentar una situación cercana de ${schoolTitle} y formular preguntas para que las y los estudiantes de ${grado} expresen qué observan, sienten y desean transformar${valuePhrase}.`,
-        desarrollo: `Organizar equipos con roles incluyentes. Explorar materiales, ideas y referentes vinculados con “${artTitle}” y la temática ${artTheme}. Cada equipo realizará una producción o ensayo que atienda ${pda}. Durante el proceso se contrastarán decisiones con este contexto escolar: ${schoolContext}. La docente o el docente acompañará con preguntas, retroalimentación descriptiva y ajustes de accesibilidad.`,
-        cierre: `Realizar una muestra breve de los procesos y productos. Cada equipo explicará qué aprendió, cómo su propuesta se relaciona con ${pda} y qué aporta al proyecto escolar. Cerrar con autoevaluación y un acuerdo concreto para continuar${valuePhrase}.`,
+        inicio: `Recuperar saberes previos mediante una conversación breve y una observación sensible relacionada con “${contenido}”. Presentar el reto creativo de “${artTitle}” y formular preguntas para que las y los estudiantes de ${grado} expresen qué observan, sienten y desean crear${valuePhrase}.`,
+        desarrollo: `Organizar equipos con roles incluyentes. Explorar materiales, ideas y referentes vinculados con “${artTitle}” y la temática ${artTheme}. Cada equipo realizará una producción o ensayo que atienda ${pda}. La docente o el docente acompañará con preguntas, retroalimentación descriptiva y ajustes de accesibilidad.`,
+        cierre: `Realizar una muestra breve de los procesos y productos. Cada equipo explicará qué aprendió y cómo su propuesta se relaciona con ${pda}. Cerrar con autoevaluación y un acuerdo concreto para continuar${valuePhrase}.`,
         metodologia_sugerida: 'Aprendizaje Basado en Proyectos con enfoque comunitario',
         evaluacion_sugerida: 'Evaluación formativa mediante observación, bitácora, autoevaluación y retroalimentación entre pares. Valorar la relación con el PDA, la participación, las decisiones creativas y la vinculación con el contexto.',
         recursos_sugeridos: 'Materiales disponibles y reutilizables, referentes visuales o sonoros, hojas de registro, recursos del entorno escolar y evidencias del proceso.'
@@ -31,9 +29,8 @@ function localPlanning(context = {}) {
 function localIntroduction(context = {}) {
     const title = clean(context.titulo, 'Proyecto del maestro de arte');
     const theme = clean(context.tematica, 'la expresión artística y la vida comunitaria');
-    const parent = clean(context.proyecto_escolar_titulo || context.proyecto_escolar?.titulo, 'el proyecto escolar vigente');
 
-    return `El proyecto “${title}” propone que las artes sean un medio para observar, interpretar y transformar la realidad cercana de las niñas y los niños. A partir de la temática ${theme}, las experiencias se vinculan con ${parent} y con los contenidos y PDA seleccionados en el Programa Analítico.\n\nLa ruta de trabajo integra apreciación, diálogo, experimentación, creación y socialización. Se favorecerá la participación incluyente, la colaboración y la toma de decisiones, reconociendo diversas maneras de expresar ideas mediante imágenes, sonidos, movimiento, palabra u objetos.\n\nLos productos esperados se comprenderán como evidencias de un proceso, no únicamente como resultados finales. La evaluación será formativa y permitirá recuperar avances, decisiones creativas, relación con el contexto y aportaciones de cada estudiante al trabajo colectivo.`;
+    return `El proyecto “${title}” propone que las artes sean un medio para observar, interpretar y transformar la realidad cercana de las niñas y los niños. A partir de la temática ${theme}, las experiencias se vinculan con los contenidos y PDA seleccionados en el Programa Analítico.\n\nLa ruta de trabajo integra apreciación, diálogo, experimentación, creación y socialización. Se favorecerá la participación incluyente, la colaboración y la toma de decisiones, reconociendo diversas maneras de expresar ideas mediante imágenes, sonidos, movimiento, palabra u objetos.\n\nLos productos esperados se comprenderán como evidencias de un proceso, no únicamente como resultados finales. La evaluación será formativa y permitirá recuperar avances, decisiones creativas y aportaciones de cada estudiante al trabajo colectivo.`;
 }
 
 function localProduct(context = {}) {

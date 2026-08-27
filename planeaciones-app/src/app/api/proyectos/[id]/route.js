@@ -1,9 +1,8 @@
 import { db as client } from '@/lib/db';
 import { NextResponse } from 'next/server';
-import { ensureProyectoArteTable, ensureProyectoEscolarTable } from '@/lib/context-schema';
+import { ensureProyectoArteTable } from '@/lib/context-schema';
 
 async function initDB() {
-    await ensureProyectoEscolarTable();
     await ensureProyectoArteTable();
 }
 
@@ -42,11 +41,11 @@ export async function PATCH(request, { params }) {
     try {
         await initDB();
         const data = await request.json();
-        const { titulo, tematica, introduccion, productos, vinculacion, proyecto_escolar_id } = data;
+        const { titulo, tematica, introduccion, productos, vinculacion } = data;
 
         await client.execute({
             sql: `UPDATE proyectos 
-                  SET titulo = ?, tematica = ?, introduccion = ?, productos = ?, vinculacion = ?, proyecto_escolar_id = COALESCE(?, proyecto_escolar_id)
+                  SET titulo = ?, tematica = ?, introduccion = ?, productos = ?, vinculacion = ?
                   WHERE id = ?`,
             args: [
                 titulo, 
@@ -54,7 +53,6 @@ export async function PATCH(request, { params }) {
                 introduccion, 
                 JSON.stringify(productos || []), 
                 JSON.stringify(vinculacion || []),
-                proyecto_escolar_id?.toString() || null,
                 id
             ]
         });

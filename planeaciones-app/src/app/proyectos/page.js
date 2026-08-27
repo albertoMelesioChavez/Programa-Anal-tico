@@ -5,19 +5,16 @@ import { useRouter } from 'next/navigation';
 
 export default function ProyectosPage() {
     const [proyectos, setProyectos] = useState([]);
-    const [proyectosEscolares, setProyectosEscolares] = useState([]);
-    const [proyectoEscolarId, setProyectoEscolarId] = useState('');
     const [loading, setLoading] = useState(true);
     const router = useRouter();
 
     useEffect(() => {
         fetchProyectos();
-        fetch('/api/proyecto-escolar').then(res => res.ok ? res.json() : { proyectos: [] }).then(data => setProyectosEscolares(data.proyectos || [])).catch(() => {});
     }, []);
 
-    const fetchProyectos = async (schoolId = '') => {
+    const fetchProyectos = async () => {
         try {
-            const res = await fetch(`/api/proyectos${schoolId ? `?proyecto_escolar_id=${schoolId}` : ''}`);
+            const res = await fetch('/api/proyectos');
             const data = await res.json();
             setProyectos(data || []);
         } catch (error) {
@@ -76,10 +73,6 @@ export default function ProyectosPage() {
                         <p style={{ fontSize: '14px', color: theme.subtext }}>Administra los proyectos del maestro de arte.</p>
                     </div>
                     <div style={{ display: 'flex', gap: '12px' }}>
-                        <select value={proyectoEscolarId} onChange={(e) => { setProyectoEscolarId(e.target.value); setLoading(true); fetchProyectos(e.target.value); }} style={{ background: '#fff', padding: '12px 14px', borderRadius: '14px', border: `1px solid ${theme.border}`, color: theme.text, fontWeight: '700' }}>
-                            <option value="">Todos los proyectos escolares</option>
-                            {proyectosEscolares.map(proyecto => <option key={proyecto.id} value={proyecto.id}>{proyecto.titulo}</option>)}
-                        </select>
                         <div style={{ background: '#fff', padding: '12px 24px', borderRadius: '14px', border: `1px solid ${theme.border}`, display: 'flex', alignItems: 'center', gap: '10px' }}>
                             <span style={{ fontSize: '18px' }}>📁</span>
                             <span style={{ fontWeight: '700', fontSize: '14px' }}>{proyectos.length} Proyectos</span>
@@ -116,7 +109,12 @@ export default function ProyectosPage() {
                                     <button style={{ background: 'transparent', border: 'none', cursor: 'pointer', fontSize: '18px' }}>⋮</button>
                                 </div>
                                 <h3 style={{ fontSize: '20px', fontWeight: '900', marginBottom: '12px', letterSpacing: '-0.5px' }}>{p.titulo}</h3>
-                                <div style={{ fontSize: '11px', color: '#0f766e', fontWeight: '800', marginTop: '-6px', marginBottom: '12px' }}>🏫 {p.proyecto_escolar_titulo || 'Sin proyecto escolar asignado'}</div>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '-2px', marginBottom: '16px' }}>
+                                    <span title="Planeaciones vinculadas a este proyecto" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: '#eff6ff', color: '#1d4ed8', border: '1px solid #bfdbfe', borderRadius: '999px', padding: '6px 10px', fontSize: '11px', fontWeight: '800' }}>
+                                        <span aria-hidden="true">▤</span>
+                                        {Number(p.planeaciones_count || 0)} {Number(p.planeaciones_count || 0) === 1 ? 'planeación' : 'planeaciones'}
+                                    </span>
+                                </div>
                                 <p style={{ fontSize: '14px', color: theme.subtext, lineHeight: '1.6', marginBottom: '32px', display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                                     {p.introduccion || 'Sin descripción disponible.'}
                                 </p>

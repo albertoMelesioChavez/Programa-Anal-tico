@@ -29,7 +29,7 @@ export async function PUT(request, { params }) {
         const {
             titulo, fase_id, grado_id, lenguaje_id,
             contenido_nacional_id, contenido_estatal_id, pda_id, pda_por_grado, evaluacion_por_grado, recursos_por_grado, evidencias_por_grado,
-            proyecto_escolar_id, proyecto_arte_id, valor_mensual,
+            proyecto_arte_id, valor_mensual,
             ejes_articuladores,
             metodologia, actividades, recursos, evidencias, evaluacion,
             secuencia_inicio, secuencia_desarrollo, secuencia_cierre
@@ -45,7 +45,7 @@ export async function PUT(request, { params }) {
             sql: `UPDATE planeaciones SET 
                     titulo = ?, fase_id = ?, grado_id = ?, lenguaje_id = ?, 
                     contenido_nacional_id = ?, contenido_estatal_id = ?, pda_id = ?, pda_por_grado = ?, evaluacion_por_grado = ?, recursos_por_grado = ?, evidencias_por_grado = ?,
-                    proyecto_escolar_id = ?, proyecto_arte_id = ?, valor_mensual = ?,
+                    proyecto_arte_id = ?, valor_mensual = ?,
                     ejes_articuladores = ?,
                     metodologia = ?, actividades = ?, recursos = ?, evidencias = ?, evaluacion = ?,
                     secuencia_inicio = ?, secuencia_desarrollo = ?, secuencia_cierre = ?
@@ -62,7 +62,6 @@ export async function PUT(request, { params }) {
                 JSON.stringify(evaluacion_por_grado || []),
                 JSON.stringify(recursos_por_grado || []),
                 JSON.stringify(evidencias_por_grado || []),
-                proyecto_escolar_id?.toString() || null,
                 proyecto_arte_id?.toString() || null,
                 valor_mensual?.trim() || '',
                 ejes_articuladores || '',

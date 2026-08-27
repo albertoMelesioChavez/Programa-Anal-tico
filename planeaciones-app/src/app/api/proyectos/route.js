@@ -1,28 +1,26 @@
 import { db as client } from '@/lib/db';
 import { NextResponse } from 'next/server';
 import { put } from '@vercel/blob';
-import { ensureProyectoArteTable, ensureProyectoEscolarTable } from '@/lib/context-schema';
+import { ensureProyectoArteTable } from '@/lib/context-schema';
 import { extractTextFromDocument, titleFromFilename } from '@/lib/document-text';
 
 export const runtime = 'nodejs';
 
 // Inicializar tabla si no existe (seguridad extra)
 const initDB = async () => {
-    await ensureProyectoEscolarTable();
     await ensureProyectoArteTable();
 };
 
-export async function GET(request) {
+export async function GET() {
     try {
         await initDB();
-        const projectSchoolId = new URL(request.url).searchParams.get('proyecto_escolar_id');
         const result = await client.execute({
-            sql: `SELECT p.*, pe.titulo as proyecto_escolar_titulo
+            sql: `SELECT p.*, COUNT(pl.id) as planeaciones_count
                   FROM proyectos p
-                  LEFT JOIN proyectos_escolares pe ON p.proyecto_escolar_id = pe.id
-                  ${projectSchoolId ? 'WHERE p.proyecto_escolar_id = ?' : ''}
-                  ORDER BY p.created_at DESC`,
-            args: projectSchoolId ? [projectSchoolId] : []
+                  LEFT JOIN planeaciones pl ON CAST(pl.proyecto_arte_id AS TEXT) = CAST(p.id AS TEXT)
+                  GROUP BY p.id
+                  ORDER BY p.orden ASC, p.created_at DESC`,
+            args: []
         });
         const proyectos = result.rows.map(row => {
             const newRow = {};
@@ -51,11 +49,6 @@ export async function POST(request) {
         if (contentType.includes('multipart/form-data')) {
             const formData = await request.formData();
             const file = formData.get('archivo');
-            const proyectoEscolarId = String(formData.get('proyecto_escolar_id') || '').trim();
-
-            if (!proyectoEscolarId) {
-                return NextResponse.json({ error: 'Selecciona el proyecto escolar que contendrá este proyecto de arte.' }, { status: 400 });
-            }
             if (!(file instanceof File) || file.size === 0) {
                 return NextResponse.json({ error: 'Selecciona un archivo válido.' }, { status: 400 });
             }
@@ -73,8 +66,8 @@ export async function POST(request) {
 
             const titulo = String(formData.get('titulo') || titleFromFilename(file.name, 'Proyecto de arte')).trim();
             const result = await client.execute({
-                sql: `INSERT INTO proyectos (titulo, tematica, introduccion, productos, vinculacion, configuracion, proyecto_escolar_id, nombre_archivo, tipo_archivo, archivo_url)
-                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            sql: `INSERT INTO proyectos (titulo, tematica, introduccion, productos, vinculacion, configuracion, nombre_archivo, tipo_archivo, archivo_url)
+                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
                 args: [
                     titulo,
                     'Proyecto de arte importado desde archivo',
@@ -82,7 +75,6 @@ export async function POST(request) {
                     JSON.stringify([]),
                     JSON.stringify([]),
                     JSON.stringify({ origen: 'archivo' }),
-                    proyectoEscolarId,
                     file.name,
                     file.type || null,
                     archivoUrl
@@ -93,23 +85,22 @@ export async function POST(request) {
         }
 
         const data = await request.json();
-        const { titulo, tematica, introduccion, productos, vinculacion, configuracion, proyecto_escolar_id } = data;
+        const { titulo, tematica, introduccion, productos, vinculacion, configuracion } = data;
 
-        if (!titulo || !proyecto_escolar_id) {
-            return NextResponse.json({ error: 'Selecciona un proyecto escolar antes de crear el proyecto de arte.' }, { status: 400 });
+        if (!titulo) {
+            return NextResponse.json({ error: 'Escribe un título para el proyecto de arte.' }, { status: 400 });
         }
 
         const result = await client.execute({
-            sql: `INSERT INTO proyectos (titulo, tematica, introduccion, productos, vinculacion, configuracion, proyecto_escolar_id)
-                  VALUES (?, ?, ?, ?, ?, ?, ?)`,
+            sql: `INSERT INTO proyectos (titulo, tematica, introduccion, productos, vinculacion, configuracion)
+                  VALUES (?, ?, ?, ?, ?, ?)`,
             args: [
                 titulo, 
                 tematica, 
                 introduccion, 
                 JSON.stringify(productos || []), 
                 JSON.stringify(vinculacion || []), 
-                JSON.stringify(configuracion || {}),
-                String(proyecto_escolar_id)
+                JSON.stringify(configuracion || {})
             ]
         });
 

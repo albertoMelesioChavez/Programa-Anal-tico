@@ -4,6 +4,14 @@ Aplicación de planeación didáctica para Artes. La interfaz se puede publicar
 en Vercel, pero los proyectos y las planeaciones necesitan una base de datos
 Turso configurada en el entorno de despliegue.
 
+## Funcionalidades
+
+- Crear y administrar proyectos de arte vinculados a un proyecto escolar.
+- Identificar en la lista qué proyecto escolar da contexto a cada proyecto de
+  arte; los proyectos sin vínculo también se señalan claramente.
+- Consultar, desde cada proyecto de arte, cuántas planeaciones están vinculadas
+  a él.
+
 ## Desarrollo local
 
 ```bash

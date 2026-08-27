@@ -43,7 +43,6 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
     const [contenidos, setContenidos] = useState({ nacionales: [], estatales: [] });
     const [pdas, setPdas] = useState([]);
     const [proyectosArte, setProyectosArte] = useState([]);
-    const [proyectosEscolares, setProyectosEscolares] = useState([]);
     
     const [formData, setFormData] = useState({
         titulo: '',
@@ -57,7 +56,6 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
         evaluacion_por_grado: {},
         recursos_por_grado: {},
         evidencias_por_grado: {},
-        proyecto_escolar_id: '',
         proyecto_arte_id: '',
         valor_mensual: '',
         ejes_articuladores: '',
@@ -90,7 +88,6 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                 evaluacion_por_grado: textSelectionsFrom(initialData, 'evaluacion_por_grado', 'evaluacion'),
                 recursos_por_grado: textSelectionsFrom(initialData, 'recursos_por_grado', 'recursos'),
                 evidencias_por_grado: textSelectionsFrom(initialData, 'evidencias_por_grado', 'evidencias'),
-                proyecto_escolar_id: initialData.proyecto_escolar_id?.toString() || '',
                 proyecto_arte_id: initialData.proyecto_arte_id?.toString() || '',
                 valor_mensual: initialData.valor_mensual || '',
                 ejes_articuladores: initialData.ejes_articuladores || '',
@@ -105,22 +102,11 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
             .then(data => data && setCatalogs(data))
             .catch(err => console.error("Error loading catalogs:", err));
 
-        fetch('/api/proyecto-escolar')
-            .then(res => res.ok ? res.json() : { proyectos: [] })
-            .then(data => setProyectosEscolares(data.proyectos || []))
-            .catch(err => console.error('Error loading school project:', err));
-    }, []);
-
-    useEffect(() => {
-        if (!formData.proyecto_escolar_id) {
-            setProyectosArte([]);
-            return;
-        }
-        fetch(`/api/proyectos?proyecto_escolar_id=${formData.proyecto_escolar_id}`)
+        fetch('/api/proyectos')
             .then(res => res.ok ? res.json() : [])
             .then(data => setProyectosArte(Array.isArray(data) ? data : []))
             .catch(err => console.error('Error loading art projects:', err));
-    }, [formData.proyecto_escolar_id]);
+    }, []);
 
     useEffect(() => {
         const phaseGrades = (catalogs.grados || [])
@@ -162,7 +148,6 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
         if (!formData.fase_id) newErrors.fase_id = true;
         if (filteredGrados.length !== 2) newErrors.fase_id = true;
         if (!formData.lenguaje_id) newErrors.lenguaje_id = true;
-        if (!formData.proyecto_escolar_id) newErrors.proyecto_escolar_id = true;
         if (!formData.proyecto_arte_id) newErrors.proyecto_arte_id = true;
         if (filteredGrados.some((grade) => !formData.pda_por_grado?.[String(grade.id)])) newErrors.pdas = true;
         setErrors(newErrors);
@@ -216,7 +201,6 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
             ? (contenidos.estatales || []).find(c => c.id == formData.contenido_estatal_id)
             : (contenidos.nacionales || []).find(c => c.id == formData.contenido_nacional_id);
         const selectedProyectoArte = proyectosArte.find(p => p.id == formData.proyecto_arte_id);
-        const selectedProyectoEscolar = proyectosEscolares.find(p => p.id == formData.proyecto_escolar_id);
         const gradosConPda = pdaPorGrado.map(({ grado, pda }) => ({
             grado: grado.nombre,
             pda: pda.descripcion,
@@ -228,9 +212,8 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
             const prompt = `Genera una secuencia didáctica completa (Inicio, Desarrollo, Cierre) para una clase de primaria.
             REGLAS PEDAGÓGICAS:
             1. El contenido y el PDA del plan analítico son la base curricular obligatoria: cada momento debe contribuir explícitamente a su aprendizaje.
-            2. Contextualiza las actividades con las problemáticas y necesidades del proyecto escolar cuando esté disponible.
-            3. Vincula la temática y el producto del proyecto del maestro de arte cuando se haya seleccionado uno.
-            4. Integra el valor mensual de manera natural en acciones, convivencia o reflexión, únicamente cuando se haya proporcionado.
+            2. Vincula la temática y el producto del proyecto del maestro de arte seleccionado.
+            3. Integra el valor mensual de manera natural en acciones, convivencia o reflexión, únicamente cuando se haya proporcionado.
             Metodología sugerida: ${formData.metodologia || 'Aprendizaje Basado en Proyectos'}.
             Quiero que el resultado sea un JSON con las claves: "inicio", "desarrollo", "cierre", "metodologia_sugerida", "evaluacion_sugerida", "recursos_sugeridos".
             5. La planeación atiende a dos grados de la misma fase. Diferencia las consignas, productos o apoyos para cada grado según su PDA.
@@ -242,11 +225,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                 pda: gradosConPda.map((item) => `${item.grado}: ${item.pda}`).join('\n'),
                 grados_y_pdas: gradosConPda,
                 ejes: formData.ejes_articuladores,
-                proyecto_escolar: selectedProyectoEscolar ? {
-                    titulo: selectedProyectoEscolar.titulo,
-                    contexto_y_problematicas: selectedProyectoEscolar.contenido?.slice(0, 20000)
-                } : null,
-                proyecto_del_maestro_de_arte: selectedProyectoArte ? {
+            proyecto_del_maestro_de_arte: selectedProyectoArte ? {
                     titulo: selectedProyectoArte.titulo,
                     tematica: selectedProyectoArte.tematica,
                     sustento: selectedProyectoArte.introduccion,
@@ -326,7 +305,6 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                 lenguaje_id: formData.lenguaje_id?.toString(),
                 contenido_nacional_id: formData.contenido_nacional_id?.toString() || null,
                 contenido_estatal_id: formData.contenido_estatal_id?.toString() || null,
-                proyecto_escolar_id: formData.proyecto_escolar_id?.toString() || null,
                 proyecto_arte_id: formData.proyecto_arte_id?.toString() || null,
                 pda_id: pdaPorGrado[0]?.pda_id || null,
                 pda_por_grado: pdaPorGrado,
@@ -537,15 +515,8 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                             </h4>
                             <div className="responsive-split-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                                 <div>
-                                    <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px' }}>Proyecto escolar</label>
-                                    <select value={formData.proyecto_escolar_id} onChange={(e) => setFormData({ ...formData, proyecto_escolar_id: e.target.value, proyecto_arte_id: '' })} style={{ width: '100%', background: theme.sectionBg, border: errors.proyecto_escolar_id ? '1px solid #ef4444' : `1px solid ${theme.border}`, borderRadius: '8px', color: theme.text, fontSize: '13px', fontWeight: '600', outline: 'none', padding: '8px 10px' }}>
-                                        <option value="">Selecciona el contexto escolar...</option>
-                                        {proyectosEscolares.map(proyecto => <option key={proyecto.id} value={proyecto.id}>{proyecto.titulo}</option>)}
-                                    </select>
-                                </div>
-                                <div>
                                     <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px' }}>Proyecto del maestro de arte</label>
-                                    <select value={formData.proyecto_arte_id} disabled={!formData.proyecto_escolar_id} onChange={(e) => setFormData({ ...formData, proyecto_arte_id: e.target.value })} style={{ width: '100%', background: theme.sectionBg, border: errors.proyecto_arte_id ? '1px solid #ef4444' : `1px solid ${theme.border}`, borderRadius: '8px', color: theme.text, fontSize: '13px', fontWeight: '600', outline: 'none', padding: '8px 10px' }}>
+                                    <select value={formData.proyecto_arte_id} onChange={(e) => setFormData({ ...formData, proyecto_arte_id: e.target.value })} style={{ width: '100%', background: theme.sectionBg, border: errors.proyecto_arte_id ? '1px solid #ef4444' : `1px solid ${theme.border}`, borderRadius: '8px', color: theme.text, fontSize: '13px', fontWeight: '600', outline: 'none', padding: '8px 10px' }}>
                                         <option value="">Selecciona un proyecto de arte...</option>
                                         {proyectosArte.map(proyecto => <option key={proyecto.id} value={proyecto.id}>{proyecto.titulo}</option>)}
                                     </select>
@@ -556,7 +527,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                                 </div>
                             </div>
                             <div style={{ marginTop: '10px', padding: '10px 12px', borderRadius: '8px', background: '#ecfdf5', color: '#047857', fontSize: '11px', fontWeight: '700' }}>
-                                La planeación toma el contexto del proyecto escolar seleccionado y el enfoque de su proyecto de arte.
+                                La planeación toma como referencia la temática y los productos del proyecto de arte seleccionado.
                             </div>
                         </div>
 

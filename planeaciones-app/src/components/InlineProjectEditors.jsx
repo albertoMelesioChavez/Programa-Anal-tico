@@ -9,7 +9,6 @@ function EditorShell({ tone, children, message }) {
             {message && <p className={`editor-message ${message.type}`}>{message.text}</p>}
             <style jsx global>{`
                 .inline-editor { margin-top: 18px; padding: 20px; border-radius: 15px; border: 1px solid #cbd5e1; background: #f8fafc; animation: reveal .2s ease-out; }
-                .inline-editor.school { border-color: #99f6e4; background: #f0fdfa; }
                 .inline-editor.art { border-color: #ddd6fe; background: #faf5ff; }
                 .editor-message { margin: 12px 0 0; font-size: 12px; font-weight: 800; }
                 .editor-message.success { color: #047857; }
@@ -17,49 +16,6 @@ function EditorShell({ tone, children, message }) {
                 @keyframes reveal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
             `}</style>
         </div>
-    );
-}
-
-export function SchoolInlineEditor({ project = {}, onSaved, onCancel }) {
-    const isNew = !project.id;
-    const [draft, setDraft] = useState({ titulo: project.titulo || '', contenido: project.contenido || '' });
-    const [saving, setSaving] = useState(false);
-    const [message, setMessage] = useState(null);
-
-    const save = async () => {
-        if (!draft.titulo.trim() || !draft.contenido.trim()) {
-            setMessage({ type: 'error', text: 'El título y el contexto son obligatorios.' });
-            return;
-        }
-        setSaving(true);
-        setMessage(null);
-        try {
-            const response = await fetch('/api/proyecto-escolar', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ...(project.id ? { id: project.id } : {}), ...draft })
-            });
-            const data = await response.json();
-            if (!response.ok) throw new Error(data.error || 'No se pudo guardar.');
-            setMessage({ type: 'success', text: isNew ? 'Proyecto escolar creado.' : 'Proyecto escolar actualizado.' });
-            await onSaved();
-        } catch (error) {
-            setMessage({ type: 'error', text: error.message });
-        } finally {
-            setSaving(false);
-        }
-    };
-
-    return (
-        <EditorShell tone="school" message={message}>
-            <div className="editor-heading"><div><span>{isNew ? 'NUEVO PROYECTO ESCOLAR' : 'EDITAR PROYECTO ESCOLAR'}</span><h4>Contexto que usarán sus proyectos de arte</h4></div>{project.nombre_archivo && <small>Archivo original: {project.nombre_archivo}</small>}</div>
-            <div className="editor-grid one">
-                <label>Nombre del proyecto<input value={draft.titulo} onChange={(event) => setDraft({ ...draft, titulo: event.target.value })} /></label>
-                <label>Contexto, problemáticas y recursos<textarea rows="10" value={draft.contenido} onChange={(event) => setDraft({ ...draft, contenido: event.target.value })} /></label>
-            </div>
-            <EditorActions saving={saving} onSave={save} onCancel={onCancel} isNew={isNew} />
-            <SharedStyles />
-        </EditorShell>
     );
 }
 
@@ -71,10 +27,9 @@ function normalizeProducts(products) {
     ]));
 }
 
-export function ArtInlineEditor({ project = {}, schoolProjects, onSaved, onCancel }) {
+export function ArtInlineEditor({ project = {}, onSaved, onCancel }) {
     const isNew = !project.id;
     const [draft, setDraft] = useState({
-        proyecto_escolar_id: String(project.proyecto_escolar_id || ''),
         titulo: project.titulo || '',
         tematica: project.tematica || '',
         introduccion: project.introduccion || '',
@@ -89,8 +44,8 @@ export function ArtInlineEditor({ project = {}, schoolProjects, onSaved, onCance
     ])), [draft.productsText]);
 
     const save = async () => {
-        if (!draft.proyecto_escolar_id || !draft.titulo.trim()) {
-            setMessage({ type: 'error', text: 'Selecciona el proyecto escolar y escribe un título.' });
+        if (!draft.titulo.trim()) {
+            setMessage({ type: 'error', text: 'Escribe un título para el proyecto.' });
             return;
         }
         setSaving(true);
@@ -101,7 +56,6 @@ export function ArtInlineEditor({ project = {}, schoolProjects, onSaved, onCance
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     ...project,
-                    proyecto_escolar_id: draft.proyecto_escolar_id,
                     titulo: draft.titulo,
                     tematica: draft.tematica,
                     introduccion: draft.introduccion,
@@ -123,8 +77,7 @@ export function ArtInlineEditor({ project = {}, schoolProjects, onSaved, onCance
         <EditorShell tone="art" message={message}>
             <div className="editor-heading"><div><span>{isNew ? 'NUEVO PROYECTO DE ARTE' : 'EDITAR PROYECTO DE ARTE'}</span><h4>Enfoque y productos esperados</h4></div>{project.nombre_archivo && <small>Archivo original: {project.nombre_archivo}</small>}</div>
             <div className="editor-grid two">
-                <label>Dentro del proyecto escolar<select value={draft.proyecto_escolar_id} onChange={(event) => setDraft({ ...draft, proyecto_escolar_id: event.target.value })}><option value="">Selecciona…</option>{schoolProjects.map((school) => <option key={school.id} value={school.id}>{school.titulo}</option>)}</select></label>
-                <label>Título<input value={draft.titulo} onChange={(event) => setDraft({ ...draft, titulo: event.target.value })} /></label>
+                <label className="full">Título<input value={draft.titulo} onChange={(event) => setDraft({ ...draft, titulo: event.target.value })} /></label>
                 <label className="full">Temática<input value={draft.tematica} onChange={(event) => setDraft({ ...draft, tematica: event.target.value })} /></label>
                 <label className="full">Introducción y sustento<textarea rows="8" value={draft.introduccion} onChange={(event) => setDraft({ ...draft, introduccion: event.target.value })} /></label>
             </div>

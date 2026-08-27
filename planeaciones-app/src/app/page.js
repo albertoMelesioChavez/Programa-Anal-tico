@@ -4,21 +4,13 @@ import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import PlaneacionForm from '@/components/PlaneacionForm';
 import PlaneacionList from '@/components/PlaneacionList';
-import { ArtInlineEditor, SchoolInlineEditor } from '@/components/InlineProjectEditors';
+import { ArtInlineEditor } from '@/components/InlineProjectEditors';
 
 const modes = {
-    escolares: {
-        title: 'Proyectos escolares',
-        eyebrow: 'CONTEXTO DE LA ESCUELA',
-        description: 'Documentos base que agrupan los proyectos de arte y sus planeaciones.',
-        icon: '🏫',
-        color: '#0f766e',
-        soft: '#ecfdf5'
-    },
     arte: {
         title: 'Proyectos de arte',
         eyebrow: 'PROYECTOS DEL MAESTRO',
-        description: 'Propuestas artísticas que viven dentro de un proyecto escolar.',
+        description: 'Propuestas artísticas que agrupan sus planeaciones.',
         icon: '🎨',
         color: '#7c3aed',
         soft: '#f5f3ff'
@@ -26,7 +18,7 @@ const modes = {
     planeaciones: {
         title: 'Planeaciones',
         eyebrow: 'TRABAJO DIDÁCTICO',
-        description: 'Secuencias didácticas vinculadas a un proyecto escolar y a uno de arte.',
+        description: 'Secuencias didácticas vinculadas a un proyecto de arte.',
         icon: '🗓️',
         color: '#2563eb',
         soft: '#eff6ff'
@@ -70,11 +62,78 @@ function FileDropAction({ label, tone, onFile, disabled = false, loading = false
     );
 }
 
+function EditableTreeNode({ type, item, icon, meta, selected, editing, onSelect, onBeginEdit, onChange, onCommit, onCancel }) {
+    if (editing) {
+        return (
+            <div className="tree-node tree-node-editing" onClick={(event) => event.stopPropagation()}>
+                <span aria-hidden="true">{icon}</span>
+                <span className="tree-label tree-edit-label">
+                    <input
+                        className="tree-inline-rename"
+                        value={editing.value}
+                        maxLength={160}
+                        autoFocus
+                        aria-label={`Cambiar nombre de ${item.titulo}`}
+                        onFocus={(event) => event.currentTarget.select()}
+                        onChange={(event) => onChange(event.target.value)}
+                        onBlur={onCommit}
+                        onKeyDown={(event) => {
+                            if (event.key === 'Enter') {
+                                event.preventDefault();
+                                event.currentTarget.blur();
+                            }
+                            if (event.key === 'Escape') {
+                                event.preventDefault();
+                                onCancel();
+                            }
+                        }}
+                    />
+                    <small>Enter guarda · Esc cancela</small>
+                </span>
+            </div>
+        );
+    }
+
+    return (
+        <button
+            className={`tree-node ${type}-node ${selected ? 'selected' : ''}`}
+            onClick={onSelect}
+            onDoubleClick={(event) => { event.stopPropagation(); onBeginEdit(type, item); }}
+            title="Doble clic para cambiar nombre"
+        >
+            <span aria-hidden="true">{icon}</span>
+            <span className="tree-label"><strong>{item.titulo}</strong><small>{meta}</small></span>
+        </button>
+    );
+}
+
+function TreeNodeActions({ type, id, title, open, onToggle, onRename, onDuplicate, onMove, destinations = [], currentParentId }) {
+    return (
+        <div className="tree-management" onClick={(event) => event.stopPropagation()}>
+            <button className="tree-menu-trigger" onClick={onToggle} aria-expanded={open} aria-label={`Administrar ${title}`} title="Administrar">•••</button>
+            {open && (
+                <div className="tree-menu" role="menu">
+                    <strong>Administrar</strong>
+                    <button type="button" onClick={() => onRename(type, { id, titulo: title })}>Cambiar nombre</button>
+                    <button type="button" onClick={() => onDuplicate(type, id)}>Duplicar con contenido</button>
+                    {destinations.length > 0 && (
+                        <label>
+                            Mover a…
+                            <select value={String(currentParentId || '')} onChange={(event) => { if (event.target.value) onMove(type, id, event.target.value); }}>
+                                {destinations.map((destination) => <option key={destination.id} value={destination.id}>{destination.titulo}</option>)}
+                            </select>
+                        </label>
+                    )}
+                </div>
+            )}
+        </div>
+    );
+}
+
 export default function Home() {
     const [planeaciones, setPlaneaciones] = useState([]);
     const [proyectosArte, setProyectosArte] = useState([]);
-    const [proyectosEscolares, setProyectosEscolares] = useState([]);
-    const [activeMode, setActiveMode] = useState('escolares');
+    const [activeMode, setActiveMode] = useState('arte');
     const [selectedNode, setSelectedNode] = useState(null);
     const [showForm, setShowForm] = useState(false);
     const [expandedEditor, setExpandedEditor] = useState(null);
@@ -83,22 +142,24 @@ export default function Home() {
     const [loading, setLoading] = useState(true);
     const [uploading, setUploading] = useState('');
     const [uploadMessage, setUploadMessage] = useState('');
-    const [artUploadSchoolId, setArtUploadSchoolId] = useState('');
     const [planningContext, setPlanningContext] = useState(null);
     const [mobileTreeOpen, setMobileTreeOpen] = useState(false);
+    const [activeTreeMenu, setActiveTreeMenu] = useState(null);
+    const [draggedNode, setDraggedNode] = useState(null);
+    const [dragOverNode, setDragOverNode] = useState(null);
+    const [treeActionMessage, setTreeActionMessage] = useState('');
+    const [editingTreeLabel, setEditingTreeLabel] = useState(null);
 
     const fetchWorkspace = async () => {
         setLoading(true);
         try {
-            const [schoolRes, artRes, planningRes] = await Promise.all([
-                fetch('/api/proyecto-escolar'),
+            const [artRes, planningRes] = await Promise.all([
                 fetch('/api/proyectos'),
                 fetch('/api/planeaciones')
             ]);
-            const [schoolData, artData, planningData] = await Promise.all([
-                schoolRes.json(), artRes.json(), planningRes.json()
+            const [artData, planningData] = await Promise.all([
+                artRes.json(), planningRes.json()
             ]);
-            setProyectosEscolares(schoolData.proyectos || []);
             setProyectosArte(Array.isArray(artData) ? artData : []);
             setPlaneaciones(Array.isArray(planningData) ? planningData : (planningData.planeaciones || []));
         } catch (error) {
@@ -112,31 +173,20 @@ export default function Home() {
         fetchWorkspace();
     }, []);
 
-    const tree = useMemo(() => proyectosEscolares.map((school) => ({
-        ...school,
-        proyectos: proyectosArte
-            .filter((project) => String(project.proyecto_escolar_id) === String(school.id))
-            .map((project) => ({
-                ...project,
-                planeaciones: planeaciones.filter((planning) => String(planning.proyecto_arte_id) === String(project.id))
-            }))
-    })), [proyectosEscolares, proyectosArte, planeaciones]);
+    const tree = useMemo(() => proyectosArte.map((project) => ({
+        ...project,
+        planeaciones: planeaciones.filter((planning) => String(planning.proyecto_arte_id) === String(project.id))
+    })), [proyectosArte, planeaciones]);
 
     const selectedTreeContext = useMemo(() => {
         if (!selectedNode) return { icon: '⌂', label: 'Toda la organización', detail: 'Sin filtros' };
 
-        if (selectedNode.type === 'school') {
-            const school = proyectosEscolares.find((item) => String(item.id) === String(selectedNode.id));
-            return { icon: '🏫', label: school?.titulo || 'Proyecto escolar', detail: 'Proyecto escolar' };
-        }
-
         if (selectedNode.type === 'art') {
             const project = proyectosArte.find((item) => String(item.id) === String(selectedNode.id));
-            const school = proyectosEscolares.find((item) => String(item.id) === String(project?.proyecto_escolar_id));
             return {
                 icon: '🎨',
                 label: project?.titulo || 'Proyecto de arte',
-                detail: school?.titulo ? `Dentro de ${school.titulo}` : 'Proyecto de arte'
+                detail: 'Proyecto de arte'
             };
         }
 
@@ -147,27 +197,20 @@ export default function Home() {
             label: planning?.titulo || 'Planeación',
             detail: project?.titulo ? `Dentro de ${project.titulo}` : 'Planeación'
         };
-    }, [selectedNode, proyectosEscolares, proyectosArte, planeaciones]);
+    }, [selectedNode, proyectosArte, planeaciones]);
 
-    const visibleSchools = selectedNode?.type === 'school'
-        ? proyectosEscolares.filter((item) => String(item.id) === String(selectedNode.id))
-        : proyectosEscolares;
-
-    const visibleArtProjects = selectedNode?.type === 'school'
-        ? proyectosArte.filter((item) => String(item.proyecto_escolar_id) === String(selectedNode.id))
-        : selectedNode?.type === 'art'
+    const visibleArtProjects = selectedNode?.type === 'art'
             ? proyectosArte.filter((item) => String(item.id) === String(selectedNode.id))
             : proyectosArte;
 
-    const visiblePlaneaciones = selectedNode?.type === 'school'
-        ? planeaciones.filter((item) => String(item.proyecto_escolar_id) === String(selectedNode.id))
-        : selectedNode?.type === 'art'
+    const visiblePlaneaciones = selectedNode?.type === 'art'
             ? planeaciones.filter((item) => String(item.proyecto_arte_id) === String(selectedNode.id))
             : selectedNode?.type === 'planning'
                 ? planeaciones.filter((item) => String(item.id) === String(selectedNode.id))
                 : planeaciones;
 
     const selectMode = (mode) => {
+        setEditingTreeLabel(null);
         setActiveMode(mode);
         setSelectedNode(null);
         setExpandedEditor(null);
@@ -177,10 +220,11 @@ export default function Home() {
     };
 
     const selectTreeNode = (type, id) => {
+        setEditingTreeLabel(null);
         setSelectedNode({ type, id });
-        setActiveMode(type === 'school' ? 'escolares' : type === 'art' ? 'arte' : 'planeaciones');
+        setActiveMode(type === 'art' ? 'arte' : 'planeaciones');
         setExpandedEditor(null);
-        setExpandedPreview(null);
+        setExpandedPreview(type === 'art' ? { type, id } : null);
         setCreationPanel(null);
         setMobileTreeOpen(false);
     };
@@ -191,6 +235,115 @@ export default function Home() {
         setExpandedPreview(null);
         setCreationPanel(null);
         setMobileTreeOpen(false);
+        setActiveTreeMenu(null);
+        setEditingTreeLabel(null);
+    };
+
+    const organizeWorkspace = async (payload, successMessage) => {
+        setTreeActionMessage('Guardando cambios…');
+        try {
+            const response = await fetch('/api/workspace/organize', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.error || 'No se pudo actualizar la organización.');
+            await fetchWorkspace();
+            setTreeActionMessage(successMessage);
+            setActiveTreeMenu(null);
+            return data;
+        } catch (error) {
+            setTreeActionMessage(error.message);
+            return null;
+        }
+    };
+
+    const duplicateTreeNode = async (type, id) => {
+        const labels = { art: 'Proyecto de arte duplicado con sus planeaciones.', planning: 'Planeación duplicada.' };
+        const data = await organizeWorkspace({ action: 'duplicate', type, id }, labels[type]);
+        if (data?.id) setSelectedNode({ type, id: data.id });
+    };
+
+    const beginTreeRename = (type, item) => {
+        setActiveTreeMenu(null);
+        setTreeActionMessage('');
+        setEditingTreeLabel({ type, id: item.id, value: item.titulo || '' });
+    };
+
+    const commitTreeRename = async () => {
+        const editing = editingTreeLabel;
+        if (!editing) return;
+        const title = editing.value.trim();
+        if (!title) {
+            setTreeActionMessage('El nombre no puede quedar vacío.');
+            return;
+        }
+        setEditingTreeLabel(null);
+        await organizeWorkspace({ action: 'rename', type: editing.type, id: editing.id, title }, `Nombre actualizado a “${title}”.`);
+    };
+
+    const moveTreeNode = async (type, id, parentId) => {
+        const destination = proyectosArte.find((project) => String(project.id) === String(parentId));
+        await organizeWorkspace({ action: 'move', type, id, parentId }, `Movido a “${destination?.titulo || 'nuevo destino'}”.`);
+    };
+
+    const siblingIds = (type, parentId) => {
+        if (type === 'art') return proyectosArte.map((item) => item.id);
+        return planeaciones.filter((item) => String(item.proyecto_arte_id) === String(parentId)).map((item) => item.id);
+    };
+
+    const parentIdFor = (type, id) => {
+        if (type === 'planning') return planeaciones.find((item) => String(item.id) === String(id))?.proyecto_arte_id;
+        return null;
+    };
+
+    const dropTreeNode = async (event, targetType, targetId) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const source = draggedNode;
+        setDragOverNode(null);
+        setDraggedNode(null);
+        if (!source || (source.type === targetType && String(source.id) === String(targetId))) return;
+
+        if (source.type === 'planning' && targetType === 'art') {
+            await moveTreeNode('planning', source.id, targetId);
+            return;
+        }
+        if (source.type !== targetType) {
+            setTreeActionMessage('Suelta planeaciones sobre un proyecto de arte para moverlas.');
+            return;
+        }
+
+        const targetParentId = parentIdFor(targetType, targetId);
+        const sourceParentId = parentIdFor(source.type, source.id);
+        if (targetType === 'planning' && String(sourceParentId) !== String(targetParentId)) {
+            await moveTreeNode(source.type, source.id, targetParentId);
+        }
+        const ids = siblingIds(targetType, targetParentId).filter((id) => String(id) !== String(source.id));
+        const targetIndex = Math.max(0, ids.findIndex((id) => String(id) === String(targetId)));
+        ids.splice(targetIndex, 0, source.id);
+        await organizeWorkspace({ action: 'reorder', type: targetType, ids }, 'Orden actualizado.');
+    };
+
+    const dragProps = (type, id) => {
+        const isEditing = editingTreeLabel?.type === type && String(editingTreeLabel.id) === String(id);
+        return {
+            draggable: !isEditing,
+            onDragStart: (event) => {
+                if (isEditing) {
+                    event.preventDefault();
+                    return;
+                }
+                setDraggedNode({ type, id });
+                event.dataTransfer.effectAllowed = 'move';
+                event.dataTransfer.setData('text/plain', `${type}:${id}`);
+            },
+            onDragOver: (event) => { event.preventDefault(); event.dataTransfer.dropEffect = 'move'; setDragOverNode(`${type}:${id}`); },
+            onDragLeave: () => setDragOverNode(null),
+            onDragEnd: () => { setDraggedNode(null); setDragOverNode(null); },
+            onDrop: (event) => dropTreeNode(event, type, id)
+        };
     };
 
     const handleDelete = async (id) => {
@@ -243,19 +396,8 @@ export default function Home() {
         setCreationPanel((current) => current === type ? null : type);
     };
 
-    const createArtProjectFromSchool = (schoolId) => {
-        setArtUploadSchoolId(String(schoolId));
-        setSelectedNode({ type: 'school', id: schoolId });
-        setActiveMode('arte');
-        setExpandedEditor(null);
-        setExpandedPreview(null);
-        setCreationPanel('art');
-        setMobileTreeOpen(false);
-    };
-
     const createPlanningFromArtProject = (project) => {
         setPlanningContext({
-            proyecto_escolar_id: String(project.proyecto_escolar_id),
             proyecto_arte_id: String(project.id)
         });
         setSelectedNode({ type: 'art', id: project.id });
@@ -273,43 +415,12 @@ export default function Home() {
         setExpandedPreview((current) => current?.type === type && String(current.id) === String(id) ? null : { type, id });
     };
 
-    const inferredArtSchoolId = selectedNode?.type === 'school'
-        ? String(selectedNode.id)
-        : selectedNode?.type === 'art'
-            ? String(proyectosArte.find((project) => String(project.id) === String(selectedNode.id))?.proyecto_escolar_id || '')
-            : proyectosEscolares.length === 1 ? String(proyectosEscolares[0].id) : '';
-    const selectedArtSchoolId = artUploadSchoolId || inferredArtSchoolId;
-
-    const uploadSchoolFile = async (file) => {
-        setUploading('school');
-        setUploadMessage('Procesando el proyecto escolar…');
-        try {
-            const body = new FormData();
-            body.append('archivo', file);
-            const res = await fetch('/api/proyecto-escolar', { method: 'POST', body });
-            const data = await res.json();
-            if (!res.ok) throw new Error(data.error || 'No se pudo subir el archivo.');
-            setSelectedNode({ type: 'school', id: data.proyecto.id });
-            setUploadMessage(`Proyecto escolar “${data.proyecto.titulo}” creado desde el archivo.`);
-            await fetchWorkspace();
-        } catch (error) {
-            setUploadMessage(error.message);
-        } finally {
-            setUploading('');
-        }
-    };
-
     const uploadArtFile = async (file) => {
-        if (!selectedArtSchoolId) {
-            setUploadMessage('Selecciona el proyecto escolar que contendrá este proyecto de arte.');
-            return;
-        }
         setUploading('art');
         setUploadMessage('Procesando el proyecto de arte…');
         try {
             const body = new FormData();
             body.append('archivo', file);
-            body.append('proyecto_escolar_id', selectedArtSchoolId);
             const res = await fetch('/api/proyectos', { method: 'POST', body });
             const data = await res.json();
             if (!res.ok) throw new Error(data.error || 'No se pudo subir el archivo.');
@@ -343,14 +454,14 @@ export default function Home() {
                                     <Link href="/plananalitico/artes" className="top-nav-link">📋 Plan Analítico</Link>
                                 </nav>
                                 <div className="nem-badge">NEM 2025 • Sinaloa</div>
-                                <div className="ai-mode-badge">✦ IA HÍBRIDA ACTIVA</div>
+                                <Link href="/generador-programa-analitico" className="plan-generator-link">Generar Programa Analítico</Link>
                             </div>
                             <div className="brand-row">
                                 <div>
                                     <p>ESPACIO DE TRABAJO</p>
                                 </div>
                                 <div className="hierarchy-hint">
-                                    <span>🏫 Escuela</span><b>›</b><span>🎨 Arte</span><b>›</b><span>🗓️ Planeación</span>
+                                    <span>🎨 Proyecto de arte</span><b>›</b><span>🗓️ Planeación</span>
                                 </div>
                             </div>
                         </header>
@@ -364,7 +475,7 @@ export default function Home() {
                                 >
                                     <span className="mode-icon">{mode.icon}</span>
                                     <span><strong>{mode.title}</strong><small>{mode.description}</small></span>
-                                    <span className="mode-count">{key === 'escolares' ? proyectosEscolares.length : key === 'arte' ? proyectosArte.length : planeaciones.length}</span>
+                                    <span className="mode-count">{key === 'arte' ? proyectosArte.length : planeaciones.length}</span>
                                 </button>
                             ))}
                         </section>
@@ -399,39 +510,54 @@ export default function Home() {
                                     </div>
                                 </div>
 
+                                <p className="tree-help">Doble clic para renombrar. Arrastra para reordenar o cambiar de proyecto; usa ••• para más opciones.</p>
+                                {treeActionMessage && <p className="tree-action-message" role="status">{treeActionMessage}</p>}
+
                                 <div className="tree-list">
-                                    {tree.length === 0 && <p className="tree-empty">Agrega un proyecto escolar para comenzar a construir el árbol.</p>}
-                                    {tree.map((school) => (
-                                        <div className="tree-school" key={school.id}>
-                                            <div className="tree-node-row">
-                                                <button className={`tree-node school-node ${selectedNode?.type === 'school' && String(selectedNode.id) === String(school.id) ? 'selected' : ''}`} onClick={() => selectTreeNode('school', school.id)}>
-                                                    <span>🏫</span><span className="tree-label"><strong>{school.titulo}</strong><small>{school.proyectos.length} proyecto{school.proyectos.length === 1 ? '' : 's'} de arte</small></span>
-                                                </button>
-                                                <button className="tree-quick-action school-quick-action" onClick={() => createArtProjectFromSchool(school.id)} title={`Crear proyecto de arte en ${school.titulo}`} aria-label={`Crear proyecto de arte en ${school.titulo}`}>
-                                                    <span aria-hidden="true">＋</span><span className="tree-quick-action-label">Arte</span>
-                                                </button>
-                                            </div>
-                                            <div className="tree-children">
-                                                {school.proyectos.map((project) => (
-                                                    <div className="tree-project" key={project.id}>
-                                                        <div className="tree-node-row">
-                                                            <button className={`tree-node art-node ${selectedNode?.type === 'art' && String(selectedNode.id) === String(project.id) ? 'selected' : ''}`} onClick={() => selectTreeNode('art', project.id)}>
-                                                                <span>🎨</span><span className="tree-label"><strong>{project.titulo}</strong><small>{project.planeaciones.length} planeación{project.planeaciones.length === 1 ? '' : 'es'}</small></span>
-                                                            </button>
+                                    {tree.length === 0 && <p className="tree-empty">Crea un proyecto de arte para comenzar a organizar tus planeaciones.</p>}
+                                    {tree.map((project) => (
+                                        <div className="tree-project" key={project.id}>
+                                                        <div className={`tree-node-row tree-manageable ${dragOverNode === `art:${project.id}` ? 'drag-over' : ''}`} {...dragProps('art', project.id)}>
+                                                            <span className="tree-drag-handle" aria-hidden="true">⠿</span>
+                                                            <EditableTreeNode
+                                                                type="art"
+                                                                item={project}
+                                                                icon="🎨"
+                                                                meta={`${project.planeaciones.length} planeación${project.planeaciones.length === 1 ? '' : 'es'}`}
+                                                                selected={selectedNode?.type === 'art' && String(selectedNode.id) === String(project.id)}
+                                                                editing={editingTreeLabel?.type === 'art' && String(editingTreeLabel.id) === String(project.id) ? editingTreeLabel : null}
+                                                                onSelect={() => selectTreeNode('art', project.id)}
+                                                                onBeginEdit={beginTreeRename}
+                                                                onChange={(value) => setEditingTreeLabel((current) => current ? { ...current, value } : current)}
+                                                                onCommit={commitTreeRename}
+                                                                onCancel={() => setEditingTreeLabel(null)}
+                                                            />
                                                             <button className="tree-quick-action planning-quick-action" onClick={() => createPlanningFromArtProject(project)} title={`Crear planeación para ${project.titulo}`} aria-label={`Crear planeación para ${project.titulo}`}>
                                                                 <span aria-hidden="true">＋</span><span className="tree-quick-action-label">Plan</span>
                                                             </button>
+                                                            <TreeNodeActions type="art" id={project.id} title={project.titulo} open={activeTreeMenu === `art:${project.id}`} onToggle={() => setActiveTreeMenu((current) => current === `art:${project.id}` ? null : `art:${project.id}`)} onRename={beginTreeRename} onDuplicate={duplicateTreeNode} onMove={moveTreeNode} />
                                                         </div>
                                                         <div className="tree-children planning-children">
                                                             {project.planeaciones.map((planning) => (
-                                                                <button key={planning.id} className={`tree-node planning-node ${selectedNode?.type === 'planning' && String(selectedNode.id) === String(planning.id) ? 'selected' : ''}`} onClick={() => selectTreeNode('planning', planning.id)}>
-                                                                    <span>🗓️</span><span className="tree-label"><strong>{planning.titulo}</strong><small>{planning.grado_nombre || `Grado ${planning.grado_id}`}</small></span>
-                                                                </button>
+                                                                <div key={planning.id} className={`tree-node-row tree-manageable planning-tree-row ${dragOverNode === `planning:${planning.id}` ? 'drag-over' : ''}`} {...dragProps('planning', planning.id)}>
+                                                                    <span className="tree-drag-handle" aria-hidden="true">⠿</span>
+                                                                    <EditableTreeNode
+                                                                        type="planning"
+                                                                        item={planning}
+                                                                        icon="🗓️"
+                                                                        meta={planning.grado_nombre || `Grado ${planning.grado_id}`}
+                                                                        selected={selectedNode?.type === 'planning' && String(selectedNode.id) === String(planning.id)}
+                                                                        editing={editingTreeLabel?.type === 'planning' && String(editingTreeLabel.id) === String(planning.id) ? editingTreeLabel : null}
+                                                                        onSelect={() => selectTreeNode('planning', planning.id)}
+                                                                        onBeginEdit={beginTreeRename}
+                                                                        onChange={(value) => setEditingTreeLabel((current) => current ? { ...current, value } : current)}
+                                                                        onCommit={commitTreeRename}
+                                                                        onCancel={() => setEditingTreeLabel(null)}
+                                                                    />
+                                                                    <TreeNodeActions type="planning" id={planning.id} title={planning.titulo} open={activeTreeMenu === `planning:${planning.id}`} onToggle={() => setActiveTreeMenu((current) => current === `planning:${planning.id}` ? null : `planning:${planning.id}`)} onRename={beginTreeRename} onDuplicate={duplicateTreeNode} onMove={moveTreeNode} destinations={proyectosArte} currentParentId={planning.proyecto_arte_id} />
+                                                                </div>
                                                             ))}
                                                         </div>
-                                                    </div>
-                                                ))}
-                                            </div>
                                         </div>
                                     ))}
                                 </div>
@@ -447,22 +573,10 @@ export default function Home() {
                                             <small>{selectedNode ? 'Mostrando la selección del explorador.' : selectedMode.description}</small>
                                         </div>
                                     </div>
-                                    {activeMode === 'escolares' && (
-                                        <div className="module-actions">
-                                            <button className="primary-action school-action" onClick={() => toggleCreationPanel('school')}>{creationPanel === 'school' ? 'CERRAR CREACIÓN ↑' : '+ CREAR PROYECTO'}</button>
-                                            <FileDropAction tone="school" label="PDF, DOCX, TXT o MD · clic o arrastra" onFile={uploadSchoolFile} loading={uploading === 'school'} />
-                                        </div>
-                                    )}
                                     {activeMode === 'arte' && (
                                         <div className="module-actions art-module-actions">
-                                            <button className="primary-action art-action" onClick={() => toggleCreationPanel('art')} disabled={proyectosEscolares.length === 0}>{creationPanel === 'art' ? 'CERRAR CREACIÓN ↑' : '+ CREAR PROYECTO'}</button>
-                                            <FileDropAction tone="art" label="PDF, DOCX, TXT o MD · clic o arrastra" onFile={uploadArtFile} disabled={proyectosEscolares.length === 0} loading={uploading === 'art'} />
-                                            {proyectosEscolares.length > 1 && (
-                                                <select className="upload-parent-select" value={selectedArtSchoolId} onChange={(event) => setArtUploadSchoolId(event.target.value)} aria-label="Proyecto escolar padre">
-                                                    <option value="">Selecciona proyecto escolar</option>
-                                                    {proyectosEscolares.map((school) => <option key={school.id} value={school.id}>Dentro de: {school.titulo}</option>)}
-                                                </select>
-                                            )}
+                                            <button className="primary-action art-action" onClick={() => toggleCreationPanel('art')}>{creationPanel === 'art' ? 'CERRAR CREACIÓN ↑' : '+ CREAR PROYECTO'}</button>
+                                            <FileDropAction tone="art" label="PDF, DOCX, TXT o MD · clic o arrastra" onFile={uploadArtFile} loading={uploading === 'art'} />
                                         </div>
                                     )}
                                     {activeMode === 'planeaciones' && <button onClick={() => setShowForm(true)} className="primary-action planning-action">+ NUEVA PLANEACIÓN</button>}
@@ -471,70 +585,35 @@ export default function Home() {
                                 {uploadMessage && <p className={`upload-message ${uploadMessage.includes('creado') ? 'success' : uploading ? '' : 'error'}`}>{uploadMessage}</p>}
 
                                 <div className="content-body">
-                                    {creationPanel === 'school' && activeMode === 'escolares' && (
-                                        <div className="create-project-slot">
-                                            <SchoolInlineEditor project={{}} onSaved={handleInlineSaved} onCancel={() => setCreationPanel(null)} />
-                                        </div>
-                                    )}
                                     {creationPanel === 'art' && activeMode === 'arte' && (
                                         <div className="create-project-slot">
-                                            <ArtInlineEditor project={{ proyecto_escolar_id: selectedArtSchoolId }} schoolProjects={proyectosEscolares} onSaved={handleInlineSaved} onCancel={() => setCreationPanel(null)} />
+                                            <ArtInlineEditor project={{}} onSaved={handleInlineSaved} onCancel={() => setCreationPanel(null)} />
                                         </div>
                                     )}
                                     {loading ? (
                                         <div className="loading-area"><div className="loader-blue" /></div>
-                                    ) : activeMode === 'escolares' ? (
-                                        visibleSchools.length === 0 ? (
-                                            <EmptyState icon="🏫" title="Sin proyectos escolares" description="Crea el contexto desde cero o arrastra aquí el archivo que ya elaboró la escuela." action={<div className="empty-school-actions"><button className="empty-action" onClick={() => toggleCreationPanel('school')}>Crear proyecto</button><FileDropAction tone="school" label="Subir archivo" onFile={uploadSchoolFile} loading={uploading === 'school'} /></div>} />
-                                        ) : (
-                                            <div className="item-list">
-                                                {visibleSchools.map((school) => {
-                                                    const artChildren = proyectosArte.filter((project) => String(project.proyecto_escolar_id) === String(school.id));
-                                                    const planningChildren = planeaciones.filter((planning) => String(planning.proyecto_escolar_id) === String(school.id));
-                                                    const isEditing = expandedEditor?.type === 'school' && String(expandedEditor.id) === String(school.id);
-                                                    const isExpanded = isEditing || (expandedPreview?.type === 'school' && String(expandedPreview.id) === String(school.id));
-                                                    return (
-                                                        <article className={`finder-item school-item ${isExpanded ? 'expanded' : ''} ${isEditing ? 'editing' : ''}`} key={school.id} onClick={() => togglePreview('school', school.id)}>
-                                                            <div className="item-symbol">🏫</div>
-                                                            <div className="item-main">
-                                                                <h3>{school.titulo}</h3>
-                                                                {!isExpanded && <div className="compact-summary"><span>🎨 {artChildren.length}</span><span>🗓️ {planningChildren.length}</span></div>}
-                                                                {isExpanded && <>
-                                                                    <span className="parent-placeholder root">PROYECTO ESCOLAR · CONTEXTO PRINCIPAL</span>
-                                                                    <p>{school.nombre_archivo ? `Documento: ${school.nombre_archivo}` : 'Contexto escrito directamente en el sistema'}</p>
-                                                                    <div className="child-summary"><span>🎨 {artChildren.length} proyectos de arte</span><span>🗓️ {planningChildren.length} planeaciones</span></div>
-                                                                </>}
-                                                            </div>
-                                                            <button className="open-link inline-edit-button" onClick={(event) => { event.stopPropagation(); toggleInlineEditor('school', school.id); }}>{isEditing ? 'CERRAR ↑' : 'EDITAR ✎'}</button>
-                                                            {isEditing && <div className="inline-editor-slot" onClick={(event) => event.stopPropagation()}><SchoolInlineEditor project={school} onSaved={handleInlineSaved} onCancel={() => setExpandedEditor(null)} /></div>}
-                                                        </article>
-                                                    );
-                                                })}
-                                            </div>
-                                        )
                                     ) : activeMode === 'arte' ? (
                                         visibleArtProjects.length === 0 ? (
-                                            <EmptyState icon="🎨" title="Sin proyectos de arte" description={proyectosEscolares.length === 0 ? 'Primero crea o sube un proyecto escolar para establecer el contexto.' : selectedNode?.type === 'school' ? 'Este proyecto escolar todavía no contiene proyectos de arte. Puedes crearlo o subirlo aquí.' : 'Crea o sube un proyecto artístico dentro de un proyecto escolar.'} action={<div className="empty-school-actions"><button className="empty-action purple" onClick={() => toggleCreationPanel('art')} disabled={proyectosEscolares.length === 0}>Crear proyecto</button><FileDropAction tone="art" label="Subir archivo" onFile={uploadArtFile} disabled={!selectedArtSchoolId} loading={uploading === 'art'} /></div>} />
+                                            <EmptyState icon="🎨" title="Sin proyectos de arte" description="Crea un proyecto o sube el documento que ya elaboraste." action={<div className="empty-art-actions"><button className="empty-action purple" onClick={() => toggleCreationPanel('art')}>Crear proyecto</button><FileDropAction tone="art" label="Subir archivo" onFile={uploadArtFile} loading={uploading === 'art'} /></div>} />
                                         ) : (
-                                            <div className="item-grid">
+                                            <div className={`item-grid art-project-list ${selectedNode?.type === 'art' ? 'selected-project-list' : ''}`}>
                                                 {visibleArtProjects.map((project) => {
-                                                    const parent = proyectosEscolares.find((school) => String(school.id) === String(project.proyecto_escolar_id));
                                                     const children = planeaciones.filter((planning) => String(planning.proyecto_arte_id) === String(project.id));
                                                     const isEditing = expandedEditor?.type === 'art' && String(expandedEditor.id) === String(project.id);
-                                                    const isExpanded = isEditing || (expandedPreview?.type === 'art' && String(expandedPreview.id) === String(project.id));
+                                                    const isSelected = selectedNode?.type === 'art' && String(selectedNode.id) === String(project.id);
+                                                    const isExpanded = isEditing || isSelected || (expandedPreview?.type === 'art' && String(expandedPreview.id) === String(project.id));
                                                     return (
-                                                        <article className={`finder-item art-item ${isExpanded ? 'expanded' : ''} ${isEditing ? 'editing' : ''}`} key={project.id} onClick={() => togglePreview('art', project.id)}>
+                                                        <article className={`finder-item art-item ${isExpanded ? 'expanded' : ''} ${isEditing ? 'editing' : ''} ${isSelected ? 'selected-project' : ''}`} key={project.id} onClick={() => selectTreeNode('art', project.id)}>
                                                             <div className="item-main">
                                                                 <div className="art-title-row"><span>🎨</span><h3>{project.titulo}</h3></div>
                                                                 {!isExpanded && <div className="compact-summary"><span>🗓️ {children.length}</span></div>}
                                                                 {isExpanded && <>
-                                                                    <span className="parent-placeholder">🏫 DENTRO DE: {parent?.titulo || 'Sin proyecto escolar asignado'}</span>
                                                                     <p>{project.nombre_archivo ? `Documento: ${project.nombre_archivo}` : project.tematica || project.introduccion || 'Proyecto artístico sin descripción.'}</p>
                                                                     <div className="child-summary"><span>🗓️ {children.length} planeación{children.length === 1 ? '' : 'es'} dentro</span></div>
                                                                 </>}
                                                             </div>
                                                             <button className="open-link purple inline-edit-button" onClick={(event) => { event.stopPropagation(); toggleInlineEditor('art', project.id); }}>{isEditing ? 'CERRAR ↑' : 'EDITAR ✎'}</button>
-                                                            {isEditing && <div className="inline-editor-slot" onClick={(event) => event.stopPropagation()}><ArtInlineEditor project={project} schoolProjects={proyectosEscolares} onSaved={handleInlineSaved} onCancel={() => setExpandedEditor(null)} /></div>}
+                                                            {isEditing && <div className="inline-editor-slot" onClick={(event) => event.stopPropagation()}><ArtInlineEditor project={project} onSaved={handleInlineSaved} onCancel={() => setExpandedEditor(null)} /></div>}
                                                         </article>
                                                     );
                                                 })}
@@ -576,7 +655,8 @@ export default function Home() {
                 .top-nav-link { color: #475569; font-size: 11px; font-weight: 900; text-decoration: none; padding: 9px 12px; border: 1px solid #e2e8f0; background: rgba(255,255,255,.8); border-radius: 11px; white-space: nowrap; }
                 .top-nav-link:hover { border-color: #2563eb; color: #2563eb; }
                 .nem-badge { padding: 8px 18px; border-radius: 100px; background: #eff6ff; border: 1px solid #dbeafe; font-size: 10px; font-weight: 900; color: #2563eb; text-transform: uppercase; letter-spacing: 1.8px; }
-                .ai-mode-badge { justify-self: end; padding: 9px 12px; border: 1px solid #d1fae5; background: #ecfdf5; color: #047857; border-radius: 11px; font-size: 10px; font-weight: 900; letter-spacing: .5px; white-space: nowrap; }
+                .plan-generator-link { justify-self: end; padding: 9px 12px; border: 1px solid #bfdbfe; background: #eff6ff; color: #1d4ed8; border-radius: 11px; font-size: 10px; font-weight: 900; letter-spacing: .3px; text-decoration: none; white-space: nowrap; }
+                .plan-generator-link:hover { background: #dbeafe; border-color: #60a5fa; }
                 .brand-row { margin-top: 22px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
                 .brand-row p { margin: 0 0 8px; color: #2563eb; font-size: 10px; font-weight: 900; letter-spacing: 2px; }
                 .hierarchy-hint { display: flex; gap: 10px; align-items: center; padding: 12px 16px; border: 1px solid #e2e8f0; background: #fff; border-radius: 14px; color: #475569; font-size: 11px; font-weight: 800; }
@@ -585,7 +665,6 @@ export default function Home() {
                 .mode-button { min-width: 0; min-height: 86px; padding: 16px 18px; border: 1px solid transparent; border-radius: 18px; display: grid; grid-template-columns: auto 1fr auto; gap: 13px; align-items: center; text-align: left; cursor: pointer; color: #fff; font-family: inherit; opacity: .82; transition: transform .2s ease, opacity .2s ease, box-shadow .2s ease; }
                 .mode-button:hover, .mode-button.active { opacity: 1; transform: translateY(-3px); }
                 .mode-button.active { box-shadow: 0 14px 30px rgba(15,23,42,.16); outline: 3px solid rgba(255,255,255,.75); outline-offset: -6px; }
-                .mode-escolares { background: linear-gradient(135deg, #0f766e, #14b8a6); }
                 .mode-arte { background: linear-gradient(135deg, #6d28d9, #8b5cf6); }
                 .mode-planeaciones { background: linear-gradient(135deg, #1d4ed8, #0f766e); }
                 .mode-icon { font-size: 26px; }
@@ -598,17 +677,16 @@ export default function Home() {
                 .file-drop-action input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
                 .file-drop-action span { font-size: 10px; font-weight: 900; letter-spacing: .4px; white-space: nowrap; }
                 .file-drop-action small { display: block; margin-top: 2px; font-size: 7px; font-weight: 700; opacity: .78; white-space: nowrap; }
-                .file-drop-action.school { color: #0f766e; background: #f0fdfa; }
                 .file-drop-action.art { color: #7c3aed; background: #f5f3ff; }
                 .file-drop-action.disabled { color: #94a3b8; background: #f8fafc; border-color: #cbd5e1; cursor: not-allowed; opacity: .78; }
                 .upload-parent-select { max-width: 185px; padding: 8px 10px; border: 1px solid #ddd6fe; border-radius: 10px; background: #fff; color: #6d28d9; font-size: 10px; font-weight: 800; outline: none; }
                 .upload-message { margin: 0 24px; padding: 9px 12px; border-radius: 10px; background: #f1f5f9; color: #475569; font-size: 11px; font-weight: 700; }
                 .upload-message.success { background: #ecfdf5; color: #047857; }
                 .upload-message.error { background: #fef2f2; color: #b91c1c; }
-                .empty-school-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-                .empty-school-actions .file-drop-action { min-width: 132px; min-height: 40px; }
-                .empty-school-actions .file-drop-action small { display: none; }
-                .finder-layout { display: grid; grid-template-columns: minmax(260px, 310px) minmax(0, 1fr); min-height: 620px; border: 1px solid #dbe3ed; border-radius: 24px; overflow: hidden; background: #fff; box-shadow: 0 20px 60px rgba(15,23,42,.06); }
+                .empty-art-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+                .empty-art-actions .file-drop-action { min-width: 132px; min-height: 40px; }
+                .empty-art-actions .file-drop-action small { display: none; }
+                .finder-layout { display: grid; grid-template-columns: minmax(310px, 360px) minmax(0, 1fr); min-height: 620px; border: 1px solid #dbe3ed; border-radius: 24px; overflow: hidden; background: #fff; box-shadow: 0 20px 60px rgba(15,23,42,.06); }
                 .mobile-finder-toolbar, .mobile-tree-backdrop { display: none; }
                 .finder-sidebar { background: #f1f5f9; border-right: 1px solid #dbe3ed; padding: 16px 12px; overflow-y: auto; max-height: 780px; }
                 .finder-title { display: flex; justify-content: space-between; align-items: center; padding: 4px 7px 15px; border-bottom: 1px solid #dbe3ed; margin-bottom: 10px; }
@@ -617,18 +695,38 @@ export default function Home() {
                 .finder-title button { border: 1px solid #dbe3ed; background: #fff; width: 30px; height: 30px; border-radius: 8px; cursor: pointer; }
                 .finder-title-actions { display: flex; gap: 6px; }
                 .mobile-tree-close { display: none; }
+                .tree-help { margin: 0 6px 10px; padding: 8px 9px; border-radius: 9px; background: #e2e8f0; color: #475569; font-size: 9px; font-weight: 700; line-height: 1.4; }
+                .tree-action-message { margin: 0 6px 10px; padding: 8px 9px; border: 1px solid #bfdbfe; border-radius: 9px; background: #eff6ff; color: #1d4ed8; font-size: 9px; font-weight: 800; line-height: 1.4; }
+                .tree-list { padding-bottom: 210px; }
                 .tree-empty { padding: 18px 10px; color: #64748b; font-size: 12px; line-height: 1.5; }
-                .tree-node-row { display: flex; align-items: center; gap: 4px; }
+                .tree-node-row { position: relative; display: flex; align-items: center; gap: 4px; border-radius: 10px; transition: background .16s, box-shadow .16s; }
+                .tree-manageable.drag-over { background: #dbeafe; box-shadow: inset 0 0 0 2px #60a5fa; }
+                .tree-manageable[draggable="true"] { cursor: grab; }.tree-manageable[draggable="true"]:active { cursor: grabbing; }
+                .tree-drag-handle { width: 15px; flex: 0 0 15px; color: #94a3b8; font-size: 15px; line-height: 1; text-align: center; user-select: none; }
                 .tree-node { width: 100%; display: flex; align-items: flex-start; gap: 8px; padding: 9px 8px; border: 1px solid transparent; background: transparent; border-radius: 9px; text-align: left; cursor: pointer; font-family: inherit; color: #334155; }
                 .tree-node-row .tree-node { min-width: 0; flex: 1; }
                 .tree-node:hover { background: rgba(255,255,255,.72); }
                 .tree-node.selected { background: #fff; border-color: #bfdbfe; box-shadow: 0 3px 10px rgba(15,23,42,.06); }
+                .tree-node-editing { align-items: center; padding: 6px 7px; border-color: #60a5fa; background: #fff; box-shadow: 0 0 0 3px rgba(96,165,250,.15); cursor: text; }
+                .tree-edit-label { flex: 1; }
+                .tree-inline-rename { width: 100%; min-width: 0; padding: 4px 5px; border: 0; border-bottom: 2px solid #3b82f6; background: #eff6ff; color: #0f172a; font-family: inherit; font-size: 11px; font-weight: 800; outline: none; }
+                .tree-inline-rename:focus-visible { border-radius: 4px 4px 0 0; box-shadow: 0 0 0 3px rgba(37,99,235,.18); }
+                .tree-edit-label small { margin-left: 5px; }
                 .tree-quick-action { min-width: 38px; height: 30px; padding: 0 6px; display: inline-flex; align-items: center; justify-content: center; gap: 1px; border: 1px solid; border-radius: 8px; background: #fff; font-family: inherit; font-size: 11px; font-weight: 900; line-height: 1; cursor: pointer; transition: transform .16s ease, box-shadow .16s ease, background .16s ease; }
                 .tree-quick-action-label { font-size: 8px; letter-spacing: -.1px; }
-                .school-quick-action { border-color: #99f6e4; color: #0f766e; background: #f0fdfa; }
                 .planning-quick-action { border-color: #bfdbfe; color: #2563eb; background: #eff6ff; }
                 .tree-quick-action:hover { transform: translateY(-1px); background: #fff; box-shadow: 0 4px 10px rgba(15,23,42,.1); }
                 .tree-quick-action:focus-visible { outline: 3px solid rgba(37,99,235,.3); outline-offset: 2px; }
+                .tree-management { position: relative; flex: 0 0 auto; }
+                .tree-menu-trigger { width: 30px; height: 30px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; color: #64748b; cursor: pointer; font-weight: 900; letter-spacing: -1px; }
+                .tree-menu-trigger:hover, .tree-menu-trigger[aria-expanded="true"] { border-color: #60a5fa; background: #eff6ff; color: #1d4ed8; }
+                .tree-menu-trigger:focus-visible { outline: 3px solid rgba(37,99,235,.3); outline-offset: 2px; }
+                .tree-menu { position: absolute; top: calc(100% + 5px); right: 0; z-index: 80; width: 205px; padding: 9px; border: 1px solid #cbd5e1; border-radius: 12px; background: #fff; box-shadow: 0 14px 30px rgba(15,23,42,.16); }
+                .tree-menu > strong { display: block; padding: 3px 5px 7px; color: #64748b; font-size: 9px; letter-spacing: .8px; text-transform: uppercase; }
+                .tree-menu > button { width: 100%; min-height: 36px; padding: 8px; border: 0; border-radius: 8px; background: #f8fafc; color: #334155; cursor: pointer; font-family: inherit; font-size: 10px; font-weight: 800; text-align: left; }
+                .tree-menu > button:hover { background: #eff6ff; color: #1d4ed8; }
+                .tree-menu label { display: grid; gap: 5px; margin-top: 7px; padding: 7px 5px 3px; color: #64748b; font-size: 9px; font-weight: 900; }
+                .tree-menu select { width: 100%; min-height: 36px; padding: 7px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; color: #334155; font-family: inherit; font-size: 10px; }
                 .tree-label { min-width: 0; }
                 .tree-label strong { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 11px; line-height: 1.25; }
                 .tree-label small { display: block; color: #94a3b8; font-size: 9px; margin-top: 3px; }
@@ -644,7 +742,6 @@ export default function Home() {
                 .content-heading small { display: block; color: #64748b; margin-top: 3px; font-size: 11px; }
                 .primary-action, .empty-action { display: inline-flex; align-items: center; justify-content: center; padding: 12px 16px; border: none; border-radius: 11px; color: #fff; font-size: 10px; font-weight: 900; text-decoration: none; cursor: pointer; white-space: nowrap; font-family: inherit; }
                 .primary-action:disabled, .empty-action:disabled { cursor: not-allowed; opacity: .5; }
-                .school-action { background: #0f766e; }
                 .art-action, .empty-action.purple { background: #7c3aed; }
                 .planning-action, .empty-action.blue { background: #2563eb; }
                 .content-body { padding: 22px; max-height: 678px; overflow-y: auto; }
@@ -655,10 +752,11 @@ export default function Home() {
                 @keyframes spin { to { transform: rotate(360deg); } }
                 .item-list, .item-grid { display: grid; gap: 14px; }
                 .item-grid { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+                .art-project-list.selected-project-list { grid-template-columns: minmax(0, 1fr); }
+                .art-project-list .selected-project { grid-column: 1 / -1; min-height: 260px; padding: 24px; }
                 .finder-item { border: 1px solid #e2e8f0; border-radius: 17px; background: #fff; padding: 18px; display: flex; align-items: center; gap: 16px; cursor: pointer; transition: transform .2s, box-shadow .2s, border-color .2s; }
                 .finder-item:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(15,23,42,.07); }
                 .finder-item.editing { border-color: #bfdbfe; box-shadow: 0 14px 30px rgba(15,23,42,.08); }
-                .school-item.editing { flex-wrap: wrap; }
                 .item-grid .finder-item.editing { grid-column: 1 / -1; }
                 .finder-item.editing:hover { transform: none; }
                 .finder-item.editing { cursor: default; }
@@ -701,7 +799,7 @@ export default function Home() {
                     .workspace-hero h1 { font-size: 40px; }
                     .mode-switcher { grid-template-columns: 1fr; }
                     .mode-button { min-height: 70px; }
-                    .finder-layout { grid-template-columns: 250px minmax(0, 1fr); }
+                    .finder-layout { grid-template-columns: 310px minmax(0, 1fr); }
                     .hierarchy-hint { display: none; }
                 }
                 @media (max-width: 900px) {
@@ -805,7 +903,11 @@ export default function Home() {
                     }
                     .finder-title button { width: 36px; height: 36px; font-size: 16px; }
                     .mobile-tree-close { display: inline-grid; place-items: center; }
+                    .tree-help { font-size: 10px; }
                     .tree-node { min-height: 44px; align-items: center; padding: 9px 10px; }
+                    .tree-menu-trigger { width: 44px; height: 44px; }
+                    .tree-menu { width: min(235px, calc(100vw - 48px)); }
+                    .tree-menu > button, .tree-menu select { min-height: 44px; font-size: 11px; }
                     .tree-quick-action { min-width: 48px; height: 36px; padding: 0 7px; border-radius: 10px; }
                     .tree-quick-action-label { font-size: 9px; }
                     .tree-label strong { font-size: 12px; }
@@ -824,8 +926,6 @@ export default function Home() {
                     .upload-parent-select { grid-column: 1 / -1; }
                     .content-body { max-height: none; padding: 12px; }
                     .finder-item { align-items: flex-start; padding: 14px; border-radius: 15px; }
-                    .school-item { flex-wrap: wrap; }
-                    .school-item .open-link { margin-left: 0; }
                     .item-symbol { width: 40px; height: 40px; border-radius: 12px; font-size: 19px; }
                     .item-main h3 { font-size: 15px; }
                     .item-grid { grid-template-columns: 1fr; }
@@ -837,7 +937,7 @@ export default function Home() {
                     .reference-nav { grid-column: 1 / -1; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
                     .top-nav-link { padding: 8px 6px; overflow: hidden; font-size: 9px; text-align: center; text-overflow: ellipsis; }
                     .nem-badge { justify-self: start; letter-spacing: .8px; }
-                    .ai-mode-badge { padding: 9px 10px; font-size: 8px; }
+                    .plan-generator-link { padding: 9px 10px; font-size: 8px; }
                     .mobile-finder-toolbar { padding: 7px; }
                     .app-footer { min-height: 25px; margin-top: auto; font-size: 8px; }
                 }

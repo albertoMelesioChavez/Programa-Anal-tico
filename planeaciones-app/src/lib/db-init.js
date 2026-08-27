@@ -107,7 +107,6 @@ export async function ensureTablesExist() {
                 evaluacion_por_grado TEXT,
                 recursos_por_grado TEXT,
                 evidencias_por_grado TEXT,
-                proyecto_escolar_id TEXT,
                 proyecto_arte_id TEXT,
                 valor_mensual TEXT,
                 ejes_articuladores TEXT,
