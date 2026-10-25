@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import PlaneacionForm from '@/components/PlaneacionForm';
 import PlaneacionList from '@/components/PlaneacionList';
-import { ArtInlineEditor } from '@/components/InlineProjectEditors';
 
 const modes = {
     arte: {
@@ -138,7 +137,6 @@ export default function Home() {
     const [showForm, setShowForm] = useState(false);
     const [expandedEditor, setExpandedEditor] = useState(null);
     const [expandedPreview, setExpandedPreview] = useState(null);
-    const [creationPanel, setCreationPanel] = useState(null);
     const [loading, setLoading] = useState(true);
     const [uploading, setUploading] = useState('');
     const [uploadMessage, setUploadMessage] = useState('');
@@ -171,6 +169,14 @@ export default function Home() {
 
     useEffect(() => {
         fetchWorkspace();
+        const params = new URLSearchParams(window.location.search);
+        const planningId = params.get('planeacion');
+        if (planningId) {
+            setActiveMode('planeaciones');
+            setSelectedNode({ type: 'planning', id: planningId });
+            setExpandedPreview({ type: 'planning', id: planningId });
+            if (params.get('editar') === '1') setExpandedEditor({ type: 'planning', id: planningId });
+        }
     }, []);
 
     const tree = useMemo(() => proyectosArte.map((project) => ({
@@ -215,7 +221,6 @@ export default function Home() {
         setSelectedNode(null);
         setExpandedEditor(null);
         setExpandedPreview(null);
-        setCreationPanel(null);
         setMobileTreeOpen(false);
     };
 
@@ -225,7 +230,6 @@ export default function Home() {
         setActiveMode(type === 'art' ? 'arte' : 'planeaciones');
         setExpandedEditor(null);
         setExpandedPreview(type === 'art' ? { type, id } : null);
-        setCreationPanel(null);
         setMobileTreeOpen(false);
     };
 
@@ -233,7 +237,6 @@ export default function Home() {
         setSelectedNode(null);
         setExpandedEditor(null);
         setExpandedPreview(null);
-        setCreationPanel(null);
         setMobileTreeOpen(false);
         setActiveTreeMenu(null);
         setEditingTreeLabel(null);
@@ -359,7 +362,6 @@ export default function Home() {
     };
 
     const handleEdit = (planning) => {
-        setCreationPanel(null);
         setExpandedPreview({ type: 'planning', id: planning.id });
         setExpandedEditor((current) => current?.type === 'planning' && String(current.id) === String(planning.id) ? null : { type: 'planning', id: planning.id });
     };
@@ -377,23 +379,10 @@ export default function Home() {
         setPlanningContext(null);
     };
 
-    const toggleInlineEditor = (type, id) => {
-        setCreationPanel(null);
-        setExpandedPreview({ type, id });
-        setExpandedEditor((current) => current?.type === type && String(current.id) === String(id) ? null : { type, id });
-    };
-
     const handleInlineSaved = async () => {
         await fetchWorkspace();
         setExpandedEditor(null);
         setExpandedPreview(null);
-        setCreationPanel(null);
-    };
-
-    const toggleCreationPanel = (type) => {
-        setExpandedEditor(null);
-        setExpandedPreview(null);
-        setCreationPanel((current) => current === type ? null : type);
     };
 
     const createPlanningFromArtProject = (project) => {
@@ -404,14 +393,12 @@ export default function Home() {
         setActiveMode('planeaciones');
         setExpandedEditor(null);
         setExpandedPreview(null);
-        setCreationPanel(null);
         setShowForm(true);
         setMobileTreeOpen(false);
     };
 
     const togglePreview = (type, id) => {
         if (expandedEditor?.type === type && String(expandedEditor.id) === String(id)) return;
-        setCreationPanel(null);
         setExpandedPreview((current) => current?.type === type && String(current.id) === String(id) ? null : { type, id });
     };
 
@@ -575,7 +562,7 @@ export default function Home() {
                                     </div>
                                     {activeMode === 'arte' && (
                                         <div className="module-actions art-module-actions">
-                                            <button className="primary-action art-action" onClick={() => toggleCreationPanel('art')}>{creationPanel === 'art' ? 'CERRAR CREACIÓN ↑' : '+ CREAR PROYECTO'}</button>
+                                            <Link className="primary-action art-action" href="/proyectos/nuevo">+ CREAR PROYECTO</Link>
                                             <FileDropAction tone="art" label="PDF, DOCX, TXT o MD · clic o arrastra" onFile={uploadArtFile} loading={uploading === 'art'} />
                                         </div>
                                     )}
@@ -585,25 +572,19 @@ export default function Home() {
                                 {uploadMessage && <p className={`upload-message ${uploadMessage.includes('creado') ? 'success' : uploading ? '' : 'error'}`}>{uploadMessage}</p>}
 
                                 <div className="content-body">
-                                    {creationPanel === 'art' && activeMode === 'arte' && (
-                                        <div className="create-project-slot">
-                                            <ArtInlineEditor project={{}} onSaved={handleInlineSaved} onCancel={() => setCreationPanel(null)} />
-                                        </div>
-                                    )}
                                     {loading ? (
                                         <div className="loading-area"><div className="loader-blue" /></div>
                                     ) : activeMode === 'arte' ? (
                                         visibleArtProjects.length === 0 ? (
-                                            <EmptyState icon="🎨" title="Sin proyectos de arte" description="Crea un proyecto o sube el documento que ya elaboraste." action={<div className="empty-art-actions"><button className="empty-action purple" onClick={() => toggleCreationPanel('art')}>Crear proyecto</button><FileDropAction tone="art" label="Subir archivo" onFile={uploadArtFile} loading={uploading === 'art'} /></div>} />
+                                            <EmptyState icon="🎨" title="Sin proyectos de arte" description="Crea un proyecto o sube el documento que ya elaboraste." action={<div className="empty-art-actions"><Link className="empty-action purple" href="/proyectos/nuevo">Crear proyecto</Link><FileDropAction tone="art" label="Subir archivo" onFile={uploadArtFile} loading={uploading === 'art'} /></div>} />
                                         ) : (
                                             <div className={`item-grid art-project-list ${selectedNode?.type === 'art' ? 'selected-project-list' : ''}`}>
                                                 {visibleArtProjects.map((project) => {
                                                     const children = planeaciones.filter((planning) => String(planning.proyecto_arte_id) === String(project.id));
-                                                    const isEditing = expandedEditor?.type === 'art' && String(expandedEditor.id) === String(project.id);
                                                     const isSelected = selectedNode?.type === 'art' && String(selectedNode.id) === String(project.id);
-                                                    const isExpanded = isEditing || isSelected || (expandedPreview?.type === 'art' && String(expandedPreview.id) === String(project.id));
+                                                    const isExpanded = isSelected || (expandedPreview?.type === 'art' && String(expandedPreview.id) === String(project.id));
                                                     return (
-                                                        <article className={`finder-item art-item ${isExpanded ? 'expanded' : ''} ${isEditing ? 'editing' : ''} ${isSelected ? 'selected-project' : ''}`} key={project.id} onClick={() => selectTreeNode('art', project.id)}>
+                                                        <article className={`finder-item art-item ${isExpanded ? 'expanded' : ''} ${isSelected ? 'selected-project' : ''}`} key={project.id} onClick={() => selectTreeNode('art', project.id)}>
                                                             <div className="item-main">
                                                                 <div className="art-title-row"><span>🎨</span><h3>{project.titulo}</h3></div>
                                                                 {!isExpanded && <div className="compact-summary"><span>🗓️ {children.length}</span></div>}
@@ -612,8 +593,8 @@ export default function Home() {
                                                                     <div className="child-summary"><span>🗓️ {children.length} planeación{children.length === 1 ? '' : 'es'} dentro</span></div>
                                                                 </>}
                                                             </div>
-                                                            <button className="open-link purple inline-edit-button" onClick={(event) => { event.stopPropagation(); toggleInlineEditor('art', project.id); }}>{isEditing ? 'CERRAR ↑' : 'EDITAR ✎'}</button>
-                                                            {isEditing && <div className="inline-editor-slot" onClick={(event) => event.stopPropagation()}><ArtInlineEditor project={project} onSaved={handleInlineSaved} onCancel={() => setExpandedEditor(null)} /></div>}
+                                                            <Link className="open-link purple inline-edit-button" href={`/proyectos/${project.id}/editar`} onClick={event => event.stopPropagation()}>EDITAR ✎</Link>
+                                                            {isExpanded && <Link className="open-link purple" href={`/proyectos/${project.id}`} onClick={event => event.stopPropagation()}>VER PROYECTO →</Link>}
                                                         </article>
                                                     );
                                                 })}

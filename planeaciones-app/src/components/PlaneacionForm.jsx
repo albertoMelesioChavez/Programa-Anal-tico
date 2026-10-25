@@ -43,6 +43,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
     const [contenidos, setContenidos] = useState({ nacionales: [], estatales: [] });
     const [pdas, setPdas] = useState([]);
     const [proyectosArte, setProyectosArte] = useState([]);
+    const [programasAnaliticos, setProgramasAnaliticos] = useState([]);
     
     const [formData, setFormData] = useState({
         titulo: '',
@@ -57,6 +58,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
         recursos_por_grado: {},
         evidencias_por_grado: {},
         proyecto_arte_id: '',
+        programa_analitico_id: '',
         valor_mensual: '',
         ejes_articuladores: '',
         metodologia: '',
@@ -67,9 +69,10 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
         recursos: '',
         evidencias: '',
         actividades: ''
+        ,grupo: '', fecha_clase: '', numero_sesion: '', duracion_minutos: 50,
+        proposito: '', criterios: '', ajustes: '', observaciones: '', estado: 'borrador', origen_borrador: ''
     });
 
-    const [isUploading, setIsUploading] = useState(false);
     const [isGeneratingAI, setIsGeneratingAI] = useState(false);
 
     // Cargar datos iniciales si estamos en modo edición
@@ -89,6 +92,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                 recursos_por_grado: textSelectionsFrom(initialData, 'recursos_por_grado', 'recursos'),
                 evidencias_por_grado: textSelectionsFrom(initialData, 'evidencias_por_grado', 'evidencias'),
                 proyecto_arte_id: initialData.proyecto_arte_id?.toString() || '',
+                programa_analitico_id: initialData.programa_analitico_id?.toString() || '',
                 valor_mensual: initialData.valor_mensual || '',
                 ejes_articuladores: initialData.ejes_articuladores || '',
                 evidencias: initialData.evidencias || '',
@@ -106,6 +110,10 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
             .then(res => res.ok ? res.json() : [])
             .then(data => setProyectosArte(Array.isArray(data) ? data : []))
             .catch(err => console.error('Error loading art projects:', err));
+        fetch('/api/programas-analiticos')
+            .then(res => res.ok ? res.json() : [])
+            .then(data => setProgramasAnaliticos(Array.isArray(data) ? data : []))
+            .catch(err => console.error('Error loading analytic programs:', err));
     }, []);
 
     useEffect(() => {
@@ -114,10 +122,10 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
             .sort((a, b) => Number(a.id) - Number(b.id));
         const firstGradeId = phaseGrades[0]?.id?.toString() || '';
 
-        if (firstGradeId && formData.grado_id !== firstGradeId) {
+        if (firstGradeId && !formData.grupo && formData.grado_id !== firstGradeId) {
             setFormData((current) => ({ ...current, grado_id: firstGradeId }));
         }
-    }, [catalogs.grados, formData.fase_id, formData.grado_id]);
+    }, [catalogs.grados, formData.fase_id, formData.grado_id, formData.grupo]);
 
     useEffect(() => {
         if (formData.fase_id && formData.lenguaje_id) {
@@ -146,44 +154,12 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
         const newErrors = {};
         if (!formData.titulo?.trim()) newErrors.titulo = true;
         if (!formData.fase_id) newErrors.fase_id = true;
-        if (filteredGrados.length !== 2) newErrors.fase_id = true;
+        if (filteredGrados.length !== (formData.grupo ? 1 : 2)) newErrors.fase_id = true;
         if (!formData.lenguaje_id) newErrors.lenguaje_id = true;
         if (!formData.proyecto_arte_id) newErrors.proyecto_arte_id = true;
         if (filteredGrados.some((grade) => !formData.pda_por_grado?.[String(grade.id)])) newErrors.pdas = true;
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
-    };
-
-    const handleFileUpload = async (e, fieldName = 'recursos', gradoId = null) => {
-        const file = e.target.files[0];
-        if (!file) return;
-
-        setIsUploading(true);
-        try {
-            const response = await fetch(`/api/upload?filename=${encodeURIComponent(file.name)}`, {
-                method: 'POST',
-                body: file,
-            });
-
-            if (response.ok) {
-                const blob = await response.json();
-                const currentVal = gradoId ? formData[fieldName]?.[String(gradoId)] || '' : formData[fieldName] || '';
-                const newLine = currentVal ? '\n' : '';
-                const nextValue = `${currentVal}${newLine}📎 ${file.name}: ${blob.url}`;
-                setFormData(gradoId ? {
-                    ...formData,
-                    [fieldName]: { ...formData[fieldName], [String(gradoId)]: nextValue }
-                } : { ...formData, [fieldName]: nextValue });
-            } else {
-                const err = await response.json();
-                alert('Error al subir: ' + (err.error || 'Asegúrate de conectar Vercel Blob.'));
-            }
-        } catch (error) {
-            console.error('Upload error:', error);
-            alert('Fallo de conexión al subir.');
-        } finally {
-            setIsUploading(false);
-        }
     };
 
     const generateAISequence = async () => {
@@ -192,8 +168,8 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
             pda: allAvailablePdas.find((item) => String(item.id) === String(formData.pda_por_grado?.[String(grade.id)]))
         }));
 
-        if (pdaPorGrado.length !== 2 || pdaPorGrado.some((item) => !item.pda)) {
-            alert("Selecciona un PDA para cada grado de la fase.");
+        if (pdaPorGrado.length !== (formData.grupo ? 1 : 2) || pdaPorGrado.some((item) => !item.pda)) {
+            alert("Selecciona un PDA para el grado del grupo.");
             return;
         }
 
@@ -216,7 +192,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
             3. Integra el valor mensual de manera natural en acciones, convivencia o reflexión, únicamente cuando se haya proporcionado.
             Metodología sugerida: ${formData.metodologia || 'Aprendizaje Basado en Proyectos'}.
             Quiero que el resultado sea un JSON con las claves: "inicio", "desarrollo", "cierre", "metodologia_sugerida", "evaluacion_sugerida", "recursos_sugeridos".
-            5. La planeación atiende a dos grados de la misma fase. Diferencia las consignas, productos o apoyos para cada grado según su PDA.
+            5. ${formData.grupo ? `La planeación atiende al grupo ${formData.grupo} y su producto específico.` : 'La planeación atiende a dos grados de la misma fase. Diferencia las consignas, productos o apoyos para cada grado según su PDA.'}
             Sé creativo, usa actividades lúdicas acordes a ambos grados y evita inventar datos que no estén en el contexto.`;
 
             const context = {
@@ -270,7 +246,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
 
     const handleSave = async () => {
         if (!validate()) {
-            alert('Completa título, fase, lenguaje, los dos PDA y los proyectos de contexto.');
+            alert('Completa título, fase, lenguaje, PDA y proyecto de contexto.');
             return;
         }
 
@@ -306,6 +282,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                 contenido_nacional_id: formData.contenido_nacional_id?.toString() || null,
                 contenido_estatal_id: formData.contenido_estatal_id?.toString() || null,
                 proyecto_arte_id: formData.proyecto_arte_id?.toString() || null,
+                programa_analitico_id: formData.programa_analitico_id?.toString() || null,
                 pda_id: pdaPorGrado[0]?.pda_id || null,
                 pda_por_grado: pdaPorGrado,
                 evaluacion_por_grado: evaluacionPorGrado,
@@ -343,7 +320,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
     };
 
     const filteredGrados = (catalogs?.grados || [])
-        .filter(g => g.fase_id == formData.fase_id)
+        .filter(g => g.fase_id == formData.fase_id && (!formData.grupo || String(g.id) === String(formData.grado_id)))
         .sort((a, b) => Number(a.id) - Number(b.id));
     const allAvailablePdas = Array.from(new Map([...(pdas || []), ...pdasCatalog].map((pda) => [String(pda.id), pda])).values());
     const contenidoSeleccionado = formData.contenido_estatal_id
@@ -415,6 +392,14 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                         </p>
                     </div>
 
+                    {formData.grupo && <div style={{ marginBottom: '20px', padding: '18px', borderRadius: '10px', background: '#f5f3ff', border: '1px solid #ddd6fe' }}>
+                        <strong style={{ display: 'block', marginBottom: '12px', color: '#6d28d9' }}>Sesión del grupo {formData.grupo} · borrador revisable</strong>
+                        <div className="responsive-meta-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
+                            {[['Fecha tentativa', 'fecha_clase', 'date'], ['Número de sesión', 'numero_sesion', 'number'], ['Duración en minutos', 'duracion_minutos', 'number'], ['Estado', 'estado', 'select']].map(([label, key, type]) => <label key={key} style={{ display: 'grid', gap: '5px', fontSize: '11px', fontWeight: '800' }}>{label}{type === 'select' ? <select value={formData.estado || 'borrador'} onChange={e => setFormData({ ...formData, estado: e.target.value })}><option value="borrador">Borrador</option><option value="revisada">Revisada</option><option value="aplicada">Aplicada</option></select> : <input type={type} value={formData[key] || ''} onChange={e => setFormData({ ...formData, [key]: e.target.value })} />}</label>)}
+                        </div>
+                        {[['Propósito de la sesión', 'proposito'], ['Criterios observables', 'criterios'], ['Ajustes e inclusión', 'ajustes'], ['Observaciones de aplicación', 'observaciones']].map(([label, key]) => <label key={key} style={{ display: 'grid', gap: '5px', marginTop: '12px', fontSize: '11px', fontWeight: '800' }}>{label}<textarea value={formData[key] || ''} onChange={e => setFormData({ ...formData, [key]: e.target.value })} rows={2} style={{ width: '100%', padding: '9px', border: '1px solid #ddd6fe', borderRadius: '7px' }} /></label>)}
+                    </div>}
+
                     {/* Meta Grid */}
                     <div className="responsive-meta-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', marginBottom: '24px', padding: '12px 16px', background: theme.sectionBg, borderRadius: '8px', border: `1px solid ${theme.border}` }}>
                         <div>
@@ -437,9 +422,9 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                             </select>
                         </div>
                         <div style={{ gridColumn: '1 / -1' }}>
-                            <label style={{ display: 'block', fontSize: '8px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px', letterSpacing: '1px' }}>Grados asignados automáticamente por la fase</label>
+                            <label style={{ display: 'block', fontSize: '8px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px', letterSpacing: '1px' }}>{formData.grupo ? `Grado del grupo ${formData.grupo}` : 'Grados asignados automáticamente por la fase'}</label>
                             <div className="automatic-grades" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-                                {filteredGrados.length === 2 ? filteredGrados.map((grado) => <div key={grado.id} style={{ padding: '8px 10px', borderRadius: '8px', background: '#fff', border: `1px solid ${theme.border}`, color: theme.text, fontSize: '12px', fontWeight: '800' }}>{grado.nombre}</div>) : <div style={{ gridColumn: '1 / -1', color: theme.subtext, fontSize: '11px' }}>Selecciona una fase para asignar sus dos grados.</div>}
+                                {filteredGrados.length > 0 ? filteredGrados.map((grado) => <div key={grado.id} style={{ padding: '8px 10px', borderRadius: '8px', background: '#fff', border: `1px solid ${theme.border}`, color: theme.text, fontSize: '12px', fontWeight: '800' }}>{grado.nombre}</div>) : <div style={{ gridColumn: '1 / -1', color: theme.subtext, fontSize: '11px' }}>Selecciona una fase para asignar sus grados.</div>}
                             </div>
                         </div>
                     </div>
@@ -522,6 +507,13 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                                     </select>
                                 </div>
                                 <div>
+                                    <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px' }}>Programa analítico</label>
+                                    <select value={formData.programa_analitico_id} onChange={(e) => setFormData({ ...formData, programa_analitico_id: e.target.value })} style={{ width: '100%', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '8px', color: theme.text, fontSize: '13px', fontWeight: '600', outline: 'none', padding: '8px 10px' }}>
+                                        <option value="">Sin vincular por ahora</option>
+                                        {programasAnaliticos.map((programa) => <option key={programa.id} value={programa.id}>{programa.titulo}</option>)}
+                                    </select>
+                                </div>
+                                <div>
                                     <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase', marginBottom: '6px' }}>Valor mensual (opcional)</label>
                                     <input value={formData.valor_mensual} onChange={(e) => setFormData({ ...formData, valor_mensual: e.target.value })} placeholder="Ej. Paz, respeto, empatía" style={{ width: '100%', background: theme.sectionBg, border: `1px solid ${theme.border}`, borderRadius: '8px', color: theme.text, fontSize: '13px', fontWeight: '600', outline: 'none', padding: '8px 10px' }} />
                                 </div>
@@ -584,6 +576,7 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                             <h4 style={{ fontSize: '11px', fontWeight: '900', color: '#f59e0b', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '1px', borderLeft: `3px solid #f59e0b`, paddingLeft: '10px' }}>
                                 IV. Evaluación y Recursos
                             </h4>
+                            <p style={{ color: '#52627b', fontSize: '12px', marginBottom: '12px' }}>Puedes describir recursos y evidencias aquí. Los archivos adjuntos están en pausa hasta habilitar almacenamiento privado.</p>
                             <div className="responsive-pda-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                                 {filteredGrados.map((grado, index) => <div key={grado.id} style={{ padding: '12px', borderRadius: '10px', border: `1px solid ${theme.border}`, background: index === 0 ? '#fffbeb' : '#fff7ed' }}>
                                     <div style={{ marginBottom: '10px', color: index === 0 ? '#b45309' : '#c2410c', fontSize: '10px', fontWeight: '900', letterSpacing: '.8px' }}>{grado.nombre.toUpperCase()}</div>
@@ -591,8 +584,6 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                                     <textarea value={formData.evaluacion_por_grado?.[String(grado.id)] || ''} onChange={(e) => setFormData({ ...formData, evaluacion_por_grado: { ...formData.evaluacion_por_grado, [String(grado.id)]: e.target.value } })} style={{ width: '100%', height: '80px', background: '#fff', border: `1px solid ${theme.border}`, borderRadius: '8px', padding: '9px', fontSize: '12px', color: theme.text, outline: 'none', lineHeight: '1.4' }} placeholder={`Evaluación para ${grado.nombre}...`} />
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '12px 0 6px' }}>
                                         <label style={{ display: 'block', fontSize: '9px', color: theme.subtext, fontWeight: '900', textTransform: 'uppercase' }}>Recursos</label>
-                                        <input type="file" id={`file-upload-recursos-${grado.id}`} style={{ display: 'none' }} onChange={(e) => handleFileUpload(e, 'recursos_por_grado', grado.id)} />
-                                        <label htmlFor={`file-upload-recursos-${grado.id}`} style={{ fontSize: '8px', fontWeight: '800', color: theme.accent, cursor: 'pointer', padding: '2px 6px', borderRadius: '4px', background: '#eff6ff' }}>{isUploading ? '...' : '📎 SUBIR'}</label>
                                     </div>
                                     <textarea value={formData.recursos_por_grado?.[String(grado.id)] || ''} onChange={(e) => setFormData({ ...formData, recursos_por_grado: { ...formData.recursos_por_grado, [String(grado.id)]: e.target.value } })} style={{ width: '100%', height: '80px', background: '#fff', border: `1px solid ${theme.border}`, borderRadius: '8px', padding: '9px', fontSize: '12px', color: theme.text, outline: 'none', lineHeight: '1.4' }} placeholder={`Recursos para ${grado.nombre}...`} />
                                 </div>)}
@@ -605,8 +596,6 @@ export default function PlaneacionForm({ initialData, onSaved, onCancel, embedde
                                 {filteredGrados.map((grado, index) => <div key={grado.id} style={{ padding: '12px', borderRadius: '10px', border: `1px solid ${theme.border}`, background: index === 0 ? '#eff6ff' : '#f5f3ff' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
                                         <span style={{ color: index === 0 ? '#2563eb' : '#7c3aed', fontSize: '10px', fontWeight: '900', letterSpacing: '.8px' }}>{grado.nombre.toUpperCase()}</span>
-                                        <input type="file" id={`file-upload-evidencias-${grado.id}`} style={{ display: 'none' }} onChange={(e) => handleFileUpload(e, 'evidencias_por_grado', grado.id)} />
-                                        <label htmlFor={`file-upload-evidencias-${grado.id}`} style={{ fontSize: '8px', fontWeight: '800', color: theme.accent, cursor: 'pointer', padding: '2px 6px', borderRadius: '4px', background: '#fff' }}>{isUploading ? '...' : '📸 SUBIR'}</label>
                                     </div>
                                     <textarea value={formData.evidencias_por_grado?.[String(grado.id)] || ''} onChange={(e) => setFormData({ ...formData, evidencias_por_grado: { ...formData.evidencias_por_grado, [String(grado.id)]: e.target.value } })} style={{ width: '100%', height: '100px', background: '#fff', border: `1px solid ${theme.border}`, borderRadius: '8px', padding: '9px', fontSize: '12px', color: theme.text, outline: 'none', lineHeight: '1.4' }} placeholder={`Evidencias de ${grado.nombre}...`} />
                                 </div>)}

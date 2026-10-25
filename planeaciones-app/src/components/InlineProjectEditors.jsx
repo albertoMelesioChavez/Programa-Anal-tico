@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 function EditorShell({ tone, children, message }) {
     return (
@@ -31,12 +31,21 @@ export function ArtInlineEditor({ project = {}, onSaved, onCancel }) {
     const isNew = !project.id;
     const [draft, setDraft] = useState({
         titulo: project.titulo || '',
+        programa_analitico_id: String(project.programa_analitico_id || ''),
         tematica: project.tematica || '',
         introduccion: project.introduccion || '',
         productsText: normalizeProducts(project.productos)
     });
     const [saving, setSaving] = useState(false);
     const [message, setMessage] = useState(null);
+    const [programas, setProgramas] = useState([]);
+
+    useEffect(() => {
+        fetch('/api/programas-analiticos')
+            .then((response) => response.ok ? response.json() : [])
+            .then((data) => setProgramas(Array.isArray(data) ? data : []))
+            .catch(() => setProgramas([]));
+    }, []);
 
     const products = useMemo(() => Object.fromEntries(Object.entries(draft.productsText).map(([key, value]) => [
         key,
@@ -57,6 +66,7 @@ export function ArtInlineEditor({ project = {}, onSaved, onCancel }) {
                 body: JSON.stringify({
                     ...project,
                     titulo: draft.titulo,
+                    programa_analitico_id: draft.programa_analitico_id || null,
                     tematica: draft.tematica,
                     introduccion: draft.introduccion,
                     productos: products
@@ -78,6 +88,7 @@ export function ArtInlineEditor({ project = {}, onSaved, onCancel }) {
             <div className="editor-heading"><div><span>{isNew ? 'NUEVO PROYECTO DE ARTE' : 'EDITAR PROYECTO DE ARTE'}</span><h4>Enfoque y productos esperados</h4></div>{project.nombre_archivo && <small>Archivo original: {project.nombre_archivo}</small>}</div>
             <div className="editor-grid two">
                 <label className="full">Título<input value={draft.titulo} onChange={(event) => setDraft({ ...draft, titulo: event.target.value })} /></label>
+                <label className="full">Programa analítico<select value={draft.programa_analitico_id} onChange={(event) => setDraft({ ...draft, programa_analitico_id: event.target.value })}><option value="">Sin vincular por ahora</option>{programas.map((programa) => <option key={programa.id} value={programa.id}>{programa.titulo}</option>)}</select></label>
                 <label className="full">Temática<input value={draft.tematica} onChange={(event) => setDraft({ ...draft, tematica: event.target.value })} /></label>
                 <label className="full">Introducción y sustento<textarea rows="8" value={draft.introduccion} onChange={(event) => setDraft({ ...draft, introduccion: event.target.value })} /></label>
             </div>

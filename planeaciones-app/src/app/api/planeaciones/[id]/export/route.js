@@ -1,8 +1,10 @@
 import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
 import { ensurePlaneacionContextColumns, ensureProyectoArteTable } from '@/lib/context-schema';
+import { requireUser } from '@/lib/auth';
 
 export async function GET(request, { params }) {
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     const { id } = await params;
 
     try {
@@ -18,7 +20,8 @@ export async function GET(request, { params }) {
                     cn.descripcion as cn_desc,
                     ce.descripcion as ce_desc,
                     pda.descripcion as pda_desc,
-                    pr.titulo as proyecto_arte_titulo
+                    pr.titulo as proyecto_arte_titulo,
+                    pr.configuracion as proyecto_config
                 FROM planeaciones p
                 LEFT JOIN fases f ON p.fase_id = f.id
                 LEFT JOIN grados g ON p.grado_id = g.id
@@ -26,14 +29,16 @@ export async function GET(request, { params }) {
                 LEFT JOIN contenidos_nacionales cn ON p.contenido_nacional_id = cn.id
                 LEFT JOIN contenidos_estatales ce ON p.contenido_estatal_id = ce.id
                 LEFT JOIN pdas pda ON p.pda_id = pda.id
-                LEFT JOIN proyectos pr ON p.proyecto_arte_id = pr.id
-                WHERE p.id = ?
+                LEFT JOIN proyectos pr ON p.proyecto_arte_id = pr.id AND pr.docente_id = p.docente_id
+                WHERE p.id = ? AND p.docente_id = ?
             `,
-            args: [id]
+            args: [id, auth.user.id]
         });
 
         const p = result.rows[0];
         if (!p) return NextResponse.json({ error: 'Planeación no encontrada' }, { status: 404 });
+        let projectConfig = {};
+        try { projectConfig = p.proyecto_config ? JSON.parse(p.proyecto_config) : {}; } catch { projectConfig = {}; }
         let pdasPorGrado = [];
         try { pdasPorGrado = p.pda_por_grado ? JSON.parse(p.pda_por_grado) : []; } catch { pdasPorGrado = []; }
         const gradosAtendidos = pdasPorGrado.length > 0
@@ -52,11 +57,18 @@ export async function GET(request, { params }) {
 
         const content = `
 # PLANEACIÓN ANALÍTICA: ${p.titulo}
-Fecha: ${new Date(p.fecha_creacion).toLocaleDateString()}
+Fecha de clase (tentativa): ${p.fecha_clase || 'Por confirmar'}
+Estado: ${p.estado || 'borrador'}
 
 ## DATOS GENERALES
+- **Escuela:** ${projectConfig.escuela || 'Por definir'}
+- **Docente:** ${projectConfig.docente || 'Por definir'}
+- **Ciclo escolar:** ${projectConfig.ciclo || 'Por definir'}
+- **Grupo:** ${p.grupo || 'No especificado'}
+- **Sesión:** ${p.numero_sesion || 'No especificada'}
+- **Duración:** ${p.duracion_minutos || 50} minutos
 - **Fase:** ${p.fase_nombre}
-- **Grados atendidos automáticamente:** ${gradosAtendidos}
+- **Grado(s):** ${gradosAtendidos}
 - **Lenguaje Artístico:** ${p.lenguaje_nombre}
 - **Campo Formativo:** Lenguajes
 - **Ejes Articuladores:** ${p.ejes_articuladores || 'No especificados'}
@@ -70,7 +82,11 @@ Fecha: ${new Date(p.fecha_creacion).toLocaleDateString()}
 ${pdaTexto}
 
 ## DISEÑO DIDÁCTICO
+- **Diagnóstico y contexto:** ${projectConfig.diagnostico || 'Por definir'}
+- **Pregunta guía:** ${projectConfig.pregunta_guia || 'Por definir'}
+- **Propósito de la sesión:** ${p.proposito || 'Por definir'}
 - **Metodología:** ${p.metodologia || 'N/A'}
+- **Fuentes y referentes:** ${projectConfig.fuentes || 'Pendiente de verificación'}
 
 ### SECUENCIA DIDÁCTICA
 **Inicio:**
@@ -83,6 +99,9 @@ ${p.secuencia_desarrollo || 'N/A'}
 ${p.secuencia_cierre || 'N/A'}
 
 ## EVALUACIÓN Y RECURSOS
+- **Criterios observables:** ${p.criterios || 'Por definir'}
+- **Inclusión y ajustes:** ${p.ajustes || projectConfig.inclusion || 'Por definir'}
+- **Seguridad y cuidado:** ${projectConfig.seguridad || 'Por definir'}
 - **Evaluación Formativa por grado:**
 ${textosPorGrado('evaluacion_por_grado', p.evaluacion)}
 - **Recursos por grado:**
@@ -91,8 +110,11 @@ ${textosPorGrado('recursos_por_grado', p.recursos)}
 ${textosPorGrado('evidencias_por_grado', p.evidencias)}
 - **Otras Actividades Sugeridas:** ${p.actividades || 'N/A'}
 
+## OBSERVACIONES DE APLICACIÓN
+${p.observaciones || 'Pendientes después de la clase.'}
+
 ---
-Generado por Plataforma Programa Analítico 2025
+Borrador para revisión docente. Fechas y fuentes deben confirmarse.
 `;
 
         return new Response(content, {

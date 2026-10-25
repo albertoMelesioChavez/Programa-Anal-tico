@@ -45,6 +45,7 @@ export default function PlaneacionList({ planeaciones, onDelete, onEdit, editing
                                 <span style={{ fontSize: '10px', padding: '4px 12px', borderRadius: '100px', background: '#eff6ff', color: '#2563eb', fontWeight: '800', textTransform: 'uppercase' }}>{p.fase_nombre || `Fase ${p.fase_id}`}</span>
                                 <span style={{ fontSize: '10px', padding: '4px 12px', borderRadius: '100px', background: '#f5f3ff', color: '#7c3aed', fontWeight: '800', textTransform: 'uppercase' }}>{p.grado_nombre || `Grado ${p.grado_id}`}</span>
                                 <span style={{ fontSize: '10px', padding: '4px 12px', borderRadius: '100px', background: '#ecfdf5', color: '#10b981', fontWeight: '800', textTransform: 'uppercase' }}>{p.lenguaje_nombre || `Lenguaje ${p.lenguaje_id}`}</span>
+                                {p.grupo && <span style={{ fontSize: '10px', padding: '4px 12px', borderRadius: '100px', background: '#f5f3ff', color: '#6d28d9', fontWeight: '800' }}>{p.grupo} · Sesión {p.numero_sesion || '—'} · {p.fecha_clase || 'sin fecha'} · {p.estado || 'borrador'}</span>}
                             </div>
                             {isExpanded && <div style={{ marginTop: '12px', display: 'flex', alignItems: 'center', gap: '7px', flexWrap: 'wrap', color: '#64748b', fontSize: '10px', fontWeight: '800' }}>
                                 <span style={{ padding: '5px 9px', borderRadius: '8px', background: '#f5f3ff', color: '#6d28d9' }}>🎨 {p.proyecto_arte_titulo || 'Sin proyecto de arte'}</span>
@@ -119,7 +120,7 @@ export default function PlaneacionList({ planeaciones, onDelete, onEdit, editing
                                     alignItems: 'center',
                                     gap: '8px'
                                 }}>
-                                📥 PDF
+                                📥 Markdown
                             </a>
                             {onDelete && (
                                 <button onClick={() => {

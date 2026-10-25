@@ -2,8 +2,10 @@ import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
+import { requireSameOrigin, requireUser } from '@/lib/auth';
 
 export async function GET(request, { params }) {
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     const { slug } = await params; 
     
     if (slug !== 'artes' && slug !== 'tablas') {
@@ -21,53 +23,29 @@ export async function GET(request, { params }) {
     }
 
     try {
-        // 1. Intentar asegurar tabla
         await db.execute(`
-            CREATE TABLE IF NOT EXISTS documentos_base (
-                nombre TEXT PRIMARY KEY,
+            CREATE TABLE IF NOT EXISTS documentos_docente (
+                docente_id TEXT NOT NULL,
+                nombre TEXT NOT NULL,
                 contenido TEXT,
-                fecha_actualizacion DATETIME DEFAULT CURRENT_TIMESTAMP
+                fecha_actualizacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (docente_id, nombre)
             )
         `);
 
-        // 2. Intentar leer de la DB
         const result = await db.execute({
-            sql: 'SELECT contenido FROM documentos_base WHERE nombre = ?',
-            args: [slug]
+            sql: 'SELECT contenido FROM documentos_docente WHERE nombre = ? AND docente_id = ?',
+            args: [slug, auth.user.id]
         });
 
         if (result.rows.length > 0 && result.rows[0].contenido) {
-            let storedContent = result.rows[0].contenido;
-            const currentPdfSyncMarker = '<!-- PDF_CONTENT_SYNC_V7 -->';
-            const backupIsPdfSynchronized = slug === 'artes' && backupContent?.includes(currentPdfSyncMarker);
-            const storedNeedsPdfSync = backupIsPdfSynchronized && !storedContent.includes(currentPdfSyncMarker);
-
-            // One-time content migration: replace only the old flattened extraction.
-            // Future edits preserve the marker and continue to be served from the DB.
-            if (storedNeedsPdfSync) {
-                storedContent = backupContent;
-                await db.execute({
-                    sql: 'UPDATE documentos_base SET contenido = ?, fecha_actualizacion = CURRENT_TIMESTAMP WHERE nombre = ?',
-                    args: [storedContent, slug]
-                });
-            }
-
-            return new Response(storedContent, {
+            // Las plantillas son valores iniciales; nunca sustituyen una edición guardada.
+            return new Response(result.rows[0].contenido, {
                 headers: { 'Content-Type': 'text/markdown; charset=utf-8' }
             });
         }
 
-        // 3. Fallback a inyección
         if (backupContent) {
-            try {
-                await db.execute({
-                    sql: 'INSERT OR REPLACE INTO documentos_base (nombre, contenido) VALUES (?, ?)',
-                    args: [slug, backupContent]
-                });
-            } catch (dbErr) {
-                console.error("Fallo al inyectar backup en Turso:", dbErr.message);
-            }
-            
             return new Response(backupContent, {
                 headers: { 'Content-Type': 'text/markdown; charset=utf-8' }
             });
@@ -91,22 +69,27 @@ export async function GET(request, { params }) {
 }
 
 export async function POST(request, { params }) {
+    const originError = requireSameOrigin(request); if (originError) return originError;
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     const { slug } = await params;
+    if (slug !== 'artes' && slug !== 'tablas') return NextResponse.json({ error: 'Documento no encontrado.' }, { status: 404 });
     try {
         const { content } = await request.json();
         if (!content) return NextResponse.json({ error: 'Contenido vacío' }, { status: 400 });
 
         await db.execute(`
-            CREATE TABLE IF NOT EXISTS documentos_base (
-                nombre TEXT PRIMARY KEY,
+            CREATE TABLE IF NOT EXISTS documentos_docente (
+                docente_id TEXT NOT NULL,
+                nombre TEXT NOT NULL,
                 contenido TEXT,
-                fecha_actualizacion DATETIME DEFAULT CURRENT_TIMESTAMP
+                fecha_actualizacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (docente_id, nombre)
             )
         `);
 
         await db.execute({
-            sql: 'INSERT OR REPLACE INTO documentos_base (nombre, contenido, fecha_actualizacion) VALUES (?, ?, CURRENT_TIMESTAMP)',
-            args: [slug, content]
+            sql: 'INSERT INTO documentos_docente (docente_id, nombre, contenido, fecha_actualizacion) VALUES (?, ?, ?, CURRENT_TIMESTAMP) ON CONFLICT(docente_id, nombre) DO UPDATE SET contenido = excluded.contenido, fecha_actualizacion = CURRENT_TIMESTAMP',
+            args: [auth.user.id, slug, content]
         });
 
         return NextResponse.json({ success: true });

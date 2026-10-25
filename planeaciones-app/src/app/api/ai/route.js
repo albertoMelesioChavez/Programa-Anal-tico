@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
+import { requireSameOrigin, requireUser } from '@/lib/auth';
+import { getProjectField, localProjectField, projectFieldPrompt } from '@/lib/project-field-assistance';
 
 export const runtime = 'nodejs';
 
@@ -79,9 +81,37 @@ async function generateWithGoogle(apiKey, prompt, context) {
 }
 
 export async function POST(request) {
+    const originError = requireSameOrigin(request); if (originError) return originError;
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     try {
-        const { prompt = '', context = {} } = await request.json();
+        const { prompt = '', context = {}, task, field, scope = 'config', target = {}, current = '', candidates = [] } = await request.json();
         const apiKey = process.env.GOOGLE_AI_STUDIO_API_KEY;
+
+        if (task === 'curriculum-suggestion') {
+            if (!apiKey) return NextResponse.json({ error: 'La asistencia de IA no está configurada. Selecciona contenido y PDA manualmente.' }, { status: 503 });
+            const valid = Array.isArray(candidates) ? candidates.slice(0, 80).filter(item => Number.isInteger(Number(item.contenido_id)) && Number.isInteger(Number(item.pda_id))) : [];
+            if (!valid.length) return NextResponse.json({ error: 'No hay pares de contenido y PDA disponibles para este grupo.' }, { status: 400 });
+            const instruction = `Elige UN par de contenido y PDA del catálogo proporcionado, pertinente al tema, producto y grado del proyecto. Responde únicamente JSON {"contenido_id": número, "pda_id": número, "justificacion": "una oración"}. Debes escoger ambos IDs de la misma opción y no inventar otros. Si el ajuste temático es débil, dilo en la justificación. Opciones: ${JSON.stringify(valid)}`;
+            const raw = await generateWithGoogle(apiKey, instruction, context);
+            const match = raw.match(/\{[\s\S]*\}/);
+            let chosen;
+            try { chosen = JSON.parse(match?.[0] || ''); } catch { return NextResponse.json({ error: 'La IA no devolvió una selección válida; elige manualmente.' }, { status: 502 }); }
+            const candidate = valid.find(item => Number(item.contenido_id) === Number(chosen.contenido_id) && Number(item.pda_id) === Number(chosen.pda_id));
+            if (!candidate) return NextResponse.json({ error: 'La sugerencia no coincide con el catálogo; no se aplicó.' }, { status: 502 });
+            return NextResponse.json({ candidate, justificacion: clean(chosen.justificacion).slice(0, 500), mode: 'cloud' });
+        }
+
+        if (task === 'project-field') {
+            if (!getProjectField(scope, field)) return NextResponse.json({ error: 'Campo no compatible con la asistencia de IA.' }, { status: 400 });
+            if (!context || typeof context !== 'object' || JSON.stringify(context).length > 180000) return NextResponse.json({ error: 'El formulario es demasiado extenso para generar una propuesta.' }, { status: 400 });
+            if (!apiKey?.trim()) return NextResponse.json({ text: localProjectField(scope, field, context, target), mode: 'local-template' });
+            try {
+                const text = await generateWithGoogle(apiKey, projectFieldPrompt(scope, field, current, target), context);
+                return NextResponse.json({ text, mode: 'cloud' });
+            } catch {
+                return NextResponse.json({ error: 'La IA no pudo responder. Tu texto sigue intacto; intenta de nuevo en unos momentos.' }, { status: 502 });
+            }
+        }
 
         if (apiKey) {
             try {

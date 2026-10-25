@@ -49,6 +49,12 @@ body {
   overflow-x: hidden;
 }
 
+.auth-checking { min-height: 100vh; display: grid; place-items: center; color: #334155; font-size: 15px; }
+.account-bar { display: flex; align-items: center; justify-content: flex-end; gap: 14px; padding: 9px 20px; background: #142c59; color: #eaf0ff; font-size: 12px; }
+.account-bar button { border: 1px solid #9aafd6; border-radius: 7px; background: transparent; color: white; padding: 5px 10px; font-size: 12px; cursor: pointer; }
+.account-bar button:hover { background: #28477f; }
+.account-bar button:focus-visible { outline: 3px solid #bfd0ff; outline-offset: 2px; }
+
 .glass-panel {
   background: var(--surface);
   backdrop-filter: blur(24px);

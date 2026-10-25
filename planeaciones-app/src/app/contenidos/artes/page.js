@@ -11,6 +11,8 @@ function ContenidosArtesContent() {
     const router = useRouter();
     
     const [pages, setPages] = useState([]);
+    const [programas, setProgramas] = useState([]);
+    const [selectedProgramId, setSelectedProgramId] = useState(searchParams.get('programa') || '');
     const [currentPageIdx, setCurrentPageIdx] = useState(0);
     const [loading, setLoading] = useState(true);
     const [isSaving, setIsSaving] = useState(false);
@@ -63,31 +65,50 @@ function ContenidosArtesContent() {
         return { title, cleanHtml };
     };
 
+    const parseProgramContent = async (text) => {
+        const splitPages = text.split(/<!-- PAGE_START \d+ -->/).filter(p => p.trim());
+        const htmlPages = await Promise.all(splitPages.map(async (p) => {
+            const rawContent = p.split('<!-- PAGE_END -->')[0];
+            const html = await marked.parse(rawContent);
+            const { title, cleanHtml } = extractTitleAndClean(html);
+            return { title, cleanHtml };
+        }));
+        setPages(htmlPages);
+        syncPageRefs(htmlPages);
+    };
+
+    const fetchPrograms = async (preferredId = selectedProgramId) => {
+        const response = await fetch('/api/programas-analiticos');
+        if (!response.ok) throw new Error('No se pudieron cargar los programas analíticos.');
+        const data = await response.json();
+        setProgramas(data);
+        const requested = preferredId || searchParams.get('programa');
+        const nextId = data.some((programa) => String(programa.id) === String(requested)) ? String(requested) : String(data[0]?.id || '');
+        if (nextId) setSelectedProgramId(nextId);
+    };
+
     useEffect(() => {
+        fetchPrograms().catch((error) => {
+            console.error('Error loading analytic programs:', error);
+            alert('Atención: ' + error.message);
+            setLoading(false);
+        });
+    // La lista inicial se hidrata una sola vez; las operaciones posteriores la refrescan explícitamente.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    useEffect(() => {
+        if (!selectedProgramId) return;
         const fetchContent = async () => {
+            setLoading(true);
             try {
-                const res = await fetch('/api/documentos/artes');
+                const res = await fetch(`/api/programas-analiticos/${selectedProgramId}`);
                 if (!res.ok) {
                     const errData = await res.json();
                     throw new Error(errData.details || errData.error || 'Fallo en la respuesta del servidor');
                 }
-                const text = await res.text();
-                
-                // Si el texto parece JSON de error (a veces pasa con 200 pero cuerpo de error)
-                if (text.trim().startsWith('{')) {
-                    const possibleError = JSON.parse(text);
-                    if (possibleError.error) throw new Error(possibleError.error);
-                }
-
-                const splitPages = text.split(/<!-- PAGE_START \d+ -->/).filter(p => p.trim());
-                const htmlPages = await Promise.all(splitPages.map(async (p) => {
-                    const rawContent = p.split('<!-- PAGE_END -->')[0];
-                    const html = await marked.parse(rawContent);
-                    const { title, cleanHtml } = extractTitleAndClean(html);
-                    return { title, cleanHtml };
-                }));
-                setPages(htmlPages);
-                syncPageRefs(htmlPages);
+                const program = await res.json();
+                await parseProgramContent(program.contenido);
             } catch (error) {
                 console.error('Error loading content:', error);
                 alert('Atención: No se pudo cargar el contenido. ' + error.message);
@@ -96,7 +117,9 @@ function ContenidosArtesContent() {
             }
         };
         fetchContent();
-    }, []);
+    // El contenido se recarga exclusivamente al cambiar de programa.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [selectedProgramId]);
 
     useEffect(() => {
         // Desactivamos el observer en modo edición para evitar bucles infinitos de renderizado
@@ -128,8 +151,9 @@ function ContenidosArtesContent() {
     useEffect(() => {
         const params = new URLSearchParams(searchParams);
         params.set('view', viewMode);
+        if (selectedProgramId) params.set('programa', selectedProgramId);
         router.push(`?${params.toString()}`, { scroll: false });
-    }, [viewMode, router, searchParams]);
+    }, [viewMode, selectedProgramId, router, searchParams]);
 
     useEffect(() => {
         const closeOnEscape = (event) => {
@@ -148,10 +172,10 @@ function ContenidosArtesContent() {
             updatedPages.forEach((p, pIdx) => {
                 fullContent += `<!-- PAGE_START ${pIdx + 1} -->\n<p><strong>${p.title}</strong></p>\n${p.cleanHtml}\n<!-- PAGE_END -->\n`;
             });
-            const response = await fetch('/api/documentos/artes', {
-                method: 'POST',
+            const response = await fetch(`/api/programas-analiticos/${selectedProgramId}`, {
+                method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ content: fullContent }),
+                body: JSON.stringify({ contenido: fullContent }),
             });
             if (!response.ok) throw new Error('No se pudo guardar el documento. Intenta de nuevo.');
         } catch (error) { 
@@ -163,6 +187,72 @@ function ContenidosArtesContent() {
     const handleSave = async (idx, newHtml) => {
         const updatedPages = [...pages];
         updatedPages[idx] = { ...updatedPages[idx], cleanHtml: newHtml };
+        setPages(updatedPages);
+        syncPageRefs(updatedPages);
+        await handleSaveDocument(updatedPages);
+    };
+
+    const createProgram = async () => {
+        const titulo = window.prompt('Nombre del nuevo programa analítico:');
+        if (!titulo?.trim()) return;
+        const response = await fetch('/api/programas-analiticos', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'create', titulo }) });
+        const data = await response.json();
+        if (!response.ok) return alert(data.error || 'No se pudo crear el programa.');
+        await fetchPrograms(data.id);
+    };
+
+    const duplicateProgram = async () => {
+        const response = await fetch('/api/programas-analiticos', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'duplicate', id: selectedProgramId }) });
+        const data = await response.json();
+        if (!response.ok) return alert(data.error || 'No se pudo duplicar el programa.');
+        await fetchPrograms(data.id);
+    };
+
+    const renameProgram = async () => {
+        const current = programas.find((programa) => String(programa.id) === String(selectedProgramId));
+        const titulo = window.prompt('Nombre del programa analítico:', current?.titulo || '');
+        if (!titulo?.trim()) return;
+        const response = await fetch(`/api/programas-analiticos/${selectedProgramId}`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ titulo }) });
+        const data = await response.json();
+        if (!response.ok) return alert(data.error || 'No se pudo cambiar el nombre.');
+        await fetchPrograms(selectedProgramId);
+    };
+
+    const deleteProgram = async () => {
+        const current = programas.find((programa) => String(programa.id) === String(selectedProgramId));
+        if (!window.confirm(`¿Borrar “${current?.titulo || 'este programa'}”? Los proyectos y planeaciones quedarán sin vínculo.`)) return;
+        const response = await fetch(`/api/programas-analiticos/${selectedProgramId}`, { method: 'DELETE' });
+        const data = await response.json();
+        if (!response.ok) return alert(data.error || 'No se pudo borrar el programa.');
+        await fetchPrograms();
+    };
+
+    const moveProgram = async (direction) => {
+        const index = programas.findIndex((programa) => String(programa.id) === String(selectedProgramId));
+        const target = index + direction;
+        if (index < 0 || target < 0 || target >= programas.length) return;
+        const reordered = [...programas];
+        [reordered[index], reordered[target]] = [reordered[target], reordered[index]];
+        await fetch('/api/programas-analiticos', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'reorder', ids: reordered.map((programa) => programa.id) }) });
+        await fetchPrograms(selectedProgramId);
+    };
+
+    const escapeHtml = (value) => String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+
+    const editorContentFor = (page) => `<h1>${escapeHtml(page.title)}</h1>${page.cleanHtml}`;
+
+    const handlePageSave = async (idx, fullHtml) => {
+        const documentFragment = new DOMParser().parseFromString(fullHtml, 'text/html');
+        const mainTitle = documentFragment.querySelector('h1');
+        const title = mainTitle?.textContent?.trim() || pages[idx].title;
+        mainTitle?.remove();
+        const updatedPages = [...pages];
+        updatedPages[idx] = { ...updatedPages[idx], title, cleanHtml: documentFragment.body.innerHTML };
         setPages(updatedPages);
         syncPageRefs(updatedPages);
         await handleSaveDocument(updatedPages);
@@ -320,6 +410,21 @@ function ContenidosArtesContent() {
                         </Link>
                         <h2 style={{ fontSize: '24px', fontWeight: '900', letterSpacing: '-1px', marginBottom: '8px' }}>Programa Analítico</h2>
                         <p style={{ fontSize: '13px', color: theme.subtext, fontWeight: '500' }}>Artes • Versión 2025</p>
+                    </div>
+
+                    <div style={{ margin: '0 20px 20px', padding: '14px', border: `1px solid ${theme.border}`, borderRadius: '12px', background: '#fff' }}>
+                        <label style={{ display: 'block', marginBottom: '7px', color: theme.subtext, fontSize: '9px', fontWeight: '900', letterSpacing: '.8px', textTransform: 'uppercase' }}>Programa activo</label>
+                        <select value={selectedProgramId} onChange={(event) => setSelectedProgramId(event.target.value)} aria-label="Seleccionar programa analítico" style={{ width: '100%', padding: '9px 10px', border: `1px solid ${theme.border}`, borderRadius: '8px', background: '#f8fafc', color: theme.text, font: '700 12px inherit', outline: 'none' }}>
+                            {programas.map((programa) => <option key={programa.id} value={programa.id}>{programa.titulo}</option>)}
+                        </select>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '5px', marginTop: '9px' }}>
+                            <button onClick={createProgram} title="Crear programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: '#2563eb', padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>＋</button>
+                            <button onClick={duplicateProgram} title="Duplicar programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>⧉</button>
+                            <button onClick={renameProgram} title="Cambiar nombre" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>✎</button>
+                            <button onClick={() => moveProgram(-1)} disabled={programas.findIndex((programa) => String(programa.id) === String(selectedProgramId)) <= 0} title="Subir programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>↑</button>
+                            <button onClick={() => moveProgram(1)} disabled={programas.findIndex((programa) => String(programa.id) === String(selectedProgramId)) >= programas.length - 1} title="Bajar programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>↓</button>
+                            <button onClick={deleteProgram} disabled={programas.length <= 1} title="Borrar programa" style={{ border: '1px solid #fecaca', borderRadius: '7px', background: '#fff', color: '#dc2626', padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>×</button>
+                        </div>
                     </div>
 
                     <div style={{ flex: 1, overflowY: 'auto', padding: '0 20px 32px' }}>
@@ -544,20 +649,22 @@ function ContenidosArtesContent() {
                                     }}
                                     className="virtual-page analitico-page"
                                 >
-                                        <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
                                         {isEditMode && currentPageIdx === idx ? (
                                             <RichTextEditor 
-                                                initialContent={p.cleanHtml} 
+                                                initialContent={editorContentFor(p)}
                                                 editable={true}
-                                                onSave={(newHtml) => handleSave(idx, newHtml)} 
+                                                onSave={(newHtml) => handlePageSave(idx, newHtml)}
                                                 isSaving={isSaving}
                                             />
                                         ) : (
-                                            <div 
-                                                className="prose-custom"
-                                                dangerouslySetInnerHTML={{ __html: p.cleanHtml }}
-                                                style={{ lineHeight: '1.8', fontSize: '17px', color: theme.text }}
-                                            />
+                                            <>
+                                                <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
+                                                <div
+                                                    className="prose-custom"
+                                                    dangerouslySetInnerHTML={{ __html: p.cleanHtml }}
+                                                    style={{ lineHeight: '1.8', fontSize: '17px', color: theme.text }}
+                                                />
+                                            </>
                                         )}
                                         {/* Page Number Indicator */}
                                         <div className="analitico-page-footer" style={{ position: 'absolute', bottom: '30px', right: '40px', display: 'flex', alignItems: 'center', gap: '20px' }}>

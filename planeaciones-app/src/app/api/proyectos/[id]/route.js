@@ -1,18 +1,20 @@
 import { db as client } from '@/lib/db';
 import { NextResponse } from 'next/server';
 import { ensureProyectoArteTable } from '@/lib/context-schema';
+import { owns, requireSameOrigin, requireUser } from '@/lib/auth';
 
 async function initDB() {
     await ensureProyectoArteTable();
 }
 
 export async function GET(request, { params }) {
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     const { id } = await params;
     try {
         await initDB();
         const result = await client.execute({
-            sql: "SELECT * FROM proyectos WHERE id = ?",
-            args: [id]
+            sql: "SELECT * FROM proyectos WHERE id = ? AND docente_id = ?",
+            args: [id, auth.user.id]
         });
         
         if (result.rows.length === 0) {
@@ -37,23 +39,31 @@ export async function GET(request, { params }) {
 }
 
 export async function PATCH(request, { params }) {
+    const originError = requireSameOrigin(request); if (originError) return originError;
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     const { id } = await params;
     try {
         await initDB();
+        if (!await owns('proyectos', id, auth.user.id)) return NextResponse.json({ error: 'Proyecto no encontrado.' }, { status: 404 });
         const data = await request.json();
-        const { titulo, tematica, introduccion, productos, vinculacion } = data;
+        const { titulo, tematica, introduccion, productos, vinculacion, configuracion, programa_analitico_id } = data;
+        const { ensureProgramasAnaliticosTable } = await import('@/lib/context-schema');
+        await ensureProgramasAnaliticosTable();
+        if (programa_analitico_id && !await owns('programas_analiticos', programa_analitico_id, auth.user.id)) return NextResponse.json({ error: 'Programa no encontrado.' }, { status: 404 });
 
         await client.execute({
             sql: `UPDATE proyectos 
-                  SET titulo = ?, tematica = ?, introduccion = ?, productos = ?, vinculacion = ?
-                  WHERE id = ?`,
+                  SET titulo = ?, tematica = ?, introduccion = ?, productos = ?, vinculacion = ?, configuracion = ?, programa_analitico_id = ?
+                  WHERE id = ? AND docente_id = ?`,
             args: [
                 titulo, 
                 tematica, 
                 introduccion, 
                 JSON.stringify(productos || []), 
                 JSON.stringify(vinculacion || []),
-                id
+                JSON.stringify(configuracion || {}),
+                programa_analitico_id?.toString() || null,
+                id, auth.user.id
             ]
         });
 
@@ -64,13 +74,16 @@ export async function PATCH(request, { params }) {
 }
 
 export async function DELETE(request, { params }) {
+    const originError = requireSameOrigin(request); if (originError) return originError;
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     const { id } = await params;
     try {
         await initDB();
-        await client.execute({
-            sql: "DELETE FROM proyectos WHERE id = ?",
-            args: [id]
+        const result = await client.execute({
+            sql: "DELETE FROM proyectos WHERE id = ? AND docente_id = ?",
+            args: [id, auth.user.id]
         });
+        if (result.rowsAffected === 0) return NextResponse.json({ error: 'Proyecto no encontrado.' }, { status: 404 });
         return NextResponse.json({ success: true });
     } catch (error) {
         return NextResponse.json({ error: error.message }, { status: 500 });
