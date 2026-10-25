@@ -81,7 +81,7 @@ La verificación ejecuta lint, pruebas de lógica, compilación, API y navegador
 
 Para iterar: `npm run test:unit` comprueba lógica y `npm run test:system` comprueba compilación, API y navegador. Antes de terminar una tarea se debe aprobar `npm run verify`. Los fallos conservan un informe en `playwright-report` y diagnósticos en `test-results`; abre el informe con `npx playwright show-report`.
 
-El [contrato funcional](docs/contrato-funcional.md) documenta todas las superficies, las reglas, cobertura y pendientes para escalar. Las [reglas de colaboración](../AGENTS.md) establecen el criterio de entrega. El workflow preparado en GitHub ejecuta la misma puerta; todavía se debe publicar y exigir su check `verify` en la rama principal.
+El [contrato funcional](docs/contrato-funcional.md) documenta todas las superficies, las reglas, cobertura y pendientes para escalar. Las [reglas de colaboración](../AGENTS.md) establecen el criterio de entrega. El workflow se publicó en el [PR 1](https://github.com/albertoMelesioChavez/Programa-Anal-tico/pull/1). La protección de `main` exige su check `verify`, la rama actualizada y conversaciones resueltas, también para administradores. El PR permanece como borrador para revisión; los datos anteriores sin docente asignado necesitan una migración antes de desplegar.
 
 ## Despliegue en Vercel
 
