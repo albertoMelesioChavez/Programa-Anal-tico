@@ -147,21 +147,29 @@ export default function Home() {
     const [dragOverNode, setDragOverNode] = useState(null);
     const [treeActionMessage, setTreeActionMessage] = useState('');
     const [editingTreeLabel, setEditingTreeLabel] = useState(null);
+    const [programs, setPrograms] = useState([]);
+    const [programFilter, setProgramFilter] = useState('');
+    const [query, setQuery] = useState('');
+    const [workspaceError, setWorkspaceError] = useState('');
 
     const fetchWorkspace = async () => {
         setLoading(true);
+        setWorkspaceError('');
         try {
-            const [artRes, planningRes] = await Promise.all([
+            const [artRes, planningRes, programRes] = await Promise.all([
                 fetch('/api/proyectos'),
-                fetch('/api/planeaciones')
+                fetch('/api/planeaciones'),
+                fetch('/api/programas-analiticos')
             ]);
+            if (!artRes.ok || !planningRes.ok || !programRes.ok) throw new Error('No pudimos cargar tus documentos. Tu información sigue guardada; vuelve a intentarlo.');
             const [artData, planningData] = await Promise.all([
                 artRes.json(), planningRes.json()
             ]);
             setProyectosArte(Array.isArray(artData) ? artData : []);
             setPlaneaciones(Array.isArray(planningData) ? planningData : (planningData.planeaciones || []));
+            setPrograms(await programRes.json());
         } catch (error) {
-            console.error('No se pudo cargar el espacio de trabajo:', error);
+            setWorkspaceError(error.message);
         } finally {
             setLoading(false);
         }
@@ -171,6 +179,11 @@ export default function Home() {
         fetchWorkspace();
         const params = new URLSearchParams(window.location.search);
         const planningId = params.get('planeacion');
+        if (params.has('conservadas')) {
+            setTreeActionMessage(`Proyecto eliminado. Se conservaron ${Number(params.get('conservadas')) || 0} planeaciones sin proyecto.`);
+            setActiveMode('planeaciones');
+            setSelectedNode({ type: 'unlinked' });
+        }
         if (planningId) {
             setActiveMode('planeaciones');
             setSelectedNode({ type: 'planning', id: planningId });
@@ -186,6 +199,7 @@ export default function Home() {
 
     const selectedTreeContext = useMemo(() => {
         if (!selectedNode) return { icon: '⌂', label: 'Toda la organización', detail: 'Sin filtros' };
+        if (selectedNode.type === 'unlinked') return { icon: '🗓️', label: 'Planeaciones sin proyecto', detail: 'Documentos conservados en tu cuenta' };
 
         if (selectedNode.type === 'art') {
             const project = proyectosArte.find((item) => String(item.id) === String(selectedNode.id));
@@ -205,15 +219,16 @@ export default function Home() {
         };
     }, [selectedNode, proyectosArte, planeaciones]);
 
-    const visibleArtProjects = selectedNode?.type === 'art'
+    const matchesFilters = item => (!programFilter || (programFilter === 'unlinked' ? !item.programa_analitico_id : String(item.programa_analitico_id) === programFilter)) && `${item.titulo || ''} ${item.tematica || ''} ${item.grupo || ''} ${(item.configuracion?.grupos || []).map(group => group.id).join(' ')}`.toLocaleLowerCase('es').includes(query.trim().toLocaleLowerCase('es'));
+    const visibleArtProjects = (selectedNode?.type === 'art'
             ? proyectosArte.filter((item) => String(item.id) === String(selectedNode.id))
-            : proyectosArte;
+            : proyectosArte).filter(matchesFilters);
 
-    const visiblePlaneaciones = selectedNode?.type === 'art'
+    const visiblePlaneaciones = (selectedNode?.type === 'art'
             ? planeaciones.filter((item) => String(item.proyecto_arte_id) === String(selectedNode.id))
             : selectedNode?.type === 'planning'
                 ? planeaciones.filter((item) => String(item.id) === String(selectedNode.id))
-                : planeaciones;
+                : selectedNode?.type === 'unlinked' ? planeaciones.filter(item => !item.proyecto_arte_id) : planeaciones).filter(matchesFilters);
 
     const selectMode = (mode) => {
         setEditingTreeLabel(null);
@@ -355,9 +370,9 @@ export default function Home() {
             if (res.ok) {
                 if (selectedNode?.type === 'planning' && String(selectedNode.id) === String(id)) setSelectedNode(null);
                 fetchWorkspace();
-            }
+            } else throw new Error('No se pudo eliminar la planeación. Intenta de nuevo.');
         } catch (error) {
-            console.error('Delete error', error);
+            setWorkspaceError(error.message);
         }
     };
 
@@ -448,11 +463,17 @@ export default function Home() {
                                     <p>ESPACIO DE TRABAJO</p>
                                 </div>
                                 <div className="hierarchy-hint">
-                                    <span>🎨 Proyecto de arte</span><b>›</b><span>🗓️ Planeación</span>
+                                    <span>Programa analítico</span><b>›</b><span>Proyecto de arte</span><b>›</b><span>Planeación</span>
                                 </div>
                             </div>
                         </header>
 
+                        <section className="workspace-filters" aria-label="Buscar y organizar documentos">
+                            <div><label htmlFor="workspace-program">Programa analítico</label><select id="workspace-program" value={programFilter} onChange={event => { setProgramFilter(event.target.value); setSelectedNode(null); }}><option value="">Todos los programas</option><option value="unlinked">Sin programa vinculado</option>{programs.map(program => <option value={program.id} key={program.id}>{program.titulo} · {program.proyectos_count || 0} {Number(program.proyectos_count) === 1 ? 'proyecto' : 'proyectos'}</option>)}</select></div>
+                            <div><label htmlFor="workspace-query">Buscar en tus documentos</label><input id="workspace-query" type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Título, tema o grupo…" /></div>
+                            {programFilter && programFilter !== 'unlinked' ? <Link href={`/contenidos/artes?programa=${programFilter}`}>Abrir programa →</Link> : <Link href="/contenidos/artes">Ver mis programas →</Link>}
+                        </section>
+                        {workspaceError && <div className="workspace-error" role="alert"><p>{workspaceError}</p><button type="button" onClick={fetchWorkspace}>Reintentar carga</button></div>}
                         <section className="mode-switcher" aria-label="Cambiar funcionalidad">
                             {Object.entries(modes).map(([key, mode]) => (
                                 <button
@@ -497,7 +518,8 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                <p className="tree-help">Doble clic para renombrar. Arrastra para reordenar o cambiar de proyecto; usa ••• para más opciones.</p>
+                                <p className="tree-help">Abre un proyecto para ver sus planeaciones. Usa ••• para organizarlo.</p>
+                                {planeaciones.some(item => !item.proyecto_arte_id) && <button className="unlinked-plans" onClick={() => { setActiveMode('planeaciones'); setSelectedNode({ type: 'unlinked' }); setMobileTreeOpen(false); }}>Planeaciones sin proyecto <span>{planeaciones.filter(item => !item.proyecto_arte_id).length}</span></button>}
                                 {treeActionMessage && <p className="tree-action-message" role="status">{treeActionMessage}</p>}
 
                                 <div className="tree-list">
@@ -562,7 +584,7 @@ export default function Home() {
                                     </div>
                                     {activeMode === 'arte' && (
                                         <div className="module-actions art-module-actions">
-                                            <Link className="primary-action art-action" href="/proyectos/nuevo">+ CREAR PROYECTO</Link>
+                                            <Link className="primary-action art-action" href={programFilter && programFilter !== 'unlinked' ? `/proyectos/nuevo?programa=${programFilter}` : '/proyectos/nuevo'}>+ CREAR PROYECTO</Link>
                                             <FileDropAction tone="art" label="PDF, DOCX, TXT o MD · clic o arrastra" onFile={uploadArtFile} loading={uploading === 'art'} />
                                         </div>
                                     )}
@@ -574,9 +596,9 @@ export default function Home() {
                                 <div className="content-body">
                                     {loading ? (
                                         <div className="loading-area"><div className="loader-blue" /></div>
-                                    ) : activeMode === 'arte' ? (
+                                    ) : workspaceError ? <p className="load-error-help">Vuelve a cargar para consultar tus documentos.</p> : activeMode === 'arte' ? (
                                         visibleArtProjects.length === 0 ? (
-                                            <EmptyState icon="🎨" title="Sin proyectos de arte" description="Crea un proyecto o sube el documento que ya elaboraste." action={<div className="empty-art-actions"><Link className="empty-action purple" href="/proyectos/nuevo">Crear proyecto</Link><FileDropAction tone="art" label="Subir archivo" onFile={uploadArtFile} loading={uploading === 'art'} /></div>} />
+                                            <EmptyState icon="🎨" title={query || programFilter ? 'No hay proyectos con estos filtros' : 'Sin proyectos de arte'} description={query || programFilter ? 'Prueba otro título, grupo o programa.' : 'Crea un proyecto o sube el documento que ya elaboraste.'} action={query || programFilter ? <button className="empty-action purple" onClick={() => { setQuery(''); setProgramFilter(''); setSelectedNode(null); }}>Limpiar filtros</button> : <div className="empty-art-actions"><Link className="empty-action purple" href="/proyectos/nuevo">Crear proyecto</Link><FileDropAction tone="art" label="Subir archivo" onFile={uploadArtFile} loading={uploading === 'art'} /></div>} />
                                         ) : (
                                             <div className={`item-grid art-project-list ${selectedNode?.type === 'art' ? 'selected-project-list' : ''}`}>
                                                 {visibleArtProjects.map((project) => {
@@ -587,21 +609,22 @@ export default function Home() {
                                                         <article className={`finder-item art-item ${isExpanded ? 'expanded' : ''} ${isSelected ? 'selected-project' : ''}`} key={project.id} onClick={() => selectTreeNode('art', project.id)}>
                                                             <div className="item-main">
                                                                 <div className="art-title-row"><span>🎨</span><h3>{project.titulo}</h3></div>
-                                                                {!isExpanded && <div className="compact-summary"><span>🗓️ {children.length}</span></div>}
+                                                                <p className="project-program">{project.programa_titulo || 'Sin programa vinculado'}</p>
+                                                                <dl className="project-facts"><div><dt>Grupos</dt><dd>{project.configuracion?.grupos?.map(group => group.id).join(', ') || 'Por definir'}</dd></div><div><dt>Planeaciones</dt><dd>{children.length}</dd></div><div><dt>Producto</dt><dd>{project.configuracion?.producto_final || 'Por definir'}</dd></div></dl>
                                                                 {isExpanded && <>
                                                                     <p>{project.nombre_archivo ? `Documento: ${project.nombre_archivo}` : project.tematica || project.introduccion || 'Proyecto artístico sin descripción.'}</p>
                                                                     <div className="child-summary"><span>🗓️ {children.length} planeación{children.length === 1 ? '' : 'es'} dentro</span></div>
                                                                 </>}
                                                             </div>
                                                             <Link className="open-link purple inline-edit-button" href={`/proyectos/${project.id}/editar`} onClick={event => event.stopPropagation()}>EDITAR ✎</Link>
-                                                            {isExpanded && <Link className="open-link purple" href={`/proyectos/${project.id}`} onClick={event => event.stopPropagation()}>VER PROYECTO →</Link>}
+                                                            <Link className="open-link purple" href={`/proyectos/${project.id}`} onClick={event => event.stopPropagation()}>VER PROYECTO →</Link>
                                                         </article>
                                                     );
                                                 })}
                                             </div>
                                         )
                                     ) : visiblePlaneaciones.length === 0 ? (
-                                        <EmptyState icon="🗓️" title="Sin planeaciones" description={selectedNode ? 'La selección actual todavía no contiene planeaciones.' : 'Crea la primera planeación y vincúlala a un proyecto de arte.'} action={<button onClick={() => setShowForm(true)} className="empty-action blue">Crear planeación</button>} />
+                                        <EmptyState icon="🗓️" title={query || programFilter ? 'No hay planeaciones con estos filtros' : 'Sin planeaciones'} description={query || programFilter ? 'Prueba otro título, grupo o programa.' : selectedNode ? 'La selección actual todavía no contiene planeaciones.' : 'Crea la primera planeación y vincúlala a un proyecto de arte.'} action={query || programFilter ? <button onClick={() => { setQuery(''); setProgramFilter(''); }} className="empty-action blue">Limpiar filtros</button> : <button onClick={() => setShowForm(true)} className="empty-action blue">Crear planeación</button>} />
                                     ) : (
                                         <PlaneacionList planeaciones={visiblePlaneaciones} onDelete={handleDelete} onEdit={handleEdit} editingId={expandedEditor?.type === 'planning' ? expandedEditor.id : null} expandedId={expandedPreview?.type === 'planning' ? expandedPreview.id : null} onTogglePreview={(planning) => togglePreview('planning', planning.id)} onSaved={handleInlineSaved} onCancel={() => setExpandedEditor(null)} />
                                     )}
@@ -629,8 +652,28 @@ export default function Home() {
                 .page-frame { width: min(1500px, 100%); flex: 1; margin: 0 auto; padding: 26px 42px 70px; position: relative; z-index: 1; }
                 .page-frame.form-open { width: 100%; padding: 0; height: 100vh; overflow: hidden; }
                 .home-header { margin-bottom: 24px; }
+                .workspace-filters { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) auto; gap: 16px; align-items: end; margin: 20px 0 24px; }
+                .workspace-filters > div { display: grid; gap: 6px; min-width: 0; }
+                .workspace-filters label { font-size: 13px; font-weight: 700; color: #334155; }
+                .workspace-filters select, .workspace-filters input { width: 100%; min-width: 0; min-height: 44px; padding: 10px 12px; border: 1px solid #b9c4d2; border-radius: 10px; background: white; color: #1e293b; font: inherit; font-weight: 400; }
+                .workspace-filters input::placeholder { color: #64748b; }
+                .workspace-filters a { padding: 12px 0; color: #4e238e; font-size: 14px; font-weight: 700; }
+                .workspace-error { padding: 16px; margin-bottom: 20px; border: 1px solid #deb3bc; background: #fff5f6; color: #90223b; border-radius: 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+                .workspace-error p { margin: 0; flex: 1 1 240px; }
+                .workspace-error button, .unlinked-plans { padding: 10px 12px; min-height: 44px; background: white; color: #334155; border: 1px solid #cbd5e1; border-radius: 10px; cursor: pointer; font: inherit; font-size: 13px; }
+                .unlinked-plans { width: 100%; text-align: left; margin-bottom: 14px; display: flex; justify-content: space-between; gap: 12px; }
+                .project-facts { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 14px 0 0; }
+                .project-facts > div { min-width: 0; }
+                .project-facts > div:last-child { flex: 1 1 100%; }
+                .project-facts dt { font-size: 12px; color: #526078; }
+                .project-facts dd { margin: 4px 0 0; color: #25334d; font-size: 14px; line-height: 1.45; overflow-wrap: anywhere; }
+                .item-main .project-program { color: #63329b; font-size: 13px; overflow-wrap: anywhere; }
+                .art-title-row h3 { overflow-wrap: anywhere; }
+                .load-error-help { padding: 32px; color: #526078; }
+                .home-shell :focus-visible { outline: 3px solid #244ca4; outline-offset: 3px; }
+                @media(max-width: 700px) { .workspace-filters { grid-template-columns: minmax(0,1fr); gap: 12px; } .workspace-filters a { padding: 0; } .hierarchy-hint { flex-wrap: wrap; } .project-facts { gap: 12px; } }
                 .workspace-hero { margin-bottom: 14px; }
-                .workspace-hero h1 { margin: 0; font-size: clamp(32px, 5vw, 56px); letter-spacing: -2.5px; line-height: .95; }
+                .workspace-hero h1 { margin: 0; font-size: clamp(30px, 4vw, 44px); letter-spacing: -.03em; line-height: 1.12; }
                 .top-navigation { width: 100%; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; }
                 .reference-nav { display: flex; gap: 10px; justify-self: start; }
                 .top-nav-link { color: #475569; font-size: 11px; font-weight: 900; text-decoration: none; padding: 9px 12px; border: 1px solid #e2e8f0; background: rgba(255,255,255,.8); border-radius: 11px; white-space: nowrap; }
@@ -642,12 +685,12 @@ export default function Home() {
                 .brand-row p { margin: 0 0 8px; color: #2563eb; font-size: 10px; font-weight: 900; letter-spacing: 2px; }
                 .hierarchy-hint { display: flex; gap: 10px; align-items: center; padding: 12px 16px; border: 1px solid #e2e8f0; background: #fff; border-radius: 14px; color: #475569; font-size: 11px; font-weight: 800; }
                 .hierarchy-hint b { color: #cbd5e1; font-size: 18px; }
-                .mode-switcher { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
+                .mode-switcher { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 18px; }
                 .mode-button { min-width: 0; min-height: 86px; padding: 16px 18px; border: 1px solid transparent; border-radius: 18px; display: grid; grid-template-columns: auto 1fr auto; gap: 13px; align-items: center; text-align: left; cursor: pointer; color: #fff; font-family: inherit; opacity: .82; transition: transform .2s ease, opacity .2s ease, box-shadow .2s ease; }
                 .mode-button:hover, .mode-button.active { opacity: 1; transform: translateY(-3px); }
-                .mode-button.active { box-shadow: 0 14px 30px rgba(15,23,42,.16); outline: 3px solid rgba(255,255,255,.75); outline-offset: -6px; }
-                .mode-arte { background: linear-gradient(135deg, #6d28d9, #8b5cf6); }
-                .mode-planeaciones { background: linear-gradient(135deg, #1d4ed8, #0f766e); }
+                .mode-button.active { outline: 2px solid #26375b; outline-offset: 3px; }
+                .mode-arte { background: #6430a9; }
+                .mode-planeaciones { background: #2453a3; }
                 .mode-icon { font-size: 26px; }
                 .mode-button strong { display: block; font-size: 15px; margin-bottom: 3px; }
                 .mode-button small { display: block; color: rgba(255,255,255,.78); font-size: 10px; line-height: 1.3; }
@@ -792,7 +835,7 @@ export default function Home() {
                         position: sticky;
                         top: 8px;
                         z-index: 40;
-                        grid-template-columns: repeat(3, minmax(0, 1fr));
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
                         gap: 5px;
                         margin-bottom: 12px;
                         padding: 5px;
@@ -815,7 +858,7 @@ export default function Home() {
                     .mode-button.active { outline-width: 2px; outline-offset: -4px; box-shadow: 0 6px 16px rgba(15,23,42,.16); }
                     .mode-icon { grid-row: 1; grid-column: 1; justify-self: center; font-size: 19px; }
                     .mode-button > span:nth-child(2) { grid-row: 2; grid-column: 1 / -1; min-width: 0; }
-                    .mode-button strong { margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 9px; line-height: 1.15; }
+                    .mode-button strong { margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; line-height: 1.3; }
                     .mode-button small { display: none; }
                     .mode-count { grid-row: 1; grid-column: 2; min-width: 21px; width: 21px; height: 21px; border-radius: 7px; font-size: 9px; }
                     .finder-layout { display: block; min-height: 0; border-radius: 20px; overflow: visible; }

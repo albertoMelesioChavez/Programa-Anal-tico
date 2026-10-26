@@ -6,7 +6,17 @@
 .top .edit { background: #6d38b4; border-color: #6d38b4; color: #fff; }
 .page { max-width: 1000px; margin: 32px auto 80px; padding: 56px 66px; background: #fff; box-shadow: 0 12px 40px #18243a0b; }
 .kicker { color: #6d38b4; font-weight: 850; letter-spacing: .17em; font-size: 11px; }
-.page h1 { font-size: clamp(30px, 5vw, 52px); letter-spacing: -.045em; line-height: 1.08; margin: 12px 0; }
+.page h1 { font-size: clamp(30px, 5vw, 52px); letter-spacing: -.03em; line-height: 1.08; margin: 12px 0; overflow-wrap: anywhere; }
+.programLink { padding-bottom: 20px; border-bottom: 1px solid #e3e6ec; margin-bottom: 24px; font-size: 14px; line-height: 1.5; color: #526078; overflow-wrap: anywhere; }
+.programLink a { color: #63329b; font-weight: 700; }
+.deleteSection { border-top: 1px solid #e3e6ec; padding-top: 24px; }
+.deleteSection button { min-height: 44px; padding: 10px 14px; border: 1px solid #b9c4d2; background: white; color: #92293d; border-radius: 10px; font: inherit; font-size: 14px; cursor: pointer; }
+.deleteSection button:disabled { opacity: .6; cursor: wait; }
+.deleteSection > div { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.deleteSection h2 { color: #92293d; }
+.shell :focus-visible { outline: 3px solid #244ca4; outline-offset: 3px; }
+.planList > div { flex-wrap: wrap; overflow-wrap: anywhere; }
+@media print { .deleteSection, .programLink { display: none; } }
 .theme { color: #667388; font-size: 18px; margin: 0 0 48px; }
 .page section { margin-top: 44px; break-inside: avoid; }
 .page h2 { color: #6734aa; border-bottom: 1px solid #dac8f0; padding-bottom: 8px; text-transform: uppercase; letter-spacing: .1em; font-size: 13px; }

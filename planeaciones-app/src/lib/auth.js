@@ -2,6 +2,7 @@ import { createHash, randomBytes, scrypt as scryptCallback, timingSafeEqual } fr
 import { promisify } from 'node:util';
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
+import { ensureTablesExist } from '@/lib/db-init';
 
 const scrypt = promisify(scryptCallback);
 export const SESSION_COOKIE = 'docente_session';
@@ -11,16 +12,7 @@ const COOKIE_OPTIONS = { httpOnly: true, secure: process.env.NODE_ENV === 'produ
 export const OAUTH_COOKIE_OPTIONS = { ...COOKIE_OPTIONS, maxAge: 60 * 10 };
 
 export async function ensureAuthTables() {
-    await db.execute('CREATE TABLE IF NOT EXISTS docentes (id TEXT PRIMARY KEY, nombre TEXT NOT NULL, email TEXT NOT NULL UNIQUE, password_hash TEXT NOT NULL, created_at DATETIME DEFAULT CURRENT_TIMESTAMP)');
-    const columns = new Set((await db.execute("PRAGMA table_info('docentes')")).rows.map(row => String(row.name)));
-    if (!columns.has('google_sub')) {
-        try { await db.execute('ALTER TABLE docentes ADD COLUMN google_sub TEXT'); }
-        catch (error) { if (!/duplicate column/i.test(error.message)) throw error; }
-    }
-    await db.execute('CREATE UNIQUE INDEX IF NOT EXISTS docentes_google_sub_idx ON docentes(google_sub)');
-    await db.execute('CREATE TABLE IF NOT EXISTS sesiones_docente (token_hash TEXT PRIMARY KEY, docente_id TEXT NOT NULL, expires_at INTEGER NOT NULL, created_at DATETIME DEFAULT CURRENT_TIMESTAMP)');
-    await db.execute('CREATE INDEX IF NOT EXISTS sesiones_docente_docente_idx ON sesiones_docente(docente_id)');
-    await db.execute('CREATE TABLE IF NOT EXISTS auth_attempts (key TEXT PRIMARY KEY, attempts INTEGER NOT NULL, window_start INTEGER NOT NULL)');
+    await ensureTablesExist();
 }
 
 export function normalizeEmail(value) {

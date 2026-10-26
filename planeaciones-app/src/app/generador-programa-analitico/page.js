@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
+import { newProjectConfig } from '@/lib/project-starter';
 
 const initialForm = {
     escuela: '',
-    ciclo: '2025–2026',
+    ciclo: newProjectConfig().ciclo,
     fase: 'Fases 3, 4 y 5',
     grados: '1.º, 2.º, 3.º, 4.º, 5.º y 6.º de primaria',
     localidad: '',
@@ -75,9 +76,26 @@ export default function GeneradorProgramaAnaliticoPage() {
     const [form, setForm] = useState(initialForm);
     const [generated, setGenerated] = useState('');
     const [copied, setCopied] = useState(false);
+    const [savedId, setSavedId] = useState('');
+    const [savedContent, setSavedContent] = useState('');
+    const [saving, setSaving] = useState(false);
+    const [saveError, setSaveError] = useState('');
     const preview = useMemo(() => generated || createDocument(form), [generated, form]);
 
-    const update = (field) => (event) => setForm((current) => ({ ...current, [field]: event.target.value }));
+    const update = (field) => (event) => { setForm((current) => ({ ...current, [field]: event.target.value })); setGenerated(''); setCopied(false); };
+    const saveProgram = async () => {
+        setSaving(true); setSaveError('');
+        const snapshot = preview;
+        try {
+            const contenido = snapshot.split(/\n(?=## (?:Primer|Segundo|Tercer) plano)/).map((part, index) => `<!-- PAGE_START ${index + 1} -->\n${part}\n<!-- PAGE_END -->`).join('\n');
+            const titulo = `Programa analítico · ${form.escuela.trim() || 'Mi escuela'} · ${form.ciclo}`;
+            const response = await fetch(savedId ? `/api/programas-analiticos/${savedId}` : '/api/programas-analiticos', { method: savedId ? 'PATCH' : 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'create', titulo, contenido }) });
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.error || 'No se guardó el programa. Puedes intentarlo de nuevo.');
+            setSavedId(savedId || data.id); setSavedContent(snapshot);
+        } catch (error) { setSaveError(error.message); }
+        finally { setSaving(false); }
+    };
     const generate = (event) => { event.preventDefault(); setGenerated(createDocument(form)); setCopied(false); };
     const copy = async () => { await navigator.clipboard.writeText(preview); setCopied(true); };
     const download = () => {
@@ -145,11 +163,26 @@ export default function GeneradorProgramaAnaliticoPage() {
                 <aside className="generator-preview" aria-live="polite">
                     <div className="preview-heading"><div><p>VISTA PREVIA</p><h2>Documento de trabajo</h2></div><div className="preview-header-actions"><span>{generated ? 'Actualizado' : 'Plantilla'}</span><button className="copy-document-button" type="button" onClick={copy} aria-label={copied ? 'Documento copiado' : 'Copiar documento'} title={copied ? 'Documento copiado' : 'Copiar documento'}>{copied ? '✓' : '⧉'}</button></div></div>
                     <div className="document-sheet-scroll"><DocumentPreview content={preview} /></div>
-                    <div className="preview-actions"><button type="button" onClick={download}>Descargar .md</button></div>
+                    <div className="program-save-actions">
+                        <p role="status">{saving ? 'Guardando en tu cuenta…' : savedContent === preview ? 'Guardado en tu cuenta' : savedId ? 'Hay cambios sin guardar' : 'Borrador · aún no está guardado en tu cuenta'}</p>
+                        {saveError && <p role="alert">{saveError}</p>}
+                        <button type="button" onClick={saveProgram} disabled={saving || savedContent === preview}>{saving ? 'Guardando…' : savedId ? 'Guardar cambios' : 'Guardar programa'}</button>
+                        {savedId && savedContent === preview && <div className="program-next"><Link href={`/contenidos/artes?programa=${savedId}`}>Abrir programa guardado →</Link><Link href={`/proyectos/nuevo?programa=${savedId}`}>Crear proyecto con este programa →</Link></div>}
+                        <button type="button" className="download-secondary" onClick={download}>Descargar .md</button>
+                    </div>
                 </aside>
             </div>
 
             <style jsx global>{`
+                .program-save-actions { padding: 20px 24px; border-top: 1px solid #e2e8f0; display: grid; gap: 12px; }
+                .program-save-actions p { margin: 0; color: #475569; font-size: 14px; }
+                .program-save-actions [role=alert] { color: #a32136; }
+                .program-save-actions button { min-height: 44px; padding: 10px 16px; border: 0; border-radius: 10px; background: #2457c5; color: white; font: inherit; cursor: pointer; }
+                .program-save-actions button:disabled { background: #e2e8f0; color: #475569; cursor: default; }
+                .program-save-actions .download-secondary { background: white; border: 1px solid #cbd5e1; color: #334155; }
+                .program-next { display: grid; gap: 12px; }
+                .program-next a { color: #214da7; font-size: 14px; font-weight: 700; }
+                .program-save-actions :focus-visible { outline: 3px solid #0f3d94; outline-offset: 3px; }
                 .generator-shell { min-height: 100vh; padding: 48px clamp(18px, 5vw, 72px) 72px; background: #f8fafc; color: #0f172a; }
                 .generator-header { max-width: 1180px; margin: 0 auto 32px; }
                 .generator-back { display: inline-block; margin-bottom: 28px; color: #2563eb; font-size: 13px; font-weight: 800; text-decoration: none; }

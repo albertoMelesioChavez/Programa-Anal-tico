@@ -54,3 +54,4 @@ temp_output.html
 
 # Project specific artifacts
 .gemini/
+.private/

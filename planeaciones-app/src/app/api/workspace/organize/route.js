@@ -1,114 +1,16 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { ensurePlaneacionContextColumns, ensureProyectoArteTable } from '@/lib/context-schema';
+import { ensureTablesExist } from '@/lib/db-init';
 import { requireSameOrigin, requireUser } from '@/lib/auth';
-
-const tableForType = {
-    art: 'proyectos',
-    planning: 'planeaciones'
-};
-
-async function ensureWorkspace() {
-    const { ensureTablesExist } = await import('@/lib/db-init');
-    await ensureTablesExist();
-    await ensureProyectoArteTable();
-    await ensurePlaneacionContextColumns();
-}
-
-async function getRow(table, id, docenteId) {
-    const result = await db.execute({ sql: `SELECT * FROM ${table} WHERE id = ? AND docente_id = ?`, args: [String(id), docenteId] });
-    return result.rows[0] || null;
-}
-
-async function duplicateRow(table, id, docenteId, overrides = {}, appendCopy = true) {
-    const row = await getRow(table, id, docenteId);
-    if (!row) throw new Error('No se encontró el elemento que deseas duplicar.');
-    const info = await db.execute(`PRAGMA table_info('${table}')`);
-    const columns = info.rows.map((column) => String(column.name)).filter((name) => name !== 'id');
-    const values = columns.map((column) => {
-        if (Object.prototype.hasOwnProperty.call(overrides, column)) return overrides[column];
-        if (column === 'titulo' && appendCopy) return `${row[column]} (copia)`;
-        if (column === 'orden') return Number(row[column] || 0) + 1;
-        return row[column] ?? null;
-    });
-    const placeholders = columns.map(() => '?').join(', ');
-    const result = await db.execute({
-        sql: `INSERT INTO ${table} (${columns.join(', ')}) VALUES (${placeholders})`,
-        args: values
-    });
-    return String(result.lastInsertRowid);
-}
-
-async function duplicatePlanning(id, docenteId, overrides = {}, appendCopy = true) {
-    return duplicateRow('planeaciones', id, docenteId, overrides, appendCopy);
-}
-
-async function duplicateArtProject(id, docenteId, appendCopy = true) {
-    const newArtId = await duplicateRow('proyectos', id, docenteId, {}, appendCopy);
-    const children = await db.execute({ sql: 'SELECT id FROM planeaciones WHERE proyecto_arte_id = ? AND docente_id = ? ORDER BY orden ASC, fecha_creacion ASC', args: [String(id), docenteId] });
-    for (const child of children.rows) {
-        await duplicatePlanning(child.id, docenteId, { proyecto_arte_id: newArtId }, false);
-    }
-    return newArtId;
-}
-
-async function moveItem(type, id, parentId, docenteId) {
-    if (type === 'planning') {
-        const planning = await getRow('planeaciones', id, docenteId);
-        if (!planning) throw new Error('La planeación ya no existe.');
-        const project = await getRow('proyectos', parentId, docenteId);
-        if (!project) throw new Error('El proyecto de arte de destino ya no existe.');
-        const order = await db.execute({ sql: 'SELECT COALESCE(MAX(orden), -1) + 1 AS next_order FROM planeaciones WHERE proyecto_arte_id = ? AND docente_id = ?', args: [String(parentId), docenteId] });
-        await db.execute({
-            sql: 'UPDATE planeaciones SET proyecto_arte_id = ?, orden = ? WHERE id = ? AND docente_id = ?',
-            args: [String(parentId), Number(order.rows[0]?.next_order || 0), String(id), docenteId]
-        });
-        return;
-    }
-    throw new Error('Solo las planeaciones se pueden mover entre proyectos.');
-}
-
-async function reorder(type, ids, docenteId) {
-    const table = tableForType[type];
-    if (!table) throw new Error('Tipo de elemento no reconocido.');
-    for (let index = 0; index < ids.length; index += 1) {
-        await db.execute({ sql: `UPDATE ${table} SET orden = ? WHERE id = ? AND docente_id = ?`, args: [index, String(ids[index]), docenteId] });
-    }
-}
-
-async function renameItem(type, id, title, docenteId) {
-    const table = tableForType[type];
-    if (!table) throw new Error('Tipo de elemento no reconocido.');
-    const normalizedTitle = String(title || '').trim();
-    if (!normalizedTitle) throw new Error('El nombre no puede quedar vacío.');
-    if (normalizedTitle.length > 160) throw new Error('El nombre no puede superar 160 caracteres.');
-    const row = await getRow(table, id, docenteId);
-    if (!row) throw new Error('El elemento que deseas renombrar ya no existe.');
-    await db.execute({ sql: `UPDATE ${table} SET titulo = ? WHERE id = ? AND docente_id = ?`, args: [normalizedTitle, String(id), docenteId] });
-}
+import { organizeWorkspace } from '@/lib/workspace-operations.mjs';
 
 export async function POST(request) {
     const originError = requireSameOrigin(request); if (originError) return originError;
     const auth = await requireUser(request); if (auth.error) return auth.error;
     try {
-        await ensureWorkspace();
-        const body = await request.json();
-        const { action, type, id, parentId, ids, title } = body;
-
-        if (action === 'move') await moveItem(type, id, parentId, auth.user.id);
-        else if (action === 'reorder') await reorder(type, Array.isArray(ids) ? ids : [], auth.user.id);
-        else if (action === 'rename') await renameItem(type, id, title, auth.user.id);
-        else if (action === 'duplicate') {
-            let newId;
-            if (type === 'art') newId = await duplicateArtProject(id, auth.user.id);
-            else if (type === 'planning') newId = await duplicatePlanning(id, auth.user.id);
-            else throw new Error('Tipo de elemento no reconocido.');
-            return NextResponse.json({ success: true, id: newId });
-        } else throw new Error('Acción no reconocida.');
-
-        return NextResponse.json({ success: true });
+        await ensureTablesExist();
+        return NextResponse.json(await organizeWorkspace(db, auth.user.id, await request.json()));
     } catch (error) {
-        console.error('Workspace organize error:', error);
-        return NextResponse.json({ error: error.message }, { status: 400 });
+        return NextResponse.json({ error: error.message }, { status: error.status || 500 });
     }
 }

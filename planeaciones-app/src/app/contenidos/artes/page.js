@@ -53,7 +53,8 @@ function ContenidosArtesContent() {
         const startIndex = plainText.indexOf(targetStart);
         const endIndex = plainText.indexOf(targetEnd);
         
-        let title = 'Documento de Artes';
+        const heading = html.match(/<h[12][^>]*>([\s\S]*?)<\/h[12]>/i);
+        let title = heading ? heading[1].replace(/<[^>]*>/g, '').trim() : 'Documento de Artes';
         let cleanHtml = html;
 
         if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
@@ -409,7 +410,8 @@ function ContenidosArtesContent() {
                             ← VOLVER AL DASHBOARD
                         </Link>
                         <h2 style={{ fontSize: '24px', fontWeight: '900', letterSpacing: '-1px', marginBottom: '8px' }}>Programa Analítico</h2>
-                        <p style={{ fontSize: '13px', color: theme.subtext, fontWeight: '500' }}>Artes • Versión 2025</p>
+                        <p style={{ fontSize: '13px', color: theme.subtext, fontWeight: '500', overflowWrap: 'anywhere' }}>{programas.find(item => String(item.id) === String(selectedProgramId))?.titulo || 'Tus programas guardados'}</p>
+                        {selectedProgramId && <Link href={`/proyectos/nuevo?programa=${selectedProgramId}`} className="program-create-project">Crear proyecto con este programa →</Link>}
                     </div>
 
                     <div style={{ margin: '0 20px 20px', padding: '14px', border: `1px solid ${theme.border}`, borderRadius: '12px', background: '#fff' }}>
@@ -738,6 +740,7 @@ function ContenidosArtesContent() {
             </main>
 
             <style jsx global>{`
+                .program-create-project { display: inline-block; margin-top: 14px; color: #2457c5; font-size: 14px; font-weight: 700; line-height: 1.5; }
                 .prose-custom p { margin-bottom: 24px; }
                 .prose-custom h4 { margin: 40px 0 16px; font-size: 20px; font-weight: 800; }
                 .prose-custom ul, .prose-custom ol { margin-bottom: 24px; padding-left: 20px; }

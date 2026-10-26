@@ -125,7 +125,7 @@ test('contrato de aplicación: autenticación, documentos, programas, proyectos 
         assert.equal(children[0].titulo, 'Clase revisada');
         await json(await a('/api/workspace/organize', 'POST', { action: 'rename', type: 'art', id: copy.id, title: 'Copia revisada' }));
         assert.equal((await json(await a('/api/proyectos/' + copy.id))).titulo, 'Copia revisada');
-        assert.equal((await b('/api/workspace/organize', 'POST', { action: 'move', type: 'planning', id: planId, parentId: copy.id })).status, 400);
+        assert.equal((await b('/api/workspace/organize', 'POST', { action: 'move', type: 'planning', id: planId, parentId: copy.id })).status, 404);
         await json(await a('/api/workspace/organize', 'POST', { action: 'move', type: 'planning', id: planId, parentId: copy.id }));
         assert.equal((await json(await a('/api/proyectos/' + copy.id + '/planeaciones'))).length, 2);
         for (const child of await json(await a('/api/proyectos/' + copy.id + '/planeaciones'))) await json(await a('/api/planeaciones/' + child.id, 'DELETE'));

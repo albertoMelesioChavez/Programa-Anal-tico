@@ -81,7 +81,19 @@ La verificación ejecuta lint, pruebas de lógica, compilación, API y navegador
 
 Para iterar: `npm run test:unit` comprueba lógica y `npm run test:system` comprueba compilación, API y navegador. Antes de terminar una tarea se debe aprobar `npm run verify`. Los fallos conservan un informe en `playwright-report` y diagnósticos en `test-results`; abre el informe con `npx playwright show-report`.
 
-El [contrato funcional](docs/contrato-funcional.md) documenta todas las superficies, las reglas, cobertura y pendientes para escalar. Las [reglas de colaboración](../AGENTS.md) establecen el criterio de entrega. El workflow se publicó en el [PR 1](https://github.com/albertoMelesioChavez/Programa-Anal-tico/pull/1). La protección de `main` exige su check `verify`, la rama actualizada y conversaciones resueltas, también para administradores. El PR permanece como borrador para revisión; los datos anteriores sin docente asignado necesitan una migración antes de desplegar.
+El [contrato funcional](docs/contrato-funcional.md) documenta todas las superficies, las reglas, cobertura y pendientes para escalar. Las [reglas de colaboración](../AGENTS.md) establecen el criterio de entrega. El workflow se publicó en el [PR 1](https://github.com/albertoMelesioChavez/Programa-Anal-tico/pull/1). La protección de `main` exige su check `verify`, la rama actualizada y conversaciones resueltas, también para administradores. El PR permanece como borrador para revisión. La recuperación de datos antiguos sin propietario requiere inventario, respaldo y asignación explícita; consulta [el procedimiento local](docs/recuperacion-datos.md). Cada entorno conserva su propia base y sus cuentas.
+
+## Programa, proyectos y planeaciones
+
+El generador permite guardar el programa en la cuenta y abrirlo en el editor.
+Desde allí se crea un proyecto con el programa seleccionado. Sus sesiones
+heredan ese vínculo y conservan sus decisiones al cambiarlo. El inicio permite
+buscar documentos y filtrar por programa; muestra grupos, producto y sesiones.
+Eliminar un proyecto conserva sus planeaciones en **Planeaciones sin proyecto**.
+
+La inicialización usa migraciones versionadas y transacciones. Las plantillas
+no sustituyen documentos guardados; los datos antiguos no se asignan
+automáticamente a quien inicie sesión primero.
 
 ## Despliegue en Vercel
 

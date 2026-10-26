@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { ensureProgramasAnaliticosTable } from '@/lib/context-schema';
 import { requireSameOrigin, requireUser } from '@/lib/auth';
+import { deleteProgram } from '@/lib/workspace-operations.mjs';
 
 export async function GET(request, { params }) {
     const auth = await requireUser(request); if (auth.error) return auth.error;
@@ -37,15 +38,8 @@ export async function DELETE(request, { params }) {
     try {
         const { id } = await params;
         await ensureProgramasAnaliticosTable();
-        const current = await db.execute({ sql: 'SELECT id FROM programas_analiticos WHERE id = ? AND docente_id = ?', args: [String(id), auth.user.id] });
-        if (!current.rows[0]) return NextResponse.json({ error: 'Programa no encontrado.' }, { status: 404 });
-        const count = await db.execute({ sql: 'SELECT COUNT(*) AS count FROM programas_analiticos WHERE docente_id = ?', args: [auth.user.id] });
-        if (Number(count.rows[0]?.count || 0) <= 1) throw new Error('Conserva al menos un programa analítico.');
-        await db.execute({ sql: 'UPDATE proyectos SET programa_analitico_id = NULL WHERE programa_analitico_id = ? AND docente_id = ?', args: [String(id), auth.user.id] }).catch(() => {});
-        await db.execute({ sql: 'UPDATE planeaciones SET programa_analitico_id = NULL WHERE programa_analitico_id = ? AND docente_id = ?', args: [String(id), auth.user.id] }).catch(() => {});
-        await db.execute({ sql: 'DELETE FROM programas_analiticos WHERE id = ? AND docente_id = ?', args: [String(id), auth.user.id] });
-        return NextResponse.json({ success: true });
+        return NextResponse.json(await deleteProgram(db, auth.user.id, id));
     } catch (error) {
-        return NextResponse.json({ error: error.message }, { status: 400 });
+        return NextResponse.json({ error: error.message }, { status: error.status || 500 });
     }
 }

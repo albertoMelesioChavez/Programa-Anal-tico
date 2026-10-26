@@ -97,7 +97,9 @@ test('API local: sesión, propuestas, guardar, reabrir y editar sin perder apart
         assert.deepEqual(saved.configuracion.criterios_evaluacion, project.configuracion.criterios_evaluacion);
         assert.equal(saved.configuracion.ruta.length, 8);
         if (proposal.mode === 'local-template') {
-            const generated = await request('/api/proyectos/' + createdId + '/planeaciones', 'POST', { grupo: '4A' });
+            const concurrent = await Promise.all([request('/api/proyectos/' + createdId + '/planeaciones', 'POST', { grupo: '4A' }), request('/api/proyectos/' + createdId + '/planeaciones', 'POST', { grupo: '4A' })]);
+            assert.deepEqual(concurrent.map(response => response.status).sort(), [201, 409]);
+            const generated = concurrent.find(response => response.status === 201);
             assert.equal(generated.status, 201, JSON.stringify(await generated.clone().json()));
             assert.equal((await generated.json()).count, 8);
             assert.equal((await request('/api/proyectos/' + createdId + '/planeaciones', 'POST', { grupo: '4A' })).status, 409);

@@ -4,6 +4,8 @@ import { ensureTablesExist } from '@/lib/db-init';
 import { ensurePlaneacionContextColumns, ensureProyectoArteTable } from '@/lib/context-schema';
 import { gradePdas, normalizeProjectConfig } from '@/lib/art-project-workflow';
 import { requireSameOrigin, requireUser } from '@/lib/auth';
+import { writeTransaction } from '@/lib/transactions.mjs';
+import { domainError } from '@/lib/workspace-operations.mjs';
 
 export const runtime = 'nodejs';
 
@@ -61,7 +63,7 @@ export async function GET(request, { params }) {
         await ensureTablesExist(); await ensurePlaneacionContextColumns(); await ensureProyectoArteTable();
         const found = await db.execute({ sql: 'SELECT id FROM proyectos WHERE id = ? AND docente_id = ?', args: [id, auth.user.id] });
         if (!found.rows[0]) return NextResponse.json({ error: 'Proyecto no encontrado.' }, { status: 404 });
-        const result = await db.execute({ sql: 'SELECT id, grupo, numero_sesion, fecha_clase, titulo, estado, origen_borrador FROM planeaciones WHERE proyecto_arte_id = ? AND docente_id = ? AND grupo IS NOT NULL ORDER BY grupo, numero_sesion', args: [id, auth.user.id] });
+        const result = await db.execute({ sql: 'SELECT id, grupo, numero_sesion, fecha_clase, titulo, estado, origen_borrador, programa_analitico_id FROM planeaciones WHERE proyecto_arte_id = ? AND docente_id = ? ORDER BY grupo, numero_sesion', args: [id, auth.user.id] });
         return NextResponse.json(result.rows);
     } catch (error) { return NextResponse.json({ error: error.message }, { status: 500 }); }
 }
@@ -119,10 +121,17 @@ export async function POST(request, { params }) {
                 'borrador', mode, index + 1, auth.user.id, config.valor_mensual || ''
             ] };
         });
-        await db.batch(queries, 'write');
+        await writeTransaction(db, async tx => {
+            const owner = (await tx.execute({ sql: 'SELECT programa_analitico_id FROM proyectos WHERE id=? AND docente_id=?', args: [id, auth.user.id] })).rows[0];
+            if (!owner) throw domainError('El proyecto ya no existe.', 404);
+            const existing = await tx.execute({ sql: 'SELECT id FROM planeaciones WHERE proyecto_arte_id=? AND grupo=? AND docente_id=? LIMIT 1', args: [id, grupo, auth.user.id] });
+            if (existing.rows.length) throw domainError('Este grupo ya tiene planeaciones. Edítalas desde su lista.', 409);
+            await tx.batch(queries);
+            await tx.execute({ sql: 'UPDATE planeaciones SET programa_analitico_id=? WHERE proyecto_arte_id=? AND grupo=? AND docente_id=?', args: [owner.programa_analitico_id ?? null, id, grupo, auth.user.id] });
+        });
         return NextResponse.json({ count: queries.length, mode }, { status: 201 });
     } catch (error) {
         console.error('Project lesson generation error:', error);
-        return NextResponse.json({ error: error.message }, { status: 500 });
+        return NextResponse.json({ error: error.message }, { status: error.status || 500 });
     }
 }

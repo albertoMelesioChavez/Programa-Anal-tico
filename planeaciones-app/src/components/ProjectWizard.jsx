@@ -74,7 +74,9 @@ export default function ProjectWizard({ projectId }) {
             else {
                 const last = (Array.isArray(previous) ? previous : []).filter(item => item.configuracion?.grupos?.length).sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)))[0];
                 setPreviousProject(last || null);
-                const key = 'art-project-draft:v1:' + session.user.id;
+                const requestedProgram = new URLSearchParams(window.location.search).get('programa');
+                const linkedProgram = programs.find(item => String(item.id) === requestedProgram);
+                const key = 'art-project-draft:v1:' + session.user.id + (linkedProgram ? ':' + linkedProgram.id : '');
                 setDraftKey(key);
                 let draft;
                 try { draft = JSON.parse(localStorage.getItem(key)); } catch { /* A blocked browser store must not prevent editing. */ }
@@ -87,7 +89,7 @@ export default function ProjectWizard({ projectId }) {
                 } else {
                     const defaults = newProjectConfig({ teacher: session.user.nombre || '' });
                     for (const key of ['escuela', 'espacios', 'proyecto_escolar']) if (last?.configuracion?.[key]) defaults[key] = last.configuracion[key];
-                    setProject(current => ({ ...current, configuracion: defaults }));
+                    setProject(current => ({ ...current, programa_analitico_id: linkedProgram?.id || null, configuracion: defaults }));
                 }
             }
         }).catch(cause => active && setLoadError(cause.message)).finally(() => active && setLoading(false));
@@ -163,9 +165,14 @@ export default function ProjectWizard({ projectId }) {
 
     async function assist(scope, field, current, index, signal) {
         const target = scope === 'group' ? { groupId: index } : { index };
+        const context = fullContext();
+        if (project.programa_analitico_id) {
+            const program = await readJson('/api/programas-analiticos/' + project.programa_analitico_id);
+            context.programa_analitico = { id: program.id, titulo: program.titulo, contenido: String(program.contenido).slice(0, 18000) };
+        }
         const response = await fetch('/api/ai', {
             method: 'POST', headers: { 'Content-Type': 'application/json' }, signal,
-            body: JSON.stringify({ task: 'project-field', scope, field, current, target, context: fullContext() })
+            body: JSON.stringify({ task: 'project-field', scope, field, current, target, context })
         });
         const data = await response.json();
         if (!response.ok || typeof data.text !== 'string' || !data.text.trim()) throw new Error(data.error || 'No se obtuvo una propuesta. Intenta de nuevo.');
@@ -304,11 +311,11 @@ export default function ProjectWizard({ projectId }) {
                         </div>
                     </div>
                     <div className={styles.defaultsStrip}><span><strong>{config.ruta.length}</strong> sesiones</span><span><strong>{config.duracion_minutos}</strong> min por sesión</span><span>Ciclo <strong>{config.ciclo || 'por definir'}</strong></span><span>{languageName}</span></div>
+                    <div className={styles.selectField}><label htmlFor="programa-analitico">Programa analítico de este proyecto</label><select id="programa-analitico" value={project.programa_analitico_id || ''} onChange={e => setCore('programa_analitico_id', e.target.value || null)}><option value="">Sin vincular por ahora</option>{programas.map(program => <option key={program.id} value={program.id}>{program.titulo}</option>)}</select>{project.programa_analitico_id && <Link href={`/contenidos/artes?programa=${project.programa_analitico_id}`} target="_blank" rel="noopener noreferrer">Consultar programa ↗</Link>}</div>
                     <div className={styles.foldList}>
                         <Fold id="school-settings" title="Datos de la escuela y calendario" summary={[config.escuela || 'Escuela pendiente', config.docente, 'Fechas opcionales'].filter(Boolean).join(' · ')}>
                             <div className={styles.three}><TextField label="Escuela" value={config.escuela} onChange={v => setConfig('escuela', v)} /><TextField label="Docente" value={config.docente} onChange={v => setConfig('docente', v)} /><TextField label="Ciclo escolar" value={config.ciclo} onChange={v => setConfig('ciclo', v)} /></div>
                             <div className={styles.three}><TextField label="Inicio tentativo" type="date" value={config.periodo_inicio} onChange={v => setConfig('periodo_inicio', v)} /><TextField label="Fin tentativo" type="date" value={config.periodo_fin} onChange={v => setConfig('periodo_fin', v)} /><TextField label="Minutos por sesión" type="number" min="20" max="180" value={config.duracion_minutos} onChange={v => setConfig('duracion_minutos', v === '' ? '' : Number(v))} /></div>
-                            <div className={styles.selectField}><label htmlFor="programa-analitico">Programa analítico</label><select id="programa-analitico" value={project.programa_analitico_id || ''} onChange={e => setCore('programa_analitico_id', e.target.value || null)}><option value="">Sin vincular por ahora</option>{programas.map(program => <option key={program.id} value={program.id}>{program.titulo}</option>)}</select></div>
                             <TextField label="Nombre del proyecto escolar" value={config.proyecto_escolar} onChange={v => setConfig('proyecto_escolar', v)} placeholder="Escribe el nombre del proyecto acordado por la escuela, si existe." />
                             {field('config', 'vinculacion_escolar', { rows: 2 })}
                         </Fold>

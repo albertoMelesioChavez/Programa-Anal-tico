@@ -20,8 +20,9 @@ export async function GET(request) {
         const { ensurePlaneacionContextColumns } = await import('@/lib/context-schema');
         await ensurePlaneacionContextColumns();
         const result = await client.execute({
-            sql: `SELECT p.*, COUNT(pl.id) as planeaciones_count
+            sql: `SELECT p.*, pa.titulo AS programa_titulo, COUNT(pl.id) as planeaciones_count
                   FROM proyectos p
+                  LEFT JOIN programas_analiticos pa ON pa.id = p.programa_analitico_id AND pa.docente_id = p.docente_id
                   LEFT JOIN planeaciones pl ON CAST(pl.proyecto_arte_id AS TEXT) = CAST(p.id AS TEXT) AND pl.docente_id = p.docente_id
                   WHERE p.docente_id = ?
                   GROUP BY p.id
