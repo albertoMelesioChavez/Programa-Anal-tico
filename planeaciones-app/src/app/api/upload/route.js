@@ -1,26 +1,8 @@
-import { put } from '@vercel/blob';
 import { NextResponse } from 'next/server';
+import { requireSameOrigin, requireUser } from '@/lib/auth';
 
 export async function POST(request) {
-    try {
-        const { searchParams } = new URL(request.url);
-        const filename = searchParams.get('filename');
-
-        if (!filename) {
-            return NextResponse.json({ error: 'Filename is required' }, { status: 400 });
-        }
-
-        if (!process.env.BLOB_READ_WRITE_TOKEN) {
-            return NextResponse.json({ error: 'Vercel Blob storage not configured' }, { status: 503 });
-        }
-
-        const blob = await put(filename, request.body, {
-            access: 'public',
-        });
-
-        return NextResponse.json(blob);
-    } catch (error) {
-        console.error('Upload error:', error);
-        return NextResponse.json({ error: 'Failed to upload file: ' + error.message }, { status: 500 });
-    }
+    const originError = requireSameOrigin(request); if (originError) return originError;
+    const auth = await requireUser(request); if (auth.error) return auth.error;
+    return NextResponse.json({ error: 'La subida de archivos está desactivada hasta configurar almacenamiento privado por docente.' }, { status: 503 });
 }

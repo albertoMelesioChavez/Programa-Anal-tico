@@ -1,4 +1,5 @@
 import './globals.css';
+import AuthGate from '@/components/AuthGate';
 
 export const metadata = {
     metadataBase: new URL('https://programa-anal-tico.vercel.app'),
@@ -32,7 +33,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="es">
             <body className="antialiased">
-                {children}
+                <AuthGate>{children}</AuthGate>
             </body>
         </html>
     );

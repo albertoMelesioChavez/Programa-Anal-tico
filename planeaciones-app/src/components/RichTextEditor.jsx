@@ -13,8 +13,9 @@ import { Table } from '@tiptap/extension-table';
 import { TableRow } from '@tiptap/extension-table-row';
 import { TableHeader } from '@tiptap/extension-table-header';
 import { TableCell } from '@tiptap/extension-table-cell';
+import Image from '@tiptap/extension-image';
 
-const Toolbar = ({ editor, darkMode }) => {
+const Toolbar = ({ editor, darkMode, onImageSelect }) => {
   if (!editor) return null;
 
   const theme = {
@@ -61,6 +62,13 @@ const Toolbar = ({ editor, darkMode }) => {
         <button onClick={() => editor.chain().focus().undo().run()} style={btnStyle(false)} title="Deshacer">↶</button>
         <button onClick={() => editor.chain().focus().redo().run()} style={btnStyle(false)} title="Rehacer">↷</button>
       </div>
+
+      <div style={{ width: '1px', height: '24px', background: theme.sep, margin: '0 8px' }} />
+
+      <label style={{ ...btnStyle(false), gap: '5px' }} title="Insertar imagen en el texto">
+        <input type="file" accept="image/png,image/jpeg,image/webp,image/gif" onChange={onImageSelect} style={{ display: 'none' }} />
+        <span aria-hidden="true">▧</span> Imagen
+      </label>
       
       <div style={{ width: '1px', height: '24px', background: theme.sep, margin: '0 8px' }} />
 
@@ -104,6 +112,17 @@ const Toolbar = ({ editor, darkMode }) => {
 export default function RichTextEditor({ initialContent, onSave, isSaving, editable, onFocus, darkMode = false }) {
   const [isFocused, setIsFocused] = useState(false);
   
+  const handleImageSelect = (event) => {
+    const file = event.target.files?.[0];
+    event.target.value = '';
+    if (!file || !file.type.startsWith('image/')) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      editor?.chain().focus().setImage({ src: String(reader.result), alt: file.name, title: file.name }).run();
+    };
+    reader.readAsDataURL(file);
+  };
+
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -118,6 +137,7 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
       TableRow,
       TableHeader,
       TableCell,
+      Image.configure({ allowBase64: true, inline: false }),
     ],
     content: initialContent,
     editable: editable,
@@ -217,6 +237,19 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
           color: ${darkMode ? '#d1d5db' : '#64748b'};
           margin: 2rem 0;
         }
+        .custom-editor .ProseMirror img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          margin: 1.5rem auto;
+          border-radius: 8px;
+          cursor: grab;
+        }
+        .custom-editor .ProseMirror img.ProseMirror-selectednode {
+          outline: 3px solid #2563eb;
+          outline-offset: 3px;
+          cursor: grabbing;
+        }
         /* INDICE STYLES */
         .indice-item { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; width: 100%; color: ${darkMode ? '#d1d5db' : '#475569'}; }
         .indice-dots { flex-grow: 1; border-bottom: 2px dotted ${darkMode ? 'rgba(255, 255, 255, 0.15)' : '#cbd5e1'}; margin-bottom: 5px; min-width: 20px; }
@@ -233,7 +266,7 @@ export default function RichTextEditor({ initialContent, onSave, isSaving, edita
             zIndex: 1000,
             animation: 'slideDown 0.3s ease-out'
         }}>
-            <Toolbar editor={editor} darkMode={darkMode} />
+            <Toolbar editor={editor} darkMode={darkMode} onImageSelect={handleImageSelect} />
         </div>
       )}
 

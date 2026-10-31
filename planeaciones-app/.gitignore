@@ -5,6 +5,9 @@ node_modules/
 
 # Next.js
 .next/
+.next-verify/
+playwright-report/
+test-results/
 out/
 build/
 
@@ -51,3 +54,4 @@ temp_output.html
 
 # Project specific artifacts
 .gemini/
+.private/

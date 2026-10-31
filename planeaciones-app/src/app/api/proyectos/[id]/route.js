@@ -1,18 +1,21 @@
 import { db as client } from '@/lib/db';
 import { NextResponse } from 'next/server';
 import { ensureProyectoArteTable } from '@/lib/context-schema';
+import { requireSameOrigin, requireUser } from '@/lib/auth';
+import { deleteProject, updateProject } from '@/lib/workspace-operations.mjs';
 
 async function initDB() {
     await ensureProyectoArteTable();
 }
 
 export async function GET(request, { params }) {
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     const { id } = await params;
     try {
         await initDB();
         const result = await client.execute({
-            sql: "SELECT * FROM proyectos WHERE id = ?",
-            args: [id]
+            sql: "SELECT p.*, pa.titulo AS programa_titulo FROM proyectos p LEFT JOIN programas_analiticos pa ON pa.id=p.programa_analitico_id AND pa.docente_id=p.docente_id WHERE p.id = ? AND p.docente_id = ?",
+            args: [id, auth.user.id]
         });
         
         if (result.rows.length === 0) {
@@ -37,42 +40,26 @@ export async function GET(request, { params }) {
 }
 
 export async function PATCH(request, { params }) {
+    const originError = requireSameOrigin(request); if (originError) return originError;
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     const { id } = await params;
     try {
         await initDB();
         const data = await request.json();
-        const { titulo, tematica, introduccion, productos, vinculacion } = data;
-
-        await client.execute({
-            sql: `UPDATE proyectos 
-                  SET titulo = ?, tematica = ?, introduccion = ?, productos = ?, vinculacion = ?
-                  WHERE id = ?`,
-            args: [
-                titulo, 
-                tematica, 
-                introduccion, 
-                JSON.stringify(productos || []), 
-                JSON.stringify(vinculacion || []),
-                id
-            ]
-        });
-
-        return NextResponse.json({ success: true });
+        return NextResponse.json(await updateProject(client, auth.user.id, id, data));
     } catch (error) {
-        return NextResponse.json({ error: error.message }, { status: 500 });
+        return NextResponse.json({ error: error.message }, { status: error.status || 500 });
     }
 }
 
 export async function DELETE(request, { params }) {
+    const originError = requireSameOrigin(request); if (originError) return originError;
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     const { id } = await params;
     try {
         await initDB();
-        await client.execute({
-            sql: "DELETE FROM proyectos WHERE id = ?",
-            args: [id]
-        });
-        return NextResponse.json({ success: true });
+        return NextResponse.json(await deleteProject(client, auth.user.id, id));
     } catch (error) {
-        return NextResponse.json({ error: error.message }, { status: 500 });
+        return NextResponse.json({ error: error.message }, { status: error.status || 500 });
     }
 }

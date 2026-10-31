@@ -1,4 +1,5 @@
 import { db } from '@/lib/db';
+import { ensureTablesExist } from '@/lib/db-init';
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
@@ -9,6 +10,7 @@ export async function GET(request) {
     const lenguaje_id = searchParams.get('lenguaje_id');
 
     try {
+        await ensureTablesExist();
         const result = await db.execute({
             sql: 'SELECT * FROM orientaciones_didacticas WHERE fase_id = ? AND lenguaje_id = ?',
             args: [fase_id, lenguaje_id]

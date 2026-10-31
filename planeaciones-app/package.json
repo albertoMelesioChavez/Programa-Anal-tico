@@ -6,7 +6,10 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:unit": "node --test tests/*.test.mjs",
+    "test:system": "node scripts/verify.mjs --system",
+    "verify": "node scripts/verify.mjs"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
@@ -14,6 +17,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tiptap/extension-bubble-menu": "^3.22.5",
     "@tiptap/extension-highlight": "^3.22.5",
+    "@tiptap/extension-image": "^3.22.5",
     "@tiptap/extension-link": "^3.22.5",
     "@tiptap/extension-placeholder": "^3.22.5",
     "@tiptap/extension-table": "^3.22.5",
@@ -39,6 +43,7 @@
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@playwright/test": "1.64.1",
     "@tailwindcss/postcss": "^4",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",

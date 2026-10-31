@@ -1,8 +1,8 @@
 import { db as client } from '@/lib/db';
 import { NextResponse } from 'next/server';
-import { put } from '@vercel/blob';
 import { ensureProyectoArteTable } from '@/lib/context-schema';
 import { extractTextFromDocument, titleFromFilename } from '@/lib/document-text';
+import { owns, requireSameOrigin, requireUser } from '@/lib/auth';
 
 export const runtime = 'nodejs';
 
@@ -11,16 +11,23 @@ const initDB = async () => {
     await ensureProyectoArteTable();
 };
 
-export async function GET() {
+export async function GET(request) {
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     try {
         await initDB();
+        const { ensureTablesExist } = await import('@/lib/db-init');
+        await ensureTablesExist();
+        const { ensurePlaneacionContextColumns } = await import('@/lib/context-schema');
+        await ensurePlaneacionContextColumns();
         const result = await client.execute({
-            sql: `SELECT p.*, COUNT(pl.id) as planeaciones_count
+            sql: `SELECT p.*, pa.titulo AS programa_titulo, COUNT(pl.id) as planeaciones_count
                   FROM proyectos p
-                  LEFT JOIN planeaciones pl ON CAST(pl.proyecto_arte_id AS TEXT) = CAST(p.id AS TEXT)
+                  LEFT JOIN programas_analiticos pa ON pa.id = p.programa_analitico_id AND pa.docente_id = p.docente_id
+                  LEFT JOIN planeaciones pl ON CAST(pl.proyecto_arte_id AS TEXT) = CAST(p.id AS TEXT) AND pl.docente_id = p.docente_id
+                  WHERE p.docente_id = ?
                   GROUP BY p.id
                   ORDER BY p.orden ASC, p.created_at DESC`,
-            args: []
+            args: [auth.user.id]
         });
         const proyectos = result.rows.map(row => {
             const newRow = {};
@@ -42,6 +49,8 @@ export async function GET() {
 }
 
 export async function POST(request) {
+    const originError = requireSameOrigin(request); if (originError) return originError;
+    const auth = await requireUser(request); if (auth.error) return auth.error;
     try {
         await initDB();
         const contentType = request.headers.get('content-type') || '';
@@ -58,16 +67,13 @@ export async function POST(request) {
                 return NextResponse.json({ error: 'No se pudo extraer texto del documento.' }, { status: 400 });
             }
 
-            let archivoUrl = null;
-            if (process.env.BLOB_READ_WRITE_TOKEN) {
-                const blob = await put(`proyecto-arte/${Date.now()}-${file.name}`, file, { access: 'public' });
-                archivoUrl = blob.url;
-            }
+            // El documento se usa para extraer texto; no se publica una copia accesible por URL.
+            const archivoUrl = null;
 
             const titulo = String(formData.get('titulo') || titleFromFilename(file.name, 'Proyecto de arte')).trim();
             const result = await client.execute({
-            sql: `INSERT INTO proyectos (titulo, tematica, introduccion, productos, vinculacion, configuracion, nombre_archivo, tipo_archivo, archivo_url)
-                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            sql: `INSERT INTO proyectos (titulo, tematica, introduccion, productos, vinculacion, configuracion, nombre_archivo, tipo_archivo, archivo_url, docente_id)
+                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
                 args: [
                     titulo,
                     'Proyecto de arte importado desde archivo',
@@ -77,7 +83,7 @@ export async function POST(request) {
                     JSON.stringify({ origen: 'archivo' }),
                     file.name,
                     file.type || null,
-                    archivoUrl
+                    archivoUrl, auth.user.id
                 ]
             });
             const id = typeof result.lastInsertRowid === 'bigint' ? Number(result.lastInsertRowid) : result.lastInsertRowid;
@@ -85,22 +91,27 @@ export async function POST(request) {
         }
 
         const data = await request.json();
-        const { titulo, tematica, introduccion, productos, vinculacion, configuracion } = data;
+        const { titulo, tematica, introduccion, productos, vinculacion, configuracion, programa_analitico_id } = data;
+        const { ensureProgramasAnaliticosTable } = await import('@/lib/context-schema');
+        await ensureProgramasAnaliticosTable();
+        if (programa_analitico_id && !await owns('programas_analiticos', programa_analitico_id, auth.user.id)) return NextResponse.json({ error: 'Programa no encontrado.' }, { status: 404 });
 
         if (!titulo) {
             return NextResponse.json({ error: 'Escribe un título para el proyecto de arte.' }, { status: 400 });
         }
 
         const result = await client.execute({
-            sql: `INSERT INTO proyectos (titulo, tematica, introduccion, productos, vinculacion, configuracion)
-                  VALUES (?, ?, ?, ?, ?, ?)`,
+            sql: `INSERT INTO proyectos (titulo, tematica, introduccion, productos, vinculacion, configuracion, programa_analitico_id, docente_id)
+                  VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
             args: [
                 titulo, 
-                tematica, 
-                introduccion, 
+                tematica || '',
+                introduccion || '',
                 JSON.stringify(productos || []), 
                 JSON.stringify(vinculacion || []), 
-                JSON.stringify(configuracion || {})
+                JSON.stringify(configuracion || {}),
+                programa_analitico_id?.toString() || null,
+                auth.user.id
             ]
         });
 

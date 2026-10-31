@@ -1,0 +1,22 @@
+.document { color: #293345; background: #fff; border: 1px solid #e1e4eb; border-radius: 12px; padding: clamp(20px, 4vw, 40px); overflow-wrap: anywhere; }
+.document .kicker { font-size: 11px; font-weight: 500; color: #0b57d0; margin: 0 0 10px; }
+.document .title { font-size: clamp(26px, 3vw, 38px); line-height: 1.15; letter-spacing: -.025em; text-transform: none; border: 0; padding: 0; margin: 0; color: #192132; }
+.document .theme { font-size: 17px; margin: 12px 0 24px; }
+.document section { margin-top: 32px; }
+.document section h2 { font-size: 18px; line-height: 1.35; color: #0b57d0; padding-bottom: 10px; border-bottom: 1px solid #e3e7ed; letter-spacing: normal; text-transform: none; }
+.document h3 { font-size: 14px; line-height: 1.4; margin: 18px 0 6px; }
+.document p { font-size: 14px; line-height: 1.65; white-space: pre-wrap; margin: 6px 0; color: #4a5669; }
+.document .small { font-size: 12px; }
+.meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; padding: 18px 0; margin: 0; border-block: 1px solid #e1e4eb; font-size: 13px; }
+.meta dt { font-weight: 500; margin-bottom: 4px; }
+.meta dd { margin: 0; line-height: 1.5; white-space: pre-wrap; }
+.route { display: grid; gap: 20px; }
+.route > article { padding-bottom: 20px; border-bottom: 1px solid #e1e4eb; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.tableWrap { overflow-x: auto; }
+.document table { border-collapse: collapse; width: 100%; margin-top: 18px; font-size: 13px; line-height: 1.5; table-layout: fixed; }
+.document caption { text-align: left; margin-bottom: 8px; font-weight: 700; }
+.document th, .document td { padding: 10px; border: 1px solid #d9dce6; text-align: left; vertical-align: top; white-space: pre-wrap; }
+.document thead { background: #f0f4f9; }
+@media (max-width: 620px) { .meta, .two { grid-template-columns: 1fr; } .document th, .document td { padding: 7px; font-size: 12px; } }
+@media print { .document { border: 0; padding: 0; border-radius: 0; } .document section { break-inside: auto; } .document h2, .document h3 { break-after: avoid; } .document tr, .route > article { break-inside: avoid; } .tableWrap { overflow: visible; } .meta, .two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
