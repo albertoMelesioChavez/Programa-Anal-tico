@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, createRef, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import AppIcon from '@/components/AppIcon';
 import RichTextEditor from '@/components/RichTextEditor';
 import { marked } from 'marked';
 
@@ -387,14 +388,14 @@ function ContenidosArtesContent() {
 
     if (loading) {
         return (
-            <div style={{ display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center', background: theme.bg }}>
+            <div style={{ display: 'flex', height: 'calc(100dvh - 72px)', alignItems: 'center', justifyContent: 'center', background: theme.bg }}>
                 <div className="loader-blue"></div>
             </div>
         );
     }
 
     return (
-        <div className="analitico-shell" style={{ display: 'flex', height: '100vh', background: theme.bg, color: theme.text, overflow: 'hidden' }}>
+        <div className="analitico-shell" style={{ display: 'flex', height: 'calc(100dvh - 72px)', background: theme.bg, color: theme.text, overflow: 'hidden' }}>
             {/* Sidebar / Navigation */}
             {viewMode !== 'pdf' && (
                 <aside id="artes-secciones" className={`analitico-sidebar ${isMobileNavOpen ? 'is-open' : ''}`} style={{
@@ -406,26 +407,26 @@ function ContenidosArtesContent() {
                     zIndex: 10
                 }}>
                     <div style={{ padding: '32px' }}>
-                        <Link href="/" style={{ textDecoration: 'none', color: '#2563eb', fontWeight: '900', fontSize: '11px', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
-                            ← VOLVER AL DASHBOARD
+                        <Link href="/" style={{ textDecoration: 'none', color: '#0b57d0', fontWeight: '500', fontSize: '11px', letterSpacing: 'normal', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
+                            ← Mis documentos
                         </Link>
-                        <h2 style={{ fontSize: '24px', fontWeight: '900', letterSpacing: '-1px', marginBottom: '8px' }}>Programa Analítico</h2>
+                        <h2 style={{ fontSize: '24px', fontWeight: '500', letterSpacing: '-1px', marginBottom: '8px' }}>Programa Analítico</h2>
                         <p style={{ fontSize: '13px', color: theme.subtext, fontWeight: '500', overflowWrap: 'anywhere' }}>{programas.find(item => String(item.id) === String(selectedProgramId))?.titulo || 'Tus programas guardados'}</p>
                         {selectedProgramId && <Link href={`/proyectos/nuevo?programa=${selectedProgramId}`} className="program-create-project">Crear proyecto con este programa →</Link>}
                     </div>
 
                     <div style={{ margin: '0 20px 20px', padding: '14px', border: `1px solid ${theme.border}`, borderRadius: '12px', background: '#fff' }}>
-                        <label style={{ display: 'block', marginBottom: '7px', color: theme.subtext, fontSize: '9px', fontWeight: '900', letterSpacing: '.8px', textTransform: 'uppercase' }}>Programa activo</label>
+                        <label style={{ display: 'block', marginBottom: '7px', color: theme.subtext, fontSize: '12px', fontWeight: '500', letterSpacing: '.8px', textTransform: 'none' }}>Programa activo</label>
                         <select value={selectedProgramId} onChange={(event) => setSelectedProgramId(event.target.value)} aria-label="Seleccionar programa analítico" style={{ width: '100%', padding: '9px 10px', border: `1px solid ${theme.border}`, borderRadius: '8px', background: '#f8fafc', color: theme.text, font: '700 12px inherit', outline: 'none' }}>
                             {programas.map((programa) => <option key={programa.id} value={programa.id}>{programa.titulo}</option>)}
                         </select>
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '5px', marginTop: '9px' }}>
-                            <button onClick={createProgram} title="Crear programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: '#2563eb', padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>＋</button>
-                            <button onClick={duplicateProgram} title="Duplicar programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>⧉</button>
-                            <button onClick={renameProgram} title="Cambiar nombre" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>✎</button>
-                            <button onClick={() => moveProgram(-1)} disabled={programas.findIndex((programa) => String(programa.id) === String(selectedProgramId)) <= 0} title="Subir programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>↑</button>
-                            <button onClick={() => moveProgram(1)} disabled={programas.findIndex((programa) => String(programa.id) === String(selectedProgramId)) >= programas.length - 1} title="Bajar programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>↓</button>
-                            <button onClick={deleteProgram} disabled={programas.length <= 1} title="Borrar programa" style={{ border: '1px solid #fecaca', borderRadius: '7px', background: '#fff', color: '#dc2626', padding: '7px 4px', fontWeight: '900', cursor: 'pointer' }}>×</button>
+                            <button onClick={createProgram} title="Crear programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: '#0b57d0', padding: '7px 4px', fontWeight: '500', cursor: 'pointer' }}><AppIcon name="plus" size={18} /></button>
+                            <button onClick={duplicateProgram} title="Duplicar programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '500', cursor: 'pointer' }}><AppIcon name="copy" size={18} /></button>
+                            <button onClick={renameProgram} title="Cambiar nombre" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '500', cursor: 'pointer' }}><AppIcon name="edit" size={18} /></button>
+                            <button onClick={() => moveProgram(-1)} disabled={programas.findIndex((programa) => String(programa.id) === String(selectedProgramId)) <= 0} title="Subir programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '500', cursor: 'pointer' }}><AppIcon name="arrow" size={18} style={{ transform: 'rotate(-90deg)' }} /></button>
+                            <button onClick={() => moveProgram(1)} disabled={programas.findIndex((programa) => String(programa.id) === String(selectedProgramId)) >= programas.length - 1} title="Bajar programa" style={{ border: `1px solid ${theme.border}`, borderRadius: '7px', background: '#fff', color: theme.text, padding: '7px 4px', fontWeight: '500', cursor: 'pointer' }}><AppIcon name="arrow" size={18} style={{ transform: 'rotate(90deg)' }} /></button>
+                            <button onClick={deleteProgram} disabled={programas.length <= 1} title="Borrar programa" style={{ border: '1px solid #fecaca', borderRadius: '7px', background: '#fff', color: '#dc2626', padding: '7px 4px', fontWeight: '500', cursor: 'pointer' }}><AppIcon name="close" size={18} /></button>
                         </div>
                     </div>
 
@@ -439,7 +440,7 @@ function ContenidosArtesContent() {
                                                 flex: 1,
                                                 padding: '12px 16px',
                                                 borderRadius: '12px',
-                                                background: currentPageIdx === idx ? '#2563eb' : 'transparent',
+                                                background: currentPageIdx === idx ? '#0b57d0' : 'transparent',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 gap: '12px',
@@ -447,7 +448,7 @@ function ContenidosArtesContent() {
                                                 border: `1px solid ${currentPageIdx === idx ? 'transparent' : theme.border}`
                                             }}
                                         >
-                                            <span style={{ fontSize: '10px', fontWeight: '900', opacity: 0.5, color: currentPageIdx === idx ? '#fff' : theme.subtext }}>{String(idx + 1).padStart(2, '0')}</span>
+                                            <span style={{ fontSize: '10px', fontWeight: '500', opacity: 0.5, color: currentPageIdx === idx ? '#fff' : theme.subtext }}>{String(idx + 1).padStart(2, '0')}</span>
                                             <input 
                                                 value={p.title} 
                                                 onChange={(e) => renameSection(idx, e.target.value)}
@@ -476,7 +477,7 @@ function ContenidosArtesContent() {
                                                 padding: '12px 16px',
                                                 borderRadius: '12px',
                                                 border: 'none',
-                                                background: currentPageIdx === idx ? '#2563eb' : 'transparent',
+                                                background: currentPageIdx === idx ? '#0b57d0' : 'transparent',
                                                 color: currentPageIdx === idx ? '#fff' : theme.text,
                                                 cursor: 'pointer',
                                                 transition: 'all 0.2s',
@@ -486,7 +487,7 @@ function ContenidosArtesContent() {
                                                 minWidth: 0
                                             }}
                                         >
-                                            <span style={{ fontSize: '10px', fontWeight: '900', opacity: 0.5 }}>{String(idx + 1).padStart(2, '0')}</span>
+                                            <span style={{ fontSize: '10px', fontWeight: '500', opacity: 0.5 }}>{String(idx + 1).padStart(2, '0')}</span>
                                             <span style={{ fontSize: '13px', fontWeight: '700', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.title}</span>
                                         </button>
                                     )}
@@ -535,9 +536,9 @@ function ContenidosArtesContent() {
                                     borderRadius: '12px',
                                     border: `2px dashed ${theme.border}`,
                                     background: 'transparent',
-                                                    color: '#2563eb',
+                                                    color: '#0b57d0',
                                     fontSize: '11px',
-                                    fontWeight: '800',
+                                    fontWeight: '500',
                                     cursor: 'pointer',
                                     marginTop: '16px',
                                     transition: 'all 0.2s'
@@ -566,18 +567,18 @@ function ContenidosArtesContent() {
                     justifyContent: 'space-between',
                     borderBottom: `1px solid ${theme.border}`,
                     background: theme.header,
-                    backdropFilter: 'blur(10px)',
+                    backdropFilter: 'none',
                     zIndex: 100
                 }}>
                     <div className="analitico-header-tabs" style={{ display: 'flex', gap: '8px' }}>
-                        {viewMode !== 'pdf' && <button className="mobile-sections-button" onClick={() => setIsMobileNavOpen(true)} aria-expanded={isMobileNavOpen} aria-controls="artes-secciones">☰ <span>SECCIONES</span></button>}
+                        {viewMode !== 'pdf' && <button className="mobile-sections-button" onClick={() => setIsMobileNavOpen(true)} aria-expanded={isMobileNavOpen} aria-controls="artes-secciones"><AppIcon name="menu" size={18} /><span>Secciones</span></button>}
                         <button
                             className="document-version-toggle"
                             onClick={toggleDocumentVersion}
                             aria-label={viewMode === 'pdf' ? 'Abrir la versión digital del Programa Analítico del departamento de Artística' : 'Abrir el PDF del Programa Analítico del departamento de Artística'}
-                            style={{ padding: '9px 18px', borderRadius: '12px', fontSize: '12px', fontWeight: '800', background: theme.text, color: theme.bg, border: 'none', cursor: 'pointer' }}
+                            style={{ padding: '9px 18px', borderRadius: '12px', fontSize: '12px', fontWeight: '500', background: theme.text, color: theme.bg, border: 'none', cursor: 'pointer' }}
                         >
-                            <span className="document-version-title">Programa Analítico del departamento de Artística</span>
+                            <span className="document-version-title">Material de referencia</span>
                             <span className="document-version-action">{viewMode === 'pdf' ? 'Ver versión digital' : 'Abrir PDF'}</span>
                         </button>
                     </div>
@@ -585,15 +586,15 @@ function ContenidosArtesContent() {
                     <div className="analitico-header-actions" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
                         <button 
                             onClick={() => setIsEditMode(!isEditMode)}
-                            style={{ padding: '10px 24px', borderRadius: '100px', fontSize: '12px', fontWeight: '900', background: isEditMode ? '#ef4444' : '#0f172a', color: '#fff', border: 'none', cursor: 'pointer' }}
+                            style={{ padding: '10px 24px', borderRadius: '100px', fontSize: '12px', fontWeight: '500', background: isEditMode ? '#ef4444' : '#0f172a', color: '#fff', border: 'none', cursor: 'pointer' }}
                         >
-                            {isEditMode ? 'SALIR DE EDICIÓN' : 'EDITAR'}
+                            {isEditMode ? 'Terminar edición' : 'Editar'}
                         </button>
                         <button 
                             onClick={handleExport}
-                            style={{ padding: '10px 24px', borderRadius: '100px', fontSize: '12px', fontWeight: '900', background: '#2563eb', color: '#fff', border: 'none', cursor: 'pointer' }}
+                            style={{ padding: '10px 24px', borderRadius: '100px', fontSize: '12px', fontWeight: '500', background: '#0b57d0', color: '#fff', border: 'none', cursor: 'pointer' }}
                         >
-                            EXPORTAR
+                            Exportar
                         </button>
                     </div>
                 </header>
@@ -660,7 +661,7 @@ function ContenidosArtesContent() {
                                             />
                                         ) : (
                                             <>
-                                                <h3 style={{ fontSize: '32px', fontWeight: '900', letterSpacing: '-1.5px', marginBottom: '32px', color: '#2563eb' }}>{p.title}</h3>
+                                                <h3 style={{ fontSize: '32px', fontWeight: '500', letterSpacing: '-.025em', marginBottom: '32px', color: '#0b57d0' }}>{p.title}</h3>
                                                 <div
                                                     className="prose-custom"
                                                     dangerouslySetInnerHTML={{ __html: p.cleanHtml }}
@@ -682,7 +683,7 @@ function ContenidosArtesContent() {
                                                         padding: '6px 14px',
                                                         borderRadius: '100px',
                                                         fontSize: '10px',
-                                                        fontWeight: '900',
+                                                        fontWeight: '500',
                                                         cursor: 'pointer',
                                                         display: 'flex',
                                                         alignItems: 'center',
@@ -694,8 +695,8 @@ function ContenidosArtesContent() {
                                                     {isSaving ? '🪄 PROCESANDO...' : '🪄 MEJORAR CON IA'}
                                                 </button>
                                             )}
-                                            <span style={{ fontSize: '11px', fontWeight: '800', color: '#cbd5e1' }}>
-                                                PÁGINA {idx + 1} {isEditMode && currentPageIdx === idx && <span style={{ color: '#2563eb', marginLeft: '10px' }}>(MODO EDICIÓN ACTIVO)</span>}
+                                            <span style={{ fontSize: '11px', fontWeight: '500', color: '#cbd5e1' }}>
+                                                PÁGINA {idx + 1} {isEditMode && currentPageIdx === idx && <span style={{ color: '#0b57d0', marginLeft: '10px' }}>(MODO EDICIÓN ACTIVO)</span>}
                                             </span>
                                         </div>
                                     </div>
@@ -731,7 +732,7 @@ function ContenidosArtesContent() {
                             left: '-4px', 
                             width: '12px', 
                             height: '40px', 
-                            background: '#2563eb', 
+                            background: '#0b57d0',
                             borderRadius: '10px',
                             transition: 'top 0.1s linear'
                         }}></div>
@@ -740,6 +741,18 @@ function ContenidosArtesContent() {
             </main>
 
             <style jsx global>{`
+                .analitico-shell { min-width: 0; }
+                .analitico-sidebar { width: 260px !important; background: #f8fafd !important; }
+                .analitico-sidebar h2 { font-size: 21px !important; font-weight: 500 !important; letter-spacing: -.02em !important; }
+                .analitico-sidebar button { font-weight: 500 !important; }
+                .analitico-header { height: 68px !important; padding: 12px 24px !important; background: #fff !important; gap: 12px; }
+                .analitico-header-actions button { border-radius: 8px !important; font-weight: 500 !important; min-height: 44px; font-size: 12px !important; }
+                .document-version-toggle { background: #f0f4f9 !important; color: #444746 !important; font-weight: 500 !important; border-radius: 8px !important; }
+                .analitico-page { padding: 48px 56px !important; }
+                .analitico-page h3 { color: #202a3c !important; font-weight: 550 !important; }
+                .analitico-sidebar button { min-height: 44px; }
+                .analitico-sidebar button svg { display: inline-block; vertical-align: middle; }
+                .document-version-action { color: #526076 !important; }
                 .program-create-project { display: inline-block; margin-top: 14px; color: #2457c5; font-size: 14px; font-weight: 700; line-height: 1.5; }
                 .prose-custom p { margin-bottom: 24px; }
                 .prose-custom h4 { margin: 40px 0 16px; font-size: 20px; font-weight: 800; }
@@ -823,7 +836,7 @@ function ContenidosArtesContent() {
                 .document-version-action { color: #bfdbfe; font-size: 10px; white-space: nowrap; }
 
                 @media (max-width: 768px) {
-                    .analitico-shell { height: 100dvh !important; }
+                    .analitico-shell { height: calc(100dvh - 136px - env(safe-area-inset-bottom)) !important; }
                     .analitico-sidebar {
                         position: fixed !important;
                         inset: 0 auto 0 0;

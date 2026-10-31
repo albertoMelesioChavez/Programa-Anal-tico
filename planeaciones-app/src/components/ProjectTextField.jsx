@@ -51,6 +51,7 @@ export default function ProjectTextField({ label, value = '', onChange, rows = 0
     const buttonRef = useRef(null);
     const [busy, setBusy] = useState(false);
     const [proposal, setProposal] = useState(null);
+    const [applied, setApplied] = useState(null);
     const [error, setError] = useState('');
     useEffect(() => () => requestRef.current?.abort(), []);
     useEffect(() => {
@@ -97,6 +98,7 @@ export default function ProjectTextField({ label, value = '', onChange, rows = 0
         {help && <small id={`${id}-help`}>{help}</small>}
         {busy && <small role="status">Preparando una propuesta con el contexto del proyecto…</small>}
         {error && <p role="alert" className={styles.fieldError}>{error}</p>}
+        {applied && value === applied.text && <div className={styles.appliedProposal} role="status"><span>Propuesta aplicada.</span><button type="button" onClick={() => { onChange(applied.original); setApplied(null); inputRef.current?.focus(); }}>Deshacer propuesta</button></div>}
         {proposal && <div id={`${id}-proposal`} className={styles.fieldProposal}>
             <strong role="status">{proposal.mode === 'cloud' ? 'Propuesta de IA' : 'Borrador local · IA sin conectar'}</strong>
             <small>{proposal.mode === 'cloud' ? 'Puedes ajustar la propuesta antes de aplicarla.' : 'Esta es una plantilla orientativa adaptada a tus datos, no una respuesta generada por IA.'}</small>
@@ -105,7 +107,7 @@ export default function ProjectTextField({ label, value = '', onChange, rows = 0
             {value !== proposal.original && <small>Has cambiado el campo mientras revisabas la propuesta. Aplicarla reemplazará su texto actual.</small>}
             <div className={styles.actions}>
                 <button type="button" onClick={() => { setProposal(null); buttonRef.current?.focus(); }}>Descartar</button>
-                <button type="button" className={styles.primary} disabled={busy || !proposal.text.trim()} onClick={() => { onChange(proposal.text.trim()); setProposal(null); inputRef.current?.focus(); }}>Aplicar al campo</button>
+                <button type="button" className={styles.primary} disabled={busy || !proposal.text.trim()} onClick={() => { const text = proposal.text.trim(); setApplied({ original: value, text }); onChange(text); setProposal(null); inputRef.current?.focus(); }}>Aplicar al campo</button>
             </div>
         </div>}
     </div>;

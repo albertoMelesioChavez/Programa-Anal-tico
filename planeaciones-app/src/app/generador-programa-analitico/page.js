@@ -114,7 +114,7 @@ export default function GeneradorProgramaAnaliticoPage() {
             <header className="generator-header">
                 <Link href="/" className="generator-back">← Volver al espacio de trabajo</Link>
                 <p>PROGRAMA ANALÍTICO · NEM</p>
-                <h1>Generador de Programa Analítico</h1>
+                <h1>Crea tu programa analítico</h1>
                 <span>Organiza un solo documento colectivo para las Fases 3, 4 y 5 de primaria, en los tres planos propuestos por la SEP.</span>
             </header>
 
@@ -183,28 +183,28 @@ export default function GeneradorProgramaAnaliticoPage() {
                 .program-next { display: grid; gap: 12px; }
                 .program-next a { color: #214da7; font-size: 14px; font-weight: 700; }
                 .program-save-actions :focus-visible { outline: 3px solid #0f3d94; outline-offset: 3px; }
-                .generator-shell { min-height: 100vh; padding: 48px clamp(18px, 5vw, 72px) 72px; background: #f8fafc; color: #0f172a; }
+                .generator-shell { min-height: calc(100dvh - 72px); padding: 28px clamp(18px, 3vw, 40px) 56px; background: #f8fafc; color: #0f172a; }
                 .generator-header { max-width: 1180px; margin: 0 auto 32px; }
-                .generator-back { display: inline-block; margin-bottom: 28px; color: #2563eb; font-size: 13px; font-weight: 800; text-decoration: none; }
-                .generator-header p, .preview-heading p { margin: 0 0 8px; color: #2563eb; font-size: 11px; font-weight: 900; letter-spacing: .12em; }
-                .generator-header h1 { max-width: 720px; margin: 0; font-size: clamp(32px, 5vw, 52px); letter-spacing: -.04em; line-height: .98; }
+                .generator-back { display: inline-block; margin-bottom: 28px; color: #0b57d0; font-size: 13px; font-weight: 500; text-decoration: none; }
+                .generator-header p, .preview-heading p { margin: 0 0 8px; color: #0b57d0; font-size: 11px; font-weight: 500; letter-spacing: .12em; }
+                .generator-header h1 { max-width: 720px; margin: 0; font-size: clamp(26px, 3vw, 34px); font-weight: 500; letter-spacing: -.025em; line-height: 1.2; }
                 .generator-header > span { display: block; max-width: 720px; margin-top: 16px; color: #475569; font-size: 16px; line-height: 1.6; }
                 .generator-layout { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr); gap: 28px; align-items: start; }
                 .generator-form { display: grid; gap: 20px; }
                 .generator-form section, .generator-preview { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px; }
                 .generator-form h2 { margin: 0 0 18px; font-size: 18px; letter-spacing: -.02em; }
-                .generator-form label { display: grid; gap: 7px; margin-top: 14px; color: #334155; font-size: 12px; font-weight: 800; }
+                .generator-form label { display: grid; gap: 7px; margin-top: 14px; color: #334155; font-size: 12px; font-weight: 500; }
                 .generator-form label:first-of-type { margin-top: 0; }
                 .generator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
                 .generator-form .span-full { grid-column: 1 / -1; }
                 .generator-form input, .generator-form select, .generator-form textarea { width: 100%; min-height: 42px; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px; background: #fff; color: #0f172a; font: inherit; font-weight: 500; resize: vertical; }
                 .generator-form textarea { min-height: 96px; line-height: 1.5; }
-                .generator-form input:focus, .generator-form select:focus, .generator-form textarea:focus { outline: 3px solid rgba(37,99,235,.16); border-color: #2563eb; }
-                .generator-submit, .preview-actions button { min-height: 46px; border: 0; border-radius: 12px; background: #2563eb; color: #fff; cursor: pointer; font-size: 13px; font-weight: 900; }
+                .generator-form input:focus, .generator-form select:focus, .generator-form textarea:focus { outline: 3px solid rgba(37,99,235,.16); border-color: #0b57d0; }
+                .generator-submit, .preview-actions button { min-height: 46px; border: 0; border-radius: 12px; background: #0b57d0; color: #fff; cursor: pointer; font-size: 13px; font-weight: 500; }
                 .generator-submit:hover, .preview-actions button:hover { background: #1d4ed8; }
                 .generator-preview { position: sticky; top: 24px; max-height: calc(100vh - 48px); display: flex; flex-direction: column; padding: 0; overflow: hidden; }
                 .preview-heading { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 22px 24px 16px; border-bottom: 1px solid #e2e8f0; }
-                .preview-heading h2 { margin: 0; font-size: 18px; }.preview-heading p { margin-bottom: 4px; }.preview-header-actions { display: flex; align-items: center; gap: 8px; }.preview-header-actions > span { color: #047857; font-size: 11px; font-weight: 800; }.copy-document-button { display: inline-grid; place-items: center; width: 36px; height: 36px; border: 1px solid #bfdbfe; border-radius: 10px; background: #eff6ff; color: #1d4ed8; cursor: pointer; font-size: 18px; font-weight: 900; }.copy-document-button:hover { background: #dbeafe; }.copy-document-button:focus-visible { outline: 3px solid rgba(37,99,235,.28); outline-offset: 2px; }
+                .preview-heading h2 { margin: 0; font-size: 18px; }.preview-heading p { margin-bottom: 4px; }.preview-header-actions { display: flex; align-items: center; gap: 8px; }.preview-header-actions > span { color: #047857; font-size: 11px; font-weight: 500; }.copy-document-button { display: inline-grid; place-items: center; width: 36px; height: 36px; border: 1px solid #bfdbfe; border-radius: 10px; background: #eff6ff; color: #1d4ed8; cursor: pointer; font-size: 18px; font-weight: 500; }.copy-document-button:hover { background: #dbeafe; }.copy-document-button:focus-visible { outline: 3px solid rgba(37,99,235,.28); outline-offset: 2px; }
                 .document-sheet-scroll { flex: 1; overflow: auto; padding: 20px; background: #e2e8f0; }
                 .document-sheet { min-height: 100%; padding: 44px 38px 52px; background: #fff; color: #334155; box-shadow: 0 4px 14px rgba(15,23,42,.12); font-size: 14px; line-height: 1.75; }
                 .document-sheet h1 { margin: 0 0 28px; padding-bottom: 18px; border-bottom: 2px solid #1d4ed8; color: #0f172a; font-size: 30px; line-height: 1.1; letter-spacing: -.035em; }
